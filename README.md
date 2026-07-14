@@ -28,6 +28,22 @@ site/              產生的靜態網站（實際部署的內容）
 .github/workflows/deploy.yml   GitHub Actions：推送到 main 分支後自動部署 site/ 到 GitHub Pages
 ```
 
+## 本機（地端）啟動預覽
+
+網站是純靜態 HTML/CSS/JS，不需要任何後端或建置工具，只要在 `site/` 目錄起一個靜態伺服器即可：
+
+```bash
+cd site
+python3 -m http.server 8765
+```
+
+啟動後開啟瀏覽器造訪 <http://localhost:8765/index.html> 即可預覽（Ctrl+C 結束伺服器）。
+若電腦沒有 Python，也可以改用 Node.js：
+
+```bash
+npx serve site -l 8765
+```
+
 ## 重新產生網站
 
 若修改了 `content/*.json` 或 `data/talks.json`，重新產生 `site/`：
