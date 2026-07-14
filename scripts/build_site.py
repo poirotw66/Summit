@@ -183,7 +183,7 @@ def render_head(title: str, depth: int = 0) -> str:
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="{prefix}assets/css/style.css">
+<link rel="stylesheet" href="{prefix}assets/css/style.css?v=1.0.2">
 </head>
 """
 
@@ -306,7 +306,7 @@ def render_index(talks: list) -> str:
     <p>資料來源：AI Enterprise Summit 2026 / 2026 iThome 臺灣雲端大會（Cloud Summit 2026）官方議程投影片（PDF／Markdown）。本站內容為 AI 輔助整理之摘要，僅供參考，正確內容請以原始投影片為準。</p>
   </div>
 </footer>
-<script src="assets/js/app.js"></script>
+<script src="assets/js/app.js?v=1.0.2"></script>
 </body>
 </html>
 """
