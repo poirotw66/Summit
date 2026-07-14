@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/style.css?v=1.0.4">
+<link rel="stylesheet" href="../assets/css/style.css?v=1.0.5">
 </head>
 <body>
 <div class="bg-glow" aria-hidden="true"></div>
@@ -26,20 +26,26 @@
   </div>
 </header>
 <main class="container detail-main">
-  <section class="detail-section summary-box">
-    <h2>摘要</h2>
-    <p>本場為 90 分鐘的實戰工作坊，由聯發科技後端架構工程師 Bo-Yi Wu（appleboy）主講，以真實專案為練習場，使用 Claude Code 搭配 Agent Skill 與 MCP，完整跑過一輪軟體開發生命週期（SDLC）：從規劃、開發到自動化 Review 與提交。核心命題是工程師的價值正在往上移一層，從「親手寫程式」轉移到「定義問題、設計流程、指揮 AI」，並強調「寫規格」正取代「寫程式」成為新的核心競爭力。</p>
-  </section>
-  <section class="detail-section">
-    <h2>重點整理</h2>
-    <ul class="highlights"><li>AI 在程式碼、文件、測試產出的整體佔比達 90.7%，其中文件佔比 95.7%（約 22.5 倍）、測試佔比 96.4%（約 27 倍），過去最常被犧牲的文件與測試反而被 AI 補得最滿</li><li>SDLC 全流程分工：AI 主導 Develop、Testing、Docs；人為專注 Plan、PR Review；CI/CD 則由人主導、AI 加強</li><li>Agent Skill 決定 AI「怎麼做」（封裝團隊最佳實踐），MCP 讓 AI「接上服務」（串接 Jira、Gitea、Confluence 等外部系統）</li><li>企業級 MCP 安全架構透過 MCP Gateway 的 mcp-oauth2 plugin，以 Challenge、Discovery、Authorize、Verify、Forward 五步驟驗證 JWT，內部 MCP Servers 只信任 Gateway 轉發的身分標頭</li><li>`/plan-feature` 提出八步驟規劃流程（釐清目標、探索程式庫、界定範圍、驗證策略、畫設計圖、撰寫 plan.md、取得核可、建議交接），強調「有疑慮時就先 plan」</li></ul>
-  </section>
-  
-  <section class="detail-section"><h2>核心命題：工程師價值往上移一層</h2><p>工作坊的核心命題是工程師的價值從「親手把 code 寫出來」轉移到「定義問題、設計流程、指揮 AI」。講者引用數據顯示，在程式碼（Code）、文件（Docs）、測試（Tests）三類產出中，AI 分別貢獻了 86.6%、95.7%、96.4%，整體佔比高達 90.7%，凸顯過去最常被人力犧牲的文件與測試，反而被 AI 補得最完整。SDLC 全流程分工上，AI 主導 Develop、Testing、Docs，人力則專注於 Plan 與 PR Review，CI/CD 部分則是人主導、AI 加強，總結一句話：繁重的交給 AI，方向與品質的把關留給人。</p></section>
+  <div class="detail-grid">
+    <div class="detail-content">
+      <section class="detail-section summary-box">
+        <h2>摘要</h2>
+        <p>本場為 90 分鐘的實戰工作坊，由聯發科技後端架構工程師 Bo-Yi Wu（appleboy）主講，以真實專案為練習場，使用 Claude Code 搭配 Agent Skill 與 MCP，完整跑過一輪軟體開發生命週期（SDLC）：從規劃、開發到自動化 Review 與提交。核心命題是工程師的價值正在往上移一層，從「親手寫程式」轉移到「定義問題、設計流程、指揮 AI」，並強調「寫規格」正取代「寫程式」成為新的核心競爭力。</p>
+      </section>
+      
+      <section class="detail-section"><h2>核心命題：工程師價值往上移一層</h2><p>工作坊的核心命題是工程師的價值從「親手把 code 寫出來」轉移到「定義問題、設計流程、指揮 AI」。講者引用數據顯示，在程式碼（Code）、文件（Docs）、測試（Tests）三類產出中，AI 分別貢獻了 86.6%、95.7%、96.4%，整體佔比高達 90.7%，凸顯過去最常被人力犧牲的文件與測試，反而被 AI 補得最完整。SDLC 全流程分工上，AI 主導 Develop、Testing、Docs，人力則專注於 Plan 與 PR Review，CI/CD 部分則是人主導、AI 加強，總結一句話：繁重的交給 AI，方向與品質的把關留給人。</p></section>
 <section class="detail-section"><h2>概念對齊：Agent Skill 與 MCP</h2><p>Agent Skill 的作用是把團隊的最佳實踐、流程與規範封裝成 AI 可複用的能力，決定 AI「怎麼做」；MCP（Model Context Protocol）則是讓 AI「接上服務」，串接開發環境與 Jira、Gitea、Confluence 等外部系統。企業級 MCP 安全架構方面，每個請求會先經過 MCP Gateway 上的 mcp-oauth2 plugin 驗證 JWT，流程包括：無 token 時回傳 401 與 Challenge、透過 /.well-known/oauth-protected-resource 進行 Discovery 找到身分提供者、以 Auth Code + PKCE 進行 Authorize 並由 IDP 簽發 RS256 token、透過 JWKS 驗證簽章並檢查 iss/aud/exp/scope、驗證通過才 Forward 並附上 X-MCP-Subject 與 X-MCP-Scope。內部 MCP Servers 只信任 Gateway 轉發的身分標頭，自身不直接處理 token。</p></section>
 <section class="detail-section"><h2>`/plan-feature`：寫程式之前先把計畫講清楚</h2><p>講者指出，多數 AI coding 失敗並非因為模型不夠強，而是人沒有給足夠的 context。當提示很短、說不清楚，或只講功能沒給檔案路徑需求，或是要新增/實作某個功能時，就應該先 plan；反之若只是錯字修正、單行設定、單純重新命名，或已給完整規格，則可以直接做。`/plan-feature` 提出八步驟：釐清目標、探索程式庫、界定範圍、驗證策略、畫設計圖、撰寫 plan.md、取得核可（寫程式前停在這一步）、建議交接，其中 plan.md 建議包含 Goal、Architecture、Scope（可改與不可改）、Patterns、Constraints、Verification、Done definition、Risks、Open questions 等結構。</p></section>
 <section class="detail-section"><h2>品質 Skill 與 Commit/PR 自動化</h2><p>工作坊介紹了三個品質 Skill：`/simplify` 用於收掉過度設計、`/security-review` 進行自動安全審查、`/code-review max -fix` 提供最高強度審查並自動修復。在 Commit 與 PR 部分，`/commit-message` 會讀取已 staged 的 diff 產出符合 Conventional Commit 格式的訊息，`/pr-prepare` 則自動產出標題、摘要、變更重點與測試方式，但講者提醒下指令之前務必自己先看過代碼確認沒問題再執行。</p></section>
 <section class="detail-section"><h2>PR 後的自動 Review 迴圈</h2><p>PR 提交後可選擇 GitHub Action 的 Claude Code Review、原生整合的 GitHub Copilot Review，或 OpenAI Codex Review 三種 AI Review 方式。工作坊也介紹了自動迴圈 `/loop 3m /copilot-review`，每 3 分鐘一輪執行查留言、逐條修改、push、resolve、再審的循環，上限約 10 輪，若超過通常代表出現架構分歧，需要人工介入。總結來說，AI 並非取代 CI/CD，而是把它補完——自動化測試、Code Review、CI 修復、文件與 PR 撰寫、看板狀態更新等過去常被犧牲或省略的環節，都能由 AI 補齊，建議實務上可從 `/plan-feature` 或 `/loop 3m /copilot-review` 開始應用。</p></section>
+    </div>
+    <aside class="detail-sidebar">
+      <section class="detail-section highlights-card">
+        <h2>重點整理</h2>
+        <ul class="highlights"><li>AI 在程式碼、文件、測試產出的整體佔比達 90.7%，其中文件佔比 95.7%（約 22.5 倍）、測試佔比 96.4%（約 27 倍），過去最常被犧牲的文件與測試反而被 AI 補得最滿</li><li>SDLC 全流程分工：AI 主導 Develop、Testing、Docs；人為專注 Plan、PR Review；CI/CD 則由人主導、AI 加強</li><li>Agent Skill 決定 AI「怎麼做」（封裝團隊最佳實踐），MCP 讓 AI「接上服務」（串接 Jira、Gitea、Confluence 等外部系統）</li><li>企業級 MCP 安全架構透過 MCP Gateway 的 mcp-oauth2 plugin，以 Challenge、Discovery、Authorize、Verify、Forward 五步驟驗證 JWT，內部 MCP Servers 只信任 Gateway 轉發的身分標頭</li><li>`/plan-feature` 提出八步驟規劃流程（釐清目標、探索程式庫、界定範圍、驗證策略、畫設計圖、撰寫 plan.md、取得核可、建議交接），強調「有疑慮時就先 plan」</li></ul>
+      </section>
+    </aside>
+  </div>
   <nav class="talk-nav">
     <a class="nav-link" href="cloud-edge-20-打造-Agentic-Kubernetes-以-kagent-A2A-構築自主協作生態系.html"><span class="nav-dir">← 上一場議程</span><span class="nav-title">打造 Agentic Kubernetes：以 kagent × A2A 構築自主協作生態系</span></a>
     <a class="nav-link nav-next" href="cloud-edge-22-舊玩意-新創意-用-AI-打破資安消耗戰-經驗實務分享.html"><span class="nav-dir">下一場議程 →</span><span class="nav-title">舊玩意，新創意：用 AI 打破資安消耗戰，經驗實務分享</span></a>

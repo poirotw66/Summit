@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/style.css?v=1.0.4">
+<link rel="stylesheet" href="../assets/css/style.css?v=1.0.5">
 </head>
 <body>
 <div class="bg-glow" aria-hidden="true"></div>
@@ -26,15 +26,13 @@
   </div>
 </header>
 <main class="container detail-main">
-  <section class="detail-section summary-box">
-    <h2>摘要</h2>
-    <p>演講分享玉山商業銀行「AI 房貸顧問」專案的完整落地歷程，運用生成式 AI 結合 Google Vertex AI Conversational Agent 與 RAG 技術，提供顧客不動產趨勢諮詢、房屋估價與增貸引導等服務。內容涵蓋需求規劃、雲地架構與個資治理設計、提示工程反覆調校、RAG 知識庫建置，以及上線前的多層安全性與品質驗證，是一個涵蓋顧客旅程、系統流程到內外部資料整合的全面重構案例。</p>
-  </section>
-  <section class="detail-section">
-    <h2>重點整理</h2>
-    <ul class="highlights"><li>專案採用五階段流程：需求規劃、分析與設計、開發與調教、驗證與測試、上線前確認</li><li>透過 E.Sun Sensitive Data Protection（ESDP）機制在傳送前對個資進行遮蓋、遮蔽或加密等去識別化處理，回傳後再還原供內部使用</li><li>提示工程歷經三個版本反覆調校，從作文式人設說明演變為結構化 Markdown 格式，並最終簡化精簡以提升穩定性</li><li>上線後平均每月約 600-800 位不同顧客使用，每月對話次數約 1500 則左右，平均一次對話 2-3 次問答</li><li>驗證涵蓋準確性、完整性、關聯性與清晰度四項指標的五分制評分，並與第三方合作依 OWASP LLM Top 10 等標準進行驗證</li></ul>
-  </section>
-  <section class="detail-section plain-section">
+  <div class="detail-grid">
+    <div class="detail-content">
+      <section class="detail-section summary-box">
+        <h2>摘要</h2>
+        <p>演講分享玉山商業銀行「AI 房貸顧問」專案的完整落地歷程，運用生成式 AI 結合 Google Vertex AI Conversational Agent 與 RAG 技術，提供顧客不動產趨勢諮詢、房屋估價與增貸引導等服務。內容涵蓋需求規劃、雲地架構與個資治理設計、提示工程反覆調校、RAG 知識庫建置，以及上線前的多層安全性與品質驗證，是一個涵蓋顧客旅程、系統流程到內外部資料整合的全面重構案例。</p>
+      </section>
+      <section class="detail-section plain-section">
   <h2>重點圖片／架構圖</h2>
   <div class="diagram-grid">
     <figure class="diagram">
@@ -52,11 +50,19 @@
 </figure>
   </div>
 </section>
-  <section class="detail-section"><h2>專案定位與需求規劃</h2><p>AI 房貸顧問結合生成式 AI 提供顧客不動產趨勢及房貸相關資訊諮詢，並以對話方式引導既有客戶完成增貸，涵蓋房貸產品資訊、月付金試算、房屋估價、線上申請與進度查詢等場景。需求規劃階段透過顧客旅程方法確認關鍵場景、確立最小可行性產品（MVP）範疇，並透過工作坊讓業管與資訊團隊與 Google 專家共同交流業務場景與技術可行性。</p></section>
+      <section class="detail-section"><h2>專案定位與需求規劃</h2><p>AI 房貸顧問結合生成式 AI 提供顧客不動產趨勢及房貸相關資訊諮詢，並以對話方式引導既有客戶完成增貸，涵蓋房貸產品資訊、月付金試算、房屋估價、線上申請與進度查詢等場景。需求規劃階段透過顧客旅程方法確認關鍵場景、確立最小可行性產品（MVP）範疇，並透過工作坊讓業管與資訊團隊與 Google 專家共同交流業務場景與技術可行性。</p></section>
 <section class="detail-section"><h2>技術選型與雲地架構設計</h2><p>團隊採用 Google Vertex AI 的 Conversational Agent 工具，內建自然語言理解（NLU）意圖模型、固定流程（Flow）與 RAG（檢索增強生成）能力。在雲地架構設計上，團隊與架構辦公室討論個資是否上雲與出境的議題，最終決策由 AI 控制整體流程，透過雲端 API Gateway 處理資料外洩防護（DLP）議題，並在原系統先將顧客 ID 轉換後再提供給雲服務；同時針對 AI 幻覺不確定性，由原系統提供固定回覆的 Template 文案降低風險。</p></section>
 <section class="detail-section"><h2>個資保護：ESDP 去識別化機制</h2><p>由於對話資料可能包含姓名、電話、住址、銀行帳號與信用卡號等個資，系統在傳送前透過 E.Sun Sensitive Data Protection（ESDP）進行敏感資料的偵測與置換，按複雜程度分為遮蓋（移除機密內容不取代）、遮蔽（替換為固定字元）與加密（替換為可逆的加密字串）三種去識別化程序，待資料回傳後再將已遮蔽資料還原供內部使用，確保傳輸過程不洩漏原始敏感資訊。</p></section>
 <section class="detail-section"><h2>提示工程反覆調校</h2><p>提示工程歷經三個版本演進：版本一以作文式提供人設與回覆範疇，但對非主題詢問無法有效阻擋；版本二改為 Markdown 格式並加入大量強制性文字、範例與個案，雖然對主題回覆與非主題阻擋有一定成效，但結構複雜難以維護，且需持續針對問題加入白名單案例，Gemini 1.5 對非主題阻擋指令仍不穩定；版本三重新整理排版進行主題管理，改用 Gemini 2.0 並簡化 Instructions，雖然主題回覆與阻擋有成效，但出現非中英文語言回覆與 Grounding 頻率較低等新問題，需透過調整 Instructions 降低影響。</p></section>
 <section class="detail-section"><h2>驗證測試與上線後維運</h2><p>上線標準以準確性、完整性、關聯性與清晰度四項指標進行五分制評分，並設定顧客意圖判斷需 80% 正確、固定流程需 100% 正確等具體門檻，同時建置正向驗證題庫 10 種主題、反向題庫 14 種主題，並與勤業眾信合作依 OWASP LLM Top 10 等標準進行第三方驗證。應用系統端也導入程式碼檢查、弱點掃描、網站黑箱測試與 API 壓力測試等安全性測試。上線後平均每月約 600-800 位不同顧客使用、對話次數約 1500 則，團隊持續依使用者常見提問精進功能，並因應 Gemini 模型約一年的服務週期定期進行模型升級。</p></section>
+    </div>
+    <aside class="detail-sidebar">
+      <section class="detail-section highlights-card">
+        <h2>重點整理</h2>
+        <ul class="highlights"><li>專案採用五階段流程：需求規劃、分析與設計、開發與調教、驗證與測試、上線前確認</li><li>透過 E.Sun Sensitive Data Protection（ESDP）機制在傳送前對個資進行遮蓋、遮蔽或加密等去識別化處理，回傳後再還原供內部使用</li><li>提示工程歷經三個版本反覆調校，從作文式人設說明演變為結構化 Markdown 格式，並最終簡化精簡以提升穩定性</li><li>上線後平均每月約 600-800 位不同顧客使用，每月對話次數約 1500 則左右，平均一次對話 2-3 次問答</li><li>驗證涵蓋準確性、完整性、關聯性與清晰度四項指標的五分制評分，並與第三方合作依 OWASP LLM Top 10 等標準進行驗證</li></ul>
+      </section>
+    </aside>
+  </div>
   <nav class="talk-nav">
     <a class="nav-link" href="cloud-edge-13-When-Not-to-Vibe-從-Vibe-Coding-到-Spec-driven-AI-Engineering.html"><span class="nav-dir">← 上一場議程</span><span class="nav-title">When Not to Vibe 從 Vibe Coding 到 Spec-driven AI Engineering</span></a>
     <a class="nav-link nav-next" href="cloud-edge-15-Secure-GenAI-on-Cloud-結合-ISO-27001-TIPS-法遵的企業級-AI-IP-敏感資料治理架構.html"><span class="nav-dir">下一場議程 →</span><span class="nav-title">Secure GenAI on Cloud：結合 ISO 27001 × TIPS × 法遵的企業級 AI × IP × 敏感資料治理架構</span></a>

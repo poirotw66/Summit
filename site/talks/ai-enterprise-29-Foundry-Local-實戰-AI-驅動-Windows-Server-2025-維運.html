@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/style.css?v=1.0.4">
+<link rel="stylesheet" href="../assets/css/style.css?v=1.0.5">
 </head>
 <body>
 <div class="bg-glow" aria-hidden="true"></div>
@@ -26,15 +26,13 @@
   </div>
 </header>
 <main class="container detail-main">
-  <section class="detail-section summary-box">
-    <h2>摘要</h2>
-    <p>本演講聚焦於本機 AI 運算在企業維運（AIOps）的落地實踐，展示如何利用 Microsoft 釋出的本機 AI 推論框架 Foundry Local，驅動 Windows Server 2025 的現代化智能維運。講者 Weithenn Wang 針對傳統雲端 AI 維運面臨的資料隱私洩漏、高頻 API 延遲與頻寬成本痛點，提出了完全在伺服器本機端執行推論的技術設計，並透過三個實戰維運情境進行現場 Demo。這三個情境包括：第一，本機 AI 自動事件診斷，縮短故障排查時長；第二，具備人機協作（HITL，Human-in-the-loop）的記憶體主動優化，兼顧自動化效能與運作安全性；第三，安全防禦與藍圖級自動修復（Blueprint-Level Auto-Recovery），在偵測到系統配置漂移或安全威脅時自動復原。本演講為維運團隊提供了在確保資料不出境的前提下，建構高韌性、低延遲 AIOps 系統的技術藍圖。</p>
-  </section>
-  <section class="detail-section">
-    <h2>重點整理</h2>
-    <ul class="highlights"><li>講者具備多年 Microsoft MVP、VMware vExpert、Nutanix NTC 資歷，並著有 19 本 IT 書籍</li><li>Scenario 1：Local AI Automated Incident Diagnosis，示範用本機 AI 自動診斷伺服器事件</li><li>Scenario 2：Local AI Proactive Memory Optimization，結合 Human-in-the-loop 機制主動優化記憶體使用</li><li>Scenario 3：Local AI Security Defense &amp; Blueprint-Level Auto-Recovery，展示安全防禦與藍圖級自動修復能力</li><li>內容以 Live Demo 為主，並提供 Foundry Local 官方文件與 CLI 使用資源供後續參考</li></ul>
-  </section>
-  <section class="detail-section plain-section">
+  <div class="detail-grid">
+    <div class="detail-content">
+      <section class="detail-section summary-box">
+        <h2>摘要</h2>
+        <p>本演講聚焦於本機 AI 運算在企業維運（AIOps）的落地實踐，展示如何利用 Microsoft 釋出的本機 AI 推論框架 Foundry Local，驅動 Windows Server 2025 的現代化智能維運。講者 Weithenn Wang 針對傳統雲端 AI 維運面臨的資料隱私洩漏、高頻 API 延遲與頻寬成本痛點，提出了完全在伺服器本機端執行推論的技術設計，並透過三個實戰維運情境進行現場 Demo。這三個情境包括：第一，本機 AI 自動事件診斷，縮短故障排查時長；第二，具備人機協作（HITL，Human-in-the-loop）的記憶體主動優化，兼顧自動化效能與運作安全性；第三，安全防禦與藍圖級自動修復（Blueprint-Level Auto-Recovery），在偵測到系統配置漂移或安全威脅時自動復原。本演講為維運團隊提供了在確保資料不出境的前提下，建構高韌性、低延遲 AIOps 系統的技術藍圖。</p>
+      </section>
+      <section class="detail-section plain-section">
   <h2>重點圖片／架構圖</h2>
   <div class="diagram-grid">
     <figure class="diagram">
@@ -46,11 +44,19 @@
 </figure>
   </div>
 </section>
-  <section class="detail-section"><h2>什麼是 Foundry Local</h2><p>講者首先介紹 Foundry Local 的基本概念，這是 Microsoft 提供、可在本機端執行的 AI 推論框架，並引用官方架構總覽圖說明其運作方式，作為後續三個維運情境 Demo 的技術基礎。</p></section>
+      <section class="detail-section"><h2>什麼是 Foundry Local</h2><p>講者首先介紹 Foundry Local 的基本概念，這是 Microsoft 提供、可在本機端執行的 AI 推論框架，並引用官方架構總覽圖說明其運作方式，作為後續三個維運情境 Demo 的技術基礎。</p></section>
 <section class="detail-section"><h2>Scenario 1：自動化事件診斷</h2><p>第一個情境展示如何運用本機 AI（Local AI）自動診斷 Windows Server 上發生的維運事件，透過 Live Demo 呈現 AI 如何協助維運人員快速定位問題根因，減少人工排查的時間。</p></section>
 <section class="detail-section"><h2>Scenario 2：具人機協作的主動記憶體優化</h2><p>第二個情境聚焦在記憶體資源的主動優化，並特別強調導入 Human-in-the-loop（HITL）機制，讓 AI 在進行優化建議或操作時，仍保留人工確認與介入的環節，兼顧自動化效率與維運安全性。</p></section>
 <section class="detail-section"><h2>Scenario 3：安全防禦與藍圖級自動修復</h2><p>第三個情境展示本機 AI 在安全防禦上的應用，以及所謂「Blueprint-Level Auto-Recovery」，也就是依照預先定義的藍圖規格，在偵測到異常或攻擊後自動將系統狀態修復至預期規格，降低人工介入需求。</p></section>
 <section class="detail-section"><h2>延伸資源</h2><p>講者最後整理了一系列 Foundry Local 的官方學習資源，包括架構總覽、入門指南與 CLI（preview）使用說明，方便與會者會後自行深入研究並在自己的 Windows Server 環境中實作。</p></section>
+    </div>
+    <aside class="detail-sidebar">
+      <section class="detail-section highlights-card">
+        <h2>重點整理</h2>
+        <ul class="highlights"><li>講者具備多年 Microsoft MVP、VMware vExpert、Nutanix NTC 資歷，並著有 19 本 IT 書籍</li><li>Scenario 1：Local AI Automated Incident Diagnosis，示範用本機 AI 自動診斷伺服器事件</li><li>Scenario 2：Local AI Proactive Memory Optimization，結合 Human-in-the-loop 機制主動優化記憶體使用</li><li>Scenario 3：Local AI Security Defense &amp; Blueprint-Level Auto-Recovery，展示安全防禦與藍圖級自動修復能力</li><li>內容以 Live Demo 為主，並提供 Foundry Local 官方文件與 CLI 使用資源供後續參考</li></ul>
+      </section>
+    </aside>
+  </div>
   <nav class="talk-nav">
     <a class="nav-link" href="ai-enterprise-28-當會議逐字稿變成能力數據-Hahow-for-Business-用-AI-重建培訓驗證的實戰紀錄.html"><span class="nav-dir">← 上一場議程</span><span class="nav-title">當會議逐字稿變成能力數據：Hahow for Business 用 AI 重建培訓驗證的實戰紀錄</span></a>
     <a class="nav-link nav-next" href="ai-enterprise-30-零資料接觸架構-讓-LLM-讀懂企業資料但永遠摸不到它.html"><span class="nav-dir">下一場議程 →</span><span class="nav-title">零資料接觸架構：讓 LLM 讀懂企業資料但永遠摸不到它</span></a>

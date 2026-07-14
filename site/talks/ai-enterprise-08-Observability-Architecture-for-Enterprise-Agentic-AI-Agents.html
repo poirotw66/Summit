@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/style.css?v=1.0.4">
+<link rel="stylesheet" href="../assets/css/style.css?v=1.0.5">
 </head>
 <body>
 <div class="bg-glow" aria-hidden="true"></div>
@@ -26,15 +26,13 @@
   </div>
 </header>
 <main class="container detail-main">
-  <section class="detail-section summary-box">
-    <h2>摘要</h2>
-    <p>本講題針對 Agentic AI 系統中「沉默且機率性」的失效痛點（無 500 錯誤代碼卻產生錯誤決策，導致 Token 浪費與合規風險），提出專為代理式系統設計的可觀測性與評測架構。講者分析，隨著安全威脅演進至 OWASP Agentic AI Top 10（如目標劫持與工具濫用），監控指標必須升級。對此，國泰金控提出基於 OpenTelemetry 與 OpenInference 開放標準的觀測方案，核心設計在於將 Span 區分為 LLM、TOOL、AGENT 與 CHAIN，記錄詳細推理與工具軌跡。實務上，企業應採用三層測試框架：Tier 1 本地單元測試、Tier 2 結合 LLM-as-a-Judge 的整合測試，以及 Tier 3 的人機協作（HITL）端對端測試。透過「結果評測」與「軌跡評測」雙重機制，方能全面控管品質、成本與安全性等關鍵服務等級目標（SLO）。</p>
-  </section>
-  <section class="detail-section">
-    <h2>重點整理</h2>
-    <ul class="highlights"><li>Agent 系統失敗是「沉默、機率性、看似正確」，往往在數週後才透過使用者回饋浮現，代價包含 token 成本浪費、信任流失與合規風險</li><li>傳統應用是確定性系統，錯誤有明確代碼；Agentic 系統則由 LLM 動態決定下一步，相同輸入不一定產生相同軌跡，品質、成本與安全都必須納入 SLO</li><li>引用 OWASP Top 10 for Agentic AI 2026，指出風險已從「會說話的 AI（聊天機器人）」轉向「會行動的 AI（自主 Agent）」，新增如目標劫持／間接提示注入、工具濫用、跨工具權限提升、記憶與上下文污染等風險</li><li>採用 OpenInference 作為建立在 OpenTelemetry 之上的 AI 語意慣例標準，以 Span Kind（LLM／TOOL／AGENT／CHAIN）與屬性（如 llm.input_messages）記錄 Agent 的推理與工具呼叫軌跡</li><li>Agent 評測需同時涵蓋「結果評測」（最終答案是否正確）與「軌跡評測」（是否選對工具、是否迴圈或走回頭路），並建議採用 Tier 1 單元測試、Tier 2 整合測試（Evaluator／LLM-as-a-Judge）與 Tier 3 端對端測試（HITL、標註）三層測試框架</li></ul>
-  </section>
-  <section class="detail-section plain-section">
+  <div class="detail-grid">
+    <div class="detail-content">
+      <section class="detail-section summary-box">
+        <h2>摘要</h2>
+        <p>本講題針對 Agentic AI 系統中「沉默且機率性」的失效痛點（無 500 錯誤代碼卻產生錯誤決策，導致 Token 浪費與合規風險），提出專為代理式系統設計的可觀測性與評測架構。講者分析，隨著安全威脅演進至 OWASP Agentic AI Top 10（如目標劫持與工具濫用），監控指標必須升級。對此，國泰金控提出基於 OpenTelemetry 與 OpenInference 開放標準的觀測方案，核心設計在於將 Span 區分為 LLM、TOOL、AGENT 與 CHAIN，記錄詳細推理與工具軌跡。實務上，企業應採用三層測試框架：Tier 1 本地單元測試、Tier 2 結合 LLM-as-a-Judge 的整合測試，以及 Tier 3 的人機協作（HITL）端對端測試。透過「結果評測」與「軌跡評測」雙重機制，方能全面控管品質、成本與安全性等關鍵服務等級目標（SLO）。</p>
+      </section>
+      <section class="detail-section plain-section">
   <h2>重點圖片／架構圖</h2>
   <div class="diagram-grid">
     <figure class="diagram">
@@ -52,11 +50,19 @@
 </figure>
   </div>
 </section>
-  <section class="detail-section"><h2>背景與挑戰</h2><p>講者指出傳統網頁服務失敗時會產生明確、結構化且可被索引的錯誤（如 500 Internal Server Error），但 Agent 系統的失敗往往是沉默且機率性的，表面上看起來正確，卻可能在數週後才透過使用者回饋顯現問題，付出的代價包括 token 成本浪費、信任流失、合規曝險與失控迴圈。</p></section>
+      <section class="detail-section"><h2>背景與挑戰</h2><p>講者指出傳統網頁服務失敗時會產生明確、結構化且可被索引的錯誤（如 500 Internal Server Error），但 Agent 系統的失敗往往是沉默且機率性的，表面上看起來正確，卻可能在數週後才透過使用者回饋顯現問題，付出的代價包括 token 成本浪費、信任流失、合規曝險與失控迴圈。</p></section>
 <section class="detail-section"><h2>確定性系統與機率性系統的差異</h2><p>講者比較傳統應用程式與 Agentic 系統：傳統應用控制流程固定、端點已知、錯誤帶有明確代碼，延遲是主要的 SLO 指標；Agentic 系統則由 LLM 在執行期動態選擇下一步，相同輸入未必產生相同軌跡，失敗是語意層級而非狀態碼層級的問題，品質、成本與安全性都必須同時作為 SLO。講者也引用 OWASP Top 10 for Agentic AI 2026，說明威脅模型已從聊天機器人的資訊外洩與直接提示注入，轉向涉及規劃、工具呼叫、資料存取、記憶體與身分的代理式風險，例如目標劫持／間接提示注入、工具濫用、跨工具權限提升、記憶與上下文污染，以及缺乏人為監督的過度自主行為。</p></section>
 <section class="detail-section"><h2>技術重點：Golden Signals 與追蹤架構</h2><p>講者說明傳統 SRE 的四個 Golden Signals 需要擴展為 Agent 專屬的三大訊號家族，涵蓋指標（如每工作階段成本、成功率、P95 延遲、評測分數趨勢）、日誌（錯誤、防護欄觸發）與追蹤／Span（呈現單一使用者輪次的完整因果樹，包含提示與推理、工具呼叫、檢索文件與子 Agent）。在 Agent 系統中，追蹤本身就是文件——如同傳統軟體以程式碼作為文件一樣。技術上採用建立於 OpenTelemetry 之上、專為代理式應用設計的 OpenInference 語意慣例，透過 Span Kind 分類 LLM、TOOL、AGENT、CHAIN 等操作區段，並標準化如 llm.input_messages、llm.output_messages、llm.token_count.prompt 等屬性命名空間。</p></section>
 <section class="detail-section"><h2>評測方法與工具鏈</h2><p>講者說明 Agent 評測必須同時評估自主性、推理、工具使用與應對不可預期情境的能力，區分「結果評測」（評分最終答案、報告或程式碼，可用程式化檢查、LLM-as-a-Judge 或量表式評分）與「軌跡評測」（評估 Agent 是否選對工具、是否迴圈或走回頭路，能捕捉「答案正確但推理錯誤」這類沉默失敗）。建議採用三層測試框架：Tier 1 框架內建的單元測試、Tier 2 使用 Evaluator／LLM-as-a-Judge 的整合測試，以及 Tier 3 涉及人工參與（HITL）與標註的端對端測試。講者並介紹開源可觀測與評測平台 Arize Phoenix，可透過 pip install 快速整合超過 30 種框架的自動化插樁（如 Google ADK、LangChain、LlamaIndex、CrewAI）。</p></section>
 <section class="detail-section"><h2>結論與啟示</h2><p>講者總結，企業要讓 Agentic AI 從試驗走向可信賴的正式營運，必須建立涵蓋追蹤、指標、日誌與結果／軌跡評測的完整可觀測性架構，並以 OpenTelemetry／OpenInference 等開放標準確保跨框架的一致性與可稽核性。</p></section>
+    </div>
+    <aside class="detail-sidebar">
+      <section class="detail-section highlights-card">
+        <h2>重點整理</h2>
+        <ul class="highlights"><li>Agent 系統失敗是「沉默、機率性、看似正確」，往往在數週後才透過使用者回饋浮現，代價包含 token 成本浪費、信任流失與合規風險</li><li>傳統應用是確定性系統，錯誤有明確代碼；Agentic 系統則由 LLM 動態決定下一步，相同輸入不一定產生相同軌跡，品質、成本與安全都必須納入 SLO</li><li>引用 OWASP Top 10 for Agentic AI 2026，指出風險已從「會說話的 AI（聊天機器人）」轉向「會行動的 AI（自主 Agent）」，新增如目標劫持／間接提示注入、工具濫用、跨工具權限提升、記憶與上下文污染等風險</li><li>採用 OpenInference 作為建立在 OpenTelemetry 之上的 AI 語意慣例標準，以 Span Kind（LLM／TOOL／AGENT／CHAIN）與屬性（如 llm.input_messages）記錄 Agent 的推理與工具呼叫軌跡</li><li>Agent 評測需同時涵蓋「結果評測」（最終答案是否正確）與「軌跡評測」（是否選對工具、是否迴圈或走回頭路），並建議採用 Tier 1 單元測試、Tier 2 整合測試（Evaluator／LLM-as-a-Judge）與 Tier 3 端對端測試（HITL、標註）三層測試框架</li></ul>
+      </section>
+    </aside>
+  </div>
   <nav class="talk-nav">
     <a class="nav-link" href="ai-enterprise-07-數據感知與安全治理-打造企業級-AI-智能工作流.html"><span class="nav-dir">← 上一場議程</span><span class="nav-title">數據感知與安全治理：打造企業級 AI 智能工作流</span></a>
     <a class="nav-link nav-next" href="ai-enterprise-09-打造企業級-AI-基礎設施-從程式碼理解到-Agentic-Workflow-的實戰藍圖與避坑指南.html"><span class="nav-dir">下一場議程 →</span><span class="nav-title">打造企業級 AI 基礎設施：從程式碼理解到 Agentic Workflow 的實戰藍圖與避坑指南</span></a>

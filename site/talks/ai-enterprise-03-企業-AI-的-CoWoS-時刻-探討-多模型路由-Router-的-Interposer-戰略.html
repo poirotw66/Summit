@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/style.css?v=1.0.4">
+<link rel="stylesheet" href="../assets/css/style.css?v=1.0.5">
 </head>
 <body>
 <div class="bg-glow" aria-hidden="true"></div>
@@ -26,15 +26,13 @@
   </div>
 </header>
 <main class="container detail-main">
-  <section class="detail-section summary-box">
-    <h2>摘要</h2>
-    <p>本講題以半導體先進封裝技術 CoWoS/Interposer（中介層）為比喻，深入探討企業在導入多模型 AI 時，因各系統與不同 LLM 供應商直接對接所導致的架構混亂、治理困難與高昂維運成本。為解決此痛點，講者提出「多模型路由（Router）」的 Interposer 戰略，並介紹 MixRoute 作為企業級 AI 閘道中樞。MixRoute 扮演異質模型與企業內部系統之間的統一連接介面，核心技術設計包含跨供應商的智慧路由（Smart Routing）、自動容錯移轉（Failover）機制，以及內建的安全治理防護欄與存取政策管控。實務上，該架構能協助企業在 30 秒內快速導入並替換新模型，實現使用量分析與成本可視化，讓企業在彈性、安全與成本控制之間取得最佳平衡，建立敏捷且高韌性的 AI 基礎架構。</p>
-  </section>
-  <section class="detail-section">
-    <h2>重點整理</h2>
-    <ul class="highlights"><li>以半導體 CoWoS／Interposer 封裝技術類比企業多模型 AI 整合的架構挑戰</li><li>MixRoute 提供跨多家 LLM 供應商的智慧路由（smart routing）</li><li>內建治理防護欄，可設定資料存取政策邊界</li><li>支援自動容錯移轉（automatic failover），並提供使用量分析與成本可視化</li><li>號稱可在約 30 秒內完成新模型的導入（onboarding）</li></ul>
-  </section>
-  <section class="detail-section plain-section">
+  <div class="detail-grid">
+    <div class="detail-content">
+      <section class="detail-section summary-box">
+        <h2>摘要</h2>
+        <p>本講題以半導體先進封裝技術 CoWoS/Interposer（中介層）為比喻，深入探討企業在導入多模型 AI 時，因各系統與不同 LLM 供應商直接對接所導致的架構混亂、治理困難與高昂維運成本。為解決此痛點，講者提出「多模型路由（Router）」的 Interposer 戰略，並介紹 MixRoute 作為企業級 AI 閘道中樞。MixRoute 扮演異質模型與企業內部系統之間的統一連接介面，核心技術設計包含跨供應商的智慧路由（Smart Routing）、自動容錯移轉（Failover）機制，以及內建的安全治理防護欄與存取政策管控。實務上，該架構能協助企業在 30 秒內快速導入並替換新模型，實現使用量分析與成本可視化，讓企業在彈性、安全與成本控制之間取得最佳平衡，建立敏捷且高韌性的 AI 基礎架構。</p>
+      </section>
+      <section class="detail-section plain-section">
   <h2>重點圖片／架構圖</h2>
   <div class="diagram-grid">
     <figure class="diagram">
@@ -46,10 +44,18 @@
 </figure>
   </div>
 </section>
-  <section class="detail-section"><h2>背景與挑戰</h2><p>講者以半導體先進封裝技術 CoWoS／Interposer 為喻：CoWoS 透過中介層（Interposer）將多顆異質晶粒連接成一個整合系統。講者指出，企業導入 AI 時同樣面臨多個模型供應商並存的局面，若每個模型都各自與企業系統直接對接，將形成難以治理與維運的複雜度，因此需要一層類似 Interposer 的統一「Router」來銜接。</p></section>
+      <section class="detail-section"><h2>背景與挑戰</h2><p>講者以半導體先進封裝技術 CoWoS／Interposer 為喻：CoWoS 透過中介層（Interposer）將多顆異質晶粒連接成一個整合系統。講者指出，企業導入 AI 時同樣面臨多個模型供應商並存的局面，若每個模型都各自與企業系統直接對接，將形成難以治理與維運的複雜度，因此需要一層類似 Interposer 的統一「Router」來銜接。</p></section>
 <section class="detail-section"><h2>解法與架構</h2><p>講者介紹「MixRoute」，定位為企業級 AI 閘道／路由層，扮演連接多個 LLM 供應商與企業系統之間的統一介面，如同 Interposer 之於多顆晶粒，讓企業不需為每個新模型重新建置整合管道。</p></section>
 <section class="detail-section"><h2>技術重點</h2><p>根據議程補充說明，MixRoute 提供跨多家 LLM 供應商的智慧路由能力、內建治理防護欄以設定資料存取政策邊界、支援自動容錯移轉，並提供使用量分析與成本可視化功能，宣稱新模型的導入可在約 30 秒內完成。</p></section>
 <section class="detail-section"><h2>結論與啟示</h2><p>講者以 CoWoS／Interposer 的類比總結：如同半導體產業透過先進封裝解決異質晶粒整合的挑戰，企業也需要以「Router／Interposer」戰略統一治理多模型 AI 整合，才能兼顧彈性、安全與成本可控性。</p></section>
+    </div>
+    <aside class="detail-sidebar">
+      <section class="detail-section highlights-card">
+        <h2>重點整理</h2>
+        <ul class="highlights"><li>以半導體 CoWoS／Interposer 封裝技術類比企業多模型 AI 整合的架構挑戰</li><li>MixRoute 提供跨多家 LLM 供應商的智慧路由（smart routing）</li><li>內建治理防護欄，可設定資料存取政策邊界</li><li>支援自動容錯移轉（automatic failover），並提供使用量分析與成本可視化</li><li>號稱可在約 30 秒內完成新模型的導入（onboarding）</li></ul>
+      </section>
+    </aside>
+  </div>
   <nav class="talk-nav">
     <a class="nav-link" href="ai-enterprise-02-從導入-AI-到治理-Agent-企業負責任-AI-實務的新課題.html"><span class="nav-dir">← 上一場議程</span><span class="nav-title">從導入 AI 到治理 Agent：企業負責任 AI 實務的新課題</span></a>
     <a class="nav-link nav-next" href="ai-enterprise-04-FDA-文件提取智能體-從正則到自癒-AI-的演進.html"><span class="nav-dir">下一場議程 →</span><span class="nav-title">FDA 文件提取智能體：從正則到自癒 AI 的演進</span></a>

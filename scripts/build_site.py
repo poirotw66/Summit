@@ -183,7 +183,7 @@ def render_head(title: str, depth: int = 0) -> str:
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="{prefix}assets/css/style.css?v=1.0.4">
+<link rel="stylesheet" href="{prefix}assets/css/style.css?v=1.0.5">
 </head>
 """
 
@@ -375,16 +375,22 @@ def render_talk(c: dict, prev_c: dict | None, next_c: dict | None) -> str:
   </div>
 </header>
 <main class="container detail-main">
-  <section class="detail-section summary-box">
-    <h2>摘要</h2>
-    <p>{esc(c['summary'])}</p>
-  </section>
-  <section class="detail-section">
-    <h2>重點整理</h2>
-    <ul class="highlights">{highlights}</ul>
-  </section>
-  {render_images(c.get('key_images', []))}
-  {render_sections(c.get('sections', []))}
+  <div class="detail-grid">
+    <div class="detail-content">
+      <section class="detail-section summary-box">
+        <h2>摘要</h2>
+        <p>{esc(c['summary'])}</p>
+      </section>
+      {render_images(c.get('key_images', []))}
+      {render_sections(c.get('sections', []))}
+    </div>
+    <aside class="detail-sidebar">
+      <section class="detail-section highlights-card">
+        <h2>重點整理</h2>
+        <ul class="highlights">{highlights}</ul>
+      </section>
+    </aside>
+  </div>
   <nav class="talk-nav">
     {nav_links[0]}
     {nav_links[1]}
