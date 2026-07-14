@@ -1,6 +1,6 @@
 # Summit 2026 議程摘要網站
 
-彙整 **AI Enterprise Summit 2026** 與 **Cloud & Edge Summit 2026** 兩場研討會共 68 場議程的
+彙整 **AI Enterprise Summit 2026** 與 **2026 iThome 臺灣雲端大會（Cloud Summit 2026）** 兩場研討會共 68 場議程的
 投影片（PDF／Markdown），自動擷取文字與重點架構圖／示意圖，並整理成可瀏覽、可搜尋的靜態網站。
 
 ## 網站內容

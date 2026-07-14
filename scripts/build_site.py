@@ -27,8 +27,8 @@ SUMMIT_META = {
         "color": "#6d5bd0",
     },
     "cloud-edge": {
-        "name": "Cloud & Edge Summit 2026",
-        "short": "Cloud & Edge",
+        "name": "2026 iThome 臺灣雲端大會（Cloud Summit 2026）",
+        "short": "臺灣雲端大會",
         "color": "#0f9d8e",
     },
 }
@@ -67,7 +67,7 @@ def render_head(title: str, depth: int = 0) -> str:
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{esc(title)}</title>
-<meta name="description" content="AI Enterprise Summit 2026 與 Cloud &amp; Edge Summit 2026 議程摘要與詳細內容整理">
+<meta name="description" content="AI Enterprise Summit 2026 與 2026 iThome 臺灣雲端大會（Cloud Summit 2026）議程摘要與詳細內容整理">
 <link rel="stylesheet" href="{prefix}assets/css/style.css">
 </head>
 """
@@ -103,7 +103,7 @@ def render_index(talks: list) -> str:
 <header class="site-header">
   <div class="container">
     <h1>Summit 2026 議程摘要</h1>
-    <p class="subtitle">AI Enterprise Summit 2026（{n_ai} 場）＋ Cloud &amp; Edge Summit 2026（{n_ce} 場）議程重點整理，含架構圖與關鍵投影片</p>
+    <p class="subtitle">AI Enterprise Summit 2026（{n_ai} 場）＋ 2026 iThome 臺灣雲端大會（{n_ce} 場）議程重點整理，含架構圖與關鍵投影片</p>
   </div>
 </header>
 <main class="container">
@@ -112,7 +112,7 @@ def render_index(talks: list) -> str:
     <div class="filters" id="filters">
       <button class="filter-btn active" data-filter="all">全部</button>
       <button class="filter-btn" data-filter="ai-enterprise">AI Enterprise Summit</button>
-      <button class="filter-btn" data-filter="cloud-edge">Cloud &amp; Edge Summit</button>
+      <button class="filter-btn" data-filter="cloud-edge">2026 臺灣雲端大會</button>
     </div>
   </div>
   <p id="result-count" class="result-count"></p>
@@ -123,7 +123,7 @@ def render_index(talks: list) -> str:
 </main>
 <footer class="site-footer">
   <div class="container">
-    <p>資料來源：AI Enterprise Summit 2026 / Cloud &amp; Edge Summit 2026 官方議程投影片（PDF／Markdown）。本站內容為 AI 輔助整理之摘要，僅供參考，正確內容請以原始投影片為準。</p>
+    <p>資料來源：AI Enterprise Summit 2026 / 2026 iThome 臺灣雲端大會（Cloud Summit 2026）官方議程投影片（PDF／Markdown）。本站內容為 AI 輔助整理之摘要，僅供參考，正確內容請以原始投影片為準。</p>
   </div>
 </footer>
 <script src="assets/js/app.js"></script>
