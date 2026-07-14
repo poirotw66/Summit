@@ -28,7 +28,7 @@
 <main class="container detail-main">
   <section class="detail-section summary-box">
     <h2>摘要</h2>
-    <p>講者分享如何在企業導入 LLM／Coding Agent 時，用可觀測性（Observability）取代「聽說」式決策，透過建立 baseline、LLM-as-a-Judge、Dataset &amp; Experiment 三個步驟，逐步把工具選型、Prompt 調整、模型升級等決策數據化。核心主張是「新工具冒出速度大於人力研究速度」，唯有先看到量化數據，才能讓團隊信任現有技術堆疊並驗證每次改動的實際影響。</p>
+    <p>本場演講針對企業在導入大語言模型（LLM）與 Coding Agent時，常因缺乏客觀評量數據而盲目做決策（如 FOMO 盲從升級模型或工具）的痛點，提出以可觀測性（Observability）為核心的「資料驅動決策系統（Decision System）」。講者 Che-Chia Chang 拆解了實作的三大核心步驟：首先，透過建立 Baseline 監測 Token 使用與延遲，停用無用工具並優化 System Instruction，成功將 Token Overhead 降低 95%（從 20000+ 降至 1000+）；其次，導入 LLM-as-a-Judge，針對 Multi-turn Agent 的單一步驟（如 Plan、apply_patch）進行細粒度品質評估；最後，從日誌中萃取「考古題」建立測試數據集（Dataset），利用實驗機制（Experiment）在不同模型與 Prompt 版本間進行回歸測試。演講強調「先有監測，再做決策」，讓開發團隊能以效率公式量化評估改動，從而精準掌控品質與成本平衡。</p>
   </section>
   <section class="detail-section">
     <h2>重點整理</h2>

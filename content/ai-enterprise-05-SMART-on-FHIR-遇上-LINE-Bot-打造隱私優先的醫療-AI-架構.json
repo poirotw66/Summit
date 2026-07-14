@@ -4,8 +4,14 @@
   "speaker": "鄭重男 (Nickle)",
   "speaker_title": "國軍高雄總醫院 資訊室主任",
   "summit": "ai-enterprise",
-  "tags": ["SMART on FHIR", "醫療資訊", "LINE Bot", "AI治理", "數位轉型"],
-  "summary": "講者分享「火線超人 FHIRLineBot」的建置經驗，這是一套結合 SMART on FHIR 國際標準與 LINE 官方帳號的醫療資訊查詢服務，讓民眾能以熟悉的 LINE 介面安全取得檢驗、用藥、就醫等健康資料，該系統並獲選衛生福利部第一屆台灣 50 優良 SMART Apps。講題說明區域醫院如何透過標準化架構與可治理的 AI 開發流程，用有限資源做出接近醫學中心等級的數位服務。",
+  "tags": [
+    "SMART on FHIR",
+    "醫療資訊",
+    "LINE Bot",
+    "AI治理",
+    "數位轉型"
+  ],
+  "summary": "本講題以榮獲衛福部優良 SMART Apps 的「火線超人 FHIRLineBot」為例，探討如何解決傳統智慧醫療「僅留在醫院內部、民眾難以取得與理解自身健康數據」的痛點。該系統設計了隱私優先的五層技術架構：第一層為民眾使用的 LINE 介面；第二層透過 LINE OAuth 與 SMART on FHIR 標準進行最小權限 Token 授權；第三層利用 FHIR R4 與 TW Core 標準規範安全存取檢驗、用藥與就醫紀錄；第四層由 AI 解讀層進行術語轉譯；第五層則透過 TDD、SDD 與 Code Review 建立 AI 開發治理層。實務上，此架構支援多租戶與繁中、英、日、泰多語系，協助資源有限的區域醫院無需打掉 HIS 舊系統即可逐步接出 API，實踐接近醫學中心等級的可維運、合規醫療服務。",
   "highlights": [
     "火線超人 FHIRLineBot 獲選衛福部第一屆台灣 50 優良 SMART Apps",
     "系統以五層架構組成：民眾入口層（LINE）、授權信任層（LINE OAuth／SMART on FHIR）、醫療資料層（FHIR R4／TW Core）、AI 解讀層（健康摘要、術語轉譯，不取代診斷）、開發治理層（AI Coding、TDD、SDD、Code Review、Audit Log）",
@@ -36,9 +42,21 @@
     }
   ],
   "key_images": [
-    {"file": "assets/images/ai-enterprise-05-SMART-on-FHIR-遇上-LINE-Bot-打造隱私優先的醫療-AI-架構/p3.jpg", "caption": "說明 FHIR（Fast Healthcare Interoperability Resources）與 SMART 標準，以及 2026 年 ASTP/ONC 可能推進的 HTI-6 規則，要求 EHR/HIS 支援更成熟的 FHIR/SMART API。"},
-    {"file": "assets/images/ai-enterprise-05-SMART-on-FHIR-遇上-LINE-Bot-打造隱私優先的醫療-AI-架構/p6.jpg", "caption": "火線超人系統架構圖，呈現串接國軍醫院、亞東醫院、中山附醫等多家院所的整體技術架構。"},
-    {"file": "assets/images/ai-enterprise-05-SMART-on-FHIR-遇上-LINE-Bot-打造隱私優先的醫療-AI-架構/p9.jpg", "caption": "多語系即時切換與圖文選單（richmenu）畫面，服務新住民、移工、看護與國際病人，對應台灣 2,100 萬 LINE 使用者。"},
-    {"file": "assets/images/ai-enterprise-05-SMART-on-FHIR-遇上-LINE-Bot-打造隱私優先的醫療-AI-架構/p10.jpg", "caption": "多租戶使用者端畫面示意，展示國軍高雄總醫院屏東分院的服務介面。"}
+    {
+      "file": "assets/images/ai-enterprise-05-SMART-on-FHIR-遇上-LINE-Bot-打造隱私優先的醫療-AI-架構/p3.jpg",
+      "caption": "說明 FHIR（Fast Healthcare Interoperability Resources）與 SMART 標準，以及 2026 年 ASTP/ONC 可能推進的 HTI-6 規則，要求 EHR/HIS 支援更成熟的 FHIR/SMART API。"
+    },
+    {
+      "file": "assets/images/ai-enterprise-05-SMART-on-FHIR-遇上-LINE-Bot-打造隱私優先的醫療-AI-架構/p6.jpg",
+      "caption": "火線超人系統架構圖，呈現串接國軍醫院、亞東醫院、中山附醫等多家院所的整體技術架構。"
+    },
+    {
+      "file": "assets/images/ai-enterprise-05-SMART-on-FHIR-遇上-LINE-Bot-打造隱私優先的醫療-AI-架構/p9.jpg",
+      "caption": "多語系即時切換與圖文選單（richmenu）畫面，服務新住民、移工、看護與國際病人，對應台灣 2,100 萬 LINE 使用者。"
+    },
+    {
+      "file": "assets/images/ai-enterprise-05-SMART-on-FHIR-遇上-LINE-Bot-打造隱私優先的醫療-AI-架構/p10.jpg",
+      "caption": "多租戶使用者端畫面示意，展示國軍高雄總醫院屏東分院的服務介面。"
+    }
   ]
 }

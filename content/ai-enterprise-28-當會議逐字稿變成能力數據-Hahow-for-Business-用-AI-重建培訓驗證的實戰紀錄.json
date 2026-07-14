@@ -4,8 +4,14 @@
   "speaker": "高玉璚",
   "speaker_title": "產品總監 @ Hahow for Business",
   "summit": "ai-enterprise",
-  "tags": ["企業培訓", "AI逐字稿分析", "能力驗證", "Fireflies.ai", "Claude API"],
-  "summary": "由於原始 PDF 缺乏可抽取的文字層，本篇內容主要依據提供的補充說明整理：Hahow for Business 產品總監高玉璚分享團隊如何結合 Slack、Fireflies.ai 會議逐字稿轉錄、Google 日曆與 Claude API，打造一套自動化流程，將教練╱培訓對話自動擷取、轉錄並分析成結構化的能力數據，藉此重建企業培訓的驗證機制。",
+  "tags": [
+    "企業培訓",
+    "AI逐字稿分析",
+    "能力驗證",
+    "Fireflies.ai",
+    "Claude API"
+  ],
+  "summary": "本演講分享 Hahow for Business 團隊如何克服企業培訓中「教練指導對話難以量化」與「學習成效無法驗證」的痛點。為將零散的日常會議或培訓對話重整為高價值的資產，產品總監高玉璚帶領團隊整合 Google 日曆、Fireflies.ai、Slack 與 Claude API，建構了一套高度自動化的分析管線。系統首先透過 Google 日曆追蹤培訓會議排程，再由 Fireflies.ai 自動進行語音轉錄產出逐字稿，最後調用 Claude API 進行深度語意分析，將非結構化的對話提煉為客觀、可度量且結構化的「能力數據」。此技術設計不僅免除了傳統人工整理逐字稿的龐大負擔，更協助企業建立以數據為佐證、可持續追蹤的培訓驗證機制，將「有沒有開會」的出席紀錄升華為具體的學習成效證明。",
   "highlights": [
     "核心痛點是企業培訓過程中的教練╱指導對話難以量化驗證學習成效",
     "解法整合 Slack、Fireflies.ai（會議逐字稿轉錄）、Google Calendar 與 Claude API 四個工具",
@@ -13,12 +19,27 @@
     "目標是把原本零散的會議逐字稿，重建為企業培訓驗證所需的可量化資料"
   ],
   "sections": [
-    {"heading": "培訓驗證的痛點", "body": "企業培訓與教練指導過程中的對話內容往往只留下零散的逐字稿或口頭紀錄，難以被系統化地驗證學員能力是否真正提升。Hahow for Business 團隊希望找到方法，把這些日常發生的培訓對話轉換成可供分析與驗證的結構化資料。"},
-    {"heading": "整合工具打造自動化管線", "body": "團隊的解法是串接 Slack、Fireflies.ai、Google Calendar 與 Claude API 四項工具，形成一條自動化管線：由 Google Calendar 掌握培訓╱教練會議排程，Fireflies.ai 負責將會議內容自動轉錄成逐字稿，Slack 作為通知與協作介面，最終交由 Claude API 進行語意分析。"},
-    {"heading": "從逐字稿到能力數據", "body": "這套管線的核心價值在於把非結構化的會議逐字稿，透過 Claude API 的語意理解能力，轉換成結構化的能力數據，讓企業得以量化評估培訓╱教練對話中呈現的能力表現，而非僅停留在「有沒有開會」的層次。"},
-    {"heading": "對企業培訓驗證的意義", "body": "透過自動化擷取與分析培訓對話，Hahow for Business 團隊嘗試重建企業培訓的驗證機制，讓原本仰賴人工整理與主觀判斷的培訓成效評估，轉變為有資料佐證、可追蹤的能力驗證流程。"}
+    {
+      "heading": "培訓驗證的痛點",
+      "body": "企業培訓與教練指導過程中的對話內容往往只留下零散的逐字稿或口頭紀錄，難以被系統化地驗證學員能力是否真正提升。Hahow for Business 團隊希望找到方法，把這些日常發生的培訓對話轉換成可供分析與驗證的結構化資料。"
+    },
+    {
+      "heading": "整合工具打造自動化管線",
+      "body": "團隊的解法是串接 Slack、Fireflies.ai、Google Calendar 與 Claude API 四項工具，形成一條自動化管線：由 Google Calendar 掌握培訓╱教練會議排程，Fireflies.ai 負責將會議內容自動轉錄成逐字稿，Slack 作為通知與協作介面，最終交由 Claude API 進行語意分析。"
+    },
+    {
+      "heading": "從逐字稿到能力數據",
+      "body": "這套管線的核心價值在於把非結構化的會議逐字稿，透過 Claude API 的語意理解能力，轉換成結構化的能力數據，讓企業得以量化評估培訓╱教練對話中呈現的能力表現，而非僅停留在「有沒有開會」的層次。"
+    },
+    {
+      "heading": "對企業培訓驗證的意義",
+      "body": "透過自動化擷取與分析培訓對話，Hahow for Business 團隊嘗試重建企業培訓的驗證機制，讓原本仰賴人工整理與主觀判斷的培訓成效評估，轉變為有資料佐證、可追蹤的能力驗證流程。"
+    }
   ],
   "key_images": [
-    {"file": "assets/images/ai-enterprise-28-當會議逐字稿變成能力數據-Hahow-for-Business-用-AI-重建培訓驗證的實戰紀錄/p14.jpg", "caption": "呈現 Slack、Fireflies.ai、Google Calendar 與 Claude API 串接而成的培訓對話擷取與分析管線示意圖"}
+    {
+      "file": "assets/images/ai-enterprise-28-當會議逐字稿變成能力數據-Hahow-for-Business-用-AI-重建培訓驗證的實戰紀錄/p14.jpg",
+      "caption": "呈現 Slack、Fireflies.ai、Google Calendar 與 Claude API 串接而成的培訓對話擷取與分析管線示意圖"
+    }
   ]
 }

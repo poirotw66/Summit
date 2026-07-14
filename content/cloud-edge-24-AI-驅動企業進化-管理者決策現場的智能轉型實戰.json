@@ -4,8 +4,14 @@
   "speaker": "陳泳睿（安東尼）",
   "speaker_title": "新呈工業董事長",
   "summit": "cloud-edge",
-  "tags": ["AI轉型", "企業經營", "知識傳承", "AI Agent", "管理制度"],
-  "summary": "本場演講由新呈工業董事長陳泳睿（安東尼）主講，以「點、線、面」三個層次說明 AI 應用如何從個人工具演進為企業智能中樞：點是個人增強、線是流程整合、面則是 AI Agent 成為跨部門協作與即時決策的組織大腦。演講結合講者自身在製造業與資訊業的實務經驗，探討生成式 AI 如何協助企業策略規劃、隱性知識傳承，以及企業 AI 轉型最常見的失敗原因與制度化做法。",
+  "tags": [
+    "AI轉型",
+    "企業經營",
+    "知識傳承",
+    "AI Agent",
+    "管理制度"
+  ],
+  "summary": "本演講直擊企業在 AI 轉型中「個人懂得使用工具，組織卻無法協同決策」與「關鍵隱性知識隨老員工離職而流失」的核心挑戰。講者陳泳睿提出 AI 應用的三層次框架：從個人增強的「點」，到流程整合的「線」，再到將 AI Agent 作為智能決策中樞的「面」。技術上，展示了「老師傅 Prompt」知識萃取系統（包含教練式訪談、結構化整理、品質評估及多元輸出），以及基於 Claude 構建的 `ai-sales-team-claude` 業務代理，利用五維加權評分系統（公司契合度、聯絡人可及性等）進行商機評估。最後，針對轉型失敗的通病，提出「管理制度流程提示詞化」及月度「AI提案改善激勵制度」，建立可追蹤、可審核、可控管的 AI 管理機制，是企業將 AI 融入日常營運與決策現場的實戰指南。",
   "highlights": [
     "AI 應用分為「點」（個人增強，如簡報製作、資訊搜尋）、「線」（流程整合，如策略規劃、知識傳承）、「面」（AI Agent 成為企業智能中樞，跨部門協作、即時決策）三個層次",
     "提出 AI 驅動的策略規劃四步驟：PEST 總體環境分析、波特五力分析、SWOT 綜合分析、TOWS 策略矩陣",
@@ -36,9 +42,21 @@
     }
   ],
   "key_images": [
-    {"file": "assets/images/cloud-edge-24-AI-驅動企業進化-管理者決策現場的智能轉型實戰/p3.jpg", "caption": "經營管理架構總覽"},
-    {"file": "assets/images/cloud-edge-24-AI-驅動企業進化-管理者決策現場的智能轉型實戰/p10.jpg", "caption": "AI 驅動的策略規劃四步驟：PEST、波特五力、SWOT、TOWS 策略矩陣"},
-    {"file": "assets/images/cloud-edge-24-AI-驅動企業進化-管理者決策現場的智能轉型實戰/p21.jpg", "caption": "ai-sales-team-claude 核心指令與輸出檔，以及五維加權評分系統"},
-    {"file": "assets/images/cloud-edge-24-AI-驅動企業進化-管理者決策現場的智能轉型實戰/p30.jpg", "caption": "AI 提案改善激勵制度：比賽規則、評審制度與獎勵機制"}
+    {
+      "file": "assets/images/cloud-edge-24-AI-驅動企業進化-管理者決策現場的智能轉型實戰/p3.jpg",
+      "caption": "經營管理架構總覽"
+    },
+    {
+      "file": "assets/images/cloud-edge-24-AI-驅動企業進化-管理者決策現場的智能轉型實戰/p10.jpg",
+      "caption": "AI 驅動的策略規劃四步驟：PEST、波特五力、SWOT、TOWS 策略矩陣"
+    },
+    {
+      "file": "assets/images/cloud-edge-24-AI-驅動企業進化-管理者決策現場的智能轉型實戰/p21.jpg",
+      "caption": "ai-sales-team-claude 核心指令與輸出檔，以及五維加權評分系統"
+    },
+    {
+      "file": "assets/images/cloud-edge-24-AI-驅動企業進化-管理者決策現場的智能轉型實戰/p30.jpg",
+      "caption": "AI 提案改善激勵制度：比賽規則、評審制度與獎勵機制"
+    }
   ]
 }

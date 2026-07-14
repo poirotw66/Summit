@@ -4,8 +4,13 @@
   "speaker": "Willy Lee (李維倫)",
   "speaker_title": "Data & AI 技術總監, IBM Taiwan",
   "summit": "ai-enterprise",
-  "tags": ["Agentic AI", "SDLC", "IBM Bob", "企業AI導入"],
-  "summary": "本議程原始投影片 PDF 缺乏可擷取文字層，以下內容依據議程提供之補充說明整理。講題聚焦企業 AI 應用從簡單問答式（ASK）互動邁向具自主行動能力的 Agentic AI 的轉變，並介紹 IBM 推出的「IBM Bob」——一套定位為「AI-Native SDLC Orchestrator」的架構，用以協調軟體開發生命週期中的多個 AI Agent，藉此加速企業 AI Agent 的普及與價值實現。",
+  "tags": [
+    "Agentic AI",
+    "SDLC",
+    "IBM Bob",
+    "企業AI導入"
+  ],
+  "summary": "本講題探討企業 AI 應用從傳統問答式（ASK）模式，邁向具備自主規劃、決策與執行能力的代理式 AI（Agentic AI）所面臨的落地與規模化挑戰。為加速 AI Agent 的普及與價值實現，講者介紹了 IBM 提出的「IBM Bob」——一套定位為「AI-Native SDLC Orchestrator」的架構。該架構的核心設計在於將多個 AI Agent 進行系統性協調與編排，使其協同運作於軟體開發生命週期（SDLC）的各個階段（如需求分析、程式碼撰寫、測試驗證與部署）。實務上的關鍵啟示是，企業不能僅依賴單一離散的 AI 工具，而必須建立統一的協調管理平台，透過 Agent 間的無縫協作，有效縮短開發週期、降低溝通摩擦，並大幅提升軟體交付的品質與整體工程效率。",
   "highlights": [
     "講題核心命題是企業 AI 互動模式從「ASK」（單純問答）演進為具行動能力的「Agent」",
     "IBM Bob 定位為「AI-Native SDLC Orchestrator」，協調軟體開發生命週期各階段的 AI Agent",
@@ -30,6 +35,9 @@
     }
   ],
   "key_images": [
-    {"file": "assets/images/ai-enterprise-06-從-ASK-到-Agent-企業-AI-落地新時代-IBM-Bob-加速-AI-Agent-普及與價值實現/p18.jpg", "caption": "IBM Bob：AI-Native SDLC Orchestrator 架構圖，呈現其如何協調軟體開發生命週期中多個 AI Agent 的協作關係。"}
+    {
+      "file": "assets/images/ai-enterprise-06-從-ASK-到-Agent-企業-AI-落地新時代-IBM-Bob-加速-AI-Agent-普及與價值實現/p18.jpg",
+      "caption": "IBM Bob：AI-Native SDLC Orchestrator 架構圖，呈現其如何協調軟體開發生命週期中多個 AI Agent 的協作關係。"
+    }
   ]
 }

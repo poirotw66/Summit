@@ -28,7 +28,7 @@
 <main class="container detail-main">
   <section class="detail-section summary-box">
     <h2>摘要</h2>
-    <p>Cloudflare 分享其AI全戰略，涵蓋三大情境：防禦AI爬蟲與惡意Bot流量、企業導入AI應用時的資料外洩與Prompt注入風險治理、以及Agentic工具（如Claude Code、Codex）帶來的新型態安全挑戰。講者展示 Cloudflare 全球網路規模與其在反向代理市場的市占地位，並實際示範以 AI Gateway 統一代理並治理企業內所有AI/LLM流量。</p>
+    <p>本講題針對企業導入 AI 時面臨的三大安全威脅——「AI 爬蟲惡意抓取內容、員工對公用 AI 洩漏敏感資料（PII）與 Agentic 工具（如 Claude Code）引發的失控 Token 消耗」提出 Cloudflare 的 SASE 安全轉型與 AI 全戰略。在網路邊緣，Cloudflare 透過 Proof-of-Work/Space 挑戰防禦惡意 Bot；在應用層，以 Secure Web Gateway 針對 ChatGPT/Claude 進行「上傳檔案」、「分享對話」等細粒度動作控管與 DLP 資料外洩防護。最關鍵的技術在於利用 AI Gateway 統一代理企業所有 LLM 流量，並實際示範以 Windows PowerShell 輔助腳本動態擷取本機使用者身分（帳號、Email、主機名）包裝於 `cf-aig-metadata` 標頭中，讓 AI 請求具備可歸責性與可追蹤性，並能在 Gateway 端設定每人每日的 Token 額度上限（Spend Limit）。</p>
   </section>
   <section class="detail-section">
     <h2>重點整理</h2>

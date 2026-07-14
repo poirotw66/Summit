@@ -4,8 +4,13 @@
   "speaker": "Len",
   "speaker_title": "Senior Solution Architect, Elite Cloud 勤英科技",
   "summit": "ai-enterprise",
-  "tags": ["多模型路由", "AI Gateway", "企業AI架構", "AI治理"],
-  "summary": "本議程原始投影片 PDF 缺乏可擷取文字層，以下內容依據議程提供之補充說明整理。講者以半導體 CoWoS／Interposer 封裝技術（連接多顆晶粒）類比企業多模型 AI 整合的挑戰：企業內眾多 AI 模型需要透過一層統一的「Router／Interposer」與既有系統串接，而非各自為政地直接對接。講者並介紹一款名為「MixRoute」的 AI 閘道／路由產品，作為此一戰略的具體實作。",
+  "tags": [
+    "多模型路由",
+    "AI Gateway",
+    "企業AI架構",
+    "AI治理"
+  ],
+  "summary": "本講題以半導體先進封裝技術 CoWoS/Interposer（中介層）為比喻，深入探討企業在導入多模型 AI 時，因各系統與不同 LLM 供應商直接對接所導致的架構混亂、治理困難與高昂維運成本。為解決此痛點，講者提出「多模型路由（Router）」的 Interposer 戰略，並介紹 MixRoute 作為企業級 AI 閘道中樞。MixRoute 扮演異質模型與企業內部系統之間的統一連接介面，核心技術設計包含跨供應商的智慧路由（Smart Routing）、自動容錯移轉（Failover）機制，以及內建的安全治理防護欄與存取政策管控。實務上，該架構能協助企業在 30 秒內快速導入並替換新模型，實現使用量分析與成本可視化，讓企業在彈性、安全與成本控制之間取得最佳平衡，建立敏捷且高韌性的 AI 基礎架構。",
   "highlights": [
     "以半導體 CoWoS／Interposer 封裝技術類比企業多模型 AI 整合的架構挑戰",
     "MixRoute 提供跨多家 LLM 供應商的智慧路由（smart routing）",
@@ -32,7 +37,13 @@
     }
   ],
   "key_images": [
-    {"file": "assets/images/ai-enterprise-03-企業-AI-的-CoWoS-時刻-探討-多模型路由-Router-的-Interposer-戰略/p20.jpg", "caption": "投影片原始文字無法擷取；依議程補充說明推斷，此頁應為 MixRoute 多模型路由架構或 CoWoS／Interposer 類比示意圖。"},
-    {"file": "assets/images/ai-enterprise-03-企業-AI-的-CoWoS-時刻-探討-多模型路由-Router-的-Interposer-戰略/p30.jpg", "caption": "投影片原始文字無法擷取；依議程補充說明推斷，此頁應與 MixRoute 的治理防護欄、容錯移轉或使用量分析等功能相關。"}
+    {
+      "file": "assets/images/ai-enterprise-03-企業-AI-的-CoWoS-時刻-探討-多模型路由-Router-的-Interposer-戰略/p20.jpg",
+      "caption": "投影片原始文字無法擷取；依議程補充說明推斷，此頁應為 MixRoute 多模型路由架構或 CoWoS／Interposer 類比示意圖。"
+    },
+    {
+      "file": "assets/images/ai-enterprise-03-企業-AI-的-CoWoS-時刻-探討-多模型路由-Router-的-Interposer-戰略/p30.jpg",
+      "caption": "投影片原始文字無法擷取；依議程補充說明推斷，此頁應與 MixRoute 的治理防護欄、容錯移轉或使用量分析等功能相關。"
+    }
   ]
 }

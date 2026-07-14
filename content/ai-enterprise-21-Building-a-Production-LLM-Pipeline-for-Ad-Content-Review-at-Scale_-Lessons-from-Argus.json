@@ -4,8 +4,14 @@
   "speaker": "Eagle Chen",
   "speaker_title": "Team Lead, Data Science · Content Quality @ Taboola",
   "summit": "ai-enterprise",
-  "tags": ["LLM生產環境", "廣告內容審查", "Agentic工作流", "Prompt治理", "CI/CD"],
-  "summary": "Taboola的Eagle Chen分享團隊如何打造名為Argus的LLM生產Pipeline，用以在大規模場景下審查廣告內容。演講說明人工審查在一致性、時效與規模化三方面的痛點，以及傳統機器學習模型難以應對政策頻繁變動的困境，進而提出「政策即Prompt」的重新框架方式，並詳細拆解Argus以控制流、上下文、工具、記憶與CI/CD五層構成的Harness架構，最後分享換模型與成效驗證的實戰經驗。",
+  "tags": [
+    "LLM生產環境",
+    "廣告內容審查",
+    "Agentic工作流",
+    "Prompt治理",
+    "CI/CD"
+  ],
+  "summary": "本演講分享 Taboola 如何打造名為 Argus 的大規模 LLM 生產管線，以應對每日全球數百萬則廣告審查的嚴苛挑戰。為解決人工審查一致性差、時效性低（等待期長達一日以上）及傳統機器學習在多模態、頻繁變動政策下維護成本高昂的痛點，團隊提出「政策即 Prompt」的創新理念。Argus 核心採用五層 Harness 架構：控制流層將審核拆為對應人工步驟的9個階段；上下文層利用 Prompt Assembler 依屬性動態組裝版本化規則；工具層賦予 Agentic AI 呼叫網路與圖片搜尋進行事實查核的能力；記憶層透過 Class-RAG 注入歷史相似判例以少樣本學習提升準確率；CI/CD 層則以黃金數據集進行回歸測試作為品質與釋出關卡。該系統不僅將審查縮短至分鐘級、減少75%人工工作量，更於實戰中成功「行進間換引擎」至 Gemini 3 Flash，達成30%成本優化與無痛回滾。",
   "highlights": [
     "人工審查廣告面臨一致性(審核標準不一)、時效性(廣告主需等待1天以上)、規模化(各市場/語言知識需持續重訓)三大痛點",
     "核心洞見是將「政策」轉化為「Prompt」：領域專家可直接更新規則Prompt，不需要R&D重新訓練模型",
@@ -36,9 +42,21 @@
     }
   ],
   "key_images": [
-    {"file": "assets/images/ai-enterprise-21-Building-a-Production-LLM-Pipeline-for-Ad-Content-Review-at-Scale_-Lessons-from-Argus/p4.jpg", "caption": "Taboola作為開放網路成長引擎的規模：11K+出版商、18K+廣告主、6億以上日活躍用戶"},
-    {"file": "assets/images/ai-enterprise-21-Building-a-Production-LLM-Pipeline-for-Ad-Content-Review-at-Scale_-Lessons-from-Argus/p6.jpg", "caption": "廣告審查前後對比案例，凸顯「宣稱是否可驗證」等審查者需要回答的關鍵問題"},
-    {"file": "assets/images/ai-enterprise-21-Building-a-Production-LLM-Pipeline-for-Ad-Content-Review-at-Scale_-Lessons-from-Argus/p7.jpg", "caption": "演講三大主軸：挑戰與突破、Argus架構設計、成效與經驗總結"},
-    {"file": "assets/images/ai-enterprise-21-Building-a-Production-LLM-Pipeline-for-Ad-Content-Review-at-Scale_-Lessons-from-Argus/p18.jpg", "caption": "2026年2月的換模型實戰過程：評估候選模型、換成Gemini 3 Flash、降低30%成本並針對兩個分類進行回滾"}
+    {
+      "file": "assets/images/ai-enterprise-21-Building-a-Production-LLM-Pipeline-for-Ad-Content-Review-at-Scale_-Lessons-from-Argus/p4.jpg",
+      "caption": "Taboola作為開放網路成長引擎的規模：11K+出版商、18K+廣告主、6億以上日活躍用戶"
+    },
+    {
+      "file": "assets/images/ai-enterprise-21-Building-a-Production-LLM-Pipeline-for-Ad-Content-Review-at-Scale_-Lessons-from-Argus/p6.jpg",
+      "caption": "廣告審查前後對比案例，凸顯「宣稱是否可驗證」等審查者需要回答的關鍵問題"
+    },
+    {
+      "file": "assets/images/ai-enterprise-21-Building-a-Production-LLM-Pipeline-for-Ad-Content-Review-at-Scale_-Lessons-from-Argus/p7.jpg",
+      "caption": "演講三大主軸：挑戰與突破、Argus架構設計、成效與經驗總結"
+    },
+    {
+      "file": "assets/images/ai-enterprise-21-Building-a-Production-LLM-Pipeline-for-Ad-Content-Review-at-Scale_-Lessons-from-Argus/p18.jpg",
+      "caption": "2026年2月的換模型實戰過程：評估候選模型、換成Gemini 3 Flash、降低30%成本並針對兩個分類進行回滾"
+    }
   ]
 }

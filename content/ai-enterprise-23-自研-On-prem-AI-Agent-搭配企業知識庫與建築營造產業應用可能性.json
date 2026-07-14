@@ -4,8 +4,14 @@
   "speaker": "徐灝",
   "speaker_title": "加號設計數位工程有限公司負責人",
   "summit": "ai-enterprise",
-  "tags": ["建築營造產業", "地端AI Agent", "企業知識庫", "雲地混合", "BIM"],
-  "summary": "加號設計數位工程負責人徐灝分享建築營造（AEC）產業長年面臨高工時、低報酬、經驗難以內化與人才流失的困境，並說明自己如何自研一套雲地混合的AI Agent，串連企業知識庫協助新人上手、建立職能分身、自動化QC等實務情境。演講後段分享地端部署的實際挑戰與地端模型選型經驗，並提出RAG/MCP/RPA的選型原則與雲地混用的Key Takeaways。",
+  "tags": [
+    "建築營造產業",
+    "地端AI Agent",
+    "企業知識庫",
+    "雲地混合",
+    "BIM"
+  ],
+  "summary": "本演講深入探討建築營造（AEC）產業面對高工時、經驗流失與培訓週期長等痛點，如何自研雲地混合 AI Agent 以活化企業知識庫。講者徐灝梳理了自 2024 年 Chat+RAG 到 2026 年 Subagent 與 A2A 的技術演進歷程，並分享 8 個實務場景（如新人培訓、Revit 物件定位、無障礙樓梯模型自動檢核）。在技術架構上，講者分析了雲端「能力」與地端「自主」的權衡，提出結合 RAPTOR 混合檢索技術，將知識庫輸出為具階層關係的 JSON 結構以利推理。此外，演講分享了關鍵選型原則：高可控任務走 RPA，高變化任務走 MCP，或將 RPA 包裝成工具供 Agent 呼叫。最終建議採取混用策略，由地端模型（如 Qwen、GLM）處理 80% 的敏感與低延遲任務，高推理複雜度的脫敏任務則上傳雲端旗艦模型，兼顧資料隱私與算力效能。",
   "highlights": [
     "AEC產業因業務產出資料樣態雜亂、缺乏系統性內化，形成「人留不住、經驗留不住、缺乏內化」的惡性循環",
     "產業調查顯示51.3%企業仍以數位資料（模型或圖檔）人工傳遞知識與經驗，僅9.1%使用知識庫或PMIS專管系統，1.1%已使用AI代理人",
@@ -36,9 +42,21 @@
     }
   ],
   "key_images": [
-    {"file": "assets/images/ai-enterprise-23-自研-On-prem-AI-Agent-搭配企業知識庫與建築營造產業應用可能性/p2.jpg", "caption": "講者徐灝的背景介紹，橫跨AI應用與開發、BIM應用開發、數位運算設計、企業培訓與建築設計整合"},
-    {"file": "assets/images/ai-enterprise-23-自研-On-prem-AI-Agent-搭配企業知識庫與建築營造產業應用可能性/p10.jpg", "caption": "AI能力演進主軸時間軸：從2024年Chat+RAG到2026年的Subagent與A2A"},
-    {"file": "assets/images/ai-enterprise-23-自研-On-prem-AI-Agent-搭配企業知識庫與建築營造產業應用可能性/p18.jpg", "caption": "應用情境示範：使用Skill明確指示Agent的查詢方式與QC檢核流程，例如無障礙樓梯檢核"},
-    {"file": "assets/images/ai-enterprise-23-自研-On-prem-AI-Agent-搭配企業知識庫與建築營造產業應用可能性/p26.jpg", "caption": "地端模型與雲端大模型的混用策略：地端處理80%日常任務、雲端處理高複雜度推論"}
+    {
+      "file": "assets/images/ai-enterprise-23-自研-On-prem-AI-Agent-搭配企業知識庫與建築營造產業應用可能性/p2.jpg",
+      "caption": "講者徐灝的背景介紹，橫跨AI應用與開發、BIM應用開發、數位運算設計、企業培訓與建築設計整合"
+    },
+    {
+      "file": "assets/images/ai-enterprise-23-自研-On-prem-AI-Agent-搭配企業知識庫與建築營造產業應用可能性/p10.jpg",
+      "caption": "AI能力演進主軸時間軸：從2024年Chat+RAG到2026年的Subagent與A2A"
+    },
+    {
+      "file": "assets/images/ai-enterprise-23-自研-On-prem-AI-Agent-搭配企業知識庫與建築營造產業應用可能性/p18.jpg",
+      "caption": "應用情境示範：使用Skill明確指示Agent的查詢方式與QC檢核流程，例如無障礙樓梯檢核"
+    },
+    {
+      "file": "assets/images/ai-enterprise-23-自研-On-prem-AI-Agent-搭配企業知識庫與建築營造產業應用可能性/p26.jpg",
+      "caption": "地端模型與雲端大模型的混用策略：地端處理80%日常任務、雲端處理高複雜度推論"
+    }
   ]
 }

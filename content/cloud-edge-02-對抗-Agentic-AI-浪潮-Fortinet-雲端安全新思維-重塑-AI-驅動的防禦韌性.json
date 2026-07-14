@@ -4,8 +4,14 @@
   "speaker": "王仁德 (James Wang)",
   "speaker_title": "Fortinet 雲端資安技術顧問",
   "summit": "cloud-edge",
-  "tags": ["雲端資安", "AI 驅動防禦", "零信任", "威脅情報", "SIEM/SOAR"],
-  "summary": "本場演講引用 Fortinet《全球威脅情勢報告》，說明 AI 如何縮短攻擊開發週期、降低攻擊門檻並利用合法工具偽裝攻擊。講者提出五層次的雲端多層防護架構，從攻擊預警、清洗誘捕、深度安全、作業管控到監控回應，逐層說明對應的 FortiRecon、FortiAppSec、FortiDeceptor、FortiGate、FortiWeb、FortiClient、FortiSIEM 與 FortiSOAR 等產品如何協同運作，打造全面且具備 AI 驅動能力的雲端防禦韌性。",
+  "tags": [
+    "雲端資安",
+    "AI 驅動防禦",
+    "零信任",
+    "威脅情報",
+    "SIEM/SOAR"
+  ],
+  "summary": "本演講針對 Agentic AI 浪潮下攻擊者開發週期縮短、攻擊技術門檻下降及利用合法工具偽裝入侵的資安威脅，提出 Fortinet 驅動防禦韌性的雲端多層防護架構。講者 James Wang 拆解了由五層防線構成的雲端防護策略：第一層「攻擊預警（FortiRecon）」進行外部攻擊面盤點；第二層「清洗誘捕（FortiAppSec & FortiDeceptor）」以應用程式清洗與仿真陷阱實現欺敵防禦；第三層「深度安全（FortiGate & FortiWeb）」嚴防漏洞，並首度支援量子敏捷加密（QKD/PQC）；第四層「作業管控（FortiClient）」落實動態合規的零信任存取（ZTNA）；第五層「監控回應（FortiSIEM & FortiSOAR）」結合異常行為分析與 MITRE ATT&CK 聯防。本演講為企業提供了如何整合端點、網路與安全事件管理，打造自愈型 AI 驅動雲端安全體系的具體指南。",
   "highlights": [
     "AI 縮短攻擊開發週期，數分鐘即可生成攻擊腳本，並大幅降低攻擊技術門檻",
     "提出雲端多層次防護的五層架構：攻擊預警、清洗誘捕、深度安全、作業管控、監控回應",
@@ -36,9 +42,21 @@
     }
   ],
   "key_images": [
-    {"file": "assets/images/cloud-edge-02-對抗-Agentic-AI-浪潮-Fortinet-雲端安全新思維-重塑-AI-驅動的防禦韌性/p5.jpg", "caption": "第二層「Cloud 清洗誘捕」架構圖，展示 FortiAppSec 應用安全防護與 FortiDeceptor 誘捕式入侵保護如何協同運作"},
-    {"file": "assets/images/cloud-edge-02-對抗-Agentic-AI-浪潮-Fortinet-雲端安全新思維-重塑-AI-驅動的防禦韌性/p7.jpg", "caption": "第四層「Cloud 作業管控」架構圖，說明 FortiClient ZTNA 如何透過合規管控、弱點修補與身分綁定落實零信任"},
-    {"file": "assets/images/cloud-edge-02-對抗-Agentic-AI-浪潮-Fortinet-雲端安全新思維-重塑-AI-驅動的防禦韌性/p8.jpg", "caption": "第五層「Cloud 監控回應」架構圖，展示 FortiSIEM 與 FortiSOAR 如何結合 UEBA 異常行為分析與情資整合進行智慧聯防"},
-    {"file": "assets/images/cloud-edge-02-對抗-Agentic-AI-浪潮-Fortinet-雲端安全新思維-重塑-AI-驅動的防禦韌性/p11.jpg", "caption": "展示 Fortinet 在多產業的信任評比、15 年以上 AI 研發實力，以及全球唯一自建 GPU 資料中心與同時支援 QKD／PQC 的資安公司地位"}
+    {
+      "file": "assets/images/cloud-edge-02-對抗-Agentic-AI-浪潮-Fortinet-雲端安全新思維-重塑-AI-驅動的防禦韌性/p5.jpg",
+      "caption": "第二層「Cloud 清洗誘捕」架構圖，展示 FortiAppSec 應用安全防護與 FortiDeceptor 誘捕式入侵保護如何協同運作"
+    },
+    {
+      "file": "assets/images/cloud-edge-02-對抗-Agentic-AI-浪潮-Fortinet-雲端安全新思維-重塑-AI-驅動的防禦韌性/p7.jpg",
+      "caption": "第四層「Cloud 作業管控」架構圖，說明 FortiClient ZTNA 如何透過合規管控、弱點修補與身分綁定落實零信任"
+    },
+    {
+      "file": "assets/images/cloud-edge-02-對抗-Agentic-AI-浪潮-Fortinet-雲端安全新思維-重塑-AI-驅動的防禦韌性/p8.jpg",
+      "caption": "第五層「Cloud 監控回應」架構圖，展示 FortiSIEM 與 FortiSOAR 如何結合 UEBA 異常行為分析與情資整合進行智慧聯防"
+    },
+    {
+      "file": "assets/images/cloud-edge-02-對抗-Agentic-AI-浪潮-Fortinet-雲端安全新思維-重塑-AI-驅動的防禦韌性/p11.jpg",
+      "caption": "展示 Fortinet 在多產業的信任評比、15 年以上 AI 研發實力，以及全球唯一自建 GPU 資料中心與同時支援 QKD／PQC 的資安公司地位"
+    }
   ]
 }

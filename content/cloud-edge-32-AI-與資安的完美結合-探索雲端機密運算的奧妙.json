@@ -4,8 +4,14 @@
   "speaker": "林家瑋 (Ray Lin)",
   "speaker_title": "CISO / CAIO, AWS Security Hero",
   "summit": "cloud-edge",
-  "tags": ["機密運算", "雲端資安", "AWS Nitro", "TEE", "資料保護"],
-  "summary": "本場演講聚焦「使用中資料」這個最常被忽略的安全缺口，說明資料在記憶體中處理時容易被 Memory Dump、Rowhammer、Side-channel 等手法竊取，進而介紹機密運算（Confidential Computing）如何以硬體級 TEE（Trusted Execution Environment）補上這道防線。講者深入剖析 AWS Nitro System、Nitro Enclaves 的信任鏈設計，並比較 AWS、Azure、GCP 三大雲端平台在機密運算上的定位與強項，協助企業在 AI、金融、醫療等高敏感資料場景中做出正確的技術選型。",
+  "tags": [
+    "機密運算",
+    "雲端資安",
+    "AWS Nitro",
+    "TEE",
+    "資料保護"
+  ],
+  "summary": "本演講深入探討雲端機密運算（Confidential Computing）如何保護常被忽略的「使用中數據」（Data in Use），避免高權限管理者或攻擊者透過 Memory Dump、Rowhammer 或側通道攻擊吞噬記憶體中的金鑰、PII 與 LLM 模型權重。技術上剖析了機密運算四大元件：硬體式可信執行環境（TEE）、衡量值（Measurement）、遠端證明（Attestation）及金鑰釋放（Key Release）。講者對比了三大雲端平台的設計：AWS 基於 Nitro System 與 Nitro Enclaves 的底層硬體隔離，利用平台配置暫存器（PCR）量測值對接 KMS 進行密碼學證明以釋放金鑰；Azure 提供全方位 Confidential VM、SGX 與 Confidential GPU；GCP 則以 Confidential Space 支援多方安全數據合作與 NVIDIA H100 加速。本場提供企業保護核心資安與 AI 推論隱私的硬體級防禦實踐指引。",
   "highlights": [
     "資料有三態：靜態、傳輸、使用中，其中「使用中」資料最常被忽略，一旦載入記憶體即為明文",
     "Rowhammer 攻擊最快可在極短時間內透過位元翻轉取得系統控制權",
@@ -36,9 +42,21 @@
     }
   ],
   "key_images": [
-    {"file": "assets/images/cloud-edge-32-AI-與資安的完美結合-探索雲端機密運算的奧妙/p8.jpg", "caption": "機密運算所防與不保證防的對象整理：涵蓋雲端管理者、Hypervisor 風險，但不含應用程式漏洞與 Side-channel 攻擊"},
-    {"file": "assets/images/cloud-edge-32-AI-與資安的完美結合-探索雲端機密運算的奧妙/p9.jpg", "caption": "AWS Nitro System 架構，說明 Nitro Cards、Nitro Security Chip、NitroTPM 與 Nitro Hypervisor 的分工"},
-    {"file": "assets/images/cloud-edge-32-AI-與資安的完美結合-探索雲端機密運算的奧妙/p14.jpg", "caption": "機密運算四個基礎元件：TEE、Measurement、Attestation、Key Release"},
-    {"file": "assets/images/cloud-edge-32-AI-與資安的完美結合-探索雲端機密運算的奧妙/p15.jpg", "caption": "Attestation 與 KMS Key Release 的驗證流程圖"}
+    {
+      "file": "assets/images/cloud-edge-32-AI-與資安的完美結合-探索雲端機密運算的奧妙/p8.jpg",
+      "caption": "機密運算所防與不保證防的對象整理：涵蓋雲端管理者、Hypervisor 風險，但不含應用程式漏洞與 Side-channel 攻擊"
+    },
+    {
+      "file": "assets/images/cloud-edge-32-AI-與資安的完美結合-探索雲端機密運算的奧妙/p9.jpg",
+      "caption": "AWS Nitro System 架構，說明 Nitro Cards、Nitro Security Chip、NitroTPM 與 Nitro Hypervisor 的分工"
+    },
+    {
+      "file": "assets/images/cloud-edge-32-AI-與資安的完美結合-探索雲端機密運算的奧妙/p14.jpg",
+      "caption": "機密運算四個基礎元件：TEE、Measurement、Attestation、Key Release"
+    },
+    {
+      "file": "assets/images/cloud-edge-32-AI-與資安的完美結合-探索雲端機密運算的奧妙/p15.jpg",
+      "caption": "Attestation 與 KMS Key Release 的驗證流程圖"
+    }
   ]
 }

@@ -4,8 +4,14 @@
   "speaker": "",
   "speaker_title": "",
   "summit": "cloud-edge",
-  "tags": ["AI Infra Ops", "MCP", "維運自動化", "知識管理", "RCA"],
-  "summary": "講題分享企業 IT 基礎設施維運團隊導入 AI Agent 與 MCP（Model Context Protocol）的實戰經驗，說明如何將 AI Agent 視為需要被管理的新同事，透過知識盤點、Skill 化與制度建立三個步驟，讓 AI 真正具備維運戰力，並以「從告警到 RCA」的實際場景說明如何將傳統工具驅動的維運模式轉變為知識驅動模式。",
+  "tags": [
+    "AI Infra Ops",
+    "MCP",
+    "維運自動化",
+    "知識管理",
+    "RCA"
+  ],
+  "summary": "本演講聚焦於企業 IT 基礎設施維運（Infra Ops）導入 AI Agent 與 Model Context Protocol (MCP) 的實戰歷程，解決從單純的 AI 聊天問答過渡到自主代理維運時，AI 容易失控「搞破壞」的真實挑戰。演講提出將 AI Agent 視為需要被管理之「新同事」的核心觀念，並規劃了三階段落地框架：第一步是維運經驗的「知識盤點」；第二步是「Skill 化」，將非結構化文件與專家經驗轉化為可執行邏輯與能力；第三步是「建立制度 Policy」以釐清 AI 執行的安全邊界。在技術應用上，展示了「從監控告警、事件調查、證據蒐集到 RCA（根因分析）報告產出」的自動化閉環。此實戰指南揭示了將工程師角色升級為知識作家，將傳統工具驅動維運轉變為知識驅動，最終邁向系統「自主呼吸」的自適應維運願景。",
   "highlights": [
     "AI Agent 跟人一樣需要被管理，結合 MCP（Model Context Protocol）讓 AI 具備存取維運工具與系統的能力",
     "導入 AI Agent 需經歷三步驟：第一步知識盤點（整理長期積累的維運經驗）、第二步將知識經驗 Skill 化（把文件變成可執行邏輯）、第三步建立制度 Policy（讓 AI 知道行為邊界）",
@@ -36,9 +42,21 @@
     }
   ],
   "key_images": [
-    {"file": "assets/images/cloud-edge-30-當-AI-成為維運工程師的同事-企業-IT-infra-維運-AI-導入實戰分享/p4.jpg", "caption": "從 AI 聊天室到 AI Agent 的過程，說明理想與現實的落差"},
-    {"file": "assets/images/cloud-edge-30-當-AI-成為維運工程師的同事-企業-IT-infra-維運-AI-導入實戰分享/p5.jpg", "caption": "AI Agent 跟人一樣需要被管理，結合 Model Context Protocol 概念圖"},
-    {"file": "assets/images/cloud-edge-30-當-AI-成為維運工程師的同事-企業-IT-infra-維運-AI-導入實戰分享/p8.jpg", "caption": "第二步：知識經驗轉成 AI 看得懂的語言、進行 Skill 化"},
-    {"file": "assets/images/cloud-edge-30-當-AI-成為維運工程師的同事-企業-IT-infra-維運-AI-導入實戰分享/p9.jpg", "caption": "第三步：建立制度 Policy，讓 AI Agent 知道行為邊界"}
+    {
+      "file": "assets/images/cloud-edge-30-當-AI-成為維運工程師的同事-企業-IT-infra-維運-AI-導入實戰分享/p4.jpg",
+      "caption": "從 AI 聊天室到 AI Agent 的過程，說明理想與現實的落差"
+    },
+    {
+      "file": "assets/images/cloud-edge-30-當-AI-成為維運工程師的同事-企業-IT-infra-維運-AI-導入實戰分享/p5.jpg",
+      "caption": "AI Agent 跟人一樣需要被管理，結合 Model Context Protocol 概念圖"
+    },
+    {
+      "file": "assets/images/cloud-edge-30-當-AI-成為維運工程師的同事-企業-IT-infra-維運-AI-導入實戰分享/p8.jpg",
+      "caption": "第二步：知識經驗轉成 AI 看得懂的語言、進行 Skill 化"
+    },
+    {
+      "file": "assets/images/cloud-edge-30-當-AI-成為維運工程師的同事-企業-IT-infra-維運-AI-導入實戰分享/p9.jpg",
+      "caption": "第三步：建立制度 Policy，讓 AI Agent 知道行為邊界"
+    }
   ]
 }

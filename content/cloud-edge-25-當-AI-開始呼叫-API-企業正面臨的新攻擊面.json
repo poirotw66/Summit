@@ -4,8 +4,14 @@
   "speaker": "Mika Chan（詹凱富）",
   "speaker_title": "Cloud Architect, Radware APJ",
   "summit": "cloud-edge",
-  "tags": ["API 安全", "AI Agent", "MCP", "威脅防護", "Bot 防護"],
-  "summary": "講者從 API 作為企業服務共同介面出發，說明當 AI Assistant、AI Workflow、AI Agent 加入後，API Layer 開始面對大量自動化、高頻率、自主決策的 Machine Consumer，帶來全新攻擊面。講題進一步剖析 AI 同時身為「消費者」與「服務提供者」的雙重角色，以及 AI 驅動的新型攻擊模式，並介紹 Radware 以行為分析為核心的多層防護框架，協助企業從傳統規則式防禦升級為行為式（Behavior-based）動態防護。",
+  "tags": [
+    "API 安全",
+    "AI Agent",
+    "MCP",
+    "威脅防護",
+    "Bot 防護"
+  ],
+  "summary": "本場演講針對生成式 AI 浪潮下，企業面臨 AI Agent 與自動化工作流程（Machine Consumers）自主呼叫 API 所引發的新興資安挑戰。核心痛點包含商業邏輯濫用、影子與殭屍 API/Agent 擴張、數據洩漏，以及傳統靜態規則無法有效辨識機器流量。對此，Radware 提出以 Behavioral AI Engine 為核心的 AI-Driven 多層防護框架，整合了 Agentic Behavioral Protection 機制，透過意圖-行為推理（Intent-Behavior Reasoning）比對代理操作是否符合用戶意圖。同時，透過 Model Context Protocol (MCP) 進行工具控制與 Full Execution Risk Graph Mapping。實戰建議企業升級傳統 API Key 與 OAuth 至 AI 專屬的最小權限控制，並部署 AI Gateway 與 Guardrail 建立統一安全防護面，達成即時且不依賴靜態規則的動態威脅阻擋。",
   "highlights": [
     "AI Assistant、AI Workflow、MCP Integration、Autonomous Agents 成為 API 的新型 Machine Consumer，且往往缺乏對應安全管控",
     "AI 同時是 API 的消費者（Copilot、Agent、Workflow、MCP）與服務提供者（LLM API、Chatbot API、AI Gateway、RAG Service），需要統一治理策略",
@@ -36,9 +42,21 @@
     }
   ],
   "key_images": [
-    {"file": "assets/images/cloud-edge-25-當-AI-開始呼叫-API-企業正面臨的新攻擊面/p8.jpg", "caption": "Radware AI-Driven 防護框架，涵蓋 Secure Access、AI Guardrails、AI-Aware DLP、Behavioral Protection 與 API/Agent 探索"},
-    {"file": "assets/images/cloud-edge-25-當-AI-開始呼叫-API-企業正面臨的新攻擊面/p9.jpg", "caption": "AI-Driven API 分析能力，包含 API 探索、目錄統計、商業邏輯流程視覺化與效能使用量統計"},
-    {"file": "assets/images/cloud-edge-25-當-AI-開始呼叫-API-企業正面臨的新攻擊面/p16.jpg", "caption": "Radware 對於 API 執行期的防護功能總覽，涵蓋認證、授權、負向防禦、正向防禦與安全擴充功能"},
-    {"file": "assets/images/cloud-edge-25-當-AI-開始呼叫-API-企業正面臨的新攻擊面/p18.jpg", "caption": "Agentic Behavioral Protection 架構圖，展示 Intent-Behavior Reasoning 如何比對 Agent 行為與使用者意圖"}
+    {
+      "file": "assets/images/cloud-edge-25-當-AI-開始呼叫-API-企業正面臨的新攻擊面/p8.jpg",
+      "caption": "Radware AI-Driven 防護框架，涵蓋 Secure Access、AI Guardrails、AI-Aware DLP、Behavioral Protection 與 API/Agent 探索"
+    },
+    {
+      "file": "assets/images/cloud-edge-25-當-AI-開始呼叫-API-企業正面臨的新攻擊面/p9.jpg",
+      "caption": "AI-Driven API 分析能力，包含 API 探索、目錄統計、商業邏輯流程視覺化與效能使用量統計"
+    },
+    {
+      "file": "assets/images/cloud-edge-25-當-AI-開始呼叫-API-企業正面臨的新攻擊面/p16.jpg",
+      "caption": "Radware 對於 API 執行期的防護功能總覽，涵蓋認證、授權、負向防禦、正向防禦與安全擴充功能"
+    },
+    {
+      "file": "assets/images/cloud-edge-25-當-AI-開始呼叫-API-企業正面臨的新攻擊面/p18.jpg",
+      "caption": "Agentic Behavioral Protection 架構圖，展示 Intent-Behavior Reasoning 如何比對 Agent 行為與使用者意圖"
+    }
   ]
 }

@@ -28,7 +28,7 @@
 <main class="container detail-main">
   <section class="detail-section summary-box">
     <h2>摘要</h2>
-    <p>講者以國泰金控 DDT Center 架構師身分，說明傳統應用程式與 Agentic AI 系統在可觀測性上的根本差異：Agent 失敗往往是「沉默且機率性」的，難以像傳統服務的 500 錯誤那樣被立即發現。講題進一步介紹以 OpenTelemetry 與 OpenInference 為基礎的 Agent 專屬 Golden Signals、追蹤（Trace）架構，以及涵蓋結果與軌跡（Trajectory）的評測方法，協助企業建立可信賴的 Agentic AI 監控與評估體系。</p>
+    <p>本講題針對 Agentic AI 系統中「沉默且機率性」的失效痛點（無 500 錯誤代碼卻產生錯誤決策，導致 Token 浪費與合規風險），提出專為代理式系統設計的可觀測性與評測架構。講者分析，隨著安全威脅演進至 OWASP Agentic AI Top 10（如目標劫持與工具濫用），監控指標必須升級。對此，國泰金控提出基於 OpenTelemetry 與 OpenInference 開放標準的觀測方案，核心設計在於將 Span 區分為 LLM、TOOL、AGENT 與 CHAIN，記錄詳細推理與工具軌跡。實務上，企業應採用三層測試框架：Tier 1 本地單元測試、Tier 2 結合 LLM-as-a-Judge 的整合測試，以及 Tier 3 的人機協作（HITL）端對端測試。透過「結果評測」與「軌跡評測」雙重機制，方能全面控管品質、成本與安全性等關鍵服務等級目標（SLO）。</p>
   </section>
   <section class="detail-section">
     <h2>重點整理</h2>

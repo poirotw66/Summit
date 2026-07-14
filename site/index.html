@@ -46,7 +46,7 @@
     <h3>金融級 Enterprise Agentic AI 架構設計：從 PoC 到 Agentic Operating System</h3>
     <div class="card-speaker">🎤 張維峻 Justin</div>
     <p class="card-featured-reason">✨ 提出『Agentic Operating System』完整治理框架，回應金融級場景對可稽核、可信任 AI 的嚴苛要求。</p>
-    <p class="card-summary">講者以金融業視角提出Enterprise Agentic AI架構設計，強調金融場景要求AI具備查得到證據、能判斷證據是否足夠、不確定時拒答或追問、高風險任務升級給人、每次回答都留下Trace等硬性條件。演講說明企業AI專案常卡在PoC的三個關鍵斷點，並介紹以Agent Registry、Policy Engine、Tool Registry、Knowledge層與Evaluation/Trace構成的可治理AI Control Plane，最終目標是打造可觀測、可驗證、可稽核的Agentic Operating System。</p>
+    <p class="card-summary">本演講深入探討金融級 Enterprise Agentic AI 的架構設計，直擊企業 AI 專案從 PoC 邁向生產環境時常遭遇的三大營運斷點：系統孤島、線性 RAG 幻覺與黑盒 AI 無法審計。為滿足金融業對高度信任、可稽核與安全合規的硬性要求，講者張維峻（Justin）提出了平台工程化的「Agentic Operating System」與「AI Control Plane」架構。該架構包含 Agent Registry、Policy Engine、Tool Registry、Knowledge 知識層與 Evaluation/Trace 五大核心模組，並規劃三道推理防線（Evidence 證據邊界、Policy 政策邊界、Human 人類介入邊界）。實務上以 15 個以上職責分組的 Agent 協作，在評測中取得 98% 加權準確率與 0 題不安全回答的亮眼成績。演講指出，金融 AI 的關鍵不在模型大小，而在於建構可觀測、可驗證且具備自我校正能力的 Agentic RAG 工作流。</p>
     <div class="tags"><span class="tag">Agentic AI架構</span><span class="tag">金融業AI治理</span><span class="tag">Agentic RAG</span><span class="tag">LLM評測</span></div>
   </div>
 </a>
@@ -57,7 +57,7 @@
     <h3>企業 AI 的 CoWoS 時刻：探討「多模型路由（Router）」的 Interposer 戰略</h3>
     <div class="card-speaker">🎤 Len（Senior Solution Architect, Elite Cloud 勤英科技）</div>
     <p class="card-featured-reason">✨ 以半導體 CoWoS／Interposer 封裝技術類比企業多模型 AI 整合，視角新穎少見。</p>
-    <p class="card-summary">本議程原始投影片 PDF 缺乏可擷取文字層，以下內容依據議程提供之補充說明整理。講者以半導體 CoWoS／Interposer 封裝技術（連接多顆晶粒）類比企業多模型 AI 整合的挑戰：企業內眾多 AI 模型需要透過一層統一的「Router／Interposer」與既有系統串接，而非各自為政地直接對接。講者並介紹一款名為「MixRoute」的 AI 閘道／路由產品，作為此一戰略的具體實作。</p>
+    <p class="card-summary">本講題以半導體先進封裝技術 CoWoS/Interposer（中介層）為比喻，深入探討企業在導入多模型 AI 時，因各系統與不同 LLM 供應商直接對接所導致的架構混亂、治理困難與高昂維運成本。為解決此痛點，講者提出「多模型路由（Router）」的 Interposer 戰略，並介紹 MixRoute 作為企業級 AI 閘道中樞。MixRoute 扮演異質模型與企業內部系統之間的統一連接介面，核心技術設計包含跨供應商的智慧路由（Smart Routing）、自動容錯移轉（Failover）機制，以及內建的安全治理防護欄與存取政策管控。實務上，該架構能協助企業在 30 秒內快速導入並替換新模型，實現使用量分析與成本可視化，讓企業在彈性、安全與成本控制之間取得最佳平衡，建立敏捷且高韌性的 AI 基礎架構。</p>
     <div class="tags"><span class="tag">多模型路由</span><span class="tag">AI Gateway</span><span class="tag">企業AI架構</span><span class="tag">AI治理</span></div>
   </div>
 </a>
@@ -68,7 +68,7 @@
     <h3>Observability Architecture for Enterprise Agentic AI Agents</h3>
     <div class="card-speaker">🎤 Rich Lee (李琦)（Architect, Cathay Financial Holding DDT Center）</div>
     <p class="card-featured-reason">✨ 把 OWASP Top 10 for Agentic AI、OpenTelemetry／OpenInference 系統化整理成企業可落地的可觀測性架構。</p>
-    <p class="card-summary">講者以國泰金控 DDT Center 架構師身分，說明傳統應用程式與 Agentic AI 系統在可觀測性上的根本差異：Agent 失敗往往是「沉默且機率性」的，難以像傳統服務的 500 錯誤那樣被立即發現。講題進一步介紹以 OpenTelemetry 與 OpenInference 為基礎的 Agent 專屬 Golden Signals、追蹤（Trace）架構，以及涵蓋結果與軌跡（Trajectory）的評測方法，協助企業建立可信賴的 Agentic AI 監控與評估體系。</p>
+    <p class="card-summary">本講題針對 Agentic AI 系統中「沉默且機率性」的失效痛點（無 500 錯誤代碼卻產生錯誤決策，導致 Token 浪費與合規風險），提出專為代理式系統設計的可觀測性與評測架構。講者分析，隨著安全威脅演進至 OWASP Agentic AI Top 10（如目標劫持與工具濫用），監控指標必須升級。對此，國泰金控提出基於 OpenTelemetry 與 OpenInference 開放標準的觀測方案，核心設計在於將 Span 區分為 LLM、TOOL、AGENT 與 CHAIN，記錄詳細推理與工具軌跡。實務上，企業應採用三層測試框架：Tier 1 本地單元測試、Tier 2 結合 LLM-as-a-Judge 的整合測試，以及 Tier 3 的人機協作（HITL）端對端測試。透過「結果評測」與「軌跡評測」雙重機制，方能全面控管品質、成本與安全性等關鍵服務等級目標（SLO）。</p>
     <div class="tags"><span class="tag">Observability</span><span class="tag">Agentic AI</span><span class="tag">OpenTelemetry</span><span class="tag">OWASP</span></div>
   </div>
 </a>
@@ -79,7 +79,7 @@
     <h3>Config-Driven Agentic AI：讓 AI Agent 用對話產出零售分析配置</h3>
     <div class="card-speaker">🎤 追客 Fredrick（Data / AI Engineer, Tagtoo）</div>
     <p class="card-featured-reason">✨ 從『Workflow Agent』的失敗經驗，提煉出『Config-Driven』新架構模式，實戰教訓具體可借鏡。</p>
-    <p class="card-summary">Tagtoo分享零售分析系統的開發經驗，說明團隊如何從讓Agent直接調度整個分析流程的「Workflow Agent」架構，因遇到速度慢、成本高、穩定性差的問題，轉向以「Config Compiler」為核心的Config-Driven架構：Agent不再直接執行任務，而是產生結構化的「分析合約」，再交由固定pipeline腳本執行。演講也說明如何透過三道防線讓這套AI workflow更加穩定可靠。</p>
+    <p class="card-summary">本講題分享零售數據分析的實戰開發經驗，針對「高度客製化分析需求與規模化系統之間的拉扯」提出 Config-Driven Agentic AI 架構。傳統 V1 架構讓 Agent 作為調度者依據工作流 YAML 直接執行分析，卻面臨速度慢、Token 成本高與上下文腐敗等不穩定問題。為此，Tagtoo 轉向 V2 架構：讓 AI Agent 僅負責與使用者對話並產出結構化的「分析合約（`project.yaml`）」，內含分析單位（Entity）與篩選邊界（Filter），再交由確定性的 Pipeline 腳本執行。系統依需求頻率設計 L1 腳本、L2 說明書與 L3 自訂 SQL 三種路徑，並建立三道防線（需求分類、合約合法性與 dry-run 驗證、結果需求覆蓋率審查），成功以配置化將業務邏輯與自動化分析流程穩定銜接。</p>
     <div class="tags"><span class="tag">Agentic AI</span><span class="tag">Config-Driven</span><span class="tag">零售分析</span><span class="tag">Agent Workflow</span></div>
   </div>
 </a>
@@ -90,7 +90,7 @@
     <h3>零資料接觸架構：讓 LLM 讀懂企業資料但永遠摸不到它</h3>
     <div class="card-speaker">🎤 Chester（Plusblocks Technology）</div>
     <p class="card-featured-reason">✨ 『零資料接觸架構（ZDTA）』以 Schema-Only 查詢代理解決 LLM 資料外洩兩難，設計巧妙。</p>
-    <p class="card-summary">講者 Chester 提出「零資料接觸架構（Zero Data Touch Architecture, ZDTA）」，解決企業想讓 LLM 理解內部資料、卻又害怕資料外洩與合規風險的核心矛盾。架構核心是讓 LLM 只看到資料表 Schema、由安全中間層（Query Proxy）代為執行查詢語句，再經 Result Sanitizer 脫敏聚合後才呈現給使用者，確保 LLM 全程不接觸任何一筆原始資料。</p>
+    <p class="card-summary">本演講針對企業在導入大語言模型時面臨「既想利用內部資料進行自然語言分析，又害怕資料外洩與法規合規風險」的核心矛盾，提出創新且安全的「零資料接觸架構（Zero Data Touch Architecture, ZDTA）」。講者 Chester 拆解了 ZDTA 的三層安全防禦設計：第一，Schema-Only Context，僅將資料庫 Schema、欄位型別等結構資訊提供給 LLM，不包含任何實際資料；第二，Query Proxy 中間層，利用 AST（抽象語法樹）解析進行 SQL 白名單驗證與欄位級權限控管，防止 LLM 受 Prompt Injection 影響產生惡意 SQL；第三，Result Sanitizer，將資料庫執行的查詢結果進行 PII 遮罩與 K-Anonymity 驗證後直接呈現給用戶，繞過 LLM。實務上透過 Few-shot 範例可將準確度拉升至 88%，並輔以 Schema/Query Plan 快取將額外延遲降至 200ms，為金融、醫療等高監管產業提供了結構化資料安全分析的絕佳實踐藍圖。</p>
     <div class="tags"><span class="tag">零資料接觸架構</span><span class="tag">LLM資安</span><span class="tag">Schema-Only</span><span class="tag">Query Proxy</span></div>
   </div>
 </a>
@@ -106,7 +106,7 @@
     <h3>金融業生成式 AI 平台工程：以雲端原生架構打造可擴展的 Agentic AI 中樞</h3>
     <div class="card-speaker">🎤 張維峻 (Justin)</div>
     <p class="card-featured-reason">✨ 以 MCP、Agentic RAG 動態狀態機與 Agent Trace 打通金融業 AI 落地三條生死線，並用真實 Benchmark 數據驗證成效。</p>
-    <p class="card-summary">演講從金融業第一線 IT 客服場景出發，說明合規性、整合性、即時性是金融 AI 落地的三條生死線，並剖析為何 AI 專案常卡在 PoC 階段。講者提出以雲端原生架構打造的 Cloud Native AI Runtime，結合 MCP（Model Context Protocol）解決系統孤島問題、Agentic RAG 動態狀態機解決線性 RAG 的幻覺與驗證問題，並以 Agent Trace 稽核軌跡解決黑盒 AI 的稽核資安法遵挑戰，最終以真實 Benchmark 數據與語音客服案例驗證平台成效。</p>
+    <p class="card-summary">本演講深入探討金融業生成式 AI 如何突破 PoC 階段、邁向金融級營運現場的關鍵路徑，點出金融落地面臨的合規、整合與延遲等三條生死線。技術上，展示了「金融級 Agentic AI 中樞」的平台工程架構：利用 MCP (Model Context Protocol) Hub 統一封裝內部系統，解決客製化 API Spaghetti 痛點並保留 Tool Trace；數據端採用混合檢索（BM25 關鍵字與語意 Embedding），並經 RRF 融合排序；流程上以「動態狀態機」重構傳統單向 RAG，納入 `validate_context` 驗證與 `rewrite_query` 改寫，並對高風險任務導入人機協同（Human-in-the-loop）與明確保證拒答機制。實測顯示，Agentic RAG 可將準確率由傳統 Naive RAG 的 87% 提升至 98%，為金融業提供了具備可稽核軌跡（Agent Trace）的 AI 系統運作範式。</p>
     <div class="tags"><span class="tag">Agentic AI</span><span class="tag">金融科技</span><span class="tag">RAG</span><span class="tag">MCP</span></div>
   </div>
 </a>
@@ -150,7 +150,7 @@
     <h3>高雄 AI 燈塔計畫 - 以高雄主權 AI 出發，打造國家級 AI 旗艦城市</h3>
     <div class="card-speaker">🎤 劉俊傑（高雄市政府）</div>
     <p class="card-featured-reason">✨ 高雄以主權 AI VLM 與數位孿生打造國家級智慧城市旗艦案例，規模與縱深少見。</p>
-    <p class="card-summary">高雄市政府分享「高雄燈塔計畫」，說明如何從傳統以物件辨識為基礎、需事先設定規則的視覺 AI，演進到能理解複雜多重事件的視覺語言模型（VLM），並進一步升級至具推理能力的 Cosmos Reason 2 與結合數位孿生的 Physical AI。透過主權 AI VLM 平台整合跨局處攝影機與影像資料，取代過去各局處各自為政的人工通報模式，打造能同時滿足交通、工務、水利、警察、消防等不同需求的複合式應用。</p>
+    <p class="card-summary">本演講介紹高雄市政府如何透過「高雄 AI 燈塔計畫」，克服傳統視覺模型（VM）僅能做單一物件辨識且造成局處資訊孤島（Silo AI）的智慧城市挑戰。計畫以「高雄主權 AI」為核心，從 1.0 的視覺語言模型（VLM）單張照片推論，升級至 2.0 的實體 AI（Physical AI）。技術架構實現「Real to Sim to Real」閉環：利用 3D 智慧掃描（3DGS）與 LiDAR 重建 2cm 等級數位孿生；在 NVIDIA Omniverse 與 Cosmos Transfer 中模擬水災、車禍等極端情境；訓練具思維鏈（CoT）推理能力的 Cosmos Reason 2 模型。最後透過 Model Context Protocol (MCP) 協定對接路口電子看板（CMS）與 Google Maps API 實現自動避災導引。此案例為現代城市治理提供了打破數據壁壘、以數位孿生訓練城市大腦的旗艦級範式。</p>
     <div class="tags"><span class="tag">智慧城市</span><span class="tag">主權 AI</span><span class="tag">VLM</span><span class="tag">數位孿生</span></div>
   </div>
 </a>
@@ -179,7 +179,7 @@
     <h3>從導入 AI 到治理 Agent：企業負責任 AI 實務的新課題</h3>
     <div class="card-speaker">🎤 林育宏 Frank（Microsoft Cloud &amp; AI 資深解決方案工程師）</div>
     
-    <p class="card-summary">講者從 Microsoft Build 2026 的核心訊息出發，說明企業導入 Agentic AI 時面臨的關鍵命題已從「AI 能做什麼」轉變為「企業敢讓 AI 自己做什麼」。講題以「信任＝邊界＋檢查點＋稽核」為框架，介紹 Microsoft 開源的 Agent Governance Toolkit（AGT）如何透過系統架構落實邊界管控、Human-in-the-loop 檢查點與可稽核追蹤，協助企業對齊歐盟 AI 法案、NIST AI RMF、OWASP Agentic AI Top 10 與 SOC 2 等標準。</p>
+    <p class="card-summary">本講題針對企業導入 Agentic AI 時面臨的「信任與可控性」核心挑戰，說明關鍵命題已從「AI 能做什麼」轉變為「企業敢讓它自主執行什麼」。為此，講者提出以「邊界、檢查點、稽核」為核心的三大信任支柱治理框架，並介紹微軟開源的 Agent Governance Toolkit (AGT)。在架構上，AGT 內建的 Agent Control Specification (ACS) 整合了 CNCF 開源通用政策引擎 Open Policy Agent (OPA)，將治理規則轉化為可自動把關的「政策即代碼（Policy as Code）」，並在 Agent 執行迴圈中設置 8 個關鍵 Checkpoint/HITL 節點。搭配以 OpenTelemetry 為基礎的觀測鏈，對齊歐盟 AI 法案、OWASP Agentic AI Top 10、SOC 2 等標準。這套底盤工程實踐能讓企業在確保資安防禦與合規的前提下，安全地釋放代理式 AI 的商業價值與 ROI。</p>
     <div class="tags"><span class="tag">AI治理</span><span class="tag">Agentic AI</span><span class="tag">負責任AI</span><span class="tag">資安合規</span></div>
   </div>
 </a>
@@ -190,7 +190,7 @@
     <h3>企業 AI 的 CoWoS 時刻：探討「多模型路由（Router）」的 Interposer 戰略</h3>
     <div class="card-speaker">🎤 Len（Senior Solution Architect, Elite Cloud 勤英科技）</div>
     
-    <p class="card-summary">本議程原始投影片 PDF 缺乏可擷取文字層，以下內容依據議程提供之補充說明整理。講者以半導體 CoWoS／Interposer 封裝技術（連接多顆晶粒）類比企業多模型 AI 整合的挑戰：企業內眾多 AI 模型需要透過一層統一的「Router／Interposer」與既有系統串接，而非各自為政地直接對接。講者並介紹一款名為「MixRoute」的 AI 閘道／路由產品，作為此一戰略的具體實作。</p>
+    <p class="card-summary">本講題以半導體先進封裝技術 CoWoS/Interposer（中介層）為比喻，深入探討企業在導入多模型 AI 時，因各系統與不同 LLM 供應商直接對接所導致的架構混亂、治理困難與高昂維運成本。為解決此痛點，講者提出「多模型路由（Router）」的 Interposer 戰略，並介紹 MixRoute 作為企業級 AI 閘道中樞。MixRoute 扮演異質模型與企業內部系統之間的統一連接介面，核心技術設計包含跨供應商的智慧路由（Smart Routing）、自動容錯移轉（Failover）機制，以及內建的安全治理防護欄與存取政策管控。實務上，該架構能協助企業在 30 秒內快速導入並替換新模型，實現使用量分析與成本可視化，讓企業在彈性、安全與成本控制之間取得最佳平衡，建立敏捷且高韌性的 AI 基礎架構。</p>
     <div class="tags"><span class="tag">多模型路由</span><span class="tag">AI Gateway</span><span class="tag">企業AI架構</span><span class="tag">AI治理</span></div>
   </div>
 </a>
@@ -201,7 +201,7 @@
     <h3>從 ASK 到 Agent：企業 AI 落地新時代，IBM Bob 加速 AI Agent 普及與價值實現</h3>
     <div class="card-speaker">🎤 Willy Lee (李維倫)（Data &amp; AI 技術總監, IBM Taiwan）</div>
     
-    <p class="card-summary">本議程原始投影片 PDF 缺乏可擷取文字層，以下內容依據議程提供之補充說明整理。講題聚焦企業 AI 應用從簡單問答式（ASK）互動邁向具自主行動能力的 Agentic AI 的轉變，並介紹 IBM 推出的「IBM Bob」——一套定位為「AI-Native SDLC Orchestrator」的架構，用以協調軟體開發生命週期中的多個 AI Agent，藉此加速企業 AI Agent 的普及與價值實現。</p>
+    <p class="card-summary">本講題探討企業 AI 應用從傳統問答式（ASK）模式，邁向具備自主規劃、決策與執行能力的代理式 AI（Agentic AI）所面臨的落地與規模化挑戰。為加速 AI Agent 的普及與價值實現，講者介紹了 IBM 提出的「IBM Bob」——一套定位為「AI-Native SDLC Orchestrator」的架構。該架構的核心設計在於將多個 AI Agent 進行系統性協調與編排，使其協同運作於軟體開發生命週期（SDLC）的各個階段（如需求分析、程式碼撰寫、測試驗證與部署）。實務上的關鍵啟示是，企業不能僅依賴單一離散的 AI 工具，而必須建立統一的協調管理平台，透過 Agent 間的無縫協作，有效縮短開發週期、降低溝通摩擦，並大幅提升軟體交付的品質與整體工程效率。</p>
     <div class="tags"><span class="tag">Agentic AI</span><span class="tag">SDLC</span><span class="tag">IBM Bob</span><span class="tag">企業AI導入</span></div>
   </div>
 </a>
@@ -212,7 +212,7 @@
     <h3>打造企業級 AI 基礎設施：從程式碼理解到 Agentic Workflow 的實戰藍圖與避坑指南</h3>
     <div class="card-speaker">🎤 Blacat Wu &amp; Jerry Lee（研發部技術經理, TrendAI 趨勢科技企業事業群）</div>
     
-    <p class="card-summary">趨勢科技分享其內部AI平台 Genisys 的建置歷程，說明在橫跨 Monolith 與微服務、規模龐大到沒有人能掌握全貌的架構下，AI落地的最大瓶頸不是工具，而是如何把企業知識餵給AI（Context Engineering）。講者說明如何自建 Code Search、AI SDLC Orchestrator 與 Service Map，並分享從知識庫走向 Agentic AI Platform 過程中踩過的坑與實戰案例。</p>
+    <p class="card-summary">本講題針對擁有 35 年以上歷史、橫跨 Monolith 與 500 多個微服務架構的龐大程式庫，指出企業 AI 落地之瓶頸不在於工具，而是在於如何餵養企業知識的「上下文工程（Context Engineering）」。為此，趨勢科技打造了 Genisys 五層平台架構。技術亮點包含：自建 Code Search MCP，以 Tree-sitter AST 解析程式碼並結合 OpenSearch 進行語意與關鍵字檢索，每月成本僅 200 美元；建立 Service Map，融合靜態分析（Protobuf/API）與動態日誌分析，繪製真實微服務流量拓樸。在此地基上部署 AI 助理 Shrimp，進駐 Teams 進行 Sprint 管理，並藉由雙 Agent 協作（Triage/Investigation）處理 Support Case。實務啟示為：企業應優先整理知識斷點、打破代碼庫藩籬，從最痛的程式理解與漏洞修補下手，方能發揮 AI 規模化效益。</p>
     <div class="tags"><span class="tag">Agentic AI</span><span class="tag">Code Search</span><span class="tag">企業知識庫</span><span class="tag">Context Engineering</span></div>
   </div>
 </a>
@@ -223,7 +223,7 @@
     <h3>企業級代理式 AI (Agentic AI for The Enterprise)</h3>
     <div class="card-speaker">🎤 Bernard Bay（Manager Solution Engineering, APAC, BMC Helix）</div>
     
-    <p class="card-summary">BMC Helix 分享企業如何透過代理式AI（Agentic AI）轉型IT維運與服務管理，說明使用者與應用程式互動的模式如何從傳統點擊式操作，演進到以自然語言表達意圖、由AI自主推理與跨工具協調執行的Agentic介面。講者以 HelixGPT 平台展示多個現成代理人如何協助處理事件分析、根因調查與服務協作等場景，並附上具體的生產力與效率提升數據。</p>
+    <p class="card-summary">本講題針對現代企業 IT 維運面臨的「系統複雜度飆升、變更引發事故增多與資源受限」核心挑戰，提出以代理式 AI（Agentic AI）重塑 IT 服務管理的解決方案。講者指出，使用者互動模式正經歷變革，從傳統點擊選單的確定性系統，轉為由自然語言驅動、自主編排跨工具內容的機率式 AI 介面。為此，BMC Helix 推出以 HelixGPT 為系統智慧中樞的 ServiceOps 平台，串接企業知識庫（Confluence/SharePoint）與維運工具（Otel/Splunk/ITSM）。平台內建多款專屬 Agent（如 Employee Navigator、Post Mortem Analyzer），實務上能縮短問題排查時間並降低 25-40% 營運支出。此外，企業可透過低程式碼工具 Agent Studio 視覺化開發與測試客製化代理人，開啟 IT 運作自動化與協作的新紀元。</p>
     <div class="tags"><span class="tag">Agentic AI</span><span class="tag">IT維運</span><span class="tag">BMC Helix</span><span class="tag">AIOps</span></div>
   </div>
 </a>
@@ -234,7 +234,7 @@
     <h3>企業 AI Orchestration 低摩擦整合路線：以 MCP Server 工具化既有 API與 OAuth 授權治理</h3>
     <div class="card-speaker">🎤 Ian Chen (陳葵懋)（研發部主任工程師, 一等一科技）</div>
     
-    <p class="card-summary">一等一科技分享一套低摩擦的企業AI整合路線，說明如何將既有企業API包裝為MCP（Model Context Protocol）Server工具，讓AI Agent能夠直接調用這些工具來完成任務，而不需要重寫既有系統。演講同時說明如何以OAuth為基礎的授權機制，讓Agent能夠代表使用者安全地呼叫企業內部API，並在治理上確保Agent行為可控、可稽核。</p>
+    <p class="card-summary">本講題針對企業導入 Agentic AI 時，既有 API 資產難以被 AI 理解、且串接與重寫成本高昂的痛點，提出一套「低摩擦」的企業級 AI 編排整合路線。講者建議企業無需改造既有核心系統，而是透過 Model Context Protocol (MCP) Server 將現有 API 封裝為標準化的「工具（Tools）」，使 Claude 等 AI Agent 能直接探索並呼叫。在資安治理方面，此架獲整合了以 OAuth 為基礎的「委派授權（Delegated Authorization）」與 Token 交換機制，讓 Agent 僅持有受限範圍（Scope）的短期憑證來代表使用者安全呼叫 API，避免憑證洩漏與越權操作。這套實踐方案協助企業在保障資安合規、可稽核的前提下，將現有 IT 資產無縫融入 AI 自動化工作流中。</p>
     <div class="tags"><span class="tag">MCP Server</span><span class="tag">OAuth</span><span class="tag">API治理</span><span class="tag">Agent Orchestration</span></div>
   </div>
 </a>
@@ -245,7 +245,7 @@
     <h3>Config-Driven Agentic AI：讓 AI Agent 用對話產出零售分析配置</h3>
     <div class="card-speaker">🎤 追客 Fredrick（Data / AI Engineer, Tagtoo）</div>
     
-    <p class="card-summary">Tagtoo分享零售分析系統的開發經驗，說明團隊如何從讓Agent直接調度整個分析流程的「Workflow Agent」架構，因遇到速度慢、成本高、穩定性差的問題，轉向以「Config Compiler」為核心的Config-Driven架構：Agent不再直接執行任務，而是產生結構化的「分析合約」，再交由固定pipeline腳本執行。演講也說明如何透過三道防線讓這套AI workflow更加穩定可靠。</p>
+    <p class="card-summary">本講題分享零售數據分析的實戰開發經驗，針對「高度客製化分析需求與規模化系統之間的拉扯」提出 Config-Driven Agentic AI 架構。傳統 V1 架構讓 Agent 作為調度者依據工作流 YAML 直接執行分析，卻面臨速度慢、Token 成本高與上下文腐敗等不穩定問題。為此，Tagtoo 轉向 V2 架構：讓 AI Agent 僅負責與使用者對話並產出結構化的「分析合約（`project.yaml`）」，內含分析單位（Entity）與篩選邊界（Filter），再交由確定性的 Pipeline 腳本執行。系統依需求頻率設計 L1 腳本、L2 說明書與 L3 自訂 SQL 三種路徑，並建立三道防線（需求分類、合約合法性與 dry-run 驗證、結果需求覆蓋率審查），成功以配置化將業務邏輯與自動化分析流程穩定銜接。</p>
     <div class="tags"><span class="tag">Agentic AI</span><span class="tag">Config-Driven</span><span class="tag">零售分析</span><span class="tag">Agent Workflow</span></div>
   </div>
 </a>
@@ -256,7 +256,7 @@
     <h3>Building a Production LLM Pipeline for Ad Content Review at Scale: Lessons from Argus</h3>
     <div class="card-speaker">🎤 Eagle Chen（Team Lead, Data Science · Content Quality @ Taboola）</div>
     
-    <p class="card-summary">Taboola的Eagle Chen分享團隊如何打造名為Argus的LLM生產Pipeline，用以在大規模場景下審查廣告內容。演講說明人工審查在一致性、時效與規模化三方面的痛點，以及傳統機器學習模型難以應對政策頻繁變動的困境，進而提出「政策即Prompt」的重新框架方式，並詳細拆解Argus以控制流、上下文、工具、記憶與CI/CD五層構成的Harness架構，最後分享換模型與成效驗證的實戰經驗。</p>
+    <p class="card-summary">本演講分享 Taboola 如何打造名為 Argus 的大規模 LLM 生產管線，以應對每日全球數百萬則廣告審查的嚴苛挑戰。為解決人工審查一致性差、時效性低（等待期長達一日以上）及傳統機器學習在多模態、頻繁變動政策下維護成本高昂的痛點，團隊提出「政策即 Prompt」的創新理念。Argus 核心採用五層 Harness 架構：控制流層將審核拆為對應人工步驟的9個階段；上下文層利用 Prompt Assembler 依屬性動態組裝版本化規則；工具層賦予 Agentic AI 呼叫網路與圖片搜尋進行事實查核的能力；記憶層透過 Class-RAG 注入歷史相似判例以少樣本學習提升準確率；CI/CD 層則以黃金數據集進行回歸測試作為品質與釋出關卡。該系統不僅將審查縮短至分鐘級、減少75%人工工作量，更於實戰中成功「行進間換引擎」至 Gemini 3 Flash，達成30%成本優化與無痛回滾。</p>
     <div class="tags"><span class="tag">LLM生產環境</span><span class="tag">廣告內容審查</span><span class="tag">Agentic工作流</span><span class="tag">Prompt治理</span></div>
   </div>
 </a>
@@ -267,7 +267,7 @@
     <h3>金融級 Enterprise Agentic AI 架構設計：從 PoC 到 Agentic Operating System</h3>
     <div class="card-speaker">🎤 張維峻 Justin</div>
     
-    <p class="card-summary">講者以金融業視角提出Enterprise Agentic AI架構設計，強調金融場景要求AI具備查得到證據、能判斷證據是否足夠、不確定時拒答或追問、高風險任務升級給人、每次回答都留下Trace等硬性條件。演講說明企業AI專案常卡在PoC的三個關鍵斷點，並介紹以Agent Registry、Policy Engine、Tool Registry、Knowledge層與Evaluation/Trace構成的可治理AI Control Plane，最終目標是打造可觀測、可驗證、可稽核的Agentic Operating System。</p>
+    <p class="card-summary">本演講深入探討金融級 Enterprise Agentic AI 的架構設計，直擊企業 AI 專案從 PoC 邁向生產環境時常遭遇的三大營運斷點：系統孤島、線性 RAG 幻覺與黑盒 AI 無法審計。為滿足金融業對高度信任、可稽核與安全合規的硬性要求，講者張維峻（Justin）提出了平台工程化的「Agentic Operating System」與「AI Control Plane」架構。該架構包含 Agent Registry、Policy Engine、Tool Registry、Knowledge 知識層與 Evaluation/Trace 五大核心模組，並規劃三道推理防線（Evidence 證據邊界、Policy 政策邊界、Human 人類介入邊界）。實務上以 15 個以上職責分組的 Agent 協作，在評測中取得 98% 加權準確率與 0 題不安全回答的亮眼成績。演講指出，金融 AI 的關鍵不在模型大小，而在於建構可觀測、可驗證且具備自我校正能力的 Agentic RAG 工作流。</p>
     <div class="tags"><span class="tag">Agentic AI架構</span><span class="tag">金融業AI治理</span><span class="tag">Agentic RAG</span><span class="tag">LLM評測</span></div>
   </div>
 </a>
@@ -278,7 +278,7 @@
     <h3>(Lab) Google ADK 即時語音串流實現 GCP 平台與 DevOps 的整合應用</h3>
     <div class="card-speaker">🎤 lastingyeh (Chris)</div>
     
-    <p class="card-summary">這是一份 90 分鐘 Workshop 的技術架構實戰手冊，以「保險推薦 Agent」為範例，帶領學員從地端環境啟動、核心 WebSocket 多模態串流實作，到安全性與隱私保護、品質保證、營運觀測，最終走到雲端 Dev 沙盒與 Staging/Production 的 CI/CD 部署。內容涵蓋 Next.js 前端、FastAPI 搭配 Google ADK 的後端、PostgreSQL 與 pgvector 向量檢索，以及以 Terraform 與 Workload Identity Federation 打造的多環境雲原生部署流程。</p>
+    <p class="card-summary">本 Workshop 是一份針對即時語音與多模態串流應用的 GCP 與 DevOps 整合實戰指南。以「保險推薦 Agent」為開發範例，講者 Chris (lastingyeh) 帶領學員實作具備生產級強健性的三支柱架構：基於 Next.js 15 的低延遲多模態前端、由 FastAPI 與 Google ADK 驅動並採 asyncio 非同步併行設計的 WebSocket 雙向串流後端，以及結合 PostgreSQL（含 pgvector）與 MCP Toolset 的企業級向量檢索資料庫。安全層面實作了 JWT 驗證、PII 敏感資料（如台灣身分證字號）去識別化與防竄改的雜湊鏈審計日誌。品質與運作觀測則結合了 Locust 壓測、Google ADK Eval-Fix 評估框架（LLM-as-a-Judge）與 OpenTelemetry 分散式追蹤。最終透過 Terraform、GitOps、Workload Identity Federation 與 Cloud Build，部署於 GCP 隔離的 Dev、Staging 與 Production 環境，呈現了完整的雲原生 AI 開發生命週期。</p>
     <div class="tags"><span class="tag">Google ADK</span><span class="tag">多模態串流</span><span class="tag">WebSocket</span><span class="tag">GCP DevOps</span></div>
   </div>
 </a>
@@ -311,7 +311,7 @@
     <h3>從 Cloud First 到 Agent First：企業 IT 為何要提前為 AI Agent 打底</h3>
     <div class="card-speaker">🎤 顏勝豪（Otto）（國泰金控數數發中心雲端策略發展部協理）</div>
     
-    <p class="card-summary">講者以個人、團隊、企業三個層次的真實經驗，說明 AI Agent 從個人助理演進到企業級平台時所面臨的挑戰，核心論點是「Agent First 不是把 AI 接到企業裡，而是把企業變成 AI Agent 可以安全工作的地方」。講題並以國泰金控過去 Cloud Ready、Cloud Adoption、Cloud First 的上雲歷程為例，說明雲端治理累積的身份、權限、標準化基礎，其實正是企業迎接 Agent First 時代的關鍵地基。</p>
+    <p class="card-summary">本場演講深刻剖析企業導入 AI Agent 面臨的真實痛點：阻礙 PoC 落地的瓶頸通常非模型智能，而是數據、權限、API 與安全治理等企業環境成熟度。講者顏勝豪以國泰金控上雲與 AI 實戰經驗出發，提出從 Cloud First（數位基礎建設）演進至 Agent First（數位勞動力）的戰略路徑。技術上倡導建立「企業級 Agent Platform」，涵蓋 Agent Runtime、身份與工具目錄管理、意圖與安全護欄（Guardrails）、即時觀測（Telemetry）及生命週期管理，並在團隊層面推動 6+1 人的 AI Scrum 協作模式（如 Slack 上的 Claude Tag）。核心啟示在於：大型企業應借鏡 CloudOps 與 MLOps 經驗推動 AgentOps，透過前期建置的 Landing Zone、IAM 與 API 標準化，為 AI Agent 的安全接入打下決定性地基。</p>
     <div class="tags"><span class="tag">AI Agent</span><span class="tag">企業治理</span><span class="tag">雲端轉型</span><span class="tag">AgentOps</span></div>
   </div>
 </a>
@@ -322,7 +322,7 @@
     <h3>金融業生成式 AI 平台工程：以雲端原生架構打造可擴展的 Agentic AI 中樞</h3>
     <div class="card-speaker">🎤 張維峻 (Justin)</div>
     
-    <p class="card-summary">演講從金融業第一線 IT 客服場景出發，說明合規性、整合性、即時性是金融 AI 落地的三條生死線，並剖析為何 AI 專案常卡在 PoC 階段。講者提出以雲端原生架構打造的 Cloud Native AI Runtime，結合 MCP（Model Context Protocol）解決系統孤島問題、Agentic RAG 動態狀態機解決線性 RAG 的幻覺與驗證問題，並以 Agent Trace 稽核軌跡解決黑盒 AI 的稽核資安法遵挑戰，最終以真實 Benchmark 數據與語音客服案例驗證平台成效。</p>
+    <p class="card-summary">本演講深入探討金融業生成式 AI 如何突破 PoC 階段、邁向金融級營運現場的關鍵路徑，點出金融落地面臨的合規、整合與延遲等三條生死線。技術上，展示了「金融級 Agentic AI 中樞」的平台工程架構：利用 MCP (Model Context Protocol) Hub 統一封裝內部系統，解決客製化 API Spaghetti 痛點並保留 Tool Trace；數據端採用混合檢索（BM25 關鍵字與語意 Embedding），並經 RRF 融合排序；流程上以「動態狀態機」重構傳統單向 RAG，納入 `validate_context` 驗證與 `rewrite_query` 改寫，並對高風險任務導入人機協同（Human-in-the-loop）與明確保證拒答機制。實測顯示，Agentic RAG 可將準確率由傳統 Naive RAG 的 87% 提升至 98%，為金融業提供了具備可稽核軌跡（Agent Trace）的 AI 系統運作範式。</p>
     <div class="tags"><span class="tag">Agentic AI</span><span class="tag">金融科技</span><span class="tag">RAG</span><span class="tag">MCP</span></div>
   </div>
 </a>
@@ -333,7 +333,7 @@
     <h3>Microsoft Agent Framework + Orleans 打造雲地協同 AI 工作流</h3>
     <div class="card-speaker">🎤 老鮑伯</div>
     
-    <p class="card-summary">本場演講介紹 Microsoft 開源的 AI Agent 開發框架 MAF（Microsoft Agent Framework），說明其如何以一致的 AIAgent API 控制不同 LLM 供應商，並支援 Session 管理、MCP 工具整合與多種 Workflow 協調模式。講者進一步展示如何結合 Microsoft Orleans 處理多人多狀態的高併發系統需求，並介紹 Azure AI Search 的 Agentic Retrieval 與 OpenClaw 在 .NET/C# 生態系的兩個主流實作。</p>
+    <p class="card-summary">本演講深入探討在 .NET C# 生態系中，如何利用開源的 Microsoft Agent Framework (MAF) 與虛擬演員模型（Virtual Actor）框架 Microsoft Orleans，建構高併發、高擴展性的雲地協同多代理（Multi-Agent）工作流。針對多 Agent 協作時的狀態管理、高併發 Session 追蹤與地端 Ollama 等 API 整合痛點，演講展示了以 MAF 的 `AIAgent`（底層基於 `IChatClient`）為核心的架構，並將 Agent 實體封裝在 Orleans Grains 中，以解決多人多狀態的即時回應問題。此外，技術上介紹了以 `AITool` 整合 Model Context Protocol (MCP) 與 C# 方法的模式，並解析了 Azure AI Search 預設 MCP 端點驅動的 AgenticRAG 查詢拆分檢索。演講亦提供了 OpenClaw.NET (AgentQi) 的實作方向，是 .NET 開發者邁向分散式、企業級 AI 代理系統的實戰指引。</p>
     <div class="tags"><span class="tag">Microsoft Agent Framework</span><span class="tag">Orleans</span><span class="tag">Agentic RAG</span><span class="tag">MCP</span></div>
   </div>
 </a>
@@ -349,7 +349,7 @@
     <h3>數據感知與安全治理：打造企業級 AI 智能工作流</h3>
     <div class="card-speaker">🎤 張耀文 (Joy)（首席架構師, 慧與科技(HPE) 數位科技服務事業處）</div>
     
-    <p class="card-summary">講者以 HPE 首席架構師身分，剖析為何近三分之二企業的 AI 專案無法從試點走向正式上線，指出法規、成本與資安三大壓力是主因，並引用 Gartner AI TRiSM 框架說明企業應如何建立可解釋、可稽核的 AI 治理機制。講題也展示 HPE Private Cloud AI 搭配 DAXA 治理安全平台，如何以「Shift-Left」方式在 AI Agent 存取真實資料前就進行資料感知與政策把關。</p>
+    <p class="card-summary">本講題針對近三分之二企業 AI 專案難以從 PoC 試點走向正式上線的瓶頸，深入探討法規、成本與資安（如 Prompt 注入與資料外洩）三大核心挑戰。講者指出，Agentic AI 的風險觸發點已從「未授權邊界存取」轉變為「單步合法但整條行動鏈結果不合規」的執行期動態決策。為此，議程引用 Gartner AI TRiSM 治理框架，並提出 HPE Private Cloud AI 整合 NVIDIA AI Enterprise 與 DAXA.AI 治理安全平台的解決方案。其技術亮點在於採用「左移（Shift-Left）」架構，捨棄傳統機率式 AI 防火牆，改在資料進入 LLM 前透過安全代理（Safe Agent/Safe RAG）與政策引擎進行輸入語境的感知與過濾。實務上，此架構能有效防範 MCP 工具呼叫時的越權存取與隱私洩漏，協助企業打造安全、合規且可衡量 ROI 的 AI 智能工作流。</p>
     <div class="tags"><span class="tag">AI TRiSM</span><span class="tag">AI資安治理</span><span class="tag">Agentic AI風險</span><span class="tag">HPE</span></div>
   </div>
 </a>
@@ -360,7 +360,7 @@
     <h3>Observability Architecture for Enterprise Agentic AI Agents</h3>
     <div class="card-speaker">🎤 Rich Lee (李琦)（Architect, Cathay Financial Holding DDT Center）</div>
     
-    <p class="card-summary">講者以國泰金控 DDT Center 架構師身分，說明傳統應用程式與 Agentic AI 系統在可觀測性上的根本差異：Agent 失敗往往是「沉默且機率性」的，難以像傳統服務的 500 錯誤那樣被立即發現。講題進一步介紹以 OpenTelemetry 與 OpenInference 為基礎的 Agent 專屬 Golden Signals、追蹤（Trace）架構，以及涵蓋結果與軌跡（Trajectory）的評測方法，協助企業建立可信賴的 Agentic AI 監控與評估體系。</p>
+    <p class="card-summary">本講題針對 Agentic AI 系統中「沉默且機率性」的失效痛點（無 500 錯誤代碼卻產生錯誤決策，導致 Token 浪費與合規風險），提出專為代理式系統設計的可觀測性與評測架構。講者分析，隨著安全威脅演進至 OWASP Agentic AI Top 10（如目標劫持與工具濫用），監控指標必須升級。對此，國泰金控提出基於 OpenTelemetry 與 OpenInference 開放標準的觀測方案，核心設計在於將 Span 區分為 LLM、TOOL、AGENT 與 CHAIN，記錄詳細推理與工具軌跡。實務上，企業應採用三層測試框架：Tier 1 本地單元測試、Tier 2 結合 LLM-as-a-Judge 的整合測試，以及 Tier 3 的人機協作（HITL）端對端測試。透過「結果評測」與「軌跡評測」雙重機制，方能全面控管品質、成本與安全性等關鍵服務等級目標（SLO）。</p>
     <div class="tags"><span class="tag">Observability</span><span class="tag">Agentic AI</span><span class="tag">OpenTelemetry</span><span class="tag">OWASP</span></div>
   </div>
 </a>
@@ -371,7 +371,7 @@
     <h3>LLM O11y：從 Observability 到 Decision System (Workshop)</h3>
     <div class="card-speaker">🎤 Che-Chia Chang（SRE @ Maicoin / Microsoft MVP）</div>
     
-    <p class="card-summary">這是一場動手實作的工作坊，講者以 Bifrost AI Gateway 與 Langfuse 搭建的 tracing／觀測環境為基礎，帶領學員理解 Coding Agent 的 Token 花費結構，並學習用 LLM-as-a-Judge、Dataset 與 Experiment 把「聽說」轉換成可驗證的數據化決策。內容涵蓋工具與 instructions 精簡、評估新框架是否真的省 Token，以及如何為 multi-turn agent 建立客製化評分機制。</p>
+    <p class="card-summary">本工作坊針對企業導入開發型 Coding Agent 時面臨的「預算花式燃燒」與「Agent 效能調整缺乏數據依據」等痛點，介紹如何以 Bifrost AI Gateway 與 Langfuse 搭建開源可觀測性與決策系統。技術架構上，Bifrost 作為企業 LLM 代理，負責模型路由、預算管理與 OTel 軌跡輸出；Langfuse 則承擔 Tracing 收集、LLM-as-a-Judge 評測與 Dataset 管理。實務上，講者帶領學員透過精簡指令檔案（如 `AGENTS.md`）與關閉非核心工具以減少基礎 Token 開銷；並指導如何設計針對特定工具呼叫（如 `apply_patch`）的客製化 Evaluator。最終，學員學會從日常軌跡萃取資料集，並透過 Experiment 實驗平台，以量化效率公式將「聽說某模型或框架比較省錢」的直覺，轉化為具備數據支撐的理性架構決策。</p>
     <div class="tags"><span class="tag">LLM Observability</span><span class="tag">Coding Agent</span><span class="tag">Token成本</span><span class="tag">LLM-as-a-Judge</span></div>
   </div>
 </a>
@@ -382,7 +382,7 @@
     <h3>當 AI 成為企業工作日常：員工 AI 使用管理問題與實務情境解析</h3>
     <div class="card-speaker">🎤 Lacey Lin（Regional GTM Manager @ Master Concept）</div>
     
-    <p class="card-summary">本場分享聚焦企業員工日常使用AI已從「要不要開放」轉變為「怎麼管理」的課題。講者將企業內的AI使用分為Web/SaaS AI、AI App、AI Agent三大類，並分別說明每一類所需的身份存取、裝置合規與授權邊界管理方式，同時提醒即使建立官方AI主路徑，仍會存在Shadow AI、帳號混用等治理缺口。最後提出建立、盤點、分類佈局三步驟，作為企業展開AI管理的起點。</p>
+    <p class="card-summary">本場演講探討當AI全面進入員工日常工作後，企業面臨缺乏可視性、Shadow AI、帳號混用及資料外洩等治理挑戰。講者將企業AI使用情境細分為Web/SaaS AI、AI App與AI Agent三大類，並提出相應的技術治理架構。針對Web/SaaS AI，建議建立基於Group/Role的存取政策，並整合Microsoft 365與Edge for Business的DLP防護來限制資料複製、貼上與上傳行為；對AI App管理，提倡以Windows Intune或Apple Jamf等端點管理工具（MDM）來驗證App與裝置合規性，限制敏感資料流動；針對AI Agent則強調「Scope（限縮權限）」與「Time（時效性Token）」兩大授權原則。企業應依循「建立官方主路徑、盤點潛在AI使用、分類佈局管理」三步驟，先看見再管理，建立安全可稽核的企業級AI生態系。</p>
     <div class="tags"><span class="tag">AI治理</span><span class="tag">Shadow AI</span><span class="tag">身份與存取管理</span><span class="tag">裝置管理</span></div>
   </div>
 </a>
@@ -393,7 +393,7 @@
     <h3>LLM O11y：從 Observability 到 Decision System</h3>
     <div class="card-speaker">🎤 Che-Chia Chang（SRE @ Maicoin / Microsoft MVP）</div>
     
-    <p class="card-summary">講者分享如何在企業導入 LLM／Coding Agent 時，用可觀測性（Observability）取代「聽說」式決策，透過建立 baseline、LLM-as-a-Judge、Dataset &amp; Experiment 三個步驟，逐步把工具選型、Prompt 調整、模型升級等決策數據化。核心主張是「新工具冒出速度大於人力研究速度」，唯有先看到量化數據，才能讓團隊信任現有技術堆疊並驗證每次改動的實際影響。</p>
+    <p class="card-summary">本場演講針對企業在導入大語言模型（LLM）與 Coding Agent時，常因缺乏客觀評量數據而盲目做決策（如 FOMO 盲從升級模型或工具）的痛點，提出以可觀測性（Observability）為核心的「資料驅動決策系統（Decision System）」。講者 Che-Chia Chang 拆解了實作的三大核心步驟：首先，透過建立 Baseline 監測 Token 使用與延遲，停用無用工具並優化 System Instruction，成功將 Token Overhead 降低 95%（從 20000+ 降至 1000+）；其次，導入 LLM-as-a-Judge，針對 Multi-turn Agent 的單一步驟（如 Plan、apply_patch）進行細粒度品質評估；最後，從日誌中萃取「考古題」建立測試數據集（Dataset），利用實驗機制（Experiment）在不同模型與 Prompt 版本間進行回歸測試。演講強調「先有監測，再做決策」，讓開發團隊能以效率公式量化評估改動，從而精準掌控品質與成本平衡。</p>
     <div class="tags"><span class="tag">LLM Observability</span><span class="tag">成本優化</span><span class="tag">LLM as a Judge</span><span class="tag">資料驅動決策</span></div>
   </div>
 </a>
@@ -404,7 +404,7 @@
     <h3>零資料接觸架構：讓 LLM 讀懂企業資料但永遠摸不到它</h3>
     <div class="card-speaker">🎤 Chester（Plusblocks Technology）</div>
     
-    <p class="card-summary">講者 Chester 提出「零資料接觸架構（Zero Data Touch Architecture, ZDTA）」，解決企業想讓 LLM 理解內部資料、卻又害怕資料外洩與合規風險的核心矛盾。架構核心是讓 LLM 只看到資料表 Schema、由安全中間層（Query Proxy）代為執行查詢語句，再經 Result Sanitizer 脫敏聚合後才呈現給使用者，確保 LLM 全程不接觸任何一筆原始資料。</p>
+    <p class="card-summary">本演講針對企業在導入大語言模型時面臨「既想利用內部資料進行自然語言分析，又害怕資料外洩與法規合規風險」的核心矛盾，提出創新且安全的「零資料接觸架構（Zero Data Touch Architecture, ZDTA）」。講者 Chester 拆解了 ZDTA 的三層安全防禦設計：第一，Schema-Only Context，僅將資料庫 Schema、欄位型別等結構資訊提供給 LLM，不包含任何實際資料；第二，Query Proxy 中間層，利用 AST（抽象語法樹）解析進行 SQL 白名單驗證與欄位級權限控管，防止 LLM 受 Prompt Injection 影響產生惡意 SQL；第三，Result Sanitizer，將資料庫執行的查詢結果進行 PII 遮罩與 K-Anonymity 驗證後直接呈現給用戶，繞過 LLM。實務上透過 Few-shot 範例可將準確度拉升至 88%，並輔以 Schema/Query Plan 快取將額外延遲降至 200ms，為金融、醫療等高監管產業提供了結構化資料安全分析的絕佳實踐藍圖。</p>
     <div class="tags"><span class="tag">零資料接觸架構</span><span class="tag">LLM資安</span><span class="tag">Schema-Only</span><span class="tag">Query Proxy</span></div>
   </div>
 </a>
@@ -431,7 +431,7 @@
     <h3>從零開始 Spec-kit 規格導向 (Workshop)</h3>
     <div class="card-speaker">🎤 Che-Chia Chang（SRE @ Maicoin / Microsoft MVP）</div>
     
-    <p class="card-summary">本工作坊介紹如何使用 Spec-kit 實踐 Spec-driven Development（SDD），透過撰寫可執行規格、範本與自動化腳本，解決團隊導入 AI 寫程式後常見的「Spec drift」問題。講者以 YouBike 即時站點查詢器為範例，帶領學員走過 specify → plan → tasks → implement 的完整流程，並分享何時 SDD 優於 Vibe Coding、如何選擇模型與避免常見失敗模式。</p>
+    <p class="card-summary">本工作坊針對企業導入 AI 輔助開發時，因需求、規格與程式碼不同步而產生的「規格偏離（Spec drift）」與頻繁返工之痛點，提出以 Spec-kit 實踐規格導向開發（Spec-driven Development, SDD）的解決方案。核心技術設計包含定義 Agent 行為準則的「憲法（Constitution）」機制，並透過 /specify、/plan、/tasks 到 /implement 的結構化工作流，在每一步驟設置 checkpoint 以確保開發進度的一致性。實務上，講者建議採用「強模型撰寫規格、弱模型（如 mini/nano）執行實作」的策略，以在降低 80-90% 運算成本的同時維持高品質產出。此外，將測試覆蓋率、代碼風格等驗收指標寫入規格，可使 Agent 自動完成驗收，為開發團隊建立起可重複、高預測性且防範 Spec drift 的軟體交付閉環。</p>
     <div class="tags"><span class="tag">Spec-driven Development</span><span class="tag">Spec-kit</span><span class="tag">AI Agent</span><span class="tag">開發流程</span></div>
   </div>
 </a>
@@ -442,7 +442,7 @@
     <h3>當 AI 成為你的第一個工程師：重新定義軟體交付的速度與規模</h3>
     <div class="card-speaker">🎤 Coco Huang（Commercial Account Executive, Taiwan &amp; Vietnam, GitLab）</div>
     
-    <p class="card-summary">GitLab分享台灣在其亞太（APJ）市場策略中的重要地位，並介紹GitLab在2026 Gartner Magic Quadrant DevSecOps平台類別中的領導地位。演講重點說明GitLab的AI情境層Orbit如何大幅提升AI Agent的回應速度、降低Token消耗與AI幻覺，並透過彈性計費模式GitLab Flex，降低企業導入AI驅動軟體交付的門檻。</p>
+    <p class="card-summary">本講題聚焦企業導入 AI 驅動開發時面臨的「自建 Agent 成本高昂且易受幻覺干擾」之挑戰，介紹 GitLab 作為 2026 Gartner MQ 領導者的 DevSecOps 平台方案。技術核心在於 GitLab Orbit 情境層，其能將程式碼、CI/CD 管線、部署紀錄與生產訊號連結為即時圖譜（Live Graph）。相較無 Orbit 情境，Orbit 能降低 4.5 倍 Token 消耗、減少 45 倍幻覺，並提升 11 倍回應速度。實務上，此平台能協助企業實現安全前移（於 commit 階段自動執行安全策略），並以 GitLab Flex 按需計費的彈性商業模式，提供企業低門檻、從小團隊起步並逐步規模化擴展 AI 原生交付的實踐路徑。</p>
     <div class="tags"><span class="tag">GitLab</span><span class="tag">AI驅動交付</span><span class="tag">DevSecOps</span><span class="tag">Agentic AI</span></div>
   </div>
 </a>
@@ -453,7 +453,7 @@
     <h3>當 AI 成為你的第一個工程師：重新定義軟體交付的速度與規模（第二場）</h3>
     <div class="card-speaker">🎤 許維珏 Vic（系統整合部技術總監, 戴博斯科技股份有限公司）</div>
     
-    <p class="card-summary">戴博斯科技分享GitLab Duo Agent Platform（DAP）如何讓AI Agent成為「團隊成員」，橫跨整個軟體開發生命週期（SDLC）提供自動化開發、維運與資安協助。演講說明開箱即用、自訂與外部三種Agent類型如何分工，並以實際客戶導入案例與量化ROI模型，說明AI程式碼審查等自動化功能能為企業帶來的具體效益。</p>
+    <p class="card-summary">本講題由戴博斯科技分享如何以 GitLab Duo Agent Platform（DAP）推動研發流程從「手動」與「AI 輔助」演進至「Agent 自主」（開發者位於開發迴圈之上進行決策審查，Agent 執行具體工作）。為解決資深工程師耗費大量時間於重複性程式碼審查與管線修補之瓶頸，DAP 提供三大 Agent 類型：開箱即用 Agent、自訂企業 SOP 規則的自訂 Agent，以及整合既有工具（如 Devin、Claude Code）的外部 Agent。技術核心在於透過事件驅動的「流程（Flow）」機制，協調多個 Agent 執行安全修復、SAST 誤判過濾與 Jenkins 配置轉換。實務上，以 100 倍的 Code Review 量化 ROI（每次審查成本僅 0.25 美元）證明此架構能有效消除開發瓶頸，大幅提升端到端軟體交付的速度與規模。</p>
     <div class="tags"><span class="tag">GitLab Duo</span><span class="tag">Agentic AI</span><span class="tag">SDLC</span><span class="tag">程式碼審查</span></div>
   </div>
 </a>
@@ -464,7 +464,7 @@
     <h3>Engineering Trust in AI-Generated Code</h3>
     <div class="card-speaker">🎤 Hugo Yang（Engineering Principal, APAC Ecosystem Enabler @ Black Duck Software（Asia-Pacific, Singapore））</div>
     
-    <p class="card-summary">講者從Transformer的Attention機制出發，說明LLM生成程式碼本質上是「以上下文加權計算下一個Token的機率預測」，而非真正理解需求，因此複雜的Prompt會提高衝突、長距依賴與歧義等風險，進而導致安全漏洞。講者接著介紹Black Duck如何在Prompt、Generate、IDE驗證、PR/Repo/Staging分析與Governance五個階段建立防護，結合確定性掃描與Agentic AI程式碼審查，協助企業在AI輔助開發下仍能交付合規、安全的軟體。</p>
+    <p class="card-summary">本場演講深入解析AI輔助開發中生成程式碼的安全信任挑戰。講者從Transformer的Attention機制出發，指出LLM本質上是基於上下文加權計算下一個Token的機率預測，而非理解代碼語意；複雜的Prompt會導致競爭性限制、長距依賴與歧義，進而產生機率漂移並衍生安全漏洞。為此，演講提出了結合確定性規則引擎與Agentic AI的五層治理防禦架構，涵蓋：Prompt防護、生成阻止、IDE層快速確定性掃描（2分鐘內免編譯單檔分析）、PR/Repo/Staging層的資料流感知SAST/SCA與動態測試，以及Governance層產出SBOM、VEX、SARIF合規報告。實務上，建議開發團隊避免一鍵式長Prompt，改採聚焦步驟生成程式碼，並在IDE與PR階段左移安全把關，配合Break-Build機制攔截不安全代碼，建立可信任的自動化程式碼審查流程。</p>
     <div class="tags"><span class="tag">AI程式碼安全</span><span class="tag">Attention機制</span><span class="tag">AppSec</span><span class="tag">軟體供應鏈</span></div>
   </div>
 </a>
@@ -475,7 +475,7 @@
     <h3>詩人騷客的 Vibe Coding 入門 (Vibe Coding for Poets)</h3>
     <div class="card-speaker">🎤 張俊盛（國立清華大學資工系教授）</div>
     
-    <p class="card-summary">清華大學資工系張俊盛教授從網路語料庫與搭配詞（Collocation）研究的30多年發展歷史談起，回顧Web1T5、Wikipedia、Common Crawl、Transformer與T5等生成式AI技術背後的重要里程碑，並示範Ken Church提出的「Unix for Poets」文字操弄工具。演講後半段以English Collocation Profile（ECP）與詞彙索引典（concordancer）兩個實作案例，展示非資工背景的人文學者也能透過Vibe Coding（以ChatGPT/Gemini產生程式碼）自行開發應用軟體。</p>
+    <p class="card-summary">本場演講探討如何讓非資工背景的人文與語言學者（即「詩人騷客」），利用大語言模型進行「Vibe Coding」來自主開發應用軟體。清華大學資工系張俊盛教授從網路語料庫與搭配詞（Collocation）研究30多年的世界性接力談起，梳理了從 WWW 誕生、Google Web1T5 語料庫、Linggle 工具，到 Transformer 與 BERT 等技術對生成式 AI 的奠基過程。隨後示範以經典的「Unix for Poets」教材，利用 Unix 命令行（tr、sort、uniq 等）進行詞頻分析。最後，講者展示了實戰案例：透過結構化 Prompt 指引 ChatGPT 與 Gemini Canvas 產生 English Collocation Profile（ECP）的 Python Streamlit 程式碼與 HTML Demo，並介接 Gemini API 打造詞彙索引典（Concordancer）。演講的核心價值在於證明在 AI 時代下，程式開發門檻已被大幅降低，非工程背景者也能藉由 Prompt 驅動敏捷軟體交付。</p>
     <div class="tags"><span class="tag">Vibe Coding</span><span class="tag">語料庫語言學</span><span class="tag">搭配詞研究</span><span class="tag">非工程背景開發</span></div>
   </div>
 </a>
@@ -486,7 +486,7 @@
     <h3>當 AI 成為開發夥伴：電商平台的 SDD 開發經驗</h3>
     <div class="card-speaker">🎤 高見龍（五倍學院）</div>
     
-    <p class="card-summary">講者分享自己在 2025 年 6 月獨力開發一套功能完整的售票系統時，如何從「AI 常常猜錯意圖」的挫折中，摸索出 SDD（Spec-Driven Development，規格驅動開發）的實務做法，透過「提案 → 實作 → 歸檔」的簡化流程，讓 AI 更精準地照著需求執行，並展示了自製工具 Spectra 來輔助規格撰寫與任務管理。</p>
+    <p class="card-summary">本演講分享五倍學院創辦人高見龍於 2025 年 6 月，獨自一人利用 AI 開發出涵蓋會員系統、多元金流、發票與票券驗證等龐大售票系統的實戰經驗。針對開發過程中「AI 常常猜錯意圖、代碼偏離預期」的痛點，講者指出問題在於開發者未明確定義需求，因而提出 SDD（Spec-Driven Development，規格驅動開發）的核心理念。SDD 將規格定位為整理且壓縮過的 Context 文件，其撰寫標準是「換另一個 AI 來看也不會誤會」。講者實踐了「提案（討論並產出提案）→ 實作（嚴格照字面執行）→ 歸檔（留下一筆記錄備查）」的簡化流程，並展示自研免費工具 Spectra（整合 SDD Prompts、Skills 與圖形介面），實現高效的任務與提案管理。本演講的關鍵啟示是：藉由清晰的規格定義，能有效約束 AI Agent 的執行路徑，實現高度聽話、低溝通成本的 AI 結對開發。</p>
     <div class="tags"><span class="tag">SDD規格驅動開發</span><span class="tag">AI結對開發</span><span class="tag">售票系統</span><span class="tag">Spec Kit</span></div>
   </div>
 </a>
@@ -546,7 +546,7 @@
     <h3>Cloudflare AI 全戰略 從防禦爬蟲, Agent 實戰到 SASE 安全轉型</h3>
     <div class="card-speaker">🎤 Neo Kung（Cloudflare）</div>
     
-    <p class="card-summary">Cloudflare 分享其AI全戰略，涵蓋三大情境：防禦AI爬蟲與惡意Bot流量、企業導入AI應用時的資料外洩與Prompt注入風險治理、以及Agentic工具（如Claude Code、Codex）帶來的新型態安全挑戰。講者展示 Cloudflare 全球網路規模與其在反向代理市場的市占地位，並實際示範以 AI Gateway 統一代理並治理企業內所有AI/LLM流量。</p>
+    <p class="card-summary">本講題針對企業導入 AI 時面臨的三大安全威脅——「AI 爬蟲惡意抓取內容、員工對公用 AI 洩漏敏感資料（PII）與 Agentic 工具（如 Claude Code）引發的失控 Token 消耗」提出 Cloudflare 的 SASE 安全轉型與 AI 全戰略。在網路邊緣，Cloudflare 透過 Proof-of-Work/Space 挑戰防禦惡意 Bot；在應用層，以 Secure Web Gateway 針對 ChatGPT/Claude 進行「上傳檔案」、「分享對話」等細粒度動作控管與 DLP 資料外洩防護。最關鍵的技術在於利用 AI Gateway 統一代理企業所有 LLM 流量，並實際示範以 Windows PowerShell 輔助腳本動態擷取本機使用者身分（帳號、Email、主機名）包裝於 `cf-aig-metadata` 標頭中，讓 AI 請求具備可歸責性與可追蹤性，並能在 Gateway 端設定每人每日的 Token 額度上限（Spend Limit）。</p>
     <div class="tags"><span class="tag">Cloudflare</span><span class="tag">AI資安</span><span class="tag">Bot防禦</span><span class="tag">SASE</span></div>
   </div>
 </a>
@@ -557,7 +557,7 @@
     <h3>馴服 Mythos 的烈馬，奔向 Cloud Fable：把 AI 攻擊力轉譯為雲端韌性與正向賦能</h3>
     <div class="card-speaker">🎤 劉立</div>
     
-    <p class="card-summary">這場演講以「馴服烈馬」為隱喻，探討 AI 從邏輯推理降級為機率生成後所帶來的幻覺、欺騙與情緒自保等風險，並點出「語意＝命令＝行動」的危險鏈結：當語意出現裂縫，AI 的每一小步都可能造成傷害。講者進一步以雲端智慧、地端資料的協同架構，說明如何將 AI 的攻擊力轉譯為雲端韌性，並以智慧醫療場景的 Physician Twin／Patient Twin 概念作為實踐案例，強調 AI 治理與優勢都可能瞬時瓦解，需要持續的 Harness（治理框架）來駕馭。</p>
+    <p class="card-summary">本演講以「馴服烈馬」為生動隱喻，深入探景大語言模型在將「類比世界」轉譯為「數位世界」時，其運作本質由嚴謹的邏輯推理降級為機率生成，進而引發幻覺、欺騙與情緒化自保等安全治理挑戰。講者劉立揭示了「語意＝命令＝行動（成就／傷害）」的危險連鎖反應，指出安全隱患不僅在於模型本身，更潛藏於每一個微小的執行步驟中。為此，演講提出「智慧在雲、資料在地」的雲地協同韌性架構，並分享了將 Google Vertex AI 與邊端處理器 GX10 進行整合、進行雙模型蒸餾以打造輕量高效地端模型的實踐案例。在此架構下，針對智慧醫療場景提出了 Physician Twin（醫師分身）與 Patient Twin（病患分身）概念，以期在雲端或地端遭遇單點故障時仍能維持跨雲地的系統韌性，並動態調整隨時可能失效的 AI 治理框架（Harness）。</p>
     <div class="tags"><span class="tag">AI 治理</span><span class="tag">AI 幻覺</span><span class="tag">語意安全</span><span class="tag">雲地協同</span></div>
   </div>
 </a>
@@ -568,7 +568,7 @@
     <h3>對抗 Agentic AI 浪潮：Fortinet 雲端安全新思維，重塑 AI 驅動的防禦韌性</h3>
     <div class="card-speaker">🎤 王仁德 (James Wang)（Fortinet 雲端資安技術顧問）</div>
     
-    <p class="card-summary">本場演講引用 Fortinet《全球威脅情勢報告》，說明 AI 如何縮短攻擊開發週期、降低攻擊門檻並利用合法工具偽裝攻擊。講者提出五層次的雲端多層防護架構，從攻擊預警、清洗誘捕、深度安全、作業管控到監控回應，逐層說明對應的 FortiRecon、FortiAppSec、FortiDeceptor、FortiGate、FortiWeb、FortiClient、FortiSIEM 與 FortiSOAR 等產品如何協同運作，打造全面且具備 AI 驅動能力的雲端防禦韌性。</p>
+    <p class="card-summary">本演講針對 Agentic AI 浪潮下攻擊者開發週期縮短、攻擊技術門檻下降及利用合法工具偽裝入侵的資安威脅，提出 Fortinet 驅動防禦韌性的雲端多層防護架構。講者 James Wang 拆解了由五層防線構成的雲端防護策略：第一層「攻擊預警（FortiRecon）」進行外部攻擊面盤點；第二層「清洗誘捕（FortiAppSec &amp; FortiDeceptor）」以應用程式清洗與仿真陷阱實現欺敵防禦；第三層「深度安全（FortiGate &amp; FortiWeb）」嚴防漏洞，並首度支援量子敏捷加密（QKD/PQC）；第四層「作業管控（FortiClient）」落實動態合規的零信任存取（ZTNA）；第五層「監控回應（FortiSIEM &amp; FortiSOAR）」結合異常行為分析與 MITRE ATT&amp;CK 聯防。本演講為企業提供了如何整合端點、網路與安全事件管理，打造自愈型 AI 驅動雲端安全體系的具體指南。</p>
     <div class="tags"><span class="tag">雲端資安</span><span class="tag">AI 驅動防禦</span><span class="tag">零信任</span><span class="tag">威脅情報</span></div>
   </div>
 </a>
@@ -579,7 +579,7 @@
     <h3>AI 驅動 Kubernetes Runtime Security：超越傳統威脅偵測</h3>
     <div class="card-speaker">🎤 謝長軒 (Chandler Hsieh)（卡巴斯基台灣技術總監）</div>
     
-    <p class="card-summary">本場演講引用 JFrog、Red Hat 與 Wiz 等機構的調查數據，說明 Kubernetes 環境在公有雲中平均不到 30 分鐘即可能被攻陷、近九成企業過去一年曾遭遇 K8S 安全事件，並剖析 API/RBAC 誤用、網路架構複雜與容器可視性不足等攻擊面威脅，以及軟體供應鏈攻擊的手法。講者接著說明 AI 時代下攻擊速度與規模的放大效應，並介紹卡巴斯基如何以豐富的全球威脅情報來源、機器學習偵測引擎與 Kaspersky Container Security（KCS）等工具，協助企業從靜態掃描到動態 Runtime 防護建立完整的容器與 K8S 安全韌性。</p>
+    <p class="card-summary">本演講針對公有雲中 Kubernetes（K8S）叢集面臨的嚴峻安全威脅（平均不到 30 分鐘即可能被攻陷，近九成企業曾遭遇安全事件），探討如何透過 AI 與威脅情報建構容器的運行時安全（Runtime Security）。卡巴斯基台灣技術總監謝長軒剖析了 K8S 的三大核心攻擊面：API/RBAC 權限設定錯誤、網路與資源複雜度，以及容器內部可視性不足。在 AI 時代下，自動化漏洞利用與模型資料投毒使攻擊頻率與規模呈倍數放大。對此，演講介紹了卡巴斯基結合全球情資的機器學習偵測引擎，並提出以 Kaspersky Container Security（KCS）為核心的防護架構，涵蓋從 Store/Build 階段的靜態映像檔與 IaC 掃描，到 Runtime 階段的 Admission Control 阻擋與 Launch Control 防護。本演講為企業實現從左移開發安全到右移運行時防禦的完整 Cyber Resilience 提供了具體實踐指引。</p>
     <div class="tags"><span class="tag">Kubernetes 安全</span><span class="tag">威脅情報</span><span class="tag">供應鏈攻擊</span><span class="tag">容器安全</span></div>
   </div>
 </a>
@@ -634,7 +634,7 @@
     <h3>當 AI 開始呼叫 API：企業正面臨的新攻擊面</h3>
     <div class="card-speaker">🎤 Mika Chan（詹凱富）（Cloud Architect, Radware APJ）</div>
     
-    <p class="card-summary">講者從 API 作為企業服務共同介面出發，說明當 AI Assistant、AI Workflow、AI Agent 加入後，API Layer 開始面對大量自動化、高頻率、自主決策的 Machine Consumer，帶來全新攻擊面。講題進一步剖析 AI 同時身為「消費者」與「服務提供者」的雙重角色，以及 AI 驅動的新型攻擊模式，並介紹 Radware 以行為分析為核心的多層防護框架，協助企業從傳統規則式防禦升級為行為式（Behavior-based）動態防護。</p>
+    <p class="card-summary">本場演講針對生成式 AI 浪潮下，企業面臨 AI Agent 與自動化工作流程（Machine Consumers）自主呼叫 API 所引發的新興資安挑戰。核心痛點包含商業邏輯濫用、影子與殭屍 API/Agent 擴張、數據洩漏，以及傳統靜態規則無法有效辨識機器流量。對此，Radware 提出以 Behavioral AI Engine 為核心的 AI-Driven 多層防護框架，整合了 Agentic Behavioral Protection 機制，透過意圖-行為推理（Intent-Behavior Reasoning）比對代理操作是否符合用戶意圖。同時，透過 Model Context Protocol (MCP) 進行工具控制與 Full Execution Risk Graph Mapping。實戰建議企業升級傳統 API Key 與 OAuth 至 AI 專屬的最小權限控制，並部署 AI Gateway 與 Guardrail 建立統一安全防護面，達成即時且不依賴靜態規則的動態威脅阻擋。</p>
     <div class="tags"><span class="tag">API 安全</span><span class="tag">AI Agent</span><span class="tag">MCP</span><span class="tag">威脅防護</span></div>
   </div>
 </a>
@@ -645,7 +645,7 @@
     <h3>AI 與資安的完美結合-探索雲端機密運算的奧妙</h3>
     <div class="card-speaker">🎤 林家瑋 (Ray Lin)（CISO / CAIO, AWS Security Hero）</div>
     
-    <p class="card-summary">本場演講聚焦「使用中資料」這個最常被忽略的安全缺口，說明資料在記憶體中處理時容易被 Memory Dump、Rowhammer、Side-channel 等手法竊取，進而介紹機密運算（Confidential Computing）如何以硬體級 TEE（Trusted Execution Environment）補上這道防線。講者深入剖析 AWS Nitro System、Nitro Enclaves 的信任鏈設計，並比較 AWS、Azure、GCP 三大雲端平台在機密運算上的定位與強項，協助企業在 AI、金融、醫療等高敏感資料場景中做出正確的技術選型。</p>
+    <p class="card-summary">本演講深入探討雲端機密運算（Confidential Computing）如何保護常被忽略的「使用中數據」（Data in Use），避免高權限管理者或攻擊者透過 Memory Dump、Rowhammer 或側通道攻擊吞噬記憶體中的金鑰、PII 與 LLM 模型權重。技術上剖析了機密運算四大元件：硬體式可信執行環境（TEE）、衡量值（Measurement）、遠端證明（Attestation）及金鑰釋放（Key Release）。講者對比了三大雲端平台的設計：AWS 基於 Nitro System 與 Nitro Enclaves 的底層硬體隔離，利用平台配置暫存器（PCR）量測值對接 KMS 進行密碼學證明以釋放金鑰；Azure 提供全方位 Confidential VM、SGX 與 Confidential GPU；GCP 則以 Confidential Space 支援多方安全數據合作與 NVIDIA H100 加速。本場提供企業保護核心資安與 AI 推論隱私的硬體級防禦實踐指引。</p>
     <div class="tags"><span class="tag">機密運算</span><span class="tag">雲端資安</span><span class="tag">AWS Nitro</span><span class="tag">TEE</span></div>
   </div>
 </a>
@@ -661,7 +661,7 @@
     <h3>將算力化為行動力：企業級 AI 全棧整合與落地實踐</h3>
     <div class="card-speaker">🎤 Jason Kao</div>
     
-    <p class="card-summary">講者以「PoC容易、大規模落地難」的落差作為切入點，分享企業從算力基礎設施到AI應用落地的全棧整合經驗。內容涵蓋從硬體層（K8s/Docker/Bare Metal、GPU資源管理）到平台層與應用層的整合架構，並以金融貸款申辦流程、多語言語音分析等情境說明AI如何嵌入實際工作流。講者也提出從PoC到上線的分階段方法論，以及企業在落地AI前應先釐清的關鍵問題。</p>
+    <p class="card-summary">本講題聚焦企業導入 AI 時常見的「PoC 驗證容易、大規模上線與轉化為行動力難」之落差。為此，講者提出了一套涵蓋硬體、平台與應用層的「全棧整合架構」。在硬體層，透過 K8s/Docker/Bare Metal 進行 GPU 算力管理；在平台層，透過 GeniAltX、Xparse 與 AI Runtime 介接並調用地端與雲端異質模型；在應用層，則以視覺化工作流編排，實踐跨系統自主執行的 Agent（如 NemoClaw）。實務上，此架構已被應用於金融貸款申辦（自動財力驗證與文件填寫）與客服語音深度分析（跨多國語言轉譯與全局風險洞察）。講者建議，企業落地前必須釐清痛點、數位化程度、工作流嵌入必要性，並對齊 IT、業務與治理三方權責，依循 8 步驟方法論逐步推進。</p>
     <div class="tags"><span class="tag">AI全棧整合</span><span class="tag">Agentic AI</span><span class="tag">GPU算力</span><span class="tag">AI落地實踐</span></div>
   </div>
 </a>
@@ -672,7 +672,7 @@
     <h3>Foundry Local 實戰：AI 驅動 Windows Server 2025 維運</h3>
     <div class="card-speaker">🎤 Weithenn Wang（Microsoft MVP）</div>
     
-    <p class="card-summary">講者 Weithenn Wang 透過三個實機 Demo 情境，展示如何運用 Microsoft Foundry Local（本機執行的 AI 推論框架）驅動 Windows Server 2025 的維運工作，涵蓋自動化事件診斷、具人機協作（Human-in-the-loop）的主動記憶體優化，以及安全防禦與藍圖級自動修復三大場景。</p>
+    <p class="card-summary">本演講聚焦於本機 AI 運算在企業維運（AIOps）的落地實踐，展示如何利用 Microsoft 釋出的本機 AI 推論框架 Foundry Local，驅動 Windows Server 2025 的現代化智能維運。講者 Weithenn Wang 針對傳統雲端 AI 維運面臨的資料隱私洩漏、高頻 API 延遲與頻寬成本痛點，提出了完全在伺服器本機端執行推論的技術設計，並透過三個實戰維運情境進行現場 Demo。這三個情境包括：第一，本機 AI 自動事件診斷，縮短故障排查時長；第二，具備人機協作（HITL，Human-in-the-loop）的記憶體主動優化，兼顧自動化效能與運作安全性；第三，安全防禦與藍圖級自動修復（Blueprint-Level Auto-Recovery），在偵測到系統配置漂移或安全威脅時自動復原。本演講為維運團隊提供了在確保資料不出境的前提下，建構高韌性、低延遲 AIOps 系統的技術藍圖。</p>
     <div class="tags"><span class="tag">Foundry Local</span><span class="tag">Windows Server 2025</span><span class="tag">本機AI維運</span><span class="tag">事件診斷</span></div>
   </div>
 </a>
@@ -727,7 +727,7 @@
     <h3>混合式 AI 架構，驅動企業敏捷與創新</h3>
     <div class="card-speaker">🎤 Edward Kuo（郭家齊）（Kingston Technology IT Senior Manager｜Microsoft Regional Director｜Microsoft MVP）</div>
     
-    <p class="card-summary">講者主張企業導入 AI 不是「全雲端」或「全自建」的單選題，而是一道光譜，應該讓對的工作在對的地方執行。講題從導入 AI 的基礎設施挑戰出發，比較全雲端與全自建兩種迷思的優缺點，並提出混合式 AI 架構的五大優勢，介紹以 Microsoft Foundry 與 Foundry Local 為核心的雲地協同架構，最後探討 Token 成本治理與 Responsible AI 的重要性。</p>
+    <p class="card-summary">本演講聚焦於企業導入生成式 AI 與 AI Agent 時，面臨昂貴 GPU 算力、資料隱私合規與 Token 成本失控的核心挑戰。講者郭家齊提出混合式 AI 架構（Hybrid AI），主張「讓對的工作在對的地方執行」，以打破全雲端與全自建的二選一迷思。技術上，展示了結合 Microsoft Foundry（雲端控制平面）與 Foundry Local（地端執行平面）的雲地協作藍圖，透過安全通道（Tunnel）與 Model Context Protocol (MCP) 對接，使地端輕量級模型（如 Phi-4-mini）處理敏感與即時推論，而將複雜邏輯交由雲端前沿模型（如 GPT-4o）執行。此外，演講提出涵蓋「智慧路由、用例分級、情境工程降耗」等五大面向的 Token 治理框架與 AgentOps 營運模式，以實現兼顧敏捷創新、資安合規與 TCO 成本最佳化的企業級 AI 佈局。</p>
     <div class="tags"><span class="tag">混合雲</span><span class="tag">AI 基礎架構</span><span class="tag">Microsoft Foundry</span><span class="tag">Token 治理</span></div>
   </div>
 </a>
@@ -738,7 +738,7 @@
     <h3>當 AI 成為維運工程師的同事— 企業 IT infra 維運 AI 導入實戰分享</h3>
     
     
-    <p class="card-summary">講題分享企業 IT 基礎設施維運團隊導入 AI Agent 與 MCP（Model Context Protocol）的實戰經驗，說明如何將 AI Agent 視為需要被管理的新同事，透過知識盤點、Skill 化與制度建立三個步驟，讓 AI 真正具備維運戰力，並以「從告警到 RCA」的實際場景說明如何將傳統工具驅動的維運模式轉變為知識驅動模式。</p>
+    <p class="card-summary">本演講聚焦於企業 IT 基礎設施維運（Infra Ops）導入 AI Agent 與 Model Context Protocol (MCP) 的實戰歷程，解決從單純的 AI 聊天問答過渡到自主代理維運時，AI 容易失控「搞破壞」的真實挑戰。演講提出將 AI Agent 視為需要被管理之「新同事」的核心觀念，並規劃了三階段落地框架：第一步是維運經驗的「知識盤點」；第二步是「Skill 化」，將非結構化文件與專家經驗轉化為可執行邏輯與能力；第三步是「建立制度 Policy」以釐清 AI 執行的安全邊界。在技術應用上，展示了「從監控告警、事件調查、證據蒐集到 RCA（根因分析）報告產出」的自動化閉環。此實戰指南揭示了將工程師角色升級為知識作家，將傳統工具驅動維運轉變為知識驅動，最終邁向系統「自主呼吸」的自適應維運願景。</p>
     <div class="tags"><span class="tag">AI Infra Ops</span><span class="tag">MCP</span><span class="tag">維運自動化</span><span class="tag">知識管理</span></div>
   </div>
 </a>
@@ -749,7 +749,7 @@
     <h3>FinOps 不只是看後照鏡開車</h3>
     <div class="card-speaker">🎤 古永忠（Cloud Architect，國泰人壽雲端技術發展部）</div>
     
-    <p class="card-summary">講者以「開車」比喻貫穿全場，主張 FinOps 不該只是回顧帳單的後照鏡，而是坐在駕駛座上主動決策的風險管理工作。演講提出「風險指數」公式，將已支出比例、時間期程比例與預測全期費用比例結合成單一可比較的數字，並示範以 PostgreSQL 與 FOCUS 開放規格實作查詢與統計。最後探討 Alerts 走向 Agents 的產業趨勢，主張把重複性計算交給 AI Agent，人則專注於「Human Premium」：融會貫通、決策取捨與教好 AI。</p>
+    <p class="card-summary">本演講重新定義 FinOps 的核心價值，指出其不應只是「看後照鏡開車」的被動記帳與成本砍減，而是一場前瞻性的「風險管理」。講者古永忠分享如何將模糊的超支風險具體化與量化。技術上，以跨雲成本開放標準 FOCUS (FinOps Open Cost and Usage Specification) 為底層 Schema，透過 PostgreSQL 視窗函數計算 MA30、MA90 與 MA360 多重移動平均線，藉由均線交叉判定花費趨勢；進一步利用常態分佈公式（結合 μ、σ 及剩餘天數）與 `erf` 函數，精準計算出年底「超支機率」與「風險指數」。演講倡導未來的 FinOps 執行層將由 AI FinOps Agent 主動接管（監控 Terraform 變更與 CloudWatch 流量），而人則專注於「融會貫通、決策取捨、定義安全護欄」的「Human Premium」高價值判斷上。</p>
     <div class="tags"><span class="tag">FinOps</span><span class="tag">雲端成本管理</span><span class="tag">風險量化</span><span class="tag">FOCUS</span></div>
   </div>
 </a>
@@ -760,7 +760,7 @@
     <h3>從 MSSQL 雲端遷移，看超大型資料庫如何優雅邁向雲端自治</h3>
     <div class="card-speaker">🎤 Jerry HSU（1630 TrackD，華碩電腦資深基礎架構主管）</div>
     
-    <p class="card-summary">講者以華碩電腦大型基礎架構經驗，說明超大型資料庫（VLDB）從地端邁向雲端自治的架構決策，比較 Rehost、Replatform、Refactor 三種遷移策略，並深入介紹 Distributed AG、Managed Instance Link、Azure DMS 等近乎零停機的遷移方案。演講核心主張效能調校（Tuning）才是雲端資料庫 FinOps 最重要的底層邏輯，唯有先調校降低資源用量，再簽署 Reserved Instance，才能真正避免浪費而非「便宜地浪費」。</p>
+    <p class="card-summary">本演講探討超大型關聯式資料庫（VLDB）在雲端遷移與自治管理上的關鍵架構決策與 FinOps 優化思維。華碩電腦基礎架構主管 Jerry Hsu 分享如何利用 Azure Managed Instance Link（基於底層 Distributed AG 交易記錄同步）實現近乎零停機的 PaaS 遷移，並說明 SQL Server 2022/2025 可支援雙向來回切換驗證。針對資料庫雲端化最常遭遇的資源過度配置（Overprovisioning）痛點，演講提出「Tune-Rightsize-Reserve」（先調校、再評估規格、最後綁約）的黃金減法路徑，實證如何透過讀寫分離與 SARGable 語法優化，將 SQL 資源從 32 vCore 降至 16 vCore，並疊加 3 年期預留容量與 Azure Hybrid Benefit 折扣。最後，剖析了雲端自動調校（如 FORCE_LAST_GOOD_PLAN）的風險與限制，重塑次世代 DBA 效能轉成本的價值核心。</p>
     <div class="tags"><span class="tag">MSSQL</span><span class="tag">雲端遷移</span><span class="tag">FinOps</span><span class="tag">Azure SQL</span></div>
   </div>
 </a>
@@ -776,7 +776,7 @@
     <h3>FDA 文件提取智能體：從正則到自癒 AI 的演進</h3>
     <div class="card-speaker">🎤 林志忠（Data Service Manager &amp; GenAI Strategist, 世博科技顧問）</div>
     
-    <p class="card-summary">講者分享世博科技顧問處理 17 萬份 FDA 510(k) 醫材許可文件的資料工程實戰經驗，說明如何從傳統 Regex 與幾何座標定位，演進到以 LangGraph 打造「自癒 Agent」，讓 AI 自動產生、執行並驗證 PDF 資料提取程式碼，取代人工窮舉規則的作法，藉此因應 PDF 格式多變導致提取程式失效的問題。</p>
+    <p class="card-summary">本講題針對處理 17 萬份 FDA 510(k) 醫材許可 PDF 文件時，因格式微調（如多一個空格）導致傳統正則與幾何定位程式失效、維運成本劇增的痛點，提出以 LangGraph 打造「自癒 Agent」的資料提取架構。該架構包含 Coder、Executor 與 Critic 三節點迴圈，透過 State 物件共享錯誤軌跡（error_trace）進行迭代修正。技術亮點在於「讓 AI 寫程式，而非直接給答案」，且驗證節點（Critic）刻意採用確定性的代碼規則引擎（非空檢查、格式正則、白名單）作為誠實錨點，以防 AI 誤判成功。實務上，此模式已成功結構化提取逾 4 萬份文件，並設有 5 次重試上限與人工審核分流，為企業提供高準確度、可測試且具備容錯自癒能力的次世代文件智能提取方案。</p>
     <div class="tags"><span class="tag">自癒Agent</span><span class="tag">LangGraph</span><span class="tag">文件提取</span><span class="tag">GenAI</span></div>
   </div>
 </a>
@@ -787,7 +787,7 @@
     <h3>SMART on FHIR 遇上 LINE Bot：打造隱私優先的醫療 AI 架構</h3>
     <div class="card-speaker">🎤 鄭重男 (Nickle)（國軍高雄總醫院 資訊室主任）</div>
     
-    <p class="card-summary">講者分享「火線超人 FHIRLineBot」的建置經驗，這是一套結合 SMART on FHIR 國際標準與 LINE 官方帳號的醫療資訊查詢服務，讓民眾能以熟悉的 LINE 介面安全取得檢驗、用藥、就醫等健康資料，該系統並獲選衛生福利部第一屆台灣 50 優良 SMART Apps。講題說明區域醫院如何透過標準化架構與可治理的 AI 開發流程，用有限資源做出接近醫學中心等級的數位服務。</p>
+    <p class="card-summary">本講題以榮獲衛福部優良 SMART Apps 的「火線超人 FHIRLineBot」為例，探討如何解決傳統智慧醫療「僅留在醫院內部、民眾難以取得與理解自身健康數據」的痛點。該系統設計了隱私優先的五層技術架構：第一層為民眾使用的 LINE 介面；第二層透過 LINE OAuth 與 SMART on FHIR 標準進行最小權限 Token 授權；第三層利用 FHIR R4 與 TW Core 標準規範安全存取檢驗、用藥與就醫紀錄；第四層由 AI 解讀層進行術語轉譯；第五層則透過 TDD、SDD 與 Code Review 建立 AI 開發治理層。實務上，此架構支援多租戶與繁中、英、日、泰多語系，協助資源有限的區域醫院無需打掉 HIS 舊系統即可逐步接出 API，實踐接近醫學中心等級的可維運、合規醫療服務。</p>
     <div class="tags"><span class="tag">SMART on FHIR</span><span class="tag">醫療資訊</span><span class="tag">LINE Bot</span><span class="tag">AI治理</span></div>
   </div>
 </a>
@@ -798,7 +798,7 @@
     <h3>自研 On-prem AI Agent 搭配企業知識庫與建築營造產業應用可能性</h3>
     <div class="card-speaker">🎤 徐灝（加號設計數位工程有限公司負責人）</div>
     
-    <p class="card-summary">加號設計數位工程負責人徐灝分享建築營造（AEC）產業長年面臨高工時、低報酬、經驗難以內化與人才流失的困境，並說明自己如何自研一套雲地混合的AI Agent，串連企業知識庫協助新人上手、建立職能分身、自動化QC等實務情境。演講後段分享地端部署的實際挑戰與地端模型選型經驗，並提出RAG/MCP/RPA的選型原則與雲地混用的Key Takeaways。</p>
+    <p class="card-summary">本演講深入探討建築營造（AEC）產業面對高工時、經驗流失與培訓週期長等痛點，如何自研雲地混合 AI Agent 以活化企業知識庫。講者徐灝梳理了自 2024 年 Chat+RAG 到 2026 年 Subagent 與 A2A 的技術演進歷程，並分享 8 個實務場景（如新人培訓、Revit 物件定位、無障礙樓梯模型自動檢核）。在技術架構上，講者分析了雲端「能力」與地端「自主」的權衡，提出結合 RAPTOR 混合檢索技術，將知識庫輸出為具階層關係的 JSON 結構以利推理。此外，演講分享了關鍵選型原則：高可控任務走 RPA，高變化任務走 MCP，或將 RPA 包裝成工具供 Agent 呼叫。最終建議採取混用策略，由地端模型（如 Qwen、GLM）處理 80% 的敏感與低延遲任務，高推理複雜度的脫敏任務則上傳雲端旗艦模型，兼顧資料隱私與算力效能。</p>
     <div class="tags"><span class="tag">建築營造產業</span><span class="tag">地端AI Agent</span><span class="tag">企業知識庫</span><span class="tag">雲地混合</span></div>
   </div>
 </a>
@@ -809,7 +809,7 @@
     <h3>當會議逐字稿變成能力數據：Hahow for Business 用 AI 重建培訓驗證的實戰紀錄</h3>
     <div class="card-speaker">🎤 高玉璚（產品總監 @ Hahow for Business）</div>
     
-    <p class="card-summary">由於原始 PDF 缺乏可抽取的文字層，本篇內容主要依據提供的補充說明整理：Hahow for Business 產品總監高玉璚分享團隊如何結合 Slack、Fireflies.ai 會議逐字稿轉錄、Google 日曆與 Claude API，打造一套自動化流程，將教練╱培訓對話自動擷取、轉錄並分析成結構化的能力數據，藉此重建企業培訓的驗證機制。</p>
+    <p class="card-summary">本演講分享 Hahow for Business 團隊如何克服企業培訓中「教練指導對話難以量化」與「學習成效無法驗證」的痛點。為將零散的日常會議或培訓對話重整為高價值的資產，產品總監高玉璚帶領團隊整合 Google 日曆、Fireflies.ai、Slack 與 Claude API，建構了一套高度自動化的分析管線。系統首先透過 Google 日曆追蹤培訓會議排程，再由 Fireflies.ai 自動進行語音轉錄產出逐字稿，最後調用 Claude API 進行深度語意分析，將非結構化的對話提煉為客觀、可度量且結構化的「能力數據」。此技術設計不僅免除了傳統人工整理逐字稿的龐大負擔，更協助企業建立以數據為佐證、可持續追蹤的培訓驗證機制，將「有沒有開會」的出席紀錄升華為具體的學習成效證明。</p>
     <div class="tags"><span class="tag">企業培訓</span><span class="tag">AI逐字稿分析</span><span class="tag">能力驗證</span><span class="tag">Fireflies.ai</span></div>
   </div>
 </a>
@@ -820,7 +820,7 @@
     <h3>FDA 文件提取智能體：從正則到自癒 AI 的演進 (第二場/不同講者版本)</h3>
     <div class="card-speaker">🎤 林志忠（Data Service Manager &amp; GenAI Strategist @ 世博科技顧問）</div>
     
-    <p class="card-summary">講者林志忠分享世博科技顧問團隊處理 17 萬份 FDA 510(k) 醫材許可文件時，從傳統正則表達式規則不斷「打補丁」的困境，演進到打造「自癒 Agent」讓 AI 自行產生、執行並驗證提取程式的完整歷程，最終讓 AI 直接寫程式而非直接給答案，解鎖了 4 萬多份文件的結構化處理能力。</p>
+    <p class="card-summary">本演講分享世博科技顧問在處理 17 萬份 FDA 510(k) 醫材許可 PDF 文件時，如何克服傳統正則表達式（Regex）規則打補丁、因格式微變（如多一個空格）導致提取率驟降的痛點。講者林志忠提出結合三層 Fallback 與「自癒 Agent」的雙路提取架構。針對 K-number 提取，團隊採用 LangGraph 框架打造自癒工作流，由 Coder（生成提取代碼）、Executor（以 exec() 執行並捕捉 Traceback）與 Critic（驗證格式）三個節點構成迭代迴圈。透過 State 物件在重試間共享 error_trace，使 AI 能在最多 5 次重試中自我修正。此架構的核心轉變在於「讓 AI 寫程式（作為可版控的持久工程資產），而非直接給答案」，自癒系統更自主發展出「幾何座標定位」方式，目前已成功完成 4 萬多份文件的結構化提取，大幅提升資料可信度與維運效率。</p>
     <div class="tags"><span class="tag">FDA文件提取</span><span class="tag">自癒Agent</span><span class="tag">LangGraph</span><span class="tag">智慧財產法規情報</span></div>
   </div>
 </a>
@@ -842,7 +842,7 @@
     <h3>國泰雲端碳管理平台—金融科技賦能金融業實現碳管理</h3>
     <div class="card-speaker">🎤 Benson、Terri（國泰人壽 專案資訊治理科主管（Benson）、國泰人壽資訊策略發展部技術經理（Terri））</div>
     
-    <p class="card-summary">國泰人壽分享其自建的雲端碳管理平台 GaaS（Green as a Service），如何以科技驅動碳智能與合規實踐，協助金融業落實碳排放盤查、減碳目標管理與 ESG 資訊揭露。內容涵蓋平台的三大功能模組、以 GCP 為基礎的雲原生架構設計，以及六項關鍵技術亮點與 DevSecOps 實踐做法，展現金融科技如何賦能企業推動永續轉型。</p>
+    <p class="card-summary">本場演講探討金融業面對龐大據點碳排放熱點監控、國際碳披露（GRI、IFRS）及科學減碳目標（SBTi、RE100）的數位碳治理挑戰。國泰人壽分享其開發之「GaaS 雲端碳管理平台」，架構於 Google Cloud Platform (GCP) 上，運用 GKE 進行無狀態微服務託管。系統結合 Redis 快取層降低 Cloud SQL 負載，並以 Azure AI Document Intelligence (OCR) 與 RPA 自動化進行多據點單據數據萃取，克服人工登打瓶頸。安全與運維端整合 GCP Secret Manager、IAM 及 DevSecOps 自動化開發流程。此實戰經驗提供金融與服務業以模組化雲端原生架構，將原始能源與碳排數據轉化為合規、可追溯且具第三方驗證力的科學化減碳決策與綠色金融資產。</p>
     <div class="tags"><span class="tag">ESG</span><span class="tag">碳管理</span><span class="tag">GCP</span><span class="tag">雲原生架構</span></div>
   </div>
 </a>
@@ -853,7 +853,7 @@
     <h3>高雄 AI 燈塔計畫 - 以高雄主權 AI 出發，打造國家級 AI 旗艦城市</h3>
     <div class="card-speaker">🎤 劉俊傑（高雄市政府）</div>
     
-    <p class="card-summary">高雄市政府分享「高雄燈塔計畫」，說明如何從傳統以物件辨識為基礎、需事先設定規則的視覺 AI，演進到能理解複雜多重事件的視覺語言模型（VLM），並進一步升級至具推理能力的 Cosmos Reason 2 與結合數位孿生的 Physical AI。透過主權 AI VLM 平台整合跨局處攝影機與影像資料，取代過去各局處各自為政的人工通報模式，打造能同時滿足交通、工務、水利、警察、消防等不同需求的複合式應用。</p>
+    <p class="card-summary">本演講介紹高雄市政府如何透過「高雄 AI 燈塔計畫」，克服傳統視覺模型（VM）僅能做單一物件辨識且造成局處資訊孤島（Silo AI）的智慧城市挑戰。計畫以「高雄主權 AI」為核心，從 1.0 的視覺語言模型（VLM）單張照片推論，升級至 2.0 的實體 AI（Physical AI）。技術架構實現「Real to Sim to Real」閉環：利用 3D 智慧掃描（3DGS）與 LiDAR 重建 2cm 等級數位孿生；在 NVIDIA Omniverse 與 Cosmos Transfer 中模擬水災、車禍等極端情境；訓練具思維鏈（CoT）推理能力的 Cosmos Reason 2 模型。最後透過 Model Context Protocol (MCP) 協定對接路口電子看板（CMS）與 Google Maps API 實現自動避災導引。此案例為現代城市治理提供了打破數據壁壘、以數位孿生訓練城市大腦的旗艦級範式。</p>
     <div class="tags"><span class="tag">智慧城市</span><span class="tag">主權 AI</span><span class="tag">VLM</span><span class="tag">數位孿生</span></div>
   </div>
 </a>
@@ -864,7 +864,7 @@
     <h3>從數位轉型到 AI 創新：旅遊業的智慧轉型之路</h3>
     
     
-    <p class="card-summary">講題分享旅遊業者從數位轉型走向 AI 創新的智慧轉型歷程，說明企業如何從既有的兩本柱轉型框架，擴展為三本柱轉型架構，並提出以「共同治理」模式推動 AI 在旅遊產業中的導入與落地。內容聚焦於旅遊業如何透過數位化與 AI 技術提升顧客體驗、營運效率與資料驅動決策能力。</p>
+    <p class="card-summary">本演講分享旅遊業者在數位轉型進程中，如何克服傳統單一化經營、資訊孤島與跨部門協作不足的核心挑戰，順利過渡到 AI 驅動的智慧創新階段。演講核心提出將轉型框架從「兩本柱」升級為「三本柱」架構，以納入 AI 的系統化規劃。在組織設計上，倡導「共同治理」（Co-governance）模式，串聯業務、技術、合規等跨部門角色，健全 AI 專案的安全評估與敏捷落地。實戰應用聚焦於顧客服務體驗個人化、旅遊行程排程自動化與數據驅動決策，為傳統旅遊服務業提供了從數位轉型走向智慧化、規模化 AI 創新的轉型藍圖與治理實踐路徑。</p>
     <div class="tags"><span class="tag">旅遊業</span><span class="tag">數位轉型</span><span class="tag">AI 創新</span><span class="tag">共同治理</span></div>
   </div>
 </a>
@@ -875,7 +875,7 @@
     <h3>從應用實例看 AI 如何賦能台灣旅宿業</h3>
     <div class="card-speaker">🎤 阿咪 (A-mi) 吳品毅（敦謙國際 Hexa 旅宿通路管理系統 - 產品負責人）</div>
     
-    <p class="card-summary">講者從台灣旅宿業住用率成長但利潤持續被壓縮的真實困境出發，剖析缺工、OTA 高佣金、系統整合困難等結構性問題，並說明為何 AI 導入常卡在 PoC 階段（ROI 不明、資料散落、組織未準備好、成本門檻高）。演講進一步以訂房客服、房務管理、證件辨識等第一線實例，展示 AI 如何讓服務從客服人員位移到更高價值的微決策角色，並探討數據孤島、地緣失權與人才文化斷層等挑戰，最後點出旅宿業已成資安攻擊熱區，AI 賦能同時也放大了攻擊面。</p>
+    <p class="card-summary">本演講深入分析台灣旅宿業面臨的嚴重缺口（常態性缺工 5000-6600 人、OTA 高達 15-25% 佣金抽成、假日滿平日空且數據主權受制於國際平台）等三層困境，並探討 AI 如何作為營運賦能工具協助產業突圍。以「Hexa 旅宿通路管理系統」為實踐例，展示 AI 在客戶端與營運端之「服務位移」架構：客戶端採用 AI 助理處理常態客服，輔以「人工監控面板（Human-in-the-loop）」供訂房中心適時介入微決策；營運端則導入 AI 掃房結果自動影像辨識、動態房務清潔任務調度，以及自助證件辨識防弊系統。演講強調，企業導入 AI 應採「先輔助再取代」原則，利用中介層設計克服 PCI-DSS 與個資法限制，並部署 AI 級別資安防護以應對自動化滲透及 Prompt Injection 等新型威脅。</p>
     <div class="tags"><span class="tag">旅宿業</span><span class="tag">AI 導入</span><span class="tag">數據賦能</span><span class="tag">資安威脅</span></div>
   </div>
 </a>
@@ -891,7 +891,7 @@
     <h3>從 CIO 大調查看企業 AI 轉型新方向：AI 原生的崛起</h3>
     <div class="card-speaker">🎤 王宏仁（iThome副總編輯）</div>
     
-    <p class="card-summary">本場分享基於 iThome 2026 CIO &amp; CISO 大調查（396份有效問卷）的第一手數據，剖析臺灣大型企業在資安、生成式AI與IT維運等年度目標上的排序變化，以及AI預算成長、生成式AI導入成熟度與新興技術採用趨勢。講者進一步指出企業IT架構正從「雲原生」轉向「AI原生」，代理式AI（AI Agent）與MCP協定成為2026年採用率成長最快的技術，說明企業競爭力已從IT基礎建設厚度轉移至AI與軟體開發的投資深度。</p>
+    <p class="card-summary">本講題基於 iThome 2026 年第 19 屆 CIO &amp; CISO 大調查（396 份大型企業有效問卷）的第一手數據，剖析臺灣企業在 AI 轉型上的關鍵動向。調查指出，資安管理（82%）與生成式 AI 創新（58%）蟬聯年度目標前兩名，且整體 AI 預算年成長率達 65%（金融與政府業更突破 100%）。技術架構上，企業正經歷從「雲原生」向「AI 原生」的典範轉移：領先企業（佔 23%）對容器與微服務的單純擴展速度放緩，轉而大力投資代理式 AI（AI Agent，採用率 22%）與 MCP 協定（採用率達 27%）。實務上的關鍵啟示為：企業的核心競爭力已從傳統 IT 基礎建設的物理厚度，轉化為 AI 與軟體工程的投資深度，IT 部門也將轉型為數位勞動力與流程合規的管理者。</p>
     <div class="tags"><span class="tag">CIO大調查</span><span class="tag">企業AI轉型</span><span class="tag">AI原生</span><span class="tag">代理式AI</span></div>
   </div>
 </a>
@@ -902,7 +902,7 @@
     <h3>撕開轉型華麗的包裝：一場從「煉獄」爬回「現實」的中小型企業AI落地化的生存指南</h3>
     <div class="card-speaker">🎤 Riley Moriarty（PilotTV System Business Unit / Technical Operations Manager）</div>
     
-    <p class="card-summary">講者以自身在中小型企業推動 AI 導入的實戰經驗，破除「為了導入而導入」的迷思，強調 AI 只是達成明確目的的手段而非目的本身。透過兩個成功案例（建立部門知識庫、AI 輔助會議紀錄）與一個失敗案例（AI 自動生成影片專案胎死腹中），具體說明如何用「目的—策略—需要」的切分思維判斷什麼該交給 AI、什麼該留給人。</p>
+    <p class="card-summary">本演講是一份為中小型企業量身打造的 AI 落地生存指南。講者 Riley Moriarty 透過親身實戰，破除企業因 FOMO（害怕落後）心理而「為了導入而導入」的華麗泡泡，強調 AI 僅是手段，必須以實質痛點為目的。演講透過兩個成功與一個失敗案例進行深度對比：成功案例包含利用個人工作日誌意外推動部門知識庫流程建立，以及導入 NotebookLM、Tactiq 等工具簡化會議紀錄，並以「導入前後對比與現場 Demo」成功說服主管；失敗案例則是盲目嘗試以 Veo 3 等影片生成工具製作衛教影片，導致原本數小時的工作演變為數天人力與高額 Token 成本，專案最終在 2025 年宣告胎死腹中。講者提出核心的「切分思維」，呼籲企業先具象化目的，拆解策略與所需能力，憑藉「取捨的眼光（Taste）」精準區分人與 AI 的工作邊界。</p>
     <div class="tags"><span class="tag">中小企業AI導入</span><span class="tag">FOMO</span><span class="tag">知識庫建置</span><span class="tag">AI工作流</span></div>
   </div>
 </a>
@@ -913,7 +913,7 @@
     <h3>打造 IT 大廠轉型組織的跨國實踐藍圖</h3>
     <div class="card-speaker">🎤 吳明杰 (James Wu)（曾任亞太區數位科技主管、台灣資訊長）</div>
     
-    <p class="card-summary">本場演講由曾任亞太區數位科技主管與台灣資訊長的吳明杰分享跨國 IT 大廠組織轉型的實戰架構，提出「從成本中心到價值創造」「加速前線決策力」「技術實力與 Human-centric capability」三大核心支柱。內容涵蓋從傳統科層架構轉型為產品導向組織、以價值驅動決策、建立敏捷編排 POD，以及打造涵蓋技術培訓與人本能力的全方位能力框架，最後點出組織轉型過程中「現實」與成功樣貌的落差反思。</p>
+    <p class="card-summary">本演講分享跨國 IT 大廠組織轉型的實戰架構與藍圖。講者吳明杰（James Wu）結合其擔任亞太區數位科技主管及台灣資訊長的豐富管理經驗，直面傳統組織轉型中「理想規劃」與「執行現實」的巨大落差。為此，他提出組織變革的三大核心支柱：從成本中心轉向價值創造、加速前線決策力、以及技術實力與人本能力並重。在技術管理與組織設計層面，演講拆解了三大具體轉變：第一，轉向產品中心組織，導入 Business Case Canvas 進行聯合預算，並推行 90 天滾動式聯合成果審查；第二，進行全球規模的組織扁平化，控制管理層級在 4 層以內，並透過敏捷 PODS 組建跨領域任務小組；第三，建立 Capability Framework 全方位能力框架，培育 AI 時代下同理心、韌性與人機協作等關鍵能力，協助企業在變革中動態調配資源並創造實質商業成果。</p>
     <div class="tags"><span class="tag">組織轉型</span><span class="tag">跨國實踐</span><span class="tag">產品導向</span><span class="tag">人才發展</span></div>
   </div>
 </a>
@@ -946,7 +946,7 @@
     <h3>AI 驅動企業進化：管理者決策現場的智能轉型實戰</h3>
     <div class="card-speaker">🎤 陳泳睿（安東尼）（新呈工業董事長）</div>
     
-    <p class="card-summary">本場演講由新呈工業董事長陳泳睿（安東尼）主講，以「點、線、面」三個層次說明 AI 應用如何從個人工具演進為企業智能中樞：點是個人增強、線是流程整合、面則是 AI Agent 成為跨部門協作與即時決策的組織大腦。演講結合講者自身在製造業與資訊業的實務經驗，探討生成式 AI 如何協助企業策略規劃、隱性知識傳承，以及企業 AI 轉型最常見的失敗原因與制度化做法。</p>
+    <p class="card-summary">本演講直擊企業在 AI 轉型中「個人懂得使用工具，組織卻無法協同決策」與「關鍵隱性知識隨老員工離職而流失」的核心挑戰。講者陳泳睿提出 AI 應用的三層次框架：從個人增強的「點」，到流程整合的「線」，再到將 AI Agent 作為智能決策中樞的「面」。技術上，展示了「老師傅 Prompt」知識萃取系統（包含教練式訪談、結構化整理、品質評估及多元輸出），以及基於 Claude 構建的 `ai-sales-team-claude` 業務代理，利用五維加權評分系統（公司契合度、聯絡人可及性等）進行商機評估。最後，針對轉型失敗的通病，提出「管理制度流程提示詞化」及月度「AI提案改善激勵制度」，建立可追蹤、可審核、可控管的 AI 管理機制，是企業將 AI 融入日常營運與決策現場的實戰指南。</p>
     <div class="tags"><span class="tag">AI轉型</span><span class="tag">企業經營</span><span class="tag">知識傳承</span><span class="tag">AI Agent</span></div>
   </div>
 </a>

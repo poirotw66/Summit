@@ -28,7 +28,7 @@
 <main class="container detail-main">
   <section class="detail-section summary-box">
     <h2>摘要</h2>
-    <p>講者林志忠分享世博科技顧問團隊處理 17 萬份 FDA 510(k) 醫材許可文件時，從傳統正則表達式規則不斷「打補丁」的困境，演進到打造「自癒 Agent」讓 AI 自行產生、執行並驗證提取程式的完整歷程，最終讓 AI 直接寫程式而非直接給答案，解鎖了 4 萬多份文件的結構化處理能力。</p>
+    <p>本演講分享世博科技顧問在處理 17 萬份 FDA 510(k) 醫材許可 PDF 文件時，如何克服傳統正則表達式（Regex）規則打補丁、因格式微變（如多一個空格）導致提取率驟降的痛點。講者林志忠提出結合三層 Fallback 與「自癒 Agent」的雙路提取架構。針對 K-number 提取，團隊採用 LangGraph 框架打造自癒工作流，由 Coder（生成提取代碼）、Executor（以 exec() 執行並捕捉 Traceback）與 Critic（驗證格式）三個節點構成迭代迴圈。透過 State 物件在重試間共享 error_trace，使 AI 能在最多 5 次重試中自我修正。此架構的核心轉變在於「讓 AI 寫程式（作為可版控的持久工程資產），而非直接給答案」，自癒系統更自主發展出「幾何座標定位」方式，目前已成功完成 4 萬多份文件的結構化提取，大幅提升資料可信度與維運效率。</p>
   </section>
   <section class="detail-section">
     <h2>重點整理</h2>

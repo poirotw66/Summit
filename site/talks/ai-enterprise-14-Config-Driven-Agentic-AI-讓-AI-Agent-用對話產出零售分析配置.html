@@ -28,7 +28,7 @@
 <main class="container detail-main">
   <section class="detail-section summary-box">
     <h2>摘要</h2>
-    <p>Tagtoo分享零售分析系統的開發經驗，說明團隊如何從讓Agent直接調度整個分析流程的「Workflow Agent」架構，因遇到速度慢、成本高、穩定性差的問題，轉向以「Config Compiler」為核心的Config-Driven架構：Agent不再直接執行任務，而是產生結構化的「分析合約」，再交由固定pipeline腳本執行。演講也說明如何透過三道防線讓這套AI workflow更加穩定可靠。</p>
+    <p>本講題分享零售數據分析的實戰開發經驗，針對「高度客製化分析需求與規模化系統之間的拉扯」提出 Config-Driven Agentic AI 架構。傳統 V1 架構讓 Agent 作為調度者依據工作流 YAML 直接執行分析，卻面臨速度慢、Token 成本高與上下文腐敗等不穩定問題。為此，Tagtoo 轉向 V2 架構：讓 AI Agent 僅負責與使用者對話並產出結構化的「分析合約（`project.yaml`）」，內含分析單位（Entity）與篩選邊界（Filter），再交由確定性的 Pipeline 腳本執行。系統依需求頻率設計 L1 腳本、L2 說明書與 L3 自訂 SQL 三種路徑，並建立三道防線（需求分類、合約合法性與 dry-run 驗證、結果需求覆蓋率審查），成功以配置化將業務邏輯與自動化分析流程穩定銜接。</p>
   </section>
   <section class="detail-section">
     <h2>重點整理</h2>

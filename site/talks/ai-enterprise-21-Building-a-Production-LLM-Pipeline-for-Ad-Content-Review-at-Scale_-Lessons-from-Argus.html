@@ -28,7 +28,7 @@
 <main class="container detail-main">
   <section class="detail-section summary-box">
     <h2>摘要</h2>
-    <p>Taboola的Eagle Chen分享團隊如何打造名為Argus的LLM生產Pipeline，用以在大規模場景下審查廣告內容。演講說明人工審查在一致性、時效與規模化三方面的痛點，以及傳統機器學習模型難以應對政策頻繁變動的困境，進而提出「政策即Prompt」的重新框架方式，並詳細拆解Argus以控制流、上下文、工具、記憶與CI/CD五層構成的Harness架構，最後分享換模型與成效驗證的實戰經驗。</p>
+    <p>本演講分享 Taboola 如何打造名為 Argus 的大規模 LLM 生產管線，以應對每日全球數百萬則廣告審查的嚴苛挑戰。為解決人工審查一致性差、時效性低（等待期長達一日以上）及傳統機器學習在多模態、頻繁變動政策下維護成本高昂的痛點，團隊提出「政策即 Prompt」的創新理念。Argus 核心採用五層 Harness 架構：控制流層將審核拆為對應人工步驟的9個階段；上下文層利用 Prompt Assembler 依屬性動態組裝版本化規則；工具層賦予 Agentic AI 呼叫網路與圖片搜尋進行事實查核的能力；記憶層透過 Class-RAG 注入歷史相似判例以少樣本學習提升準確率；CI/CD 層則以黃金數據集進行回歸測試作為品質與釋出關卡。該系統不僅將審查縮短至分鐘級、減少75%人工工作量，更於實戰中成功「行進間換引擎」至 Gemini 3 Flash，達成30%成本優化與無痛回滾。</p>
   </section>
   <section class="detail-section">
     <h2>重點整理</h2>

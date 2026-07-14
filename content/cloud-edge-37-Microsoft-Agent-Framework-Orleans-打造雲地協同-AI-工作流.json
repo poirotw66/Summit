@@ -4,8 +4,14 @@
   "speaker": "老鮑伯",
   "speaker_title": "",
   "summit": "cloud-edge",
-  "tags": ["Microsoft Agent Framework", "Orleans", "Agentic RAG", "MCP", "多代理系統"],
-  "summary": "本場演講介紹 Microsoft 開源的 AI Agent 開發框架 MAF（Microsoft Agent Framework），說明其如何以一致的 AIAgent API 控制不同 LLM 供應商，並支援 Session 管理、MCP 工具整合與多種 Workflow 協調模式。講者進一步展示如何結合 Microsoft Orleans 處理多人多狀態的高併發系統需求，並介紹 Azure AI Search 的 Agentic Retrieval 與 OpenClaw 在 .NET/C# 生態系的兩個主流實作。",
+  "tags": [
+    "Microsoft Agent Framework",
+    "Orleans",
+    "Agentic RAG",
+    "MCP",
+    "多代理系統"
+  ],
+  "summary": "本演講深入探討在 .NET C# 生態系中，如何利用開源的 Microsoft Agent Framework (MAF) 與虛擬演員模型（Virtual Actor）框架 Microsoft Orleans，建構高併發、高擴展性的雲地協同多代理（Multi-Agent）工作流。針對多 Agent 協作時的狀態管理、高併發 Session 追蹤與地端 Ollama 等 API 整合痛點，演講展示了以 MAF 的 `AIAgent`（底層基於 `IChatClient`）為核心的架構，並將 Agent 實體封裝在 Orleans Grains 中，以解決多人多狀態的即時回應問題。此外，技術上介紹了以 `AITool` 整合 Model Context Protocol (MCP) 與 C# 方法的模式，並解析了 Azure AI Search 預設 MCP 端點驅動的 AgenticRAG 查詢拆分檢索。演講亦提供了 OpenClaw.NET (AgentQi) 的實作方向，是 .NET 開發者邁向分散式、企業級 AI 代理系統的實戰指引。",
   "highlights": [
     "MAF 提供一致的 AIAgent API，底層透過 IChatClient 抽象化 OpenAI 相容介面，可切換雲端（OpenAI、Azure AI）或地端（Ollama、LM Studio）LLM",
     "Session 管理預設使用 InMemoryChatHistoryProvider，也可自訂 ChatHistoryProvider 或使用 CosmosDbChatHistoryProvider 持久化對話",

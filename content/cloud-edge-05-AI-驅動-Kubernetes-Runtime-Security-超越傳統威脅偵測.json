@@ -4,8 +4,14 @@
   "speaker": "謝長軒 (Chandler Hsieh)",
   "speaker_title": "卡巴斯基台灣技術總監",
   "summit": "cloud-edge",
-  "tags": ["Kubernetes 安全", "威脅情報", "供應鏈攻擊", "容器安全", "AI 威脅偵測"],
-  "summary": "本場演講引用 JFrog、Red Hat 與 Wiz 等機構的調查數據，說明 Kubernetes 環境在公有雲中平均不到 30 分鐘即可能被攻陷、近九成企業過去一年曾遭遇 K8S 安全事件，並剖析 API/RBAC 誤用、網路架構複雜與容器可視性不足等攻擊面威脅，以及軟體供應鏈攻擊的手法。講者接著說明 AI 時代下攻擊速度與規模的放大效應，並介紹卡巴斯基如何以豐富的全球威脅情報來源、機器學習偵測引擎與 Kaspersky Container Security（KCS）等工具，協助企業從靜態掃描到動態 Runtime 防護建立完整的容器與 K8S 安全韌性。",
+  "tags": [
+    "Kubernetes 安全",
+    "威脅情報",
+    "供應鏈攻擊",
+    "容器安全",
+    "AI 威脅偵測"
+  ],
+  "summary": "本演講針對公有雲中 Kubernetes（K8S）叢集面臨的嚴峻安全威脅（平均不到 30 分鐘即可能被攻陷，近九成企業曾遭遇安全事件），探討如何透過 AI 與威脅情報建構容器的運行時安全（Runtime Security）。卡巴斯基台灣技術總監謝長軒剖析了 K8S 的三大核心攻擊面：API/RBAC 權限設定錯誤、網路與資源複雜度，以及容器內部可視性不足。在 AI 時代下，自動化漏洞利用與模型資料投毒使攻擊頻率與規模呈倍數放大。對此，演講介紹了卡巴斯基結合全球情資的機器學習偵測引擎，並提出以 Kaspersky Container Security（KCS）為核心的防護架構，涵蓋從 Store/Build 階段的靜態映像檔與 IaC 掃描，到 Runtime 階段的 Admission Control 阻擋與 Launch Control 防護。本演講為企業實現從左移開發安全到右移運行時防禦的完整 Cyber Resilience 提供了具體實踐指引。",
   "highlights": [
     "在公有雲環境中，駭客攻陷一座 K8S 叢集平均僅需不到 30 分鐘，近 89% 企業過去 12 個月曾遭遇 K8S 安全事件",
     "K8S 攻擊面三大威脅：API/RBAC 權限誤用、網路與資源架構複雜、容器化可視性不足",
@@ -36,9 +42,21 @@
     }
   ],
   "key_images": [
-    {"file": "assets/images/cloud-edge-05-AI-驅動-Kubernetes-Runtime-Security-超越傳統威脅偵測/p3.jpg", "caption": "K8S 的威脅風險統計數據：公有雲環境平均不到 30 分鐘被攻陷、近 89% 企業曾遭遇 K8S 安全事件、Docker Hub 約 20% 檔案含惡意程式"},
-    {"file": "assets/images/cloud-edge-05-AI-驅動-Kubernetes-Runtime-Security-超越傳統威脅偵測/p4.jpg", "caption": "K8S 攻擊面的三大威脅情勢：API/RBAC 誤用、網路與資源架構複雜、容器化可視性不足"},
-    {"file": "assets/images/cloud-edge-05-AI-驅動-Kubernetes-Runtime-Security-超越傳統威脅偵測/p18.jpg", "caption": "卡巴斯基專家服務協助建立 Cyber Resilience 的架構圖，涵蓋 MDR 託管式安全、事件回應、諮詢服務與培訓"},
-    {"file": "assets/images/cloud-edge-05-AI-驅動-Kubernetes-Runtime-Security-超越傳統威脅偵測/p22.jpg", "caption": "從靜態檢測到動態防護的容器安全工具架構圖，展示 KCS Scanner 在 Store/Build 階段與 KCS Agent 在 Runtime 階段的協同防護"}
+    {
+      "file": "assets/images/cloud-edge-05-AI-驅動-Kubernetes-Runtime-Security-超越傳統威脅偵測/p3.jpg",
+      "caption": "K8S 的威脅風險統計數據：公有雲環境平均不到 30 分鐘被攻陷、近 89% 企業曾遭遇 K8S 安全事件、Docker Hub 約 20% 檔案含惡意程式"
+    },
+    {
+      "file": "assets/images/cloud-edge-05-AI-驅動-Kubernetes-Runtime-Security-超越傳統威脅偵測/p4.jpg",
+      "caption": "K8S 攻擊面的三大威脅情勢：API/RBAC 誤用、網路與資源架構複雜、容器化可視性不足"
+    },
+    {
+      "file": "assets/images/cloud-edge-05-AI-驅動-Kubernetes-Runtime-Security-超越傳統威脅偵測/p18.jpg",
+      "caption": "卡巴斯基專家服務協助建立 Cyber Resilience 的架構圖，涵蓋 MDR 託管式安全、事件回應、諮詢服務與培訓"
+    },
+    {
+      "file": "assets/images/cloud-edge-05-AI-驅動-Kubernetes-Runtime-Security-超越傳統威脅偵測/p22.jpg",
+      "caption": "從靜態檢測到動態防護的容器安全工具架構圖，展示 KCS Scanner 在 Store/Build 階段與 KCS Agent 在 Runtime 階段的協同防護"
+    }
   ]
 }

@@ -28,7 +28,7 @@
 <main class="container detail-main">
   <section class="detail-section summary-box">
     <h2>摘要</h2>
-    <p>演講從金融業第一線 IT 客服場景出發，說明合規性、整合性、即時性是金融 AI 落地的三條生死線，並剖析為何 AI 專案常卡在 PoC 階段。講者提出以雲端原生架構打造的 Cloud Native AI Runtime，結合 MCP（Model Context Protocol）解決系統孤島問題、Agentic RAG 動態狀態機解決線性 RAG 的幻覺與驗證問題，並以 Agent Trace 稽核軌跡解決黑盒 AI 的稽核資安法遵挑戰，最終以真實 Benchmark 數據與語音客服案例驗證平台成效。</p>
+    <p>本演講深入探討金融業生成式 AI 如何突破 PoC 階段、邁向金融級營運現場的關鍵路徑，點出金融落地面臨的合規、整合與延遲等三條生死線。技術上，展示了「金融級 Agentic AI 中樞」的平台工程架構：利用 MCP (Model Context Protocol) Hub 統一封裝內部系統，解決客製化 API Spaghetti 痛點並保留 Tool Trace；數據端採用混合檢索（BM25 關鍵字與語意 Embedding），並經 RRF 融合排序；流程上以「動態狀態機」重構傳統單向 RAG，納入 `validate_context` 驗證與 `rewrite_query` 改寫，並對高風險任務導入人機協同（Human-in-the-loop）與明確保證拒答機制。實測顯示，Agentic RAG 可將準確率由傳統 Naive RAG 的 87% 提升至 98%，為金融業提供了具備可稽核軌跡（Agent Trace）的 AI 系統運作範式。</p>
   </section>
   <section class="detail-section">
     <h2>重點整理</h2>

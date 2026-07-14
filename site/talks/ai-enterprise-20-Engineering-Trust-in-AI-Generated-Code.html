@@ -28,7 +28,7 @@
 <main class="container detail-main">
   <section class="detail-section summary-box">
     <h2>摘要</h2>
-    <p>講者從Transformer的Attention機制出發，說明LLM生成程式碼本質上是「以上下文加權計算下一個Token的機率預測」，而非真正理解需求，因此複雜的Prompt會提高衝突、長距依賴與歧義等風險，進而導致安全漏洞。講者接著介紹Black Duck如何在Prompt、Generate、IDE驗證、PR/Repo/Staging分析與Governance五個階段建立防護，結合確定性掃描與Agentic AI程式碼審查，協助企業在AI輔助開發下仍能交付合規、安全的軟體。</p>
+    <p>本場演講深入解析AI輔助開發中生成程式碼的安全信任挑戰。講者從Transformer的Attention機制出發，指出LLM本質上是基於上下文加權計算下一個Token的機率預測，而非理解代碼語意；複雜的Prompt會導致競爭性限制、長距依賴與歧義，進而產生機率漂移並衍生安全漏洞。為此，演講提出了結合確定性規則引擎與Agentic AI的五層治理防禦架構，涵蓋：Prompt防護、生成阻止、IDE層快速確定性掃描（2分鐘內免編譯單檔分析）、PR/Repo/Staging層的資料流感知SAST/SCA與動態測試，以及Governance層產出SBOM、VEX、SARIF合規報告。實務上，建議開發團隊避免一鍵式長Prompt，改採聚焦步驟生成程式碼，並在IDE與PR階段左移安全把關，配合Break-Build機制攔截不安全代碼，建立可信任的自動化程式碼審查流程。</p>
   </section>
   <section class="detail-section">
     <h2>重點整理</h2>

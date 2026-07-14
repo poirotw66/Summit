@@ -4,8 +4,14 @@
   "speaker": "張維峻 (Justin)",
   "speaker_title": "",
   "summit": "cloud-edge",
-  "tags": ["Agentic AI", "金融科技", "RAG", "MCP", "AI 治理"],
-  "summary": "演講從金融業第一線 IT 客服場景出發，說明合規性、整合性、即時性是金融 AI 落地的三條生死線，並剖析為何 AI 專案常卡在 PoC 階段。講者提出以雲端原生架構打造的 Cloud Native AI Runtime，結合 MCP（Model Context Protocol）解決系統孤島問題、Agentic RAG 動態狀態機解決線性 RAG 的幻覺與驗證問題，並以 Agent Trace 稽核軌跡解決黑盒 AI 的稽核資安法遵挑戰，最終以真實 Benchmark 數據與語音客服案例驗證平台成效。",
+  "tags": [
+    "Agentic AI",
+    "金融科技",
+    "RAG",
+    "MCP",
+    "AI 治理"
+  ],
+  "summary": "本演講深入探討金融業生成式 AI 如何突破 PoC 階段、邁向金融級營運現場的關鍵路徑，點出金融落地面臨的合規、整合與延遲等三條生死線。技術上，展示了「金融級 Agentic AI 中樞」的平台工程架構：利用 MCP (Model Context Protocol) Hub 統一封裝內部系統，解決客製化 API Spaghetti 痛點並保留 Tool Trace；數據端採用混合檢索（BM25 關鍵字與語意 Embedding），並經 RRF 融合排序；流程上以「動態狀態機」重構傳統單向 RAG，納入 `validate_context` 驗證與 `rewrite_query` 改寫，並對高風險任務導入人機協同（Human-in-the-loop）與明確保證拒答機制。實測顯示，Agentic RAG 可將準確率由傳統 Naive RAG 的 87% 提升至 98%，為金融業提供了具備可稽核軌跡（Agent Trace）的 AI 系統運作範式。",
   "highlights": [
     "金融 AI 落地三條生死線：合規性（資料主權、稽核軌跡）、整合性（跨系統跨部門）、即時性（高品質 RAG 的延遲與成本挑戰）",
     "AI 專案常卡在 PoC 的三個斷點：系統孤島（用 MCP 解決）、線性 RAG 不可驗證（用 Agentic RAG 工作流解決）、黑盒 AI 無法稽核（用 Agent Trace 解決）",
@@ -36,9 +42,21 @@
     }
   ],
   "key_images": [
-    {"file": "assets/images/cloud-edge-36-金融業生成式-AI-平台工程-以雲端原生架構打造可擴展的-Agentic-AI-中樞/p5.jpg", "caption": "Cloud Native AI Runtime 願景：以雲端原生架構打造可部署擴展、監控與治理的 Agentic AI 平台"},
-    {"file": "assets/images/cloud-edge-36-金融業生成式-AI-平台工程-以雲端原生架構打造可擴展的-Agentic-AI-中樞/p7.jpg", "caption": "金融級 RAG 資料前處理架構：PyMuPDF/Vision API 搭配 Hybrid Search（BM25 + Embedding）與 RRF 融合排序"},
-    {"file": "assets/images/cloud-edge-36-金融業生成式-AI-平台工程-以雲端原生架構打造可擴展的-Agentic-AI-中樞/p8.jpg", "caption": "從傳統單向 RAG 流程進化為 Agentic RAG 動態狀態機，包含 QueryRouter、RetrievalAgent、validate_context 與 rewrite_query"},
-    {"file": "assets/images/cloud-edge-36-金融業生成式-AI-平台工程-以雲端原生架構打造可擴展的-Agentic-AI-中樞/p10.jpg", "caption": "準確度作為工作流程屬性的示意：Route、Hybrid Search、Validate、Rewrite、Trace 分別降低不同類型風險"}
+    {
+      "file": "assets/images/cloud-edge-36-金融業生成式-AI-平台工程-以雲端原生架構打造可擴展的-Agentic-AI-中樞/p5.jpg",
+      "caption": "Cloud Native AI Runtime 願景：以雲端原生架構打造可部署擴展、監控與治理的 Agentic AI 平台"
+    },
+    {
+      "file": "assets/images/cloud-edge-36-金融業生成式-AI-平台工程-以雲端原生架構打造可擴展的-Agentic-AI-中樞/p7.jpg",
+      "caption": "金融級 RAG 資料前處理架構：PyMuPDF/Vision API 搭配 Hybrid Search（BM25 + Embedding）與 RRF 融合排序"
+    },
+    {
+      "file": "assets/images/cloud-edge-36-金融業生成式-AI-平台工程-以雲端原生架構打造可擴展的-Agentic-AI-中樞/p8.jpg",
+      "caption": "從傳統單向 RAG 流程進化為 Agentic RAG 動態狀態機，包含 QueryRouter、RetrievalAgent、validate_context 與 rewrite_query"
+    },
+    {
+      "file": "assets/images/cloud-edge-36-金融業生成式-AI-平台工程-以雲端原生架構打造可擴展的-Agentic-AI-中樞/p10.jpg",
+      "caption": "準確度作為工作流程屬性的示意：Route、Hybrid Search、Validate、Rewrite、Trace 分別降低不同類型風險"
+    }
   ]
 }

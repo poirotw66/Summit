@@ -28,7 +28,7 @@
 <main class="container detail-main">
   <section class="detail-section summary-box">
     <h2>摘要</h2>
-    <p>講者 Chester 提出「零資料接觸架構（Zero Data Touch Architecture, ZDTA）」，解決企業想讓 LLM 理解內部資料、卻又害怕資料外洩與合規風險的核心矛盾。架構核心是讓 LLM 只看到資料表 Schema、由安全中間層（Query Proxy）代為執行查詢語句，再經 Result Sanitizer 脫敏聚合後才呈現給使用者，確保 LLM 全程不接觸任何一筆原始資料。</p>
+    <p>本演講針對企業在導入大語言模型時面臨「既想利用內部資料進行自然語言分析，又害怕資料外洩與法規合規風險」的核心矛盾，提出創新且安全的「零資料接觸架構（Zero Data Touch Architecture, ZDTA）」。講者 Chester 拆解了 ZDTA 的三層安全防禦設計：第一，Schema-Only Context，僅將資料庫 Schema、欄位型別等結構資訊提供給 LLM，不包含任何實際資料；第二，Query Proxy 中間層，利用 AST（抽象語法樹）解析進行 SQL 白名單驗證與欄位級權限控管，防止 LLM 受 Prompt Injection 影響產生惡意 SQL；第三，Result Sanitizer，將資料庫執行的查詢結果進行 PII 遮罩與 K-Anonymity 驗證後直接呈現給用戶，繞過 LLM。實務上透過 Few-shot 範例可將準確度拉升至 88%，並輔以 Schema/Query Plan 快取將額外延遲降至 200ms，為金融、醫療等高監管產業提供了結構化資料安全分析的絕佳實踐藍圖。</p>
   </section>
   <section class="detail-section">
     <h2>重點整理</h2>

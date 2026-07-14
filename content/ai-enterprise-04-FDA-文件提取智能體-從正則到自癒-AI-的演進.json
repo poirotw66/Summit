@@ -4,8 +4,14 @@
   "speaker": "林志忠",
   "speaker_title": "Data Service Manager & GenAI Strategist, 世博科技顧問",
   "summit": "ai-enterprise",
-  "tags": ["自癒Agent", "LangGraph", "文件提取", "GenAI", "法規情報"],
-  "summary": "講者分享世博科技顧問處理 17 萬份 FDA 510(k) 醫材許可文件的資料工程實戰經驗，說明如何從傳統 Regex 與幾何座標定位，演進到以 LangGraph 打造「自癒 Agent」，讓 AI 自動產生、執行並驗證 PDF 資料提取程式碼，取代人工窮舉規則的作法，藉此因應 PDF 格式多變導致提取程式失效的問題。",
+  "tags": [
+    "自癒Agent",
+    "LangGraph",
+    "文件提取",
+    "GenAI",
+    "法規情報"
+  ],
+  "summary": "本講題針對處理 17 萬份 FDA 510(k) 醫材許可 PDF 文件時，因格式微調（如多一個空格）導致傳統正則與幾何定位程式失效、維運成本劇增的痛點，提出以 LangGraph 打造「自癒 Agent」的資料提取架構。該架構包含 Coder、Executor 與 Critic 三節點迴圈，透過 State 物件共享錯誤軌跡（error_trace）進行迭代修正。技術亮點在於「讓 AI 寫程式，而非直接給答案」，且驗證節點（Critic）刻意採用確定性的代碼規則引擎（非空檢查、格式正則、白名單）作為誠實錨點，以防 AI 誤判成功。實務上，此模式已成功結構化提取逾 4 萬份文件，並設有 5 次重試上限與人工審核分流，為企業提供高準確度、可測試且具備容錯自癒能力的次世代文件智能提取方案。",
   "highlights": [
     "一次系統失效經驗：K-number 前多了一個空格，提取率從 95% 驟降至 23%，耗費三天工程工時修復",
     "架構採兩條獨立路徑：IFU 適應症走 Tier 1→2→3 Fallback 管線，K-number 走自癒 Agent 自動產生程式碼",
@@ -36,9 +42,21 @@
     }
   ],
   "key_images": [
-    {"file": "assets/images/ai-enterprise-04-FDA-文件提取智能體-從正則到自癒-AI-的演進/p3.jpg", "caption": "從原始 PDF 到訂閱營收的價值鏈示意圖，說明 17 萬份 FDA 510(k) 文件提取失效將導致情報失真與訂閱服務信譽風險。"},
-    {"file": "assets/images/ai-enterprise-04-FDA-文件提取智能體-從正則到自癒-AI-的演進/p5.jpg", "caption": "兩條提取路徑架構圖，呈現 IFU 適應症走三層管線、K-number 走自癒 Agent 的分工設計。"},
-    {"file": "assets/images/ai-enterprise-04-FDA-文件提取智能體-從正則到自癒-AI-的演進/p16.jpg", "caption": "lab_01_regex.py 執行結果示意，比較文字結構標準與表格跑版 PDF 在 K-Number 提取上的成功與失敗案例。"},
-    {"file": "assets/images/ai-enterprise-04-FDA-文件提取智能體-從正則到自癒-AI-的演進/p22.jpg", "caption": "Critic Node 驗證邏輯示意，說明非空檢查、格式正則與白名單三層驗證如何作為自癒迴圈的「誠實錨點」。"}
+    {
+      "file": "assets/images/ai-enterprise-04-FDA-文件提取智能體-從正則到自癒-AI-的演進/p3.jpg",
+      "caption": "從原始 PDF 到訂閱營收的價值鏈示意圖，說明 17 萬份 FDA 510(k) 文件提取失效將導致情報失真與訂閱服務信譽風險。"
+    },
+    {
+      "file": "assets/images/ai-enterprise-04-FDA-文件提取智能體-從正則到自癒-AI-的演進/p5.jpg",
+      "caption": "兩條提取路徑架構圖，呈現 IFU 適應症走三層管線、K-number 走自癒 Agent 的分工設計。"
+    },
+    {
+      "file": "assets/images/ai-enterprise-04-FDA-文件提取智能體-從正則到自癒-AI-的演進/p16.jpg",
+      "caption": "lab_01_regex.py 執行結果示意，比較文字結構標準與表格跑版 PDF 在 K-Number 提取上的成功與失敗案例。"
+    },
+    {
+      "file": "assets/images/ai-enterprise-04-FDA-文件提取智能體-從正則到自癒-AI-的演進/p22.jpg",
+      "caption": "Critic Node 驗證邏輯示意，說明非空檢查、格式正則與白名單三層驗證如何作為自癒迴圈的「誠實錨點」。"
+    }
   ]
 }

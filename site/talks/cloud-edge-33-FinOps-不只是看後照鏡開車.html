@@ -28,7 +28,7 @@
 <main class="container detail-main">
   <section class="detail-section summary-box">
     <h2>摘要</h2>
-    <p>講者以「開車」比喻貫穿全場，主張 FinOps 不該只是回顧帳單的後照鏡，而是坐在駕駛座上主動決策的風險管理工作。演講提出「風險指數」公式，將已支出比例、時間期程比例與預測全期費用比例結合成單一可比較的數字，並示範以 PostgreSQL 與 FOCUS 開放規格實作查詢與統計。最後探討 Alerts 走向 Agents 的產業趨勢，主張把重複性計算交給 AI Agent，人則專注於「Human Premium」：融會貫通、決策取捨與教好 AI。</p>
+    <p>本演講重新定義 FinOps 的核心價值，指出其不應只是「看後照鏡開車」的被動記帳與成本砍減，而是一場前瞻性的「風險管理」。講者古永忠分享如何將模糊的超支風險具體化與量化。技術上，以跨雲成本開放標準 FOCUS (FinOps Open Cost and Usage Specification) 為底層 Schema，透過 PostgreSQL 視窗函數計算 MA30、MA90 與 MA360 多重移動平均線，藉由均線交叉判定花費趨勢；進一步利用常態分佈公式（結合 μ、σ 及剩餘天數）與 `erf` 函數，精準計算出年底「超支機率」與「風險指數」。演講倡導未來的 FinOps 執行層將由 AI FinOps Agent 主動接管（監控 Terraform 變更與 CloudWatch 流量），而人則專注於「融會貫通、決策取捨、定義安全護欄」的「Human Premium」高價值判斷上。</p>
   </section>
   <section class="detail-section">
     <h2>重點整理</h2>

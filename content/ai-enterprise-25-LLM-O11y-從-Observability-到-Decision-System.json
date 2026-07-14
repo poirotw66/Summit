@@ -4,8 +4,14 @@
   "speaker": "Che-Chia Chang",
   "speaker_title": "SRE @ Maicoin / Microsoft MVP",
   "summit": "ai-enterprise",
-  "tags": ["LLM Observability", "成本優化", "LLM as a Judge", "資料驅動決策", "Agent 評估"],
-  "summary": "講者分享如何在企業導入 LLM／Coding Agent 時，用可觀測性（Observability）取代「聽說」式決策，透過建立 baseline、LLM-as-a-Judge、Dataset & Experiment 三個步驟，逐步把工具選型、Prompt 調整、模型升級等決策數據化。核心主張是「新工具冒出速度大於人力研究速度」，唯有先看到量化數據，才能讓團隊信任現有技術堆疊並驗證每次改動的實際影響。",
+  "tags": [
+    "LLM Observability",
+    "成本優化",
+    "LLM as a Judge",
+    "資料驅動決策",
+    "Agent 評估"
+  ],
+  "summary": "本場演講針對企業在導入大語言模型（LLM）與 Coding Agent時，常因缺乏客觀評量數據而盲目做決策（如 FOMO 盲從升級模型或工具）的痛點，提出以可觀測性（Observability）為核心的「資料驅動決策系統（Decision System）」。講者 Che-Chia Chang 拆解了實作的三大核心步驟：首先，透過建立 Baseline 監測 Token 使用與延遲，停用無用工具並優化 System Instruction，成功將 Token Overhead 降低 95%（從 20000+ 降至 1000+）；其次，導入 LLM-as-a-Judge，針對 Multi-turn Agent 的單一步驟（如 Plan、apply_patch）進行細粒度品質評估；最後，從日誌中萃取「考古題」建立測試數據集（Dataset），利用實驗機制（Experiment）在不同模型與 Prompt 版本間進行回歸測試。演講強調「先有監測，再做決策」，讓開發團隊能以效率公式量化評估改動，從而精準掌控品質與成本平衡。",
   "highlights": [
     "第一次優化：關閉無用工具、控制 System Instruction，可將 Token Overhead 從 20000+ 降到 1000+，成本降至約 5%",
     "使用 LLM-as-a-Judge，以單一 Observation／步驟為單位評估品質，取代難以覆蓋多變場景的傳統測試",
@@ -14,11 +20,26 @@
     "主張「先有監測，再做決策」，避免團隊因 FOMO 盲目升級模型或更換工具"
   ],
   "sections": [
-    {"heading": "缺乏數據化決策的痛點", "body": "講者指出技術負責人常被問到是否要換用 Spec-kit、rtk、新模型或新供應商，但市面上新工具冒出速度已超過團隊研究速度。常見的回應方式（自己試用、看網路文章、聽供應商推薦）都不夠系統化，真正缺乏的是能量化評估 LLM 解決方案的機制，讓團隊在面對變動時能維持信任並驗證影響。"},
-    {"heading": "Step 1：建立 Baseline 與第一次優化", "body": "建立 Observability Stack 後，團隊能看到 Token Usage、Latency、Error Rate 等量化數據，並依此做 Cost Chargeback 與預算控管。第一步優化聚焦在理解不同 CLI（VSCode Copilot、Codex、OpenCode）的行為差異、停用用不到的 Tools、透過 AI Gateway 與調整 System Instruction，實務上可將 Token Overhead 從 20000 多降到 1000 多、成本降到原本的 5% 左右，同時降低觸發 Long Context 高價門檻的機率。"},
-    {"heading": "Step 2：LLM as a Judge", "body": "在成本優化之後，第二步改用 LLM-as-a-Judge 依 Tracing 的 Input/Output 評估「品質」，以單一 Observation（API Call）為評估單位，用小範圍量化反映局部表現，藉此分析錯誤類型並找出改進方向。針對 Multi-turn Agent，講者建議不要只看最終答案，而要針對單一步驟（如 Plan 或 apply_patch 呼叫）分別評估。"},
-    {"heading": "Step 3：Dataset & Experiment", "body": "第三步從每日工作的 Tracing 紀錄中挖出「考古題」建立 Dataset（真實輸入、過去模型輸出、Judge 分數），再用 Experiment 機制在同一份考古題上更換模型版本、工具或 Instruction 重新測試，依任務類型分類評估重點（例如 Plan 看 Context Precision、Coding 看 Answer Correctness），最終依情境挑選最適合的模型與工具組合，做品質與成本的平衡。"},
-    {"heading": "Step 0：先釐清需求，再談 Decision System", "body": "講者強調最容易被忽略的其實是最前面的步驟——先把需求定義清楚。許多團隊在還沒釐清需求、對 LLM 能力認知有落差時就急著討論換不換工具，建議先建立監測機制，讓數據去校準團隊認知，並確保開發團隊與利害關係人在正確率、Error Rate、Latency、Cost 等指標上取得共識，而非誤以為「有 AI 就能十倍產出」。"}
+    {
+      "heading": "缺乏數據化決策的痛點",
+      "body": "講者指出技術負責人常被問到是否要換用 Spec-kit、rtk、新模型或新供應商，但市面上新工具冒出速度已超過團隊研究速度。常見的回應方式（自己試用、看網路文章、聽供應商推薦）都不夠系統化，真正缺乏的是能量化評估 LLM 解決方案的機制，讓團隊在面對變動時能維持信任並驗證影響。"
+    },
+    {
+      "heading": "Step 1：建立 Baseline 與第一次優化",
+      "body": "建立 Observability Stack 後，團隊能看到 Token Usage、Latency、Error Rate 等量化數據，並依此做 Cost Chargeback 與預算控管。第一步優化聚焦在理解不同 CLI（VSCode Copilot、Codex、OpenCode）的行為差異、停用用不到的 Tools、透過 AI Gateway 與調整 System Instruction，實務上可將 Token Overhead 從 20000 多降到 1000 多、成本降到原本的 5% 左右，同時降低觸發 Long Context 高價門檻的機率。"
+    },
+    {
+      "heading": "Step 2：LLM as a Judge",
+      "body": "在成本優化之後，第二步改用 LLM-as-a-Judge 依 Tracing 的 Input/Output 評估「品質」，以單一 Observation（API Call）為評估單位，用小範圍量化反映局部表現，藉此分析錯誤類型並找出改進方向。針對 Multi-turn Agent，講者建議不要只看最終答案，而要針對單一步驟（如 Plan 或 apply_patch 呼叫）分別評估。"
+    },
+    {
+      "heading": "Step 3：Dataset & Experiment",
+      "body": "第三步從每日工作的 Tracing 紀錄中挖出「考古題」建立 Dataset（真實輸入、過去模型輸出、Judge 分數），再用 Experiment 機制在同一份考古題上更換模型版本、工具或 Instruction 重新測試，依任務類型分類評估重點（例如 Plan 看 Context Precision、Coding 看 Answer Correctness），最終依情境挑選最適合的模型與工具組合，做品質與成本的平衡。"
+    },
+    {
+      "heading": "Step 0：先釐清需求，再談 Decision System",
+      "body": "講者強調最容易被忽略的其實是最前面的步驟——先把需求定義清楚。許多團隊在還沒釐清需求、對 LLM 能力認知有落差時就急著討論換不換工具，建議先建立監測機制，讓數據去校準團隊認知，並確保開發團隊與利害關係人在正確率、Error Rate、Latency、Cost 等指標上取得共識，而非誤以為「有 AI 就能十倍產出」。"
+    }
   ],
   "key_images": []
 }

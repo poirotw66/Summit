@@ -4,8 +4,14 @@
   "speaker": "lastingyeh (Chris)",
   "speaker_title": "",
   "summit": "cloud-edge",
-  "tags": ["Google ADK", "多模態串流", "WebSocket", "GCP DevOps", "AI Agent 安全"],
-  "summary": "這是一份 90 分鐘 Workshop 的技術架構實戰手冊，以「保險推薦 Agent」為範例，帶領學員從地端環境啟動、核心 WebSocket 多模態串流實作，到安全性與隱私保護、品質保證、營運觀測，最終走到雲端 Dev 沙盒與 Staging/Production 的 CI/CD 部署。內容涵蓋 Next.js 前端、FastAPI 搭配 Google ADK 的後端、PostgreSQL 與 pgvector 向量檢索，以及以 Terraform 與 Workload Identity Federation 打造的多環境雲原生部署流程。",
+  "tags": [
+    "Google ADK",
+    "多模態串流",
+    "WebSocket",
+    "GCP DevOps",
+    "AI Agent 安全"
+  ],
+  "summary": "本 Workshop 是一份針對即時語音與多模態串流應用的 GCP 與 DevOps 整合實戰指南。以「保險推薦 Agent」為開發範例，講者 Chris (lastingyeh) 帶領學員實作具備生產級強健性的三支柱架構：基於 Next.js 15 的低延遲多模態前端、由 FastAPI 與 Google ADK 驅動並採 asyncio 非同步併行設計的 WebSocket 雙向串流後端，以及結合 PostgreSQL（含 pgvector）與 MCP Toolset 的企業級向量檢索資料庫。安全層面實作了 JWT 驗證、PII 敏感資料（如台灣身分證字號）去識別化與防竄改的雜湊鏈審計日誌。品質與運作觀測則結合了 Locust 壓測、Google ADK Eval-Fix 評估框架（LLM-as-a-Judge）與 OpenTelemetry 分散式追蹤。最終透過 Terraform、GitOps、Workload Identity Federation 與 Cloud Build，部署於 GCP 隔離的 Dev、Staging 與 Production 環境，呈現了完整的雲原生 AI 開發生命週期。",
   "highlights": [
     "系統採三支柱架構：Next.js 15 前端、FastAPI + Google ADK 後端、PostgreSQL + MCP Toolset 企業基礎設施",
     "核心技術主軸為 WebSocket 多模態 Gemini Live 雙向串流生命週期，透過 asyncio 併行處理上游媒體輸入與下游模型回應",
@@ -36,9 +42,21 @@
     }
   ],
   "key_images": [
-    {"file": "assets/images/cloud-edge-04-Lab-Google-ADK-即時語音串流實現-GCP-平台與-DevOps-的整合應用/p2.jpg", "caption": "課前準備的硬體裝置需求對照表，列出 macOS/Linux 與 Windows 環境下所需的記憶體、硬碟空間與開發工具"},
-    {"file": "assets/images/cloud-edge-04-Lab-Google-ADK-即時語音串流實現-GCP-平台與-DevOps-的整合應用/p18.jpg", "caption": "WebSocket 多模態 Gemini Live 雙向串流完整呼叫時序圖，展示握手驗證、上下游任務併發處理與斷線後資源回收流程"},
-    {"file": "assets/images/cloud-edge-04-Lab-Google-ADK-即時語音串流實現-GCP-平台與-DevOps-的整合應用/p28.jpg", "caption": "GenAI Telemetry 雙軌日誌架構圖，說明 Cloud Logging 元資料與 GCS JSONL Payload 如何透過 BigQuery 外部表格即時 Join 分析"},
-    {"file": "assets/images/cloud-edge-04-Lab-Google-ADK-即時語音串流實現-GCP-平台與-DevOps-的整合應用/p32.jpg", "caption": "端到端 CI/CD 部署流程時序圖，涵蓋 Day 0 Bootstrap、PR 檢查、Staging 部署與 Production 發布四個階段"}
+    {
+      "file": "assets/images/cloud-edge-04-Lab-Google-ADK-即時語音串流實現-GCP-平台與-DevOps-的整合應用/p2.jpg",
+      "caption": "課前準備的硬體裝置需求對照表，列出 macOS/Linux 與 Windows 環境下所需的記憶體、硬碟空間與開發工具"
+    },
+    {
+      "file": "assets/images/cloud-edge-04-Lab-Google-ADK-即時語音串流實現-GCP-平台與-DevOps-的整合應用/p18.jpg",
+      "caption": "WebSocket 多模態 Gemini Live 雙向串流完整呼叫時序圖，展示握手驗證、上下游任務併發處理與斷線後資源回收流程"
+    },
+    {
+      "file": "assets/images/cloud-edge-04-Lab-Google-ADK-即時語音串流實現-GCP-平台與-DevOps-的整合應用/p28.jpg",
+      "caption": "GenAI Telemetry 雙軌日誌架構圖，說明 Cloud Logging 元資料與 GCS JSONL Payload 如何透過 BigQuery 外部表格即時 Join 分析"
+    },
+    {
+      "file": "assets/images/cloud-edge-04-Lab-Google-ADK-即時語音串流實現-GCP-平台與-DevOps-的整合應用/p32.jpg",
+      "caption": "端到端 CI/CD 部署流程時序圖，涵蓋 Day 0 Bootstrap、PR 檢查、Staging 部署與 Production 發布四個階段"
+    }
   ]
 }

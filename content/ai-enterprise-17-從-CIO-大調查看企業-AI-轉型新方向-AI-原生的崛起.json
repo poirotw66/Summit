@@ -4,8 +4,14 @@
   "speaker": "王宏仁",
   "speaker_title": "iThome副總編輯",
   "summit": "ai-enterprise",
-  "tags": ["CIO大調查", "企業AI轉型", "AI原生", "代理式AI", "IT預算"],
-  "summary": "本場分享基於 iThome 2026 CIO & CISO 大調查（396份有效問卷）的第一手數據，剖析臺灣大型企業在資安、生成式AI與IT維運等年度目標上的排序變化，以及AI預算成長、生成式AI導入成熟度與新興技術採用趨勢。講者進一步指出企業IT架構正從「雲原生」轉向「AI原生」，代理式AI（AI Agent）與MCP協定成為2026年採用率成長最快的技術，說明企業競爭力已從IT基礎建設厚度轉移至AI與軟體開發的投資深度。",
+  "tags": [
+    "CIO大調查",
+    "企業AI轉型",
+    "AI原生",
+    "代理式AI",
+    "IT預算"
+  ],
+  "summary": "本講題基於 iThome 2026 年第 19 屆 CIO & CISO 大調查（396 份大型企業有效問卷）的第一手數據，剖析臺灣企業在 AI 轉型上的關鍵動向。調查指出，資安管理（82%）與生成式 AI 創新（58%）蟬聯年度目標前兩名，且整體 AI 預算年成長率達 65%（金融與政府業更突破 100%）。技術架構上，企業正經歷從「雲原生」向「AI 原生」的典範轉移：領先企業（佔 23%）對容器與微服務的單純擴展速度放緩，轉而大力投資代理式 AI（AI Agent，採用率 22%）與 MCP 協定（採用率達 27%）。實務上的關鍵啟示為：企業的核心競爭力已從傳統 IT 基礎建設的物理厚度，轉化為 AI 與軟體工程的投資深度，IT 部門也將轉型為數位勞動力與流程合規的管理者。",
   "highlights": [
     "396份有效問卷中，資安管理(82%)與GenAI創新(58%)蟬聯2026年CIO年度目標前兩名",
     "整體企業AI(含GAI)預算年成長率達65%，金融業與政府學校的AI預算成長更超過100%",
@@ -36,9 +42,21 @@
     }
   ],
   "key_images": [
-    {"file": "assets/images/ai-enterprise-17-從-CIO-大調查看企業-AI-轉型新方向-AI-原生的崛起/p2.jpg", "caption": "iThome歷年CIO/CISO大調查參與企業家數與累計參與人次成長趨勢（2007～2026）"},
-    {"file": "assets/images/ai-enterprise-17-從-CIO-大調查看企業-AI-轉型新方向-AI-原生的崛起/p24.jpg", "caption": "整體企業四大類技術採用動向雷達圖，代理式AI與情境工程呈現爆紅態勢"},
-    {"file": "assets/images/ai-enterprise-17-從-CIO-大調查看企業-AI-轉型新方向-AI-原生的崛起/p25.jpg", "caption": "百億營收企業四大類技術採用動向雷達圖，零信任網路安全與AI增強軟體工程採用積極"},
-    {"file": "assets/images/ai-enterprise-17-從-CIO-大調查看企業-AI-轉型新方向-AI-原生的崛起/p26.jpg", "caption": "高科技製造業四大類技術採用動向雷達圖，代理式AI與傳統分析式AI雙雙爆紅"}
+    {
+      "file": "assets/images/ai-enterprise-17-從-CIO-大調查看企業-AI-轉型新方向-AI-原生的崛起/p2.jpg",
+      "caption": "iThome歷年CIO/CISO大調查參與企業家數與累計參與人次成長趨勢（2007～2026）"
+    },
+    {
+      "file": "assets/images/ai-enterprise-17-從-CIO-大調查看企業-AI-轉型新方向-AI-原生的崛起/p24.jpg",
+      "caption": "整體企業四大類技術採用動向雷達圖，代理式AI與情境工程呈現爆紅態勢"
+    },
+    {
+      "file": "assets/images/ai-enterprise-17-從-CIO-大調查看企業-AI-轉型新方向-AI-原生的崛起/p25.jpg",
+      "caption": "百億營收企業四大類技術採用動向雷達圖，零信任網路安全與AI增強軟體工程採用積極"
+    },
+    {
+      "file": "assets/images/ai-enterprise-17-從-CIO-大調查看企業-AI-轉型新方向-AI-原生的崛起/p26.jpg",
+      "caption": "高科技製造業四大類技術採用動向雷達圖，代理式AI與傳統分析式AI雙雙爆紅"
+    }
   ]
 }

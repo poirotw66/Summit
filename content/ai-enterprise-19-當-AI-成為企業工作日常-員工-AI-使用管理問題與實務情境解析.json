@@ -4,8 +4,14 @@
   "speaker": "Lacey Lin",
   "speaker_title": "Regional GTM Manager @ Master Concept",
   "summit": "ai-enterprise",
-  "tags": ["AI治理", "Shadow AI", "身份與存取管理", "裝置管理", "AI Agent安全"],
-  "summary": "本場分享聚焦企業員工日常使用AI已從「要不要開放」轉變為「怎麼管理」的課題。講者將企業內的AI使用分為Web/SaaS AI、AI App、AI Agent三大類，並分別說明每一類所需的身份存取、裝置合規與授權邊界管理方式，同時提醒即使建立官方AI主路徑，仍會存在Shadow AI、帳號混用等治理缺口。最後提出建立、盤點、分類佈局三步驟，作為企業展開AI管理的起點。",
+  "tags": [
+    "AI治理",
+    "Shadow AI",
+    "身份與存取管理",
+    "裝置管理",
+    "AI Agent安全"
+  ],
+  "summary": "本場演講探討當AI全面進入員工日常工作後，企業面臨缺乏可視性、Shadow AI、帳號混用及資料外洩等治理挑戰。講者將企業AI使用情境細分為Web/SaaS AI、AI App與AI Agent三大類，並提出相應的技術治理架構。針對Web/SaaS AI，建議建立基於Group/Role的存取政策，並整合Microsoft 365與Edge for Business的DLP防護來限制資料複製、貼上與上傳行為；對AI App管理，提倡以Windows Intune或Apple Jamf等端點管理工具（MDM）來驗證App與裝置合規性，限制敏感資料流動；針對AI Agent則強調「Scope（限縮權限）」與「Time（時效性Token）」兩大授權原則。企業應依循「建立官方主路徑、盤點潛在AI使用、分類佈局管理」三步驟，先看見再管理，建立安全可稽核的企業級AI生態系。",
   "highlights": [
     "AI管理的起點是提供官方AI資源，涵蓋資料保護(Data Protection)、可視性(Visibility)、身份與存取(Identity & Access)、法規遵循(Compliance)四大支柱",
     "即使有官方AI路徑，企業仍面臨Shadow AI、Profile與帳號脈絡混用、AI App存取相機麥克風/螢幕錄製、AI Agent代表使用者執行動作等治理缺口",
@@ -36,9 +42,21 @@
     }
   ],
   "key_images": [
-    {"file": "assets/images/ai-enterprise-19-當-AI-成為企業工作日常-員工-AI-使用管理問題與實務情境解析/p6.jpg", "caption": "企業提供官方AI資源示意：企業知識庫、NotebookLM、Deep Research、Agent/Workflow"},
-    {"file": "assets/images/ai-enterprise-19-當-AI-成為企業工作日常-員工-AI-使用管理問題與實務情境解析/p17.jpg", "caption": "AI App管理三大檢查點：App可不可信、裝置可不可信、資料邊界還在不在（以Jamf Self-Service+落地）"},
-    {"file": "assets/images/ai-enterprise-19-當-AI-成為企業工作日常-員工-AI-使用管理問題與實務情境解析/p18.jpg", "caption": "以Jamf Restricted Software限制未知或高風險AI App"},
-    {"file": "assets/images/ai-enterprise-19-當-AI-成為企業工作日常-員工-AI-使用管理問題與實務情境解析/p19.jpg", "caption": "以Jamf裝置盤點、Smart Group與合規狀態掌握裝置可信度"}
+    {
+      "file": "assets/images/ai-enterprise-19-當-AI-成為企業工作日常-員工-AI-使用管理問題與實務情境解析/p6.jpg",
+      "caption": "企業提供官方AI資源示意：企業知識庫、NotebookLM、Deep Research、Agent/Workflow"
+    },
+    {
+      "file": "assets/images/ai-enterprise-19-當-AI-成為企業工作日常-員工-AI-使用管理問題與實務情境解析/p17.jpg",
+      "caption": "AI App管理三大檢查點：App可不可信、裝置可不可信、資料邊界還在不在（以Jamf Self-Service+落地）"
+    },
+    {
+      "file": "assets/images/ai-enterprise-19-當-AI-成為企業工作日常-員工-AI-使用管理問題與實務情境解析/p18.jpg",
+      "caption": "以Jamf Restricted Software限制未知或高風險AI App"
+    },
+    {
+      "file": "assets/images/ai-enterprise-19-當-AI-成為企業工作日常-員工-AI-使用管理問題與實務情境解析/p19.jpg",
+      "caption": "以Jamf裝置盤點、Smart Group與合規狀態掌握裝置可信度"
+    }
   ]
 }

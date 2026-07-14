@@ -28,7 +28,7 @@
 <main class="container detail-main">
   <section class="detail-section summary-box">
     <h2>摘要</h2>
-    <p>這是一場動手實作的工作坊，講者以 Bifrost AI Gateway 與 Langfuse 搭建的 tracing／觀測環境為基礎，帶領學員理解 Coding Agent 的 Token 花費結構，並學習用 LLM-as-a-Judge、Dataset 與 Experiment 把「聽說」轉換成可驗證的數據化決策。內容涵蓋工具與 instructions 精簡、評估新框架是否真的省 Token，以及如何為 multi-turn agent 建立客製化評分機制。</p>
+    <p>本工作坊針對企業導入開發型 Coding Agent 時面臨的「預算花式燃燒」與「Agent 效能調整缺乏數據依據」等痛點，介紹如何以 Bifrost AI Gateway 與 Langfuse 搭建開源可觀測性與決策系統。技術架構上，Bifrost 作為企業 LLM 代理，負責模型路由、預算管理與 OTel 軌跡輸出；Langfuse 則承擔 Tracing 收集、LLM-as-a-Judge 評測與 Dataset 管理。實務上，講者帶領學員透過精簡指令檔案（如 `AGENTS.md`）與關閉非核心工具以減少基礎 Token 開銷；並指導如何設計針對特定工具呼叫（如 `apply_patch`）的客製化 Evaluator。最終，學員學會從日常軌跡萃取資料集，並透過 Experiment 實驗平台，以量化效率公式將「聽說某模型或框架比較省錢」的直覺，轉化為具備數據支撐的理性架構決策。</p>
   </section>
   <section class="detail-section">
     <h2>重點整理</h2>

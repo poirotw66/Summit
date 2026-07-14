@@ -4,8 +4,14 @@
   "speaker": "顏勝豪（Otto）",
   "speaker_title": "國泰金控數數發中心雲端策略發展部協理",
   "summit": "cloud-edge",
-  "tags": ["AI Agent", "企業治理", "雲端轉型", "AgentOps", "平台工程"],
-  "summary": "講者以個人、團隊、企業三個層次的真實經驗，說明 AI Agent 從個人助理演進到企業級平台時所面臨的挑戰，核心論點是「Agent First 不是把 AI 接到企業裡，而是把企業變成 AI Agent 可以安全工作的地方」。講題並以國泰金控過去 Cloud Ready、Cloud Adoption、Cloud First 的上雲歷程為例，說明雲端治理累積的身份、權限、標準化基礎，其實正是企業迎接 Agent First 時代的關鍵地基。",
+  "tags": [
+    "AI Agent",
+    "企業治理",
+    "雲端轉型",
+    "AgentOps",
+    "平台工程"
+  ],
+  "summary": "本場演講深刻剖析企業導入 AI Agent 面臨的真實痛點：阻礙 PoC 落地的瓶頸通常非模型智能，而是數據、權限、API 與安全治理等企業環境成熟度。講者顏勝豪以國泰金控上雲與 AI 實戰經驗出發，提出從 Cloud First（數位基礎建設）演進至 Agent First（數位勞動力）的戰略路徑。技術上倡導建立「企業級 Agent Platform」，涵蓋 Agent Runtime、身份與工具目錄管理、意圖與安全護欄（Guardrails）、即時觀測（Telemetry）及生命週期管理，並在團隊層面推動 6+1 人的 AI Scrum 協作模式（如 Slack 上的 Claude Tag）。核心啟示在於：大型企業應借鏡 CloudOps 與 MLOps 經驗推動 AgentOps，透過前期建置的 Landing Zone、IAM 與 API 標準化，為 AI Agent 的安全接入打下決定性地基。",
   "highlights": [
     "個人 Agent 經驗（40+ 天使用 OpenClaw/Toto）顯示 Agent 已能持續執行任務、沉澱為可重複 Skill，但也已碰到權限、金流等企業級邊界問題",
     "團隊 Agent 以「AI Scrum Team 的 6+1 模式」為例，說明 Claude Tag 讓 AI 成為存在於 Slack 頻道、共享上下文、可追蹤進度的「第七位成員」",
@@ -36,9 +42,21 @@
     }
   ],
   "key_images": [
-    {"file": "assets/images/cloud-edge-28-從-Cloud-First-到-Agent-First-企業-IT-為何要提前為-AI-Agent-打底/p3.jpg", "caption": "個人、團隊、企業三段放大圖，說明 Agent First 是把企業變成 AI Agent 可安全工作的地方"},
-    {"file": "assets/images/cloud-edge-28-從-Cloud-First-到-Agent-First-企業-IT-為何要提前為-AI-Agent-打底/p11.jpg", "caption": "第七位成員的工作內容：Sprint Planning、Daily Scrum、Development、Review/Retro 各階段的協作方式"},
-    {"file": "assets/images/cloud-edge-28-從-Cloud-First-到-Agent-First-企業-IT-為何要提前為-AI-Agent-打底/p16.jpg", "caption": "國泰上雲路徑圖：Cloud Ready、Cloud Adoption、Cloud First 三階段與對應成效指標"},
-    {"file": "assets/images/cloud-edge-28-從-Cloud-First-到-Agent-First-企業-IT-為何要提前為-AI-Agent-打底/p17.jpg", "caption": "Cloud First 為 Agent First 打底示意圖，說明雲端、大數據與 AI 之間的技術資源引擎關係"}
+    {
+      "file": "assets/images/cloud-edge-28-從-Cloud-First-到-Agent-First-企業-IT-為何要提前為-AI-Agent-打底/p3.jpg",
+      "caption": "個人、團隊、企業三段放大圖，說明 Agent First 是把企業變成 AI Agent 可安全工作的地方"
+    },
+    {
+      "file": "assets/images/cloud-edge-28-從-Cloud-First-到-Agent-First-企業-IT-為何要提前為-AI-Agent-打底/p11.jpg",
+      "caption": "第七位成員的工作內容：Sprint Planning、Daily Scrum、Development、Review/Retro 各階段的協作方式"
+    },
+    {
+      "file": "assets/images/cloud-edge-28-從-Cloud-First-到-Agent-First-企業-IT-為何要提前為-AI-Agent-打底/p16.jpg",
+      "caption": "國泰上雲路徑圖：Cloud Ready、Cloud Adoption、Cloud First 三階段與對應成效指標"
+    },
+    {
+      "file": "assets/images/cloud-edge-28-從-Cloud-First-到-Agent-First-企業-IT-為何要提前為-AI-Agent-打底/p17.jpg",
+      "caption": "Cloud First 為 Agent First 打底示意圖，說明雲端、大數據與 AI 之間的技術資源引擎關係"
+    }
   ]
 }

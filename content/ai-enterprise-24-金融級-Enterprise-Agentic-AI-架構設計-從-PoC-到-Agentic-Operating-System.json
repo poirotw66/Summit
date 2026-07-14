@@ -4,8 +4,14 @@
   "speaker": "張維峻 Justin",
   "speaker_title": "",
   "summit": "ai-enterprise",
-  "tags": ["Agentic AI架構", "金融業AI治理", "Agentic RAG", "LLM評測", "可觀測性"],
-  "summary": "講者以金融業視角提出Enterprise Agentic AI架構設計，強調金融場景要求AI具備查得到證據、能判斷證據是否足夠、不確定時拒答或追問、高風險任務升級給人、每次回答都留下Trace等硬性條件。演講說明企業AI專案常卡在PoC的三個關鍵斷點，並介紹以Agent Registry、Policy Engine、Tool Registry、Knowledge層與Evaluation/Trace構成的可治理AI Control Plane，最終目標是打造可觀測、可驗證、可稽核的Agentic Operating System。",
+  "tags": [
+    "Agentic AI架構",
+    "金融業AI治理",
+    "Agentic RAG",
+    "LLM評測",
+    "可觀測性"
+  ],
+  "summary": "本演講深入探討金融級 Enterprise Agentic AI 的架構設計，直擊企業 AI 專案從 PoC 邁向生產環境時常遭遇的三大營運斷點：系統孤島、線性 RAG 幻覺與黑盒 AI 無法審計。為滿足金融業對高度信任、可稽核與安全合規的硬性要求，講者張維峻（Justin）提出了平台工程化的「Agentic Operating System」與「AI Control Plane」架構。該架構包含 Agent Registry、Policy Engine、Tool Registry、Knowledge 知識層與 Evaluation/Trace 五大核心模組，並規劃三道推理防線（Evidence 證據邊界、Policy 政策邊界、Human 人類介入邊界）。實務上以 15 個以上職責分組的 Agent 協作，在評測中取得 98% 加權準確率與 0 題不安全回答的亮眼成績。演講指出，金融 AI 的關鍵不在模型大小，而在於建構可觀測、可驗證且具備自我校正能力的 Agentic RAG 工作流。",
   "highlights": [
     "金融場景的AI核心問題不是「能不能回答」，而是「能不能被信任」，需具備查證、評估證據充分性、不確定時拒答、高風險升級、留下Agent Trace五項能力",
     "PoC常卡關的三個突破點：系統孤島改採MCP/Tool Registry、線性RAG改為具自我校正能力的Agentic RAG、黑盒AI改為具備Agent Trace/Policy/Judge的可治理架構",
@@ -36,9 +42,21 @@
     }
   ],
   "key_images": [
-    {"file": "assets/images/ai-enterprise-24-金融級-Enterprise-Agentic-AI-架構設計-從-PoC-到-Agentic-Operating-System/p3.jpg", "caption": "PoC看似解決問題與Production真正問題的對照：系統孤島、線性RAG、黑盒AI三大營運斷點與對應的平台級解法"},
-    {"file": "assets/images/ai-enterprise-24-金融級-Enterprise-Agentic-AI-架構設計-從-PoC-到-Agentic-Operating-System/p4.jpg", "caption": "Enterprise Agentic AI Control Plane核心架構：Agent Registry、Policy Engine、Tools/Tool Registry、Knowledge Layer與Evaluation/Trace"},
-    {"file": "assets/images/ai-enterprise-24-金融級-Enterprise-Agentic-AI-架構設計-從-PoC-到-Agentic-Operating-System/p5.jpg", "caption": "五種可複用的Enterprise Agentic架構模式：內容理解、深度研究、排程情報、工具執行與企業RAG"},
-    {"file": "assets/images/ai-enterprise-24-金融級-Enterprise-Agentic-AI-架構設計-從-PoC-到-Agentic-Operating-System/p13.jpg", "caption": "以IT資訊服務入口作為第一個落地場景，驗證Evidence、Policy、Judge、Trace四項可延伸至金融場景的核心能力"}
+    {
+      "file": "assets/images/ai-enterprise-24-金融級-Enterprise-Agentic-AI-架構設計-從-PoC-到-Agentic-Operating-System/p3.jpg",
+      "caption": "PoC看似解決問題與Production真正問題的對照：系統孤島、線性RAG、黑盒AI三大營運斷點與對應的平台級解法"
+    },
+    {
+      "file": "assets/images/ai-enterprise-24-金融級-Enterprise-Agentic-AI-架構設計-從-PoC-到-Agentic-Operating-System/p4.jpg",
+      "caption": "Enterprise Agentic AI Control Plane核心架構：Agent Registry、Policy Engine、Tools/Tool Registry、Knowledge Layer與Evaluation/Trace"
+    },
+    {
+      "file": "assets/images/ai-enterprise-24-金融級-Enterprise-Agentic-AI-架構設計-從-PoC-到-Agentic-Operating-System/p5.jpg",
+      "caption": "五種可複用的Enterprise Agentic架構模式：內容理解、深度研究、排程情報、工具執行與企業RAG"
+    },
+    {
+      "file": "assets/images/ai-enterprise-24-金融級-Enterprise-Agentic-AI-架構設計-從-PoC-到-Agentic-Operating-System/p13.jpg",
+      "caption": "以IT資訊服務入口作為第一個落地場景，驗證Evidence、Policy、Judge、Trace四項可延伸至金融場景的核心能力"
+    }
   ]
 }

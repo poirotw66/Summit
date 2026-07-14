@@ -4,8 +4,14 @@
   "speaker": "Rich Lee (李琦)",
   "speaker_title": "Architect, Cathay Financial Holding DDT Center",
   "summit": "ai-enterprise",
-  "tags": ["Observability", "Agentic AI", "OpenTelemetry", "OWASP", "評測"],
-  "summary": "講者以國泰金控 DDT Center 架構師身分，說明傳統應用程式與 Agentic AI 系統在可觀測性上的根本差異：Agent 失敗往往是「沉默且機率性」的，難以像傳統服務的 500 錯誤那樣被立即發現。講題進一步介紹以 OpenTelemetry 與 OpenInference 為基礎的 Agent 專屬 Golden Signals、追蹤（Trace）架構，以及涵蓋結果與軌跡（Trajectory）的評測方法，協助企業建立可信賴的 Agentic AI 監控與評估體系。",
+  "tags": [
+    "Observability",
+    "Agentic AI",
+    "OpenTelemetry",
+    "OWASP",
+    "評測"
+  ],
+  "summary": "本講題針對 Agentic AI 系統中「沉默且機率性」的失效痛點（無 500 錯誤代碼卻產生錯誤決策，導致 Token 浪費與合規風險），提出專為代理式系統設計的可觀測性與評測架構。講者分析，隨著安全威脅演進至 OWASP Agentic AI Top 10（如目標劫持與工具濫用），監控指標必須升級。對此，國泰金控提出基於 OpenTelemetry 與 OpenInference 開放標準的觀測方案，核心設計在於將 Span 區分為 LLM、TOOL、AGENT 與 CHAIN，記錄詳細推理與工具軌跡。實務上，企業應採用三層測試框架：Tier 1 本地單元測試、Tier 2 結合 LLM-as-a-Judge 的整合測試，以及 Tier 3 的人機協作（HITL）端對端測試。透過「結果評測」與「軌跡評測」雙重機制，方能全面控管品質、成本與安全性等關鍵服務等級目標（SLO）。",
   "highlights": [
     "Agent 系統失敗是「沉默、機率性、看似正確」，往往在數週後才透過使用者回饋浮現，代價包含 token 成本浪費、信任流失與合規風險",
     "傳統應用是確定性系統，錯誤有明確代碼；Agentic 系統則由 LLM 動態決定下一步，相同輸入不一定產生相同軌跡，品質、成本與安全都必須納入 SLO",
@@ -36,9 +42,21 @@
     }
   ],
   "key_images": [
-    {"file": "assets/images/ai-enterprise-08-Observability-Architecture-for-Enterprise-Agentic-AI-Agents/p2.jpg", "caption": "講者自我介紹投影片，說明李琦（Rich）為國泰金控 DDT Center 架構師，專長涵蓋 Cloud-Native 應用、雲端資安與事件驅動架構。"},
-    {"file": "assets/images/ai-enterprise-08-Observability-Architecture-for-Enterprise-Agentic-AI-Agents/p10.jpg", "caption": "說明 OpenTelemetry 與 OpenInference 標準分工的投影片，OpenInference 建立在 OTel 之上，專為代理式應用提供 AI 語意慣例。"},
-    {"file": "assets/images/ai-enterprise-08-Observability-Architecture-for-Enterprise-Agentic-AI-Agents/p11.jpg", "caption": "OpenInference 參考架構圖，呈現從 AI Agent 應用經 OpenInference 插樁、OpenTelemetry 傳輸，到可觀測平台（如 Arize、Langfuse）的完整資料流。"},
-    {"file": "assets/images/ai-enterprise-08-Observability-Architecture-for-Enterprise-Agentic-AI-Agents/p17.jpg", "caption": "Google ADK 與 Arize Phoenix 整合展示畫面，說明如何將 Google Agent Development Kit 的追蹤資料串接進 Arize Phoenix 觀測平台。"}
+    {
+      "file": "assets/images/ai-enterprise-08-Observability-Architecture-for-Enterprise-Agentic-AI-Agents/p2.jpg",
+      "caption": "講者自我介紹投影片，說明李琦（Rich）為國泰金控 DDT Center 架構師，專長涵蓋 Cloud-Native 應用、雲端資安與事件驅動架構。"
+    },
+    {
+      "file": "assets/images/ai-enterprise-08-Observability-Architecture-for-Enterprise-Agentic-AI-Agents/p10.jpg",
+      "caption": "說明 OpenTelemetry 與 OpenInference 標準分工的投影片，OpenInference 建立在 OTel 之上，專為代理式應用提供 AI 語意慣例。"
+    },
+    {
+      "file": "assets/images/ai-enterprise-08-Observability-Architecture-for-Enterprise-Agentic-AI-Agents/p11.jpg",
+      "caption": "OpenInference 參考架構圖，呈現從 AI Agent 應用經 OpenInference 插樁、OpenTelemetry 傳輸，到可觀測平台（如 Arize、Langfuse）的完整資料流。"
+    },
+    {
+      "file": "assets/images/ai-enterprise-08-Observability-Architecture-for-Enterprise-Agentic-AI-Agents/p17.jpg",
+      "caption": "Google ADK 與 Arize Phoenix 整合展示畫面，說明如何將 Google Agent Development Kit 的追蹤資料串接進 Arize Phoenix 觀測平台。"
+    }
   ]
 }

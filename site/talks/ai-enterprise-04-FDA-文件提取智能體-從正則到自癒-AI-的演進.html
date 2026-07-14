@@ -28,7 +28,7 @@
 <main class="container detail-main">
   <section class="detail-section summary-box">
     <h2>摘要</h2>
-    <p>講者分享世博科技顧問處理 17 萬份 FDA 510(k) 醫材許可文件的資料工程實戰經驗，說明如何從傳統 Regex 與幾何座標定位，演進到以 LangGraph 打造「自癒 Agent」，讓 AI 自動產生、執行並驗證 PDF 資料提取程式碼，取代人工窮舉規則的作法，藉此因應 PDF 格式多變導致提取程式失效的問題。</p>
+    <p>本講題針對處理 17 萬份 FDA 510(k) 醫材許可 PDF 文件時，因格式微調（如多一個空格）導致傳統正則與幾何定位程式失效、維運成本劇增的痛點，提出以 LangGraph 打造「自癒 Agent」的資料提取架構。該架構包含 Coder、Executor 與 Critic 三節點迴圈，透過 State 物件共享錯誤軌跡（error_trace）進行迭代修正。技術亮點在於「讓 AI 寫程式，而非直接給答案」，且驗證節點（Critic）刻意採用確定性的代碼規則引擎（非空檢查、格式正則、白名單）作為誠實錨點，以防 AI 誤判成功。實務上，此模式已成功結構化提取逾 4 萬份文件，並設有 5 次重試上限與人工審核分流，為企業提供高準確度、可測試且具備容錯自癒能力的次世代文件智能提取方案。</p>
   </section>
   <section class="detail-section">
     <h2>重點整理</h2>

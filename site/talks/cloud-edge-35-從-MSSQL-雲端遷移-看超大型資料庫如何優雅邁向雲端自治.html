@@ -28,7 +28,7 @@
 <main class="container detail-main">
   <section class="detail-section summary-box">
     <h2>摘要</h2>
-    <p>講者以華碩電腦大型基礎架構經驗，說明超大型資料庫（VLDB）從地端邁向雲端自治的架構決策，比較 Rehost、Replatform、Refactor 三種遷移策略，並深入介紹 Distributed AG、Managed Instance Link、Azure DMS 等近乎零停機的遷移方案。演講核心主張效能調校（Tuning）才是雲端資料庫 FinOps 最重要的底層邏輯，唯有先調校降低資源用量，再簽署 Reserved Instance，才能真正避免浪費而非「便宜地浪費」。</p>
+    <p>本演講探討超大型關聯式資料庫（VLDB）在雲端遷移與自治管理上的關鍵架構決策與 FinOps 優化思維。華碩電腦基礎架構主管 Jerry Hsu 分享如何利用 Azure Managed Instance Link（基於底層 Distributed AG 交易記錄同步）實現近乎零停機的 PaaS 遷移，並說明 SQL Server 2022/2025 可支援雙向來回切換驗證。針對資料庫雲端化最常遭遇的資源過度配置（Overprovisioning）痛點，演講提出「Tune-Rightsize-Reserve」（先調校、再評估規格、最後綁約）的黃金減法路徑，實證如何透過讀寫分離與 SARGable 語法優化，將 SQL 資源從 32 vCore 降至 16 vCore，並疊加 3 年期預留容量與 Azure Hybrid Benefit 折扣。最後，剖析了雲端自動調校（如 FORCE_LAST_GOOD_PLAN）的風險與限制，重塑次世代 DBA 效能轉成本的價值核心。</p>
   </section>
   <section class="detail-section">
     <h2>重點整理</h2>
