@@ -141,59 +141,118 @@ CATEGORY_LABEL = {cid: (emoji, label) for cid, emoji, label in CATEGORIES}
 GUIDE_CARDS = {
     "featured-ai-enterprise": {
         "title": "AI Enterprise 精選導讀",
-        "highlights": "主要涵蓋金融級 AI 治理（Agentic OS）、多模型整合（MixRoute 路由）、生產環境可觀測性（OpenTelemetry 監控）、架構演進（Config-Driven 模式）與極致隱私保護（零資料接觸 ZDTA）五大議題。",
-        "summary": "企業在導入 AI 時已不再滿足於簡單的問答，而是朝向「可稽核、低耦合、可控且安全」的自主代理（Agentic）系統演進。"
+        "highlights": [
+            "<strong>金融級代理架構</strong>：第 24 場提出「Agentic OS」完整金融級治理與狀態管理框架。",
+            "<strong>多模型路由戰略</strong>：第 3 場以半導體 CoWoS/Interposer 巧妙比擬多模型路由，實現高性價比與彈性。",
+            "<strong>生產級可觀測性</strong>：第 8 場介紹 OpenTelemetry 與 OpenInference 可觀測性標準在 Agentic 工作流中的實踐。",
+            "<strong>對話式 Retail 分析</strong>：第 14 場探討 Config-Driven 架構讓對話產出配置的設計思路與避坑指南。",
+            "<strong>極致隱私保護</strong>：第 30 場揭秘「Schema-Only」零資料接觸架構，平衡大模型檢索與敏感數據隱私阻絕。"
+        ],
+        "summary": "企業級 AI 應用正在朝向「高安全、低耦合、多模型路由與標準化觀測」的自主代理（Agentic）系統演進，傳統的單體 Prompt chat 已被更複雜的狀態機與流程編排取代。"
     },
     "featured-cloud-edge": {
         "title": "臺灣雲端大會精選導讀",
-        "highlights": "主要涵蓋金融平台工程（MCP 與狀態機實踐）、共智時代的人機協作哲學（李智樺）、漏洞管理移轉（自主發現零日漏洞）、Kubernetes 自主運作（kagent A2A 協議）與國家級智慧城市（高雄主權 AI 案例）。",
-        "summary": "本組精選著重於 AI 如何深入企業底層基礎設施（K8s 與雲端平台）與開發實務，推動系統架構與人機協同的雙重典範轉移。"
+        "highlights": [
+            "<strong>金融平台工程</strong>：第 36 場以 MCP 協議、動態狀態機與 Agent Trace 打造可擴展 AI 中樞，突破效能生死線。",
+            "<strong>人機協同哲學</strong>：第 10 場反思「共智時代」下的理解債，探討 AI 與軟體工程師角色的深刻轉變。",
+            "<strong>自主零日利用</strong>：第 19 場揭露前沿 AI 模型發現並自主利用零日漏洞的威脅實例，點出防禦體系升級的緊迫性。",
+            "<strong>自主 Kubernetes 維運</strong>：第 20 場探討以 kagent 及 A2A 協議在 K8s 運行時的自動偵測與協作防禦。",
+            "<strong>城市主權 AI 案例</strong>：第 27 場展示高雄以視覺語言模型（VLM）與數位孿生技術打造智慧城市防汛與治理平台。"
+        ],
+        "summary": "AI 已正式深入企業作業系統、K8s 底層基礎設施與雲端防禦，推動雲端架構從靜態配置向「自適應、自愈、自主協同防禦」的典範轉移。"
     },
     "agentic-arch": {
-        "title": "Agentic AI 架構專區導讀",
-        "highlights": "精選 12 場議程，涵蓋 IBM Bob、Orleans virtual actors 虛擬角色、kagent 協作、自癒（Self-healing）機制，以及透過 MCP (Model Context Protocol) 進行低摩擦 API 整合等前沿實務。",
-        "summary": "本專區的核心在於「如何建構能獨立思考、自主修正並與外部系統對話的 Agent 網路」，開發焦點正式從 Prompt 轉向狀態機、事件驅動與人機協作協議。"
+        "title": "Agentic AI 架構與導入專區導讀",
+        "highlights": [
+            "<strong>多 Agent 協作協議</strong>：探討 Microsoft Orleans virtual actors 與 A2A 自主協作框架，解決多模代理狀態同步難題。",
+            "<strong>低摩擦 API 整合</strong>：解讀 Model Context Protocol (MCP) 與 OAuth 授權治理在既有 API 與微服務中的實踐。",
+            "<strong>企業 AI 智能工作流</strong>：IBM Bob 的實戰設計，以及 Config-Driven 讓 Agent 用對話動態產出零售分析的配置技術。",
+            "<strong>雲地協同工作流</strong>：Orleans 與微軟 Agent 框架結合，建構高可靠的分散式 AI 運行環境。"
+        ],
+        "summary": "本專區的核心在於「狀態管理與協同協議」，透過 MCP 協議與虛擬 Actor 模型，將多個獨立 Agent 連接成低耦合、高可擴展的網格系統。"
     },
-    "dev-engineering": {
-        "title": "AI 輔助軟體工程導讀",
-        "highlights": "精選 10 場議程，深度拆解 SDD (Spec-Driven Development) 規格導向開發實戰、Vibe Coding 的利弊反思（何時該 Vibe，何時該寫 Spec）、工程師角色從寫代碼轉為設計驗證的改變，以及即時語音串流在 DevOps 中的應用。",
-        "summary": "AI 正在重構軟體交付的生命週期，促使開發團隊從無規格的「盲寫」走向以規格驅動（Spec-Driven）與自動驗收的現代化軟體交付閉環。"
+    "observability-data": {
+        "title": "可觀測性、評測與資料治理專區導讀",
+        "highlights": [
+            "<strong>LLM 生產監控</strong>：結合 OpenTelemetry 與 OpenInference 進行 LLM 決策鏈（Trace）追蹤與異常告警。",
+            "<strong>決策系統評估</strong>：引進 Decision System 工作坊機制，動態評估 Agent 行為與業務產出指標的對齊。",
+            "<strong>非結構化數據提取</strong>：利用 LangGraph 自癒（Self-healing）機制，優化 FDA 大量法規文件的非結構化提取精準度。",
+            "<strong>知識增值工程</strong>：透過會議逐字稿數據化，以 AI 重建培訓驗證模型與企業能力數據庫。"
+        ],
+        "summary": "「無法量測就無法改善」。建立標準化的可觀測性 Trace、自癒式的檢索架構與客觀評測基準，是將 AI 應用推向生產環境、確保可稽核性的前提。"
     },
-    "data-infra": {
-        "title": "現代數據底座與算力導讀",
-        "highlights": "精選 8 場議程，包括金融業 AI 數據底座構建、hicloud AI 算力雲與 GPU 調度、MS SQL 超大型資料庫的雲地自治遷移、以及為 AI 智能體設計的向量檢索（pgvector）與 RAG 檢索增強實務。",
-        "summary": "高階 AI 的表現高度依賴數據品質與算力彈性，本專區展示了如何將傳統數據資產與資料庫升級，為 Agent 打造高效、安全且低延遲的智能數據中樞。"
+    "spec-driven": {
+        "title": "規格驅動開發與 AI 協作專區導讀",
+        "highlights": [
+            "<strong>規格導向開發 (SDD)</strong>：解密 Spec-kit 開發流程，利用 AI 結合定義好的 Specifications 自動生成程式碼與進行單元測試。",
+            "<strong>反思 Vibe Coding</strong>：探討如何利用 Vibe Coding 進行快速 PoC，並在落地生產時迅速轉換為 Spec-driven 工程以控制品質。",
+            "<strong>代碼生成安全與信任</strong>：Black Duck 介紹對 AI 生成程式碼的信任工程與安全分析，防範潛在安全與智財風險。",
+            "<strong>自研 AI 工程師實踐</strong>：電商平台基於 SDD 架構與 AI 自動化軟體交付、重構經典舊系統的避坑實戰。"
+        ],
+        "summary": "AI 協作軟體開發已從早期的「盲寫 (Vibe Coding)」走向「規格驅動 (Spec-Driven)」。將規格書視為人機協同的單一真理源，是發揮 AI 極致吞吐量與高可靠性的黃金法則。"
     },
-    "sec-compliance": {
-        "title": "資安、合規與 AI 治理導讀",
-        "highlights": "精選 17 場議程，全面探討 AI 安全防禦，包括 Web/MDM 三層治理框架、Black Duck 生成代碼信任工程（5層安全檢驗）、防禦爬蟲 Agent 的 SASE 安全轉型、ISO 42001 與 TIPS 敏感資料治理、以及 Fortinet 的 AISOC 威脅防禦。",
-        "summary": "AI 在釋放生產力的同時也擴大了企業攻擊面，本專區為企業提供了從代碼產出、員工日常使用到雲端邊緣安全防禦的全方位合規治理與信任架構藍圖。"
+    "security": {
+        "title": "企業資安與威脅防禦專區導讀",
+        "highlights": [
+            "<strong>授權漏洞與間接注入</strong>：防範 AI 主動呼叫外部 API 時，面臨的影子 IT、惡意輸入污染與權限越軌新型攻擊面。",
+            "<strong>影子 AI 與惡意爬蟲防禦</strong>：Cloudflare 實戰演示如何利用邊緣網路防禦惡意 Agent 爬蟲並進行 SASE 安全轉型。",
+            "<strong>合規治理與機密運算</strong>：結合 ISO 42001 / ISO 27001、TIPS 資料加密治理，以及保護敏感數據的雲端機密運算實踐。",
+            "<strong>Runtime 安全偵測</strong>：利用 AI 增強 Kubernetes 運行時的威脅偵測，超越傳統基於規則的防禦瓶頸。"
+        ],
+        "summary": "AI 既是防禦者的武器，也為攻擊者帶來全新通道。企業必須從代碼生成源頭、員工使用行為、API 調用鏈路及雲端運行時，建立全方位的立體防禦架構。"
+    },
+    "cloud-infra": {
+        "title": "雲端基礎設施與維運專區導讀",
+        "highlights": [
+            "<strong>主權算力雲調度</strong>：hicloud 算力雲基礎設施建置，以及面對大模型推理的混合式與多雲 AI 網路架構。",
+            "<strong>自主自治維運實務</strong>：Foundry Local 驅動 Windows Server 2025 自主維運，以及 AI 作為維運同事（Infra Copilot）的真實痛點與落地實作。",
+            "<strong>資料庫雲端自治</strong>：超大型 MS SQL 資料庫雲端遷移與自治管理，釋放 DBA 繁瑣維運負擔。",
+            "<strong>AI 雲成本治理</strong>：如何結合 FinOps 理念，建立大模型調用與訓練算力的成本可觀測性、預測與成本分攤機制。"
+        ],
+        "summary": "AI 計算的高度波動性使基礎設施面臨巨大挑戰。透過混合雲彈性架構、AI 自主維運與 FinOps 成本治理，是控制算力支出並保持高可用性的關鍵。"
+    },
+    "industry": {
+        "title": "產業應用案例專區導讀",
+        "highlights": [
+            "<strong>智慧醫療</strong>：SMART on FHIR 標準與 LINE Bot 對接，實現去識別化、符合醫療法規的個人 AI 健康助理。",
+            "<strong>綠色金融碳管理</strong>：國泰雲端碳管理平台實戰，展示如何利用碳金融工具賦能供應鏈實現減碳治理。",
+            "<strong>智慧旅宿與房貸顧問</strong>：AI 賦能旅宿客服及自動導覽，以及金融業基於 Agent 構建的智慧房貸顧問實例。",
+            "<strong>營造與建築合規檢索</strong>：自研 On-prem 本地端 AI Agent 搭配企業知識庫，解決營建圖紙複雜規範的精準檢索與審查。"
+        ],
+        "summary": "AI 必須與產業的專業知識 and 法規標準（如醫療 FHIR、金融合規）高度融合。結合本地端資料加值，才能在垂直領域實現具備商業變現價值的應用。"
     },
     "transformation": {
-        "title": "組織轉型與產業應用導讀",
-        "highlights": "精選 21 場議程，包含跨國 IT 大廠轉型組織 POD 藍圖、中小型企業導入 AI 的落地生存指南、安東尼（陳泳睿）的管理者決策現場的智能轉型實戰、Hahow for Business 逐字稿能力數據化，以及旅遊與醫療（SMART on FHIR）的 AI 落地案例。",
-        "summary": "AI 的最終價值在於解決真實商業問題，本專區從組織變革、流程重塑和多個垂直產業實例，指明了從個人工具點狀應用到面狀企業進化的智慧轉型路線。"
+        "title": "企業 AI 轉型策略與領導專區導讀",
+        "highlights": [
+            "<strong>轉型組織 POD 設計</strong>：打造跨國跨部門的 AI 敏捷 POD 原生組織架構，突破傳統 silo 隔閡。",
+            "<strong>中小型企業生存指南</strong>：撕開轉型中華麗的包裝，探討中小型企業在預算有限下從煉獄爬回現實的 AI 落地心法。",
+            "<strong>決策現場的智能轉型</strong>：陳泳睿分享 AI 驅動管理者決策現場的數據分析、動態預測與商業智慧實戰。",
+            "<strong>員工 AI 使用與治理</strong>：防範員工盲目使用 AI 造成的專利及合規漏洞，建立良性引導的 AI 使用規範。"
+        ],
+        "summary": "企業 AI 轉型本質上是「組織變革管理」。除技術導入外，更涉及人機協同文化的建立、權責重塑以及業務流程的端到端重構，需要高層的持續戰略支持。"
     }
 }
-
 
 def render_guide_card(key: str) -> str:
     g = GUIDE_CARDS.get(key)
     if not g:
-        return ""
-    return f"""<div class="section-guide-card">
-  <div class="section-guide-title">📖 {esc(g['title'])}</div>
+        return ''
+    highlights_li = ''.join(f'<li>{h}</li>' for h in g.get('highlights', []))
+    return f'''<div class="section-guide-card">
+  <div class="section-guide-title">📖 {esc(g["title"])}</div>
   <div class="section-guide-content">
     <div class="section-guide-block">
       <h4>🔍 閱讀與觀看重點</h4>
-      <p>{esc(g['highlights'])}</p>
+      <ul class="guide-list">
+        {highlights_li}
+      </ul>
     </div>
     <div class="section-guide-block">
       <h4>💡 專區總結 / Takeaway</h4>
-      <p>{esc(g['summary'])}</p>
+      <p>{esc(g["summary"])}</p>
     </div>
   </div>
-</div>"""
+</div>'''
 
 
 def esc(s: str) -> str:
@@ -241,7 +300,7 @@ def render_head(title: str, depth: int = 0) -> str:
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="{prefix}assets/css/style.css?v=1.0.8">
+<link rel="stylesheet" href="{prefix}assets/css/style.css?v=1.0.9">
 </head>
 """
 
