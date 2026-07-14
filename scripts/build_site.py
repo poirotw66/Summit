@@ -33,9 +33,116 @@ SUMMIT_META = {
     },
 }
 
+# Ordered topic taxonomy used to group talks on the index page.
+CATEGORIES = [
+    ("agentic-arch", "🤖", "Agentic AI 架構與導入"),
+    ("observability-data", "📊", "可觀測性、評測與資料治理"),
+    ("spec-driven", "🛠️", "規格驅動開發與 AI 協作"),
+    ("security", "🛡️", "企業資安與威脅防禦"),
+    ("cloud-infra", "☁️", "雲端基礎設施與維運"),
+    ("industry", "🏭", "產業應用案例"),
+    ("transformation", "🚀", "企業 AI 轉型策略與領導"),
+]
+
+# (summit, order) -> category id. Every talk must appear exactly once.
+ORDER_CATEGORY = {
+    ("ai-enterprise", 1): "spec-driven",
+    ("ai-enterprise", 2): "agentic-arch",
+    ("ai-enterprise", 3): "agentic-arch",
+    ("ai-enterprise", 4): "industry",
+    ("ai-enterprise", 5): "industry",
+    ("ai-enterprise", 6): "agentic-arch",
+    ("ai-enterprise", 7): "observability-data",
+    ("ai-enterprise", 8): "observability-data",
+    ("ai-enterprise", 9): "agentic-arch",
+    ("ai-enterprise", 10): "cloud-infra",
+    ("ai-enterprise", 11): "agentic-arch",
+    ("ai-enterprise", 12): "security",
+    ("ai-enterprise", 13): "agentic-arch",
+    ("ai-enterprise", 14): "agentic-arch",
+    ("ai-enterprise", 15): "spec-driven",
+    ("ai-enterprise", 16): "spec-driven",
+    ("ai-enterprise", 17): "transformation",
+    ("ai-enterprise", 18): "observability-data",
+    ("ai-enterprise", 19): "observability-data",
+    ("ai-enterprise", 20): "spec-driven",
+    ("ai-enterprise", 21): "agentic-arch",
+    ("ai-enterprise", 22): "spec-driven",
+    ("ai-enterprise", 23): "industry",
+    ("ai-enterprise", 24): "agentic-arch",
+    ("ai-enterprise", 25): "observability-data",
+    ("ai-enterprise", 26): "transformation",
+    ("ai-enterprise", 27): "spec-driven",
+    ("ai-enterprise", 28): "industry",
+    ("ai-enterprise", 29): "cloud-infra",
+    ("ai-enterprise", 30): "observability-data",
+    ("ai-enterprise", 31): "industry",
+    ("cloud-edge", 1): "security",
+    ("cloud-edge", 2): "security",
+    ("cloud-edge", 3): "transformation",
+    ("cloud-edge", 4): "agentic-arch",
+    ("cloud-edge", 5): "security",
+    ("cloud-edge", 6): "transformation",
+    ("cloud-edge", 7): "spec-driven",
+    ("cloud-edge", 8): "security",
+    ("cloud-edge", 9): "spec-driven",
+    ("cloud-edge", 10): "transformation",
+    ("cloud-edge", 11): "cloud-infra",
+    ("cloud-edge", 12): "cloud-infra",
+    ("cloud-edge", 13): "spec-driven",
+    ("cloud-edge", 14): "industry",
+    ("cloud-edge", 15): "observability-data",
+    ("cloud-edge", 16): "agentic-arch",
+    ("cloud-edge", 17): "security",
+    ("cloud-edge", 18): "cloud-infra",
+    ("cloud-edge", 19): "security",
+    ("cloud-edge", 20): "agentic-arch",
+    ("cloud-edge", 21): "spec-driven",
+    ("cloud-edge", 22): "security",
+    ("cloud-edge", 23): "cloud-infra",
+    ("cloud-edge", 24): "transformation",
+    ("cloud-edge", 25): "security",
+    ("cloud-edge", 26): "industry",
+    ("cloud-edge", 27): "industry",
+    ("cloud-edge", 28): "agentic-arch",
+    ("cloud-edge", 29): "cloud-infra",
+    ("cloud-edge", 30): "cloud-infra",
+    ("cloud-edge", 31): "industry",
+    ("cloud-edge", 32): "security",
+    ("cloud-edge", 33): "cloud-infra",
+    ("cloud-edge", 34): "industry",
+    ("cloud-edge", 35): "cloud-infra",
+    ("cloud-edge", 36): "agentic-arch",
+    ("cloud-edge", 37): "agentic-arch",
+}
+
+# (summit, order) -> one-sentence "why this is featured" blurb (zh-TW).
+FEATURED = {
+    ("ai-enterprise", 3): "以半導體 CoWoS／Interposer 封裝技術類比企業多模型 AI 整合，視角新穎少見。",
+    ("ai-enterprise", 8): "把 OWASP Top 10 for Agentic AI、OpenTelemetry／OpenInference 系統化整理成企業可落地的可觀測性架構。",
+    ("ai-enterprise", 14): "從『Workflow Agent』的失敗經驗，提煉出『Config-Driven』新架構模式，實戰教訓具體可借鏡。",
+    ("ai-enterprise", 24): "提出『Agentic Operating System』完整治理框架，回應金融級場景對可稽核、可信任 AI 的嚴苛要求。",
+    ("ai-enterprise", 30): "『零資料接觸架構（ZDTA）』以 Schema-Only 查詢代理解決 LLM 資料外洩兩難，設計巧妙。",
+    ("cloud-edge", 10): "跳脫工具面，從『共智』與『理解債』重新定義 AI 時代工程師的角色，觀點少見。",
+    ("cloud-edge", 19): "揭露前沿模型自主發現零日漏洞的實例，點出漏洞管理典範轉移的緊迫性。",
+    ("cloud-edge", 20): "以開源 kagent 與 A2A 協議打造 Kubernetes 自主協作生態系，技術含金量高且可實作。",
+    ("cloud-edge", 27): "高雄以主權 AI VLM 與數位孿生打造國家級智慧城市旗艦案例，規模與縱深少見。",
+    ("cloud-edge", 33): "用『風險指數』公式把 FinOps 從看後照鏡的報表，變成可量化決策的駕駛座視角。",
+}
+
+CATEGORY_LABEL = {cid: (emoji, label) for cid, emoji, label in CATEGORIES}
+
 
 def esc(s: str) -> str:
     return html.escape(s or "", quote=True)
+
+
+def get_category(c: dict) -> str:
+    return ORDER_CATEGORY[(c["summit"], c["order"])]
+
+
+def get_featured_reason(c: dict):
+    return FEATURED.get((c["summit"], c["order"]))
 
 
 def load_content():
@@ -73,7 +180,7 @@ def render_head(title: str, depth: int = 0) -> str:
 """
 
 
-def render_card(c: dict) -> str:
+def render_card(c: dict, featured: bool = False) -> str:
     meta = SUMMIT_META[c["summit"]]
     cover_html = ""
     if c.get("cover"):
@@ -83,12 +190,21 @@ def render_card(c: dict) -> str:
     if c.get("speaker"):
         speaker_title = f'（{esc(c["speaker_title"])}）' if c.get("speaker_title") else ""
         speaker = f'<div class="card-speaker">🎤 {esc(c["speaker"])}{speaker_title}</div>'
-    return f"""<a class="card" href="talks/{esc(c['slug'])}.html" data-summit="{esc(c['summit'])}" data-tags="{esc(' '.join(c.get('tags', [])))}" data-title="{esc(c['title'])}" data-speaker="{esc(c.get('speaker',''))}">
+    featured_html = ""
+    card_class = "card"
+    if featured:
+        card_class += " card-featured"
+        reason = get_featured_reason(c) or ""
+        if reason:
+            featured_html = f'<p class="card-featured-reason">✨ {esc(reason)}</p>'
+    category = get_category(c)
+    return f"""<a class="{card_class}" href="talks/{esc(c['slug'])}.html" data-summit="{esc(c['summit'])}" data-category="{esc(category)}" data-tags="{esc(' '.join(c.get('tags', [])))}" data-title="{esc(c['title'])}" data-speaker="{esc(c.get('speaker',''))}">
   {cover_html}
   <div class="card-body">
     <span class="badge" style="--badge-color:{meta['color']}">{esc(meta['short'])} · #{c['order']:02d}</span>
     <h3>{esc(c['title'])}</h3>
     {speaker}
+    {featured_html}
     <p class="card-summary">{esc(c['summary'])}</p>
     <div class="tags">{tags_html}</div>
   </div>
@@ -96,9 +212,33 @@ def render_card(c: dict) -> str:
 
 
 def render_index(talks: list) -> str:
-    cards = "\n".join(render_card(c) for c in talks)
     n_ai = sum(1 for c in talks if c["summit"] == "ai-enterprise")
     n_ce = sum(1 for c in talks if c["summit"] == "cloud-edge")
+
+    featured_talks = [c for c in talks if get_featured_reason(c)]
+    featured_cards = "\n".join(render_card(c, featured=True) for c in featured_talks)
+
+    by_category = {cid: [] for cid, _, _ in CATEGORIES}
+    for c in talks:
+        by_category[get_category(c)].append(c)
+
+    nav_pills = "\n".join(
+        f'<a class="cat-pill" href="#cat-{cid}">{emoji} {esc(label)}<span class="cat-count">{len(by_category[cid])}</span></a>'
+        for cid, emoji, label in CATEGORIES
+    )
+
+    sections_html = []
+    for cid, emoji, label in CATEGORIES:
+        items = by_category[cid]
+        cards = "\n".join(render_card(c) for c in items)
+        sections_html.append(f"""<section class="category-section" id="cat-{cid}" data-category="{cid}">
+  <h2 class="category-heading">{emoji} {esc(label)} <span class="category-heading-count">{len(items)} 場</span></h2>
+  <div class="grid">
+    {cards}
+  </div>
+</section>""")
+    categories_html = "\n".join(sections_html)
+
     return render_head("Summit 2026 議程摘要總覽") + f"""<body>
 <header class="site-header">
   <div class="container">
@@ -116,9 +256,23 @@ def render_index(talks: list) -> str:
     </div>
   </div>
   <p id="result-count" class="result-count"></p>
-  <div class="grid" id="grid">
-    {cards}
+
+  <section class="featured-section" id="featured-section">
+    <h2 class="featured-heading">✨ 精選議程</h2>
+    <p class="featured-sub">從兩場大會中挑選出視角新穎、架構完整或具代表性的議程</p>
+    <div class="grid featured-grid" id="featured-grid">
+      {featured_cards}
+    </div>
+  </section>
+
+  <nav class="cat-nav">
+    {nav_pills}
+  </nav>
+
+  <div id="categories">
+    {categories_html}
   </div>
+
   <p id="empty-state" class="empty-state" hidden>沒有符合條件的議程。</p>
 </main>
 <footer class="site-footer">
@@ -159,12 +313,15 @@ def render_images(images: list) -> str:
 
 def render_talk(c: dict, prev_c: dict | None, next_c: dict | None) -> str:
     meta = SUMMIT_META[c["summit"]]
+    emoji, label = CATEGORY_LABEL[get_category(c)]
     highlights = "".join(f"<li>{esc(h)}</li>" for h in c.get("highlights", []))
     speaker_block = ""
     if c.get("speaker"):
         speaker_title = f'　·　{esc(c["speaker_title"])}' if c.get("speaker_title") else ""
         speaker_block = f'<p class="detail-speaker">🎤 {esc(c["speaker"])}{speaker_title}</p>'
     tags_html = "".join(f'<span class="tag">{esc(t)}</span>' for t in c.get("tags", []))
+    featured_reason = get_featured_reason(c)
+    featured_block = f'<p class="detail-featured">✨ 精選理由：{esc(featured_reason)}</p>' if featured_reason else ""
 
     nav_links = []
     if prev_c:
@@ -181,8 +338,10 @@ def render_talk(c: dict, prev_c: dict | None, next_c: dict | None) -> str:
   <div class="container">
     <a class="back-link" href="../index.html">← 回議程總覽</a>
     <span class="badge" style="--badge-color:{meta['color']}">{esc(meta['name'])} · #{c['order']:02d}</span>
+    <span class="badge category-badge">{emoji} {esc(label)}</span>
     <h1>{esc(c['title'])}</h1>
     {speaker_block}
+    {featured_block}
     <div class="tags">{tags_html}</div>
   </div>
 </header>
@@ -215,6 +374,10 @@ def render_talk(c: dict, prev_c: dict | None, next_c: dict | None) -> str:
 def main():
     talks = load_content()
     TALKS_OUT.mkdir(parents=True, exist_ok=True)
+
+    missing = [(c["summit"], c["order"], c["slug"]) for c in talks if (c["summit"], c["order"]) not in ORDER_CATEGORY]
+    if missing:
+        raise SystemExit(f"Missing category mapping for: {missing}")
 
     # index
     (SITE_DIR / "index.html").write_text(render_index(talks), encoding="utf-8")

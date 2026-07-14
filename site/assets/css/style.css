@@ -144,6 +144,94 @@ a { color: inherit; text-decoration: none; }
 
 .empty-state { color: var(--text-dim); text-align: center; padding: 60px 0; }
 
+/* Featured section */
+.featured-section { margin-bottom: 8px; }
+.featured-heading {
+  font-size: 1.3rem;
+  margin: 0 0 4px;
+}
+.featured-sub {
+  color: var(--text-dim);
+  font-size: 0.85rem;
+  margin: 0 0 18px;
+}
+.featured-grid { margin-bottom: 8px; }
+.card-featured {
+  border-color: color-mix(in srgb, var(--accent) 50%, var(--border));
+  background: linear-gradient(160deg, var(--card-bg) 60%, color-mix(in srgb, var(--accent) 10%, var(--card-bg)));
+}
+.card-featured-reason {
+  font-size: 0.8rem;
+  color: #c9bdf5;
+  margin: 0;
+  padding: 8px 10px;
+  background: color-mix(in srgb, var(--accent) 16%, transparent);
+  border-radius: 8px;
+  border-left: 3px solid var(--accent);
+}
+
+/* Category navigation pills */
+.cat-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 8px 0 36px;
+  padding: 16px 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.cat-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  padding: 7px 14px;
+  border-radius: 999px;
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  color: var(--text-dim);
+  transition: all 0.15s ease;
+}
+.cat-pill:hover { color: var(--text); border-color: var(--accent-2); }
+.cat-count {
+  font-size: 0.72rem;
+  color: var(--text-dim);
+  background: var(--bg);
+  border-radius: 999px;
+  padding: 1px 7px;
+}
+
+/* Category sections */
+.category-section { margin-bottom: 48px; scroll-margin-top: 20px; }
+.category-heading {
+  font-size: 1.25rem;
+  margin: 0 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+.category-heading-count {
+  font-size: 0.78rem;
+  font-weight: 400;
+  color: var(--text-dim);
+}
+
+.detail-featured {
+  font-size: 0.85rem;
+  color: #c9bdf5;
+  background: color-mix(in srgb, var(--accent) 14%, transparent);
+  border-left: 3px solid var(--accent);
+  padding: 8px 12px;
+  border-radius: 8px;
+  margin: 0 0 12px;
+}
+.category-badge {
+  --badge-color: var(--accent-2);
+  margin-left: 8px;
+}
+
 .site-footer {
   border-top: 1px solid var(--border);
   padding: 24px 0 60px;
