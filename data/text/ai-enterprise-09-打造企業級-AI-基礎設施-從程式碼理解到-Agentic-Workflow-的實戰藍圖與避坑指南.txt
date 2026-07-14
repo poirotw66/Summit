@@ -1,0 +1,483 @@
+
+===== PAGE 1 =====
+1
+TrendAI, 趨勢科技企業事業群
+研發部技術經理 Blacat Wu & Jerry Lee
+E NT ER P R IS E  A I · 實戰藍圖
+打造企業級AI 基礎設施：從程式碼理解到
+Agentic Workflow 的實戰藍圖與避坑指南
+
+===== PAGE 2 =====
+2
+Agenda
+我們面對的問題
+01
+把企業知識餵給 AI 
+02
+邁向 Agentic AI Platform 
+03
+
+===== PAGE 3 =====
+3
+我們面對的問題
+1 · PROBLEM
+
+===== PAGE 4 =====
+4
+橫跨兩個世代的架構
+從成熟產品到上百顆微服務
+Monolith 與 Microservice 架構並存 —— 規模大到沒有任何一個人，掌握得了全貌
+35+ 年
+產品演進 Apex One, 
+Deep Security...
+500+
+Vision One
+Microservice
+2000+
+Repositories
+100+
+整合/ 合作團隊
+
+===== PAGE 5 =====
+5
+對開發者來說
+AI 可以把眼前的任務做得更快
+真正難的問題是跨越團隊邊界
+、服務邊界、Repositories、
+完整端到端的驗證
+
+===== PAGE 6 =====
+6
+AI 落地的瓶頸，
+從來不是工具 ——
+是把企業知識餵給它。
+業界叫它Context Engineering —— 也是我們投入最深的一層
+
+===== PAGE 7 =====
+7
+Genisys 五層架構，從模型到日常入口
+Observability
+RAG Evaluation
+Coverage Report
+Usage Dashboard
+Agent
+AI SDLC
+Orchestrator
+Vulnerability
+Fixing
+Support Case
+Investigation
+Code Reviewer
+Tool
+Claude Code
+Claude Desktop
+MCP Gateway
+Knowledge Base
+Code Search
+Service Map
+Team KB / Skills
+AI Platform
+RDSec AI Gateway
+Cost & Security Control
+Shrimp
+K8S runtime
+Copilot
+Skill Marketplace
+
+===== PAGE 8 =====
+8
+把企業知識餵給 AI
+2 · KNOWLEDGE BASE
+
+===== PAGE 9 =====
+9
+打造地基：現成的解法不合用，那就自己做
+全部丟給 Claude 
+Code?
+要查詢的 repo 數量非常多，在
+地端交給 claude code 並不經濟
+2 天PoC
+1 個月上線
+有 AI 的幫助，很快可以建置出
+原型，並在內部測試迭代
+當時開源專案僅有
+DeepWiki
+我們要處理大型專案，理解跨
+檔案、跨repo 的關聯，並且需
+要做權限控管
+C OD E  S EA RC H
+
+===== PAGE 10 =====
+10
+透過MCP 查詢所有程式碼
+GitHub Repos
+Daily re-index
+Tree sitter (AST)
+→
+OpenSearch
+Embedding search
+Keyword search
+→
+Code Search 
+MCP
+Permission control
+Service relationship
+Abbreviation mapping
+→
+IDE / CLI
+Claude Code
+Claude Desktop
+Other tools…
+C OD E  S EA RC H
+
+===== PAGE 11 =====
+11
+給它關鍵字，它幫你順出整段流程
+C OD E  S EA RC H
+Policy Services
+Microservice
+SWP Backend
+Monolith
+UI
+Agent
+Question: Firewall settings policy 從 backend 到 agent 端的完整 flow 是什麼?
+
+===== PAGE 12 =====
+12
+給它關鍵字，它幫你順出整段流程
+C OD E  S EA RC H
+
+===== PAGE 13 =====
+13
+事後證明，自己打造是經濟實惠的選擇
+250+
+Daily Active User
+有效加速新人學習時間
+事件調查 / 故障排除
+跨服務系統設計
+C OD E  S EA RC H
+Embedding Cost
+索引1,000+ repo 的成本很低
+自架、可持續優化
+不被服務商綁住
+$200 /月
+
+===== PAGE 14 =====
+14
+有了Code Search，接著讓AI 主導整個軟體開發流程
+我們打造一個基於Claude Code Skills 的Orchestrator
+從釐清產品需求、生成設計雛形出發
+A I S DL C
+01
+Requirement
+Everyone aligns on 
+requirements. 
+Orchestrator helps 
+clarify scope against 
+the current 
+codebase.
+02
+Design
+Orchestrator reads 
+current architecture 
+via Code Search MCP 
+and proposes 
+implementation 
+direction
+03
+Implementation
+Code is generated 
+against the real 
+codebase and skills 
+from each service and 
+team
+04
+Validation
+AI-driven E2E and 
+integration testing 
+scaled across more 
+services, with skills 
+codifying test patterns
+05
+Deployment
+AI assists with risk 
+assessment and 
+rollback planning from 
+PR content & test 
+results
+
+===== PAGE 15 =====
+15
+我們踩了坑，幻覺讓大家很有感
+當知識的關聯有斷點，AI 只能用猜的
+A I S DL C
+缺乏設計指引
+AI 容易節外生枝，生成過多額
+外設計，又或者在重要之處忽
+略細節
+名稱對應不全
+內部文件可能會用縮寫或別名，
+有些名稱與 repo 對應出錯，導
+致 AI 一猜就幻覺
+系統關聯複雜
+因為 Context 限制，AI 在處理大
+量資訊的時候，可能漏掉某些重
+要片段
+
+===== PAGE 16 =====
+16
+跨Service 的全貌：從真實流量反推拓樸
+靜態分析與動態分析雙軌並進，打造完整地圖
+S ervi ce Map
+Static Analysis
+gRPC
+Kafka
+Protobuf
+API
+Runtime Log
+Service traffic
+Open Telemetry log
+Agent gateway log
+
+===== PAGE 17 =====
+17
+從任一節點，理解上下游之間的關係
+S ervi ce Map
+真實畫面，服務 / 團隊名稱已代號化
+
+===== PAGE 18 =====
+18
+把人類的知識層，重建成AI看得懂的
+S ervi ce Map
+以前人怎麼導航
+我們重建成
+Repository
+Team/Service Wiki
+Wiki + Meetings  
+Code Search
+Service Map
+Team/Service Skills
+
+===== PAGE 19 =====
+19
+從團隊協作邁向平台
+3 · AGENTIC AI PLATFORM
+
+===== PAGE 20 =====
+20
+Genisys 五層架構，讓AI 從地基走進日常
+Observability
+RAG Evaluation
+Coverage Report
+Usage Dashboard
+Agent
+AI SDLC
+Orchestrator
+Vulnerability
+Fixing
+Support Case
+Investigation
+Code Reviewer
+Tool
+Claude Code
+Claude Desktop
+MCP Gateway
+Knowledge Base
+Code Search
+Service Map
+Team KB / Skills
+AI Platform
+RDSec AI Gateway
+Cost & Security Control
+Shrimp
+K8S runtime
+Copilot
+Skill Marketplace
+
+===== PAGE 21 =====
+21
+從分享 Skill 的平台開始，創造分享互助的環境
+真實畫面，功能 / 團隊名稱已代號化
+Skill Marketplace：一個人打通權限，全公司共享成果
+
+===== PAGE 22 =====
+22
+OpenClaw 很紅，但不夠貼近我們
+我們希望打造一個可擴展、可控、安全、又能貼合內部系統的平台
+Shrimp
+長期記憶
+網頁搜尋
+多人協作
+任務排程
+隔離環境
+Microsoft 365
+GitHub
+Code Search / KB
+Grafana
+Jira / Confluence
+Microsoft Teams
+Connectors
+Features
++
+
+===== PAGE 23 =====
+23
+Teams 上的團隊助理，減輕Scrum master 的負擔
+A gen t
+小蝦走進 Teams：幫你開Sprint、幫你reivew PR
+透過預先設置的規則，提高 PR review 的效率
+
+===== PAGE 24 =====
+24
+從一杯下午茶開始養成習慣
+A gen t
+比功能更重要的，是融入大家的習慣
+
+===== PAGE 25 =====
+25
+Token 不落地、每輪注入資安意識，再交給全公司來找碴
+A gen t
+把 AI 助理推往內部，憑證怎麼守住？
+
+===== PAGE 26 =====
+26
+A gen t
+Workspace，讓人跟 AI 並肩編輯，而不是各改各的
+Wiki 對人好、對 AI 卡卡，我們搭了一層像 IDE 的共編空間
+
+===== PAGE 27 =====
+27
+選模型、調 thinking effort、掛哪些 skill，都有管理介面
+詳細的客製化設定，滿足進階使用者的需求
+A gen t
+
+===== PAGE 28 =====
+28
+Genisys 五層架構，讓AI Agent 處理日常任務
+Observability
+RAG Evaluation
+Coverage Report
+Usage Dashboard
+Agent
+AI SDLC
+Orchestrator
+Vulnerability
+Fixing
+Support Case
+Investigation
+Code Reviewer
+Tool
+Claude Code
+Claude Desktop
+MCP Gateway
+Knowledge Base
+Code Search
+Service Map
+Team KB / Skills
+AI Platform
+RDSec AI Gateway
+Cost & Security Control
+Shrimp
+K8S runtime
+Copilot
+Skill Marketplace
+
+===== PAGE 29 =====
+29
+Blackduck / Trivy 掃到漏洞後自動發 PR，開發團隊只需要審查變更
+4,000+
+一個月自動漏洞修補PR
+A gen t
+漏洞修補、第三方套件升級，交給AI 來處理
+
+===== PAGE 30 =====
+30
+A gen t
+Windows 軟體衝突
+和客戶端其他程式打架
+防火牆不通
+客戶網路環境卡住連線
+後台效能問題
+伺服器端反應慢
+Policy 生效慢
+設定完要三十分鐘才套用
+一張 Support Case，常常卡住一位工程師大半天，
+而答案往往鎖在某個資深同事的腦袋裡。
+每個 Case 的狀況都不一樣。
+Support Case，為什麼這麼難自動化?
+每個 Case 的根因都不一樣，沒有標準答案，規則寫不完
+
+===== PAGE 31 =====
+31
+A gen t
+準
+確
+度
+↑
+LAYER 1
+Code + Log
+只能瞎猜一猜就幻覺
+LAYER 2
+＋Team Knowledge
+懂這個產品在做什麼
+開始比較準
+LAYER 3 · 關鍵
+＋歷史Case 症狀+ 根因
+和過去的案子比對：像不像?
+哪裡不一樣?
+從差異往下推理。
+有線索可推理，準很多
+AI 準不準，看你餵它幾層知識
+從只有 log，到懂產品，再到看過歷史案件，一層比一層準
+
+===== PAGE 32 =====
+32
+兩個Agent：一個分類、一個查證
+A gen t
+Analysis flow
+1
+Triage Agent
+分類· 判斷是否有資訊缺漏
+2
+Investigation Agent
+深入分析· 提供建議
+Support case RAG 
+(Knowledge Base)
+Symptoms
+Root cause
+Summary
+Search
+先找相似舊案再驗證，所以它不亂猜
+
+===== PAGE 33 =====
+33
+A gen t
+一個自己寫的 Dashboard，讓AI 跟人一起結案
+AI 建議下一步，人做最後決定
+
+===== PAGE 34 =====
+34
+踩過坑的實戰經驗
+整理知識、打破藩籬
+把企業知識整理好讓AI 檢索
+，並打破團隊藩籬
+連人都access 不到的code
+，更別說讓AI
+直接build
+AI 開發工具成本很低，能
+很快嘗試、做到高度客製化
+從Code Search ，到內部
+專用的AI agent 系統
+找最痛的事下手
+程式碼理解 Code Search
+漏洞修復、客戶支援
+
+===== PAGE 35 =====
+35
+AI 不缺工具，缺的是你的
+企業知識與客製化。
+我們踩過的坑，希望讓你少走一段彎路
+
+===== PAGE 36 =====
+36
+AI Fearlessly

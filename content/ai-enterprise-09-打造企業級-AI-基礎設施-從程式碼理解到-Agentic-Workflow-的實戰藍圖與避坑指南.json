@@ -1,0 +1,29 @@
+{
+  "slug": "ai-enterprise-09-打造企業級-AI-基礎設施-從程式碼理解到-Agentic-Workflow-的實戰藍圖與避坑指南",
+  "title": "打造企業級 AI 基礎設施：從程式碼理解到 Agentic Workflow 的實戰藍圖與避坑指南",
+  "speaker": "Blacat Wu & Jerry Lee",
+  "speaker_title": "研發部技術經理, TrendAI 趨勢科技企業事業群",
+  "summit": "ai-enterprise",
+  "tags": ["Agentic AI", "Code Search", "企業知識庫", "Context Engineering", "AI SDLC"],
+  "summary": "趨勢科技分享其內部AI平台 Genisys 的建置歷程，說明在橫跨 Monolith 與微服務、規模龐大到沒有人能掌握全貌的架構下，AI落地的最大瓶頸不是工具，而是如何把企業知識餵給AI（Context Engineering）。講者說明如何自建 Code Search、AI SDLC Orchestrator 與 Service Map，並分享從知識庫走向 Agentic AI Platform 過程中踩過的坑與實戰案例。",
+  "highlights": [
+    "公司擁有35年以上產品演進、500+微服務、2000+ repositories、100+整合合作團隊，規模龐大導致AI落地最大瓶頸在於「餵知識」而非工具本身（Context Engineering）。",
+    "自建 Code Search MCP：以 Tree-sitter AST 解析程式碼、寫入 OpenSearch，結合 embedding 與 keyword 搜尋並加上權限控管，供 IDE、Claude Code、Claude Desktop 等工具查詢，日活躍使用者250+，每月索引成本僅約200美元。",
+    "打造基於 Claude Code Skills 的 AI SDLC Orchestrator，涵蓋需求釐清、設計、實作、驗證、部署五階段；但曾因名稱對應不全、缺乏設計指引、系統關聯複雜而讓AI產生幻覺。",
+    "建立 Service Map，結合靜態分析（gRPC、Kafka、Protobuf、API）與動態分析（Runtime Log、OpenTelemetry、Agent Gateway Log）雙軌並進，還原跨服務的真實拓樸全貌。",
+    "推出企業版助理「Shrimp」進駐 Teams，協助開 Sprint、Review PR；漏洞修補交給AI後每月產生4,000+件自動漏洞修補PR；並以 Triage/Investigation 雙 Agent 處理 Support Case，準確度隨知識層數（Log→Team Knowledge→歷史Case比對）逐層提升。"
+  ],
+  "sections": [
+    {"heading": "我們面對的問題：橫跨兩世代的架構", "body": "趨勢科技的產品線歷經35年以上演進，從 Apex One、Deep Security 等成熟產品到 Vision One 的500+微服務，Monolith 與 Microservice 架構並存，目前擁有超過2000個 repositories 與100+整合合作團隊，規模大到沒有任何一個人能掌握全貌。對開發者而言，AI 雖然能把眼前任務做得更快，但真正困難的問題是跨越團隊邊界、服務邊界、repository 邊界，進行完整端到端的驗證。講者指出，AI 落地的瓶頸從來不是工具本身，而是如何把企業知識餵給它，也就是業界所稱的 Context Engineering，這也是團隊投入最深的一層，並以此發展出 Genisys 五層架構（Tool、Knowledge Base、AI Platform、AI SDLC、Agent）。"},
+    {"heading": "打造程式碼理解地基：自建 Code Search", "body": "團隊評估後認為，把所有查詢都丟給 Claude Code 在地端執行並不經濟，而當時開源專案僅有 DeepWiki，難以處理大型專案跨檔案、跨 repo 的關聯，也無法做到權限控管，因此決定自行打造 Code Search，兩天內完成 PoC、一個月內上線。技術上以 Tree-sitter 做 AST 解析、每日對 GitHub Repos 重新索引寫入 OpenSearch，結合 embedding search 與 keyword search，並加上權限控管、服務關聯與縮寫對應，透過 MCP 提供 IDE、Claude Code、Claude Desktop 等工具查詢。上線後日活躍使用者達250+，有效加速新人學習、事件調查與跨服務系統設計，且索引1,000+ repo 的 embedding 成本每月僅約200美元，證明自建是經濟實惠的選擇，也不受服務商綁定。"},
+    {"heading": "AI SDLC Orchestrator 與踩過的坑", "body": "有了 Code Search 之後，團隊打造一個基於 Claude Code Skills 的 Orchestrator，主導從釐清需求、生成設計雛形、產出程式碼、進行 AI 驅動的端對端驗證，到協助風險評估與回滾規劃的完整流程，分為需求、設計、實作、驗證、部署五個階段。然而團隊也踩到不少坑：當知識關聯出現斷點，AI只能用猜的，導致幻覺明顯——包括缺乏設計指引使AI節外生枝或忽略重要細節、內部文件的縮寫或別名與repo對應不全造成幻覺、以及Context限制下處理大量系統關聯資訊時可能遺漏重要片段。"},
+    {"heading": "Service Map：重建跨服務的知識全貌", "body": "為了解決系統關聯複雜的問題，團隊打造 Service Map，透過靜態分析（gRPC、Kafka、Protobuf、API）與動態分析（Runtime Log、Service traffic、OpenTelemetry log、Agent gateway log）雙軌並進，反推出真實流量下的完整拓樸，讓AI可以從任一節點理解上下游關係。團隊也將過去人類仰賴 Wiki、會議傳承的知識，重建成AI看得懂的形式，把導航方式從「Wiki + Meetings」轉換為「Code Search + Service Map + Team/Service Skills」。"},
+    {"heading": "從團隊協作邁向 Agentic AI Platform", "body": "團隊進一步打造可擴展、可控、安全並貼合內部系統的 Agent 平台「Shrimp」，具備長期記憶、網頁搜尋、多人協作、任務排程與隔離環境等功能，並串接 Microsoft 365、GitHub、Code Search/KB、Grafana、Jira/Confluence、Microsoft Teams 等既有系統。Shrimp 進駐 Teams 成為團隊助理，協助開 Sprint、Review PR，並強調 Token 不落地、每輪注入資安意識的憑證治理原則。實戰案例包括 Blackduck/Trivy 掃到漏洞後自動發 PR，每月產生4,000+件自動漏洞修補PR，開發團隊只需審查變更；以及以 Triage Agent 與 Investigation Agent 兩個 Agent 處理難以自動化的 Support Case，透過比對歷史案件的症狀與根因，讓AI從「只有log只能瞎猜」逐步進化到「懂產品」再到「能與歷史案件比對推理」，準確度隨知識層數提升。"}
+  ],
+  "key_images": [
+    {"file": "assets/images/ai-enterprise-09-打造企業級-AI-基礎設施-從程式碼理解到-Agentic-Workflow-的實戰藍圖與避坑指南/p4.jpg", "caption": "趨勢科技橫跨兩世代的架構：35年以上產品演進、500+微服務、2000+ repositories 與100+整合合作團隊，顯示規模之大已無人能掌握全貌。"},
+    {"file": "assets/images/ai-enterprise-09-打造企業級-AI-基礎設施-從程式碼理解到-Agentic-Workflow-的實戰藍圖與避坑指南/p10.jpg", "caption": "Code Search 架構圖：以 Tree-sitter AST 解析程式碼、寫入 OpenSearch，結合 embedding/keyword 搜尋與權限控管，透過 MCP 供各種 IDE/CLI 工具查詢。"},
+    {"file": "assets/images/ai-enterprise-09-打造企業級-AI-基礎設施-從程式碼理解到-Agentic-Workflow-的實戰藍圖與避坑指南/p12.jpg", "caption": "Code Search 實際查詢畫面：輸入關鍵字即可自動整理出跨微服務與 Monolith 的完整流程。"},
+    {"file": "assets/images/ai-enterprise-09-打造企業級-AI-基礎設施-從程式碼理解到-Agentic-Workflow-的實戰藍圖與避坑指南/p23.jpg", "caption": "Agent「Shrimp」進駐 Microsoft Teams，協助開 Sprint、Review PR，減輕 Scrum Master 的負擔。"}
+  ]
+}

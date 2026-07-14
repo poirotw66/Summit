@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>從零開始 Spec-kit 規格導向 (Workshop) - Summit 2026 議程摘要</title>
+<meta name="description" content="AI Enterprise Summit 2026 與 Cloud &amp; Edge Summit 2026 議程摘要與詳細內容整理">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<header class="site-header detail-header">
+  <div class="container">
+    <a class="back-link" href="../index.html">← 回議程總覽</a>
+    <span class="badge" style="--badge-color:#6d5bd0">AI Enterprise Summit 2026 · #01</span>
+    <h1>從零開始 Spec-kit 規格導向 (Workshop)</h1>
+    <p class="detail-speaker">🎤 Che-Chia Chang　·　SRE @ Maicoin / Microsoft MVP</p>
+    <div class="tags"><span class="tag">Spec-driven Development</span><span class="tag">Spec-kit</span><span class="tag">AI Agent</span><span class="tag">開發流程</span><span class="tag">Workshop</span></div>
+  </div>
+</header>
+<main class="container detail-main">
+  <section class="detail-section summary-box">
+    <h2>摘要</h2>
+    <p>本工作坊介紹如何使用 Spec-kit 實踐 Spec-driven Development（SDD），透過撰寫可執行規格、範本與自動化腳本，解決團隊導入 AI 寫程式後常見的「Spec drift」問題。講者以 YouBike 即時站點查詢器為範例，帶領學員走過 specify → plan → tasks → implement 的完整流程，並分享何時 SDD 優於 Vibe Coding、如何選擇模型與避免常見失敗模式。</p>
+  </section>
+  <section class="detail-section">
+    <h2>重點整理</h2>
+    <ul class="highlights"><li>Spec drift 是多數團隊導入 AI 開發後常見痛點：需求、規格、實作與測試不同步</li><li>核心流程為 /specify → /plan → /tasks → /implement，並以 Constitution 定義 agent 行為準則</li><li>Spec-kit 對模型能力要求不高，用 mini/nano 模型常可達約 90% 效果且成本僅 10–20%</li><li>常見失敗模式包括：未寫 Spec 就實作、規格改了但 tasks 未同步更新、規格太模糊</li><li>建議把測試覆蓋率、lint、style 等驗收標準直接寫入 Spec，讓 agent 自動驗收</li></ul>
+  </section>
+  
+  <section class="detail-section"><h2>背景與挑戰</h2><p>多數團隊在導入 AI 協助寫程式後，容易發生需求、規格、實作與測試互相不同步的「Spec drift」現象，導致返工與品質不穩定。本工作坊聚焦如何用 Spec-kit 與 Spec-driven Development（SDD）建立「規格先行、可執行驗證、持續對齊」的開發流程，讓 AI 與工程團隊使用同一份契約協作。</p></section>
+<section class="detail-section"><h2>實作演練</h2><p>講者以 YouBike 2.0 即時站點查詢器為 LAB 範例，示範透過 specify init 初始化專案、撰寫 Constitution 定義 agent 行為準則，再依序執行 /speckit.specify、/speckit.clarify、/speckit.plan、/speckit.tasks、/speckit.analyze 與 /speckit.implement，完整走過從規格到程式碼的流程。</p></section>
+<section class="detail-section"><h2>技術重點</h2><p>Spec-kit 是把 Spec-driven Development 落地成可重複 workflow 的工具，透過 script、template、checklist 讓 agent 可預測地產生規格，並在每一步設置 checkpoint 才能進入下一步。相較於 Vibe Coding，Spec 作為中間產物可作為 source of truth，有利於 review、拆分任務與多人協作。</p></section>
+<section class="detail-section"><h2>案例與心得</h2><p>講者分享 Spec-kit 核心流程對模型能力要求不高，用較便宜的 mini/nano 模型即可達到約九成效果，建議以強模型撰寫 Spec、以 mini 模型執行 implement 來控制成本。同時列舉常見失敗模式，例如尚未寫 Spec 就直接進入實作、規格修改後未同步更新 tasks，以及規格過於模糊導致 agent 自由發揮。</p></section>
+<section class="detail-section"><h2>結論與啟示</h2><p>講者總結三個可帶走的重點：spec → plan → tasks → implement 是可落地的流程；規格優先能降低返工成本；AI agent 要穩定運作，必須搭配 Spec 與驗收標準形成的迴圈。</p></section>
+  <nav class="talk-nav">
+    <span></span>
+    <a class="nav-link nav-next" href="ai-enterprise-02-從導入-AI-到治理-Agent-企業負責任-AI-實務的新課題.html">從導入 AI 到治理 Agent：企業負責任 AI 實務的新課題 →</a>
+  </nav>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <p>本頁內容為 AI 輔助整理之摘要，原始檔案：01-從零開始 Spec-kit 規格導向.md。正確內容請以原始投影片為準。</p>
+  </div>
+</footer>
+</body>
+</html>

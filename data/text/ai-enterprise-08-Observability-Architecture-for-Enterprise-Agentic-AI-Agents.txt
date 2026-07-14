@@ -1,0 +1,251 @@
+
+===== PAGE 1 =====
+Observability Architecture
+for Enterprise
+Agentic AI Agents
+Rich Lee
+S P E A K E R
+
+===== PAGE 2 =====
+李琦Rich
+Architect
+Cathay Financial Holding DDT Center
+•
+Cloud-Native Application
+•
+Cloud Security
+•
+Event-driven Architecture
+
+===== PAGE 3 =====
+Agenda
+The Why
+●
+Silent failures & probabilistic systems
+●
+Application vs Agent observability
+The How
+●
+Three signals & Golden Signals for agents
+●
+Evaluation
+Architecting
+●
+Three signals & Golden Signals for agents
+●
+Evaluation
+
+===== PAGE 4 =====
+Agent systems fail silently
+Web service failure
+500 Internal Server Error 
+Loud, structured, indexable.
+Agent failure
+Silent. Probabilistic. Looks correct. 
+Surfaces in user feedback weeks later.
+Cost of blindness
+$ token spend, eroded trust, 
+compliance exposure, runaway loops.
+loops.
+
+===== PAGE 5 =====
+Traditional Application vs AI Agent
+DETERMINISTIC · Traditional app
+●
+Fixed control flow, known endpoints
+●
+Errors carry explicit codes
+●
+Latency is the main SLO
+●
+Schema-stable inputs & outputs
+PROBABILISTIC · Agentic system
+●
+LLM picks the next step at runtime
+●
+Same input ≠ same trajectory
+●
+Failures are semantic, not status-code
+●
+Quality + cost + safety are all SLOs
+●
+Free-text in, free-text + tool calls out
+Observability for agents must capture reasoning, tool use, retrieval, and intent
+
+===== PAGE 6 =====
+OWASP TOP 10 for Agentic AI 2026
+▸Shift in threat model
+•  From talking AI (chatbots) to acting AI (autonomous agents)
+•  Classic LLM Top 10 → mostly info leakage and direct prompt injection
+•  Agentic Top 10 → planning, tool calls, data access, memory, identity
+▸New top-of-mind risks
+•  ASI01  Goal Hijacking / Indirect Prompt Injection
+•  ASI02  Tool Misuse
+•  ASI03  Privilege Escalation across tools / sub-agents
+•  ASI04  Memory & Context Poisoning
+   •  ASI09  Excessive Agency (no human-in-the-loop where it matters)
+
+===== PAGE 7 =====
+What is Agent Observability?
+Metrics
+•
+cost /session success rate
+•
+P95 latency
+•
+eval scores over time
+Logs
+•
+errors
+•
+guardrail triggers
+Traces & Spans
+The full causal tree of one user 
+turn
+•
+Prompts and Reasoning
+•
+tool calls
+•
+retrieved docs
+•
+sub-agents.
+AI Agent Observability
+For agents, traces are most important, since they reveal reasoning and decision-making.
+
+===== PAGE 8 =====
+The trace is your documentation in AI agents
+In AI agents, the trace is your documentation.
+In traditional software, the code is your 
+documentation.
+
+===== PAGE 9 =====
+The Golden Signals for Agents
+TraditionalSRE has 4 golden signals. Agents need three families
+
+===== PAGE 10 =====
+Standards – OTel and OI (OpenInference)
+OpenTelemetry
+Data Format, Transport Protocol (OTel), Pipeline 
+(Traces, Spans)
+OpenInference
+OpenInference provides the AI semantic conventions. 
+•
+Span Kinds: Classifies operational segments specifically as LLM, 
+TOOL, AGENT, CHAIN.
+•
+Attributes: Standardizes metadata namespaces such as 
+llm.input_messages, llm.output_messages, llm.token_count.prompt
+Core Infrastructure
+OpenInference built on top of OTel and it designed specifically for Agentic applications
+Agentic Applications
+
+===== PAGE 11 =====
+OpenInference Reference Architecture
+AI Application
+(Agents)
+OpenInference
+(Instrumentor)
+OpenTelemetry
+OTLP
+Exporter
+OpenAI
+ADK
+LangChain
+CrewAI
+OpenInference
+Instrumentation
+Framework
+Integration
+(Adapter)
+Semantic
+Conventions
+Telemetry Data
+Collection
+Observability Platforms
+(e.g., Arize, Langfuse)
+Instrumentation
+Data 
+Stream
+OTLP Data
+
+===== PAGE 12 =====
+Why Agent Evaluation Is Different
+Agent evaluation must assess autonomy, reasoning, tool use, and how the agent handles unpredictable situations.
+agent-factory-recap
+
+===== PAGE 13 =====
+What to Evaluate
+User prompt
+Orchestration
+Tools
+LLM
+Agent
+Response
+Trajectory
+Outcome Evaluation
+•
+Scores the final result
+•  Answer, report, code, decision
+•
+Programmatic checks
+•  Regex, JSON schema, exact match
+•
+LLM-as-a-Judge
+•  Fluency, faithfulness, helpfulness
+•
+Rubric-based judging
+•  Structured checklists → explainable scoring
+Trajectory Evaluation
+•
+Scores the path the agent took
+•  Did it pick the right tool?
+•  Did it loop or backtrack?
+•
+Step-level metrics
+•  Tool-selection accuracy
+•  Plan adherence vs golden trace
+•
+Catches silent failures
+•  Right answer via wrong reasoning is still a bug
+
+===== PAGE 14 =====
+3-Tier Testing Framework 
+Tier 1 - Unit Tests
+Framework build-in local eval
+Tier 2 -  Integration Tests
+Evaluator, LLM-as-a-Judge
+Tier 3 -  E2E Tests
+HITL, Annotation
+
+===== PAGE 15 =====
+Observability Architecture for Enterprise Agentic AI
+link
+
+===== PAGE 16 =====
+Agent Observability Platform - Arize Phoenix
+Open-source AI observability + evaluation platform from Arize AI.
+Tracing
+OpenInference-native span 
+viewer.
+Evaluation
+Built-in hallucination, relevance, 
+trajectory evals.
+Prompts
+Version, A/B, replay against 
+past traces.
+Experiments
+Run agent changes vs 
+datasets, diff scores.
+pip install arize-phoenix · 30+ auto-instrumentors incl. 
+Google ADK, LangChain, LlamaIndex, CrewAI, DSPy.
+
+===== PAGE 17 =====
+Google ADK & Arize Phoenix Integration
+X
+
+===== PAGE 18 =====
+AI Agent Observability  and Evaluation with Arize Phoenix
+
+===== PAGE 19 =====
+Thank you

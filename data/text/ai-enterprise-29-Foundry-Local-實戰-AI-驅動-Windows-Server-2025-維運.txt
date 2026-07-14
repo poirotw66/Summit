@@ -1,0 +1,100 @@
+
+===== PAGE 1 =====
+Foundry Local 實戰
+AI 驅動Windows Server 2025 維運
+Weithenn Wang
+
+===== PAGE 2 =====
+2
+About Weithenn
+Weithenn.org
+Microsoft MVP 2012 – 2025
+VMware vExpert 2012 – 2026
+Nutanix NTC 2025 – 2026
+19 IT books and NetAdmin Magazine 
+DevOpsDays Taipei 2026、DevOpsDays Tokyo 2026、Hello 
+World Dev Conference 2025、Kubernetes Summit 2025、
+Cloud Summit 2025、DevOpsDays Taipei 2025、DevOpsDays 
+Tokyo 2025、WebConf Taiwan 2024、.NET Conf Taiwan 2024、
+Kubernetes Summit 2024、DevOpsDays Taipei 2024、SRE 
+Conference 2024、DevOpsDays Tokyo 2024……
+
+===== PAGE 3 =====
+3
+What is Foundry Local?
+
+===== PAGE 4 =====
+Image From: Foundry Local architecture overview - Foundry Local | Microsoft Learn
+
+===== PAGE 5 =====
+
+
+===== PAGE 6 =====
+
+
+===== PAGE 7 =====
+7
+Live Demo
+
+===== PAGE 8 =====
+
+
+===== PAGE 9 =====
+
+
+===== PAGE 10 =====
+Scenario 1
+10
+Local AI Automated Incident Diagnosis
+
+===== PAGE 11 =====
+
+
+===== PAGE 12 =====
+Scenario 2
+12
+Local AI Proactive Memory Optimization 
+With Human-in-the-loop (HITL)
+
+===== PAGE 13 =====
+
+
+===== PAGE 14 =====
+
+
+===== PAGE 15 =====
+
+
+===== PAGE 16 =====
+Scenario 3
+16
+Local AI Security Defense & Blueprint-Level 
+Auto-Recovery
+
+===== PAGE 17 =====
+
+
+===== PAGE 18 =====
+Resources and More
+18
+
+===== PAGE 19 =====
+19
+github.com/Weithenn
+
+===== PAGE 20 =====
+20
+Resources
+• What is Foundry Local? - Foundry 
+Local | Microsoft Learn
+• Foundry Local architecture 
+overview - Foundry Local | 
+Microsoft Learn
+• Get started with Foundry Local -
+Foundry Local | Microsoft Learn
+• Use the Foundry Local CLI 
+(preview) - Foundry Local | 
+Microsoft Learn
+
+===== PAGE 21 =====
+Thank you!

@@ -1,0 +1,227 @@
+
+===== PAGE 1 =====
+AI Enterprise Summit 2026@台北世貿展覽館7F·Nickle
+2026/07/02
+當 SMART on FHIR 遇上 LINEBot
+火線超人 
+FHIRLineBot
+衛⽣福利部第⼀屆台灣 50 優良 SMART Apps
+1
+1
+火線超⼈-FHIR-LINE-Bot-v3 - 2026年7⽉2⽇
+
+===== PAGE 2 =====
+AI Enterprise Summit 2026@台北世貿展覽館7F·Nickle
+2026/07/02
+火線超⼈的誕⽣
+FHIRLineBot
+國軍⾼雄總醫院 資訊室主任 
+鄭重男(Nickle)
+2
+2
+火線超⼈-FHIR-LINE-Bot-v3 - 2026年7⽉2⽇
+
+===== PAGE 3 =====
+AI Enterprise Summit 2026@台北世貿展覽館7F·Nickle
+2026/07/02
+資料來源：https://smarthealthit.org
+Fast Healthcare Interoperability Resources(RESTful)
+Substitutable Medical Apps, Reusable Technology
+2026 年 ASTP/ONC 可能會推進 HTI-6 規則，重點可能放在 
+EHR / HIS 必須⽀援更成熟的 FHIR / SMART API，讓病⼈
+授權的第三⽅ App、AI 助理、甚至 agentic AI 可以合法、標
+準化地存取健康資料。
+3
+3
+火線超⼈-FHIR-LINE-Bot-v3 - 2026年7⽉2⽇
+
+===== PAGE 4 =====
+AI Enterprise Summit 2026@台北世貿展覽館7F·Nickle
+2026/07/02
+另⼀座護國神⼭ 
+次世代醫療資訊系統
+01 政策 
+健康臺灣深耕計畫 
+期程 114–118 年、總經費約 
+489億元。四⼤範疇：優化
+醫療⼯作條件、多元⼈才培
+育、智慧科技醫療、社會責
+任醫療永續
+02 建設 
+AI 新〸大建設 
+⽣活 AI 化、產業 AI 化、政府 
+AI 化；並強調智慧政府、資
+料治理、主權 AI、算⼒、⼈
+才與區域均衡
+03 標準 
+醫療資料標準化與互通 
+衛福部 TW Core IG（臺灣核⼼ 
+FHIR 實作指引）；健保署 TWPAS
+（以 FHIR ⽀援健保事前審查等資
+料交換）
+4
+4
+火線超⼈-FHIR-LINE-Bot-v3 - 2026年7⽉2⽇
+
+===== PAGE 5 =====
+AI Enterprise Summit 2026@台北世貿展覽館7F·Nickle
+2026/07/02
+智慧醫療不能只在醫院 
+要能走到⺠眾
+政府推智慧醫療、醫院做數位轉型、推 FHIR 國際標準 
+最後⺠眾感受到什麼？ 
+過去病⼈要理解⾃⼰的健康資料，常要登入不同系統、看
+不懂醫療術語、也不知道該問誰？
+5
+5
+火線超⼈-FHIR-LINE-Bot-v3 - 2026年7⽉2⽇
+
+===== PAGE 6 =====
+AI Enterprise Summit 2026@台北世貿展覽館7F·Nickle
+2026/07/02
+火線超⼈系統架構
+6
+國軍醫院、亞東、中⼭附醫
+6
+火線超⼈-FHIR-LINE-Bot-v3 - 2026年7⽉2⽇
+
+===== PAGE 7 =====
+AI Enterprise Summit 2026@台北世貿展覽館7F·Nickle
+2026/07/02
+火線超⼈系統服務
+7
+還原
+7
+火線超⼈-FHIR-LINE-Bot-v3 - 2026年7⽉2⽇
+
+===== PAGE 8 =====
+AI Enterprise Summit 2026@台北世貿展覽館7F·Nickle
+2026/07/02
+⺠眾只看到 LINE，背後是⼀個醫療入⼝
+01  民眾入口層
+LINE · Flex Message · 身分綁定
+民眾只看到 LINE︐但背後不是聊
+天︐是醫療入口
+02  授權信任層
+LINE OAuth · SMART on FHIR · 
+Token 最小權限
+SMART App Launch 以 OAuth 
+2.0 為基礎︐安全授權並整合 
+FHIR
+03  醫療資料層
+FHIR R4 · TW Core · 檢驗・用藥・
+就醫
+FHIR 是 HL7 健康資料交換標
+準︐RESTful API 以資源為核心
+04  AI 解讀層
+健康摘要 · 術語轉譯 · 風險提示 · 不
+取代診斷
+AI 協助摘要、翻譯、提醒︐並讓
+使用者知道資料來源與限制。
+05  開發治理層
+AI Coding · TDD· SDD· Code 
+Review · Audit Log
+真正的亮點︓把 AI 放進可控的
+開發流程
+8
+8
+火線超⼈-FHIR-LINE-Bot-v3 - 2026年7⽉2⽇
+
+===== PAGE 9 =====
+AI Enterprise Summit 2026@台北世貿展覽館7F·Nickle
+2026/07/02
+9
+繁中、English、⽇本語、ภาษาไทย 多語系即時切換，含圖⽂選單(richmenu)
+新住⺠
+產業移⼯
+外籍看護
+國際病⼈
+2,100 萬 · 台灣 LINE 使⽤者
+不只中⽂
+9
+火線超⼈-FHIR-LINE-Bot-v3 - 2026年7⽉2⽇
+
+===== PAGE 10 =====
+AI Enterprise Summit 2026@台北世貿展覽館7F·Nickle
+2026/07/02
+10
+使⽤者端
+多租⼾ 
+國軍⾼雄總醫院屏東分院
+10
+火線超⼈-FHIR-LINE-Bot-v3 - 2026年7⽉2⽇
+
+===== PAGE 11 =====
+AI Enterprise Summit 2026@台北世貿展覽館7F·Nickle
+2026/07/02
+11
+後台Richmenu管理
+11
+火線超⼈-FHIR-LINE-Bot-v3 - 2026年7⽉2⽇
+
+===== PAGE 12 =====
+AI Enterprise Summit 2026@台北世貿展覽館7F·Nickle
+2026/07/02
+AI Coding 軌跡與邊界
+TDD
+SDD
+12
+12
+火線超⼈-FHIR-LINE-Bot-v3 - 2026年7⽉2⽇
+
+===== PAGE 13 =====
+AI Enterprise Summit 2026@台北世貿展覽館7F·Nickle
+2026/07/02
+AI Pairing Spectrum
+13
+13
+火線超⼈-FHIR-LINE-Bot-v3 - 2026年7⽉2⽇
+
+===== PAGE 14 =====
+AI Enterprise Summit 2026@台北世貿展覽館7F·Nickle
+2026/07/02
+AI 真的需要勇氣...
+14
+14
+火線超⼈-FHIR-LINE-Bot-v3 - 2026年7⽉2⽇
+
+===== PAGE 15 =====
+AI Enterprise Summit 2026@台北世貿展覽館7F·Nickle
+2026/07/02
+區域醫院 
+做出醫學中⼼等級的服務
+01 
+不⽤等⼤系統重寫 
+FHIR 讓舊系統逐步接出標
+準 API。先從檢驗、用藥、
+就醫資訊這些高價值場景開
+始︐而非把 HIS 打掉重練
+02 
+從院內流程到病⼈旅程 
+以前醫院資訊系統多服務醫
+護行政流程︔火線超人讓醫
+院開始服務病人離院後的那
+段路
+03 
+⽤架構選擇彌補資源 
+選對標準、選對框架、選對 
+AI 協作方式︐小醫院也能做
+出可維運、可擴充、可被驗
+證的服務。
+15
+15
+火線超⼈-FHIR-LINE-Bot-v3 - 2026年7⽉2⽇
+
+===== PAGE 16 =====
+AI Enterprise Summit 2026@台北世貿展覽館7F·Nickle
+2026/07/02
+火線超人︐其實是一條路
+16
+表面上是 LINEBot︐實際是積木版的智慧醫療架構︓把政府政策接到醫院實
+務、把國際標準接到民眾手機、把 AI Coding 接到可治理的開發流程
+對民眾是安全易用的入口 
+對醫院是資訊現代化路徑 
+對政府是可被複製的範本積木 
+對國際是走得出去的通用框架
+16
+火線超⼈-FHIR-LINE-Bot-v3 - 2026年7⽉2⽇

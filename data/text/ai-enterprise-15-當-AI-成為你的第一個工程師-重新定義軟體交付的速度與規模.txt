@@ -1,0 +1,106 @@
+
+===== PAGE 1 =====
+CloudSummit 2026 · Taipei
+當AI 成為你的第一個工程師
+重新定義軟體交付的速度與規模
+市場地位
+Gartner Magic Quadrant
+AI 驅動交付
+GitLab Duo Agent Platform
+彈性商業模式
+GitLab Flex
+Coco Huang  ·  Commercial Account Executive, Taiwan & Vietnam
+
+===== PAGE 2 =====
+01
+台灣：GitLab 在亞太的重要夥伴
+Why Taiwan matters to GitLab
+驅動APJ 生態系
+台灣GitLab 活躍社群用戶持續成長
+在APJ 市場中具有顯著份量
+半導體· 金融· 智慧製造
+台灣核心產業垂直
+對DevSecOps 與AI 交付需求強烈
+AI-Ready
+台灣工程人才密度
+具備快速導入AI 工作流的基礎能力
+驅動APJ 創新：聚焦台灣
+
+===== PAGE 3 =====
+02市場已經驗證了方向
+2026 Gartner® Magic Quadrant
+for DevSecOps Platforms
+GitLab in Gartner Magic Quadrant — DevSecOps Platforms
+持續獲認可的Leader 地位
+在DevSecOps 平台類別中，GitLab 持續獲得Gartner 分析師的
+高度評價
+單一平台，完整覆蓋
+從Plan → Code → Test → Deploy → Secure，不是拼裝工具鏈
+30M+ 全球開發者
+遍佈Fortune 500 企業，包含金融、製造、科技各大垂直產業
+「選平台，就是選一個你願意信任的長期夥伴。」
+
+===== PAGE 4 =====
+03
+為什麼不是自己Build AI Agent？
+GitLab Orbit — The context layer for AI agents / 持續地把code、工作項目、pipeline、部署記錄、生產信號全部連結成一個live graph
+11x
+更快的Agent 回應速度
+vs. 無Orbit 情境基線
+4.5x
+Token 消耗降低
+直接降低AI 運算成本
+45x
+AI 幻覺減少
+GitLab Transcend 2026 內部測試
+Compare the Market A/B 測試：Orbit 準確率69.6% vs. RAG / No-context 方案顯著落後
+* 數據來源：GitLab Transcend 2026 官方公告（內部測試）· Compare the Market 客戶案例
+
+===== PAGE 5 =====
+04
+這對你的組織意味著什麼？
+Gitlab Platform , Orbit + DAP 到實際業務成果
+交付速度提升
+從idea 到code、review、release 的每個環節都在加速——減少等待、
+減少來回、減少工具切換
+安全前移，不再事後補
+AI 在commit 階段就發現漏洞，Plpleline excution policy自動執行——合
+規成本大幅降低
+告別工具孤島
+統一平台取代碎片化工具鏈，減少context switching，共享的AI 情境
+讓整個團隊對齊
+從個人AI 到團隊AI
+不只是每個人自己用Copilot——而是整個工程組織共享AI 工作流，規
+模化交付能力
+
+===== PAGE 6 =====
+05
+你不需要等到準備好，才能開始
+GitLab Flex — 讓商業模式不成為轉型的障礙
+按需計費
+依實際使用量付費
+不綁死席位數
+預算更靈活、更可預期
+從小開始
+從一個團隊啟動
+成功後自然擴展
+降低組織內推動阻力
+AI 直接內建
+Duo 不是附加選項
+購買Credits 即可啟動
+AI agents 立即可用
+CE 用戶也可以開始：
+如果您目前使用GitLab.com Free tier，不需要先升級方案；只要購買GitLab Credits，就可以開始使用支援於Free tier 的GitLab AI Agents / Flows
+
+===== PAGE 7 =====
+真正的問題只有一個：
+你的第一個AI 工程師，
+什麼時候上線？
+✓市場領導者
+Gartner MQ 驗證
+✓AI 全流程覆蓋
+Orbit + DAP
+✓低門檻啟動
+GitLab Flex
+讓我們一起來找到你的切入點·  coco.huang@gitlab.com
+©  GitLab Inc.  All rights reserved.

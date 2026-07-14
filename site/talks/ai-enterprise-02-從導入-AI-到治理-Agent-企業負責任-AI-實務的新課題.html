@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>從導入 AI 到治理 Agent：企業負責任 AI 實務的新課題 - Summit 2026 議程摘要</title>
+<meta name="description" content="AI Enterprise Summit 2026 與 Cloud &amp; Edge Summit 2026 議程摘要與詳細內容整理">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<header class="site-header detail-header">
+  <div class="container">
+    <a class="back-link" href="../index.html">← 回議程總覽</a>
+    <span class="badge" style="--badge-color:#6d5bd0">AI Enterprise Summit 2026 · #02</span>
+    <h1>從導入 AI 到治理 Agent：企業負責任 AI 實務的新課題</h1>
+    <p class="detail-speaker">🎤 林育宏 Frank　·　Microsoft Cloud &amp; AI 資深解決方案工程師</p>
+    <div class="tags"><span class="tag">AI治理</span><span class="tag">Agentic AI</span><span class="tag">負責任AI</span><span class="tag">資安合規</span><span class="tag">OWASP</span></div>
+  </div>
+</header>
+<main class="container detail-main">
+  <section class="detail-section summary-box">
+    <h2>摘要</h2>
+    <p>講者從 Microsoft Build 2026 的核心訊息出發，說明企業導入 Agentic AI 時面臨的關鍵命題已從「AI 能做什麼」轉變為「企業敢讓 AI 自己做什麼」。講題以「信任＝邊界＋檢查點＋稽核」為框架，介紹 Microsoft 開源的 Agent Governance Toolkit（AGT）如何透過系統架構落實邊界管控、Human-in-the-loop 檢查點與可稽核追蹤，協助企業對齊歐盟 AI 法案、NIST AI RMF、OWASP Agentic AI Top 10 與 SOC 2 等標準。</p>
+  </section>
+  <section class="detail-section">
+    <h2>重點整理</h2>
+    <ul class="highlights"><li>信任被拆解為三大支柱：邊界（Boundary）、檢查點／HITL（Checkpoint）、稽核（Auditability）</li><li>Agent Governance Toolkit（AGT）以 RFC 2119 規範語言，把治理政策變成可自動把關的執行引擎</li><li>Agent Control Specification（ACS）採用 CNCF 旗下的 Open Policy Agent（OPA）將「可不可以做」寫成 Policy as Code</li><li>AGT 對齊歐盟 AI 法案、美國 NIST AI RMF、OWASP Agentic AI Top 10 與 SOC 2 等國際標準</li><li>Microsoft 負責任 AI 旅程始於 2016 年 Satya Nadella 提出理念，2025 年通過 ISO/IEC 42001 認證，2026 年推進 Agent 治理（Entra Agent ID）</li></ul>
+  </section>
+  <section class="detail-section">
+  <h2>重點圖片／架構圖</h2>
+  <div class="diagram-grid">
+    <figure class="diagram">
+  <img src="../assets/images/ai-enterprise-02-從導入-AI-到治理-Agent-企業負責任-AI-實務的新課題/p7.jpg" loading="lazy" alt="檢查點／HITL 架構圖，說明 Agent Control Specification（ACS）如何透過 Open Policy Agent 政策引擎，在 Agent 迴圈中設置可放行、警示、拒絕或升級呈核的節點。">
+  <figcaption>檢查點／HITL 架構圖，說明 Agent Control Specification（ACS）如何透過 Open Policy Agent 政策引擎，在 Agent 迴圈中設置可放行、警示、拒絕或升級呈核的節點。</figcaption>
+</figure><figure class="diagram">
+  <img src="../assets/images/ai-enterprise-02-從導入-AI-到治理-Agent-企業負責任-AI-實務的新課題/p12.jpg" loading="lazy" alt="圖表呈現 Agent Governance Toolkit 對齊歐盟 AI 法案、NIST AI RMF、OWASP Agentic AI Top 10 與 SOC 2 等標準，說明從「可信任的 AI」邁向「負責任的 AI」的路徑。">
+  <figcaption>圖表呈現 Agent Governance Toolkit 對齊歐盟 AI 法案、NIST AI RMF、OWASP Agentic AI Top 10 與 SOC 2 等標準，說明從「可信任的 AI」邁向「負責任的 AI」的路徑。</figcaption>
+</figure><figure class="diagram">
+  <img src="../assets/images/ai-enterprise-02-從導入-AI-到治理-Agent-企業負責任-AI-實務的新課題/p14.jpg" loading="lazy" alt="Microsoft 負責任 AI 旅程時間軸（2016–2026），呈現從理念提出、倫理委員會成立到 ISO/IEC 42001 認證與 Agent 治理的歷程。">
+  <figcaption>Microsoft 負責任 AI 旅程時間軸（2016–2026），呈現從理念提出、倫理委員會成立到 ISO/IEC 42001 認證與 Agent 治理的歷程。</figcaption>
+</figure><figure class="diagram">
+  <img src="../assets/images/ai-enterprise-02-從導入-AI-到治理-Agent-企業負責任-AI-實務的新課題/p15.jpg" loading="lazy" alt="說明如何為 Agent 裝上邊界、檢查點與輸出審查的整體架構示意，對應白皮書《Path to production for AI Agents》。">
+  <figcaption>說明如何為 Agent 裝上邊界、檢查點與輸出審查的整體架構示意，對應白皮書《Path to production for AI Agents》。</figcaption>
+</figure>
+  </div>
+</section>
+  <section class="detail-section"><h2>背景與挑戰</h2><p>講者指出，Microsoft Build 2026 傳達的核心訊息是企業開發者要的不只是讓 agent 跑起來的方法，而是「信任」。當 Agent 開始自己讀取資料、自行採取行動，命題便從「AI 能為我們做什麼」翻轉為「我們敢讓它自己做什麼」，企業必須先建立信任基礎才能在安全邊界內擴張 AI 應用。</p></section>
+<section class="detail-section"><h2>治理框架：邊界、檢查點與稽核</h2><p>講者將信任拆解為「邊界＋檢查點＋稽核」三大要素：邊界定義 Agent 該被允許做什麼；檢查點／HITL 定義何時該停、誰能喊停；稽核則確保事後查得到紀錄。Microsoft 的 Agent Governance Toolkit（AGT）以系統架構（而非文件）落實邊界，涵蓋身分驗證、權限分級、稽核紀錄與資安閘道等實際功能。</p></section>
+<section class="detail-section"><h2>技術重點</h2><p>在檢查點層面，AGT 中的 Agent Control Specification（ACS）採用 CNCF 管理的 Open Policy Agent（OPA）通用型政策引擎，將「可不可以做」的規範寫成 Policy as Code，並在 Agent 迴圈中定義 8 個可喊停的節點，可放行、警示放行、拒絕或升級呈核。在稽核層面，則透過符合 GenAI 標準的 OpenTelemetry 追蹤鏈，把每一次模型呼叫、工具呼叫都變成可查詢、可評測的數據軌跡。</p></section>
+<section class="detail-section"><h2>案例與成果</h2><p>AGT 對齊歐盟 AI 法案、美國 NIST AI RMF、OWASP Agentic AI Top 10 與 SOC 2 等標準，協助企業進行法遵對齊、風險盤點與稽核舉證。講者也回顧 Microsoft 自 2016 年提出負責任 AI 理念以來的歷程，包括成立 Aether AI 倫理委員會、全球首創 AI 紅隊演練、發布負責任 AI 標準，直到 2025 年取得 ISO/IEC 42001:2023 認證，2026 年進一步推進 Agent 治理（Entra Agent ID）。</p></section>
+<section class="detail-section"><h2>結論與啟示</h2><p>講者總結，當企業具備邊界、檢查點與稽核三項工程能力後，才真正有底氣把「鑰匙」交給 Agent 自主行動，從「可信任的 AI」邁向「負責任的 AI」。</p></section>
+  <nav class="talk-nav">
+    <a class="nav-link" href="ai-enterprise-01-從零開始-Spec-kit-規格導向.html">← 從零開始 Spec-kit 規格導向 (Workshop)</a>
+    <a class="nav-link nav-next" href="ai-enterprise-03-企業-AI-的-CoWoS-時刻-探討-多模型路由-Router-的-Interposer-戰略.html">企業 AI 的 CoWoS 時刻：探討「多模型路由（Router）」的 Interposer 戰略 →</a>
+  </nav>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <p>本頁內容為 AI 輔助整理之摘要，原始檔案：02-從導入 AI 到治理 Agent：企業負責任 AI 實務的新課題.pdf。正確內容請以原始投影片為準。</p>
+  </div>
+</footer>
+</body>
+</html>

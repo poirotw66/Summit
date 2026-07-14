@@ -1,0 +1,196 @@
+
+===== PAGE 1 =====
+混合雲時代的保命符
+Evan Wang
+大中華區產品技術
+evan.wang@nakivo.com
+
+===== PAGE 2 =====
+剛剛出現的動物是？
+
+===== PAGE 3 =====
+3
+除了… 乖乖之外
+
+===== PAGE 4 =====
+4
+AI
+RaaS
+混合
+環境
+惡意
+策略
+網路不斷演變的威脅
+
+===== PAGE 5 =====
+2026: 轉變
+之前問題
+我們有備份嗎？
+現在的問題
+被攻擊時
+可以復原嗎？
+
+===== PAGE 6 =====
+保命的手段
+
+===== PAGE 7 =====
+3
+備份資料
+2
+不同
+媒介
+1
+異地端1
+不可變動性/ 空
+間隔離副本
+本地儲存設備
+直接備份到公有雲
+直接備份到私有雲
+檔案分享
+重複資料刪除設備
+磁帶
+備份心法
+
+===== PAGE 8 =====
+剛剛出現的動物是？
+
+===== PAGE 9 =====
+新口訣：3-2-1-1-0
+3-2-1: 基本策略
+3 個副本，儲存在2 不同媒介,，1 個
+異地/雲端
+3-2-1-1: 增加離線保護
+3 個副本，儲存在2 不同媒介,，1 個異地/
+雲端，1 個離線
+3-2-1-1-0: 無錯誤恢復
+3 個副本，儲存在2 不同媒介,，1 個異地/
+雲端，1 個離線，0 備份資料錯誤
+
+===== PAGE 10 =====
+備份資料的安全
+
+===== PAGE 11 =====
+Linux
+Windows
+Windows Server and Windows Desktop
+虛擬機匯入
+VMware VA, Nutanix VA
+Cloud
+Amazon EC2 AMI
+NAS 設備
+QNAP, ASUSTOR, NETGEAR, Western 
+Digital, Synology, TrueNAS CORE
+CPU
+4 GB
+2 cores
+RAM
+所需最小資源
+RHEL, Ubuntu, SLES, CentOS, CentOS 
+Stream, Debian, AlmaLinux, Rocky Linux, 
+Oracle Linux
+內建可使用不可變動儲存區
+備份系統漏洞問題？
+
+===== PAGE 12 =====
+剛剛出現的動物是？
+
+===== PAGE 13 =====
+勒索軟體
+人為錯誤
+內部威脅
+合乎規範
+●強大的勒索軟體防護
+●預防意外資料丟失
+(性能下降、人為錯誤等等)
+●簡化合乎規範
+●針對內部威脅的額外防禦
+不可變動性備份
+不可變動性備份
+
+===== PAGE 14 =====
+●不可變動性備份：Write-once-read-many 
+(WORM)
+○公有雲：Amazon S3, Wasabi Hot Cloud, 
+Backblaze B2 和Azure Blob Storage
+○S3相容性儲存設備：支援物件鎖定
+○本地端以Linux架構的儲存區
+不可變動性備份
+
+===== PAGE 15 =====
+剛剛出現的動物是？
+
+===== PAGE 16 =====
+●備份檔加密：加密備份資料與NAKIVO系統設定檔
+●AES 256-bit 加密：保護靜態和傳輸中的備份
+●雙因數認證(2FA)：增加額外的安全層以防止未經授權
+的存取
+●基於角色的存取控制(RBAC)：確保對資料保護活動的
+授權存取
+備份存取控制
+
+===== PAGE 17 =====
+備份資料的是否可用？
+
+===== PAGE 18 =====
+自動化備份驗證
+●確保虛擬機可以成功啟動
+●截圖驗證與開機驗證方式
+●不需影響網路效能
+●透過網頁介面或郵件了解所有狀態
+
+===== PAGE 19 =====
+剛剛出現的動物是？
+
+===== PAGE 20 =====
+複雜的混合環境
+
+===== PAGE 21 =====
+本地系統架構
+雲端或服務系統架構
+現實環境
+
+===== PAGE 22 =====
+提供完整資料保護
+
+===== PAGE 23 =====
+剛剛出現的動物是？
+
+===== PAGE 24 =====
+簡單化-備份架構
+
+===== PAGE 25 =====
+VM
+VM
+VM
+備份
+還原
+備份複製
+CLOUD Storage
+近期備份
+長期備份
+▪只需透過NAKIVO存取
+▪不啟動CIFS, NFS其他網路協定
+備份架構~簡單化
+
+===== PAGE 26 =====
+剛剛出現的動物是？
+
+===== PAGE 27 =====
+提供客戶完整資料保護解決方案
+› All-in-one 解決方案
+備份、複製、精細還原、勒索軟體防護、災難恢復
+› 支援虛擬、實體與雲端
+VMware vSphere, Microsoft Hyper-V, Nutanix AHV,  
+Proxmox VE, Amazon EC2, Microsoft 365, Windows, 
+Linux
+› 全方面部署
+NAS,  Linux, Windows, VA, AWS AMI
+› 降低IT管理
+易學易用沒負擔
+Proxmox VE
+
+===== PAGE 28 =====
+Thank You!
+Evan Wang
+大中華區產品技術
+evan.wang@nakivo.com

@@ -1,0 +1,2564 @@
+[
+  {
+    "slug": "ai-enterprise-01-從零開始-Spec-kit-規格導向",
+    "kind": "md",
+    "num_pages": null,
+    "text_file": "data/text/ai-enterprise-01-從零開始-Spec-kit-規格導向.txt",
+    "word_count": 4059,
+    "images": [],
+    "summit": "ai-enterprise",
+    "order": 1,
+    "title": "從零開始 Spec-kit 規格導向",
+    "source_file": "01-從零開始 Spec-kit 規格導向.md"
+  },
+  {
+    "slug": "ai-enterprise-02-從導入-AI-到治理-Agent-企業負責任-AI-實務的新課題",
+    "kind": "pdf",
+    "num_pages": 23,
+    "text_file": "data/text/ai-enterprise-02-從導入-AI-到治理-Agent-企業負責任-AI-實務的新課題.txt",
+    "word_count": 5835,
+    "images": [
+      {
+        "file": "assets/images/ai-enterprise-02-從導入-AI-到治理-Agent-企業負責任-AI-實務的新課題/cover.jpg",
+        "page": 1,
+        "role": "cover"
+      },
+      {
+        "file": "assets/images/ai-enterprise-02-從導入-AI-到治理-Agent-企業負責任-AI-實務的新課題/p7.jpg",
+        "page": 7,
+        "role": "diagram",
+        "score": 27
+      },
+      {
+        "file": "assets/images/ai-enterprise-02-從導入-AI-到治理-Agent-企業負責任-AI-實務的新課題/p12.jpg",
+        "page": 12,
+        "role": "diagram",
+        "score": 24
+      },
+      {
+        "file": "assets/images/ai-enterprise-02-從導入-AI-到治理-Agent-企業負責任-AI-實務的新課題/p14.jpg",
+        "page": 14,
+        "role": "diagram",
+        "score": 26
+      },
+      {
+        "file": "assets/images/ai-enterprise-02-從導入-AI-到治理-Agent-企業負責任-AI-實務的新課題/p15.jpg",
+        "page": 15,
+        "role": "diagram",
+        "score": 74
+      }
+    ],
+    "summit": "ai-enterprise",
+    "order": 2,
+    "title": "從導入 AI 到治理 Agent：企業負責任 AI 實務的新課題",
+    "source_file": "02-從導入 AI 到治理 Agent：企業負責任 AI 實務的新課題.pdf"
+  },
+  {
+    "slug": "ai-enterprise-03-企業-AI-的-CoWoS-時刻-探討-多模型路由-Router-的-Interposer-戰略",
+    "kind": "pdf",
+    "num_pages": 40,
+    "text_file": "data/text/ai-enterprise-03-企業-AI-的-CoWoS-時刻-探討-多模型路由-Router-的-Interposer-戰略.txt",
+    "word_count": 39,
+    "images": [
+      {
+        "file": "assets/images/ai-enterprise-03-企業-AI-的-CoWoS-時刻-探討-多模型路由-Router-的-Interposer-戰略/cover.jpg",
+        "page": 1,
+        "role": "cover"
+      },
+      {
+        "file": "assets/images/ai-enterprise-03-企業-AI-的-CoWoS-時刻-探討-多模型路由-Router-的-Interposer-戰略/p20.jpg",
+        "page": 20,
+        "role": "diagram",
+        "score": 99
+      },
+      {
+        "file": "assets/images/ai-enterprise-03-企業-AI-的-CoWoS-時刻-探討-多模型路由-Router-的-Interposer-戰略/p30.jpg",
+        "page": 30,
+        "role": "diagram",
+        "score": 99
+      }
+    ],
+    "summit": "ai-enterprise",
+    "order": 3,
+    "title": "企業 AI 的 CoWoS 時刻：探討「多模型路由（Router）」的 Interposer 戰略",
+    "source_file": "03-企業 AI 的 CoWoS 時刻：探討「多模型路由（Router）」的 Interposer 戰略.pdf"
+  },
+  {
+    "slug": "ai-enterprise-04-FDA-文件提取智能體-從正則到自癒-AI-的演進",
+    "kind": "pdf",
+    "num_pages": 28,
+    "text_file": "data/text/ai-enterprise-04-FDA-文件提取智能體-從正則到自癒-AI-的演進.txt",
+    "word_count": 4754,
+    "images": [
+      {
+        "file": "assets/images/ai-enterprise-04-FDA-文件提取智能體-從正則到自癒-AI-的演進/cover.jpg",
+        "page": 1,
+        "role": "cover"
+      },
+      {
+        "file": "assets/images/ai-enterprise-04-FDA-文件提取智能體-從正則到自癒-AI-的演進/p3.jpg",
+        "page": 3,
+        "role": "diagram",
+        "score": 9
+      },
+      {
+        "file": "assets/images/ai-enterprise-04-FDA-文件提取智能體-從正則到自癒-AI-的演進/p5.jpg",
+        "page": 5,
+        "role": "diagram",
+        "score": 9
+      },
+      {
+        "file": "assets/images/ai-enterprise-04-FDA-文件提取智能體-從正則到自癒-AI-的演進/p16.jpg",
+        "page": 16,
+        "role": "diagram",
+        "score": 9
+      },
+      {
+        "file": "assets/images/ai-enterprise-04-FDA-文件提取智能體-從正則到自癒-AI-的演進/p22.jpg",
+        "page": 22,
+        "role": "diagram",
+        "score": 12
+      }
+    ],
+    "summit": "ai-enterprise",
+    "order": 4,
+    "title": "FDA 文件提取智能體：從正則到自癒 AI 的演進",
+    "source_file": "04-FDA 文件提取智能體：從正則到自癒 AI 的演進.pdf"
+  },
+  {
+    "slug": "ai-enterprise-05-SMART-on-FHIR-遇上-LINE-Bot-打造隱私優先的醫療-AI-架構",
+    "kind": "pdf",
+    "num_pages": 16,
+    "text_file": "data/text/ai-enterprise-05-SMART-on-FHIR-遇上-LINE-Bot-打造隱私優先的醫療-AI-架構.txt",
+    "word_count": 3226,
+    "images": [
+      {
+        "file": "assets/images/ai-enterprise-05-SMART-on-FHIR-遇上-LINE-Bot-打造隱私優先的醫療-AI-架構/cover.jpg",
+        "page": 1,
+        "role": "cover"
+      },
+      {
+        "file": "assets/images/ai-enterprise-05-SMART-on-FHIR-遇上-LINE-Bot-打造隱私優先的醫療-AI-架構/p3.jpg",
+        "page": 3,
+        "role": "diagram",
+        "score": 8
+      },
+      {
+        "file": "assets/images/ai-enterprise-05-SMART-on-FHIR-遇上-LINE-Bot-打造隱私優先的醫療-AI-架構/p6.jpg",
+        "page": 6,
+        "role": "diagram",
+        "score": 17
+      },
+      {
+        "file": "assets/images/ai-enterprise-05-SMART-on-FHIR-遇上-LINE-Bot-打造隱私優先的醫療-AI-架構/p9.jpg",
+        "page": 9,
+        "role": "diagram",
+        "score": 8
+      },
+      {
+        "file": "assets/images/ai-enterprise-05-SMART-on-FHIR-遇上-LINE-Bot-打造隱私優先的醫療-AI-架構/p10.jpg",
+        "page": 10,
+        "role": "diagram",
+        "score": 10
+      }
+    ],
+    "summit": "ai-enterprise",
+    "order": 5,
+    "title": "SMART on FHIR 遇上 LINE Bot：打造隱私優先的醫療 AI 架構",
+    "source_file": "05-SMART on FHIR 遇上 LINE Bot：打造隱私優先的醫療 AI 架構.pdf"
+  },
+  {
+    "slug": "ai-enterprise-06-從-ASK-到-Agent-企業-AI-落地新時代-IBM-Bob-加速-AI-Agent-普及與價值實現",
+    "kind": "pdf",
+    "num_pages": 21,
+    "text_file": "data/text/ai-enterprise-06-從-ASK-到-Agent-企業-AI-落地新時代-IBM-Bob-加速-AI-Agent-普及與價值實現.txt",
+    "word_count": 89,
+    "images": [
+      {
+        "file": "assets/images/ai-enterprise-06-從-ASK-到-Agent-企業-AI-落地新時代-IBM-Bob-加速-AI-Agent-普及與價值實現/cover.jpg",
+        "page": 1,
+        "role": "cover"
+      },
+      {
+        "file": "assets/images/ai-enterprise-06-從-ASK-到-Agent-企業-AI-落地新時代-IBM-Bob-加速-AI-Agent-普及與價值實現/p4.jpg",
+        "page": 4,
+        "role": "diagram",
+        "score": 96
+      },
+      {
+        "file": "assets/images/ai-enterprise-06-從-ASK-到-Agent-企業-AI-落地新時代-IBM-Bob-加速-AI-Agent-普及與價值實現/p9.jpg",
+        "page": 9,
+        "role": "diagram",
+        "score": 108
+      },
+      {
+        "file": "assets/images/ai-enterprise-06-從-ASK-到-Agent-企業-AI-落地新時代-IBM-Bob-加速-AI-Agent-普及與價值實現/p11.jpg",
+        "page": 11,
+        "role": "diagram",
+        "score": 158
+      },
+      {
+        "file": "assets/images/ai-enterprise-06-從-ASK-到-Agent-企業-AI-落地新時代-IBM-Bob-加速-AI-Agent-普及與價值實現/p13.jpg",
+        "page": 13,
+        "role": "diagram",
+        "score": 124
+      },
+      {
+        "file": "assets/images/ai-enterprise-06-從-ASK-到-Agent-企業-AI-落地新時代-IBM-Bob-加速-AI-Agent-普及與價值實現/p18.jpg",
+        "page": 18,
+        "role": "diagram",
+        "score": 99
+      }
+    ],
+    "summit": "ai-enterprise",
+    "order": 6,
+    "title": "從 ASK 到 Agent：企業 AI 落地新時代，IBM Bob 加速 AI Agent 普及與價值實現",
+    "source_file": "06-從 ASK 到 Agent：企業 AI 落地新時代，IBM Bob 加速 AI Agent 普及與價值實現.pdf"
+  },
+  {
+    "slug": "ai-enterprise-07-數據感知與安全治理-打造企業級-AI-智能工作流",
+    "kind": "pdf",
+    "num_pages": 14,
+    "text_file": "data/text/ai-enterprise-07-數據感知與安全治理-打造企業級-AI-智能工作流.txt",
+    "word_count": 7058,
+    "images": [
+      {
+        "file": "assets/images/ai-enterprise-07-數據感知與安全治理-打造企業級-AI-智能工作流/cover.jpg",
+        "page": 1,
+        "role": "cover"
+      },
+      {
+        "file": "assets/images/ai-enterprise-07-數據感知與安全治理-打造企業級-AI-智能工作流/p2.jpg",
+        "page": 2,
+        "role": "diagram",
+        "score": 186
+      },
+      {
+        "file": "assets/images/ai-enterprise-07-數據感知與安全治理-打造企業級-AI-智能工作流/p3.jpg",
+        "page": 3,
+        "role": "diagram",
+        "score": 67
+      },
+      {
+        "file": "assets/images/ai-enterprise-07-數據感知與安全治理-打造企業級-AI-智能工作流/p5.jpg",
+        "page": 5,
+        "role": "diagram",
+        "score": 109
+      },
+      {
+        "file": "assets/images/ai-enterprise-07-數據感知與安全治理-打造企業級-AI-智能工作流/p10.jpg",
+        "page": 10,
+        "role": "diagram",
+        "score": 67
+      }
+    ],
+    "summit": "ai-enterprise",
+    "order": 7,
+    "title": "數據感知與安全治理：打造企業級 AI 智能工作流",
+    "source_file": "07-數據感知與安全治理：打造企業級 AI 智能工作流.pdf"
+  },
+  {
+    "slug": "ai-enterprise-08-Observability-Architecture-for-Enterprise-Agentic-AI-Agents",
+    "kind": "pdf",
+    "num_pages": 19,
+    "text_file": "data/text/ai-enterprise-08-Observability-Architecture-for-Enterprise-Agentic-AI-Agents.txt",
+    "word_count": 4797,
+    "images": [
+      {
+        "file": "assets/images/ai-enterprise-08-Observability-Architecture-for-Enterprise-Agentic-AI-Agents/cover.jpg",
+        "page": 1,
+        "role": "cover"
+      },
+      {
+        "file": "assets/images/ai-enterprise-08-Observability-Architecture-for-Enterprise-Agentic-AI-Agents/p2.jpg",
+        "page": 2,
+        "role": "diagram",
+        "score": 9
+      },
+      {
+        "file": "assets/images/ai-enterprise-08-Observability-Architecture-for-Enterprise-Agentic-AI-Agents/p10.jpg",
+        "page": 10,
+        "role": "diagram",
+        "score": 11
+      },
+      {
+        "file": "assets/images/ai-enterprise-08-Observability-Architecture-for-Enterprise-Agentic-AI-Agents/p11.jpg",
+        "page": 11,
+        "role": "diagram",
+        "score": 21
+      },
+      {
+        "file": "assets/images/ai-enterprise-08-Observability-Architecture-for-Enterprise-Agentic-AI-Agents/p17.jpg",
+        "page": 17,
+        "role": "diagram",
+        "score": 10
+      }
+    ],
+    "summit": "ai-enterprise",
+    "order": 8,
+    "title": "Observability Architecture for Enterprise Agentic AI Agents",
+    "source_file": "08-Observability Architecture for Enterprise Agentic AI Agents.pdf"
+  },
+  {
+    "slug": "ai-enterprise-09-打造企業級-AI-基礎設施-從程式碼理解到-Agentic-Workflow-的實戰藍圖與避坑指南",
+    "kind": "pdf",
+    "num_pages": 36,
+    "text_file": "data/text/ai-enterprise-09-打造企業級-AI-基礎設施-從程式碼理解到-Agentic-Workflow-的實戰藍圖與避坑指南.txt",
+    "word_count": 5389,
+    "images": [
+      {
+        "file": "assets/images/ai-enterprise-09-打造企業級-AI-基礎設施-從程式碼理解到-Agentic-Workflow-的實戰藍圖與避坑指南/cover.jpg",
+        "page": 1,
+        "role": "cover"
+      },
+      {
+        "file": "assets/images/ai-enterprise-09-打造企業級-AI-基礎設施-從程式碼理解到-Agentic-Workflow-的實戰藍圖與避坑指南/p4.jpg",
+        "page": 4,
+        "role": "diagram",
+        "score": 5
+      },
+      {
+        "file": "assets/images/ai-enterprise-09-打造企業級-AI-基礎設施-從程式碼理解到-Agentic-Workflow-的實戰藍圖與避坑指南/p10.jpg",
+        "page": 10,
+        "role": "diagram",
+        "score": 8
+      },
+      {
+        "file": "assets/images/ai-enterprise-09-打造企業級-AI-基礎設施-從程式碼理解到-Agentic-Workflow-的實戰藍圖與避坑指南/p12.jpg",
+        "page": 12,
+        "role": "diagram",
+        "score": 7
+      },
+      {
+        "file": "assets/images/ai-enterprise-09-打造企業級-AI-基礎設施-從程式碼理解到-Agentic-Workflow-的實戰藍圖與避坑指南/p23.jpg",
+        "page": 23,
+        "role": "diagram",
+        "score": 6
+      }
+    ],
+    "summit": "ai-enterprise",
+    "order": 9,
+    "title": "打造企業級 AI 基礎設施：從程式碼理解到 Agentic Workflow 的實戰藍圖與避坑指南",
+    "source_file": "09-打造企業級 AI 基礎設施：從程式碼理解到 Agentic Workflow 的實戰藍圖與避坑指南.pdf"
+  },
+  {
+    "slug": "ai-enterprise-10-將算力化為行動力-企業級-AI-全棧整合與落地實踐",
+    "kind": "pdf",
+    "num_pages": 18,
+    "text_file": "data/text/ai-enterprise-10-將算力化為行動力-企業級-AI-全棧整合與落地實踐.txt",
+    "word_count": 1801,
+    "images": [
+      {
+        "file": "assets/images/ai-enterprise-10-將算力化為行動力-企業級-AI-全棧整合與落地實踐/cover.jpg",
+        "page": 1,
+        "role": "cover"
+      },
+      {
+        "file": "assets/images/ai-enterprise-10-將算力化為行動力-企業級-AI-全棧整合與落地實踐/p7.jpg",
+        "page": 7,
+        "role": "diagram",
+        "score": 104
+      },
+      {
+        "file": "assets/images/ai-enterprise-10-將算力化為行動力-企業級-AI-全棧整合與落地實踐/p9.jpg",
+        "page": 9,
+        "role": "diagram",
+        "score": 81
+      },
+      {
+        "file": "assets/images/ai-enterprise-10-將算力化為行動力-企業級-AI-全棧整合與落地實踐/p13.jpg",
+        "page": 13,
+        "role": "diagram",
+        "score": 88
+      },
+      {
+        "file": "assets/images/ai-enterprise-10-將算力化為行動力-企業級-AI-全棧整合與落地實踐/p15.jpg",
+        "page": 15,
+        "role": "diagram",
+        "score": 135
+      }
+    ],
+    "summit": "ai-enterprise",
+    "order": 10,
+    "title": "將算力化為行動力：企業級 AI 全棧整合與落地實踐",
+    "source_file": "10-將算力化為行動力：企業級 AI 全棧整合與落地實踐.pdf"
+  },
+  {
+    "slug": "ai-enterprise-11-企業級代理式-AI-Agentic-AI-for-The-Enterprise",
+    "kind": "pdf",
+    "num_pages": 19,
+    "text_file": "data/text/ai-enterprise-11-企業級代理式-AI-Agentic-AI-for-The-Enterprise.txt",
+    "word_count": 9330,
+    "images": [
+      {
+        "file": "assets/images/ai-enterprise-11-企業級代理式-AI-Agentic-AI-for-The-Enterprise/cover.jpg",
+        "page": 1,
+        "role": "cover"
+      },
+      {
+        "file": "assets/images/ai-enterprise-11-企業級代理式-AI-Agentic-AI-for-The-Enterprise/p3.jpg",
+        "page": 3,
+        "role": "diagram",
+        "score": 24
+      },
+      {
+        "file": "assets/images/ai-enterprise-11-企業級代理式-AI-Agentic-AI-for-The-Enterprise/p7.jpg",
+        "page": 7,
+        "role": "diagram",
+        "score": 43
+      },
+      {
+        "file": "assets/images/ai-enterprise-11-企業級代理式-AI-Agentic-AI-for-The-Enterprise/p15.jpg",
+        "page": 15,
+        "role": "diagram",
+        "score": 14
+      },
+      {
+        "file": "assets/images/ai-enterprise-11-企業級代理式-AI-Agentic-AI-for-The-Enterprise/p17.jpg",
+        "page": 17,
+        "role": "diagram",
+        "score": 41
+      }
+    ],
+    "summit": "ai-enterprise",
+    "order": 11,
+    "title": "企業級代理式 AI (Agentic AI for The Enterprise)",
+    "source_file": "11-企業級代理式 AI (Agentic AI for The Enterprise).pdf"
+  },
+  {
+    "slug": "ai-enterprise-12-Cloudflare-AI-全戰略-從防禦爬蟲-Agent-實戰到-SASE-安全轉型",
+    "kind": "pdf",
+    "num_pages": 34,
+    "text_file": "data/text/ai-enterprise-12-Cloudflare-AI-全戰略-從防禦爬蟲-Agent-實戰到-SASE-安全轉型.txt",
+    "word_count": 10530,
+    "images": [
+      {
+        "file": "assets/images/ai-enterprise-12-Cloudflare-AI-全戰略-從防禦爬蟲-Agent-實戰到-SASE-安全轉型/cover.jpg",
+        "page": 1,
+        "role": "cover"
+      },
+      {
+        "file": "assets/images/ai-enterprise-12-Cloudflare-AI-全戰略-從防禦爬蟲-Agent-實戰到-SASE-安全轉型/p8.jpg",
+        "page": 8,
+        "role": "diagram",
+        "score": 251
+      },
+      {
+        "file": "assets/images/ai-enterprise-12-Cloudflare-AI-全戰略-從防禦爬蟲-Agent-實戰到-SASE-安全轉型/p9.jpg",
+        "page": 9,
+        "role": "diagram",
+        "score": 225
+      },
+      {
+        "file": "assets/images/ai-enterprise-12-Cloudflare-AI-全戰略-從防禦爬蟲-Agent-實戰到-SASE-安全轉型/p18.jpg",
+        "page": 18,
+        "role": "diagram",
+        "score": 317
+      },
+      {
+        "file": "assets/images/ai-enterprise-12-Cloudflare-AI-全戰略-從防禦爬蟲-Agent-實戰到-SASE-安全轉型/p24.jpg",
+        "page": 24,
+        "role": "diagram",
+        "score": 201
+      }
+    ],
+    "summit": "ai-enterprise",
+    "order": 12,
+    "title": "Cloudflare AI 全戰略 從防禦爬蟲, Agent 實戰到 SASE 安全轉型",
+    "source_file": "12-Cloudflare AI 全戰略 從防禦爬蟲, Agent 實戰到 SASE 安全轉型.pdf"
+  },
+  {
+    "slug": "ai-enterprise-13-企業-AI-Orchestration-低摩擦整合路線-以-MCP-Server-工具化既有-API與-OAuth-授權治理",
+    "kind": "pdf",
+    "num_pages": 32,
+    "text_file": "data/text/ai-enterprise-13-企業-AI-Orchestration-低摩擦整合路線-以-MCP-Server-工具化既有-API與-OAuth-授權治理.txt",
+    "word_count": 31,
+    "images": [
+      {
+        "file": "assets/images/ai-enterprise-13-企業-AI-Orchestration-低摩擦整合路線-以-MCP-Server-工具化既有-API與-OAuth-授權治理/cover.jpg",
+        "page": 1,
+        "role": "cover"
+      },
+      {
+        "file": "assets/images/ai-enterprise-13-企業-AI-Orchestration-低摩擦整合路線-以-MCP-Server-工具化既有-API與-OAuth-授權治理/p2.jpg",
+        "page": 2,
+        "role": "diagram",
+        "score": 14
+      },
+      {
+        "file": "assets/images/ai-enterprise-13-企業-AI-Orchestration-低摩擦整合路線-以-MCP-Server-工具化既有-API與-OAuth-授權治理/p3.jpg",
+        "page": 3,
+        "role": "diagram",
+        "score": 12
+      },
+      {
+        "file": "assets/images/ai-enterprise-13-企業-AI-Orchestration-低摩擦整合路線-以-MCP-Server-工具化既有-API與-OAuth-授權治理/p15.jpg",
+        "page": 15,
+        "role": "diagram",
+        "score": 12
+      },
+      {
+        "file": "assets/images/ai-enterprise-13-企業-AI-Orchestration-低摩擦整合路線-以-MCP-Server-工具化既有-API與-OAuth-授權治理/p32.jpg",
+        "page": 32,
+        "role": "diagram",
+        "score": 10
+      },
+      {
+        "file": "assets/images/ai-enterprise-13-企業-AI-Orchestration-低摩擦整合路線-以-MCP-Server-工具化既有-API與-OAuth-授權治理/p26.jpg",
+        "page": 26,
+        "role": "diagram",
+        "score": 99
+      }
+    ],
+    "summit": "ai-enterprise",
+    "order": 13,
+    "title": "企業 AI Orchestration 低摩擦整合路線：以 MCP Server 工具化既有 API與 OAuth 授權治理",
+    "source_file": "13-企業 AI Orchestration 低摩擦整合路線：以 MCP Server 工具化既有 API與 OAuth 授權治理.pdf"
+  },
+  {
+    "slug": "ai-enterprise-14-Config-Driven-Agentic-AI-讓-AI-Agent-用對話產出零售分析配置",
+    "kind": "pdf",
+    "num_pages": 33,
+    "text_file": "data/text/ai-enterprise-14-Config-Driven-Agentic-AI-讓-AI-Agent-用對話產出零售分析配置.txt",
+    "word_count": 5881,
+    "images": [
+      {
+        "file": "assets/images/ai-enterprise-14-Config-Driven-Agentic-AI-讓-AI-Agent-用對話產出零售分析配置/cover.jpg",
+        "page": 1,
+        "role": "cover"
+      },
+      {
+        "file": "assets/images/ai-enterprise-14-Config-Driven-Agentic-AI-讓-AI-Agent-用對話產出零售分析配置/p7.jpg",
+        "page": 7,
+        "role": "diagram",
+        "score": 14
+      },
+      {
+        "file": "assets/images/ai-enterprise-14-Config-Driven-Agentic-AI-讓-AI-Agent-用對話產出零售分析配置/p15.jpg",
+        "page": 15,
+        "role": "diagram",
+        "score": 9
+      },
+      {
+        "file": "assets/images/ai-enterprise-14-Config-Driven-Agentic-AI-讓-AI-Agent-用對話產出零售分析配置/p19.jpg",
+        "page": 19,
+        "role": "diagram",
+        "score": 9
+      },
+      {
+        "file": "assets/images/ai-enterprise-14-Config-Driven-Agentic-AI-讓-AI-Agent-用對話產出零售分析配置/p32.jpg",
+        "page": 32,
+        "role": "diagram",
+        "score": 10
+      }
+    ],
+    "summit": "ai-enterprise",
+    "order": 14,
+    "title": "Config-Driven Agentic AI：讓 AI Agent 用對話產出零售分析配置",
+    "source_file": "14-Config-Driven Agentic AI：讓 AI Agent 用對話產出零售分析配置.pdf"
+  },
+  {
+    "slug": "ai-enterprise-15-當-AI-成為你的第一個工程師-重新定義軟體交付的速度與規模",
+    "kind": "pdf",
+    "num_pages": 7,
+    "text_file": "data/text/ai-enterprise-15-當-AI-成為你的第一個工程師-重新定義軟體交付的速度與規模.txt",
+    "word_count": 1804,
+    "images": [
+      {
+        "file": "assets/images/ai-enterprise-15-當-AI-成為你的第一個工程師-重新定義軟體交付的速度與規模/cover.jpg",
+        "page": 1,
+        "role": "cover"
+      },
+      {
+        "file": "assets/images/ai-enterprise-15-當-AI-成為你的第一個工程師-重新定義軟體交付的速度與規模/p2.jpg",
+        "page": 2,
+        "role": "diagram",
+        "score": 10
+      },
+      {
+        "file": "assets/images/ai-enterprise-15-當-AI-成為你的第一個工程師-重新定義軟體交付的速度與規模/p3.jpg",
+        "page": 3,
+        "role": "diagram",
+        "score": 14
+      },
+      {
+        "file": "assets/images/ai-enterprise-15-當-AI-成為你的第一個工程師-重新定義軟體交付的速度與規模/p4.jpg",
+        "page": 4,
+        "role": "diagram",
+        "score": 19
+      },
+      {
+        "file": "assets/images/ai-enterprise-15-當-AI-成為你的第一個工程師-重新定義軟體交付的速度與規模/p6.jpg",
+        "page": 6,
+        "role": "diagram",
+        "score": 12
+      }
+    ],
+    "summit": "ai-enterprise",
+    "order": 15,
+    "title": "當 AI 成為你的第一個工程師：重新定義軟體交付的速度與規模",
+    "source_file": "15-當 AI 成為你的第一個工程師：重新定義軟體交付的速度與規模.pdf"
+  },
+  {
+    "slug": "ai-enterprise-16-當-AI-成為你的第一個工程師-重新定義軟體交付的速度與規模-2",
+    "kind": "pdf",
+    "num_pages": 22,
+    "text_file": "data/text/ai-enterprise-16-當-AI-成為你的第一個工程師-重新定義軟體交付的速度與規模-2.txt",
+    "word_count": 2887,
+    "images": [
+      {
+        "file": "assets/images/ai-enterprise-16-當-AI-成為你的第一個工程師-重新定義軟體交付的速度與規模-2/cover.jpg",
+        "page": 1,
+        "role": "cover"
+      },
+      {
+        "file": "assets/images/ai-enterprise-16-當-AI-成為你的第一個工程師-重新定義軟體交付的速度與規模-2/p7.jpg",
+        "page": 7,
+        "role": "diagram",
+        "score": 81
+      },
+      {
+        "file": "assets/images/ai-enterprise-16-當-AI-成為你的第一個工程師-重新定義軟體交付的速度與規模-2/p8.jpg",
+        "page": 8,
+        "role": "diagram",
+        "score": 115
+      },
+      {
+        "file": "assets/images/ai-enterprise-16-當-AI-成為你的第一個工程師-重新定義軟體交付的速度與規模-2/p12.jpg",
+        "page": 12,
+        "role": "diagram",
+        "score": 77
+      },
+      {
+        "file": "assets/images/ai-enterprise-16-當-AI-成為你的第一個工程師-重新定義軟體交付的速度與規模-2/p15.jpg",
+        "page": 15,
+        "role": "diagram",
+        "score": 140
+      }
+    ],
+    "summit": "ai-enterprise",
+    "order": 16,
+    "title": "當 AI 成為你的第一個工程師：重新定義軟體交付的速度與規模 (2)",
+    "source_file": "16-當 AI 成為你的第一個工程師：重新定義軟體交付的速度與規模 (2).pdf"
+  },
+  {
+    "slug": "ai-enterprise-17-從-CIO-大調查看企業-AI-轉型新方向-AI-原生的崛起",
+    "kind": "pdf",
+    "num_pages": 57,
+    "text_file": "data/text/ai-enterprise-17-從-CIO-大調查看企業-AI-轉型新方向-AI-原生的崛起.txt",
+    "word_count": 36999,
+    "images": [
+      {
+        "file": "assets/images/ai-enterprise-17-從-CIO-大調查看企業-AI-轉型新方向-AI-原生的崛起/cover.jpg",
+        "page": 1,
+        "role": "cover"
+      },
+      {
+        "file": "assets/images/ai-enterprise-17-從-CIO-大調查看企業-AI-轉型新方向-AI-原生的崛起/p2.jpg",
+        "page": 2,
+        "role": "diagram",
+        "score": 62
+      },
+      {
+        "file": "assets/images/ai-enterprise-17-從-CIO-大調查看企業-AI-轉型新方向-AI-原生的崛起/p24.jpg",
+        "page": 24,
+        "role": "diagram",
+        "score": 17
+      },
+      {
+        "file": "assets/images/ai-enterprise-17-從-CIO-大調查看企業-AI-轉型新方向-AI-原生的崛起/p25.jpg",
+        "page": 25,
+        "role": "diagram",
+        "score": 17
+      },
+      {
+        "file": "assets/images/ai-enterprise-17-從-CIO-大調查看企業-AI-轉型新方向-AI-原生的崛起/p26.jpg",
+        "page": 26,
+        "role": "diagram",
+        "score": 17
+      }
+    ],
+    "summit": "ai-enterprise",
+    "order": 17,
+    "title": "從 CIO 大調查看企業 AI 轉型新方向：AI 原生的崛起",
+    "source_file": "17-從 CIO 大調查看企業 AI 轉型新方向：AI 原生的崛起.pdf"
+  },
+  {
+    "slug": "ai-enterprise-18-LLM-O11y-從-Observability-到-Decision-System-workshop",
+    "kind": "md",
+    "num_pages": null,
+    "text_file": "data/text/ai-enterprise-18-LLM-O11y-從-Observability-到-Decision-System-workshop.txt",
+    "word_count": 3787,
+    "images": [],
+    "summit": "ai-enterprise",
+    "order": 18,
+    "title": "LLM O11y：從 Observability 到 Decision System (workshop)",
+    "source_file": "18-LLM O11y：從 Observability 到 Decision System (workshop).md"
+  },
+  {
+    "slug": "ai-enterprise-19-當-AI-成為企業工作日常-員工-AI-使用管理問題與實務情境解析",
+    "kind": "pdf",
+    "num_pages": 27,
+    "text_file": "data/text/ai-enterprise-19-當-AI-成為企業工作日常-員工-AI-使用管理問題與實務情境解析.txt",
+    "word_count": 4631,
+    "images": [
+      {
+        "file": "assets/images/ai-enterprise-19-當-AI-成為企業工作日常-員工-AI-使用管理問題與實務情境解析/cover.jpg",
+        "page": 1,
+        "role": "cover"
+      },
+      {
+        "file": "assets/images/ai-enterprise-19-當-AI-成為企業工作日常-員工-AI-使用管理問題與實務情境解析/p6.jpg",
+        "page": 6,
+        "role": "diagram",
+        "score": 25
+      },
+      {
+        "file": "assets/images/ai-enterprise-19-當-AI-成為企業工作日常-員工-AI-使用管理問題與實務情境解析/p17.jpg",
+        "page": 17,
+        "role": "diagram",
+        "score": 17
+      },
+      {
+        "file": "assets/images/ai-enterprise-19-當-AI-成為企業工作日常-員工-AI-使用管理問題與實務情境解析/p18.jpg",
+        "page": 18,
+        "role": "diagram",
+        "score": 17
+      },
+      {
+        "file": "assets/images/ai-enterprise-19-當-AI-成為企業工作日常-員工-AI-使用管理問題與實務情境解析/p19.jpg",
+        "page": 19,
+        "role": "diagram",
+        "score": 17
+      }
+    ],
+    "summit": "ai-enterprise",
+    "order": 19,
+    "title": "當 AI 成為企業工作日常：員工 AI 使用管理問題與實務情境解析",
+    "source_file": "19-當 AI 成為企業工作日常：員工 AI 使用管理問題與實務情境解析.pdf"
+  },
+  {
+    "slug": "ai-enterprise-20-Engineering-Trust-in-AI-Generated-Code",
+    "kind": "pdf",
+    "num_pages": 17,
+    "text_file": "data/text/ai-enterprise-20-Engineering-Trust-in-AI-Generated-Code.txt",
+    "word_count": 9446,
+    "images": [
+      {
+        "file": "assets/images/ai-enterprise-20-Engineering-Trust-in-AI-Generated-Code/cover.jpg",
+        "page": 1,
+        "role": "cover"
+      },
+      {
+        "file": "assets/images/ai-enterprise-20-Engineering-Trust-in-AI-Generated-Code/p6.jpg",
+        "page": 6,
+        "role": "diagram",
+        "score": 20
+      },
+      {
+        "file": "assets/images/ai-enterprise-20-Engineering-Trust-in-AI-Generated-Code/p11.jpg",
+        "page": 11,
+        "role": "diagram",
+        "score": 11
+      },
+      {
+        "file": "assets/images/ai-enterprise-20-Engineering-Trust-in-AI-Generated-Code/p12.jpg",
+        "page": 12,
+        "role": "diagram",
+        "score": 16
+      },
+      {
+        "file": "assets/images/ai-enterprise-20-Engineering-Trust-in-AI-Generated-Code/p16.jpg",
+        "page": 16,
+        "role": "diagram",
+        "score": 12
+      }
+    ],
+    "summit": "ai-enterprise",
+    "order": 20,
+    "title": "Engineering Trust in AI-Generated Code",
+    "source_file": "20-Engineering Trust in AI-Generated Code.pdf"
+  },
+  {
+    "slug": "ai-enterprise-21-Building-a-Production-LLM-Pipeline-for-Ad-Content-Review-at-Scale_-Lessons-from-Argus",
+    "kind": "pdf",
+    "num_pages": 22,
+    "text_file": "data/text/ai-enterprise-21-Building-a-Production-LLM-Pipeline-for-Ad-Content-Review-at-Scale_-Lessons-from-Argus.txt",
+    "word_count": 6227,
+    "images": [
+      {
+        "file": "assets/images/ai-enterprise-21-Building-a-Production-LLM-Pipeline-for-Ad-Content-Review-at-Scale_-Lessons-from-Argus/cover.jpg",
+        "page": 1,
+        "role": "cover"
+      },
+      {
+        "file": "assets/images/ai-enterprise-21-Building-a-Production-LLM-Pipeline-for-Ad-Content-Review-at-Scale_-Lessons-from-Argus/p4.jpg",
+        "page": 4,
+        "role": "diagram",
+        "score": 24
+      },
+      {
+        "file": "assets/images/ai-enterprise-21-Building-a-Production-LLM-Pipeline-for-Ad-Content-Review-at-Scale_-Lessons-from-Argus/p6.jpg",
+        "page": 6,
+        "role": "diagram",
+        "score": 10
+      },
+      {
+        "file": "assets/images/ai-enterprise-21-Building-a-Production-LLM-Pipeline-for-Ad-Content-Review-at-Scale_-Lessons-from-Argus/p7.jpg",
+        "page": 7,
+        "role": "diagram",
+        "score": 13
+      },
+      {
+        "file": "assets/images/ai-enterprise-21-Building-a-Production-LLM-Pipeline-for-Ad-Content-Review-at-Scale_-Lessons-from-Argus/p18.jpg",
+        "page": 18,
+        "role": "diagram",
+        "score": 15
+      }
+    ],
+    "summit": "ai-enterprise",
+    "order": 21,
+    "title": "Building a Production LLM Pipeline for Ad Content Review at Scale_ Lessons from Argus",
+    "source_file": "21-Building a Production LLM Pipeline for Ad Content Review at Scale_ Lessons from Argus.pdf"
+  },
+  {
+    "slug": "ai-enterprise-22-詩人騷客的-Vibe-Coding-入門-Vibe-Coding-for-Poets",
+    "kind": "pdf",
+    "num_pages": 40,
+    "text_file": "data/text/ai-enterprise-22-詩人騷客的-Vibe-Coding-入門-Vibe-Coding-for-Poets.txt",
+    "word_count": 8600,
+    "images": [
+      {
+        "file": "assets/images/ai-enterprise-22-詩人騷客的-Vibe-Coding-入門-Vibe-Coding-for-Poets/cover.jpg",
+        "page": 1,
+        "role": "cover"
+      },
+      {
+        "file": "assets/images/ai-enterprise-22-詩人騷客的-Vibe-Coding-入門-Vibe-Coding-for-Poets/p8.jpg",
+        "page": 8,
+        "role": "diagram",
+        "score": 20
+      },
+      {
+        "file": "assets/images/ai-enterprise-22-詩人騷客的-Vibe-Coding-入門-Vibe-Coding-for-Poets/p9.jpg",
+        "page": 9,
+        "role": "diagram",
+        "score": 22
+      },
+      {
+        "file": "assets/images/ai-enterprise-22-詩人騷客的-Vibe-Coding-入門-Vibe-Coding-for-Poets/p14.jpg",
+        "page": 14,
+        "role": "diagram",
+        "score": 13
+      },
+      {
+        "file": "assets/images/ai-enterprise-22-詩人騷客的-Vibe-Coding-入門-Vibe-Coding-for-Poets/p34.jpg",
+        "page": 34,
+        "role": "diagram",
+        "score": 18
+      }
+    ],
+    "summit": "ai-enterprise",
+    "order": 22,
+    "title": "詩人騷客的 Vibe Coding 入門 (Vibe Coding for Poets)",
+    "source_file": "22-詩人騷客的 Vibe Coding 入門 (Vibe Coding for Poets).pdf"
+  },
+  {
+    "slug": "ai-enterprise-23-自研-On-prem-AI-Agent-搭配企業知識庫與建築營造產業應用可能性",
+    "kind": "pdf",
+    "num_pages": 26,
+    "text_file": "data/text/ai-enterprise-23-自研-On-prem-AI-Agent-搭配企業知識庫與建築營造產業應用可能性.txt",
+    "word_count": 4948,
+    "images": [
+      {
+        "file": "assets/images/ai-enterprise-23-自研-On-prem-AI-Agent-搭配企業知識庫與建築營造產業應用可能性/cover.jpg",
+        "page": 1,
+        "role": "cover"
+      },
+      {
+        "file": "assets/images/ai-enterprise-23-自研-On-prem-AI-Agent-搭配企業知識庫與建築營造產業應用可能性/p2.jpg",
+        "page": 2,
+        "role": "diagram",
+        "score": 11
+      },
+      {
+        "file": "assets/images/ai-enterprise-23-自研-On-prem-AI-Agent-搭配企業知識庫與建築營造產業應用可能性/p10.jpg",
+        "page": 10,
+        "role": "diagram",
+        "score": 55
+      },
+      {
+        "file": "assets/images/ai-enterprise-23-自研-On-prem-AI-Agent-搭配企業知識庫與建築營造產業應用可能性/p18.jpg",
+        "page": 18,
+        "role": "diagram",
+        "score": 14
+      },
+      {
+        "file": "assets/images/ai-enterprise-23-自研-On-prem-AI-Agent-搭配企業知識庫與建築營造產業應用可能性/p26.jpg",
+        "page": 26,
+        "role": "diagram",
+        "score": 12
+      }
+    ],
+    "summit": "ai-enterprise",
+    "order": 23,
+    "title": "自研 On-prem AI Agent 搭配企業知識庫與建築營造產業應用可能性",
+    "source_file": "23-自研 On-prem AI Agent 搭配企業知識庫與建築營造產業應用可能性.pdf"
+  },
+  {
+    "slug": "ai-enterprise-24-金融級-Enterprise-Agentic-AI-架構設計-從-PoC-到-Agentic-Operating-System",
+    "kind": "pdf",
+    "num_pages": 14,
+    "text_file": "data/text/ai-enterprise-24-金融級-Enterprise-Agentic-AI-架構設計-從-PoC-到-Agentic-Operating-System.txt",
+    "word_count": 8804,
+    "images": [
+      {
+        "file": "assets/images/ai-enterprise-24-金融級-Enterprise-Agentic-AI-架構設計-從-PoC-到-Agentic-Operating-System/cover.jpg",
+        "page": 1,
+        "role": "cover"
+      },
+      {
+        "file": "assets/images/ai-enterprise-24-金融級-Enterprise-Agentic-AI-架構設計-從-PoC-到-Agentic-Operating-System/p3.jpg",
+        "page": 3,
+        "role": "diagram",
+        "score": 9
+      },
+      {
+        "file": "assets/images/ai-enterprise-24-金融級-Enterprise-Agentic-AI-架構設計-從-PoC-到-Agentic-Operating-System/p4.jpg",
+        "page": 4,
+        "role": "diagram",
+        "score": 15
+      },
+      {
+        "file": "assets/images/ai-enterprise-24-金融級-Enterprise-Agentic-AI-架構設計-從-PoC-到-Agentic-Operating-System/p5.jpg",
+        "page": 5,
+        "role": "diagram",
+        "score": 9
+      },
+      {
+        "file": "assets/images/ai-enterprise-24-金融級-Enterprise-Agentic-AI-架構設計-從-PoC-到-Agentic-Operating-System/p13.jpg",
+        "page": 13,
+        "role": "diagram",
+        "score": 15
+      }
+    ],
+    "summit": "ai-enterprise",
+    "order": 24,
+    "title": "金融級 Enterprise Agentic AI 架構設計：從 PoC 到 Agentic Operating System",
+    "source_file": "24-金融級 Enterprise Agentic AI 架構設計：從 PoC 到 Agentic Operating System.pdf"
+  },
+  {
+    "slug": "ai-enterprise-25-LLM-O11y-從-Observability-到-Decision-System",
+    "kind": "md",
+    "num_pages": null,
+    "text_file": "data/text/ai-enterprise-25-LLM-O11y-從-Observability-到-Decision-System.txt",
+    "word_count": 2831,
+    "images": [],
+    "summit": "ai-enterprise",
+    "order": 25,
+    "title": "LLM O11y：從 Observability 到 Decision System",
+    "source_file": "25-LLM O11y：從 Observability 到 Decision System.md"
+  },
+  {
+    "slug": "ai-enterprise-26-撕開轉型華麗的包裝-一場從-煉獄-爬回-現實-的中小型企業AI落地化的生存指南",
+    "kind": "pdf",
+    "num_pages": 33,
+    "text_file": "data/text/ai-enterprise-26-撕開轉型華麗的包裝-一場從-煉獄-爬回-現實-的中小型企業AI落地化的生存指南.txt",
+    "word_count": 2674,
+    "images": [
+      {
+        "file": "assets/images/ai-enterprise-26-撕開轉型華麗的包裝-一場從-煉獄-爬回-現實-的中小型企業AI落地化的生存指南/cover.jpg",
+        "page": 1,
+        "role": "cover"
+      },
+      {
+        "file": "assets/images/ai-enterprise-26-撕開轉型華麗的包裝-一場從-煉獄-爬回-現實-的中小型企業AI落地化的生存指南/p6.jpg",
+        "page": 6,
+        "role": "diagram",
+        "score": 14
+      },
+      {
+        "file": "assets/images/ai-enterprise-26-撕開轉型華麗的包裝-一場從-煉獄-爬回-現實-的中小型企業AI落地化的生存指南/p7.jpg",
+        "page": 7,
+        "role": "diagram",
+        "score": 6
+      },
+      {
+        "file": "assets/images/ai-enterprise-26-撕開轉型華麗的包裝-一場從-煉獄-爬回-現實-的中小型企業AI落地化的生存指南/p15.jpg",
+        "page": 15,
+        "role": "diagram",
+        "score": 7
+      },
+      {
+        "file": "assets/images/ai-enterprise-26-撕開轉型華麗的包裝-一場從-煉獄-爬回-現實-的中小型企業AI落地化的生存指南/p21.jpg",
+        "page": 21,
+        "role": "diagram",
+        "score": 10
+      }
+    ],
+    "summit": "ai-enterprise",
+    "order": 26,
+    "title": "撕開轉型華麗的包裝：一場從「煉獄」爬回「現實」的中小型企業AI落地化的生存指南",
+    "source_file": "26-撕開轉型華麗的包裝：一場從「煉獄」爬回「現實」的中小型企業AI落地化的生存指南.pdf"
+  },
+  {
+    "slug": "ai-enterprise-27-當-AI-成為開發夥伴-電商平台的-SDD-開發經驗",
+    "kind": "pdf",
+    "num_pages": 42,
+    "text_file": "data/text/ai-enterprise-27-當-AI-成為開發夥伴-電商平台的-SDD-開發經驗.txt",
+    "word_count": 1818,
+    "images": [
+      {
+        "file": "assets/images/ai-enterprise-27-當-AI-成為開發夥伴-電商平台的-SDD-開發經驗/cover.jpg",
+        "page": 1,
+        "role": "cover"
+      },
+      {
+        "file": "assets/images/ai-enterprise-27-當-AI-成為開發夥伴-電商平台的-SDD-開發經驗/p2.jpg",
+        "page": 2,
+        "role": "diagram",
+        "score": 6
+      },
+      {
+        "file": "assets/images/ai-enterprise-27-當-AI-成為開發夥伴-電商平台的-SDD-開發經驗/p8.jpg",
+        "page": 8,
+        "role": "diagram",
+        "score": 6
+      },
+      {
+        "file": "assets/images/ai-enterprise-27-當-AI-成為開發夥伴-電商平台的-SDD-開發經驗/p17.jpg",
+        "page": 17,
+        "role": "diagram",
+        "score": 8
+      },
+      {
+        "file": "assets/images/ai-enterprise-27-當-AI-成為開發夥伴-電商平台的-SDD-開發經驗/p24.jpg",
+        "page": 24,
+        "role": "diagram",
+        "score": 7
+      }
+    ],
+    "summit": "ai-enterprise",
+    "order": 27,
+    "title": "當 AI 成為開發夥伴：電商平台的 SDD 開發經驗",
+    "source_file": "27-當 AI 成為開發夥伴：電商平台的 SDD 開發經驗.pdf"
+  },
+  {
+    "slug": "ai-enterprise-28-當會議逐字稿變成能力數據-Hahow-for-Business-用-AI-重建培訓驗證的實戰紀錄",
+    "kind": "pdf",
+    "num_pages": 26,
+    "text_file": "data/text/ai-enterprise-28-當會議逐字稿變成能力數據-Hahow-for-Business-用-AI-重建培訓驗證的實戰紀錄.txt",
+    "word_count": 25,
+    "images": [
+      {
+        "file": "assets/images/ai-enterprise-28-當會議逐字稿變成能力數據-Hahow-for-Business-用-AI-重建培訓驗證的實戰紀錄/cover.jpg",
+        "page": 1,
+        "role": "cover"
+      },
+      {
+        "file": "assets/images/ai-enterprise-28-當會議逐字稿變成能力數據-Hahow-for-Business-用-AI-重建培訓驗證的實戰紀錄/p14.jpg",
+        "page": 14,
+        "role": "diagram",
+        "score": 99
+      }
+    ],
+    "summit": "ai-enterprise",
+    "order": 28,
+    "title": "當會議逐字稿變成能力數據：Hahow for Business 用 AI 重建培訓驗證的實戰紀錄",
+    "source_file": "28-當會議逐字稿變成能力數據：Hahow for Business 用 AI 重建培訓驗證的實戰紀錄.pdf"
+  },
+  {
+    "slug": "ai-enterprise-29-Foundry-Local-實戰-AI-驅動-Windows-Server-2025-維運",
+    "kind": "pdf",
+    "num_pages": 21,
+    "text_file": "data/text/ai-enterprise-29-Foundry-Local-實戰-AI-驅動-Windows-Server-2025-維運.txt",
+    "word_count": 1196,
+    "images": [
+      {
+        "file": "assets/images/ai-enterprise-29-Foundry-Local-實戰-AI-驅動-Windows-Server-2025-維運/cover.jpg",
+        "page": 1,
+        "role": "cover"
+      },
+      {
+        "file": "assets/images/ai-enterprise-29-Foundry-Local-實戰-AI-驅動-Windows-Server-2025-維運/p4.jpg",
+        "page": 4,
+        "role": "diagram",
+        "score": 7
+      },
+      {
+        "file": "assets/images/ai-enterprise-29-Foundry-Local-實戰-AI-驅動-Windows-Server-2025-維運/p20.jpg",
+        "page": 20,
+        "role": "diagram",
+        "score": 9
+      }
+    ],
+    "summit": "ai-enterprise",
+    "order": 29,
+    "title": "Foundry Local 實戰：AI 驅動 Windows Server 2025 維運",
+    "source_file": "29-Foundry Local 實戰：AI 驅動 Windows Server 2025 維運.pdf"
+  },
+  {
+    "slug": "ai-enterprise-30-零資料接觸架構-讓-LLM-讀懂企業資料但永遠摸不到它",
+    "kind": "pdf",
+    "num_pages": 21,
+    "text_file": "data/text/ai-enterprise-30-零資料接觸架構-讓-LLM-讀懂企業資料但永遠摸不到它.txt",
+    "word_count": 2959,
+    "images": [
+      {
+        "file": "assets/images/ai-enterprise-30-零資料接觸架構-讓-LLM-讀懂企業資料但永遠摸不到它/cover.jpg",
+        "page": 1,
+        "role": "cover"
+      },
+      {
+        "file": "assets/images/ai-enterprise-30-零資料接觸架構-讓-LLM-讀懂企業資料但永遠摸不到它/p2.jpg",
+        "page": 2,
+        "role": "diagram",
+        "score": 15
+      },
+      {
+        "file": "assets/images/ai-enterprise-30-零資料接觸架構-讓-LLM-讀懂企業資料但永遠摸不到它/p7.jpg",
+        "page": 7,
+        "role": "diagram",
+        "score": 8
+      },
+      {
+        "file": "assets/images/ai-enterprise-30-零資料接觸架構-讓-LLM-讀懂企業資料但永遠摸不到它/p8.jpg",
+        "page": 8,
+        "role": "diagram",
+        "score": 13
+      },
+      {
+        "file": "assets/images/ai-enterprise-30-零資料接觸架構-讓-LLM-讀懂企業資料但永遠摸不到它/p20.jpg",
+        "page": 20,
+        "role": "diagram",
+        "score": 7
+      }
+    ],
+    "summit": "ai-enterprise",
+    "order": 30,
+    "title": "零資料接觸架構：讓 LLM 讀懂企業資料但永遠摸不到它",
+    "source_file": "30-零資料接觸架構：讓 LLM 讀懂企業資料但永遠摸不到它.pdf"
+  },
+  {
+    "slug": "ai-enterprise-31-FDA-文件提取智能體-從正則到自癒-AI-的演進-2",
+    "kind": "pdf",
+    "num_pages": 17,
+    "text_file": "data/text/ai-enterprise-31-FDA-文件提取智能體-從正則到自癒-AI-的演進-2.txt",
+    "word_count": 2587,
+    "images": [
+      {
+        "file": "assets/images/ai-enterprise-31-FDA-文件提取智能體-從正則到自癒-AI-的演進-2/cover.jpg",
+        "page": 1,
+        "role": "cover"
+      },
+      {
+        "file": "assets/images/ai-enterprise-31-FDA-文件提取智能體-從正則到自癒-AI-的演進-2/p3.jpg",
+        "page": 3,
+        "role": "diagram",
+        "score": 9
+      },
+      {
+        "file": "assets/images/ai-enterprise-31-FDA-文件提取智能體-從正則到自癒-AI-的演進-2/p6.jpg",
+        "page": 6,
+        "role": "diagram",
+        "score": 9
+      },
+      {
+        "file": "assets/images/ai-enterprise-31-FDA-文件提取智能體-從正則到自癒-AI-的演進-2/p8.jpg",
+        "page": 8,
+        "role": "diagram",
+        "score": 9
+      },
+      {
+        "file": "assets/images/ai-enterprise-31-FDA-文件提取智能體-從正則到自癒-AI-的演進-2/p12.jpg",
+        "page": 12,
+        "role": "diagram",
+        "score": 9
+      }
+    ],
+    "summit": "ai-enterprise",
+    "order": 31,
+    "title": "FDA 文件提取智能體：從正則到自癒 AI 的演進 (2)",
+    "source_file": "31-FDA 文件提取智能體：從正則到自癒 AI 的演進 (2).pdf"
+  },
+  {
+    "slug": "cloud-edge-01-馴服-Mythos-的烈馬-奔向-Cloud-Fable-把-AI-攻擊力轉譯為雲端韌性與正向賦能",
+    "kind": "pdf",
+    "num_pages": 33,
+    "text_file": "data/text/cloud-edge-01-馴服-Mythos-的烈馬-奔向-Cloud-Fable-把-AI-攻擊力轉譯為雲端韌性與正向賦能.txt",
+    "word_count": 1043,
+    "images": [
+      {
+        "file": "assets/images/cloud-edge-01-馴服-Mythos-的烈馬-奔向-Cloud-Fable-把-AI-攻擊力轉譯為雲端韌性與正向賦能/cover.jpg",
+        "page": 1,
+        "role": "cover"
+      },
+      {
+        "file": "assets/images/cloud-edge-01-馴服-Mythos-的烈馬-奔向-Cloud-Fable-把-AI-攻擊力轉譯為雲端韌性與正向賦能/p30.jpg",
+        "page": 30,
+        "role": "diagram",
+        "score": 6
+      }
+    ],
+    "summit": "cloud-edge",
+    "order": 1,
+    "title": "馴服 Mythos 的烈馬，奔向 Cloud Fable：把 AI 攻擊力轉譯為雲端韌性與正向賦能",
+    "source_file": "01-馴服 Mythos 的烈馬，奔向 Cloud Fable：把 AI 攻擊力轉譯為雲端韌性與正向賦能.pdf"
+  },
+  {
+    "slug": "cloud-edge-02-對抗-Agentic-AI-浪潮-Fortinet-雲端安全新思維-重塑-AI-驅動的防禦韌性",
+    "kind": "pdf",
+    "num_pages": 12,
+    "text_file": "data/text/cloud-edge-02-對抗-Agentic-AI-浪潮-Fortinet-雲端安全新思維-重塑-AI-驅動的防禦韌性.txt",
+    "word_count": 3013,
+    "images": [
+      {
+        "file": "assets/images/cloud-edge-02-對抗-Agentic-AI-浪潮-Fortinet-雲端安全新思維-重塑-AI-驅動的防禦韌性/cover.jpg",
+        "page": 1,
+        "role": "cover"
+      },
+      {
+        "file": "assets/images/cloud-edge-02-對抗-Agentic-AI-浪潮-Fortinet-雲端安全新思維-重塑-AI-驅動的防禦韌性/p5.jpg",
+        "page": 5,
+        "role": "diagram",
+        "score": 73
+      },
+      {
+        "file": "assets/images/cloud-edge-02-對抗-Agentic-AI-浪潮-Fortinet-雲端安全新思維-重塑-AI-驅動的防禦韌性/p7.jpg",
+        "page": 7,
+        "role": "diagram",
+        "score": 26
+      },
+      {
+        "file": "assets/images/cloud-edge-02-對抗-Agentic-AI-浪潮-Fortinet-雲端安全新思維-重塑-AI-驅動的防禦韌性/p8.jpg",
+        "page": 8,
+        "role": "diagram",
+        "score": 31
+      },
+      {
+        "file": "assets/images/cloud-edge-02-對抗-Agentic-AI-浪潮-Fortinet-雲端安全新思維-重塑-AI-驅動的防禦韌性/p11.jpg",
+        "page": 11,
+        "role": "diagram",
+        "score": 39
+      }
+    ],
+    "summit": "cloud-edge",
+    "order": 2,
+    "title": "對抗 Agentic AI 浪潮：Fortinet 雲端安全新思維，重塑 AI 驅動的防禦韌性",
+    "source_file": "02-對抗 Agentic AI 浪潮：Fortinet 雲端安全新思維，重塑 AI 驅動的防禦韌性.pdf"
+  },
+  {
+    "slug": "cloud-edge-03-打造-IT-大廠轉型組織的跨國實踐藍圖",
+    "kind": "pdf",
+    "num_pages": 9,
+    "text_file": "data/text/cloud-edge-03-打造-IT-大廠轉型組織的跨國實踐藍圖.txt",
+    "word_count": 991,
+    "images": [
+      {
+        "file": "assets/images/cloud-edge-03-打造-IT-大廠轉型組織的跨國實踐藍圖/cover.jpg",
+        "page": 1,
+        "role": "cover"
+      },
+      {
+        "file": "assets/images/cloud-edge-03-打造-IT-大廠轉型組織的跨國實踐藍圖/p2.jpg",
+        "page": 2,
+        "role": "diagram",
+        "score": 20
+      },
+      {
+        "file": "assets/images/cloud-edge-03-打造-IT-大廠轉型組織的跨國實踐藍圖/p3.jpg",
+        "page": 3,
+        "role": "diagram",
+        "score": 21
+      },
+      {
+        "file": "assets/images/cloud-edge-03-打造-IT-大廠轉型組織的跨國實踐藍圖/p4.jpg",
+        "page": 4,
+        "role": "diagram",
+        "score": 14
+      },
+      {
+        "file": "assets/images/cloud-edge-03-打造-IT-大廠轉型組織的跨國實踐藍圖/p5.jpg",
+        "page": 5,
+        "role": "diagram",
+        "score": 18
+      }
+    ],
+    "summit": "cloud-edge",
+    "order": 3,
+    "title": "打造 IT 大廠轉型組織的跨國實踐藍圖",
+    "source_file": "03-打造 IT 大廠轉型組織的跨國實踐藍圖.pdf"
+  },
+  {
+    "slug": "cloud-edge-04-Lab-Google-ADK-即時語音串流實現-GCP-平台與-DevOps-的整合應用",
+    "kind": "pdf",
+    "num_pages": 43,
+    "text_file": "data/text/cloud-edge-04-Lab-Google-ADK-即時語音串流實現-GCP-平台與-DevOps-的整合應用.txt",
+    "word_count": 42351,
+    "images": [
+      {
+        "file": "assets/images/cloud-edge-04-Lab-Google-ADK-即時語音串流實現-GCP-平台與-DevOps-的整合應用/cover.jpg",
+        "page": 1,
+        "role": "cover"
+      },
+      {
+        "file": "assets/images/cloud-edge-04-Lab-Google-ADK-即時語音串流實現-GCP-平台與-DevOps-的整合應用/p2.jpg",
+        "page": 2,
+        "role": "diagram",
+        "score": 8
+      },
+      {
+        "file": "assets/images/cloud-edge-04-Lab-Google-ADK-即時語音串流實現-GCP-平台與-DevOps-的整合應用/p18.jpg",
+        "page": 18,
+        "role": "diagram",
+        "score": 76
+      },
+      {
+        "file": "assets/images/cloud-edge-04-Lab-Google-ADK-即時語音串流實現-GCP-平台與-DevOps-的整合應用/p28.jpg",
+        "page": 28,
+        "role": "diagram",
+        "score": 20
+      },
+      {
+        "file": "assets/images/cloud-edge-04-Lab-Google-ADK-即時語音串流實現-GCP-平台與-DevOps-的整合應用/p32.jpg",
+        "page": 32,
+        "role": "diagram",
+        "score": 60
+      }
+    ],
+    "summit": "cloud-edge",
+    "order": 4,
+    "title": "(Lab) Google ADK 即時語音串流實現 GCP 平台與 DevOps 的整合應用",
+    "source_file": "04-(Lab) Google ADK 即時語音串流實現 GCP 平台與 DevOps 的整合應用.pdf"
+  },
+  {
+    "slug": "cloud-edge-05-AI-驅動-Kubernetes-Runtime-Security-超越傳統威脅偵測",
+    "kind": "pdf",
+    "num_pages": 35,
+    "text_file": "data/text/cloud-edge-05-AI-驅動-Kubernetes-Runtime-Security-超越傳統威脅偵測.txt",
+    "word_count": 5961,
+    "images": [
+      {
+        "file": "assets/images/cloud-edge-05-AI-驅動-Kubernetes-Runtime-Security-超越傳統威脅偵測/cover.jpg",
+        "page": 1,
+        "role": "cover"
+      },
+      {
+        "file": "assets/images/cloud-edge-05-AI-驅動-Kubernetes-Runtime-Security-超越傳統威脅偵測/p3.jpg",
+        "page": 3,
+        "role": "diagram",
+        "score": 70
+      },
+      {
+        "file": "assets/images/cloud-edge-05-AI-驅動-Kubernetes-Runtime-Security-超越傳統威脅偵測/p4.jpg",
+        "page": 4,
+        "role": "diagram",
+        "score": 99
+      },
+      {
+        "file": "assets/images/cloud-edge-05-AI-驅動-Kubernetes-Runtime-Security-超越傳統威脅偵測/p18.jpg",
+        "page": 18,
+        "role": "diagram",
+        "score": 102
+      },
+      {
+        "file": "assets/images/cloud-edge-05-AI-驅動-Kubernetes-Runtime-Security-超越傳統威脅偵測/p22.jpg",
+        "page": 22,
+        "role": "diagram",
+        "score": 89
+      }
+    ],
+    "summit": "cloud-edge",
+    "order": 5,
+    "title": "AI 驅動 Kubernetes Runtime Security：超越傳統威脅偵測",
+    "source_file": "05-AI 驅動 Kubernetes Runtime Security：超越傳統威脅偵測.pdf"
+  },
+  {
+    "slug": "cloud-edge-06-AI-原生企業正在誕生-重構企業運作與競爭優勢",
+    "kind": "pdf",
+    "num_pages": 17,
+    "text_file": "data/text/cloud-edge-06-AI-原生企業正在誕生-重構企業運作與競爭優勢.txt",
+    "word_count": 5490,
+    "images": [
+      {
+        "file": "assets/images/cloud-edge-06-AI-原生企業正在誕生-重構企業運作與競爭優勢/cover.jpg",
+        "page": 1,
+        "role": "cover"
+      },
+      {
+        "file": "assets/images/cloud-edge-06-AI-原生企業正在誕生-重構企業運作與競爭優勢/p6.jpg",
+        "page": 6,
+        "role": "diagram",
+        "score": 18
+      },
+      {
+        "file": "assets/images/cloud-edge-06-AI-原生企業正在誕生-重構企業運作與競爭優勢/p13.jpg",
+        "page": 13,
+        "role": "diagram",
+        "score": 21
+      },
+      {
+        "file": "assets/images/cloud-edge-06-AI-原生企業正在誕生-重構企業運作與競爭優勢/p14.jpg",
+        "page": 14,
+        "role": "diagram",
+        "score": 31
+      },
+      {
+        "file": "assets/images/cloud-edge-06-AI-原生企業正在誕生-重構企業運作與競爭優勢/p15.jpg",
+        "page": 15,
+        "role": "diagram",
+        "score": 44
+      }
+    ],
+    "summit": "cloud-edge",
+    "order": 6,
+    "title": "AI 原生企業正在誕生 - 重構企業運作與競爭優勢",
+    "source_file": "06-AI 原生企業正在誕生 - 重構企業運作與競爭優勢.pdf"
+  },
+  {
+    "slug": "cloud-edge-07-重構經典再啟智慧-CODE-AI-以規格驅動系統現代化",
+    "kind": "pdf",
+    "num_pages": 35,
+    "text_file": "data/text/cloud-edge-07-重構經典再啟智慧-CODE-AI-以規格驅動系統現代化.txt",
+    "word_count": 4226,
+    "images": [
+      {
+        "file": "assets/images/cloud-edge-07-重構經典再啟智慧-CODE-AI-以規格驅動系統現代化/cover.jpg",
+        "page": 1,
+        "role": "cover"
+      },
+      {
+        "file": "assets/images/cloud-edge-07-重構經典再啟智慧-CODE-AI-以規格驅動系統現代化/p6.jpg",
+        "page": 6,
+        "role": "diagram",
+        "score": 15
+      },
+      {
+        "file": "assets/images/cloud-edge-07-重構經典再啟智慧-CODE-AI-以規格驅動系統現代化/p7.jpg",
+        "page": 7,
+        "role": "diagram",
+        "score": 31
+      },
+      {
+        "file": "assets/images/cloud-edge-07-重構經典再啟智慧-CODE-AI-以規格驅動系統現代化/p34.jpg",
+        "page": 34,
+        "role": "diagram",
+        "score": 24
+      },
+      {
+        "file": "assets/images/cloud-edge-07-重構經典再啟智慧-CODE-AI-以規格驅動系統現代化/p35.jpg",
+        "page": 35,
+        "role": "diagram",
+        "score": 19
+      }
+    ],
+    "summit": "cloud-edge",
+    "order": 7,
+    "title": "重構經典再啟智慧，CODE×AI 以規格驅動系統現代化",
+    "source_file": "07-重構經典再啟智慧，CODE×AI 以規格驅動系統現代化.pdf"
+  },
+  {
+    "slug": "cloud-edge-08-雲端資安化繁為簡-無代理架構與-AI-驅動的次世代防禦雙引擎",
+    "kind": "pdf",
+    "num_pages": 46,
+    "text_file": "data/text/cloud-edge-08-雲端資安化繁為簡-無代理架構與-AI-驅動的次世代防禦雙引擎.txt",
+    "word_count": 8141,
+    "images": [
+      {
+        "file": "assets/images/cloud-edge-08-雲端資安化繁為簡-無代理架構與-AI-驅動的次世代防禦雙引擎/cover.jpg",
+        "page": 1,
+        "role": "cover"
+      },
+      {
+        "file": "assets/images/cloud-edge-08-雲端資安化繁為簡-無代理架構與-AI-驅動的次世代防禦雙引擎/p8.jpg",
+        "page": 8,
+        "role": "diagram",
+        "score": 22
+      },
+      {
+        "file": "assets/images/cloud-edge-08-雲端資安化繁為簡-無代理架構與-AI-驅動的次世代防禦雙引擎/p9.jpg",
+        "page": 9,
+        "role": "diagram",
+        "score": 29
+      },
+      {
+        "file": "assets/images/cloud-edge-08-雲端資安化繁為簡-無代理架構與-AI-驅動的次世代防禦雙引擎/p10.jpg",
+        "page": 10,
+        "role": "diagram",
+        "score": 29
+      },
+      {
+        "file": "assets/images/cloud-edge-08-雲端資安化繁為簡-無代理架構與-AI-驅動的次世代防禦雙引擎/p45.jpg",
+        "page": 45,
+        "role": "diagram",
+        "score": 53
+      }
+    ],
+    "summit": "cloud-edge",
+    "order": 8,
+    "title": "雲端資安化繁為簡：無代理架構與 AI 驅動的次世代防禦雙引擎",
+    "source_file": "08-雲端資安化繁為簡：無代理架構與 AI 驅動的次世代防禦雙引擎.pdf"
+  },
+  {
+    "slug": "cloud-edge-09-從觀望到全公司落地-AI-Agentic-Coding-導入實戰",
+    "kind": "md",
+    "num_pages": null,
+    "text_file": "data/text/cloud-edge-09-從觀望到全公司落地-AI-Agentic-Coding-導入實戰.txt",
+    "word_count": 4621,
+    "images": [],
+    "summit": "cloud-edge",
+    "order": 9,
+    "title": "從觀望到全公司落地：AI Agentic Coding 導入實戰",
+    "source_file": "09-從觀望到全公司落地：AI Agentic Coding 導入實戰.md"
+  },
+  {
+    "slug": "cloud-edge-10-共智時代-The-Next-Step",
+    "kind": "pdf",
+    "num_pages": 53,
+    "text_file": "data/text/cloud-edge-10-共智時代-The-Next-Step.txt",
+    "word_count": 7132,
+    "images": [
+      {
+        "file": "assets/images/cloud-edge-10-共智時代-The-Next-Step/cover.jpg",
+        "page": 1,
+        "role": "cover"
+      },
+      {
+        "file": "assets/images/cloud-edge-10-共智時代-The-Next-Step/p7.jpg",
+        "page": 7,
+        "role": "diagram",
+        "score": 28
+      },
+      {
+        "file": "assets/images/cloud-edge-10-共智時代-The-Next-Step/p23.jpg",
+        "page": 23,
+        "role": "diagram",
+        "score": 22
+      },
+      {
+        "file": "assets/images/cloud-edge-10-共智時代-The-Next-Step/p42.jpg",
+        "page": 42,
+        "role": "diagram",
+        "score": 32
+      },
+      {
+        "file": "assets/images/cloud-edge-10-共智時代-The-Next-Step/p53.jpg",
+        "page": 53,
+        "role": "diagram",
+        "score": 34
+      }
+    ],
+    "summit": "cloud-edge",
+    "order": 10,
+    "title": "共智時代：The Next Step",
+    "source_file": "10-共智時代：The Next Step.pdf"
+  },
+  {
+    "slug": "cloud-edge-11-混合雲時代的保命符",
+    "kind": "pdf",
+    "num_pages": 28,
+    "text_file": "data/text/cloud-edge-11-混合雲時代的保命符.txt",
+    "word_count": 1669,
+    "images": [
+      {
+        "file": "assets/images/cloud-edge-11-混合雲時代的保命符/cover.jpg",
+        "page": 1,
+        "role": "cover"
+      },
+      {
+        "file": "assets/images/cloud-edge-11-混合雲時代的保命符/p7.jpg",
+        "page": 7,
+        "role": "diagram",
+        "score": 26
+      },
+      {
+        "file": "assets/images/cloud-edge-11-混合雲時代的保命符/p11.jpg",
+        "page": 11,
+        "role": "diagram",
+        "score": 24
+      },
+      {
+        "file": "assets/images/cloud-edge-11-混合雲時代的保命符/p21.jpg",
+        "page": 21,
+        "role": "diagram",
+        "score": 31
+      },
+      {
+        "file": "assets/images/cloud-edge-11-混合雲時代的保命符/p25.jpg",
+        "page": 25,
+        "role": "diagram",
+        "score": 23
+      }
+    ],
+    "summit": "cloud-edge",
+    "order": 11,
+    "title": "混合雲時代的保命符",
+    "source_file": "11-混合雲時代的保命符.pdf"
+  },
+  {
+    "slug": "cloud-edge-12-當-AI-遇見數據-構建面向智能體的現代數據底座",
+    "kind": "pdf",
+    "num_pages": 19,
+    "text_file": "data/text/cloud-edge-12-當-AI-遇見數據-構建面向智能體的現代數據底座.txt",
+    "word_count": 5326,
+    "images": [
+      {
+        "file": "assets/images/cloud-edge-12-當-AI-遇見數據-構建面向智能體的現代數據底座/cover.jpg",
+        "page": 1,
+        "role": "cover"
+      },
+      {
+        "file": "assets/images/cloud-edge-12-當-AI-遇見數據-構建面向智能體的現代數據底座/p7.jpg",
+        "page": 7,
+        "role": "diagram",
+        "score": 50
+      },
+      {
+        "file": "assets/images/cloud-edge-12-當-AI-遇見數據-構建面向智能體的現代數據底座/p12.jpg",
+        "page": 12,
+        "role": "diagram",
+        "score": 148
+      },
+      {
+        "file": "assets/images/cloud-edge-12-當-AI-遇見數據-構建面向智能體的現代數據底座/p13.jpg",
+        "page": 13,
+        "role": "diagram",
+        "score": 32
+      },
+      {
+        "file": "assets/images/cloud-edge-12-當-AI-遇見數據-構建面向智能體的現代數據底座/p14.jpg",
+        "page": 14,
+        "role": "diagram",
+        "score": 45
+      }
+    ],
+    "summit": "cloud-edge",
+    "order": 12,
+    "title": "當 AI 遇見數據：構建面向智能體的現代數據底座",
+    "source_file": "12-當 AI 遇見數據：構建面向智能體的現代數據底座.pdf"
+  },
+  {
+    "slug": "cloud-edge-13-When-Not-to-Vibe-從-Vibe-Coding-到-Spec-driven-AI-Engineering",
+    "kind": "md",
+    "num_pages": null,
+    "text_file": "data/text/cloud-edge-13-When-Not-to-Vibe-從-Vibe-Coding-到-Spec-driven-AI-Engineering.txt",
+    "word_count": 2380,
+    "images": [],
+    "summit": "cloud-edge",
+    "order": 13,
+    "title": "When Not to Vibe 從 Vibe Coding 到 Spec-driven AI Engineering",
+    "source_file": "13-When Not to Vibe 從 Vibe Coding 到 Spec-driven AI Engineering.md"
+  },
+  {
+    "slug": "cloud-edge-14-金融業透過-AI-打造新顧客服務體驗-AI-房貸顧問",
+    "kind": "pdf",
+    "num_pages": 22,
+    "text_file": "data/text/cloud-edge-14-金融業透過-AI-打造新顧客服務體驗-AI-房貸顧問.txt",
+    "word_count": 6489,
+    "images": [
+      {
+        "file": "assets/images/cloud-edge-14-金融業透過-AI-打造新顧客服務體驗-AI-房貸顧問/cover.jpg",
+        "page": 1,
+        "role": "cover"
+      },
+      {
+        "file": "assets/images/cloud-edge-14-金融業透過-AI-打造新顧客服務體驗-AI-房貸顧問/p3.jpg",
+        "page": 3,
+        "role": "diagram",
+        "score": 20
+      },
+      {
+        "file": "assets/images/cloud-edge-14-金融業透過-AI-打造新顧客服務體驗-AI-房貸顧問/p6.jpg",
+        "page": 6,
+        "role": "diagram",
+        "score": 15
+      },
+      {
+        "file": "assets/images/cloud-edge-14-金融業透過-AI-打造新顧客服務體驗-AI-房貸顧問/p7.jpg",
+        "page": 7,
+        "role": "diagram",
+        "score": 19
+      },
+      {
+        "file": "assets/images/cloud-edge-14-金融業透過-AI-打造新顧客服務體驗-AI-房貸顧問/p10.jpg",
+        "page": 10,
+        "role": "diagram",
+        "score": 11
+      }
+    ],
+    "summit": "cloud-edge",
+    "order": 14,
+    "title": "金融業透過 AI 打造新顧客服務體驗-AI 房貸顧問",
+    "source_file": "14-金融業透過 AI 打造新顧客服務體驗-AI 房貸顧問.pdf"
+  },
+  {
+    "slug": "cloud-edge-15-Secure-GenAI-on-Cloud-結合-ISO-27001-TIPS-法遵的企業級-AI-IP-敏感資料治理架構",
+    "kind": "pdf",
+    "num_pages": 15,
+    "text_file": "data/text/cloud-edge-15-Secure-GenAI-on-Cloud-結合-ISO-27001-TIPS-法遵的企業級-AI-IP-敏感資料治理架構.txt",
+    "word_count": 14,
+    "images": [
+      {
+        "file": "assets/images/cloud-edge-15-Secure-GenAI-on-Cloud-結合-ISO-27001-TIPS-法遵的企業級-AI-IP-敏感資料治理架構/cover.jpg",
+        "page": 1,
+        "role": "cover"
+      },
+      {
+        "file": "assets/images/cloud-edge-15-Secure-GenAI-on-Cloud-結合-ISO-27001-TIPS-法遵的企業級-AI-IP-敏感資料治理架構/p6.jpg",
+        "page": 6,
+        "role": "diagram",
+        "score": 99
+      },
+      {
+        "file": "assets/images/cloud-edge-15-Secure-GenAI-on-Cloud-結合-ISO-27001-TIPS-法遵的企業級-AI-IP-敏感資料治理架構/p10.jpg",
+        "page": 10,
+        "role": "diagram",
+        "score": 99
+      }
+    ],
+    "summit": "cloud-edge",
+    "order": 15,
+    "title": "Secure GenAI on Cloud：結合 ISO 27001 × TIPS × 法遵的企業級 AI × IP × 敏感資料治理架構",
+    "source_file": "15-Secure GenAI on Cloud：結合 ISO 27001 × TIPS × 法遵的企業級 AI × IP × 敏感資料治理架構.pdf"
+  },
+  {
+    "slug": "cloud-edge-16-Google-ADK-即時語音串流實現-GCP-平台與-DevOps-的整合應用",
+    "kind": "pdf",
+    "num_pages": 27,
+    "text_file": "data/text/cloud-edge-16-Google-ADK-即時語音串流實現-GCP-平台與-DevOps-的整合應用.txt",
+    "word_count": 4928,
+    "images": [
+      {
+        "file": "assets/images/cloud-edge-16-Google-ADK-即時語音串流實現-GCP-平台與-DevOps-的整合應用/cover.jpg",
+        "page": 1,
+        "role": "cover"
+      },
+      {
+        "file": "assets/images/cloud-edge-16-Google-ADK-即時語音串流實現-GCP-平台與-DevOps-的整合應用/p2.jpg",
+        "page": 2,
+        "role": "diagram",
+        "score": 21
+      },
+      {
+        "file": "assets/images/cloud-edge-16-Google-ADK-即時語音串流實現-GCP-平台與-DevOps-的整合應用/p4.jpg",
+        "page": 4,
+        "role": "diagram",
+        "score": 16
+      },
+      {
+        "file": "assets/images/cloud-edge-16-Google-ADK-即時語音串流實現-GCP-平台與-DevOps-的整合應用/p6.jpg",
+        "page": 6,
+        "role": "diagram",
+        "score": 17
+      },
+      {
+        "file": "assets/images/cloud-edge-16-Google-ADK-即時語音串流實現-GCP-平台與-DevOps-的整合應用/p9.jpg",
+        "page": 9,
+        "role": "diagram",
+        "score": 17
+      }
+    ],
+    "summit": "cloud-edge",
+    "order": 16,
+    "title": "Google ADK 即時語音串流實現 GCP 平台與 DevOps 的整合應用",
+    "source_file": "16-Google ADK 即時語音串流實現 GCP 平台與 DevOps 的整合應用.pdf"
+  },
+  {
+    "slug": "cloud-edge-17-新世代防禦-Agentic-AI-賦能-Cloud-SOC-維運",
+    "kind": "pdf",
+    "num_pages": 10,
+    "text_file": "data/text/cloud-edge-17-新世代防禦-Agentic-AI-賦能-Cloud-SOC-維運.txt",
+    "word_count": 1638,
+    "images": [
+      {
+        "file": "assets/images/cloud-edge-17-新世代防禦-Agentic-AI-賦能-Cloud-SOC-維運/cover.jpg",
+        "page": 1,
+        "role": "cover"
+      },
+      {
+        "file": "assets/images/cloud-edge-17-新世代防禦-Agentic-AI-賦能-Cloud-SOC-維運/p5.jpg",
+        "page": 5,
+        "role": "diagram",
+        "score": 22
+      },
+      {
+        "file": "assets/images/cloud-edge-17-新世代防禦-Agentic-AI-賦能-Cloud-SOC-維運/p6.jpg",
+        "page": 6,
+        "role": "diagram",
+        "score": 18
+      },
+      {
+        "file": "assets/images/cloud-edge-17-新世代防禦-Agentic-AI-賦能-Cloud-SOC-維運/p7.jpg",
+        "page": 7,
+        "role": "diagram",
+        "score": 17
+      },
+      {
+        "file": "assets/images/cloud-edge-17-新世代防禦-Agentic-AI-賦能-Cloud-SOC-維運/p8.jpg",
+        "page": 8,
+        "role": "diagram",
+        "score": 14
+      }
+    ],
+    "summit": "cloud-edge",
+    "order": 17,
+    "title": "新世代防禦：Agentic AI 賦能 Cloud SOC 維運",
+    "source_file": "17-新世代防禦：Agentic AI 賦能 Cloud SOC 維運.pdf"
+  },
+  {
+    "slug": "cloud-edge-18-透過統一-IT-平台推動數位韌性",
+    "kind": "pdf",
+    "num_pages": 37,
+    "text_file": "data/text/cloud-edge-18-透過統一-IT-平台推動數位韌性.txt",
+    "word_count": 7235,
+    "images": [
+      {
+        "file": "assets/images/cloud-edge-18-透過統一-IT-平台推動數位韌性/cover.jpg",
+        "page": 1,
+        "role": "cover"
+      },
+      {
+        "file": "assets/images/cloud-edge-18-透過統一-IT-平台推動數位韌性/p19.jpg",
+        "page": 19,
+        "role": "diagram",
+        "score": 37
+      },
+      {
+        "file": "assets/images/cloud-edge-18-透過統一-IT-平台推動數位韌性/p31.jpg",
+        "page": 31,
+        "role": "diagram",
+        "score": 43
+      },
+      {
+        "file": "assets/images/cloud-edge-18-透過統一-IT-平台推動數位韌性/p33.jpg",
+        "page": 33,
+        "role": "diagram",
+        "score": 45
+      },
+      {
+        "file": "assets/images/cloud-edge-18-透過統一-IT-平台推動數位韌性/p34.jpg",
+        "page": 34,
+        "role": "diagram",
+        "score": 45
+      }
+    ],
+    "summit": "cloud-edge",
+    "order": 18,
+    "title": "透過統一 IT 平台推動數位韌性",
+    "source_file": "18-透過統一 IT 平台推動數位韌性.pdf"
+  },
+  {
+    "slug": "cloud-edge-19-後-Mythos-時代-應如何應對漏洞激增",
+    "kind": "pdf",
+    "num_pages": 29,
+    "text_file": "data/text/cloud-edge-19-後-Mythos-時代-應如何應對漏洞激增.txt",
+    "word_count": 6239,
+    "images": [
+      {
+        "file": "assets/images/cloud-edge-19-後-Mythos-時代-應如何應對漏洞激增/cover.jpg",
+        "page": 1,
+        "role": "cover"
+      },
+      {
+        "file": "assets/images/cloud-edge-19-後-Mythos-時代-應如何應對漏洞激增/p10.jpg",
+        "page": 10,
+        "role": "diagram",
+        "score": 11
+      },
+      {
+        "file": "assets/images/cloud-edge-19-後-Mythos-時代-應如何應對漏洞激增/p17.jpg",
+        "page": 17,
+        "role": "diagram",
+        "score": 30
+      },
+      {
+        "file": "assets/images/cloud-edge-19-後-Mythos-時代-應如何應對漏洞激增/p24.jpg",
+        "page": 24,
+        "role": "diagram",
+        "score": 15
+      },
+      {
+        "file": "assets/images/cloud-edge-19-後-Mythos-時代-應如何應對漏洞激增/p28.jpg",
+        "page": 28,
+        "role": "diagram",
+        "score": 73
+      }
+    ],
+    "summit": "cloud-edge",
+    "order": 19,
+    "title": "後 Mythos 時代，應如何應對漏洞激增？",
+    "source_file": "19-後 Mythos 時代，應如何應對漏洞激增？.pdf"
+  },
+  {
+    "slug": "cloud-edge-20-打造-Agentic-Kubernetes-以-kagent-A2A-構築自主協作生態系",
+    "kind": "pdf",
+    "num_pages": 53,
+    "text_file": "data/text/cloud-edge-20-打造-Agentic-Kubernetes-以-kagent-A2A-構築自主協作生態系.txt",
+    "word_count": 10735,
+    "images": [
+      {
+        "file": "assets/images/cloud-edge-20-打造-Agentic-Kubernetes-以-kagent-A2A-構築自主協作生態系/cover.jpg",
+        "page": 1,
+        "role": "cover"
+      },
+      {
+        "file": "assets/images/cloud-edge-20-打造-Agentic-Kubernetes-以-kagent-A2A-構築自主協作生態系/p37.jpg",
+        "page": 37,
+        "role": "diagram",
+        "score": 17
+      },
+      {
+        "file": "assets/images/cloud-edge-20-打造-Agentic-Kubernetes-以-kagent-A2A-構築自主協作生態系/p38.jpg",
+        "page": 38,
+        "role": "diagram",
+        "score": 19
+      },
+      {
+        "file": "assets/images/cloud-edge-20-打造-Agentic-Kubernetes-以-kagent-A2A-構築自主協作生態系/p39.jpg",
+        "page": 39,
+        "role": "diagram",
+        "score": 21
+      },
+      {
+        "file": "assets/images/cloud-edge-20-打造-Agentic-Kubernetes-以-kagent-A2A-構築自主協作生態系/p41.jpg",
+        "page": 41,
+        "role": "diagram",
+        "score": 27
+      }
+    ],
+    "summit": "cloud-edge",
+    "order": 20,
+    "title": "打造 Agentic Kubernetes：以 kagent × A2A 構築自主協作生態系",
+    "source_file": "20-打造 Agentic Kubernetes：以 kagent × A2A 構築自主協作生態系.pdf"
+  },
+  {
+    "slug": "cloud-edge-21-Lab-打造你的-AI-工作流-Agent-Skill-MCP-實戰工作坊",
+    "kind": "md",
+    "num_pages": null,
+    "text_file": "data/text/cloud-edge-21-Lab-打造你的-AI-工作流-Agent-Skill-MCP-實戰工作坊.txt",
+    "word_count": 3125,
+    "images": [],
+    "summit": "cloud-edge",
+    "order": 21,
+    "title": "Lab 打造你的 AI 工作流：Agent Skill + MCP 實戰工作坊",
+    "source_file": "21-Lab 打造你的 AI 工作流：Agent Skill + MCP 實戰工作坊.md"
+  },
+  {
+    "slug": "cloud-edge-22-舊玩意-新創意-用-AI-打破資安消耗戰-經驗實務分享",
+    "kind": "pdf",
+    "num_pages": 59,
+    "text_file": "data/text/cloud-edge-22-舊玩意-新創意-用-AI-打破資安消耗戰-經驗實務分享.txt",
+    "word_count": 1583,
+    "images": [
+      {
+        "file": "assets/images/cloud-edge-22-舊玩意-新創意-用-AI-打破資安消耗戰-經驗實務分享/cover.jpg",
+        "page": 1,
+        "role": "cover"
+      },
+      {
+        "file": "assets/images/cloud-edge-22-舊玩意-新創意-用-AI-打破資安消耗戰-經驗實務分享/p45.jpg",
+        "page": 45,
+        "role": "diagram",
+        "score": 7
+      },
+      {
+        "file": "assets/images/cloud-edge-22-舊玩意-新創意-用-AI-打破資安消耗戰-經驗實務分享/p55.jpg",
+        "page": 55,
+        "role": "diagram",
+        "score": 6
+      }
+    ],
+    "summit": "cloud-edge",
+    "order": 22,
+    "title": "舊玩意，新創意：用 AI 打破資安消耗戰，經驗實務分享",
+    "source_file": "22-舊玩意，新創意：用 AI 打破資安消耗戰，經驗實務分享.pdf"
+  },
+  {
+    "slug": "cloud-edge-23-以極致彈性-化解地端與雲端的現實拉扯",
+    "kind": "pdf",
+    "num_pages": 27,
+    "text_file": "data/text/cloud-edge-23-以極致彈性-化解地端與雲端的現實拉扯.txt",
+    "word_count": 5708,
+    "images": [
+      {
+        "file": "assets/images/cloud-edge-23-以極致彈性-化解地端與雲端的現實拉扯/cover.jpg",
+        "page": 1,
+        "role": "cover"
+      },
+      {
+        "file": "assets/images/cloud-edge-23-以極致彈性-化解地端與雲端的現實拉扯/p6.jpg",
+        "page": 6,
+        "role": "diagram",
+        "score": 124
+      },
+      {
+        "file": "assets/images/cloud-edge-23-以極致彈性-化解地端與雲端的現實拉扯/p19.jpg",
+        "page": 19,
+        "role": "diagram",
+        "score": 122
+      },
+      {
+        "file": "assets/images/cloud-edge-23-以極致彈性-化解地端與雲端的現實拉扯/p22.jpg",
+        "page": 22,
+        "role": "diagram",
+        "score": 132
+      },
+      {
+        "file": "assets/images/cloud-edge-23-以極致彈性-化解地端與雲端的現實拉扯/p26.jpg",
+        "page": 26,
+        "role": "diagram",
+        "score": 89
+      }
+    ],
+    "summit": "cloud-edge",
+    "order": 23,
+    "title": "以極致彈性，化解地端與雲端的現實拉扯",
+    "source_file": "23-以極致彈性，化解地端與雲端的現實拉扯.pdf"
+  },
+  {
+    "slug": "cloud-edge-24-AI-驅動企業進化-管理者決策現場的智能轉型實戰",
+    "kind": "pdf",
+    "num_pages": 30,
+    "text_file": "data/text/cloud-edge-24-AI-驅動企業進化-管理者決策現場的智能轉型實戰.txt",
+    "word_count": 7517,
+    "images": [
+      {
+        "file": "assets/images/cloud-edge-24-AI-驅動企業進化-管理者決策現場的智能轉型實戰/cover.jpg",
+        "page": 1,
+        "role": "cover"
+      },
+      {
+        "file": "assets/images/cloud-edge-24-AI-驅動企業進化-管理者決策現場的智能轉型實戰/p3.jpg",
+        "page": 3,
+        "role": "diagram",
+        "score": 78
+      },
+      {
+        "file": "assets/images/cloud-edge-24-AI-驅動企業進化-管理者決策現場的智能轉型實戰/p10.jpg",
+        "page": 10,
+        "role": "diagram",
+        "score": 74
+      },
+      {
+        "file": "assets/images/cloud-edge-24-AI-驅動企業進化-管理者決策現場的智能轉型實戰/p21.jpg",
+        "page": 21,
+        "role": "diagram",
+        "score": 79
+      },
+      {
+        "file": "assets/images/cloud-edge-24-AI-驅動企業進化-管理者決策現場的智能轉型實戰/p30.jpg",
+        "page": 30,
+        "role": "diagram",
+        "score": 389
+      }
+    ],
+    "summit": "cloud-edge",
+    "order": 24,
+    "title": "AI 驅動企業進化：管理者決策現場的智能轉型實戰",
+    "source_file": "24-AI 驅動企業進化：管理者決策現場的智能轉型實戰.pdf"
+  },
+  {
+    "slug": "cloud-edge-25-當-AI-開始呼叫-API-企業正面臨的新攻擊面",
+    "kind": "pdf",
+    "num_pages": 21,
+    "text_file": "data/text/cloud-edge-25-當-AI-開始呼叫-API-企業正面臨的新攻擊面.txt",
+    "word_count": 5103,
+    "images": [
+      {
+        "file": "assets/images/cloud-edge-25-當-AI-開始呼叫-API-企業正面臨的新攻擊面/cover.jpg",
+        "page": 1,
+        "role": "cover"
+      },
+      {
+        "file": "assets/images/cloud-edge-25-當-AI-開始呼叫-API-企業正面臨的新攻擊面/p8.jpg",
+        "page": 8,
+        "role": "diagram",
+        "score": 19
+      },
+      {
+        "file": "assets/images/cloud-edge-25-當-AI-開始呼叫-API-企業正面臨的新攻擊面/p9.jpg",
+        "page": 9,
+        "role": "diagram",
+        "score": 19
+      },
+      {
+        "file": "assets/images/cloud-edge-25-當-AI-開始呼叫-API-企業正面臨的新攻擊面/p16.jpg",
+        "page": 16,
+        "role": "diagram",
+        "score": 20
+      },
+      {
+        "file": "assets/images/cloud-edge-25-當-AI-開始呼叫-API-企業正面臨的新攻擊面/p18.jpg",
+        "page": 18,
+        "role": "diagram",
+        "score": 25
+      }
+    ],
+    "summit": "cloud-edge",
+    "order": 25,
+    "title": "當 AI 開始呼叫 API：企業正面臨的新攻擊面",
+    "source_file": "25-當 AI 開始呼叫 API：企業正面臨的新攻擊面.pdf"
+  },
+  {
+    "slug": "cloud-edge-26-國泰雲端碳管理平台-金融科技賦能金融業實現碳管理",
+    "kind": "pdf",
+    "num_pages": 22,
+    "text_file": "data/text/cloud-edge-26-國泰雲端碳管理平台-金融科技賦能金融業實現碳管理.txt",
+    "word_count": 4508,
+    "images": [
+      {
+        "file": "assets/images/cloud-edge-26-國泰雲端碳管理平台-金融科技賦能金融業實現碳管理/cover.jpg",
+        "page": 1,
+        "role": "cover"
+      },
+      {
+        "file": "assets/images/cloud-edge-26-國泰雲端碳管理平台-金融科技賦能金融業實現碳管理/p5.jpg",
+        "page": 5,
+        "role": "diagram",
+        "score": 34
+      },
+      {
+        "file": "assets/images/cloud-edge-26-國泰雲端碳管理平台-金融科技賦能金融業實現碳管理/p17.jpg",
+        "page": 17,
+        "role": "diagram",
+        "score": 101
+      },
+      {
+        "file": "assets/images/cloud-edge-26-國泰雲端碳管理平台-金融科技賦能金融業實現碳管理/p18.jpg",
+        "page": 18,
+        "role": "diagram",
+        "score": 56
+      },
+      {
+        "file": "assets/images/cloud-edge-26-國泰雲端碳管理平台-金融科技賦能金融業實現碳管理/p19.jpg",
+        "page": 19,
+        "role": "diagram",
+        "score": 50
+      }
+    ],
+    "summit": "cloud-edge",
+    "order": 26,
+    "title": "國泰雲端碳管理平台—金融科技賦能金融業實現碳管理",
+    "source_file": "26-國泰雲端碳管理平台—金融科技賦能金融業實現碳管理.pdf"
+  },
+  {
+    "slug": "cloud-edge-27-高雄-AI-燈塔計畫-以高雄主權-AI-出發-打造國家級-AI-旗艦城市",
+    "kind": "pdf",
+    "num_pages": 15,
+    "text_file": "data/text/cloud-edge-27-高雄-AI-燈塔計畫-以高雄主權-AI-出發-打造國家級-AI-旗艦城市.txt",
+    "word_count": 2239,
+    "images": [
+      {
+        "file": "assets/images/cloud-edge-27-高雄-AI-燈塔計畫-以高雄主權-AI-出發-打造國家級-AI-旗艦城市/cover.jpg",
+        "page": 1,
+        "role": "cover"
+      },
+      {
+        "file": "assets/images/cloud-edge-27-高雄-AI-燈塔計畫-以高雄主權-AI-出發-打造國家級-AI-旗艦城市/p3.jpg",
+        "page": 3,
+        "role": "diagram",
+        "score": 6
+      },
+      {
+        "file": "assets/images/cloud-edge-27-高雄-AI-燈塔計畫-以高雄主權-AI-出發-打造國家級-AI-旗艦城市/p8.jpg",
+        "page": 8,
+        "role": "diagram",
+        "score": 10
+      },
+      {
+        "file": "assets/images/cloud-edge-27-高雄-AI-燈塔計畫-以高雄主權-AI-出發-打造國家級-AI-旗艦城市/p9.jpg",
+        "page": 9,
+        "role": "diagram",
+        "score": 8
+      },
+      {
+        "file": "assets/images/cloud-edge-27-高雄-AI-燈塔計畫-以高雄主權-AI-出發-打造國家級-AI-旗艦城市/p10.jpg",
+        "page": 10,
+        "role": "diagram",
+        "score": 10
+      }
+    ],
+    "summit": "cloud-edge",
+    "order": 27,
+    "title": "高雄 AI 燈塔計畫 - 以高雄主權 AI 出發，打造國家級 AI 旗艦城市",
+    "source_file": "27-高雄 AI 燈塔計畫 - 以高雄主權 AI 出發，打造國家級 AI 旗艦城市.pdf"
+  },
+  {
+    "slug": "cloud-edge-28-從-Cloud-First-到-Agent-First-企業-IT-為何要提前為-AI-Agent-打底",
+    "kind": "pdf",
+    "num_pages": 24,
+    "text_file": "data/text/cloud-edge-28-從-Cloud-First-到-Agent-First-企業-IT-為何要提前為-AI-Agent-打底.txt",
+    "word_count": 4710,
+    "images": [
+      {
+        "file": "assets/images/cloud-edge-28-從-Cloud-First-到-Agent-First-企業-IT-為何要提前為-AI-Agent-打底/cover.jpg",
+        "page": 1,
+        "role": "cover"
+      },
+      {
+        "file": "assets/images/cloud-edge-28-從-Cloud-First-到-Agent-First-企業-IT-為何要提前為-AI-Agent-打底/p3.jpg",
+        "page": 3,
+        "role": "diagram",
+        "score": 15
+      },
+      {
+        "file": "assets/images/cloud-edge-28-從-Cloud-First-到-Agent-First-企業-IT-為何要提前為-AI-Agent-打底/p11.jpg",
+        "page": 11,
+        "role": "diagram",
+        "score": 15
+      },
+      {
+        "file": "assets/images/cloud-edge-28-從-Cloud-First-到-Agent-First-企業-IT-為何要提前為-AI-Agent-打底/p16.jpg",
+        "page": 16,
+        "role": "diagram",
+        "score": 15
+      },
+      {
+        "file": "assets/images/cloud-edge-28-從-Cloud-First-到-Agent-First-企業-IT-為何要提前為-AI-Agent-打底/p17.jpg",
+        "page": 17,
+        "role": "diagram",
+        "score": 19
+      }
+    ],
+    "summit": "cloud-edge",
+    "order": 28,
+    "title": "從 Cloud First 到 Agent First：企業 IT 為何要提前為 AI Agent 打底",
+    "source_file": "28-從 Cloud First 到 Agent First：企業 IT 為何要提前為 AI Agent 打底.pdf"
+  },
+  {
+    "slug": "cloud-edge-29-混合式-AI-架構-驅動企業敏捷與創新",
+    "kind": "pdf",
+    "num_pages": 32,
+    "text_file": "data/text/cloud-edge-29-混合式-AI-架構-驅動企業敏捷與創新.txt",
+    "word_count": 7529,
+    "images": [
+      {
+        "file": "assets/images/cloud-edge-29-混合式-AI-架構-驅動企業敏捷與創新/cover.jpg",
+        "page": 1,
+        "role": "cover"
+      },
+      {
+        "file": "assets/images/cloud-edge-29-混合式-AI-架構-驅動企業敏捷與創新/p4.jpg",
+        "page": 4,
+        "role": "diagram",
+        "score": 16
+      },
+      {
+        "file": "assets/images/cloud-edge-29-混合式-AI-架構-驅動企業敏捷與創新/p7.jpg",
+        "page": 7,
+        "role": "diagram",
+        "score": 21
+      },
+      {
+        "file": "assets/images/cloud-edge-29-混合式-AI-架構-驅動企業敏捷與創新/p12.jpg",
+        "page": 12,
+        "role": "diagram",
+        "score": 19
+      },
+      {
+        "file": "assets/images/cloud-edge-29-混合式-AI-架構-驅動企業敏捷與創新/p15.jpg",
+        "page": 15,
+        "role": "diagram",
+        "score": 18
+      }
+    ],
+    "summit": "cloud-edge",
+    "order": 29,
+    "title": "混合式 AI 架構，驅動企業敏捷與創新",
+    "source_file": "29-混合式 AI 架構，驅動企業敏捷與創新.pdf"
+  },
+  {
+    "slug": "cloud-edge-30-當-AI-成為維運工程師的同事-企業-IT-infra-維運-AI-導入實戰分享",
+    "kind": "pdf",
+    "num_pages": 14,
+    "text_file": "data/text/cloud-edge-30-當-AI-成為維運工程師的同事-企業-IT-infra-維運-AI-導入實戰分享.txt",
+    "word_count": 616,
+    "images": [
+      {
+        "file": "assets/images/cloud-edge-30-當-AI-成為維運工程師的同事-企業-IT-infra-維運-AI-導入實戰分享/cover.jpg",
+        "page": 1,
+        "role": "cover"
+      },
+      {
+        "file": "assets/images/cloud-edge-30-當-AI-成為維運工程師的同事-企業-IT-infra-維運-AI-導入實戰分享/p4.jpg",
+        "page": 4,
+        "role": "diagram",
+        "score": 14
+      },
+      {
+        "file": "assets/images/cloud-edge-30-當-AI-成為維運工程師的同事-企業-IT-infra-維運-AI-導入實戰分享/p5.jpg",
+        "page": 5,
+        "role": "diagram",
+        "score": 12
+      },
+      {
+        "file": "assets/images/cloud-edge-30-當-AI-成為維運工程師的同事-企業-IT-infra-維運-AI-導入實戰分享/p8.jpg",
+        "page": 8,
+        "role": "diagram",
+        "score": 12
+      },
+      {
+        "file": "assets/images/cloud-edge-30-當-AI-成為維運工程師的同事-企業-IT-infra-維運-AI-導入實戰分享/p9.jpg",
+        "page": 9,
+        "role": "diagram",
+        "score": 12
+      }
+    ],
+    "summit": "cloud-edge",
+    "order": 30,
+    "title": "當 AI 成為維運工程師的同事— 企業 IT infra 維運 AI 導入實戰分享",
+    "source_file": "30-當 AI 成為維運工程師的同事— 企業 IT infra 維運 AI 導入實戰分享.pdf"
+  },
+  {
+    "slug": "cloud-edge-31-從數位轉型到-AI-創新-旅遊業的智慧轉型之路",
+    "kind": "pdf",
+    "num_pages": 26,
+    "text_file": "data/text/cloud-edge-31-從數位轉型到-AI-創新-旅遊業的智慧轉型之路.txt",
+    "word_count": 25,
+    "images": [
+      {
+        "file": "assets/images/cloud-edge-31-從數位轉型到-AI-創新-旅遊業的智慧轉型之路/cover.jpg",
+        "page": 1,
+        "role": "cover"
+      },
+      {
+        "file": "assets/images/cloud-edge-31-從數位轉型到-AI-創新-旅遊業的智慧轉型之路/p10.jpg",
+        "page": 10,
+        "role": "diagram",
+        "score": 99
+      },
+      {
+        "file": "assets/images/cloud-edge-31-從數位轉型到-AI-創新-旅遊業的智慧轉型之路/p18.jpg",
+        "page": 18,
+        "role": "diagram",
+        "score": 99
+      }
+    ],
+    "summit": "cloud-edge",
+    "order": 31,
+    "title": "從數位轉型到 AI 創新：旅遊業的智慧轉型之路",
+    "source_file": "31-從數位轉型到 AI 創新：旅遊業的智慧轉型之路.pdf"
+  },
+  {
+    "slug": "cloud-edge-32-AI-與資安的完美結合-探索雲端機密運算的奧妙",
+    "kind": "pdf",
+    "num_pages": 27,
+    "text_file": "data/text/cloud-edge-32-AI-與資安的完美結合-探索雲端機密運算的奧妙.txt",
+    "word_count": 5950,
+    "images": [
+      {
+        "file": "assets/images/cloud-edge-32-AI-與資安的完美結合-探索雲端機密運算的奧妙/cover.jpg",
+        "page": 1,
+        "role": "cover"
+      },
+      {
+        "file": "assets/images/cloud-edge-32-AI-與資安的完美結合-探索雲端機密運算的奧妙/p8.jpg",
+        "page": 8,
+        "role": "diagram",
+        "score": 15
+      },
+      {
+        "file": "assets/images/cloud-edge-32-AI-與資安的完美結合-探索雲端機密運算的奧妙/p9.jpg",
+        "page": 9,
+        "role": "diagram",
+        "score": 15
+      },
+      {
+        "file": "assets/images/cloud-edge-32-AI-與資安的完美結合-探索雲端機密運算的奧妙/p14.jpg",
+        "page": 14,
+        "role": "diagram",
+        "score": 14
+      },
+      {
+        "file": "assets/images/cloud-edge-32-AI-與資安的完美結合-探索雲端機密運算的奧妙/p15.jpg",
+        "page": 15,
+        "role": "diagram",
+        "score": 17
+      }
+    ],
+    "summit": "cloud-edge",
+    "order": 32,
+    "title": "AI 與資安的完美結合-探索雲端機密運算的奧妙",
+    "source_file": "32-AI 與資安的完美結合-探索雲端機密運算的奧妙.pdf"
+  },
+  {
+    "slug": "cloud-edge-33-FinOps-不只是看後照鏡開車",
+    "kind": "pdf",
+    "num_pages": 46,
+    "text_file": "data/text/cloud-edge-33-FinOps-不只是看後照鏡開車.txt",
+    "word_count": 9375,
+    "images": [
+      {
+        "file": "assets/images/cloud-edge-33-FinOps-不只是看後照鏡開車/cover.jpg",
+        "page": 1,
+        "role": "cover"
+      },
+      {
+        "file": "assets/images/cloud-edge-33-FinOps-不只是看後照鏡開車/p7.jpg",
+        "page": 7,
+        "role": "diagram",
+        "score": 30
+      },
+      {
+        "file": "assets/images/cloud-edge-33-FinOps-不只是看後照鏡開車/p19.jpg",
+        "page": 19,
+        "role": "diagram",
+        "score": 24
+      },
+      {
+        "file": "assets/images/cloud-edge-33-FinOps-不只是看後照鏡開車/p36.jpg",
+        "page": 36,
+        "role": "diagram",
+        "score": 25
+      },
+      {
+        "file": "assets/images/cloud-edge-33-FinOps-不只是看後照鏡開車/p37.jpg",
+        "page": 37,
+        "role": "diagram",
+        "score": 22
+      }
+    ],
+    "summit": "cloud-edge",
+    "order": 33,
+    "title": "FinOps 不只是看後照鏡開車",
+    "source_file": "33-FinOps 不只是看後照鏡開車.pdf"
+  },
+  {
+    "slug": "cloud-edge-34-從應用實例看-AI-如何賦能台灣旅宿業",
+    "kind": "pdf",
+    "num_pages": 77,
+    "text_file": "data/text/cloud-edge-34-從應用實例看-AI-如何賦能台灣旅宿業.txt",
+    "word_count": 10428,
+    "images": [
+      {
+        "file": "assets/images/cloud-edge-34-從應用實例看-AI-如何賦能台灣旅宿業/cover.jpg",
+        "page": 1,
+        "role": "cover"
+      },
+      {
+        "file": "assets/images/cloud-edge-34-從應用實例看-AI-如何賦能台灣旅宿業/p35.jpg",
+        "page": 35,
+        "role": "diagram",
+        "score": 14
+      },
+      {
+        "file": "assets/images/cloud-edge-34-從應用實例看-AI-如何賦能台灣旅宿業/p39.jpg",
+        "page": 39,
+        "role": "diagram",
+        "score": 13
+      },
+      {
+        "file": "assets/images/cloud-edge-34-從應用實例看-AI-如何賦能台灣旅宿業/p42.jpg",
+        "page": 42,
+        "role": "diagram",
+        "score": 19
+      },
+      {
+        "file": "assets/images/cloud-edge-34-從應用實例看-AI-如何賦能台灣旅宿業/p77.jpg",
+        "page": 77,
+        "role": "diagram",
+        "score": 24
+      }
+    ],
+    "summit": "cloud-edge",
+    "order": 34,
+    "title": "從應用實例看 AI 如何賦能台灣旅宿業",
+    "source_file": "34-從應用實例看 AI 如何賦能台灣旅宿業.pdf"
+  },
+  {
+    "slug": "cloud-edge-35-從-MSSQL-雲端遷移-看超大型資料庫如何優雅邁向雲端自治",
+    "kind": "pdf",
+    "num_pages": 32,
+    "text_file": "data/text/cloud-edge-35-從-MSSQL-雲端遷移-看超大型資料庫如何優雅邁向雲端自治.txt",
+    "word_count": 5817,
+    "images": [
+      {
+        "file": "assets/images/cloud-edge-35-從-MSSQL-雲端遷移-看超大型資料庫如何優雅邁向雲端自治/cover.jpg",
+        "page": 1,
+        "role": "cover"
+      },
+      {
+        "file": "assets/images/cloud-edge-35-從-MSSQL-雲端遷移-看超大型資料庫如何優雅邁向雲端自治/p2.jpg",
+        "page": 2,
+        "role": "diagram",
+        "score": 24
+      },
+      {
+        "file": "assets/images/cloud-edge-35-從-MSSQL-雲端遷移-看超大型資料庫如何優雅邁向雲端自治/p6.jpg",
+        "page": 6,
+        "role": "diagram",
+        "score": 7
+      },
+      {
+        "file": "assets/images/cloud-edge-35-從-MSSQL-雲端遷移-看超大型資料庫如何優雅邁向雲端自治/p9.jpg",
+        "page": 9,
+        "role": "diagram",
+        "score": 7
+      },
+      {
+        "file": "assets/images/cloud-edge-35-從-MSSQL-雲端遷移-看超大型資料庫如何優雅邁向雲端自治/p12.jpg",
+        "page": 12,
+        "role": "diagram",
+        "score": 9
+      }
+    ],
+    "summit": "cloud-edge",
+    "order": 35,
+    "title": "從 MSSQL 雲端遷移，看超大型資料庫如何優雅邁向雲端自治",
+    "source_file": "35-從 MSSQL 雲端遷移，看超大型資料庫如何優雅邁向雲端自治.pdf"
+  },
+  {
+    "slug": "cloud-edge-36-金融業生成式-AI-平台工程-以雲端原生架構打造可擴展的-Agentic-AI-中樞",
+    "kind": "pdf",
+    "num_pages": 14,
+    "text_file": "data/text/cloud-edge-36-金融業生成式-AI-平台工程-以雲端原生架構打造可擴展的-Agentic-AI-中樞.txt",
+    "word_count": 2679,
+    "images": [
+      {
+        "file": "assets/images/cloud-edge-36-金融業生成式-AI-平台工程-以雲端原生架構打造可擴展的-Agentic-AI-中樞/cover.jpg",
+        "page": 1,
+        "role": "cover"
+      },
+      {
+        "file": "assets/images/cloud-edge-36-金融業生成式-AI-平台工程-以雲端原生架構打造可擴展的-Agentic-AI-中樞/p5.jpg",
+        "page": 5,
+        "role": "diagram",
+        "score": 11
+      },
+      {
+        "file": "assets/images/cloud-edge-36-金融業生成式-AI-平台工程-以雲端原生架構打造可擴展的-Agentic-AI-中樞/p7.jpg",
+        "page": 7,
+        "role": "diagram",
+        "score": 9
+      },
+      {
+        "file": "assets/images/cloud-edge-36-金融業生成式-AI-平台工程-以雲端原生架構打造可擴展的-Agentic-AI-中樞/p8.jpg",
+        "page": 8,
+        "role": "diagram",
+        "score": 9
+      },
+      {
+        "file": "assets/images/cloud-edge-36-金融業生成式-AI-平台工程-以雲端原生架構打造可擴展的-Agentic-AI-中樞/p10.jpg",
+        "page": 10,
+        "role": "diagram",
+        "score": 9
+      }
+    ],
+    "summit": "cloud-edge",
+    "order": 36,
+    "title": "金融業生成式 AI 平台工程：以雲端原生架構打造可擴展的 Agentic AI 中樞",
+    "source_file": "36-金融業生成式 AI 平台工程：以雲端原生架構打造可擴展的 Agentic AI 中樞.pdf"
+  },
+  {
+    "slug": "cloud-edge-37-Microsoft-Agent-Framework-Orleans-打造雲地協同-AI-工作流",
+    "kind": "md",
+    "num_pages": null,
+    "text_file": "data/text/cloud-edge-37-Microsoft-Agent-Framework-Orleans-打造雲地協同-AI-工作流.txt",
+    "word_count": 3038,
+    "images": [],
+    "summit": "cloud-edge",
+    "order": 37,
+    "title": "Microsoft Agent Framework + Orleans 打造雲地協同 AI 工作流",
+    "source_file": "37-Microsoft Agent Framework + Orleans 打造雲地協同 AI 工作流.md"
+  }
+]

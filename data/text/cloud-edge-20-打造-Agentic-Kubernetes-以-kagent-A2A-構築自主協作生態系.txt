@@ -1,0 +1,734 @@
+
+===== PAGE 1 =====
+打造 Agentic 
+Kubernetes：以 
+kagent × A2A 構築
+自主協作生態系
+MaiCoin Group SRE - Charles Hsiao
+
+===== PAGE 2 =====
+Charles Hsiao @ Cloud Summit 2026
+Agenda
+kagent 如何驅動 K8s 的自主維運
+A2A 驅動的 Agentic AI 未來
+深入剖析 A2A 協議與 Agent Mesh
+AI 的透明化、信任建立與未來演進
+01
+02
+04
+03
+跨越孤島
+構築橋樑
+破浪啟航
+航向新局
+
+===== PAGE 3 =====
+Charles Hsiao @ Cloud Summit 2026
+跨越孤島
+A2A 驅動的 Agentic AI 未來
+01
+
+===== PAGE 4 =====
+Charles Hsiao @ Cloud Summit 2026
+雲原生維運演進路徑
+命令式 
+(Imperative)
+●
+手動下指令
+●
+執行 Scripts
+宣告式 
+(Declarative)
+●
+K8s YAML
+●
+GitOps
+自動化 
+(Automated)
+●
+事件驅動自動化
+●
+Operator 模式
+自主化 
+(Autonomous)
+●
+AIOps
+●
+Agentic Workﬂow
+人類參與程度
+低
+高
+
+===== PAGE 5 =====
+Charles Hsiao @ Cloud Summit 2026
+Gartner
+↑40%
+2026 年底企業應用程式將有 40% 整合
+task-speciﬁc AI Agent (目前不到 5%)
+↑30 % (450B)
+2035 年，AI Agent 將推動企業應用軟體營收
+(2025 年為 2%)
+Source: 
+https://www.processexcellencenetwork.com/ai/news/gartner-40-percent-of-enterprise-apps-will-
+feature-task-speciﬁc-ai-agents-by-2026
+
+===== PAGE 6 =====
+Charles Hsiao @ Cloud Summit 2026
+現狀挑戰：AI  Agent 的「巴別塔困境」
+生態系碎片化
+●
+各家框架（LangChain, 
+CrewAI, AutoGPT）通訊
+協議不一
+●
+模型廠商（OpenAI, 
+Anthropic, Google）接
+口標準各自為政
+●
+每增加一個 Agent 或
+工具，都需要撰寫專
+屬的 Adapter
+●
+Agent 間如同孤島，
+被困在特定的運行環
+境，無法實現真正的
+跨組織協作
+M x N 整合陷阱
+
+===== PAGE 7 =====
+Charles Hsiao @ Cloud Summit 2026
+
+===== PAGE 8 =====
+Charles Hsiao @ Cloud Summit 2026
+A2A 協議：AI Agent 的通用語言
+建立信任與安全
+提供統一的身份驗證、權限
+授權與通訊加密標準，確保 
+Agent 在自動化執行任務時
+的安全性
+讓不同開發者、不同模型驅
+動的 AI Agent 能夠直接對話
+，無需為每個 Agent 撰寫專
+用的對接代碼
+打破溝通孤島
+2025/04：Google 正式公開了 A2A (Agent-to-Agent) 協定，並宣布將其貢
+獻給 Linux 基金會，作為推動 AI  Agent 互通性的開放標準。
+
+===== PAGE 9 =====
+Charles Hsiao @ Cloud Summit 2026
+從「單兵作戰」到「代理微服務」：為什麼 A2A 
+才是解答？
+專業分工
+●
+單一 Super Agent 容易
+產生「幻覺」
+●
+A2A 模式：讓「專業的人
+做專業的事」
+●
+單一 Agent 若掛載過多工
+具或上下文，會導致推理
+能力下降、Context 遺忘
+●
+A2A 模式：分散計算負荷
+，每個代理僅維護其任務
+相關的工具集與 Context
+●
+Super Agent 擁有全域權
+限是資安噩夢
+●
+A2A 模式：可實現權限隔
+離，Agent 間僅交換「產
+出物」(Artifacts)
+解決 Agent 的健
+忘與分心
+最小權限原則
+
+===== PAGE 10 =====
+Charles Hsiao @ Cloud Summit 2026
+微服務根因分析 (RCA) 準確度
+39.8% -> 91.3%
+1.7% -> 100%
+可執行建議率 (Actionability Rate)
+↑70%
+平均決策質量分數 (Mean DQ Score)
+Source: 
+- Multi-Agent Systems for Root Cause Analysis in Microservices: https://arxiv.org/html/2605.03505v1
+- Multi-Agent LLM Orchestration Achieves Deterministic, High-Quality Decision Support for Incident 
+Response: https://arxiv.org/html/2511.15755v2
+AIOps：Single Agent vs Multi-Agent
+
+===== PAGE 11 =====
+Charles Hsiao @ Cloud Summit 2026
+“智人之所以得以統治
+地球，是因為智人是唯
+一可以『大規模地』且
+『靈活地』合作的物種” – 
+尤瓦爾·哈拉瑞
+“Sapiens rule the world because we are the 
+only animal that can cooperate ﬂexibly in 
+large numbers.” - Yuval Noah Harari
+
+===== PAGE 12 =====
+Charles Hsiao @ Cloud Summit 2026
+構築橋樑
+深入剖析 A2A 協議與 Agent Mesh
+02
+
+===== PAGE 13 =====
+Charles Hsiao @ Cloud Summit 2026
+Agent Card：Agent 的履歷
+{
+ "name": "OpenSearch Expert Agent",
+ "version": "1.0.0",
+ "description": "專精於 OpenSearch 叢集架構、Query 
+DSL 優化及向量搜尋的技術專家。",
+ "provider": {
+   "name": "YourOrg Tech",
+   "url": "https://yourorg.com"
+ },
+ "url": 
+"https://api.yourorg.com/a2a/opensearch-agent",
+ "documentationUrl": 
+"https://docs.yourorg.com/opensearch-agent",
+ "capabilities": {
+   "streaming": true,
+   "pushNotifications": true
+ },
+ …
+https://{server_domain}/.well-known/agent-card.json
+Agent Card 
+Agent 用途
+人類履歷欄位
+name
+例如 OpenSearch 專家
+姓名
+version
+目前 Agent 技能的迭代狀態
+履歷版本
+description
+簡短的快速總結核心價值
+個人簡介 Summary
+provider
+定義是誰開發和維運這個 
+Agent
+前/現職公司、畢業學
+校/科系、推薦人
+url/documen
+tationURL
+點進去可以看到更詳細的專
+案細節、Spec 文件等等
+個人作品集、部落格、
+GitHub 連結
+capabilities
+Agent 支援哪些通訊協議
+工作模式偏好
+(Remote/Hybrid...)
+描述 Agent 身分、能力、端點與安全需求的 JSON 文件，
+讓其他 Agent 能「找到我」並知道「我能做什麼」。
+
+===== PAGE 14 =====
+Charles Hsiao @ Cloud Summit 2026
+Agent Card：Agent 的履歷
+…
+ "skills": [
+   {
+     "id": "query-optimization",
+     "name": "Query DSL 優化",
+     "description": "分析並優化複雜的 OpenSearch 查詢語句
+以提升效能。"
+   },
+   {
+     "id": "vector-search-setup",
+     "name": "向量搜尋配置",
+     "description": "設定 k-NN 插件與向量索引架構。"
+   }
+ ],
+ "interfaces": [
+   {
+     "type": "JSON_RPC_2_0",
+     "url": 
+"https://api.yourorg.com/a2a/opensearch-agent"
+   }
+ ]
+}
+https://{server_domain}/.well-known/agent-card.json
+Agent Card 
+Agent 用途
+人類履歷欄位
+skills
+列出 Agent 擅長哪些具
+體任務
+專業技能清單
+interfaces
+支援的通訊介面和具體
+的連線 URL
+聯絡方式（電話、Email、
+LinkedIn）
+
+===== PAGE 15 =====
+Charles Hsiao @ Cloud Summit 2026
+解析 A2A：從任務定義到成果產出
+task
+Agent 的工單
+Agent 協調與執行的最小原子單
+位，封裝了Intent、Context 與交
+付標準
+taskId, status..etc
+metadata
+
+===== PAGE 16 =====
+Charles Hsiao @ Cloud Summit 2026
+解析 A2A：從任務定義到成果產出
+task
+metadata
+messages
+Agent 的對話載體
+Agent 間交換意圖與結果的訊息
+，封裝了對話流、狀態與任務的
+執行細節
+
+===== PAGE 17 =====
+Charles Hsiao @ Cloud Summit 2026
+解析 A2A：從任務定義到成果產出
+task
+metadata
+messages
+Agent 的執行產物
+Task 執行過程或結束後產生的
+實體，封裝了執行結果、Logs
+artifacts
+
+===== PAGE 18 =====
+Charles Hsiao @ Cloud Summit 2026
+解析 A2A：從任務定義到成果產出
+task
+metadata
+messages
+artifacts
+parts
+parts
+Message & Artifact 的零件
+構成 messages 與 artifacts 的基
+本單位，可以是純文字字串、
+Binary、URL、結構化 JSON
+
+===== PAGE 19 =====
+Charles Hsiao @ Cloud Summit 2026
+artifacts
+messages
+parts
+parts
+解析 A2A：從任務定義到成果產出
+task
+metadata
+messages
+artifacts
+parts
+parts
+
+===== PAGE 20 =====
+Charles Hsiao @ Cloud Summit 2026
+Task State：A2A 任務狀態機 (FSM)
+任務已經提交
+submitted
+任務正在處理中
+working
+任務需要客戶端
+提供額外的輸入資訊
+input-required
+任務已成功完成
+completed
+任務已被取消
+canceled
+任務執行失敗
+failed
+unknown
+任務狀態不明
+將「不可預測的 AI 行為」包裝進「可預測的工程框架」
+
+===== PAGE 21 =====
+Charles Hsiao @ Cloud Summit 2026
+Task State - submitted
+場景： 使用者提出爬蟲需求。
+
+===== PAGE 22 =====
+Charles Hsiao @ Cloud Summit 2026
+Task State - input-required
+場景： Agent 發現需要 URL 才能精確撰寫程式碼。
+
+===== PAGE 23 =====
+Charles Hsiao @ Cloud Summit 2026
+Task State - working
+場景：使用者回覆網址後，Agent 開始生成程式碼。此時 artifacts 中的 append: true 代表內容會持
+續增加，lastChunk: false 代表還沒傳完。
+
+===== PAGE 24 =====
+Charles Hsiao @ Cloud Summit 2026
+Task State - working
+場景：程式碼生成完畢。lastChunk 轉為 true，標示 artifacts 已封裝。
+
+===== PAGE 25 =====
+Charles Hsiao @ Cloud Summit 2026
+Task State - completed
+場景：Agent 在 messages 回覆 User 程式碼已產出完畢。
+
+===== PAGE 26 =====
+Charles Hsiao @ Cloud Summit 2026
+Task State - completed（Revision）
+場景： 使用者要求增加功能（如 CSV 存檔）。Agent 產出 index: 1。注意 artifacts 陣列現在有兩個物
+件，保留了歷史版本。
+
+===== PAGE 27 =====
+Charles Hsiao @ Cloud Summit 2026
+A2A vs MCP：水平協作 vs 垂直擴展
+Source: https://a2a-protocol.org/latest/#how-does-a2a-work-with-mcp
+
+===== PAGE 28 =====
+Charles Hsiao @ Cloud Summit 2026
+從服務導向到意圖導向：A2A 構建的 Agent 
+Mesh 新紀元
+Agent 透過 A2A 協議自動
+發現彼此，並宣告能力邊
+界 (Capability) 
+賦予 Agent 自主判斷力，
+將傳統 API Request 演進
+為透過 Agent 進行目標導
+向的任務達成
+打破組織邊界，實現異構 
+Agent 之間的零摩擦溝通
+自動化服務發現
+API -> Agent Based
+跨域協作的標準化
+
+===== PAGE 29 =====
+Charles Hsiao @ Cloud Summit 2026
+破浪啟航
+kagent 如何驅動 K8s 的自主維運
+03
+
+===== PAGE 30 =====
+Charles Hsiao @ Cloud Summit 2026
+可觀測性/AIOps 痛點
+雲端原生環境呈指數級增
+長，已逐漸超出人類能掌
+控的邊界
+●
+Metrics/Logs/Traces 
+缺乏關聯分析
+●
+AI Agents 缺乏協作
+機制框架
+AI 推理過程不透明且不
+可被審計，導入 AIOps 後
+難以理解 AI 的決策脈絡
+系統複雜度指數成長
+數據 & AI 協作孤島
+「黑盒」信任危機
+
+===== PAGE 31 =====
+Charles Hsiao @ Cloud Summit 2026
+kagent ：Cloud Native Agentic AI
+sandbox project
+
+===== PAGE 32 =====
+Charles Hsiao @ Cloud Summit 2026
+Why kagent Is Different？
+●
+Agent-based (取代 
+Scripts)
+●
+Deﬁne with k8s CR
+●
+整合 A2A 
+(Agent-to-Agent) 
+●
+整合 MCP 工具
+●
+支援主流與 Local 
+LLMs
+●
+開箱即用的可觀測
+性
+Cloud-Native
+標準化通信
+生態與觀測
+💡kagent 不是另外一個 Agent，而是一個讓你在 K8s 上定義、編排並擴充
+多個 Agent 的運維框架。
+
+===== PAGE 33 =====
+Charles Hsiao @ Cloud Summit 2026
+Demo - Agentic SRE
+
+===== PAGE 34 =====
+Charles Hsiao @ Cloud Summit 2026
+實戰 
+kagent：Agentic 
+O11y 的落地實踐
+情境：使用者反應網站結帳介面極慢
+
+===== PAGE 35 =====
+Charles Hsiao @ Cloud Summit 2026
+實戰 kagent：Agentic O11y 的落地實踐
+SRE Agent
+Observability Agent
+SRE Agent -> Observability Agent：透過 Prometheus 偵測到 P99 Latency 上升
+Prometheus
+
+===== PAGE 36 =====
+Charles Hsiao @ Cloud Summit 2026
+實戰 kagent：Agentic O11y 的落地實踐
+SRE Agent
+Observability Agent
+Otel Agent
+SRE Agent -> Otel Agent：Payment-Service 的總體回應時間變長，且追
+蹤顯示多個下游呼叫（DB 與 MQ）延遲都有增加
+Prometheus
+
+===== PAGE 37 =====
+Charles Hsiao @ Cloud Summit 2026
+實戰 kagent：Agentic O11y 的落地實踐
+SRE Agent
+Observability Agent
+AWS Agent
+Cloudwatch Agent
+Loki Agent
+Otel Agent
+SRE Agent -> Loki Agent：Payment-Service 噴出大量 Producer Timeout
+SRE Agent -> AWS Agent -> Cloudwatch Agent：RDS slow query 顯著增加、
+RDS CPU 100%
+Prometheus
+RDS slow query
+RDS metrics
+RocketMQ logs
+
+===== PAGE 38 =====
+Charles Hsiao @ Cloud Summit 2026
+實戰 kagent：Agentic O11y 的落地實踐
+SRE Agent
+K8s Agent
+Observability Agent
+AWS Agent
+Cloudwatch Agent
+Loki Agent
+Otel Agent
+SRE Agent -> K8s Agent：發現 Pod 數量雖多，但 CPU 被這些卡住的 
+Thread 耗盡
+Prometheus
+RDS slow query
+RDS metrics
+RocketMQ logs
+
+===== PAGE 39 =====
+Charles Hsiao @ Cloud Summit 2026
+實戰 kagent：Agentic O11y 的落地實踐
+SRE Agent
+Istio Agent
+K8s Agent
+Observability Agent
+AWS Agent
+Cloudwatch Agent
+Loki Agent
+Otel Agent
+SRE Agent -> Istio Agent：Payment-Service 回應變慢，觸發了 Istio 預設的 
+Retry Policy，導致重試風暴 (Retry Storm)，讓 RDS 負載更加雪上加霜
+Prometheus
+RDS slow query
+RDS metrics
+RocketMQ logs
+
+===== PAGE 40 =====
+Charles Hsiao @ Cloud Summit 2026
+超越告警：Agentic 
+O11y 的協作力量
+●
+告警不等於真相：避免在局部資訊中迷失
+●
+全貌洞察：揭露 Istio 重試風暴如何放大問題
+●
+kagent 價值：跨 Agent 協作，從假性症狀中找
+到資料庫才是 Root cause
+
+===== PAGE 41 =====
+Charles Hsiao @ Cloud Summit 2026
+實戰 kagent：Agentic O11y 的落地實踐
+SRE Agent
+Istio Agent
+K8s Agent
+Observability Agent
+AWS Agent
+Cloudwatch Agent
+Loki Agent
+Otel Agent
+Prometheus
+RDS slow query
+RDS metrics
+RocketMQ logs
+kagent built-in Agents ⬅➡BYO Agents
+
+===== PAGE 42 =====
+Charles Hsiao @ Cloud Summit 2026
+實戰 kagent：打造你的專屬 AI Agent
+定義角色靈魂
+透過 System Prompt 賦予 
+Agent 特定人格、專業背
+景與工作目標
+賦予能力(Skills)
+定義自定義 Skills 讓 
+Agent 調用外部 API、執
+行程式碼或查詢資料庫
+整合專業知識庫
+將專案文件或技術文
+件整合至 Agent，使其
+具備特定領域知識
+安全與人機協作
+在涉及寫入、刪除等敏感操
+作時，加入 
+Human-in-the-loop 機制，
+確保最終決定由人類把關
+
+===== PAGE 43 =====
+Charles Hsiao @ Cloud Summit 2026
+實戰 kagent：打造你的專屬 AI Agent
+URL
+定義角色靈魂
+(System Prompts)
+https://kagent.dev/docs/kagent/getting-started/system-prompts
+賦予能力
+(Skills)
+https://kagent.dev/docs/kagent/examples/skills
+整合專業知識庫
+(Doc2Vec)
+●
+https://kagent.dev/docs/kagent/examples/documentation
+●
+https://github.com/charles-hsiao/kagent-doc2vec-demo
+安全與人機協作
+(HITL)
+https://kagent.dev/docs/kagent/examples/human-in-the-loop
+
+===== PAGE 44 =====
+Charles Hsiao @ Cloud Summit 2026
+Human-in-the-Loop：kagent 讓 AI 成為
+受控的協作夥伴
+詢問使用者
+當指令模糊或需要更多資訊時
+，Agent 主動停下來詢問
+當 Agent 嘗試調用被標記為
+「需要審核」的工具時，系統會
+暫停並在 UI 上顯示該操作的
+詳細內容。人類可以選擇「核
+准」或「拒絕」
+工具審核
+
+===== PAGE 45 =====
+Charles Hsiao @ Cloud Summit 2026
+Human-in-the-Loop - 工具審核
+requireApproval ﬁeld
+
+===== PAGE 46 =====
+Charles Hsiao @ Cloud Summit 2026
+Human-in-the-Loop - 詢問使用者
+使用 “ask_user” tool 向使用者收集更多必要資訊
+
+===== PAGE 47 =====
+Charles Hsiao @ Cloud Summit 2026
+航向新局
+AI 的透明化、信任建立與未來演進
+04
+
+===== PAGE 48 =====
+Charles Hsiao @ Cloud Summit 2026
+如何監督 A2A & kagent？
+Source: https://a2a-protocol.org/latest/topics/key-concepts/
+
+===== PAGE 49 =====
+Charles Hsiao @ Cloud Summit 2026
+Demo - Tracing on kagent (Otel collector)
+
+===== PAGE 50 =====
+Charles Hsiao @ Cloud Summit 2026
+透明、標準、自動化：A2A & kagent 的可觀
+察性
+透過標準 OTLP 格式導出，無
+縫對接雲原生監控工具
+●
+透過 Trace ID 串聯跨 
+Agent 的調用鏈路
+●
+精準定位延遲與錯誤
+產品級可觀察性
+黑盒 -> 玻璃盒
+可觀察性是 A2A  協議的「原住民」：透過原生整合 (Native Integration)，非透過外掛程式
+
+===== PAGE 51 =====
+Charles Hsiao @ Cloud Summit 2026
+可觀測性/AIOps 痛點
+雲端原生環境呈指數級增
+長，已逐漸超出人類能掌
+控的邊界
+●
+Metrics/Logs/Trace
+s 缺乏關聯分析
+●
+AI Agents 缺乏協作
+機制框架
+AI 推理過程不透明且不
+可被審計，導入 AIOps 後
+難以理解 AI 的決策脈絡
+系統複雜度指數成長
+數據 & AI 協作孤島
+「黑盒」信任危機
+藉由 kagent 與 A2A 協議
+的任務協作，將大規模環
+境的維運壓力從人力轉
+向轉向 AI Agents 自主管
+理
+透過 kagent 部署 Agents
+並藉由 A2A 把數據串起
+來，實現跨指標與跨 
+Agent 的協作
+透過 A2A 原生的審計機
+制，將 AI 決策透明化，讓
+每一步思考都有跡可循
+
+===== PAGE 52 =====
+Charles Hsiao @ Cloud Summit 2026
+透視未來：邁向成熟的 Agent 時代
+●
+有了 Agent Card，但如
+何查詢 Agent Registry 
+的 API 在社群尚未定案
+●
+Agent Registry
+(Agent Docker Hub)
+●
+企業將產品/服務包裝成 
+Agents 讓其他外部 Agents 
+調用
+●
+結合 x402、AP2、MPP 協議
+，落地 Agentic Payment
+●
+當 Agentic Workﬂow 開
+始導入，如何確保 AI 的
+可靠度將成為顯學
+●
+Check out: 
+grafana/o11y-bench
+AI Agent 的
+App Store 時刻
+Agent as a Service 
+(AaaS)
+AI Reliability 
+Engineering (AIRE)
+
+===== PAGE 53 =====
+Charles Hsiao @ Cloud Summit 2026
+Thanks!
+www.charles-hsiao.com
+"We can only see a short distance ahead, but we can see 
+plenty there that needs to be done." —— Alan Turing
+ping@charles-hsiao.com
+charles-hsiao
+charles-hsiao

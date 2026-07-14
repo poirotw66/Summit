@@ -1,0 +1,633 @@
+
+===== PAGE 1 =====
+Agentic ServiceOps: From Signals 
+to Collaborative Resolution
+Bernard Bay
+Manager Solution Engineering, APAC
+
+===== PAGE 2 =====
+2
+©  Copyright 2025 BMC Helix, Inc
+BMC Helix a Leader in Forrester’s 2025 Enterprise 
+Service Management (ESM) Wave 
+BMC Helix achieve the highest scores possible in 17 criteria, including 
+vision, roadmap, innovation, agentic AI development and orchestration, 
+partner ecosystem, analytics /dashboards, Infrastructure Monitoring and 
+many more.
+Strategy. BMC Helix envisions a clear future and is building 
+the right tools on its roadmap to make it happen. Effective AI 
+executive dashboards, unified employee experience, and a 
+focus on the future of work demonstrate a vision that goes 
+beyond simple AI integration. 
+Forrester’s take. For organizations seeking a unified AI-
+driven platform to manage complex IT operations, BMC 
+Helix offers powerful enterprise workflow and task 
+management, monitoring, and proactive management. 
+Customer feedback. Customers expressed strong 
+satisfaction with BMC Helix’s capabilities, particularly its 
+intuitive interface, robust ITSM functionalities, AI-driven tools 
+like HelixGPT.
+Forrester does not endorse any company, product, brand, or service included in its research publications and does not advise any person to select 
+the products or services of any company or brand based on the ratings included in such publications. Information is based on the best available 
+resources. Opinions reflect judgment at the time and are subject to change. For more information, read about Forrester’s objectivity here.
+
+===== PAGE 3 =====
+3
+Tech Adoption is Exponential
+©  Copyright 2025 BMC Helix, Inc.
+800
+MILLION
+*comparable benchmark
+Y E A R S
+Internet
+F O U N D A T I O N  F O R  
+A C C E S S
+WorldWideWeb
+~ 1 4
+1 9 9 0 - 2 0 0 5
+~ 7
+Social Media
+E N G A G E M E N T  F O R  
+G R O W T H
+2 0 0 4 - 2 0 1 1
+~ 2
+Agentic AI Accelerates Productivity Gains 
+Agentic AI
+I N T E L L I G E N C E  F O R  
+P R O D U C T I V I T Y
+2 0 2 3 - N O W
+800
+MILLION
+*comparable benchmark
+
+===== PAGE 4 =====
+Tech Evolution – Data Explosion
+From mainframes to AI, each era boosted productivity and data capacity.
+z
+Mainframe Era
+1950s-1970s
+Centralized mainframes; scarce, 
+isolated data.
+Client-Server
+1980s-1990s
+Distributed computing; data volumes 
+surged.
+Internet & Web
+1990s-2000s
+Global connectivity; data exploded.
+Cloud Computing
+2010s
+Scalable resources; big data analytics.
+AI Models
+2020s-Present
+AI automates tasks; vast data fuels 
+intelligent systems.
+4
+©  Copyright 2025 BMC Helix, Inc.
+
+===== PAGE 5 =====
+5
+©  Copyright 2025 BMC Helix, Inc
+The volume data & work is ballooning
+75%
+IT orgs. 
+report(1)
+Greater systems 
+complexity
+More complexity
+76%
+IT orgs. 
+report(1)
+Incidents rooted in 
+change
+Accelerated change
+IT organizations not growing at 
+pace of complexity
+80%
+Resource constraints
+IT orgs. 
+report(1)
+(1) State of GenAI and Agentic AI for IT, BMC
+
+===== PAGE 6 =====
+Evolution of AI – From Rules to Learning to Action
+Rule Based AI 
+1950s–1980s
+Fraud detection and 
+medical diagnosis
+Limited due to fixed rules
+Machine Learning 
+1990s–2010s
+Spam filters, Netflix 
+recommendations.
+Learning and pattern recognition
+Deep Learning 
+2012–2017
+Image recognition (Facebook), speech 
+assistants (Siri)
+Advanced learning by seeing & hearing
+Foundation Models 
+2018–2023
+Classification, Summarization,
+ Coding, Math (ChatGPT)
+Understand and use language widely
+Multimodal & Agentic AI 
+2023–Present 
+Copilots (HelixGPT, Einstein), assistants 
+(seeing, hearing, acting)
+It can reason and act on its own
+6
+©  Copyright 2025 BMC Helix, Inc.
+
+===== PAGE 7 =====
+7
+The shift from traditional applications to agentic AI interfaces represents a 
+fundamental change in how users interact with technology and achieve 
+their goals.
+Traditional Applications
+Users drive workflows via clicks, menus, and forms
+App-specific context (you switch between tools)
+Deterministic, rule-based
+Agentic AI Interfaces
+Users express intent in natural language 
+Unified context — agent orchestrates across tools
+Probabilistic, autonomous, goal-oriented
+AI Agents – Cognitive Revolution
+Forms
+Lists
+Workflows
+Dashboards
+Integrations
+Partner Eco.
+Compute
+Agentic AI
+LLMs
+Data Clouds
+©  Copyright 2025 BMC Helix, Inc.
+
+===== PAGE 8 =====
+8
+©  Copyright 2025 BMC Helix, Inc.
+SYSTEM OF 
+ENGAGEMENT
+PERSONA:
+• Employee
+• Service Desk
+• SRE
+SYSTEM OF RECORD
+• Google
+• Azure
+• OpenAI
+YOUR LLM
+SYSTEM OF INTELLIGENCE - HELIXGPT
+YOUR UI:
+• MS Teams
+• Co-Pilot
+YOUR KB
+•
+Helix Knowledge
+•
+ServiceNow Knowledge
+•
+Confluence SharePoint 
+•
+Web 
+EMPLOYEE 
+NAVIGATOR
+15-40% 
+Productivity Gains
+25-40% 
+Reduction Opex
+POST MORTEM 
+ANALYZER
+Days to Mins-
+5 Why Analysis
+90% 
+Faster Preparation
+YOUR ITOM
+•
+Helix Otel, BHOM, BHNM
+•
+AppD, Dynatrace
+•
+Splunk, Elastic
+•
+Solarwinds, Zabbix
+•
+Qualys, Rapid7, Nessus
+SITUATION 
+OBSERVER
+40-60% 
+Faster Resolution
+30-60% 
+Reduced Triage 
+Time
+INSIGHT 
+FINDER
+30-60% 
+Reduced MTTI
+15-40% 
+Faster Decision 
+Making
+YOUR ITSM
+•
+Helix ITSM
+•
+ServiceNow
+SERVICE 
+COLLABORATOR
+15-40% 
+Productivity Gains
+25-40% 
+Less Escalations
+OPS SWARMER
+30-60% 
+Reduction Service Downtime
+30-60% 
+Improved Resource Allocation
+
+===== PAGE 9 =====
+9
+©  Copyright 2025 BMC Helix, Inc.
+SYSTEM OF 
+ENGAGEMENT
+PERSONA:
+• Employee
+• Service Desk
+• SRE
+SYSTEM OF RECORD
+YOUR KB
+•
+Helix Knowledge
+•
+ServiceNow Knowledge
+•
+Confluence SharePoint 
+•
+Web 
+• Google
+• Azure
+• OpenAI
+YOUR LLM
+SYSTEM OF INTELLIGENCE - HELIXGPT
+EMPLOYEE 
+NAVIGATOR
+YOUR UI:
+• MS Teams
+• Co-Pilot
+15-40% 
+Productivity Gains
+25-40% 
+Reduction Opex
+
+===== PAGE 10 =====
+10
+BMC 
+HelixGPT 
+Employee 
+Navigator
+Knowledge & 
+Service 
+Requests
+©  Copyright 2025 BMC Helix, Inc.
+
+===== PAGE 11 =====
+11
+©  Copyright 2025 BMC Helix, Inc.
+SYSTEM OF 
+ENGAGEMENT
+PERSONA:
+• Employee
+• Service Desk
+• SRE
+SYSTEM OF RECORD
+YOUR KB
+•
+Helix Knowledge
+•
+ServiceNow Knowledge
+•
+Confluence SharePoint 
+•
+Web 
+YOUR ITSM
+•
+Helix ITSM
+•
+ServiceNow
+YOUR ITOM
+•
+Helix Otel, BHOM, BHNM
+•
+AppD, Dynatrace
+•
+Splunk, Elastic
+•
+Solarwinds, Zabbix
+•
+Qualys, Rapid7, Nessus
+• Google
+• Azure
+• OpenAI
+YOUR LLM
+SYSTEM OF INTELLIGENCE - HELIXGPT
+SERVICE 
+COLLABORATOR
+SITUATION 
+OBSERVER
+POST MORTEM 
+ANALYZER
+YOUR UI:
+• MS Teams
+• Co-Pilot
+Days to Mins-
+5 Why Analysis
+90% 
+Faster Preparation
+40-60% 
+Faster Resolution
+30-60% 
+Reduced Triage 
+Time
+15-40% 
+Productivity Gains
+25-40% 
+Less Escalations
+15-40% 
+Productivity Gains
+25-40% 
+Reduction Opex
+OPS SWARMER
+30-60% 
+Reduction Service Downtime
+30-60% 
+Improved Resource Allocation
+EMPLOYEE 
+NAVIGATOR
+
+===== PAGE 12 =====
+12
+BMC 
+HelixGPT 
+Ops Swarmer
+ServiceOps
+Collaboration
+©  Copyright 2025 BMC Helix, Inc.
+
+===== PAGE 13 =====
+13
+©  Copyright 2025 BMC Helix, Inc.
+SYSTEM OF 
+ENGAGEMENT
+PERSONA:
+• Employee
+• Service Desk
+• SRE
+SYSTEM OF RECORD
+YOUR KB
+•
+Helix Knowledge
+•
+ServiceNow Knowledge
+•
+Confluence SharePoint 
+•
+Web 
+YOUR ITSM
+•
+Helix ITSM
+•
+ServiceNow
+YOUR ITOM
+•
+Helix Otel, BHOM, BHNM
+•
+AppD, Dynatrace
+•
+Splunk, Elastic
+•
+Solarwinds, Zabbix
+•
+Qualys, Rapid7, Nessus
+• Google
+• Azure
+• OpenAI
+YOUR LLM
+SYSTEM OF INTELLIGENCE - HELIXGPT
+YOUR UI:
+• MS Teams
+• Co-Pilot
+Days to Mins-
+5 Why Analysis
+90% 
+Faster Preparation
+40-60% 
+Faster Resolution
+30-60% 
+Reduced Triage 
+Time
+15-40% 
+Productivity Gains
+25-40% 
+Less Escalations
+15-40% 
+Productivity Gains
+25-40% 
+Reduction Opex
+30-60% 
+Reduction Service Downtime
+30-60% 
+Improved Resource Allocation
+OPS SWARMER
+INSIGHT 
+FINDER
+30-60% 
+Reduced MTTI
+15-40% 
+Faster Decision 
+Making
+EMPLOYEE 
+NAVIGATOR
+SERVICE 
+COLLABORATOR
+SITUATION 
+OBSERVER
+POST MORTEM 
+ANALYZER
+
+===== PAGE 14 =====
+14
+BMC 
+HelixGPT 
+Insight Finder
+Actionable in 
+context Insights
+©  Copyright 2025 BMC Helix, Inc.
+
+===== PAGE 15 =====
+15
+Agent Builder
+OOTB Agents & Tools
+No-code Development
+Visual Process Designer
+Integrated Real-Time Testing
+Agent Studio: Enabling agentic innovation
+©  Copyright 2025 BMC Helix, Inc.
+
+===== PAGE 16 =====
+16
+BMC 
+HelixGPT
+Agent Studio
+Low Code 
+No Code
+Agent Dev
+©  Copyright 2025 BMC Helix, Inc.
+
+===== PAGE 17 =====
+17
+Open-first agentic platform for ServiceOps
+©  Copyright 2025 BMC Helix, Inc
+Vulnerabilities
+Discovery
+CMDB
+Observability
+Remediation
+Incident 
+response
+Optimization
+LOB Support
+Observability and operations
+Ticketing
+YOUR AI and Data
+Service 
+management
+Operations 
+management
+Open-First
+HelixGPT Agents
+YOUR Choice of Deployment
+On-Prem
+YOUR User Interface
+
+===== PAGE 18 =====
+18
+SecOps and 
+Compliance
+Employee 
+Engagement 
+and ESM
+Service 
+Management
+AIOps
+BMC Helix 
+agentic AI
+for ServiceOps 
+EMPLOYEE
+END USER
+HEAD 
+OF LOB
+PROCESS 
+OWNER
+NETWORK 
+CSP/TEAMS 
+OBSERVABILITY TEAM 
+TOOLS TEAM 
+PLATFORM ENGINEER
+IT OPERATIONS
+AUTOMATION ENGINEER
+SRE/NOC/ DEVOPS
+NETWORK TEAMS
+INFRASTRUCTURE TEAM
+RISK 
+MANAGEMENT
+IT OPS
+DEVOPS
+SECURITY
+END USER
+INCIDENT MANAGEMENT
+PROBLEM MANAGEMENT
+CHANGE MANAGEMENT
+RELEASE MANAGER
+SUPPORT
+SERVICE MANAGEMENT
+SERVICE DESK
+PERSONAS
+AGENTS
+ACTIONS
+Automate
+Recommend
+Converse
+Predict
+Summarize
+Create
+VULNERABILITY 
+RESOLVER 
+ASSET 
+DISCOVERER
+CMDB 
+GOVERNOR
+DORA 
+GOVERNOR 
+AGENT 
+STUDIO
+EMPLOYEE 
+NAVIGATOR
+KNOWLEDGE 
+CURATOR
+CMDB 
+GOV ERNOR
+OPS 
+SWARMER
+ADMI N 
+AGENT  
+PROACT I V E 
+PROBLEM F I NDER
+DI SCOV ERY
+SPEND 
+RAT I ONALI ZER
+AGENT  
+ST UDI O
+COMPLI ANCE 
+GOV ERNOR
+I NSI GHT  
+F I NDER
+CHANGE RI SK  
+ADV I SOR 
+SE RV ICE  
+CATAL OG 
+CURATOR
+MAJOR I NCI DENT  
+COORDI NAT O R
+SERV I CE 
+COLLABOR AT OR
+NET OPS 
+PROT ECT OR
+SERV I CE 
+MAPPER
+BEST ACTION
+PLANNER
+LOG/METRIC/
+TRACE/EVENT 
+ANALYZER
+SERVICE 
+MAPPER
+NETWORK 
+OBSERVER
+ROOT CAUSE 
+FINDER
+OPS 
+SWARMER 
+VULNERABILITY 
+RESOLVER 
+CHANGE RISK 
+ADVISOR
+POST-MORTEM
+ANALYZER
+SITUATION 
+OBSERVER
+INSIGHT 
+FINDER
+
+===== PAGE 19 =====
+Thank you

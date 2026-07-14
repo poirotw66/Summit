@@ -1,0 +1,707 @@
+
+===== PAGE 1 =====
+FinOps：不只是看後照鏡開車
+古永忠 - 國泰人壽雲端技術發展部
+
+===== PAGE 2 =====
+關於講者 ｜ About the Speaker
+古永忠
+Cloud Architect　·　國泰人壽
+雲端技術發展部 · 副理
+研究者
+Researcher
+實作者
+Builder
+倡議者
+Advocate
+期許自己：持續同時把這三種角色都做好。
+in  LinkedIn
+Speech topics
+對外演講 · 專案清單
+linkedin.com/in/ycku
+看懂、做到、再倡議 —— 坐上駕駛座，導引上雲之路。
+__intro_speaker__
+
+===== PAGE 3 =====
+你可能以為 FinOps 是…
+■
+冷靜檢視「已經發生」的帳單數字
+■
+月底對帳、找出誰超支、想辦法砍成本
+■
+一份回顧過去的財務報表
+但其實 FinOps 是…
+■
+坐在駕駛座，決定「如何往前開」
+■
+用數字讓雲端夥伴更有信心地前行
+■
+本質上，是一場「風險管理」
+FinOps 不是看後照鏡
+
+===== PAGE 4 =====
+三句話
+■
+讓工程、財務、業務用同一套數字，
+■
+對「雲端／AI 花費」做出更好的決策
+■
+Finance + DevOps 的協作文化
+它管的是…
+■
+可見性 Visibility：花了多少、花在哪
+■
+最佳化 Optimization：值不值得
+■
+營運 Operate：持續決策與當責
+什麼是 FinOps？
+
+===== PAGE 5 =====
+如果只是…
+■
+記帳：把帳單抄下來、分類好
+■
+省錢：看到大數字就砍
+■
+→ 只看後照鏡，是不能開車的
+FinOps 真正在做…
+■
+把數字變成「決策的依據」
+■
+在風險與價值之間取捨
+■
+→ 該踩油門時敢踩，該煞車時看得到
+FinOps ≠ 記帳，也 ≠ 一味省錢
+
+===== PAGE 6 =====
+FinOps 是坐在駕駛座的人
+後照鏡
+Rear Mirror
+已發生的帳單數字
+FinOps 駕駛座
+握方向盤 · 踩油門/煞
+車
+做出前進的決策
+擋風玻璃
+Windshield
+預測前方 · 風險 · 路
+況
+FinOps 坐在駕駛座：不是只回頭看，而是決定怎麼往前開
+看後照鏡是為了安全地往前 — 數字的目的，是讓決策更有信心
+開車比喻將貫穿全程：後照鏡(已發生) → 駕駛座(決策) → 擋風玻璃(前方風險)
+
+===== PAGE 7 =====
+今天的路線圖 Agenda
+開車比喻
+坐上駕駛座
+1
+風險核心
+知險才決策
+2
+風險量化
+風險指數
+3
+FOCUS
+共同語言
+4
+PG 實作
+查詢 · 統計
+5
+展望
+AI Agent
+6
+
+===== PAGE 8 =====
+Part 1 ｜ 風險，才是 FinOps 最重要的事
+
+===== PAGE 9 =====
+只盯著「省錢」
+■
+容易過度保守，錯過該投資的成長
+■
+砍錯地方，傷到產品與體驗
+■
+看不到「未來會不會出事」
+用「風險」當主軸
+■
+知道風險，才知道哪裡該決策
+■
+敢在低風險處踩油門、加速投資
+■
+在高風險處提前煞車、設護欄
+為什麼是風險，而不是省錢？
+
+===== PAGE 10 =====
+知道風險，才能決策 — 開車的儀表板
+■
+油量表：預算還剩多少？跑得完這「一整年」嗎？
+■
+時速表：現在的花費速度，是不是太快？
+■
+胎壓/水溫警示：哪個服務、哪個團隊快要出事？
+■
+→ 沒有儀表板的車，開得越快越危險；FinOps 就是那組儀表板
+■
+→ 把「感覺要超支了」變成「儀表板上的一個數字」
+
+===== PAGE 11 =====
+本議程的核心：把風險「具體化、量化」
+風險
+(模糊的感覺)
+具體化
+說清楚是什麼風
+險
+量化
+變成一個數字
+可決策
+Action
+本議程的核心主張：風險可以被「具體化、數量化」— 能算，才能管
+
+===== PAGE 12 =====
+Part 2 ｜ 把風險變成一個數字：風險指數
+
+===== PAGE 13 =====
+風險指數公式 Risk Index
+風險指數
+Risk
+Index
+=
+已支出金額比例
+預算時間期程比例
+×
+預測未來
+全期費用比例
+× 100
+三個比例相乘 ×100：把「進度、速度、預測」壓成一個可比較的指數
+風險指數 =（已支出金額比例 ÷ 預算時間期程比例）×（預測未來全期費用比例）× 100
+
+===== PAGE 14 =====
+公式裡的三個比例，分別是什麼？
+■
+① 已支出金額比例 ＝ 目前累計支出 ÷ 總預算
+●
+車子已經跑掉的油 — 走得多遠了
+■
+② 預算時間期程比例 ＝ 已過時間 ÷ 預算總期程
+●
+時間的進度條 — 這一年過了幾分之幾（年初到今天）
+■
+③ 預測未來全期費用比例 ＝ 預測全期總花費 ÷ 總預算
+●
+照現在的開法，到年底會花到預算的幾 %
+
+===== PAGE 15 =====
+風險指數 = 100 代表什麼？
+風險指數 = 100：一切「剛剛好」的基準線
+已支出比例 = 時間比例
+（÷ 後 = 1，呈線性）
+×
+預測比例 = 100%
+（剛好打平預算）
+風險指數 = 1 × 1 × 100 = 100
+支出與時間成線性、預測剛好用完 → 完全 on-track
+
+===== PAGE 16 =====
+一整年每天記錄：風險指數走勢
+＞100　超支風險區
+＜100　保守 / 落後區
+60
+80
+120
+140
+100
+1月
+2月
+3月
+4月
+5月
+6月
+7月
+8月
+9月
+10月
+11月
+12月
+年度期程（每日記錄，1月 → 12月） →
+風險指數
+① 年初 前緊
+支出比時程快，指數一路爬
+升。
+② 年中 示警
+MA30 衝破 120（峰值約 
+126）→ 該踩煞車。
+③ 介入後 回穩
+降速後年底拉回 ≈ 101，重
+回基準線。
+每日風險指數
+MA30（30日均線）
+基準線 100 = on-track
+同一個風險指數，每天記錄就成一條走勢線：橫軸是時程、縱軸是風險——一眼看出何時偏離基準、何時該介入。
+
+===== PAGE 17 =====
+怎麼讀風險指數：像看時速表
+< 100
+保守 / 落後
+可能投資不足
+= 100
+正常 on-track
+線性、剛好打平
+> 100
+超支風險
+太快 / 預測爆預算
+風險 →
+像時速表一樣讀：低於 100 偏慢、等於 100 剛好、高於 100 該注意
+一個數字就能跨團隊、跨服務比較風險高低
+
+===== PAGE 18 =====
+Part 3 ｜ FOCUS：跨雲帳務的共同語言
+
+===== PAGE 19 =====
+什麼是 FOCUS？把各家帳單講成同一種話
+AWS CUR
+Azure Cost
+GCP Billing
+SaaS / 自建
+FOCUS
+正規化
+共同 schema
+統一成本與
+用量資料表
+Unified Dataset
+儀表板 / BI
+AI / LLM 分析
+程式資料交換
+FOCUS = FinOps Open Cost and Usage Specification，跨雲成本與用量的開放規格
+
+===== PAGE 20 =====
+原本的用途
+■
+跨雲帳務：AWS / Azure / GCP 一致欄位
+■
+省去每家各自一套對應邏輯
+■
+多雲成本能放在同一張表分析
+延伸的用途
+■
+AI / LLM：餵給模型的標準輸入格式
+■
+程式間資料交換的共同 schema
+■
+FinOps Agent、MCP Server 的底層語言
+FOCUS 不只是對帳，更是「資料交換格式」
+
+===== PAGE 21 =====
+FOCUS 版本演進：規格越來越完整
+■
+FOCUS 1.0（2024）：GA 首版，定義 43 個共通欄位
+■
+FOCUS 1.1（2024/11）：在 1.0 基礎上補強一致性
+■
+FOCUS 1.2（2025/5）：更細的多雲分析；首度支援 SaaS、credits/tokens 等非貨幣計價
+■
+FOCUS 1.3（2025/12）：新增 Contract Commitment 資料集、拆分成本分攤欄位
+■
+FOCUS 1.4（2026/6）：新增 2 資料集、47 欄位；區分 Service/Host Provider、發票對帳
+■
+→ 趨勢：從「對帳」走向涵蓋 SaaS、合約、AI token 的完整技術價值語言
+
+===== PAGE 22 =====
+Part 4 ｜ 動手做：用 PostgreSQL 算風險
+
+===== PAGE 23 =====
+以 PostgreSQL 設計帳務 schema（依 FOCUS 精神）
+-- 每日成本明細表（FOCUS 對齊）
+CREATE TABLE billing (
+  charge_date    DATE       NOT 
+NULL,
+  provider       TEXT,        -- 
+AWS/Azure/GCP
+  service_name   TEXT,
+  resource_id    TEXT,
+  sub_account_id TEXT,
+  tags           JSONB,
+  billed_cost    NUMERIC(18,4),
+  effective_cost NUMERIC(18,4),
+  currency       TEXT DEFAULT 'TWD'
+-- 預算表：期程 + 金額
+CREATE TABLE budget (
+  budget_id    SERIAL PRIMARY KEY,
+  scope        TEXT,      -- 
+team/project
+  period_start DATE NOT NULL,
+  period_end   DATE NOT NULL,
+  amount       NUMERIC(18,2) NOT 
+NULL
+);
+-- 用 charge_date 對應到所屬預算期
+-- effective_cost 為攤提後成本
+
+===== PAGE 24 =====
+基本查詢：每日花費彙總 與 服務別 Top N
+-- 本年度每日累計花費
+SELECT charge_date,
+       SUM(effective_cost) AS daily,
+       SUM(SUM(effective_cost))
+         OVER (ORDER BY charge_date)
+         AS running_total
+FROM billing
+WHERE charge_date >= 
+date_trunc('year',
+                                
+CURRENT_DATE)
+GROUP BY charge_date
+ORDER BY charge_date;
+-- 本年度最燒錢的前 5 個服務
+SELECT service_name,
+       SUM(effective_cost) AS cost
+FROM billing
+WHERE charge_date >= 
+date_trunc('year',
+                                
+CURRENT_DATE)
+GROUP BY service_name
+ORDER BY cost DESC
+LIMIT 5;
+
+===== PAGE 25 =====
+把公式寫成 SQL：算出今天的風險指數
+WITH p AS (   -- 本年度預算與期程
+  SELECT amount AS budget,
+    (CURRENT_DATE - period_start + 
+1)::numeric
+      / (period_end - period_start + 
+1) AS time_ratio
+  FROM budget
+  WHERE CURRENT_DATE BETWEEN 
+period_start
+                         AND 
+period_end
+),
+s AS (        -- 至今累計支出
+  SELECT SUM(effective_cost) AS da
+SELECT
+  round(s.spent / p.budget, 3)   AS 
+spent_ratio,
+  round(p.time_ratio, 3)         AS 
+time_ratio,
+  -- 預測：照目前速度推估全期
+  round((s.spent / p.time_ratio)
+        / p.budget, 3)           AS 
+forecast_ratio,
+  round( (s.spent / p.budget)
+         / p.time_ratio
+         * ((s.spent / 
+p.time_ratio)/p.budget)
+
+===== PAGE 26 =====
+Part 5 ｜ 進階：移動平均與超支機率
+
+===== PAGE 27 =====
+三條均線會交織：MA30 / MA90 / MA360
+MA30｜月線
+MA90｜季線
+MA360｜年線
+黃金交叉
+花費加速 ↑
+死亡交叉
+花費降溫 ↓
+
+===== PAGE 28 =====
+借用股市的「均線」語言，解讀雲端花費
+■
+MA30 ≈ 月線（短期）：最近一個月的花費水位，反應最快、最敏感
+■
+MA90 ≈ 季線（中期）：一季的花費趨勢，濾掉短期雜訊
+■
+MA360 ≈ 年線（長期）：整年的花費基準 — 正好對應你的「全年預算期程」
+■
+黃金交叉（短線向上穿越長線）：花費開始加速，超支風險升高的早期警訊
+■
+死亡交叉（短線向下穿越長線）：花費降溫，最佳化開始見效
+■
+多頭排列 MA30>MA90>MA360 ＝ 持續升溫；均線糾結交織 ＝ 趨勢轉折，要留意
+
+===== PAGE 29 =====
+只看單一月平均
+■
+一個月只有 1 個數字，月底才知道
+■
+看不出短、中、長期之間的「背離」
+■
+反應慢，發現超支常常太晚
+MA30 / 90 / 360 一起看
+■
+每天更新，今天就看到趨勢在轉折
+■
+短中長並列，像股市判斷趨勢強弱
+■
+用交叉與排列，提供踩油門 / 煞車的訊
+號
+為什麼要用移動平均，而且不只一條？
+
+===== PAGE 30 =====
+三條均線的 SQL：一次算出 MA30 / MA90 / MA360
+-- 用同一份每日花費，
+-- 開三個不同長度的視窗
+WITH daily AS (
+  SELECT charge_date,
+         SUM(effective_cost) AS cost
+  FROM billing
+  GROUP BY charge_date
+)
+SELECT charge_date, cost,
+  AVG(cost)         OVER w30  AS 
+ma30,
+  AVG(cost)         OVER w90  AS 
+ma90,
+FROM daily
+WINDOW
+  w30  AS (ORDER BY charge_date
+     ROWS BETWEEN 29  PRECEDING AND 
+CURRENT ROW),
+  w90  AS (ORDER BY charge_date
+     ROWS BETWEEN 89  PRECEDING AND 
+CURRENT ROW),
+  w360 AS (ORDER BY charge_date
+     ROWS BETWEEN 359 PRECEDING AND 
+CURRENT ROW)
+ORDER BY charge_date;
+
+===== PAGE 31 =====
+用均線的 μ、σ 預測「超支機率」
+MA30 統計量
+μ = 平均
+σ = 標準差
+預測剩餘期間
+d 天 ≈ d·μ
+波動 ≈ σ√d
+與剩餘預算 B
+相比較
+z 分數
+超支機率
+= 風險量化
+z = (B − d·μ) / (σ√d)　→　P(超支) = 1 − Φ(z)
+把「會不會超支」變成一個 0–100% 的機率，這就是風險量化
+假設剩餘期間每日花費近似常態：預測總額 d·μ、標準差 σ√d，算出超出全年剩餘預算的機率
+
+===== PAGE 32 =====
+超支機率的 SQL：常態分配尾端
+-- 取最新一天的 MA30 μ、σ，
+-- 與全年剩餘預算 B
+WITH latest AS (
+  SELECT ma30 AS mu, sd30 AS sigma
+  FROM ma_view
+  ORDER BY charge_date DESC LIMIT 1
+),
+rem AS (
+  SELECT (b.amount - x.spent) AS 
+b_left,
+    (b.period_end - CURRENT_DATE) AS 
+days_left
+  FROM budget b, spent_view x
+)
+SELECT
+  l.mu, l.sigma, r.b_left, 
+r.days_left,
+  -- z = (B - days*mu) / 
+(sigma*sqrt(days))
+  (r.b_left - r.days_left * l.mu)
+    / (l.sigma * sqrt(r.days_left)) 
+AS z,
+  -- P(超支) = 1 - Φ(z)
+  1 - (0.5 * (1 + erf(
+    ((r.b_left - r.days_left*l.mu)
+     /(l.sigma*sqrt(r.days_left)))
+    / sqrt(2)))) AS prob_overspend
+FROM latest l, rem r;
+
+===== PAGE 33 =====
+原本只能說…
+■
+「我覺得這個月可能會超支」
+■
+「最近花得有點兇」
+■
+→ 主觀、無法比較、難以決策
+現在可以說…
+■
+「今年底前有 72% 機率超出年度預算」
+■
+「風險指數 118，且超支機率 > 70%」
+■
+→ 客觀數字，直接連到該不該煞車
+機率，就是把風險「說成人話」
+
+===== PAGE 34 =====
+Part 6 ｜ Alerts → Agents 與 Human Premium
+
+===== PAGE 35 =====
+FinOpsX 2026 ：Alerts → Agents 是趨勢
+■
+From Alerts to Agents — 從被動警示，走向主動代理
+■
+規模 2,500+ 實務者、260+ 講者；近 1/4 議程談 AI 經濟學與 token 計價
+■
+主軸從『砍成本』轉向『價值最佳化』：把花費連到營收、毛利、客戶價值
+■
+Tokenomics Foundation 成立、FOCUS 1.4 通過 — 標準與工具都在為 AI Agent 鋪路
+■
+→ 趨勢很清楚：FinOps 的「執行層」，正在交給 AI Agent
+
+===== PAGE 36 =====
+From Alerts to Agents：代理式成本管理是趨勢
+觸發
+警示 · 排程
+Orchestrator
+Agent 語意路由
+治理引擎
+異常偵測
+標籤政策
+自主行動
+開工單 · 通知
+CI/CD 護欄
+人工核可
+執行 Execute
+從被動警示，走向主動代理；重要動作仍保留人工核可 (Human-in-the-loop)
+
+===== PAGE 37 =====
+前段講的那些事，正是 AI Agent 的守備範圍
+風險指數計算
+三條均線 MA30/90/360
+超支機率 μ / σ
+SQL 查詢與報表
+成本異常偵測
+AI FinOps
+Agent
+自動產出
+全天候執行
+跨雲彙整
+主動警示 / 開工單
+重複、可程式化、要紀律的事 → 最適合交給 Agent；你不一定要自己做
+風險指數、三均線、超支機率、SQL、異常偵測 — 全都是可程式化、可自動化的工作
+
+===== PAGE 38 =====
+適合交給 AI Agent（重複、可程式化）
+■
+每天算風險指數、跑三條均線
+■
+算超支機率、產出 SQL 報表
+■
+全天候盯異常、主動開工單通知
+你該專心做（判斷、取捨）
+■
+看懂這些數字合起來在說什麼
+■
+在風險與價值之間決策、當責
+■
+設定目標與護欄，把 AI 教好
+你不一定要自己做
+
+===== PAGE 39 =====
+一手抓財務、一手盯資源、一手看流量；人，專注彎道超車
+AI FinOps Agent — 同時伸出多隻手
+駕駛（人）— 看著前方，彎道超車
+AI FinOps Agent
+財務
+預算 · 成本 · 超支機率
+一隻手抓著
+Terraform
+最近變更了哪些資源
+一隻手盯著
+CloudWatch
+流量 · 用量的變動
+一隻手伸向
+前車
+你
+彎道超車
+Agent 抓著財務、盯著 Terraform 的資源變更、看 CloudWatch 的流量；你只要專注前方，抓準時機彎道超車。
+__concept_multihand__
+
+===== PAGE 40 =====
+Human Premium：融會貫通 · 懂得決策 · 教好 AI
+AI 接手雜務之後，人的價值集中在這三件事
+融會貫通
+把風險、均線、機率
+串成一張全局圖
+懂得決策
+在風險與價值間取捨
+該踩油門 / 該煞車
+教好 AI
+給對目標與護欄
+讓 Agent 做對的事
+這就是 Human Premium：懂 AI、懂業務、懂取捨的人
+
+===== PAGE 41 =====
+Human Premium：你只需要做好三件事
+1.
+融會貫通：把風險指數、三均線、超支機率，整合成一個全局判斷
+●
+不是背公式，而是看懂它們合起來在說什麼
+2.
+懂得決策：在風險與價值之間取捨 — 何時加碼、設護欄、踩煞車
+●
+數字是材料，拍板與當責是人的責任
+3.
+教好 AI：給 Agent 對的目標、邊界與護欄，讓它替你把事做對
+●
+你是駕駛，Agent 是輔助駕駛 — 方向盤仍在你手上
+
+===== PAGE 42 =====
+邊做簡報，邊讓 AI Agent 把 focus-demo 實作出來
+就在我準備這份簡報的同時，我把整包實作交給 AI Agent —— 它真的把 focus-demo 專案做出來了。
+我負責的（Human）
+• 決定要講什麼、怎麼說 —— 敘事與取捨
+• 把風險指數、三均線、超支機率串成判斷
+• 設目標與護欄，把需求講清楚給 Agent
+Agent 同步完成的（focus-demo）
+• FOCUS 風格的 PostgreSQL schema 與索引
+• 跨雲測試資料：AWS · Azure · Google Cloud
+• FinOps 範例查詢 + Python CLI（init / seed / query）
+• 5 年每日資料、專案維護 skill 一併生成
+github.com/pgsql-tw/focus-demo
+分工，正是 Human Premium：
+人做判斷與敘事，Agent 做重複、可程式化的實作。
+__focusdemo_slide__
+
+===== PAGE 43 =====
+你可能擔心…
+■
+統計、SQL 看起來好難
+■
+AI Agent 會不會取代我？
+■
+公司還沒有這些資料怎麼辦
+其實可以安心…
+■
+這些正是該交給 AI 的，你不必自己算
+■
+你的價值在判斷與教 AI，不在做雜務
+■
+FOCUS 讓資料逐步標準化，一步一步來
+給覺得「快被甩在後面」的你
+
+===== PAGE 44 =====
+一路走來：從比喻到 AI FinOps Agent
+① 開車比喻
+FinOps 坐在駕駛座
+② 風險議題
+風險才是核心
+③ 風險量化
+風險指數 Risk Index
+④ 統計方法
+MA30 · μ/σ · 超支機率
+⑤ AI FinOps Agent
+
+===== PAGE 45 =====
+Takeaways
+1.
+FinOps 不是看後照鏡 — 是坐在駕駛座，決定如何前行
+2.
+風險可以被具體化、量化：風險指數讓你一眼讀懂進度與速度
+3.
+把「會不會超支」算成一個機率數字
+4.
+把『算』的事交給 AI Agent；你融會貫通、懂決策、教好 AI — 這就是 Human Premium
+
+===== PAGE 46 =====
+FinOps - Look Forward, Value Forward

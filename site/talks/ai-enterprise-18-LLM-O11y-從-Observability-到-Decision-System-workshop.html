@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LLM O11y：從 Observability 到 Decision System (Workshop) - Summit 2026 議程摘要</title>
+<meta name="description" content="AI Enterprise Summit 2026 與 Cloud &amp; Edge Summit 2026 議程摘要與詳細內容整理">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<header class="site-header detail-header">
+  <div class="container">
+    <a class="back-link" href="../index.html">← 回議程總覽</a>
+    <span class="badge" style="--badge-color:#6d5bd0">AI Enterprise Summit 2026 · #18</span>
+    <h1>LLM O11y：從 Observability 到 Decision System (Workshop)</h1>
+    <p class="detail-speaker">🎤 Che-Chia Chang　·　SRE @ Maicoin / Microsoft MVP</p>
+    <div class="tags"><span class="tag">LLM Observability</span><span class="tag">Coding Agent</span><span class="tag">Token成本</span><span class="tag">LLM-as-a-Judge</span><span class="tag">Langfuse</span></div>
+  </div>
+</header>
+<main class="container detail-main">
+  <section class="detail-section summary-box">
+    <h2>摘要</h2>
+    <p>這是一場動手實作的工作坊，講者以 Bifrost AI Gateway 與 Langfuse 搭建的 tracing／觀測環境為基礎，帶領學員理解 Coding Agent 的 Token 花費結構，並學習用 LLM-as-a-Judge、Dataset 與 Experiment 把「聽說」轉換成可驗證的數據化決策。內容涵蓋工具與 instructions 精簡、評估新框架是否真的省 Token，以及如何為 multi-turn agent 建立客製化評分機制。</p>
+  </section>
+  <section class="detail-section">
+    <h2>重點整理</h2>
+    <ul class="highlights"><li>以 Bifrost AI Gateway（模型代理/路由）搭配 Langfuse（tracing、LLM-as-a-Judge、Dataset）建立完整的 Coding Agent 觀測堆疊</li><li>透過 Task 1～4 依序觀察總 Token 花費、Cached Token 效果、工具數量與 Instructions（如 AGENTS.md）對基礎 Token 成本的影響</li><li>提出效率公式：效率 = (產出數量 × 產出品質) / (Token Cost × 花費時間)，作為評估「導入 rtk 是否省 Token」等問題的判斷依據</li><li>LLM-as-a-Judge 需注意 multi-step agent 部分 Observation 缺少 output 導致評分失真的問題，建議以單一步驟或 tool call 為單位評分</li><li>從日常 tracing 建立 Dataset 並執行 Experiment，比較不同 model／tools／instruction 組合的表現，把觀測結果轉化為決策系統</li></ul>
+  </section>
+  
+  <section class="detail-section"><h2>工作坊環境與工具準備</h2><p>工作坊要求學員攜帶可上網筆電並安裝 VS Code，透過 git clone 範例 repo（llm-o11y）並以 docker compose 啟動服務，講師現場提供 Azure OpenAI API Key。啟動後的服務入口包含 Bifrost AI Gateway（http://localhost:8080/）、Langfuse UI（http://localhost:3000/）與 MinIO UI（http://localhost:9001/），並於 VS Code Chat 中把模型指向 Bifrost Gateway 的 `/v1/responses` 端點。</p></section>
+<section class="detail-section"><h2>Bifrost 與 Langfuse 的角色分工</h2><p>Bifrost 是團隊/公司層級的 LLM Proxy，支援多模型、路由、預算與虛擬 API Key，並可透過 OTel tracing 串接 Langfuse 等觀測工具；Langfuse 則負責 tracing 收集分析、LLM-as-a-Judge、Dataset 與 Evaluation，且核心功能為開源（MIT）授權。講者將兩者關係總結為「Gateway 管模型與進出；Observability 管 tracing／分析」，最方便的做法是 CLI → AI Gateway → Observability 的串接方式。</p></section>
+<section class="detail-section"><h2>理解 Token 花費：從基礎觀測到工具與指令調整</h2><p>工作坊安排四個任務循序漸進：Task 1 觀察一次對話花費多少 Token 及花在哪裡；Task 2 比較同一 session 內多輪對話與使用 /compact、/clear 後的 Token 差異，理解 Cached Token 的效果；Task 3 檢視 `gen_ai.request.tools` 欄位，嘗試停用非必要工具（如 Browser、部分 extension、Notebooks）並比較新 session 的 Token 花費，但不建議關閉 Agent、search、Read File 等核心工具；Task 4 則檢查 AGENTS.md、copilot-instructions.md 等 instructions 來源，說明即使關閉所有工具，仍可能有 2000+ Token 的基礎花費。</p></section>
+<section class="detail-section"><h2>案例：評估是否導入 rtk 框架</h2><p>針對「同事說 rtk 好像會省 Token，要不要導入」的情境，講者提出六步驟評估框架：理解團隊需求與學習成本、了解 rtk 支援哪些指令（Know Your Stuff）、從 Langfuse 分析目前 Token 實際花在哪（Know Your Case）、透過 `rtk init --copilot` 實驗觀察變化並用 `rtk unpatch` 復原、評估是否真的省下 Token，最後與團隊對齊「為何覺得省 Token」的結論。並提出效率公式，強調工作坊前半段主要聚焦在 Token Cost 的觀察。</p></section>
+<section class="detail-section"><h2>LLM-as-a-Judge 與 Dataset/Experiment</h2><p>學員在 Langfuse 中建立 LLM connection 與 Evaluator（如 Helpfulness），並練習觀察評分與理由是否合理，特別留意 multi-step agent 因中間 Observation 缺乏 output 而導致評分失真的狀況。進一步練習使用 filter 針對特定 tool（如 apply_patch、run_in_terminal）建立客製 Evaluator。最後，講者示範如何從日常 tracing 建立 Dataset，並透過 Experiment 在同一份「考古題」上比較更換 model、tools 或 instruction 後的效果，將「觀測」轉化為「數據化決策」，並可延伸至 Spec-kit 流程或真實功能需求的長流程觀測。</p></section>
+  <nav class="talk-nav">
+    <a class="nav-link" href="ai-enterprise-17-從-CIO-大調查看企業-AI-轉型新方向-AI-原生的崛起.html">← 從 CIO 大調查看企業 AI 轉型新方向：AI 原生的崛起</a>
+    <a class="nav-link nav-next" href="ai-enterprise-19-當-AI-成為企業工作日常-員工-AI-使用管理問題與實務情境解析.html">當 AI 成為企業工作日常：員工 AI 使用管理問題與實務情境解析 →</a>
+  </nav>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <p>本頁內容為 AI 輔助整理之摘要，原始檔案：18-LLM O11y：從 Observability 到 Decision System (workshop).md。正確內容請以原始投影片為準。</p>
+  </div>
+</footer>
+</body>
+</html>

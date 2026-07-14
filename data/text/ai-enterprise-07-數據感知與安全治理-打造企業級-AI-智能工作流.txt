@@ -1,0 +1,392 @@
+
+===== PAGE 1 =====
+Confidential | Authorized HPE Partner Use Only
+慧與科技(HPE)    
+數位科技服務事業處
+張耀文(Joy)  首席架構師
+數據感知與安全治理：
+打造企業級AI 智能工作流
+
+===== PAGE 2 =====
+Why Two -Thirds of Enterprises
+1 have been unable to move AI Pilots to Production
+AI 投資報酬率的悖論：投入增加，卻得不到明顯產出
+No controls, audit trail =  
+No production approval
+Compliance
+50 %
+Government  will enforce AI 
+regulations in 2026
+2
+1. REGULATORY 
+TSUNAMI
+2025 -26
+• Geo -specific: Growing AI and 
+Data regulations, fines
+• Industry -specific: HIPAA AI 
+addendum, PCI
+-DSS A I control s
+69%
+CIO/CFO
+No ROI tracking =       
+No budget expansion
+Companies
+ lack systems to 
+track AI usage, compliance
+4
+2. ECONOMIC 
+PRESSURE
+CIO/ CFO Scrutiny
+• AI ROI under scrutin
+y, need to 
+align spend with strategic value
+• Can't allocate & manage costs 
+without usage visibility
+No threat prevention =  
+No CISO sign
+-off
+Security
+99 %
+Enterprises 
+saw an attack 
+on their AI services in 2025
+3
+3. SECURITY 
+MATURITY
+CISO Evolution
+• Prompt injection, jailbreak, 
+exfiltration are mainstream
+• Infrastructure security 
+≠ AI-
+specific threat defense
+1. McKinsey 66% of orgs haven’t moved from AI pilots to production
+2. Gartner:  50% of governments will enforce AI regulations in 2026
+3. Palo Alto: 99% of orgs saw an attack on their AI services in 2025
+4. Cato Networks: 69% of Enterprises in survey said they lack system to track AI usage and compliance
+5. IBM: 13% of organizations reported AI system breaches, and most had no AI access controls.
+
+===== PAGE 3 =====
+When Risk Moves from System 
+Boundaries
+ to Runtime  Decisions
+傳統IT 資安與AI 資安
+Traditional Enterprise IT
+• System logic is fixed
+• Output determined by coded rules
+• IAM / DLP / SIEM protect 
+boundaries
+• Risk trigger: unauthorized entry
+RAG AI
+• Prompt defines intent
+• Retrieval selects semantic context
+• Model synthesizes temporary 
+knowledge
+• Risk trigger: unintended context 
+assembly
+ 
+Agentic AI Systems
+• Model selects tools
+• Tool triggers workflow
+• Output becomes action
+• Risk trigger: valid step, invalid 
+chain outcome
+圖片生成: Gemini
+
+===== PAGE 4 =====
+A framework to govern Enterprise AI risk, enforce trust, and scale adoption
+Gartner AI 
+TRiSM  (AI Trust, Risk and Security Management)
+AI TRiSM ensures AI 
+governance, 
+trustworthiness, fairness, 
+reliability, robustness, 
+efficacy and data 
+protection. 
+AI TRiSM includes 
+solutions and techniques 
+for model and application 
+transparency, content 
+anomaly detection, AI data 
+protection, model and 
+application monitoring and 
+operations, adversarial 
+attack resistance and AI 
+application security.
+
+===== PAGE 5 =====
+Gartner AI 
+TRiSM  (AI Trust, Risk and Security Management)
+The Four Pillars of AI Governance
+•
+Explainability & Monitoring
+Action: Eliminate "Black Box" risks by ensuring AI 
+decisions are auditable and understandable.
+•
+ModelOps  (Operational Excellence)
+Action: Standardize the AI lifecycle from 
+development to deployment.
+•
+AI Application Security
+Action: Defend against specialized threats (e.g., 
+Prompt Injection).
+•
+Privacy & Data Protection
+Action: Deploy Privacy
+-Enhancing Technologies 
+(PETs) and Synthetic Data.
+Strategic Execution Roadmap
+•
+Asset Rationalization Phase
+Comprehensive AI Inventory: Establish an exhaustive 
+catalog of all AI assets, including third
+-party plugins, 
+open -source models, and proprietary in
+-house 
+developments.
+•
+Governance Orchestration
+Cross -Functional AI Committee: Formalize a governance 
+body comprising the CIO, CISO, and Legal Counsel to 
+synchronize AI initiatives with corporate risk appetite.
+•
+Tiered Risk Management
+Contextual Classification: Implement differentiated 
+TRiSM  validation standards based on use
+-case risk levels 
+(e.g., Internal Administrative tools vs. High
+-stakes 
+Customer Credit Scoring).
+•
+Systematic Automation
+Implement 'Shift
+-Left' data validation and continuous 
+runtime inspection to preemptively mitigate risks, 
+scaling AI trust without manual friction
+
+===== PAGE 6 =====
+資料來源: OWASP Top 10 Gen AI
+
+===== PAGE 7 =====
+CONFIDENTIAL & AUTHORIZED | 
+8 
+HPE PRIVATE CLOUD AI WITH DAXA GOVERNANCE, SECURITY 
+Confidential | Authorized 
+AI Chatbots
+AI Workloads
+AI Agents
+Model Catalog
+HPE Orchestration
+HPE Management
+HPE Private Cloud AI (算力、軟體、平台一體機)
+AI Optimized
+infrastructure 
+AI Software
+NVIDIA AI Enterprise
+NeMo 
+Curator
+NeMo 
+Customizer
+NeMo 
+Evaluator
+NeMo 
+Retriever
+NeMo 
+Guardrails
+HPE AI Essentials
+Data pipeline
+Orchestration
+MLOps
+HPE Data Lakehouse
+NVIDIA Grace CPU
+NVIDIA GPU
+NVIDIA Spectrum-X 
+Networking
+Private Cloud
+Liquid Cooling 
+Innovation
+AI Servers and 
+Storage Certified by 
+NVIDIA
+AI Models
+AI Applications
+AI Apps
+…
+…
+Cloud LLM 
+APIs
+
+===== PAGE 8 =====
+CONFIDENTIAL & AUTHORIZED | 
+9 
+HPE PRIVATE CLOUD AI WITH DAXA GOVERNANCE, SECURITY 
+Confidential | Authorized 
+AI Chatbots
+AI Workloads
+AI Agents
+Model Catalog
+HPE Orchestration
+HPE Management
+AI Optimized
+infrastructure 
+AI Software
+NVIDIA AI Enterprise
+NeMo 
+Curator
+NeMo 
+Customizer
+NeMo 
+Evaluator
+NeMo 
+Retriever
+NeMo 
+Guardrails
+HPE AI Essentials
+Data pipeline
+Orchestration
+MLOps
+HPE Data Lakehouse
+NVIDIA Grace CPU
+NVIDIA GPU
+NVIDIA Spectrum-X 
+Networking
+Private Cloud
+Liquid Cooling 
+Innovation
+AI Servers and 
+Storage Certified by 
+NVIDIA
+AI Models
+AI Applications
+AI Apps
+AI Governance and 
+Security Platform
+Policy Engine
+MCP Catalog
+Guardian Agents
+Logs/Alerts
+Safe Inference
+Safe Agent
+Safe RAG
+Classifier
+…
+…
+Cloud LLM 
+APIs
+HPE Private Cloud AI (算力、軟體、平台一體機)
+
+===== PAGE 9 =====
+CONFIDENTIAL & AUTHORIZED | 
+10 
+AI Firewalls Fail To Protect When Agents Access Real Data  
+10
+AI FIREWALL
+PROBABILISTIC 
+GOVERNANCE
+COMPANY DATA
+AI AGENT
+LLM
+MCP SERVER
+MCP SERVER
+MCP SERVER
+Shift-Left Approach: From controlling LLM output to controlling LLM input context
+SAFE AGENT
+MCP TRUST ZONE
+Retrieved
+AI Context
+Probabilistic Approaches leads to AI Security & Governance by Guesswork
+CONFIDENTIAL & AUTHORIZED | 
+10
+
+===== PAGE 10 =====
+DEMO 情境說明(1/4)
+Company Data
+Code, Docs, Databases
+系統創建後端工單
+並填入客戶支援資訊
+工單系統前端介面
+          (Ticket System; 
+Frontend)
+使用者於工單系統
+輸入技術支援資訊
+?
+?
+?
+1
+2
+工程師透過AI
+處理工單資訊
+AI 系統透過受管的MCP 工具
+取回工單內容並回傳工程師
+MCP Servers
+3rd-party tools
+雲端或地端
+LLM
+工單系統後端(AI LLM 系統)
+              (Ticket System;
+Backend; 
+LLM -Powered)
+3
+4
+
+===== PAGE 11 =====
+DAXA.AI : Built
+-In Protection in HPE AI Factory Ecosystem
+AI Security Vendors
+Avivah Litan
+AI TRiSM Leader, Gartner
+Totally agree with DAXA’s approach of data-
+aware guardian agents. Information protection is a 
+key function for agent security
+
+===== PAGE 12 =====
+CONFIDENTIAL & AUTHORIZED | 
+16 
+From Pilot to Production. 
+Across Every Industry.
+GOVERNMENT & TELECOM
+FINANCIAL & HEALTHCARE
+ENTERPRISE & DATA
+TECHNOLOGY & 
+DEVELOPER
+Trusted 
+where the 
+stakes are 
+highest.
+AI without data 
+governance isn't AI.
+It's a liability.
+
+===== PAGE 13 =====
+Security risks and controls
+Securing the Future – Protect AI solution from Novel threat landscape
+AI Solution
+Data 
+Security
+Model 
+Security
+Code 
+Security
+AI 
+Ecosystem 
+Security
+Access 
+Control
+Audit & 
+Compliance
+Data privacy
+Regulations
+Access creep
+Misconfigurations
+Supply chain risks
+Novel Threats and vulnerabilities
+Data breaches
+Data poisoning
+Adversarial attacks
+Misconfigurations
+Model inversion
+Model theft
+
+===== PAGE 14 =====
+© 2026  Hewlett Packard Enterprise Development LP
+Thank You
+Confidential | Authorized HPE Partner Use Only

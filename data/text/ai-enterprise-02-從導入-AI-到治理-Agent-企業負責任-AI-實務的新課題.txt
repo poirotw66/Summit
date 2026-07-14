@@ -1,0 +1,353 @@
+
+===== PAGE 1 =====
+Microsoft Azure
+iThome AI Enterprise Summit 2026
+從導入AI 到治理Agent：企業負責任AI 實務的新課題
+#AIGovernance
+#ResponsibleAI
+#AIStrategy
+林育宏 Frank
+·
+Microsoft Cloud & AI 資深解決方案工程師
+01
+
+===== PAGE 2 =====
+Microsoft Azure
+© Copyright Microsoft Corporation. All rights reserved. 
+一個關鍵的分岔
+信任，是AI 最貴的功能之一。
+「更強」和「可控」，是兩條不同的工程線。
+讓 Agent 更強
+＝ 引擎工程。模型能力快速演進。
+讓 Agent 可控
+＝ 底盤工程。信任，不會跟著演進。
+
+===== PAGE 3 =====
+Microsoft Azure
+© Copyright Microsoft Corporation. All rights reserved. 
+MICROSOFT BUILD 2026
+·
+2026/06/02
+Build 2026 的重點訊息之一是：
+企業開發者要的不是又一種把 agent 
+跑起來的方法——他們要的，是信任。
+企業能在安全邊界內盡其所能地擴張AI ，信任是基礎。
+
+===== PAGE 4 =====
+Microsoft Azure
+© Copyright Microsoft Corporation. All rights reserved. 
+承前一場《AI 重塑金融》
+企業已經開始熟悉「用」AI。
+當Agent 開始自己讀資料、自己發動作，命題將從「AI 能為我們做什麼」，變成「我們敢讓它自己做什麼」。
+命題翻轉了——企業什麼時候敢把鑰匙交出去？
+
+===== PAGE 5 =====
+Microsoft Azure
+© Copyright Microsoft Corporation. All rights reserved. 
+信任
+＝
+邊界
+＋
+檢查點
+＋
+稽核
+B O U N D A R Y
+該被允許做什麼
+C H E C K P O I N T / H I T L
+什麼時候停／誰能喊停
+A U D I T A B I L I T Y
+事後查得到
+
+===== PAGE 6 =====
+Microsoft Azure
+© Copyright Microsoft Corporation. All rights reserved. 
+B O U N D A R Y
+邊界不是文件，是系統架構
+01 · 邊界
+邊界的系統架構
+Agent Governance Toolkit (AGT)   |   Microsoft
+四大核心模組
+作業系統、網格、執行環境、可靠性工程
+衍生實際功能
+身分驗證、權限分級、稽核紀錄、
+資安閘道、防止外洩個資
+開發框架
+AGT 沿用全球通用的 RFC 2119 規範語言，讓您的治理政策從一份沒人強制的文件，
+升級成一道與業界標準相容、且會自動把關的執行引擎。
+
+===== PAGE 7 =====
+Microsoft Azure
+© Copyright Microsoft Corporation. All rights reserved. 
+HITL 不是拖慢流程，是把高風險動作變成可授權。
+02 · 檢查點
+C H E C K P O I N T / H I T L
+在Agent 的迴圈裡定義8 個可以喊停的點，每個點都能放行／警示放行／拒絕／升級呈核。
+治理
+身分
+軌跡
+政策引擎PaC
+放行
+拒絕
+Agent Control Specification | Microsoft
+AGT 中的Agent Control Specification (ACS) 採用Open Policy Agent（OPA）開源的通用型政策引擎，把「可不可以做」的規範寫成程式碼隸屬於CNCF 並由其管理。
+
+===== PAGE 8 =====
+Microsoft Azure
+© Copyright Microsoft Corporation. All rights reserved. 
+範例——Policy as Code
+Quick Start - Agent Governance Toolkit | Microsoft
+
+===== PAGE 9 =====
+Microsoft Azure
+© Copyright Microsoft Corporation. All rights reserved. 
+「200 OK，不代表它答對了。」
+03 · 稽核
+A U D I T A B I L I T Y
+Agent Framework
+Agents
+AI Observability Starter Kit | Microsoft
+一條符合GenAI 標準的OpenTelemetry 追蹤鏈，把每一次模型呼叫、工具呼叫都變成可查詢、可評測的數據軌跡。
+
+===== PAGE 10 =====
+Microsoft Azure
+© Copyright Microsoft Corporation. All rights reserved. 
+範例——Verify OWASP ASI coverage
+Quick Start - Agent Governance Toolkit | Microsoft
+
+===== PAGE 11 =====
+Microsoft Azure
+© Copyright Microsoft Corporation. All rights reserved. 
+對企業的意義：法遵對齊、風險盤點、稽核證據、治理責任
+微軟開源專案Agent Governance Toolkit (AGT) 對齊 歐盟AI 法案｜美國NIST AI RMF｜OWASP Agentic AI Top 10｜SOC 2
+歐歐
+ AI 歐歐
+OWASP Agentic AI Top 10
+歐歐
+NIST RMF
+SOC 2
+Agent Governance Toolkit (AGT) > Standards Compliance | Microsoft
+
+===== PAGE 12 =====
+Microsoft Azure
+© Copyright Microsoft Corporation. All rights reserved. 
+從「可信任的AI」到「負責任的AI」。
+歐歐
+ AI 歐歐
+OWASP Agentic AI Top 10
+歐歐
+NIST RMF
+SOC 2
+Microsoft 負負負
+AI 負負
+微軟開源專案Agent Governance Toolkit (AGT) 對齊 歐盟AI 法案｜美國NIST AI RMF｜OWASP Agentic AI Top 10｜SOC 2
+Agent Governance Toolkit (AGT) > Standards Compliance | Microsoft
+
+===== PAGE 13 =====
+Microsoft Azure
+© Copyright Microsoft Corporation. All rights reserved. 
+Microsoft 把原則變成目標、需求、實踐
+歐歐
+(歐歐歐歐歐
+)
+歐歐
+歐歐
+歐歐
+白皮書下載：《Microsoft Responsible AI Standard v2 General Requirements》
+
+===== PAGE 14 =====
+Microsoft Azure
+© Copyright Microsoft Corporation. All rights reserved. 
+Microsoft 負責任AI 旅程
+Microsoft's Responsible AI Journey  ·  2016 – 2026
+Satya Nadella 提出
+負責任 AI 理念
+“The Partnership of the 
+Future” essay
+2016
+成立 Aether AI 倫理委
+員會
+Aether Committee established
+2017
+全球首創 AI 紅隊演練
+World-first AI Red Team
+2018
+成立負責任 AI 辦公室
+Office of Responsible AI · 
+Standard v1
+2019
+對抗式 ML 威脅矩陣與 
+Counterfit
+Adversarial ML Threat Matrix 
+(MITRE) & Counterfit
+2020
+推出負責任 AI 儀表板
+與工具箱
+Responsible AI dashboard & 
+Toolbox
+2021
+《負責任 AI 標準 v2》
+Responsible AI Standard v2 
+(public)
+2022
+發布〈Governing AI：
+未來藍圖〉
+“Governing AI: A Blueprint”
+2023
+《負責任 AI 透明度報告》
+Inaugural RAI Transparency 
+Report · AI Frontiers Lab
+2024
+取得 ISO/IEC 
+42001:2023 認證
+ISO/IEC 42001:2023 certification
+2025
+Agent 治理（Entra 
+Agent ID）
+Agent governance · Entra 
+Agent ID
+2026
+奠基期  Foundations
+落地期  Operationalize
+生成式 AI  Generative
+代理式 AI  Agentic
+
+===== PAGE 15 =====
+Microsoft Azure
+© Copyright Microsoft Corporation. All rights reserved. 
+為Agent 裝上邊界、檢查點與輸出審查
+歐歐歐歐歐歐
+— 歐Azure AI Landing Zone 歐歐歐
+,歐RBAC歐歐
+歐歐歐歐歐歐歐
+,歐Agent 歐歐歐歐歐歐歐
+歐
+歐歐歐歐歐
+— Policy as Code 歐歐歐歐歐歐歐歐
+,歐歐歐歐歐歐歐
+歐歐歐歐歐
+歐歐
+歐歐歐歐歐歐
+— 歐歐歐歐歐歐歐歐
+歐AI 歐歐歐歐歐
+HITL 歐歐
+;
+歐歐歐歐
+AgentOps 歐歐歐歐歐歐歐歐歐
+歐
+歐歐歐歐
+— 歐5% 歐歐歐歐
+AI 歐歐歐歐
+;歐歐歐歐歐歐歐歐
+AI 歐
+歐歐
+(歐歐
+90%歐歐歐
+81%歐歐歐
+80%)歐
+白皮書下載：《Path to production for AI Agents》
+
+===== PAGE 16 =====
+Microsoft Azure
+© Copyright Microsoft Corporation. All rights reserved. 
+現在，你敢給Agent 鑰匙了。
+因為你手上有——邊界、檢查點、與稽核。
+
+===== PAGE 17 =====
+recall
+
+===== PAGE 18 =====
+Microsoft 打造可信任、負責任AI 的完整生命週期
+Build in GitHub
+程式碼
+提示詞
+技能與工具
+評測定義
+受治理的Agent 生命週期
+在Microsoft Foundry 執行
+最佳化模型、提示、技能與工具
+Agent 執行環境
+規劃/ 行動/ 觀測
+託管與擴展
+評測與最佳化
+模型路由+ 強化學習
+Agent 與評測指標
+超過11,000  個模型
+以Microsoft IQ 提供脈絡—— 您的企業知識
+Distribute to users
+M365 Copilot
+Teams
+應用程式與API
+Build and run agents at scale with Microsoft Foundry at Build 2026 | Microsoft Foundry Blog
+開發端
+使用端
+治理端
+
+===== PAGE 19 =====
+支援任何 Agent 框架的追蹤與評估
+正式上線
+開放生態系支援
+以 OTel 為基礎的追蹤與評估,擴及 LangChain、
+LangGraph、OpenAI SDK 與 Microsoft Agent 
+Framework,不僅限於 Foundry 代管的 Agent。
+統一追蹤檢視
+每個 Agent 步驟——工具呼叫、LLM 呼叫、交接—
+—都會統一記錄在同一個追蹤畫面,無論使用哪種框
+架建置。
+From observability to ROI for AI agents on any framework | Microsoft
+
+===== PAGE 20 =====
+持續改善——Optimizer 用你自己的真實數
+據，自動幫你找出更準、更省、更安全的版
+本，讓Agent 上線後能持續變強。
+Foundry 代管的 Agent
+執行評估與最佳化
+Agent optimizer 
+讀取目前的 Agent 提示詞與技能,搜尋可提升 Agent 品質的組態
+設定。
+候選方案 1
+提示詞 v4・GPT-5.2
+・2 項技能
+品質 +26%
+成本 -36%
+候選方案 2
+提示詞 v5・GPT-5.4
+・4 項技能
+品質 +16%
+成本 -10%
+Agent optimizer 
+非公開預覽
+Introducing Agent Optimizer in Foundry Agent Service | Microsoft
+
+===== PAGE 21 =====
+Foundry Agent 的 ROI
+Foundry 的 ROI 將成本
+轉化為商業價值。
+• 並排比較商業價值與 Token 成本。
+• 顯示於 Foundry 入口網站與 API,支援
+版本比較與每日趨勢檢視。
+• 深入追蹤資料以進行偵錯。
+非公開預覽
+From observability to ROI for AI agents on any framework | Microsoft
+
+===== PAGE 22 =====
+Microsoft Azure
+活動日期｜
+9/21 – 9/23 台北華南國際會議中心
+Frontier Transformation (前瞻轉型) 時代已至，
+AI Agent 正成為企業核心競爭力。
+從個人效率、客戶互動到商業流程與加速創新，全面重塑
+企業營運、決策與創新模式。
+DevDays Asia 2026
+匯聚微軟總部專家× 台灣技術社群
+聚焦平台整合、資料治理與安全合規
+串聯產業實踐與在地生態
+洞察技術趨勢& 加速企業落地
+立即報名
+邁向前瞻轉型
+https://aka.ms/devdays2026
+年度旗艦技術盛會
+
+===== PAGE 23 =====
+Microsoft Azure
+Thank you.
+iThome AI Enterprise Summit 2026

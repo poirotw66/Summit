@@ -1,0 +1,44 @@
+{
+  "slug": "cloud-edge-28-從-Cloud-First-到-Agent-First-企業-IT-為何要提前為-AI-Agent-打底",
+  "title": "從 Cloud First 到 Agent First：企業 IT 為何要提前為 AI Agent 打底",
+  "speaker": "顏勝豪（Otto）",
+  "speaker_title": "國泰金控數數發中心雲端策略發展部協理",
+  "summit": "cloud-edge",
+  "tags": ["AI Agent", "企業治理", "雲端轉型", "AgentOps", "平台工程"],
+  "summary": "講者以個人、團隊、企業三個層次的真實經驗，說明 AI Agent 從個人助理演進到企業級平台時所面臨的挑戰，核心論點是「Agent First 不是把 AI 接到企業裡，而是把企業變成 AI Agent 可以安全工作的地方」。講題並以國泰金控過去 Cloud Ready、Cloud Adoption、Cloud First 的上雲歷程為例，說明雲端治理累積的身份、權限、標準化基礎，其實正是企業迎接 Agent First 時代的關鍵地基。",
+  "highlights": [
+    "個人 Agent 經驗（40+ 天使用 OpenClaw/Toto）顯示 Agent 已能持續執行任務、沉澱為可重複 Skill，但也已碰到權限、金流等企業級邊界問題",
+    "團隊 Agent 以「AI Scrum Team 的 6+1 模式」為例，說明 Claude Tag 讓 AI 成為存在於 Slack 頻道、共享上下文、可追蹤進度的「第七位成員」",
+    "企業級 Agent 的真正挑戰不是模型智慧，而是資料、權限、API、流程與治理；打造一個 Agent 容易，管理五百個才是挑戰",
+    "國泰金控過去 5 年完成 100 套系統上雲，Cloud First 階段建立的 Landing Zone、IAM、治理、安全與標準化流程，其實就是 Agent 未來能安全工作的基礎",
+    "提出 AI Agent 依賴的企業核心能力框架：Identity、Knowledge、Tool/API、Workflow、Observability、Security、Audit、Lifecycle，並主張 AgentOps 可借鏡 CloudOps、DevOps、MLOps、FinOps 的成熟做法"
+  ],
+  "sections": [
+    {
+      "heading": "個人 Agent：從聊天視窗到真正做事的助理",
+      "body": "講者分享超過 40 天使用 OpenClaw/Toto 的親身經驗，指出 Agent 的關鍵頓悟時刻在於它不再只是回答問題，而是能持續做事，例如新聞摘要、全文抓取、Podcast 製作等日常例行工作流，並累積出 30 多個 One Page、12 項 Skill。但講者也強調，個人使用情境已經會碰到權限、金流、個資與外部帳號等企業級問題：可以協助監控營位，但刷卡付費等操作必須拒絕，顯示個人場景的安全邊界思考同樣適用於企業。"
+    },
+    {
+      "heading": "團隊 Agent：AI Scrum Team 的第七人",
+      "body": "講題以 Anthropic 推出的 Claude Tag 為例，說明 AI 如何從個人對話框走進團隊協作頻道。Claude Tag 讓團隊成員可在 Slack 頻道中直接指派任務給共享身份的 @Claude，它具備累積上下文、非同步工作與企業控管等特性，成為 Sprint Planning、Daily Scrum、Development、Review/Retro 等流程中的常駐第七位成員。講者特別指出，同樣是 Agent，若設計成「監控式」會讓團隊感到壓力，若設計成「助攻式」則能降低協作摩擦，兩者對團隊感受影響巨大。"
+    },
+    {
+      "heading": "企業級 Agent：從技術狂熱到環境成熟度",
+      "body": "許多企業 Agent PoC 卡關，並非因為模型不夠聰明，而是資料、權限、API、流程、治理與安全等企業現實條件尚未到位。講者指出大型金融集團面對的現實條件包括監理合規需在平台設計階段納入、身份與權限存取邊界須事先設計、既有主機與舊 API 不會消失，以及跨公司治理與組織共識的建立，這些都是 Agent 從技術展示走向規模化落地必須跨越的門檻。"
+    },
+    {
+      "heading": "Cloud First 其實是在為 Agent First 打底",
+      "body": "講者以國泰金控過去的雲端轉型歷程為例：從 Cloud Ready（啟動集團上雲計畫、應用系統評估與遷移計畫）、Cloud Adoption（5 年完成 100 套系統上雲、建立雲端治理組織框架），到 Cloud First（雲端優先加速 IT 現代化、解決技術債、加速業務創新），過程中累積的 Landing Zone、IAM、治理、安全與標準化流程，回頭看正是 Agent 能夠安全工作的基礎建設，讓企業「以為在為 Cloud 做準備，其實也在為 AI 做準備」。"
+    },
+    {
+      "heading": "AI Agent Platform 與治理轉移",
+      "body": "講者提出 AI Agent 依賴的企業核心能力框架，涵蓋 Identity（Agent 是誰）、Knowledge（可看哪些知識）、Tool/API（可呼叫哪些系統）、Workflow（如何嵌入流程），以及圍繞 Agent Runtime 的 Observability、Security、Audit、Lifecycle。講者主張多年累積的雲端治理機制可以延伸至管理 Agent，AgentOps 可借鏡 CloudOps、DevOps、MLOps、FinOps 的成熟做法；打造一個 Agent 靠信任與手動修正即可，但管理五百個 Agent 需要身份、授權、工具目錄、知識庫、審計、觀測與生命週期管理的平台化能力，這才是企業真正的挑戰。"
+    }
+  ],
+  "key_images": [
+    {"file": "assets/images/cloud-edge-28-從-Cloud-First-到-Agent-First-企業-IT-為何要提前為-AI-Agent-打底/p3.jpg", "caption": "個人、團隊、企業三段放大圖，說明 Agent First 是把企業變成 AI Agent 可安全工作的地方"},
+    {"file": "assets/images/cloud-edge-28-從-Cloud-First-到-Agent-First-企業-IT-為何要提前為-AI-Agent-打底/p11.jpg", "caption": "第七位成員的工作內容：Sprint Planning、Daily Scrum、Development、Review/Retro 各階段的協作方式"},
+    {"file": "assets/images/cloud-edge-28-從-Cloud-First-到-Agent-First-企業-IT-為何要提前為-AI-Agent-打底/p16.jpg", "caption": "國泰上雲路徑圖：Cloud Ready、Cloud Adoption、Cloud First 三階段與對應成效指標"},
+    {"file": "assets/images/cloud-edge-28-從-Cloud-First-到-Agent-First-企業-IT-為何要提前為-AI-Agent-打底/p17.jpg", "caption": "Cloud First 為 Agent First 打底示意圖，說明雲端、大數據與 AI 之間的技術資源引擎關係"}
+  ]
+}

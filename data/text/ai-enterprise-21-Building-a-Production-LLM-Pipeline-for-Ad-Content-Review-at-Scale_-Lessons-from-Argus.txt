@@ -1,0 +1,361 @@
+
+===== PAGE 1 =====
+AI ENTERPRISE SUMMIT 2026  ·  TRACK C  ·  TAIPEI
+Building a Production LLM Pipeline
+for Ad Content Review at Scale
+Lessons from Argus
+Eagle Chen    Team Lead, Data Science · Content Quality @ Taboola
+
+===== PAGE 2 =====
+“ARGUS”
+the hundred-eyed
+guardian of myth
+ABOUT THE SPEAKER
+Eagle
+Chen
+Team Lead, Data Science   ·   Content Quality @ Taboola
+EXPERIENCE
+9+ years in software engineering & AI/ML
+earlier —  image processing algorithm
+02
+
+===== PAGE 3 =====
+WHERE I WORK
+THE GROWTH ENGINE
+FOR THE OPEN WEB
+AI-driven
+revenue, engagement
+& audience growth
+11K+
+global publishers
+18K+
+global advertisers
+600M+
+daily active users
+2K+
+employees (~500 R&D)
+35
+global offices
+$130M+
+annual R&D
+03
+
+===== PAGE 4 =====
+Home  Buyers Are Saving More 
+Than Ever (See Why)
+Don’t let your dream home feel out of reach. 
+Personalized mortgages make it simpler than ever 
+to take the next step.
+BrightKey |  Sponsored
+Apply Now
+Native Motion *
+Display
+Vertical
+Carousel
+*Built with GenAI AdMaker 
+Performance AI
+Different formats 
+and placements
+ADVERTISING ON PUBLISHER’S SITE
+
+===== PAGE 5 =====
+WHY WE REVIEW CONTENT
+We are the bridge — so the content has to be right
+ADVERTISER
+creates the ad
+TABOOLA
+places the ad
+on a publisher's site
+PUBLISHER
+hosts the content
+So we review every ad — before it ever serves.
+04
+
+===== PAGE 6 =====
+Would you approve this ad?
+BEFORE
+AFTER
+Doctors Are Stunned: FDA-Approved 
+Trick Melts Belly Fat Overnight
+Thousands already swear by this 10-second evening 
+ritual. Try it before it's banned.
+Sponsored · health-news-daily.example
+✓  APPROVE
+✕  REJECT
+?
+Is the claim verifiable?
+?
+Whose image is that?
+?
+Where does the link go?
+05
+
+===== PAGE 7 =====
+AGENDA · THREE THINGS TODAY
+What we'll cover
+01
+The challenge — and how we beat it
+why ad review is hard, and the bet we made
+02
+The architecture
+how Argus is built — a harness around the model
+03
+Impact & Lessons
+what it delivered, and what we learned
+06
+
+===== PAGE 8 =====
+01
+Two Problems, One opportunity
+why human review doesn't scale — and traditional ML didn't either
+07
+
+===== PAGE 9 =====
+HUMAN REVIEW · THREE PRODUCT PAINS
+1
+CONSISTENCY
+reviewers disagree — with each other, and with themselves
+2
+TIME
+advertisers wait 1+ days for a decision before going live
+3
+SCALABILITY
+unique knowledge per market × language — retrain on every policy update
+08
+
+===== PAGE 10 =====
+BEFORE LLMS
+We tried the classic playbook. It buckled.
+≋
+A multimodal task with rich 
+context
+±
+Labels you can't trust
+↻
+Policies that never sit still
+the model zoo
+Safety v1
+IAB cls
+Ad-type
+Thumb cls
+Rules #1–40
+Geo rules
+Lang det
+Dup match
+…
+maintained one by one — forever
+Low AI-review coverage
+09
+
+===== PAGE 11 =====
+THE REFRAMING
+From traditional ML to LLM
+multimodal, contextual task
+LLMs read text + images natively, and 
+dynamically load context
+no trustworthy labels
+no fine-tuning — judgment comes from the 
+prompt
+policies change
+Domain experts update the prompt without R&D
+Policy  =  an English prompt
+10
+
+===== PAGE 12 =====
+02 · WHAT WE ACTUALLY BUILT
+HARNESS
+ENGINEERING
+Model is an engine; Harness is the car.
+control flow
+context
+tools
+memory
+CI/CD
+11
+
+===== PAGE 13 =====
+THE CONTROL-FLOW LAYER
+Nine stages — copied from the human workflow
+HOW A HUMAN REVIEWS
+THE ARGUS PIPELINE
+See the ad — type & domain
+Screen the account history
+Open a browser, verify claims
+Check ad & landing page
+Approve or reject, and explain
+1  Master
+2  Pre-Policy
+3  Fact-Checking
+4  Policy
+5  LP Policy
+6  Combine
+if violations ↓
+if clean ↓
+7  Rejection Explanation
+8  Approve
+9  Final
+each stage: auditable · testable · model-swappable
+12
+
+===== PAGE 14 =====
+THE CONTEXT LAYER
+Prompts are assembled, not written
+1
+Master's labels pick the 
+rules
+2
+More context input, e.g. 
+target market
+3
+Rules live in a versioned DB
+Fewer tokens — and more 
+accurate
+content type
+content domain
+policy domains
+campaign geo
+PROMPT ASSEMBLER
+policy
+rules
+policy prompt · this ad
+13
+
+===== PAGE 15 =====
+THE TOOL LAYER
+Agentic — exactly where judgment needs evidence
+the ad claims:
+“FDA-approved”
+“celebrity-endorsed” · “clinical 
+evidence”
+LLM
+search_web
+search_image
+✓ SUPPORTED
+✕ UNSUPPORTED
+Why our own tools?  They keep Argus model-agnostic — swap models freely.
+14
+
+===== PAGE 16 =====
+THE MEMORY LAYER
+In-Context Learning: institutional memory, injected at inference time
+new ad
+borderline
+creative
+thumbnail embedding 
+title / description BM25
+history of
+review
+decisions
+similar ad
+APPROVED ✓
+similar ad
+REJECTED ✕
+Few-shot by example  — improves 
+accuracy & consistency.
+cf. Class-RAG: Real-Time Content Moderation with Retrieval-Augmented Generation — Meta, 2024 · arXiv:2410.14881
+15
+
+===== PAGE 17 =====
+THE CI/CD LAYER
+Prompts are code — CI/CD: versioned · tested · gated
+prompt or model change
+EVAL RUN
+golden datasets
+per-stage regression
+RELEASE
+GATE
+✓ DEPLOY
+pass
+✕ fail → iterate
+Release Gate:  Quality / Cost / Latency
+16
+
+===== PAGE 18 =====
+WHO TURNS THE CRANK
+The full CI/CD cycle: domain experts drive the iteration
+Policy/CRT
+author prompt on 
+Testbed
+evaluation
+pipeline
+annotation
+platform
+calibrated
+LLM-as-Judge *
+v131  policy-stage prompt
+v78   policy rule set
+R&D freed from the model zoo — 
+domain experts now iterate at 
+business speed.
+* judge calibrated against human labels — bias-corrected, with confidence intervals (Lee et al., 2025)
+17
+
+===== PAGE 19 =====
+THE HARNESS, PROVEN · FEBRUARY 2026
+We swapped the engine of a moving car
+1
+eval
+all model 
+candidates
+2
+ship
+GPT-4o → Gemini 3 
+Flash
+3
+−30% cost
+in one month
+4
+2 IAB categories 
+over-reject
+caught by 
+monitoring
+5
+per-category 
+rollback
+zero-code config
+6
+re-tune → 
+re-ship
+all categories back 
+on
+Like a tire change in an F1 race
+18
+
+===== PAGE 20 =====
+03 · BENEFITS REALIZED
+12 hr → minutes
+review turnaround — Argus v.s. human reviews
+All English traffic
+every English ad is eligible to review by Argus
+75% less workload
+for human reviewers
++13 pp
+review consistency vs. human reviewers
+Bonus: Actionable rejection comment  ·  advertisers act on the feedback — and that shows up as a lift vs. manual 
+review:
+~2×  vs manual
+more rejections resubmitted
+1.5×  vs manual
+more eventually re-approved
+19
+
+===== PAGE 21 =====
+03 · IF YOU BUILD ONE OF THESE
+1
+Encode the human workflow
+reliability, auditability, and trust comes free
+2
+Let domain experts drive the harness
+reviewers become AI mentors, or freed to serve customers
+3
+The CI/CD layer.
+the key to make R&D and domain experts collaborate smoothly
+20
+
+===== PAGE 22 =====
+Thank you
+Q&A → find me in the hallway, or contacts below
+Eagle Chen    Team Lead, Data Science · Content Quality
+EMAIL
+eagle.c@taboola.com
+Scan to connect on LinkedIn

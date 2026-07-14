@@ -1,0 +1,497 @@
+
+===== PAGE 1 =====
+AI驅動K8S Runtime Security
+超越傳統威脅偵測的新世代防護
+iThome Cloud Summit/AI Enterprise Summit 2026
+謝長軒Chandler
+Hsieh
+卡巴斯基台灣技術總監
+
+===== PAGE 2 =====
+AI時代下，安全邊界不是攻不破，
+只是時間的問題。Are you ready?
+“
+
+===== PAGE 3 =====
+K8S的威脅風險
+< 30mins
+在公有雲環境中，駭客攻陷
+一座叢集所需的平均時間
+~89 %
+過去12 個月內曾遭遇
+K8S 安全事件**
+~3M (~20 %)
+在 Docker Hub
+中的檔案
+含有惡意程式*
+JFrog  Security Research 2024
+Red Hat Report 2025
+Wiz Kubernetes Security Report 2025
+容器化並非secure -by -design
+*
+**
+***
+
+===== PAGE 4 =====
+API/RBAC 誤用
+API/RBAC 權限設定錯誤，導致橫向移動的風
+險，包含容器逃逸、帳號洩漏、提權、過度
+存取…等
+網路/資源架構的複雜
+網路配置錯誤，造成故障排除的困難及擴大
+攻擊面的風險。系統配置錯誤，容易造成系
+統資源的誤用導致DoS 的風險。
+容器化的可視性不足
+多層架構設計原理，缺少可視性機制。加上
+系統特性，Log 不易保留，追蹤及調查。在執
+行時沒有適當的工具可以檢測/中止可疑行
+為。
+K8S 攻擊面的威脅情勢
+
+===== PAGE 5 =====
+開發人員
+程式庫
+編譯
+軟體發佈區
+最終用戶
+攻擊者
+被感染的程式
+相依套件/函式
+K8S 供應鏈攻擊
+
+===== PAGE 6 =====
+K8S 供應鏈攻擊
+
+===== PAGE 7 =====
+AI並未改變資安本質，但放大了攻擊速度、
+規模及攻擊面。
+攻擊日常化
+初級駭客能利用GenAI 生成高階惡意代碼與精
+準釣魚郵件，攻擊頻率的變成從「週期性」
+轉向「全年無休」
+新型態的威脅
+針對AI模型的數據投毒(Poisoning) 
+與提示
+注入(Injection)
+攻擊已成為常態
+速度與規模
+透過AI掃描漏洞的速度遠超過人工防禦，自
+動化漏洞利用將成為常態
+AI時代的威脅情勢變化– 外部攻擊面
+
+===== PAGE 8 =====
+在AI 量化攻擊時代下
+卡巴斯基能如何協助用戶
+
+===== PAGE 9 =====
+遙測
+網路流量
+SDL
+漏洞管理
+• 「ICS 威脅」情資
+摘要
+• ICS 威脅情報報告
+• Ask The Analyst
+ICS
+預防
+調查與策略性規劃
+偵測/ 調查/ 回應
+利用卡巴斯基威脅情報
+保護您的基礎設施
+
+===== PAGE 10 =====
+以整合式機器學習模型訓練的靈活雜湊
+機器學習式網路釣魚偵
+測引擎
+基於機器學習技術的設計偵測規則
+偵測到的檔案／日
+50 ,000
+保護用戶／日
+100 ,000
+個偵測到的網路釣魚網頁/ 天
+~1,000
+偵測到的檔案／日
+15 ,000
+名用戶/ 天
+7,000
+偵測到的檔案／日
+100 ,000
+實驗室中作為偵測惡意軟
+體之用的大型神經網路
+基於人工智
+慧的威脅偵
+測數據
+
+===== PAGE 11 =====
+Kaspersky 
+威脅情報由我們的世界級分析師與研究人員蒐集與整理，提供多元化的資訊，協助您的組織有效
+應對當今的網路威脅。
+Kaspersky Research & Expertise
+Web crawlers
+Spam traps
+Sensors
+Partners
+Passive DNS
+KSN
+Bot farms
+OSINT
+And much more ….
+File repository
+Kaspersky
+Threat
+Intelligence
+情報用戶
+卡巴斯基威脅情報來源豐富性
+
+===== PAGE 12 =====
+Threat Intelligence: sources from incidents
+55% in NA
+Other TI providers
+>80% in APAC, Europe, META
+Kaspersky Incident Response
+
+===== PAGE 13 =====
+現狀與挑戰：亞太地區的網路威脅新範式
+網路威脅的“風暴中心”
+同質化情報源的“選擇性失明”
+
+===== PAGE 14 =====
+今天比以往更需要- 全球視野與當地語系化洞察
+超越邊界 戰略互補
+地緣政治敏感區域的第一手情報
+01 / 超越聯盟：為何親美國家也需要多元化情報
+02 / 中立性與透明度：重建信任的基石
+
+===== PAGE 15 =====
+知識分享：提供精準開箱即用的威脅情報
+可立即執行的情報
+Tactical
+Operational
+Strategic
+Kaspersky 
+Threat Intelligence
+Available via
+         
+                  
+    
+Kaspersky Threat Intelligence Reporting
+APT
+Crimeware
+ICS
+Kaspersky Digital Footprint Intelligence
+Kaspersky CyberTrace
+Kaspersky Threat Data Feeds
+快、狠、準
+全球新型態攻擊的手法分享
+暗網調查及
+企業曝露風險資訊
+
+===== PAGE 16 =====
+NGFW
+The test was conducted on a Palo Alto PA-220 against 1,000 rules from the 
+Kaspersky Network Security Threat Data Feed, with the following Palo Alto 
+detection lists enabled:
+•Known Malicious IP Addresses
+•High Risk IP Addresses
+•Bulletproof IP Addresses
+•Tor Exit IP Addresses
+Test scenario
+Results
+Palo Alto Detection Rate
+51.3%
+Kaspersky Network Security Threat Data Feed increases the efficacy of threat 
+detection by:
+47.9%
+FortiGate
+Test scenario
+The test was conducted using FortiGate's built-in detection rules 
+versus the 1,000 rules from Kaspersky’s Network Security Threat 
+Data Feed.
+Results
+47.7%
+Kaspersky Network Security Threat Data Feed increases the 
+efficacy of threat detection by:
+52.3%
+FortiGate Detection Rate
+知識分享：提供精準開箱即用的威脅情報
+
+===== PAGE 17 =====
+SIEM / SOAR /
+IRP
+Threat Intelligence
+Platforms
+Network Security
+Controls
+More…
+知識分享：彈性與各種安全平台整合使用
+
+===== PAGE 18 =====
+經驗分享：專家服務協助建立Cyber Resilience
+執行
+託管式安全
+組建
+改善
+核心技術堆疊
+威脅情報
+調查
+架構與流程
+技能與表現
+MDR
+• 享受自有SOC 的所有主
+要好處
+事件回應
+• 事件回應約定服務
+• 事件緊急應變
+諮詢服務
+• SOC 架構開發
+• 網路威脅情報架構
+• 事件回應演練
+培訓
+• 安全程序及威脅搜捕
+• 事件回應
+• 惡意軟體分析
+• 數位鑑識
+諮詢服務
+• SOC 成熟度評估
+• 桌面演練
+• 對手攻擊模擬
+• 紅隊演練
+威脅情報入口網站
+威脅情報洞察分析
+情資摘要
+威脅情報平台
+NDR
+EDR
+SIEM
+XDR
+
+===== PAGE 19 =====
+服務平台：透過MXDR 協助企業偵測Shadow IT/AI
+自動化響應
+自動化 + 處理建議
+阻擋
+100% known threat
+Unusual Behavior
+Unknown threat
+偵測
+監控
+Prevention 
+Systems
+Detection 
+Systems
+Threat
+Hunting
+阻擋
+監控提早預警
+偵測 & 威脅
+
+===== PAGE 20 =====
+卡巴斯基安全網路(KSN)
+端點防護檔案、網頁和郵件
+HIPS、AMSI
+行為偵測、修復引擎
+漏洞利用防護
+檔案伺服器安全
+行動裝置安全防護
+移動設備管理
+防火牆
+卡巴斯基安全網路(KSN)
+移動設備管理
+白名單控制
+裝置控制
+網頁控制
+雲
+發
+現
+EDR源頭分析、攻擊傳播路徑、自定義威脅指標IOC產出、一鍵式響應
+檔案/ 全機加解密管理
+整合MS O365安全
+自適應安全異常控制
+遠端桌面
+第三方軟體安裝派送
+整合SIEM
+軟體漏洞掃描及捕丁管理
+軟硬體清單及授權管理
+C I T O 安全教育訓練平台
+IT人員安全培訓線上課程
+ASAP安全平台
+企業員工安全培訓課程/釣魚演練平台
+AD自動化響應
+安全事件整合
+雲端沙箱結果分析
+分析結果I O C 共享
+卡巴斯基安全託管服務(MDR)
+服務平台：透過MXDR 協助企業偵測Shadow IT/AI
+
+===== PAGE 21 =====
+Container image
+Container image
+Container image
+Store
+Registry
+Build and release
+CI / CD 
+platform
+Runtime
+Orchestrator
+Container
+Container runtime
+Operating system
+Container
+Container
+Container
+Build
+Store
+Release
+Runtime
+Working node
+安全工具：協助建立容器專用的安全架構
+
+===== PAGE 22 =====
+Protection during 
+store and build stages
+KCS Scanner (images as IaC)
+Container Image
+Container Image
+Registry
+Build
+Store
+Runtime 
+protection
+Images
+and configuration 
+files scan
+Infrastructure Protection
+Implementation 
+and launch
+CI / CD 
+platform
+Orchestrator
+* Launch control running container protection runtime security configuration analysis and compliance checking
+Launch 
+control*
+Context, Event, Telemetry and 
+Forensic Insights 
+Kaspersky SIEM  
+Kaspersky XDR 
+or 3rd Party
+Container
+Container runtime
+Operating system
+Working node
+Container
+Container
+KCS Agent 
+(node)
+KCS Agent 
+(kube )
+安全工具：從靜態檢測到動態防護
+
+===== PAGE 23 =====
+Assurance policy
+Scanner policy
+Resources scan settings
+Image compliance criteria
+Actions to perform
+Actions (Do):
+• Fail CI/CD step
+• Mark as non-compliant
+Criteria (If):
+• Malware found
+• Vulnerabilities exceed 
+severity level
+• Misconfigurations exceed 
+severity level
+• Sensitive data exceeds 
+severity level
+• Package and OS selection 
+Malware
+Vulnerabilities databases
+Configuration errors
+Sensitive data
+安全工具：K8S 防護範圍
+
+===== PAGE 24 =====
+Admission Control
+Controlling containers runtime 
+operations
+Audit
+Enforce
+• Best practice check
+• Block non-compliant images
+• Block unregistered images
+• Capabilities block
+• Container runtime profiles
+• Image content trust
+• Limit container privileges
+• Registries allowed
+• Volumes blocked
+安全工具：K8S Runtime 防護範圍
+
+===== PAGE 25 =====
+Inventory and visualization
+Container infrastructure components and 
+resources in clusters
+安全工具：K8S防護範圍
+
+===== PAGE 26 =====
+Kaspersky AI 助手
+
+===== PAGE 27 =====
+
+
+===== PAGE 28 =====
+
+
+===== PAGE 29 =====
+
+
+===== PAGE 30 =====
+Supply chain 
+protection 
+LLM 
+infrastructure 
+security
+DevSecOps
+Software 
+quality 
+assurance
+Infrastructure 
+security 
+and regulatory 
+compliance
+Talent shortage 
+and skills gaps
+Open source
+usage
+安全工具：KCS防護範圍
+
+===== PAGE 31 =====
+檢測工具：提供整合在AI基礎架構下的安全檢測能力
+一流的威脅偵測解決方案，
+幾乎可以整合到任何應用程式中
+卡巴斯基
+掃描引擎
+入口網站和雲端伺服器
+檔案伺服器
+NAS
+郵件伺服器
+Web 和Proxy 閘道
+應用程式商店和市場
+LLM model files
+
+===== PAGE 32 =====
+提供整合在AI基礎架構下的安全檢測能力
+
+===== PAGE 33 =====
+提供整合在AI基礎架構下的安全檢測能力
+
+===== PAGE 34 =====
+針對K8S安全靭性的建議
+• 盤點安全邊界/權限管理
+• 導入能提高可視性的威脅情報源
+• 升級AI 檢測工具
+• 定期進行情報驅動的安全演練
+
+===== PAGE 35 =====
+Thank you

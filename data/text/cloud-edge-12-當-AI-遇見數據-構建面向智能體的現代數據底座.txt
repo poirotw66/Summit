@@ -1,0 +1,409 @@
+
+===== PAGE 1 =====
+當AI 遇見數據：
+構建面向AI 智能的數據庫底座
+Vicky Wang - 台灣業務總監
+1. July｜台北
+
+===== PAGE 2 =====
+“AI agents will 
+become the primary 
+way we interact with 
+computers in the 
+future.“
+AI 智能正在徹底顛覆一切
+2
+Satya Nadella
+CEO of Microsoft
+“The Age of Agents is 
+here! AI Agents Likely 
+to be a Multi Trillion-
+Dollar Opportunity.“
+Jensen Huang
+CEO of NVIDIA 
+“AI agents are what 
+have the best chance 
+at taking AI from a 
+nice-to-have to a 
+need-to-have.“
+Sundar Pichai
+CEO of Alphabet
+
+===== PAGE 3 =====
+客戶期望
+無論是對內還是對外，用戶已習慣期待
+即時、個性化且全天候的數位體驗。
+AI 轉型
+企業正競相在整個組織中部署AI功能。
+資安風險
+碎片化的環境與龐雜的技術堆疊帶來
+監管複雜性並增加風險。
+當舊有系統無法滿足效能需求時，
+延遲將導致營收損失。
+資料是實現AI承諾的最大機遇，
+也是最大瓶頸。
+為保持競爭力，企業需要快速移動
+資料，同時不失去掌控。
+3
+三大融合力量正重塑企業
+
+===== PAGE 4 =====
+舊有架構已無法應對當前挑戰
+多數企業正以治標不治本的方式填補漏洞，犧牲了速度、安全性與效率。
+拼湊而成的技術堆疊將資料分散在傳統資料庫、NoSQL附加元件、搜尋引擎和各自獨立的快取之間。
+4
+
+===== PAGE 5 =====
+對於數據庫的要求更為嚴苛
+統一整合
+不再修修補補。以單一AI就緒
+的引擎取代整個技術堆疊，專
+為速度與彈性而打造。
+即時處理
+延遲絕不妥協。營運資料與
+分析資料合而為一，驅動零
+延遲的即時體驗。
+AI就緒
+從一開始就面向未來。向量搜
+尋、語義理解和即時上下文是
+原生功能，而非事後附加。
+智慧雲端
+靈活而不妥協。跨雲端和部署
+環境的編排、自動化和監控能
+力。
+全方面覆蓋
+真正的資料敏捷性。
+讓資料隨需而動：跨地區、
+跨資料中心，從離線到邊緣
+。
+資料庫必須具備大規模擴展能力，即時回應，隨時隨地皆可存取。
+5
+
+===== PAGE 6 =====
+Couchbase是專為AI打造的數據庫平台
+為何這對您很重要？
+簡化複雜的營運，降低故障點
+●
+資料、檢索與AI 協同工作
+強化效能
+●
+即使在強負載下，仍保持一致的高效能
+加速創新
+●
+從原型到生產，速度更快
+減少AI幻覺，掌控成本
+●
+基於真實資料的檢索
+6
+
+===== PAGE 7 =====
+Couchbase差異化架構
+7
+JSON
+Docs
+JSON
+SQL query with 
+AI assist
+Eventing
+& Streaming
+Mobile 
+Database
+Time 
+Series
+人工智慧驅動的應用程式
+Real-time 
+Analytics
+Key-
+Value
+Access
+Key
+JSON
+iQ
+Full-Text & 
+Vector Search
+Integrated 
+Cache
+ACID 
+Transactions
+JSON
+JSON
+JSON
+Workload 
+Tuning (MDS)
+Geo-Replication 
+& Sync
+Active-Active 
+Clustering
+Columnar 
+Storage
+Magma
+Storage
+Cluster 
+Map 
+Enterprise-grade Security
+Customer-Managed
+Public Cloud
+On Prem
+Cloud Edge
+Public Cloud
+IoT edge, 
+devices 
+Couchbase Managed
+Graph 
+Traversal
+行動／邊緣AI 應用程式
+快速、經濟、通用且簡單易用，SQL 通用
+
+===== PAGE 8 =====
+Couchbase在AI性能上的發展
+深度融入AI 生態系統
+8
+
+===== PAGE 9 =====
+Couchbase AI Services的架構
+9
+Capella (Data and AI Collocated)
+Embedding 
+Model
+非結構化資料
+其他資料來源
+Vectorization 
+Service 
+向量化服務
+Model Service
+模型服務
+Unstructured 
+Data Service 
+非結構化資料服務
+Agent Catalog
+代理目錄
+PDF
+Transactional, Analytical, Vector data 
+交易型、分析型、向量型數據
+Data Intelligence 數據智能
+AI 應用程式以及智能體
+LLM
+External AI Models 
+AI 安全性和可觀測性
+資料目錄和治理
+Integrations
+Amazon Bedrock
+Vertex AI
+Azure AI
+統一資料平台，全面支援NVIDIA 與CSP 模型
+SDKs & MCP
+
+===== PAGE 10 =====
+7×24 不中斷的業務
+53%的Couchbase客戶實現了超過50%的總擁有成本降低*
+Couchbase真實的效能表現即是最佳證明
+99.999%
+總擁有成本降低Total Cost Of Ownership
+>50%
+即使在尖峰需求下
+毫秒以下延遲
+10
+
+===== PAGE 11 =====
+Couchbase效能基準｜YCSB報告
+11
+效能- 領先～
+400%
+營運成本- 降低>90%
+
+===== PAGE 12 =====
+我們的客戶是各行業領導者
+12
+消費品
+旅遊與款待業
+電信
+零售
+金融
+服務
+醫療保健
+媒體、遊戲與娛樂
+軟體
+
+===== PAGE 13 =====
+Confidential and Proprietary. Do not distribute without Couchbase consent. ©  Couchbase 2025. All rights reserved. 
+13
+愛奇藝｜線上廣告業務
+使用場景：線上廣告業務(搜索，廣告，推薦機制，廣告競價，等等）
+核心指標：
+-
+快取資料TB 級別
+-
+1,000,000 + QPS
+-
+< 10 ms (P99)
+-
+即時容災切換
+-
+業務無感下的水平擴容
+生產環境
+DR 環境
+. 百萬QPS
+. 延遲<10ms
+故障切換
+數據即時同步
+XDCR
+…
+彈性快速水平擴容
+
+===== PAGE 14 =====
+Confidential and Proprietary. Do not distribute without Couchbase consent. ©  Couchbase 2025. All rights reserved. 
+14
+愛奇藝｜成功實踐案例
+KV 緩存層面
+大數據寫入
+用戶特徵數據
+實時寫入
+廣告平台數據
+業務相關
+數據寫入
+現況效果：
+●
+即時高可用架構，保證了99.999%的SLA
+●
+業務無感下的水平擴容，確保業務的連續與穩定
+●
+40TB 快取資料
+○
+ItemSize: 5KB\10KB\50KB
+●
+2小時灌入10億資料
+●
+1,000,000 QPS ( 9/1 read/write ) 
+●
+延時情況：
+○
+Avg 5ms  
+○
+P99 5.9ms
+…
+…
+……
+…
+使用場景：線上廣告業務(搜索，廣告，推薦機制，廣告競價，等等）
+
+===== PAGE 15 =====
+Confidential and Proprietary. Do not distribute without Couchbase consent. ©  Couchbase 2025. All rights reserved. 
+15
+愛奇藝在「搜」、「廣」、「推」等一些對即時性要求較高的業
+務場景使用Couchbase。這些業務還有個共性是資料量比較大，
+Couchbase 服務的高效能和大容量保障了良好的業務效果。
+客戶聲音：
+「跟Couchbase 相比，Redis 使用上更簡單，但不宜儲存較大的
+資料量。主要是因為Redis 主從同步斷開的話，從庫就要做全量
+同步，會對服務產生阻塞影響，當然，Redis 也支援增加節點數
+以支援更大的容量，但管理起來還是較為複雜。用Couchbase 
+來儲存大資料量，架構上會簡單很多。」
+「在決定使用Magma 以前，我們有做過一些效能壓測，在基於
+NVMe 盤的高配實體機上測試，Magma 能達到比較好的效能，
+比如在3 台48-core 實體機搭建的叢集上，寫入8 億條value 為
+2KB 的資料，活躍資料記憶體駐留率10%，壓測讀QPS 可以達
+到50 萬+，P99 10ms 以內。」
+–– 程利，愛奇藝智慧平台部資深研發工程師
+系統可用性
+运维成本
+响应时长
+部署时间
+99.99%
+<10ms
+60%
+55%
+愛奇藝｜成功實踐案例
+
+===== PAGE 16 =====
+Confidential and Proprietary. Do not distribute without Couchbase consent. ©  Couchbase 2025. All rights reserved. 
+16
+樂天集團股份有限公司(TSE: 4755) 是一家全球領先的科技服務公司，為社群、
+企業和社會賦能。樂天集團於1997 年在東京成立，最初是一家線上交易平台，
+後來發展成為一家面向全球提供電子商務、金融科技、數位內容和通訊服務的
+公司。樂天集團擁有超過3 萬名員工，業務遍及全球。2024 年，樂天集團突破
+了150 億美元的營收。
+日本樂天集團在電商、廣告業務和電信的關鍵業務支撐系統中使用Couchbase
+。這些業務的共性是資料量大、即時性要求特別高。樂天集團的電商業務自採
+用Couchbase 以來（6 年以上），在所有季度性大促活動中均未出現過業務中
+斷事件。
+客戶聲音：
+「我們需要保證100% 的上線時間，而且在廣告投放的整條鏈路中延遲不能超
+過500ms。Couchbase 可以讓我們監控叢集健康狀況和KV 效能，當P50 延
+遲超過三位數毫秒時，我們的業務會自動切換到熱備叢集。這樣可以保證廣告
+投放的有效性和廣告收入。」
+「我們將Redis 和Aerospike 上的資料遷移到Couchbase，以降低維護成
+本和程式碼複雜性，並統一不同的資料儲存。」
+–– Howell Caba，樂天集團廣告投放平台部資深工程師
+日本樂天｜成功實踐案例
+系統可用性
+运维成本
+响应时长
+并发数量级
+99.99%
+<10ms
+1000萬
++
+30%
+
+===== PAGE 17 =====
+企业AI 基础设施要求
+我们的DNA
+多樣性
+AI 數據是多種多樣的，包括照片、PDF、影片以及傳統的結構化數據。AI 需要資料類型和模式的靈活性
+。這個世界不是一張表。
+JSON 
+AI 的自然語言
+本地性
+這關乎數百萬個AI 應用程式——它們不僅在AWS 美東一區執行，而是執行在多個雲、多個資料中心、
+混合雲、邊緣和行動端上。正確的資料，就在此地，就在此刻。
+REPLICATION
+XDCR 是該產品的基礎能力
+敏捷性
+由AI 驅動的優勢，核心在於透過快速系統開發充分挖掘資料價值。工作負載的突發峰值將是家常便飯。
+資料庫的慣性，就如同踩下了「慢速踏板」
+C.O.U.C.H.
+“Cluster of Unreliable Commodity Hardware”
+效能
+預計AI 工作負載對頻繁互動的反應能力要求會高出100 倍。網頁上的每一次點擊背後，會產生多少次
+AI 驅動的資料庫操作？沒有人希望AI 智能體總是在等待資料。
+MEMORY FIRST
+我們獨特的Memcached 技術傳承
+擴展性
+當數千名員工每幾天就會編寫一個智慧體應用程式時，每年就會出現無數的新應用。
+有些會迅速走紅，有些則會對資料庫提出極高要求。擴展能力至關重要——而縱向擴展（升級硬體）絕
+不是一個好辦法。
+SCALE-OUT
+資料庫界的聖盃，但市面上充斥著各種仿冒
+品
+可用性
+一個永不入眠的世界。永遠在線。無計畫外停機。也無計畫內停機。歡迎來到「資料庫撥號音」時代。
+REDUNDANCY
+K-Safety - 安全級別
+總擁有成本
+資料管理基礎設施正在整合。CIO 們希望降低執行遺留工作負載的資料庫成本，同時採用現代化資料棧
+來支援未來的AI 需求。不再為「五百年一遇的洪峰」而過度配置資源。
+NATURAL EFFICIENCY
+「53% 的客戶在總擁有成本上節省了超過
+50%」
+Couchbase如何實現交付？
+17
+
+===== PAGE 18 =====
+任務關鍵型
+專為核心的，高效能要求的
+應用系统而構建。
+設計統一，零縫隙
+營運數據與AI 洞察，統一融
+合，無轉換層。
+無處不在
+您的業務並非運行在單一雲
+上。Couchbase 亦非如此。
+我們已蓄勢待發，必將超越您的期待
+面向AI 的營運資料平台。與眾不同地構建。
+30
+
+===== PAGE 19 =====
+聯繫我們
+讓我們共同開啟您
+的下一個突破
+31

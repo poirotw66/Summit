@@ -1,0 +1,636 @@
+
+===== PAGE 1 =====
+Microsoft
+Regional Director
+T A I W A N  C L O U D  S U M M I T  2 0 2 6
+混合式AI 架構
+驅動企業敏捷與創新
+不是「全雲端」或「全自建」的單選題，讓對的工作，在對的地方執行
+Edward Kuo
+郭家齊
+Kingston Technology IT Senior Manager ｜Microsoft Regional Director ｜Microsoft MVP
+
+===== PAGE 2 =====
+A B O U T  M E
+關於我
+Edward Kuo
+管理者· 開發人員· 架構師
+AI 應用策略者
+Business
+•
+Cloud
+•
+AI
+現職｜CURRENT
+•
+Kingston Technology IT Senior Manager
+•
+Microsoft Regional Director / Microsoft Most Valuable Professional 
+經歷｜EXPERIENCE
+•
+微軟技術研討會、.NET Conf 講師
+•
+Taiwan Cloud Summit、DevOpsDays Taipei 講師
+•
+企業DevOps 顧問與導入講師
+•
+大學院校雲端/ AI / DevOps 客座講師
+
+===== PAGE 3 =====
+A G E N D A
+今日議程
+
+===== PAGE 4 =====
+P A R T  0 1  ｜W H Y  N O W
+導入AI 的基礎設施挑戰
+GPU & 記憶體難求
+高階GPU 和記憶體供給吃緊、價
+格高昂，採購與擴充週期長。
+資料主權與法規
+敏感資料外送公有雲，面臨個資法
+、合規與稽核壓力。
+推論延遲
+雲端往返延遲影響即時體驗，邊緣
+場景難以承受。
+人才稀缺
+AI 工程、MLOps 與維運工程人才
+難尋且成本高。
+Token 成本失控
+Agent 多輪推理與大量上下文，使
+用量與費用難以預估。
+模型快速迭代
+模型版本快速更替，自建環境難跟
+上升級節奏。
+
+===== PAGE 5 =====
+P A R T  0 1  ｜C O M P L E X I T Y
+企業情境遠比個人環境的AI 開發複雜
+導入AI 不只是訓練模型，更要面對企業既有的多重環境與限制。
+多環境並存
+開發、測試、正式與災備環境並行
+，部署複雜度高。
+多營運據點
+跨國跨區的據點，網路延遲與資料
+落地規範各異。
+多資料來源
+ERP、CRM、MES、PLM 等系統資
+料分散且格式不一。
+多資料敏感度
+從公開到高機密，需分級保護與差
+異化處理。
+多法規要求
+金融、政府、醫療等不同產業的合
+規門檻並存。
+多成本與效益
+各場景投報率不同，需逐一權衡部
+署落點。
+
+===== PAGE 6 =====
+P A R T  0 2  ｜T W O  M Y T H S
+兩種迷思：全雲端vs 全自建
+迷思一：全部上雲
+All-Cloud
+優點
+•
+彈性高、可快速啟用
+•
+免自建機房與維運
+•
+隨需擴充、快速試錯
+缺點
+•
+長期OPEX 持續累積
+•
+敏感資料外流疑慮
+•
+跨網延遲影響即時應用
+迷思二：全部自建
+All-On-Prem
+優點
+•
+資料完全自主掌控
+•
+成本可預測、低延遲
+•
+符合資料主權需求
+缺點
+•
+高額CAPEX 與折舊
+•
+人才與維運門檻高
+•
+GPU 利用率常偏低
+
+===== PAGE 7 =====
+P A R T  0 2  ｜O N - P R E M  B A R R I E R S
+內部自建AI Server 的六大障礙
+基礎設施受限
+運算力、機房的低延遲網路、儲存
+與電力供應均受硬體限制。
+成本居高不下
+CAPEX 與OPEX 雙高，GPU 利用
+率卻常偏低。
+沒有萬用方案
+不同工作負載需求迥異，難以單一
+架構通吃。
+人才稀缺
+AI Server管理和維運與一般Server
+不同，量體大時，工程專才難尋且
+成本高昂。
+複雜缺乏彈性
+調整與擴展不易，架構難以快速響
+應市場，阻礙敏捷與創新。
+治理不足
+缺乏對模型、資料與安全的全面治
+理機制。
+
+===== PAGE 8 =====
+P A R T  0 2  ｜C O S T
+自建AI Server 的真實成本
+CAPEX ｜資本支出
+GPU 伺服器
+高階GPU 與運算節點，單價高昂
+機房建置
+機櫃、電力配置、結構強化
+網路與儲存
+高速網路、共享儲存與備援
+OPEX ｜營運支出
+電力與冷卻
+GPU 高功耗，散熱與電費持續累積
+維運人力
+系統、網路與AI 維運團隊成本
+折舊與升級
+硬體快速折舊，需定期汰換升級
+關鍵提醒：僅約7% 的工作負載能讓GPU 利用率達85% 以上，閒置運算力就是成本。先算清楚TCO，再決定要
+不要全部自建。
+
+===== PAGE 9 =====
+P A R T  0 2  ｜P U B LI C  C L O U D
+公有雲AI 方案：不只是租算力
+公有雲的價值
+即開即用
+免自建機房與維運，分鐘級啟用所需資源。
+最新模型
+第一時間取得前沿模型，免自行追版升級。
+彈性擴充
+尖峰與爆量隨需擴張，免為峰值超額採購。
+完整平台能力
+模型與代理服務
+模型目錄、Agent 服務與工作流程編排一站到位。
+知識與工具整合
+知識檢索、工具與連接器串接既有系統。
+可觀測與治理
+全線追蹤、日誌稽核與內容安全控管。
+
+===== PAGE 10 =====
+P A R T  0 2  ｜C O M P AR I S O N
+三種部署模式比較
+比較構面
+地端自建On-Prem
+公有雲Public Cloud
+託管Hosting
+成本模式
+高CAPEX
+OPEX 隨用量
+月租/ 混合
+控制權
+最高
+較低
+中等
+效能延遲
+最低延遲
+受網路影響
+中等
+擴充彈性
+受硬體限制
+近乎無限
+中高
+資料主權
+完全自主
+依供應商
+可指定區域
+適合場景
+敏感/ 即時
+爆量/ 試錯
+過渡/ 彈性
+CAPEX = 資本支出（一次性建置）
+OPEX = 營運支出（持續性費用）
+
+===== PAGE 11 =====
+P A R T  0 2  ｜S P E C T R U M
+AI 部署不是二選一，而是一道光譜
+公有雲
+Public Cloud
+彈性最高
+›
+託管
+Hosting
+兼顧彈性
+›
+私有雲
+Private Cloud
+資料可控
+›
+地端
+On-Prem
+完全自主
+›
+邊緣
+Edge
+即時低延遲
+混合式AI 的本質：在這道光譜上，為每一種工作負載選擇最合適的落點。
+
+===== PAGE 12 =====
+P A R T  0 3  ｜F I V E  A D V A N T A GE S
+混合式人工智慧架構：五大優勢
+讓「混合式AI 架構」真正驅動企業敏捷與創新的五個關鍵價值。
+01
+敏捷彈性
+Agility
+快速因應需求變化
+，雲、地、邊緣彈
+性選擇部署落點。
+02
+加速創新
+Innovation
+迅速導入新模型與
+架構，安全試錯前
+沿AI 技術。
+03
+成本最佳化
+Cost
+雲端按需、地端承
+載常態，免一次性
+鉅額硬體投入。
+04
+效能與邊緣
+Performance
+推論落地機房與邊
+緣節點，毫秒級低
+延遲即時回應。
+05
+合規與資安
+Security
+敏感資料留在邊界
+內，符合金融、醫
+療與政府規範。
+五大優勢，正是混合式AI 驅動企業敏捷與創新的關鍵。
+
+===== PAGE 13 =====
+P A R T  0 3  ｜A G I LI T Y  &  I N N O V A T IO N
+混合式AI 如何驅動敏捷與創新
+敏捷
+Agility
+雲地彈性部署
+依工作負載即時選擇雲端、地端或邊緣，不被單一環境
+綁死。
+按需擴充因應變化
+尖峰交給雲端、免超額採購，快速回應業務與市場變
+化。
+智慧路由與標準整合
+Agent 自動選雲或地，MCP 快速串接既有系統。
+創新
+Innovation
+安全試錯前沿模型
+透過雲端模型閘道安全存取前沿模型，支援高風險創新
+試驗。
+快速導入新版本
+雲端評估新模型，地端只部署驗證過的版本，迭代不
+中斷。
+開發者自助與代理落地
+自助工具鏈與多步驟代理功能，加速從概念到上線。
+讓對的工作在對的地方執行，同時取得敏捷的速度與創新的空間。
+
+===== PAGE 14 =====
+P A R T  0 3  ｜C O R E  I D E A
+核心理念：讓對的工作在對的地方
+雲端負責：訓練與高負載
+•
+大規模模型訓練與微調
+•
+突發流量的彈性擴充
+•
+快速試錯與新模型評估
+•
+跨區協作與全球服務
+•
+大語言模型的應用與管理
+地端負責：敏感與即時
+•
+敏感資料的本地推論
+•
+毫秒級即時回應需求
+•
+斷網仍須運作的場景
+•
+符合法規的資料邊界
+兩者並非對立，而是同一套架構中互補的兩端。
+
+===== PAGE 15 =====
+P A R T  0 3  ｜A D V A N T AG E  · T E C H
+優勢一：技術面
+低延遲推論
+即時工作負載在地端執行，毫秒級
+回應。
+彈性擴充
+尖峰流量交給雲端，免為峰值超額
+採購。
+智慧路由
+依任務自動選擇雲或地。
+標準整合
+透過MCP 與連接器串接既有系統
+與工具。
+快速迭代
+雲端評估新模型，地端只部署驗證
+過的版本。
+資源最佳化
+高利用率工作留地端，避免GPU 
+閒置浪費。
+
+===== PAGE 16 =====
+P A R T  0 3  ｜A D V A N T AG E  · P E O PLE  &  C O S T
+優勢二：人員與成本
+人員面
+降低維運門檻
+雲端代管平台分擔基礎設施維運壓力。
+聚焦核心價值
+團隊專注應用與業務，而非機房與硬體。
+人才更易延攬
+以標準雲服務為主，減少對稀缺專才的依賴。
+成本面
+CAPEX 轉OPEX
+用多少付多少，避免一次性鉅額投資。
+控管Token 成本
+地端與雲端分別針對不同場景的模型進行調配
+提高資源效率
+雲地分流讓昂貴GPU 維持高利用率。
+
+===== PAGE 17 =====
+P A R T  0 3  ｜S E C U R I T Y
+如何確保資安
+資料不出邊界
+敏感資料於地端推論，僅回傳結構
+化摘要至雲端。
+身分與權限
+整合企業身分識別，落實最小權限
+與存取控管。
+安全連線
+以AI-tunnel / 私有連線傳輸，避
+免直接曝險。
+金鑰管理
+API Key 與憑證集中保管，杜絕硬
+編於程式碼。
+合規與資料主權
+資料留在指定區域，符合個資法與
+產業法規。
+稽核與內容安全
+全線路追蹤、日誌稽核與Content 
+Safety 過濾。
+
+===== PAGE 18 =====
+P A R T  0 4  ｜A I  A G E N T
+AI Agent：六大核心能力
+能感知環境、自主規劃、選用工具、執行任務並從結果學習的LLM 驅動軟體實體。
+Reasoning 推理
+進行多步邏輯思考與判斷。
+Planning 規劃
+將任務拆解為可執行步驟。
+Tool Use 工具呼叫
+呼叫API、查資料庫、寫檔案。
+Memory 記憶
+維護短期與長期上下文。
+Perception 感知
+讀取資料、檔案與API 回應。
+Reflection 反思
+自我評估並調整策略。
+
+===== PAGE 19 =====
+P A R T  0 4  ｜P A T TE R N S
+Agent 設計模式
+Sequential
+順序
+任務依序交棒，前一步輸出為後一
+步輸入。
+Parallel
+並行
+多個Agent 同時處理，彙整後輸
+出。
+Hierarchical
+階層
+Supervisor 統籌調度多個子
+Agent。
+Handoff
+條件轉交
+依情境動態轉交給合適的Agent。
+Group Chat
+群組討論
+多Agent 對話協作，集思廣益。
+Reflection
+反思迭代
+生成→ 批判→ 改進的自我修正循
+環。
+
+===== PAGE 20 =====
+
+
+===== PAGE 21 =====
+P A R T  0 4  ｜C H A L L E N GE
+Agent 的挑戰：記憶體與Token 成本
+為什麼Agent 是「記憶體殺手」
+LLM 本質無狀態
+每次推論都需重新組裝歷史對話與任務狀態。
+多輪推理與工具呼叫
+單一任務常需5–20 輪，序列長度快速膨脹。
+多Agent 與檢索注入
+KV Cache 倍數成長，RAG 再塞入大量文件片段。
+Token 成本：企業最大挑戰
+Agent 對企業最大的挑戰，是Token 消耗過大、成本
+上升且難以控制。
+混合式架構如何解
+•
+常態負載交由地端SLM 處理，省下雲端Token
+•
+雲端只接複雜推理與爆量，成本可預測
+•
+三層記憶體：GPU / DRAM / SSD 分層承載
+
+===== PAGE 22 =====
+P A R T  0 5  ｜B L U E PR I N T
+混合式AI 底層架構藍圖
+Microsoft Foundry ｜雲端控制平面
+Models
+Agent Service
+Foundry IQ
+Foundry Tools
+Workflows
+Observability
+AI-tunnel / MCP ｜僅回傳結構化摘要，敏感資料不外送
+Foundry Local ｜地端/ 邊緣執行平面
+Windows PC
+Linux
+邊緣裝置
+工廠IPC
+特殊終端
+敏感資料
+同一套控制平面，跨雲端到邊緣統一治理：離線可用、低延遲、無Token 費用。
+
+===== PAGE 23 =====
+PA RT  0 5  ｜A P PL I C AT I ON  A RC H I T E C T U R E
+Microsoft Foundry + Foundry Local 混合式AI 應用架構
+使用Foundry Local、Microsoft Foundry 與Agent Framework，敏感資料留在地端，雲端負責高強度推理
+LOCAL MACHINE ｜地端
+AZURE ｜雲端
+Symptoms
+Lab Results
+Recommendations
+Local Agent
+with Agent Framework
+FOUNDRY LOCAL
+Phi-4-mini
+Foundry Local
+GPU
+Microsoft Foundry Project
+GPT-4o
+前沿模型負責
+高強度推理
+本地處理檢驗
+呼叫雲端LLM
+
+===== PAGE 24 =====
+PA RT  0 5  ｜A P PL I C AT I ON  A RC H I T E C T U R E
+Microsoft Foundry + Foundry Local 混合式AI 應用架構
+Agent Service 透過GPT-4.1 推理；需個人化情境時，經tunnel 安全呼叫本機MCP 助手
+AZURE ｜雲端
+LOCAL MACHINE ｜地端
+Symptoms
+Recommendations
+Microsoft Foundry
+Hosted Agent
+GPT-4.1
+Tool
+Tunnels
+MCP Server
+Coach
+Phi-4-mini
+Foundry Local
+GPU
+Data History
+Data (JSON)
+
+===== PAGE 25 =====
+P A R T  0 6  ｜R E S P O N S I B LE  A I
+Responsible AI：負責任的AI
+公平性
+Fairness
+可靠性與安全
+Reliability & Safety
+隱私與保密
+Privacy & Security
+包容性
+Inclusiveness
+透明
+Transparency
+問責
+Accountability
+Responsible AI ｜平台落地能力
+Content Safety
+過濾、有害內容偵測
+Evaluation
+回應品質、安全性自動
+評估
+Tracing
+OpenTelemetry 全線路
+追蹤
+Audit Logs
+符合ISO 42001、NIST 
+AI RMF
+AI 不是越強越好，而是越能信任越好。
+
+===== PAGE 26 =====
+P A R T  0 6  ｜V A L U E
+讓智慧落在最適位置
+“
+混合式AI 可將智慧放在最適位置，既保護隱私，又能降低雲端運算成本，如:
+例行查詢、情境蒐集與個人歷程存取，都可由輕量本地模型處理，而非動用昂
+貴的大型模型。
+混合式AI 讓每一台裝置都成為智慧協作夥伴，也讓每個AI代理人成為能安全運用在地
+專業的專家。
+
+===== PAGE 27 =====
+P A R T  0 6  ｜R E F L E C T IO N
+雲地兼得，挑戰並存
+“
+過去我們常在雲端與地端之間二選一；在AI 時代，不再是非此即彼，而是要同
+時擁有兩端優勢。
+混合式架構雖為企業帶來效益，但也大幅提高開發複雜度，成為開發者的一大挑戰。
+
+===== PAGE 28 =====
+
+
+===== PAGE 29 =====
+P A R T  0 7  ｜T O K E N  E C O N OM I C S
+重視Token 治理是新的議題
+AI 編碼大規模落地，Token 成本正快速偏離產出曲線。
+G A R T N E R  預測
+2028
+AI 程式碼開發成本恐超過開發
+者的平均年薪
+成因：LLM Token 消耗激增＋轉向用量計價。
+資料來源：Gartner，2026 年6 月
+01
+用量暴增
+Copilot、Agent、RAG 全面導入，Token 消耗呈倍數成長；輕度使用者正快速變成主力
+使用者。
+02
+計價難預測
+從席次授權轉向用量計價，廠商計費不透明，預算常比預期更早見底。
+03
+效益失衡
+缺乏治理時，成本上升快過生產力增益，AI 的投資報酬被稀釋。
+「Token 紀律無法只靠開發者自覺；沒有受治理的工程營運模式，成本會比效益更快失控。」
+— Gartner
+
+===== PAGE 30 =====
+P A R T  0 7  ｜G O V E R N AN C E
+治理之道：把Token 當雲端成本一樣治理
+看得見、管得住、算得清
+01
+用量可觀測
+建立Token 用量儀表板，依團隊／專案／模型即時歸因並設定告警。
+02
+用例分級授權
+依任務區分Developer-led／With-agent／Agent-led，明確何時用AI、用到什麼程度。
+03
+智慧模型路由
+簡單高頻任務交給小模型，前沿模型只保留給複雜的高價值工作。
+04
+情境工程降耗
+精簡Prompt 與上下文、只給相關資訊，並用快取減少重複消耗。
+05
+制度化檢視
+設Token 門檻與升級政策、自動監控，並於sprint 回顧檢視高耗用流程。
+
+===== PAGE 31 =====
+P A R T  0 7 ｜C O N C L U S IO N
+趨勢與結論
+64%
+35%
+1%
+使用或計劃使用雲端部署
+探索混合模式
+堅持純本地端
+實務上難以完全採雲端或完全採地端，混合式是回應真實需求
+不是單選題
+全雲端與全自建各有取捨，混合才是務實解。
+讓對的工作落在對的地方
+雲端管訓練與爆量，地端管敏感與即時。
+資安與成本可兼顧
+資料留在邊界內，CAPEX 轉OPEX 控管成本。
+一套架構統一治理
+Microsoft Foundry 與Foundry Local 雲地協作。
+
+===== PAGE 32 =====
+Microsoft
+Regional Director
+T H A N K  Y O U
+謝謝聆聽

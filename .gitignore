@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.DS_Store
+
+# Original source slide decks (large PDFs) - not needed to serve the generated site
+AI-Enterprise-Summit-2026-slides/
+Cloud-Edge-Summit-2026-slides/

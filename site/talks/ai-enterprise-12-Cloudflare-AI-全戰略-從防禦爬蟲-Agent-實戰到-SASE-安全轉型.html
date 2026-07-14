@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cloudflare AI 全戰略 從防禦爬蟲, Agent 實戰到 SASE 安全轉型 - Summit 2026 議程摘要</title>
+<meta name="description" content="AI Enterprise Summit 2026 與 Cloud &amp; Edge Summit 2026 議程摘要與詳細內容整理">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<header class="site-header detail-header">
+  <div class="container">
+    <a class="back-link" href="../index.html">← 回議程總覽</a>
+    <span class="badge" style="--badge-color:#6d5bd0">AI Enterprise Summit 2026 · #12</span>
+    <h1>Cloudflare AI 全戰略 從防禦爬蟲, Agent 實戰到 SASE 安全轉型</h1>
+    <p class="detail-speaker">🎤 Neo Kung　·　Cloudflare</p>
+    <div class="tags"><span class="tag">Cloudflare</span><span class="tag">AI資安</span><span class="tag">Bot防禦</span><span class="tag">SASE</span><span class="tag">AI Gateway</span></div>
+  </div>
+</header>
+<main class="container detail-main">
+  <section class="detail-section summary-box">
+    <h2>摘要</h2>
+    <p>Cloudflare 分享其AI全戰略，涵蓋三大情境：防禦AI爬蟲與惡意Bot流量、企業導入AI應用時的資料外洩與Prompt注入風險治理、以及Agentic工具（如Claude Code、Codex）帶來的新型態安全挑戰。講者展示 Cloudflare 全球網路規模與其在反向代理市場的市占地位，並實際示範以 AI Gateway 統一代理並治理企業內所有AI/LLM流量。</p>
+  </section>
+  <section class="detail-section">
+    <h2>重點整理</h2>
+    <ul class="highlights"><li>Cloudflare 全球網路涵蓋335+城市、490+ PoP節點、125+個國家，並在全球反向代理(Reverse Proxy)市場中占有83.4%的市占率（依據w3techs資料）。</li><li>提出企業導入AI時面臨的多重情境：包含惡意爬蟲/Bot濫用API與內容、員工使用第三方AI工具（ChatGPT、Claude、Gemini、Perplexity等）的資料外洩風險，以及Agentic工具帶來的新型資安挑戰。</li><li>AI安全防護可依S1-S13分類偵測有害內容（如暴力犯罪、詐欺、兒少剝削、誹謗、隱私、智慧財產權、仇恨言論、自殺自傷等），並可設定Block、Allow、Log三種回應策略以攔截Prompt Injection攻擊。</li><li>AI Security for Apps 可辨識並保護個資、信用卡卡號、身分證字號、醫療執照等PII敏感資料，並透過Secure Web Gateway對ChatGPT、Claude、Gemini等應用做到動作層級（如上傳檔案、分享對話、語音轉錄）的細顆粒度控管。</li><li>透過AI Gateway統一代理所有LLM流量，提供Rate Limiting、Cache、DLP與紀錄追蹤，並實際示範以PowerShell Helper Script為Claude Desktop的請求注入使用者身分中繼資料(metadata)，達成可歸責的AI使用治理與Spend Limit控管。</li></ul>
+  </section>
+  <section class="detail-section">
+  <h2>重點圖片／架構圖</h2>
+  <div class="diagram-grid">
+    <figure class="diagram">
+  <img src="../assets/images/ai-enterprise-12-Cloudflare-AI-全戰略-從防禦爬蟲-Agent-實戰到-SASE-安全轉型/p8.jpg" loading="lazy" alt="AI安全防護架構圖：依S1-S13類別偵測Prompt Injection等有害內容，並可設定Block/Allow/Log回應策略。">
+  <figcaption>AI安全防護架構圖：依S1-S13類別偵測Prompt Injection等有害內容，並可設定Block/Allow/Log回應策略。</figcaption>
+</figure><figure class="diagram">
+  <img src="../assets/images/ai-enterprise-12-Cloudflare-AI-全戰略-從防禦爬蟲-Agent-實戰到-SASE-安全轉型/p9.jpg" loading="lazy" alt="AI Security for Apps 架構圖，展示如何偵測並保護個資、信用卡卡號、身分證字號等PII敏感資料。">
+  <figcaption>AI Security for Apps 架構圖，展示如何偵測並保護個資、信用卡卡號、身分證字號等PII敏感資料。</figcaption>
+</figure><figure class="diagram">
+  <img src="../assets/images/ai-enterprise-12-Cloudflare-AI-全戰略-從防禦爬蟲-Agent-實戰到-SASE-安全轉型/p18.jpg" loading="lazy" alt="Secure Web Gateway 對ChatGPT、Claude等AI應用的動作層級細顆粒度控管清單，涵蓋上傳檔案、分享對話、語音轉錄等操作。">
+  <figcaption>Secure Web Gateway 對ChatGPT、Claude等AI應用的動作層級細顆粒度控管清單，涵蓋上傳檔案、分享對話、語音轉錄等操作。</figcaption>
+</figure><figure class="diagram">
+  <img src="../assets/images/ai-enterprise-12-Cloudflare-AI-全戰略-從防禦爬蟲-Agent-實戰到-SASE-安全轉型/p24.jpg" loading="lazy" alt="AI Gateway 架構圖：統一代理GPT、Claude、Gemini等LLM服務，提供Rate Limiting、Cache、DLP與使用紀錄追蹤功能。">
+  <figcaption>AI Gateway 架構圖：統一代理GPT、Claude、Gemini等LLM服務，提供Rate Limiting、Cache、DLP與使用紀錄追蹤功能。</figcaption>
+</figure>
+  </div>
+</section>
+  <section class="detail-section"><h2>Cloudflare 全球網路與市場地位</h2><p>演講開場先介紹 Cloudflare 的全球網路規模，涵蓋335+個城市、490+個PoP節點、遍佈125+個國家，並指出根據w3techs的統計，Cloudflare 在全球反向代理(Reverse Proxy)市場的市占率高達83.4%，遠高於F5、Fortinet、Palo Alto Networks等傳統反向代理廠商合計的市占。這奠定了 Cloudflare 從邊緣網路出發，切入AI安全防護領域的基礎。</p></section>
+<section class="detail-section"><h2>情境一：AI爬蟲與惡意流量防禦</h2><p>講者說明許多網站正面臨大量AI爬蟲與Bot流量的衝擊，例如ChatGPT、Perplexity等服務背後的爬蟲、或第三方應用程式對API的濫用。Cloudflare 透過 Turnstile 等機制辨識與攔截惡意Bot，並運用Proof-of-Work、Proof-of-Space等驗證技術，以及對JavaScript API與行動App（Android）流量的分析，在不影響正常使用者體驗的前提下阻擋惡意流量。</p></section>
+<section class="detail-section"><h2>情境二：企業AI應用的資安治理</h2><p>第二個情境聚焦於員工使用第三方AI/LLM服務（GPT、Claude、Gemini、Perplexity等）時的資安風險。Cloudflare 展示AI安全防護機制，能依照S1至S13類別（暴力犯罪、非暴力犯罪、性犯罪、兒少剝削、誹謗、專業建議、隱私、智慧財產權、大規模傷害性武器、仇恨言論、自殺自傷、色情內容、選舉相關內容等）偵測有害的Prompt與回應內容，並可設定Block、Allow、Log三種回應策略；同時透過 AI Security for Apps 偵測與保護個資、信用卡卡號、身分證字號、醫療執照等PII，並以Secure Web Gateway對特定AI應用的操作動作（如上傳檔案、分享對話、啟用語音模式）做細顆粒度的控管與記錄。</p></section>
+<section class="detail-section"><h2>情境三：Agentic工具帶來的新挑戰</h2><p>隨著Vibe Coding與Agentic工具（如Claude Code、OpenAI Codex、Cursor、Windsurf、Opencode等）在企業內普及，這些工具會直接呼叫AI/LLM服務並消耗大量Token，也可能繞過既有的資安控管路徑。講者指出企業需要新的治理方式，來因應這類自動化程式碼生成與執行工具帶來的資安與成本風險。</p></section>
+<section class="detail-section"><h2>AI Gateway：統一治理AI流量的關鍵</h2><p>為因應上述情境，Cloudflare 提出 AI Gateway 作為統一代理層，串接GPT、Claude、Gemini、Perplexity及Workers AI等各種AI/LLM服務，提供Rate Limiting、Cache、DLP（資料外洩防護）與Provider Key集中管理等功能，並可記錄使用者ID/Email、Prompt內容、Token用量與回應時間等資訊。講者以實例示範透過PowerShell撰寫的Helper Script，在Claude Desktop每次發送請求前先取得本機使用者身分（帳號、Email、電腦名稱），並將其包裝為cf-aig-metadata標頭一併送往AI Gateway，讓所有透過Claude Desktop發出的請求都能被歸責與追蹤，同時可針對特定Email設定AI Gateway的Spend Limit（如10美元）以控管成本。</p></section>
+  <nav class="talk-nav">
+    <a class="nav-link" href="ai-enterprise-11-企業級代理式-AI-Agentic-AI-for-The-Enterprise.html">← 企業級代理式 AI (Agentic AI for The Enterprise)</a>
+    <a class="nav-link nav-next" href="ai-enterprise-13-企業-AI-Orchestration-低摩擦整合路線-以-MCP-Server-工具化既有-API與-OAuth-授權治理.html">企業 AI Orchestration 低摩擦整合路線：以 MCP Server 工具化既有 API與 OAuth 授權治理 →</a>
+  </nav>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <p>本頁內容為 AI 輔助整理之摘要，原始檔案：12-Cloudflare AI 全戰略 從防禦爬蟲, Agent 實戰到 SASE 安全轉型.pdf。正確內容請以原始投影片為準。</p>
+  </div>
+</footer>
+</body>
+</html>

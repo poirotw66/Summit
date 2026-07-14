@@ -1,0 +1,506 @@
+
+===== PAGE 1 =====
+後Mythos 時代，應如何應對漏洞激增？
+Tino Yiu
+Senior Account Executive 
+(North Asia)
+
+===== PAGE 2 =====
+DE-RISK YOUR BUSINESS
+自主發現的零日
+漏洞
+整數溢漏洞
+integer 
+overflow flaw
+(OpenBSD)
+16 年來自動化測試
+工具也漏了
+FFmpeg漏洞
+1,000s
+27 yrs
+5M+
+來自Anthropic的前沿模型
+非常擅長辨識並利用軟體中的新漏洞
+他們發現的漏洞中，超過99%尚未修復
+ANTHROPIC
+Mythos
+
+===== PAGE 3 =====
+DE-RISK YOUR BUSINESS
+原始碼強化與威脅研究
+Qualys 透過Glasswing計畫進入Mythos
+Qualys 加入Anthropic 的
+Project Glasswing（第二波）
+及OpenAI 的Trusted Access 
+for Cyber 計畫。
+Glasswing 合作夥伴的使用案例
+• Product Hardening
+使用Mythos 掃描自有原始碼，找出並修正任何先前
+未發現的漏洞。 
+• Threat Research
+漏洞研究與惡意軟體分析
+Glasswing 合作夥伴被禁止在客戶環境中使用
+Mythos。如上所述，這完全是內部使用
+
+===== PAGE 4 =====
+DE-RISK YOUR BUSINESS
+The Broken Physics of Remediation, Research Report from Qualys TRU
+The Vulnerability Noise in Numbers
+年份
+已揭露
+武裝化
+比率
+2022
+25,043
+131
+0.52%
+2023
+28,816
+185
+0.64%
+2024
+39,964
+218
+0.55%
+2025
+48,172
+357
+0.74%
+你是否根據控制系統優先處理環境中
+真正可被利用的漏洞？
+0.74%
+2025年武裝化的CVE
+從2022年-2025年間：<1%的CVE被武裝化
+
+===== PAGE 5 =====
+DE-RISK YOUR BUSINESS
+31%
+16%
+13%
+6%
+漏洞利用是排名第一的攻擊向量
+「漏洞利用」已成為最常見的初始入侵途徑
+，占比31%，首次超過「憑證濫用」（16%）
+。
+
+===== PAGE 6 =====
+DE-RISK YOUR BUSINESS
+預測Mythos對日後的影響力
+CVE 流量將激增
+過去四年，漏洞揭露量成長了6.5倍。AI 輔助發現將大幅提升軟體生態系統中漏
+洞揭露的數量與速度——這是在已經緊繃的修復積壓之上。
+利用窗口期：以小時計，而非以周計
+中位數利用時間已為18天，而中位數MTTR為67天。AI 輔助的漏洞開發進一步
+壓縮了它。利用窗口-1天現在成真了。
+修復工作必須以機器速度運作
+協調揭露仍遵循相同的模式。但手動驗證、優先排序和關閉CVE 已經無法跟
+上。只有0.74%的CVE被武器化——但現在唯一可行的策略是快速找到並快速
+關閉。
+The Mythos moment is a forcing function. Partners who can help customers operationalize the flood of new 
+findings will win outsized business.
+
+===== PAGE 7 =====
+DE-RISK YOUR BUSINESS
+要達成「預防」
+（而非事後應變），
+必須讓AWE 小
+於WOW
+WOW
+AWE
+暴露發現
+預防成功的公式：AWE < WOW
+WOW
+Window of Weaponization
+AWE
+Average Window of Exposure
+從漏洞公開被揭露→ 到出現可實際使用
+的攻擊程式（exploit）之間的時間
+從漏洞公開被揭露→ 到防禦方完成修補／
+緩解措施之間的時間
+
+===== PAGE 8 =====
+DE-RISK YOUR BUSINESS
+解決後Mythos時代問題的步驟
+AI-speed
+Detection 
+(AI速度偵測)
+Hyper-
+prioritization 
+(超優先級處理)
+Zero-day 
+Remediation 
+(零日修復)
+• 揭露速度漏洞偵測
+• 資產盤點——內部與外部資產
+• 根據威脅、業務及資產情境進行
+優先排序
+• 驗證可利用性與補償控制措施
+• 提供補丁與無補丁的修復措施
+• 啟用具備營運韌性的自動化
+
+===== PAGE 9 =====
+Hyper-Prioritization
+(超優先級處理)
+
+===== PAGE 10 =====
+DE-RISK YOUR BUSINESS
+了解所有資產和攻擊面
+資產來源
+偵測方法
+Passive sensors
+unmanaged assets
+EASM
+External Attack Surface
+Security Tools
+Third-party integrations
+Qualys Sensors
+Agents, Scanners, Cloud
+CMDB
+ServiceNow, etc.
+Applications
+Cloud 
+Services
+Cloud 
+Repositories
+3rd Party 
+Assets
+Identity
+Containers
+Cloud
+Assets
+Internet
+Facing
+On-Prem
+Assets
+Unknown/Rogue 
+Assets
+OT/IoT
+Known 
+Assets
+IP-based IT
+Assets
+Computer
+Assets
+
+===== PAGE 11 =====
+DE-RISK YOUR BUSINESS
+從了解資產到了解商業背景
+資產分類與整合
+Business Application, 
+role & Criticality
+Tech Debt (EOS/EOL)
+Software/app 
+Context (mitigation)
+Payment Gateway App
+i-0abcd1234efgh5678 (EC2)
+商業實體
+Tier 1 Critical
+整體脈絡
+Business context:
+Value: Critical
+Business: Payment Gateway/Acme 
+Capital
+Risk Context:
+Apache Tomcat: EOL/EOS
+Unauthorized software: TeamViewer, 
+Chrome
+Mitigation control missing: EDR, DLP
+EASM: RDP Open open
+
+===== PAGE 12 =====
+DE-RISK YOUR BUSINESS
+資訊安全的發現
+基礎設施漏洞
+錯誤設定
+憑證
+Open 
+source漏洞
+EOL軟體
+網頁應用程
+式
+外部攻擊面
+管理
+雲端資安態
+勢管理
+以百萬計
+威脅動態
+Threat Intel
+Env 
+Context
+Active Exploits, 
+Malware, CISA, 
+Trending 
+Business Criticality
+& Exposure
+01
+02
+緩解措施？
+它有在運轉嗎？
+QVSS
+For Vulns + Misconfigs + identities
+9.8
+Critical
+CVE-2024-21887
+即時優先處理數百萬曝光 (Exposures)
+
+===== PAGE 13 =====
+DE-RISK YOUR BUSINESS
+資訊安全的發現
+基礎設施漏洞
+錯誤設定
+憑證
+Open 
+source漏洞
+EOL軟體
+網頁應用程
+式
+外部攻擊面
+管理
+雲端資安態
+勢管理
+20% of Risky Exposures
+TRURISK分數
+860
+現在優先處理暴露<10%
+商業資產背景
+Payment Gateway App
+Asset to business context
+EOL Software, Open port 
+Detected
+EDR (mitigation)
+Detected
+Exposure criticality (QVSS)
+9.1
+資產業務背景下的優先曝險
+
+===== PAGE 14 =====
+DE-RISK YOUR BUSINESS
+這是CISO至今無法回答的問題
+確定性差距
+掃描器說
+有漏洞
+CVSS表示
+關鍵Critical
+補丁團隊詢問
+它能打通嗎？
+審計師會問
+證據在哪裡？
+“
+這些曝露 (exposures)現在真的能利用我們的資
+產、生產環境和控制系統嗎？
+—  Every CISO, every Executive review
+
+===== PAGE 15 =====
+DE-RISK YOUR BUSINESS
+從猜測到確定性的演變
+以證據為基礎的安全漏洞驗證，安全確
+認優先暴露是否真的可用於生產環境。
+停止管理理論風險。
+開始消除那些被驗證的威脅。
+TruConfirm
+
+===== PAGE 16 =====
+DE-RISK YOUR BUSINESS
+8M+ 
+TruConfirm 驗證
+在過去12個月內。
+零中斷
+生產環境
+安全優先架構
+沒有資料外洩
+沒有寫入磁碟
+沒有持續性
+非阻塞非同步
+隱私設計
+TruConfirm：安全且經過實戰考驗
+
+===== PAGE 17 =====
+DE-RISK YOUR BUSINESS
+<1%是關鍵且可被利用的
+
+===== PAGE 18 =====
+DE-RISK YOUR BUSINESS
+
+===== PAGE 19 =====
+Zero-day Remediation
+(零日修復)
+
+===== PAGE 20 =====
+DE-RISK YOUR BUSINESS
+Patch
+•
+Windows, MacOS,  
+Linux
+•
+3rd party apps
+•
+Zero-touch patch 
+automation
+•
+AI-based patch 
+Reliability score for 
+every patch (NEW)
+Uninstall
+•
+Uninstall 
+bloatware 
+increasing risk 
+based on last-
+usage & 
+dependency 
+Custom
+•
+Pre-built scripts 
+for complex cases
+•
+Create your own 
+for first party apps
+Mitigate
+•
+Reduce exposure 
+when patching 
+not available or 
+risky
+將漏洞映射到第一方及第三方軟體的修復
+基於AI 的推薦引擎
+Isolate
+•
+Last resort 
+containment 
+•
+Contain high-risk 
+devices while 
+patching them 
+remotely
+TruRisk Eliminate
+
+===== PAGE 21 =====
+DE-RISK YOUR BUSINESS
+如何建立自主修復的信任
+我怎麼知道補丁是可靠？
+Patch reliability score
+如果沒有可用的補丁或它不可靠，我該如何補救？
+Patchless remediations
+我可以從最不關鍵到最關鍵的機器分階段部署嗎？
+Deployment waves
+如果出現異常行為，我可以還原我的修復措施嗎？
+Ability to Rollback
+
+===== PAGE 22 =====
+DE-RISK YOUR BUSINESS
+
+===== PAGE 23 =====
+DE-RISK YOUR BUSINESS
+
+===== PAGE 24 =====
+DE-RISK YOUR BUSINESS
+TruRisk Eliminate的績效
+80%
+平均整治MTTR時
+間縮短
+<0.1%
+自主修補的回滾速
+率
+<1 day
+平均零日漏洞補救時間
+
+===== PAGE 25 =====
+AI-Speed Detection
+(AI速度偵測)
+
+===== PAGE 26 =====
+DE-RISK YOUR BUSINESS
+以業界領先的漏洞回應時間偵測
+• 我們對關鍵Critical/零日漏洞的中位數回應時間為12 小時。
+• High-priority vendors高優先度供應商則是6小時。
+• Six Sigma 六標準差偵測準確度長達10+年
+• 避免假陰性 false negatives
+• 99% CISA KEV 覆蓋率，業界領先
+Competitive scanners take days to weeks to add 
+signatures, lack coverage for several CISA KEVs
+
+===== PAGE 27 =====
+DE-RISK YOUR BUSINESS
+加速漏洞偵測
+從數小時縮短到幾分鐘——縮短CVE 發布與客戶可見之間的時間。
+T O D A Y
+12–16 hrs
+T A R G E T
+< 30 minutes
+01
+基於版本的快速路徑
+02
+每QID持續交付
+03
+事件驅動代理評估
+•原理：不等待傳統的 QID（漏洞檢測
+ID）正式發佈。
+•做法：Agent 已回報詳細的套件清單
+，廠商公布 CVE 與版本的對應關係後
+，立即與即時漏洞資料庫比對。
+•效果：多數 CVE 可在幾分鐘內被偵測
+。
+•原理：不再採用每日批次釋出。
+•做法：每個 QID 一旦通過驗證就獨立釋
+出。
+•效果：某個檢測項目被延遲，不會卡住
+全部釋出流程。
+•原理：不依賴固定的週期掃描。
+•做法：當資產發生變化（安裝、升級、
+移除套件）時，Agent 立即回應。
+•效果：只評估受影響的檢測項目，降低
+延遲與資源浪費。
+
+===== PAGE 28 =====
+DE-RISK YOUR BUSINESS
+利用AI人工智慧原生風險營運中心進行優先排序
+Qualys Enterprise TruRisk Management (ETM)
+885 Critical
+TruRisk
+ Score
+MEASURE | Quantify Cyber Risk in Business Terms
+COMMUNICATE | Executive Reporting and Ticketing 
+ELIMINATE | Patch Mitigate & Track
+QUALYS
+Vulnerability
+App Security
+Configuration 
+Asset Management 
+Compliance
+Attack Surface
+Cloud Security
+AI Security
+NON-QUALYS
+Vulnerability
+Management
+Compliance
+Runtime 
+Security
+Application 
+Security
+THREAT INTELLIGENCE
+BUSINESS CONTEXT
+Security and Risk Findings | Risk Identification
+(Built in threat intel feeds,
+enriched with in-house vuln research)
+(CMDB, Custom Data Sources)
+Unified 
+Asset 
+Inventory
+Risk Factors
+Aggregation
+Threat 
+Intelligence
+Business 
+Context
+Risk 
+Prioritization
+Risk 
+Response 
+Orchestration
+Compliance 
+& Executive 
+Reporting
+
+===== PAGE 29 =====
+Thank You

@@ -1,0 +1,44 @@
+{
+  "slug": "ai-enterprise-20-Engineering-Trust-in-AI-Generated-Code",
+  "title": "Engineering Trust in AI-Generated Code",
+  "speaker": "Hugo Yang",
+  "speaker_title": "Engineering Principal, APAC Ecosystem Enabler @ Black Duck Software（Asia-Pacific, Singapore）",
+  "summit": "ai-enterprise",
+  "tags": ["AI程式碼安全", "Attention機制", "AppSec", "軟體供應鏈", "治理"],
+  "summary": "講者從Transformer的Attention機制出發，說明LLM生成程式碼本質上是「以上下文加權計算下一個Token的機率預測」，而非真正理解需求，因此複雜的Prompt會提高衝突、長距依賴與歧義等風險，進而導致安全漏洞。講者接著介紹Black Duck如何在Prompt、Generate、IDE驗證、PR/Repo/Staging分析與Governance五個階段建立防護，結合確定性掃描與Agentic AI程式碼審查，協助企業在AI輔助開發下仍能交付合規、安全的軟體。",
+  "highlights": [
+    "Attention機制透過Query-Key相似度計算注意力權重，模型是根據機率而非常識判斷「it」等代名詞所指涉的對象",
+    "複雜或衝突的Prompt會產生競爭性限制、長距依賴、歧義與隱藏假設，導致機率估計漂移並產生安全漏洞——模型的問題是「做出了最佳猜測，但猜錯了」",
+    "建議的AI輔助開發工作流：以聚焦步驟生成程式碼，再透過AI輔助審查與確定性掃描驗證，而非仰賴一次性的一鍵式Prompt",
+    "Black Duck方案涵蓋Prompt防護、IDE層快速確定性掃描（可於2分鐘內完成單檔分析）、PR/Repo/Staging層的資料流感知靜態分析與Agentic AI程式碼審查、以及Governance層的合規報告",
+    "Governance層可產出SBOM、VEX、SARIF等機器可讀成果，並整合Bug Tracking與PR留言、Break-Build機制，以持續累積資料集並強化安全態勢"
+  ],
+  "sections": [
+    {
+      "heading": "講者背景與主題設定",
+      "body": "講者Hugo Yang任職於Black Duck Software亞太區（新加坡），擔任Engineering Principal與APAC Ecosystem Enabler。他先展示自己請GPT產生本場演講大綱的過程，並指出AI生成的大綱雖有八成正確，但仍存在錯誤，藉此帶出「AI生成內容需要被驗證」的核心主題：從Prompt到治理（From Prompt to Governance）。"
+    },
+    {
+      "heading": "LLM如何處理Prompt：Attention機制解密",
+      "body": "講者以「help me with a webapp using Java and React, it must be...」為例，說明輸入文字會被Tokenize並轉換為Embedding向量，Transformer層再透過Query與Key的相似度計算注意力權重（例如it對webapp的權重為0.7、對Java為0.2、對React為0.1），決定「it」指的是webapp而非Java或React。此過程本質是數學上的機率計算，而非常識理解。"
+    },
+    {
+      "heading": "為什麼AI生成的程式碼會出錯",
+      "body": "當Prompt處理約110個字（180個Token）以上的長內容時，模型需要透過Query-Key相似度與Softmax正規化計算上下文相依的注意力權重。複雜的Prompt會帶來競爭性限制（Prompt內部需求衝突）、長距依賴（早期需求被「遺忘」）、歧義（多種合理解讀）與隱藏假設（未言明的環境、函式庫或政策）等風險，這些機率估計上的漂移最終會反映在輸出結果中，導致安全漏洞的產生。"
+    },
+    {
+      "heading": "Black Duck的治理解方：從Prompt到Governance五層防護",
+      "body": "講者提出的解決方案涵蓋地端或SaaS部署、Agentic AI工作流與確定性規則引擎、機密偵測、靜態原始碼分析、依賴分析、第三方授權義務偵測、軟體供應鏈風險緩解與動態測試等能力。具體而言，Prompt階段防止IP與機密洩漏；Generate階段阻止不安全或違反授權的程式碼進入IDE；IDE驗證階段以規則式靜態分析與AI程式碼授權分析，能在多數情境下於2分鐘內完成單檔分析，且不需編譯或建置環境；PR/Repo/Staging分析階段則採用資料流感知的靜態分析、軟體組成分析(SCA)、動態測試，並以Agentic AI Code Review進行語意層級的安全審查，偵測商業邏輯層面的缺陷。"
+    },
+    {
+      "heading": "Governance：讓AI輔助開發可被信任",
+      "body": "在治理層，Black Duck方案可依CERT、AUTOSAR、OWASP、PCI-DSS等產業標準產出稽核就緒的合規報告，支援AI驅動的威脅建模，並產出SBOM（軟體物料清單）、VEX（漏洞溝通）、SARIF（工具無關的發現整合格式）等機器可讀成果。這些結果可整合進Bug Tracking系統，建立持續改善安全態勢的資料集，並透過PR留言與Break-Build機制將安全把關左移，在不安全程式碼上線前加以攔截。"
+    }
+  ],
+  "key_images": [
+    {"file": "assets/images/ai-enterprise-20-Engineering-Trust-in-AI-Generated-Code/p6.jpg", "caption": "一個現實中的AI輔助開發工作流六步驟，從開發者提供上下文到治理與安全防護就緒"},
+    {"file": "assets/images/ai-enterprise-20-Engineering-Trust-in-AI-Generated-Code/p11.jpg", "caption": "Rapid Security Validation @ IDE：確定性App Security與Agentic App Security兩種防護模式"},
+    {"file": "assets/images/ai-enterprise-20-Engineering-Trust-in-AI-Generated-Code/p12.jpg", "caption": "從Prompt、Generate、IDE驗證到PR/Repo/Staging分析與Governance的五層防護架構"},
+    {"file": "assets/images/ai-enterprise-20-Engineering-Trust-in-AI-Generated-Code/p16.jpg", "caption": "Black Duck整合平台架構，涵蓋Coverity靜態分析、軟體組成分析與Polaris應用程式安全平台"}
+  ]
+}

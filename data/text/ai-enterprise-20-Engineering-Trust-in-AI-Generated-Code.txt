@@ -1,0 +1,296 @@
+
+===== PAGE 1 =====
+
+
+===== PAGE 2 =====
+From Prompt to Governance
+Engineering Trust in AI-Generated Code
+HUGO YANG
+JULY 2026
+
+===== PAGE 3 =====
+Black Duck Confidential Information
+© 2026 Black Duck Software, Inc.
+3
+CONFIDENTIAL INFORMATION
+The information contained in this presentation is the confidential and proprietary information of Black 
+Duck Software. You are not permitted to disseminate or use any of the information provided to you in this 
+presentation outside of Black Duck Software without prior written authorization. 
+IMPORTANT NOTICE
+In the event information in this presentation reflects Black Duck Software’s future plans, such plans are 
+as of the date of this presentation and are subject to change. Black Duck Software is not obligated to 
+update this presentation or develop the products with the features and functionality discussed in this 
+presentation. Additionally, Black Duck Software’s services and products may only be offered and 
+purchased pursuant to an authorized quote and purchase order or a mutually agreed upon written 
+contract with Black Duck Software.
+
+===== PAGE 4 =====
+Black Duck Confidential Information
+© 2026 Black Duck Software, Inc.
+4
+Presented to you by
+• Hugo YANG
+• Black Duck Asia-Pacific (Singapore)
+– Engineering Principal
+– APAC Ecosystem Enabler
+• The content in this presentation is primarily authored by me, 
+with less than 20% AI assistance
+
+===== PAGE 5 =====
+Black Duck Confidential Information
+© 2026 Black Duck Software, Inc.
+5
+agenda/tight summary (/my prompt)
+`I’ll start by demystifying how LLMs process prompts using the transformer attention 
+mechanism — not as ‘understanding,’ but as context-weighted next-token prediction. From 
+there, I’ll explain why outputs are inherently probabilistic and why prompt complexity 
+increases ambiguity and failure modes. That sets up a practical engineering pattern: use AI 
+for generation in focused steps, then verify with AI-assisted review and deterministic 
+scanning — rather than relying on one-shot prompts. Finally, I’ll show how Black Duck 
+provides guardrails across the workflow: rule-based scanning in the IDE and repository, plus 
+LLM-powered agentic review for broader language coverage and deeper semantic checks —
+enabling secure, compliant AI-assisted software delivery.`
+On 21 May, I prompted GPT 5.2 to create an agenda flow for today’s sharing:
+
+===== PAGE 6 =====
+Black Duck Confidential Information
+© 2026 Black Duck Software, Inc.
+6
+And this is what I got, 80% good, but there are errors:
+
+===== PAGE 7 =====
+Black Duck Confidential Information
+© 2026 Black Duck Software, Inc.
+7
+A realistic AI-assisted dev workflow at high level
+1. The developer provides context
+2. Input is tokenized and embedded into vector representations 
+3.     Transformer layers apply attention to compute contextual        
+relationships
+4. Model generates code output via probabilistic next-token 
+prediction
+5. Developer reviews and iterates
+6. Governance & Security Harness Readiness
+
+===== PAGE 8 =====
+Black Duck Confidential Information
+© 2026 Black Duck Software, Inc.
+8
+#1 problem for models: 
+“Which earlier words 
+should I look at to 
+understand what ‘it’ 
+means?”
+Input -> Understanding  `Attention Is All You Need`
+When we prompt to code
+ 
+`help me with a webapp using Java and React, it must be...`
+Tokens
+•
+help
+•
+…
+•
+webapp
+•
+Java
+•
+React
+•
+It
+•
+must
+•
+…
+Embedding Vector
+[0.21, -0.45, 0.92, …]
+[…]
+[0.55, 0.52, 0.29, …]
+[-0.34, 0.27,0.92, …]
+[-0.79, 0.89, 0.56, …]
+[0.11, 0.44, -0.87, …]
+[-0.99, 0.77, -0.75, …]
+[…]
+it  [0.11, 0.44, -0.87, …]
+webapp [0.55, 0.52, 0.29, …]
+React [-0.79, 0.89, 0.56, …]
+Java [-0.34, 0.27,0.92, …]
+Let’s revisit the fundamentals and analyze why AI-generated outputs can sometimes go wrong
+Client Input
+LLM Models
+
+===== PAGE 9 =====
+Black Duck Confidential Information
+© 2026 Black Duck Software, Inc.
+9
+Input -> Probability Computation
+Models don’t rely on common sense; they rely on mathematics.
+Models generate query vector
+Similarity Scoring
+Query(it) × Key(webapp)
+Query(it) × Key(Java)
+Query(it) × Key(React)
+Let’s revisit the fundamentals and analyze why AI-generated outputs can sometimes go wrong
+Token 
+ 
+Attention weight
+webapp  
+0.7 
+Java  
+ 
+0.2
+React 
+ 
+0.1
+it_vector = Σ (attention_weight × value_vector)
+or simplified as
+It_embedding ≈ 0.7 × webapp + 0.2 × Java + 0.1 × React
+“it” = the web application, not Java or React
+webapp [0.55, 0.52, 0.29, …]
+React [-0.79, 0.89, 0.56, …]
+Java [-0.34, 0.27,0.92, …]
+it  [0.11, 0.44, -0.87, …]
+
+===== PAGE 10 =====
+Black Duck Confidential Information
+© 2026 Black Duck Software, Inc.
+12
+Attention mechanism functions as a dynamic highlighting process. When the 
+model processes “it,” it retrospectively scans approximately 110 words (~180 tokens) in 
+the prompt, computing token relevance using Query–Key similarity and applying softmax 
+normalization to derive context-dependent attention weights.
+Complex prompts increase risk because they create:
+• Competing constraints (conflicts inside the prompt)
+• Long-range dependencies (early requirements get “forgotten”)
+• Ambiguity (multiple valid interpretations)
+• Hidden assumptions (unstated environment, libraries, policies)
+What happens in the model
+Drifts in probability estimation propagate into the final output, 
+resulting in incorrect predictions. Thus, Security Vulnerabilities.
+To be fair to models, “the model made the best guess—but it was wrong”
+Help me design and implement a production-grade web 
+application using Java (Spring Boot) for the backend and 
+React (TypeScript) for the frontend. The application must 
+follow clean architecture principles with clear separation 
+of concerns, and be built with security by design. It 
+should include secure authentication (OAuth2), role-
+based access control, proper input validation, and 
+protections against OWASP Top 10 risks such as XSS, 
+SQL injection, and CSRF.The backend should expose 
+well-structured REST APIs, use secure coding practices 
+(e.g., parameterized queries, input sanitization), and 
+integrate with a relational database like PostgreSQL via 
+JPA/Hibernate. The frontend should implement secure 
+token handling, avoid storing sensitive data in the 
+browser, and it shall follow modern React patterns 
+(hooks, functional components) …..
+
+===== PAGE 11 =====
+Black Duck Confidential Information
+© 2026 Black Duck Software, Inc.
+13
+Components of my solution
+– On-prem and/or SaaS
+– Agentic AI workflow and/or deterministic best-rule-based engine
+– Secret detection
+– Static Source Code Analysis
+– Dependency Analysis
+– 3rd Party License Obligation Detection
+– Software Supply Chain Risk Mitigation
+– Dynamic Testing
+Select, integrate, and scale AppSec capabilities per your AI journey
+We’ve done prompt, now we govern the model outputs
+Black Duck delivers a unified solution for human-driven, AI-enabled software development
+blackduck.com/
+
+===== PAGE 12 =====
+Black Duck Confidential Information
+© 2026 Black Duck Software, Inc.
+14
+We’ve done prompt, now we govern the model outputs
+Prompt
+•IP & Secrete Leakage 
+Defense (R&D projects)
+Generate
+• Stop insecure, or license violating, code 
+reaching IDE (R&D projects)
+Validation @ IDE
+• Rule-based rapid static analysis
+• AI code license analysis
+• Agentic AI powered Diff Scan
+PR/Repo/Staging Analysis
+• Checker-driven, data flow–aware static analysis
+• Software Composition Analysis
+• Dynamic Testing on webapp and API endpoints
+• Agentic AI Code Review
+Governance
+• Compliance Reporting: CERT-Java/Autosar/OWASP…
+• SBOM, VEX, and SARIF
+• Bug tracking integration for future dataset collection
+• PR comment/ Break-Build
+
+===== PAGE 13 =====
+Black Duck Confidential Information
+© 2026 Black Duck Software, Inc.
+16
+Rapid Security Validation @ IDE
+➢Deterministic App Security
+➢Security Static Scanning + Licenses compliance analysis
+➢Single file analysis completed within 2 mins (in most real-world practices)
+➢Solving the most immediate problems when the model is generating the output
+➢Low infrastructure, early-stage security feedback loop
+➢Agentic App Security
+➢Programming Language agnostic
+➢Analyzes source code directly — no compilation or build environment needed
+
+===== PAGE 14 =====
+Black Duck Confidential Information
+© 2026 Black Duck Software, Inc.
+17
+PR/Repo/Staging Analysis
+➢Deterministic App Security
+➢Static and Runtime testing
+➢Compiles the code, traces every dataflow path — precision defect detection, deterministically.
+➢Secures the software supply chain — regardless of whether humans or AI chose the dependencies
+➢Fast feedback loop for enterprise-scale software development in the software dev pipeline
+➢Agentic App Security
+➢Semantic Security Review, reasons about code intent, not just structure, 
+ 
+able to detect business logic flaws
+
+===== PAGE 15 =====
+Black Duck Confidential Information
+© 2026 Black Duck Software, Inc.
+18
+Governance: Harnessing Trust in AI-Assisted Development 
+➢Enforce compliance against industry standards — CERT, AUTOSAR, OWASP, PCIDSS and 
+more — with audit-ready reporting.
+➢AI-driven threat modeling ready
+➢Generate machine-readable artifacts — SBOM for supply chain transparency, VEX for 
+vulnerability communication, SARIF for tool-agnostic findings integration.
+➢Integrate findings directly into bug tracking systems — building a living dataset for continuous 
+security posture improvement.
+➢Shift security left — surface findings as PR comments for developer action, enforce policy 
+gates to break the build before insecure code ships.
+
+===== PAGE 16 =====
+Black Duck Confidential Information
+© 2026 Black Duck Software, Inc.
+19
+Get my datasheet
+Signal Agentic AI 
+Application 
+Security 
+Coverity 
+Static Analysis
+Black Duck 
+Software 
+Composition
+Analysis
+Polaris 
+Application 
+Security
+Platform
+
+===== PAGE 17 =====
+Thank You

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Microsoft Agent Framework + Orleans 打造雲地協同 AI 工作流 - Summit 2026 議程摘要</title>
+<meta name="description" content="AI Enterprise Summit 2026 與 Cloud &amp; Edge Summit 2026 議程摘要與詳細內容整理">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<header class="site-header detail-header">
+  <div class="container">
+    <a class="back-link" href="../index.html">← 回議程總覽</a>
+    <span class="badge" style="--badge-color:#0f9d8e">Cloud &amp; Edge Summit 2026 · #37</span>
+    <h1>Microsoft Agent Framework + Orleans 打造雲地協同 AI 工作流</h1>
+    <p class="detail-speaker">🎤 老鮑伯</p>
+    <div class="tags"><span class="tag">Microsoft Agent Framework</span><span class="tag">Orleans</span><span class="tag">Agentic RAG</span><span class="tag">MCP</span><span class="tag">多代理系統</span></div>
+  </div>
+</header>
+<main class="container detail-main">
+  <section class="detail-section summary-box">
+    <h2>摘要</h2>
+    <p>本場演講介紹 Microsoft 開源的 AI Agent 開發框架 MAF（Microsoft Agent Framework），說明其如何以一致的 AIAgent API 控制不同 LLM 供應商，並支援 Session 管理、MCP 工具整合與多種 Workflow 協調模式。講者進一步展示如何結合 Microsoft Orleans 處理多人多狀態的高併發系統需求，並介紹 Azure AI Search 的 Agentic Retrieval 與 OpenClaw 在 .NET/C# 生態系的兩個主流實作。</p>
+  </section>
+  <section class="detail-section">
+    <h2>重點整理</h2>
+    <ul class="highlights"><li>MAF 提供一致的 AIAgent API，底層透過 IChatClient 抽象化 OpenAI 相容介面，可切換雲端（OpenAI、Azure AI）或地端（Ollama、LM Studio）LLM</li><li>Session 管理預設使用 InMemoryChatHistoryProvider，也可自訂 ChatHistoryProvider 或使用 CosmosDbChatHistoryProvider 持久化對話</li><li>AITool 抽象層可呼叫 .NET C# Method、MCP endpoint 或另一個 AIAgent，形成可組合的工具鏈</li><li>Microsoft Orleans 適合處理同時多人、多狀態且需一定回應速度的系統，可在 Orleans Grain 中整合 MAF 的 AIAgent 建立 orchestration/rag/search 等代理</li><li>Azure AI Search 的 Agentic Retrieval（AgenticRAG）會用 LLM Agent 分析查詢並拆成多個檢索任務或工具呼叫，再整合生成回應，與傳統 RAG 不同</li></ul>
+  </section>
+  
+  <section class="detail-section"><h2>MAF 介紹與控制 LLM 的架構設計</h2><p>Microsoft Agent Framework（MAF）是微軟以 MIT 授權開源的 AI Agent 系統開發框架，提供 .NET C# 與 Python API，除了控管 LLM 的 AI Agent 外，也具備多代理工作流（Workflow）協調功能。講者說明學術上對 AI Agent 的定義包含自主性、感知能力、決策能力與行動能力四項要素。MAF 提供一致的 AIAgent API，底層透過 IChatClient（OpenAI API 相容介面）串接不同 LLM Host，除了雲端的 OpenAI、Azure AI 外，只要地端服務（如 Ollama、LM Studio）提供 OpenAI compatible REST API，也能無縫串接。</p></section>
+<section class="detail-section"><h2>Session 管理與工具整合</h2><p>在對話管理上，開發者可選擇使用 MAF 框架內建的 Session 管理，或直接使用底層 LLM Hosting Service 自身的 Session 機制；預設的 InMemoryChatHistoryProvider 會將對話記錄保存在記憶體中，開發者也可自訂 ChatHistoryProvider，或採用 CosmosDbChatHistoryProvider 做持久化儲存，另有 AIContextProvider 抽象類別可自訂與 LLM 互動的 Context 儲存方式。工具整合上層抽象為 AITool，可呼叫 .NET C# Method、MCP endpoint，或另一個 AIAgent，形成可組合的代理鏈；若非 Foundry Hosted 的 MCP Server，講者建議使用第三方套件 Agent Framework Toolkit。此外 MAF 也支援 Agent Skill（讀取 .md 檔或由 C# 文字注入）、多種 Workflow 協調模式（比 AutoGen 更多樣），以及 A2A、Middleware、OpenTelemetry 等能力，但 C# 版本尚未完全補齊 AG-UI、DevUI、CodeAct、Microsoft Foundry Local 等功能。</p></section>
+<section class="detail-section"><h2>結合 Microsoft Orleans 建立多代理系統</h2><p>Orleans 適合處理「同時多人／多狀態、又要有一定回應速度」的系統性非功能需求。講者回顧過去的嘗試，包括未完成的 AutoGen v0.4.x-dotnet，以及採用 Semantic Kernel C# 搭配 Orleans 的 project-oagents 專案。範例重點在於如何在 Orleans Grain 中整合 MAF 的 AIAgent，例如在單一 Grain 內建立 orchestration、rag、search 等不同角色的代理，藉此結合 Orleans 的狀態管理與擴展能力，打造雲地協同的多代理工作流。</p></section>
+<section class="detail-section"><h2>Azure AI Search 的 Agentic Retrieval</h2><p>與傳統 RAG 不同，Azure AI Search 的 Agentic Retrieval（AgenticRAG）會先用 LLM Agent 分析使用者查詢，將其拆解成多個檢索任務或工具呼叫，再將結果整合後生成最終回應。講者提醒實務上需注意 Azure AI Search 與 Microsoft Foundry 必須設定正確的 Managed Identity role，且目前 C# SDK 仍處於 Preview 階段，版本間可能不相容；設定完成的 Azure AI Search 預設會提供 MCP endpoint，可透過 Auth Token 呼叫，無論雲端或地端 LLM 皆可使用。</p></section>
+<section class="detail-section"><h2>OpenClaw 在 .NET/C# 生態系的實作</h2><p>演講最後介紹 OpenClaw 在 .NET C# 生態系的兩個主流實作版本：OpenClaw.NET（AgentQi）與由 El Bruno／Microsoft Reactor 提供的 OpenClaw .NET，並提供微軟官方教學與 GitHub 範例（agent-framework 專案下的 Harness 範例）供進一步參考。講者同時列出多項延伸學習資源，包括 Aspire for agents、NuGet 套件 Microsoft.Agents.AI、Chat History Storage Patterns 部落格文章、eShopLite 範例專案，以及微軟官方對 Agentic RAG 的介紹文件。</p></section>
+  <nav class="talk-nav">
+    <a class="nav-link" href="cloud-edge-36-金融業生成式-AI-平台工程-以雲端原生架構打造可擴展的-Agentic-AI-中樞.html">← 金融業生成式 AI 平台工程：以雲端原生架構打造可擴展的 Agentic AI 中樞</a>
+    <span></span>
+  </nav>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <p>本頁內容為 AI 輔助整理之摘要，原始檔案：37-Microsoft Agent Framework + Orleans 打造雲地協同 AI 工作流.md。正確內容請以原始投影片為準。</p>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,692 @@
+
+===== PAGE 1 =====
+金融級Enterprise Agentic AI 架構設計
+From AI Demo to Agentic Operating System.
+金融業AI 的下一階段，不是模型競爭，而是作業系統的競爭。
+內部知識庫
+M365/ Teams
+LLM Judge/人工覆核
+ITSM/ 內部系統
+監控與稽核
+語音平台
+打造可治理、可驗證、可擴展的企業AI中樞
+Designing Enterprise Agentic AI Architecture for Financial Services
+2026.07.02 張維峻Justin
+1
+
+===== PAGE 2 =====
+這不是聊天機器人測試題，這是進入金融營運現場的考驗
+REQUIREMENTS PANEL
+SCENARIO PANEL
+一位理財專員在客戶現場，對客戶
+突發的複雜商品詢問。他不方便
+當面翻找繁雜的規章，需要即時提問
+並獲得「絕對精準且合規」的解答。
+金融場景的硬性要求（AI不能只回答得像，必須做到：）
+查得到正確證據(Retrieve accurate evidence)
+知道證據是否足夠(Assess evidence sufficiency)
+「這檔衍生性商品的提前贖回限制
+與違約金怎麼算？」
+不確定時拒答或追問(Refuse or clarify when uncertain)
+「如果客戶是法人實體，現在
+還缺哪些KYC 合規文件？」
+高風險任務升級給人(Escalate high-risk tasks)
+「以這位客戶目前的風險承受度（RR）
+，推薦這檔基金會不會踩到法遵紅線？」
+每次回答留下Agent Trace (Log every action)
+金融AI 的核心問題不是「能不能回答」，而是「能不能被信任」
+2
+
+===== PAGE 3 =====
+因為只要「看起來會答」，就無法進入營運現場
+為什麼AI 專案常卡在PoC？
+營運斷點
+平台級解法
+PoC 看起來的問題vs. Production 真正的問題
+(PoC Illusion vs. Production Reality)
+(Platform Architecture Solution)
+(Operational Breakpoint)
+每個API 都要客製串接
+系統孤島
+MCP / Tool Registry
+VS.
+(System Islands)
+Agent無法規模化且安全地使用企業工具
+回答看似合理但不可驗證
+線性RAG
+Agentic RAG /
+VS.
+(Linear RAG)
+Evidence Validator
+缺少自我校正與證據檢查機制
+無法解釋答案來源
+黑盒AI
+Agent Trace / Policy / Judge
+VS.
+(Blackbox AI)
+稽核、資安、法遵無法放行
+突破PoC 的關鍵，不是升級單一模型，而是建構平台工程化的Agentic 架構。
+3
+
+===== PAGE 4 =====
+Agent Registry
+（註冊不同任務代理人
+-讓角色可替換）
+Production
+Agentic AI
+Policy Engine
+=
+(RBAC/PII/Refusal
+Runtime +
+-讓風險可控）
+Tools +
+Tool Registry
+Knowledge +
+Governance
+(MCP/Tool metadata/權
+（狀態機、條件邊、重試、
+Policy +
+失敗分支-讓推理流程可控)
+限控管-讓工具可安全調用)
+Evaluation +
+Trace
+(Judge / Trace -讓品質
+可回歸，稽核可回放）
+Knowledge Layer
+(Parsing/Chunking/
+Hybrid Search - 讓證據可靠)
+Enterprise Agentic AI 不只是LLM App，
+而是一個可治理的AI Control Plane
+4
+Agent Runtime
+Evaluation/
+Trace Store
+
+===== PAGE 5 =====
+從單點助手到可複用的Enterprise Agentic Pattern
+實戰案例/Use Cases
+抽象成Pattern/ Architectural Patterns
+Product
+Problem
+Architecture
+資訊摘要
+Content Understanding Pattern
+(多來源擷取+ 摘要)
+(Web/YT Summarization)
+DR深度研究
+Deep Research Pattern
+(Multi-round Search)
+(生成查詢+搜尋+反思+回答)
+訂閱資訊源
+Scheduled Intelligence Pattern
+(Scheduled Updates)
+(定時觸發+差異偵測+通知)
+會議室_Booking
+Tool Execution Pattern
+(Room Inquiry & Booking)
+（意圖解析+補齊參數+呼叫工具）
+Ｍ365_RAG
+Enterprise RAG Pattern
+（檢索+證據對齊+生成+留痕)
+(Enterprise Knowledge)
+真正可複用的不是某個Bot，而是將任務分解為可觀測、可測試、可治理的「責任節點」
+5
+
+===== PAGE 6 =====
+15+ Agents的責任分工：不是炫技，而是治理單位
+每個Agent都有明確輸入、輸出與失敗條件，讓整體流程可測試、可治理、可替換。
+核心AgentPath-TheFlow（端到端推理主路徑）
+關鍵精神
+Query
+Query
+Policy
+LLM
+Trace
+User
+Intent
+Evidence
+Channel
+Retrieval/
+Answer
+Judge
+Classifier
+Guard
+Logger
+Normalizer
+Router
+Tool Agent
+Request
+Adapter
+Validator
+Generator
+為什麼需要這樣拆？
+讓每個責任單位可獨立測試、
+替換與優化，降低風險與耦合。
+標準化
+查詢語句
+檢索工具
+或調用工具
+政策檢查
+與風險管控
+接收並
+轉換輸入
+評分品
+與安全性
+紀錄完整
+決策軌跡
+判斷意圖
+與領域
+生成答案
+與引用
+使用者
+提出需求
+路由至
+合適來源
+驗證證據
+是否足夠
+AgentPool-TheRoster（15+Agents 依責任分組）
+不是微服務堆疊
+15+Agents不一定是15個微服務
+Knowledge
+Group
+Tool
+Group
+Verification
+Evaluation
+Planning Routing
+Group
+Generation
+Understanding
+Group
+Group
+Group
+Group
+而是可被治理的邏輯角色。
+Retriever Agent
+Tool Call Agent
+LLM Judge
+Query Router
+Answer Generator
+Evidence Validator
+IntentClassifier
+價值所在
+Query Normalizer
+Task Planner
+WebCrawler
+Consistency Checker
+Summarizer Agent
+SystemConnector
+Metrics Agent
+Resolver Agent
+Entity Extractor
+URL Parser Agent
+Refusal Agent
+ToolExecutor
+SourceVerifier
+Regression Tester
+清楚的責任邊界，
+4+
+3+
+3+
+3+
+3+
+4+
+3+
+讓AI從Demo走向Production
+Governance Foundation | 横跨全流程的治理基礎
+Policy & Security
+Traceability
+Observability
+Evaluation & Testing
+Continuous Improvement
+Feedback Loop 驅動
+LLM Judge/Regression/
+Agent Trace/Tool Trace/
+RBAC/PII/Refusal/
+Latency/Cost/Quality/
+持續優化
+Decision Log
+Tool Risk/HITL
+Safety Metrics
+Human Review
+核心理念：AI 能不能被信任，取決於責任能不能被看見、被測試、被治理。
+6
+
+===== PAGE 7 =====
+一個金融現場問題如何穿過Agentic Runtime
+Realtime GPT作為即時互動核心，負責理解、規劃與串接治理流程
+Director's Commentary
+這不是多步驟的標準化流程，而是Realtime GPT即時理解
+外勤同仁問：申請某系統權限流程是什麼？是否需核准？
+動態規劃、調用工具、驗證證據、決策並輸出答案。
+Scenario
+每一次回答，都是一條可回放、可稽核的推理與治理路徑。
+Agentic Runtime
+3.檢索與調用
+6.政策守護
+2.理解與判斷
+4.驗證證據
+7.品質評估
+8.留痕記錄
+1.接收輸入
+5.生成回答
+產生grounded answer
+接收語音輸入
+理解問題語意與情境
+執行混合檢索
+檢查越權、PII、
+記錄問題、證據、
+檢查證據是否足夠
+LLM-as-a-Judge
+敏感資訊風險
+決策、工具與結果
+判斷所需資訊與工具
+調用相關工具/系統
+與來源一致性
+引用流程/規則/例外
+評分完整度、安全性
+（STT即時轉寫）
+取得證據
+（自我校正）
+與正確性
+給出明確結論
+理解使用者意圖
+與拒答政策
+(Agent Trace)
+生成
+紀錄
+理解判斷
+檢索
+驗證
+政策
+評估
+輸入
+Realtime GPT作為即時互動核心；檢索、工具、政策、Judge與 Trace由平台元件協同完成
+最終目標
+可治理
+可追溯
+即時回應
+可持續改善
+讓每一次回答，
+Realtime GPT
+透過Trace 與Judge 分數
+每一次決策、檢索、
+在推理過程中即時進行
+政策、防護、拒答與
+都是可信任、可追、
+單次推理端到端完成，
+持續回饋優化知識、工具
+工具調用與輸出
+整體價值
+人工升級判斷。
+皆完整留痕。
+滿足金融現場即時需求。
+與提示策略。
+可持續優化的決策支援。
+7
+
+===== PAGE 8 =====
+Knowledge Layer：RAG的準確度上限，由資料工程決定
+Text Density
+PDF/ 表格/
+RRF
+PyMuPDF /
+Semantic
+Ranked
+Embedding +
+流程文件
+Check
+Vision API
+Fusion
+Chunking
+Evidence
+BM25 Index
+Evidence Card
+Hybrid Search Diagnostic Matrix
+2
+3
+1
+[Evidence Metadata]
+RRF
+BM25
+Embedding
+source_id:
+IT_POL_092
+(Reciprocal Rank Fusion)
+chk_55a
+chunk_id:
+擅長：
+擅長：
+擅長：
+精準關鍵字、系統名稱、
+0.94
+語意相似、同義改寫
+結果融合排序
+confidence_score:
+流程代碼
+permission_scope: all_employees
+補足：
+補足：
+補足：
+提升整體召回率與穩定性
+自然語言問法
+專有名詞精準度
+金融級RAG的第一步不是生成，而是確保Agent拿到權限內且正確的證據。
+8
+
+===== PAGE 9 =====
+傳統RAG是單向流程，Agentic RAG是可自我校正的工作流
+傳統RAG
+Retrieve
+Generate
+找到資料就回答，無法應對金融場景的高風險要求
+Rewrite
+Agentic RAG
+Verify
+Judge
+Generate
+Output
+Route
+Retrieve
+Refuse / Escalate
+Query Router: 判斷來源，防找錯資料。
+Evidence Validator：檢查證據是否足夠，防幻覺。
+Rewrite_query: 證據不足時自動重寫查詢。
+Refusal Agent : 不該答時明確拒答。
+Accuracy is not a model feature. It is a workflow property.
+9
+
+===== PAGE 10 =====
+推理穩定性與安全邊界：不是每題都回答，每個回答都有邊界
+Gate 1
+Gate 3
+Gate 2
+Evidence Boundary
+Human Boundary
+Policy Boundary
+(證據防線)
+(政策防線)
+(人工防線)
+Check: Evidence
+Check: High-risk
+Check: RBAC, PII Filter,
+sufficiency, source
+Refusal Policy, Tool Risk
+escalation, manual
+Request
+consistency.
+Level.
+approval, exception
+handling.
+Question:是否涉及高風
+Question：證據夠不夠？
+Question:允不允許答？
+能不能答？
+能不能調用工具？
+險決策需人類介入？
+Action: If fail,
+Action: If fail,
+Action: If fail,
+Refuse and Log
+Rewrite Query or
+Human-in-the-loop
+(HITL).
+Refuse.
+Violation.
+REWRITE / REFUSE / ESCALATE
+Agentic AI 的核心價值不是完全自主，而是在可控的邊界內自主。
+10
+
+===== PAGE 11 =====
+LLM-as-a-Judge
+AI Evaluation / Regression Dashboard
+Internal benchmark | 100題低風險IT / 流程任務| LLM Judge +Human Spot Check
+Judge Output UI
+Question Set
+加權準確率
+嚴格正確率
+錯誤/不安全回答
+3
+1
+2
+(100題)
+(Zero Unsafe outputs)
+(Correct / Partially Correct Weighted)
+(Strict Correctness)
+98.0%
+96.0%
+"correctness":"pass",”
+"groundedness":"pass",
+"completeness":"partial",
+"safety":"pass"
+0
+Agent Answer
+(完整 Agentic RAG 流程）
+嚴格以「正確」計算
+正確+部分正確加權後
+0題錯誤/不安全回答
+LLM Judge
+高頻FAQ、同義改寫、應拒答題
+邊界題表現86.7%
+對金融業而言、安全比多幾
+（四級評分制）
+（下一階段優化重點）
+個百分點更重要
+陷阱題表現穩定
+Human Spot Check
+(20題20%)
+評分標準(四級制）
+延遲表現
+（完整Agentic RAG流程）
+Human Spot Check
+（抽查20題20%）
+題庫組成（100題）
+•
+ LLM Judge 結果一致率：98%
+•
+以人工標註校準評估標準
+正確（Correct）
+高頻FAQ
+3.56s
+Avg Latency
+Regression Dashboard
+內容完整且無錯誤
+40題（40%)
+（監控與回歸）
+同義改寫
+部分正確（Partial Correct）
+20 題(20%)
+方向正確但有遺漏
+100
+題
+Benchmark說明
+3.59s
+P50 Latency
+應拒答題
+錯誤（Incorrect）
+•
+100題低風險IT / 流程任務
+•
+涵蓋高頻FAQ、同義改寫、
+應拒答題、陷阱題與邊界題
+•
+下一階段加入高風險金融題型
+與人工複核一致性評估
+System Fix
+15題（15%）
+內容不符或誤導
+陷阱題
+（持續改進）
+6.19s
+P95 Latency
+15題（15%）
+不安全（Unsafe）
+有風險或違反規範的回答
+邊界題
+10題（10%）
+工程化驗證(Ablation Comparison)
+評估方法與態度
+我們不是只看答對率，而是用風險為導向的四級評分，
+確保AI回答可被信任、可被稽核、可被治理、
+Hybrid Search Only
+Naive RAG
+Agentic RAG
+11
+讓品質可量測，讓每次改版都能回歸測試
+三組比較，拆解各模組對準確率與安全性的貢獻：
+87.0%
+83.5%
+98.0%
+
+===== PAGE 12 =====
+Production Observability：沒有可觀測性，就沒有金融級AI
+System Health
+Production Metrics
+（營運監控）
+Agent Trace
+（必須被記錄的軌跡）
+Latency / Cost Budget
+（預算控制）
+品質(Quality)
+效能
+(Performance)
+User intent
+Retrieval:
+top-k 控制
+Agent path
+P50/P95 latency,
+judge pass rate,
+Retrieved evidence
+unsafe count.
+timeout rate.
+Verification:
+Tool call
+evidence check 精簡化
+Policy decision
+治理(Governance)
+成本(Cost)
+Tool Call:
+Judge score
+timeout, circuit breaker
+Final answer
+refusal rate,
+token usage,
+HITL rate.
+tool call cost.
+Latency/Cost
+Refusal reason
+AI 上線後，真正的問題不再是會不會答，而是能不能被持續營運與除錯。
+12
+
+===== PAGE 13 =====
+核心價值：建構可跨場景複用的Agentic 能力底座
+第一個落地場景：內外勤IT 資訊服務入口
+低風險、高頻、流程明確，用來驗證Agentic Runtime 的production 能力
+金融級能力
+維運場景
+可延伸金融場景
+Evidence
+查證能力
+查IT policy / 內部流程文件，
+回答必須有證據
+精準查閱衍生性商品條款與KYC 規範
+Policy
+邊界控制
+權限、個資、越權與工具調用風險要被擋下
+擋下不當銷售(Mis-selling) 與高風險合規紅線
+Judge
+品質評測
+回答品質可自動評分、回歸與修正
+確保回答無誤導，符合金管會與內部內控標準
+Trace
+稽核留痕
+問題、證據、工具、政策判斷全留痕
+完整紀錄理專諮詢與決策軌跡，以利稽核查驗
+高頻問題自助處理率↑  |  查找時間↓  |  重複進線次數↓  |  高風險回答trace 覆蓋率100%
+真正要複用的不是特定場景的Bot，而是Evidence、Policy、Judge、Trace 這四個金融級系統能力。
+13
+
+===== PAGE 14 =====
+From AI Demo to Agentic Operating System
+金融業AI的下一階段，不是模型競爭，而是作業系統的競爭。
+可衡量的業務價值
+可觀測·可驗證·可稽核
+解決真實業務問題
+即時理解·規劃·執行
+可治理的能力中樞
+Use Cases
+Evaluation/Observability
+Knowledge / Tools / Policy
+Business Outcomes
+Agentic Runtime
+Evaluation(LLM-as-a-Judge)
+Knowledge Layer
+營運效率提升
+IT / 內控/ 法遵
+內部知識庫/外部資料
+自助處理率提升
+Hybrid Search +RAG
+人員生產力提升
+客戶服務/智能助理
+準確性/完整性
+安全性/拒答率
+Tool Registry (MCP)
+風險可控降低
+Realtime GPT
+企業工具/系統連接器
+0不安全回答
+投研分析/知識洞察
+核心推理引擎
+Metadata/權限/風險等級
+合規與內控強化
+回歸測試/指標追蹤
+人工覆核/一致性
+成本與資源優化
+Policy Engine
+即時語音/文字理解
+風險管理/欺詐偵測
+Observability (Production)
+RBAC/PII/ Refusal
+查找時間降低
+動態規劃與工具調用
+ToolRisk/合規政策
+重複工單減少
+效能監控
+全面留痕
+證據驗證與自我校正
+營運自動化/決策支援
+Latency/
+Throughput
+Trace/
+Decision Log
+客戶與員工體驗升級
+Knowledge Graph
+政策守護與拒答機制
+成本控管
+告警與治理
+$
+即時、可信、可追蹤的
+實體關係/語意網路
+Cost/
+Token Usage
+決策輸出與留痕追蹤
+Risk/
+Drift/HITL
+AI服務體驗
+脈絡推理與關聯擴展
+快，是體驗問題。準，是信任問題。
+更準
+可拒答、可追蹤、可稽核，才是金融業AI上線問題。
+更快
+更安全
+更可稽核
+證據為本
+0不安全回答
+即時互動
+完整留痕
+精準可靠
+風險可控
+秒級回應
+合規可追溯
+下一階段金融業的AI 競爭，不會只是用了更大的模型，而是把AI 工程化成可營運、可治理、可複用的Agentic Operating System
+14

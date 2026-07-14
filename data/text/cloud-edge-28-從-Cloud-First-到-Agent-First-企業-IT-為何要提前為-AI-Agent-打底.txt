@@ -1,0 +1,402 @@
+
+===== PAGE 1 =====
+SLIDE 01 / KEYNOTE
+從 Cloud First
+到 Agent First
+企業 IT 為何要提前為 AI Agent 打底
+從個人 Agent、團隊Agent，到企業級 Agent Platform 的
+實戰心得
+
+===== PAGE 2 =====
+顏勝豪 Otto 
+• 10 年以上的軟體專案開發經驗
+• 歷經紮實的養成訓練：
+程式設計師→ 系統設計師→ 系統分析師
+→ 技術經理
+• 帶領專案開發部門承接多種領域之
+• 外商銀行交易系統、商業智慧分析
+• 警政情資整合分析平台、大數據分析平台
+架構設計與建置
+過去  
+• 國泰金控數數發中心雲端策略發展部協理
+• 負責擬定集團上雲策略，並執行雲端轉型計劃
+現在
+
+===== PAGE 3 =====
+SLIDE 02 / OPENING
+AI Agent 的想像很美，但企業現場很
+硬
+Agent 最大瓶頸不是模型，而是企業系統能否被安全接入。
+大家開始很有感地看到 Agent 可以做什麼。
+真正落地時，資料、權限、API、流程會一起浮上來。
+今天用三個層次回答：個人、團隊、企業。
+核心提問：企業準備好了嗎？
+
+===== PAGE 4 =====
+SLIDE 03 / MAP
+個人、團隊、企業：Agent 能力的三段放大
+個人 Agent
+從 OpenClaw/Toto 的 40 天使
+用經驗，看見 Agent 的真實能
+力邊界。
+›
+團隊 Agent
+AI Scrum Team 的 6+1 模式，
+AI 成為流程中的第七人。
+›
+企業 Agent
+當 Agent 從 1 個變 500 個，核
+心變成平台工程、治理與營運。
+Agent First 不是把 AI 接到企業裡，而是把企業變成 AI Agent 可以安全工
+作的地方。
+
+===== PAGE 5 =====
+SLIDE 04 / PERSONAL AGENT
+OpenClaw 經驗：第一次覺得 Agent 真的
+在工作
+它不是多一個聊天視窗，而是一個住在電腦裡、可以被指派任務的 
+Agent。
+40+
+天冒險
+30+
+One Pages
+12
+Skills
+4
+AI Agents
+AHA MOMENT
+不是回答，而是持續做事
+新聞摘要、全文抓取、Podcast、one 
+page，在日常中形成例行工作流。
+BOUNDARY
+越有用，越需要邊界
+營位可以幫忙監控，刷卡付費必須拒絕。
+個人場景已經會碰到企業級問題。
+Ref: https://share.ottoyen.dev/otto-toto-journey
+
+===== PAGE 6 =====
+SLIDE 05 / WORKFLOW
+從 Prompt 到 Skill：Agent 的能力不是問答，是可重複工作流
+01
+抓取新聞與資料來源
+›
+02
+整理全文與脈絡
+›
+03
+產生摘要、頁面或語
+音
+›
+04
+沉澱成可重複 Skill
+每日新聞摘要：抓新聞、上傳 NotebookLM、生成語音摘要。
+The Verge 全文抓取：不只抓標題，而是進入每篇文章抓全文。
+Github 編輯精選Podcast：抓文章、整理、產生語音。
+
+===== PAGE 7 =====
+SLIDE 06 / GUARDRAILS
+安全紅線：Agent 越能做事，越需要邊
+界
+個人使用已經會遇到權限、金流、個資與外部網站帳號。企業場
+景會把這些問題放大十倍、百倍。
+可以：監控營位、整理資訊、產出分析頁。
+必須詢問：登入、提交表單、對外發布。
+必須拒絕：未授權金流、敏感資料外流、高風險操作。
+當個人 Agent 開始像助
+理，下一個問題就是：
+它能不能進入團隊流程
+？
+這是從個人效率走向組織能力的轉
+折點。
+
+===== PAGE 8 =====
+
+
+===== PAGE 9 =====
+SLIDE 07 / AI SCRUM TEAM
+6+1 人團隊的 +1 才是重頭戲
+AI 不是開在瀏覽器裡，用完就關掉的工具。它是有主機、有帳號、有身份、全程參與的團隊成員。
+
+===== PAGE 10 =====
+SLIDE 08 / 6月23日Anthropic推出CLAUDE TAG
+Claude Tag：把 AI 放進團隊頻道，而不是個人對
+話框
+Claude Tag 讓團隊在 Slack 直接 @Claude 指派任務。它不是一次性的聊天
+工具，而是存在於 channel 裡、共享上下文、可追蹤進度的 AI 隊員。
+CHANNEL 
+IDENTITY
+共享身份
+每個頻道都有自
+己的 @Claude，
+像團隊成員一樣
+被大家看見。
+CONTEXT
+累積上下文
+理解專案背景、
+團隊術語與討論
+脈絡，減少重複
+解釋。
+ASYNC WORK
+非同步工作
+可拆任務、呼叫
+授權工具，完成
+後在線程回報結
+果。
+GOVERNANCE
+企業控管
+管理者控管頻道
+、工具、資料、
+預算與操作紀錄
+。
+# sprint-planning
+PM：@Claude 幫我們整理這週需求異
+動，標出需要 PO 決策的項目。
+@Claude
+收到。我會彙整 channel 討論、連結的 
+issue 與 PR，並在這個 thread 回報 
+blockers。
+Team
+這就是第七人：不是問完就消失，而是
+留在流程裡，幫團隊維持共同上下文。
+
+===== PAGE 11 =====
+SLIDE 09 / TEAM WORKFLOW
+第七位成員做什麼：從幫忙到參與流程
+SPRINT PLANNING
+整理需求背景
+找相依性、拆任務、補足驗收條件。
+DAILY SCRUM
+追蹤阻塞
+整理昨日與今日進度，提醒尚未落地的承諾。
+DEVELOPMENT
+協助交付
+參與 code review、測試、文件與 PR 摘要。
+REVIEW / RETRO
+沉澱改善
+整理決策紀錄、缺陷模式與下一輪改善建議。
+團隊 Agent 的價值不是取代某個角色，而是降低團隊協作的摩擦與上下文流失。
+
+===== PAGE 12 =====
+SLIDE 10 / INTENT DESIGN
+它是在監督團隊，還是在幫團隊？
+監控式 Agent
+目標是找誰沒做事，團隊會把它視為壓力來
+源，最後只剩形式化配合。
+助攻式 Agent
+目標是讓團隊更容易完成 sprint goal，補上
+下文、提醒阻塞、減少重工。
+同樣是 Agent，目標設定不同，團隊感受會完全不同。
+
+===== PAGE 13 =====
+
+
+===== PAGE 14 =====
+SLIDE 11 / ONBOARDING
+AI 成員也需要 onboarding
+IDENTITY
+給它身份
+帳號、主機、repo、API 
+與文件存取權。
+RULES
+給它規範
+哪些可以做、哪些要先問
+、哪些永遠不能做。
+CONTEXT
+給它上下文
+產品目標、團隊慣例、
+Definition of Done、架構
+原則。
+TELEMETRY
+給它觀測
+它做過什麼、用了哪些工
+具、輸出了什麼結果。
+當一個團隊可以有第七人，企業很快會問：那可不可以每個團隊都有？每個流程都
+有？
+
+===== PAGE 15 =====
+SLIDE 12 / ONBOARDING
+很適合做為團隊AI成員ーFinOps Agent
+
+===== PAGE 16 =====
+SLIDE 13 / ENTERPRISE READINESS
+大型企業真的準備好迎接 Agent 了嗎？
+很多 PoC 停住，不是因為模型不夠聰明。
+卡住的是資料、權限、API、流程、治理與安全。
+Agent 不是一個 App，而是會觸碰整個企業能力的數位勞
+動力。
+從技術狂熱回到環境成熟度
+
+===== PAGE 17 =====
+SLIDE 14 / CATHAY CLOUD JOURNEY
+國泰上雲路徑：Cloud Ready、Cloud Adoption、Cloud First
+Cathay 6R 與百套系統上雲經驗，提供大型金融集團轉型的共同語言。
+Cloud Adoption
+5 年 100 套系統上雲
+●
+提供SaaS上雲轉型平台服務
+●
+致力雲端應用及技術發展
+●
+建立雲端治理組織框架
+●
+打造高安全、高可用雲端環境
+Cloud First
+雲端優先加速 IT 現代化
+●
+解決技術債問題
+●
+實現永續發展
+●
+加速業務創新
+●
+現代化資安與合規
+Cloud Ready
+啟動集團上雲計畫
+2025
+●
+應用系統上雲評估
+●
+進行雲端架構設計
+●
+建立雲端遷移計畫
+●
+建立組織治理框架
+基礎架構
+管理治理
+組織人才
+應用系統
+21
+43
+28
+8
+-39%
+成本節省
+Serverless 架構
++80%
+員工生產力
+容器化技術
+-13%
+營運韌性
+托管型資料庫
+-20%
+商業敏捷性
+托管型分析服務
+-60%
+永續性
+實現永續發展目標
+2021
+時間
+管理效率
+時間
+時間
+能源消耗
+2027
+2020
+
+===== PAGE 18 =====
+SLIDE 15 / FOUNDATION
+Cloud First 其實是在為 Agent First 打底
+Landing Zone、IAM、治理、安全、標準化、流
+程，當時看起來像雲端管理要求。回頭看，這些
+就是 Agent 可以安全工作的基礎。
+我們以為在為 Cloud 做準備，其實也
+在為 AI 做準備。
+Cloud
+Big Data
+AI 技術資源引擎
+結合雲端高可擴充性、高算力與數
+據模型服務整合，縮短環境建置時
+間、降低更新變動成本
+AI 技術賦能業務應用
+不僅優化現有流程，更重新定義業務模式，創造競爭新優勢
+AI 發展燃料補給
+從結構化或非結構化資料中，挖掘需求獲得洞察
+AI
+
+===== PAGE 19 =====
+SLIDE 16 / ENTERPRISE REALITY
+大型金融集團的現實條件
+監理
+合規不能事後補，必
+須在平台設計階段納
+入。
+安全
+身份、權限、資料存
+取與操作邊界要先設
+計。
+既有系統
+主機、資料庫、批次
+流程與舊 API 不會突
+然消失。
+跨公司治理
+子公司需要共同語言
+與可執行的標準。
+組織共識
+高管、架構師、開發
+團隊要能用同一套框
+架決策。
+
+===== PAGE 20 =====
+SLIDE 17 / AGENT PLATFORM
+AI Agent 依賴的企業核心能力
+IDENTITY
+Agent 是誰？
+KNOWLEDGE
+可以看哪些知識？
+TOOL / API
+可以呼叫哪些系統？
+WORKFLOW
+如何嵌入流程？
+Agent Runtime
+OBSERVABILITY
+如何知道它做了什麼？
+SECURITY
+如何控管？
+AUDIT
+如何追蹤與稽核？
+LIFECYCLE
+如何上線、退場與更新？
+
+===== PAGE 21 =====
+SLIDE 18 / AGENT PLATFORM
+
+===== PAGE 22 =====
+SLIDE 19 / GOVERNANCE TRANSFER
+從治理雲端到治理 Agent：核心不變，對象轉
+移
+多年累積的治理機制，可以從管理系統延伸到管理 Agent。
+管理對象從雲端資源與應用系統，轉為智能代理與數位勞動力
+。
+AgentOps 可以借鏡 CloudOps、DevOps、MLOps、
+FinOps 的成熟做法。
+治理邏輯不變，管理對象轉移
+
+===== PAGE 23 =====
+SLIDE 20 / SCALE PROBLEM
+打造一個 Agent 很容易，管理五百個才是真正
+挑戰
+1
+個人 Agent 靠信
+任與手動修正。
+7
+團隊 Agent 需要 
+onboarding、權限
+與工作協議。
+500
+企業 Agent 需要平台化
+：身份、授權、工具目
+錄、知識庫、審計、觀
+測、成本與生命週期。
+Managing them is the real challenge
+
+===== PAGE 24 =====
+SLIDE 21 / CLOSING
+從數位基礎建設到數位勞動力
+Cloud First
+建立 digital infrastructure：彈性、標準、治理
+、安全與可營運。
+Agent First
+形成 digital workforce：能安全接入、跨流程
+協作、被觀測與稽核。
+企業今天為雲端、資料、權限、流程與治理打的底，就是明天 AI Agent 能不能真正上
+工的分水嶺。

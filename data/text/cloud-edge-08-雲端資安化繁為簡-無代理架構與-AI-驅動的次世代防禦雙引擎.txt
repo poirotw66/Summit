@@ -1,0 +1,596 @@
+
+===== PAGE 1 =====
+Cloud Summit 2026
+雲端資安化繁為簡
+講者 : CJ Kuo
+無代理架構與 AI 驅動的次世代防禦雙引擎
+1
+
+===== PAGE 2 =====
+雲端安全的主要挑戰和傳統方法的限制
+雲端環境
+不斷變化
+風險優先排序
+很困難
+需要解決
+合規問題
+網路安全領域熟練
+度差異，增加溝通成
+本及修復困難度
+●
+無法在所有地方輕鬆部署
+●
+系統性能大幅下降和風險
+●
+擁有成本 (TCO) 非常高昂
+●
+多項資安產品各自運作
+●
+問題或風險難以拍續處理
+●
+處理人員告警疲乏
+●
+合規需求難以滿足
+●
+多雲環境難以一致化
+●
+雲地和多雲環境技能差異
+●
+CVE 漏洞修補
+2
+
+===== PAGE 3 =====
+3
+Orca Can Help.
+無代理雲端安全的先驅
+出現問題時 
+雲端安全
+3
+
+===== PAGE 4 =====
+專利技術  Agentless SideScanning™
+•
+無須安裝 Agent、掃描器，提供完整的雲端安全態勢管
+理（CSPM）、雲端工作負載保護平台（CWPP）、雲端基
+礎設施權限管理（CIEM）等的需求
+•
+對環境無任何影響的專利技術
+全自動化收集資料和分析來自:
+服務當下的二進位硬碟數據
+雲端元數據 ( Cloud metadata )
+在24小時內立即了解雲端資產中
+安全問題及其相對重要性！！
+極快上線速度只需授權給Orca !!!
+4
+
+===== PAGE 5 =====
+SideScanning™
+Technology
+  Orca 透過雲端快照進行掃描
+●
+對當下磁碟進行快照
+●
+讀取位元和字元
+●
+讀取後刪除快照
+Orca 每次掃描會啟用獨立
+的掃描器，並且位於您的
+環境之外，無需負擔掃描
+主機費用。
+對工作環境 100% 無影響
+5
+
+===== PAGE 6 =====
+一切始於資產盤點
+CONTEXT MAP
+理解你的環境資訊
+6
+
+===== PAGE 7 =====
+一切始於資產盤點
+盤點人員權限
+CONTEXT MAP
+Load Balancer
+Web Server
+EKS
+Client
+Web Server
+SQL Server
+理解你的環境資訊
+7
+
+===== PAGE 8 =====
+一切始於資產盤點
+盤點人員權限
+了解資訊環境連結
+CONTEXT MAP
+Load Balancer
+Web Server
+EKS
+Client
+Web Server
+SQL Server
+理解你的環境資訊
+8
+
+===== PAGE 9 =====
+一切始於資產盤點
+盤點人員權限
+了解資訊環境連結
+標示風險
+Load Balancer
+Web Server
+EKS
+SQL Server
+Client
+Web Server
+Internet-Facing
+CVE
+PII
+CONTEXT MAP
+CVE
+理解你的環境資訊
+9
+
+===== PAGE 10 =====
+一切始於資產盤點
+盤點人員權限
+了解資訊環境連結
+標示風險
+Load Balancer
+Web Server
+EKS
+SQL Server
+Client
+Web Server
+CONTEXT MAP
+CVE
+理解你的環境資訊
+Internet-Facing
+CVE
+PII
+10
+
+===== PAGE 11 =====
+AI 加持，快速修補雲端弱點
+11
+
+===== PAGE 12 =====
+當 CVE 出現的時候該怎麼處理?
+12
+
+===== PAGE 13 =====
+當 CVE 出現的時候該怎麼處理?
+13
+
+===== PAGE 14 =====
+當 CVE 出現的時候該怎麼處理?
+14
+
+===== PAGE 15 =====
+當 CVE 出現的時候該怎麼處理?
+Server A
+Server B
+15
+
+===== PAGE 16 =====
+AI 助理
+AI 助理會學習您的使⽤模式、排定⾵險優
+先順序，並⾃動化執⾏任務，讓您能專注於
+最重要的事情：修復。
+主動式 AI 驅動防禦
+獲取資安問題的解答，包含告警、⾵險、⽂
+件、資產，並為相關問題產⽣簡單的摘要，
+以便更快速地採取⾏動。
+摘要、簡化、聚焦
+16
+
+===== PAGE 17 =====
+當 CVE 出現的時候該怎麼處理?
+To remediate the Remote Code Execution vulnerability in Apache Tomcat 
+(CVE-2025-24813) on your AWS VM, follow these steps:
+Step 1: Preparation (準備)
+1.
+Backup the current state: Ensure you have a backup of the current VM state or 
+a snapshot to allow rollback if needed.
+2.
+Notify stakeholders: Inform relevant teams about the planned changes and 
+potential impact.
+Step 2: Upgrade Apache Tomcat (升級)
+1.
+Connect to the VM:
+●
+Use SSH to connect to the VM using its public IP address.
+ssh ec2-user@52.207.56.248
+2.
+Check the current version of Tomcat:
+sudo systemctl status tomcat
+3.
+Stop the Tomcat service:
+sudo systemctl stop tomcat
+4.
+Download the latest version of Tomcat:
+●
+Choose the appropriate version based on the recommendation (11.0.3+, 
+10.1.35+, or 9.0.99+).
+wget 
+https://downloads.apache.org/tomcat/tomcat-9/v9.0.99/bin/apache-to
+mcat-9.0.99.tar.gz
+5.
+Extract the downloaded ﬁle:
+tar -xvzf apache-tomcat-9.0.99.tar.gz
+6.
+Backup the existing Tomcat installation:
+sudo mv /usr/local/tomcat /usr/local/tomcat-backup
+7.
+Move the new Tomcat ﬁles to the appropriate directory:
+sudo mv apache-tomcat-9.0.99 /usr/local/tomcat
+8.
+Copy conﬁguration ﬁles from the backup:
+Ensure you copy necessary conﬁguration ﬁles from the backup to the new 
+installation.
+sudo cp /usr/local/tomcat-backup/conf/* /usr/local/tomcat/conf/
+9.
+Start the Tomcat service:
+sudo systemctl start tomcat
+10.
+Verify the Tomcat service is running:
+sudo systemctl status tomcat
+Step 3: Validation (驗證)
+1.
+Check the Tomcat version:
+Access the Tomcat manager or use the command line to verify the version.
+/usr/local/tomcat/bin/version.sh
+2.
+Test the application:
+Ensure the application is running as expected and there are no disruptions.
+17
+
+===== PAGE 18 =====
+當 CVE 出現的時候該怎麼處理?
+Step 4: Rollback Procedure (倒回)
+1.
+If issues are encountered:
+Stop the Tomcat service.
+sudo systemctl stop tomcat
+2.
+Restore the backup.
+sudo rm -rf /usr/local/tomcat
+sudo mv /usr/local/tomcat-backup /usr/local/tomcat
+3.
+Start the Tomcat service.
+sudo systemctl start tomcat
+Step 5: Mitigation (if upgrade is not possible immediately) (替代⽅案)
+1.
+Modify the servlet conﬁguration:
+Edit the web.xml ﬁle to set readonly='true'.
+sudo vi /usr/local/tomcat/conf/web.xml
+2.
+Disable partial PUT support:
+Ensure the readonly attribute is set to true for the DefaultServlet.
+<servlet>
+<servlet-name>default</servlet-name>
+<servlet-class>org.apache.catalina.servlets.DefaultServlet</servlet-class>
+<init-param><param-name>readonly</param-name>
+<param-value>true</param-value>
+</init-param>
+</servlet>
+3.
+Ensure security-sensitive ﬁles are not in public upload paths:
+Review and adjust ﬁle storage locations as necessary.
+Step 6: Compliance and Documentation (合規⽂件)
+1.
+Document the changes: Record all changes made, including the version upgrade and 
+conﬁguration modiﬁcations.
+2.
+Review compliance: Ensure the changes comply with relevant security and regulatory 
+requirements. By following these steps, you can remediate the vulnerability while adhering 
+to security best practices and ensuring minimal disruption to production workloads.
+18
+
+===== PAGE 19 =====
+跨雲橫向風險也能輕易協助客戶辨識
+GCP
+AWS
+●
+GCP 服務上辨識出有可以存取其他主機的 SSH KEY 和 AWS 的⾦鑰
+●
+AWS 辨識出有未加密的個⼈識別資訊 (PII)
+●
+⾃動化拼湊出可能造成外洩的路徑及⾵險
+●
+GCP 服務上辨識出有 CVE 漏洞
+19
+
+===== PAGE 20 =====
+AI 協助您搜尋所有該知道的事情
+AP Service
+IAM Role
+DB (SaaS)
+●
+GCP 服務上辨識出 IAM Role 有編輯權限
+●
+可以存取 SQL DB 服務
+●
+SQL DB 服務中含有個資
+●
+GCP 服務上辨識出有 CVE 漏洞
+20
+
+===== PAGE 21 =====
+Orca 遠端 
+MCP 伺服器
+Agent workﬂow built on N8N using Orca MCP Server
+從 觀察 到 修復
+快速連接
+使⽤⾃然語⾔無縫查詢並操作您的雲端安全資料
+化被動為主動。
+建⽴並擴展直接在 Orca 內運⾏的 AI Agent 
+監控⾃動化。
+從持續監控到事件分類 ，確保都在⼀致且安全的
+介⾯上運⾏ 
+21
+
+===== PAGE 22 =====
+22
+
+===== PAGE 23 =====
+AI 協助您了解整個環境
+23
+
+===== PAGE 24 =====
+AI 協助您搜尋所有該知道的事情
+24
+
+===== PAGE 25 =====
+AI 協助您搜尋所有該知道的事情
+25
+
+===== PAGE 26 =====
+AI 協助您搜尋所有該知道的事情
+26
+
+===== PAGE 27 =====
+AI 協助您搜尋所有該知道的事情
+27
+
+===== PAGE 28 =====
+AI 協助您搜尋所有該知道的事情
+28
+
+===== PAGE 29 =====
+AI 協助您搜尋所有該知道的事情
+29
+
+===== PAGE 30 =====
+進階安全與領域分數
+強化功能
+可控制針對領域修補對組織最⾼影響的⾵險
+完整說明與建議 
+提供最佳實踐與基準測試，提升分數的建議
+專屬各領域分數
+各領域的分數（例如：AppSec、DSPM、AI-Sec），
+並附上評分組成要素的完整說明。
+30
+
+===== PAGE 31 =====
+Orca 
+任務化
+提供⾼投資報酬率、循序漸進的修復任務
+透過優先處理根本原因，並允許⼀次性關閉多個
+相關聯的告警來降低⾵險。
+使⽤案例範例
+●
+修補已部署的映像檔，關閉 40 個漏洞與 15 個告警
+●
+透過修復錯誤設定的 Terraform 來關閉 30 個告警
+●
+透過調整 100 名使⽤者的存取權限來落實最低權限原則並修復 50 個告警 
+●
+專注於調整控制措施以提⾼您的合規性分數
+31
+
+===== PAGE 32 =====
+Orca 任務化 協助提升環境分數
+32
+
+===== PAGE 33 =====
+Orca 任務化 協助提升環境分數
+33
+
+===== PAGE 34 =====
+Orca 任務化 協助提升環境分數
+34
+
+===== PAGE 35 =====
+Orca 任務化 協助提升環境分數
+35
+
+===== PAGE 36 =====
+Orca 任務化 協助提升環境分數
+36
+
+===== PAGE 37 =====
+ORCA 與合規
+37
+
+===== PAGE 38 =====
+ORCA 協助您在雲端合規的路上
+Orca ⽀援的標準與法規總覽
+📜 國際標準
+●
+ISO 系列：27001 / 27002 / 27017 / 27018 / 27701
+●
+NIST 系列：800-53 / 800-171 / 800-172 / 800-190 / CSF
+●
+CIS Controls、MITRE ATT&CK、CSA CCM / CCM Lite
+🌍 隱私與個資法規
+●
+GDPR（歐盟）、CCPA / CPRA（加州）、LGPD（巴西）、PIPEDA
+（加拿⼤）、PIPL（中國）、PDPA（新加坡、香港）、DPDPA（印
+度）、PDPL（印尼）
+🏛 政府與⾦融合規
+●
+FedRAMP（美國政府雲）
+●
+SOX 404、GLBA、FFIEC、NYDFS、RBI（印度）
+●
+CMMC / CJIS / MARS-E（美國）
+●
+DORA / NIS（歐盟）
+●
+Japan FISC
+●
+MASTRM（新加坡）
+●
+Spain ENS
+🏥 醫療與教育合規
+●
+HIPAA（美國醫療）
+●
+HDS（法國醫療）
+●
+FERPA（美國教育）
+🛡 產業與資安框架
+●
+PCI DSS（信⽤卡安全）
+●
+SOC 2
+●
+OWASP Kubernetes Top 10
+●
+Kubernetes STIG
+●
+Swift CSCF（⾦融通訊）
+●
+MPA（影⾳安全）
+🌐 地區資安政策
+●
+AU Essential Eight（澳洲）
+●
+NZISM（紐西蘭）
+●
+UK Cyber Essentials / NCSC CAF (英國)
+●
+ISM（澳洲政府）
+●
+South Korea ISMS-P (南韓)
+38
+
+===== PAGE 39 =====
+ORCA 協助您在雲端合規的路上
+⼀、Orca 專屬框架（Orca Frameworks）
+●
+DSPM (Data Security Posture Management) Best Practices
+●
+Orca AI Best Practices
+●
+Orca Best Practices（1.0.0 與 2.0.0）
+●
+Orca Cost Optimization
+⼆、雲端服務提供商框架（Cloud Providers Frameworks）
+●
+AWS Foundational Security Best Practices
+●
+AWS Well-Architected
+●
+CIS 系列雲端合規框架
+○
+CIS Alibaba Cloud Foundation Benchmark
+○
+CIS Amazon EKS Benchmark（1.0.1 ~ 1.5.0）
+○
+CIS AWS Foundations Benchmark（1.2.0 ~ 4.0.0）
+○
+CIS Azure Kubernetes Service (AKS) Benchmark
+（1.0.0, 1.5.0）
+○
+CIS GCP Foundations Benchmark（1.1.0 ~ 3.0.0）
+○
+CIS GKE Benchmark（1.2.0, 1.6.0）
+○
+CIS Microsoft Azure Foundations Benchmark
+（1.2.0 ~ 3.0.0）
+○
+CIS Oracle Cloud Infrastructure Benchmark
+（1.2.0, 2.0.0）
+○
+CIS VMware ESXi 7.0 Benchmark
+●
+MCSB (Microsoft Cloud Security Benchmark)
+●
+RDS PostgreSQL Benchmark
+三、作業系統框架（OS Frameworks）
+●
+多項 CIS 系列作業系統框架，⽀援：
+○
+Linux（Amazon Linux、Debian、Ubuntu、
+RedHat、Oracle Linux、SUSE、Rocky 等）
+○
+Windows（Windows 10/11 與多個 Server 版本）
+●
+DISA STIG 系列（多種 Windows/Linux 發⾏版）
+四、應⽤程式與容器框架（Software Frameworks）
+●
+CIS Apache HTTP Server (2.2 / 2.4)
+●
+CIS Docker Benchmark
+●
+CIS NGINX
+●
+CIS PostgreSQL 14
+39
+
+===== PAGE 40 =====
+ORCA 協助您在雲端合規的路上
+40
+
+===== PAGE 41 =====
+ORCA 協助您在雲端合規的路上
+41
+
+===== PAGE 42 =====
+ORCA 協助您在雲端合規的路上
+42
+
+===== PAGE 43 =====
+ORCA 協助您在雲端合規的路上
+43
+
+===== PAGE 44 =====
+ORCA 協助您在雲端合規的路上
+44
+
+===== PAGE 45 =====
+Copyright Orca Security 2022
+45
+採用 Orca 專利無代理技術( Agentless Technology )進行自動保護
+雲端安全狀態管理 (CSPM)
+• 資產盤點 • 合規性報告 •  雲端組態評估 
+Serverless
+VMs
+Containers
+雲端基礎設施授權管理 (CIEM)
+• 權限風險管理與分析 • 身分與存取管理策略 • IDP 整合
+雲端工作負載保護 (CWPP)
+• 漏洞管理 • 工作負載合規性 • 日誌檢查 • 惡意軟體分析
+資料安全態勢管理 (DSPM)
+• PII 識別資訊分析 • 曝險掃描 • 資料資產盤點
+安全左移 (Shift Left Security)
+• 容器映像檔掃描 • IaC 掃描 • CI/CD 整合
+雲端偵測與回應 (CDR)
+• 攻擊路徑分析 • 無代理程式入侵偵測
+網路與 API 安全 (Network/API Security)
+• API 盤點 • 曝險識別與風險分析
+Kubernetes 安全態勢管理 (KSPM)
+• K8s 基準與合規性 • K8s 控制評估
+人工智慧安全態勢管理 (AI- SPM)
+• 涵蓋 50 種以上 AI 模型與軟體套件
+雲端開發追蹤 (Cloud-To-Dev)
+• 追蹤產物所有權與來源
+保護企業
+所有的雲端資產
+
+===== PAGE 46 =====
+Thank you
+46

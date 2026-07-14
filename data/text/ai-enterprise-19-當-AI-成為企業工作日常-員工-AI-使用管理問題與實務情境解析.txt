@@ -1,0 +1,466 @@
+
+===== PAGE 1 =====
+Lacey Lin
+Regional GTM Manager
+Master Concept
+
+===== PAGE 2 =====
+Agenda
+●
+從禁止到管理：AI 使用已成為企業日常
+●
+建立官方 AI 主路徑：先讓員工有可管理的使用方式
+●
+主路徑之外：Shadow AI、Profile 混用與新型態使用情境
+●
+Web / SaaS AI：看見並控管貼上、上傳、下載等資料動作
+●
+AI App：從 App 安裝走向端點執行環境管理
+●
+AI Agent：從工具使用走向身份授權與存取邊界
+●
+三步驟收斂：建立、盤點、分類佈局
+
+===== PAGE 3 =====
+從「要不要開放」
+到「怎麼管理」
+AI 已經全面進入員工日常
+・整理文件與會議內容
+・分析資料與產出報告
+・協助撰寫程式與查找錯誤
+・製作簡報、信件與客戶溝通內容
+1
+整體缺乏可視性、難以控管
+2
+AI 管理的起點
+三種 AI 分類
+Web/ SaaS AI
+AI App
+AI Agent
+總結
+
+===== PAGE 4 =====
+
+
+===== PAGE 5 =====
+AI 管理的起點：提供官方資源
+企業級 AI 平台讓 AI 使用可以被正式納入管理：
+AI 管理的起點
+三種 AI 分類
+Web/ SaaS AI
+AI App
+AI Agent
+總結
+Data Protection：企業資料不會在未經允許下被用於訓練模型
+1
+Visibility：讓部分 AI 使用回到可記錄、可管理的範圍
+2
+Identity & Access：接回企業帳號、角色、權限與使用條件
+3
+Compliance：支援 AI 使用政策、稽核與內控要求
+4
+
+===== PAGE 6 =====
+AI 管理的起點
+三種 AI 分類
+Web/ SaaS AI
+AI App
+AI Agent
+總結
+企業
+知識庫
+NotebookLM
+Deep 
+Research
+Agent/ 
+Workflow
+AI 管理的起點：提供官方資源
+
+===== PAGE 7 =====
+Shadow AI
+員工仍會使用主路徑之外的 AI 工具，
+企業難以掌握資料輸入與流向
+Profile 與帳號脈絡混用
+企業資料可能在企業帳號、
+個人 Profile 與外部 AI 工具之間流動
+App 版本的 AI 
+AI 開始出現在桌面與行動 App，
+相機麥克風存取、螢幕錄製、背景同步
+AI Agent
+AI 開始代表使用者存取系統、
+呼叫工具與執行動作
+AI 管理的起點
+三種 AI 分類
+Web/ SaaS AI
+AI App
+AI Agent
+總結
+但即使有官方資源，還是有這些問題：
+
+===== PAGE 8 =====
+AI 管理的起點
+三種 AI 分類
+Web/ SaaS AI
+AI App
+AI Agent
+總結
+AI 大致上可以分成三類
+ 
+Web/ SaaS AI
+AI Agent
+AI App
+身份條件與
+資料動作
+環境控管
+授權與紀錄
+
+===== PAGE 9 =====
+AI 管理的起點
+三種 AI 分類
+Web/ SaaS AI
+AI App
+AI Agent
+總結
+第一類：Web/ SaaS AI 的管理方式
+ 
+身份層
+Group / 
+Role-based AI Access
+ 哪些部門能用哪些 AI
+誰可以在什麼條件下用什麼？
+建立 Access Policy
+Device-based 
+Access
+ 受管合規裝置才能用高風險 AI / SaaS
+Lifecycle /
+ Contractor Control
+ 外包、臨時、離職前帳號
+→ 更短 session / 自動回收
+Account /
+ Profile Context
+工作資料只能在企業帳號與受管 Profile 
+中處理，避免流入個人 AI 帳號
+Risk-based 
+Step-up MFA
+ 異常地點、裝置、行為 → 重新驗證
+
+===== PAGE 10 =====
+AI 管理的起點
+三種 AI 分類
+Web/ SaaS AI
+AI App
+AI Agent
+總結
+第一類：Web/ SaaS AI 的管理方式
+ ●
+身份只是入口
+●
+重點是 user 的「動作」
+複製貼上、上傳下載、列印、
+網站存取等等
+●
+以市占率最高的
+Chrome 為例
+瀏覽器層
+
+===== PAGE 11 =====
+AI 管理的起點
+三種 AI 分類
+Web/ SaaS AI
+AI App
+AI Agent
+總結
+第一類：Web/ SaaS AI 的管理方式
+ ●
+瀏覽器畫面都可以加浮水印
+瀏覽器層
+
+===== PAGE 12 =====
+AI 管理的起點
+三種 AI 分類
+Web/ SaaS AI
+AI App
+AI Agent
+總結
+●
+同時要讓這些行為留下紀錄
+●
+行為模式分析
+第一類：Web/ SaaS AI 的管理方式
+ 
+瀏覽器層
+
+===== PAGE 13 =====
+AI 管理的起點
+三種 AI 分類
+Web/ SaaS AI
+AI App
+AI Agent
+總結
+第一類：Web/ SaaS AI 的管理方式
+ 
+瀏覽器層
+●
+Edge
+M365 user > Edge for Business + Purview DLP
+*unmanaged App Protection pay-as-you-go
+●
+Safari 或是其他沒有原生 DLP 的瀏覽器
+身份存取管理建立 Access Policy
+裝置管理控管資料流動
+
+===== PAGE 14 =====
+AI 管理的起點
+三種 AI 分類
+Web/ SaaS AI
+AI App
+AI Agent
+總結
+第一類：Web/ SaaS AI 的管理方式
+ 
+瀏覽器層
+●
+那多瀏覽器環境怎麼辦？
+> 選定主要受管瀏覽器集中風
+險入口
+> 其他用 IAM 限制可用情境
+
+===== PAGE 15 =====
+AI 管理的起點
+三種 AI 分類
+Web/ SaaS AI
+AI App
+AI Agent
+總結
+第二類： AI App 的管理方式 
+ 
+不管是哪個 OS （Windows/ Apple）都要確認
+1. App 可不可信？
+●
+哪些 AI App 是核准工具？
+●
+哪些只開放特定團隊？
+●
+哪些仍在評估？
+●
+哪些不允許處理企業資料？
+2. 裝置可不可信？
+●
+公司裝置 / BYOD / 外包裝置
+●
+Windows / Mac / iPhone / 
+iPad / Android
+●
+是否受管、合規、符合安全基
+準？
+3. 資料邊界還在不在？
+●
+能否從企業 App 複製到個人 
+AI App？
+●
+能否截圖、錄影、AirDrop、同
+步到個人雲端？
+●
+能否讀取本機檔案、剪貼簿、
+相簿？
+
+===== PAGE 16 =====
+AI 管理的起點
+三種 AI 分類
+Web/ SaaS AI
+AI App
+AI Agent
+總結
+第二類： AI App 的管理方式 
+ 
+Windows 體系
+Intune、Company Portal、App Control、Defender
+Apple 體系
+Jamf
+
+===== PAGE 17 =====
+App 可不可信 > 
+提供核准 App、限制未知 App
+裝置可不可信 >
+確認裝置合規狀態
+資料邊界還在不在 >
+控制資料流動
+Jamf Self-Service+
+AI 管理的起點
+三種 AI 分類
+Web/ SaaS AI
+AI App
+AI Agent
+總結
+第二類： AI App 的管理方式
+讓員工有可用的 AI App，同時限制未知 App 與高風險資料流動
+
+===== PAGE 18 =====
+AI 管理的起點
+三種 AI 分類
+Web/ SaaS AI
+AI App
+AI Agent
+總結
+第二類： AI App 的管理方式 
+ 
+讓員工有可用的 AI App，同時限制未知 App 與高風險資料流動
+App 可不可信 > 
+提供核准 App、限制未知 App
+裝置可不可信 >
+確認裝置合規狀態
+資料邊界還在不在 >
+控制資料流動
+Jamf- Restricted Software
+
+===== PAGE 19 =====
+AI 管理的起點
+三種 AI 分類
+Web/ SaaS AI
+AI App
+AI Agent
+總結
+第二類： AI App 的管理方式 
+ 
+讓員工有可用的 AI App，同時限制未知 App 與高風險資料流動
+App 可不可信 > 
+提供核准 App、限制未知 App
+裝置可不可信 >
+確認裝置合規狀態
+資料邊界還在不在 >
+控制資料流動
+Jamf inventory / smart group / compliance status
+
+===== PAGE 20 =====
+Jamf- Behaviour Analytics 
+AI 管理的起點
+三種 AI 分類
+Web/ SaaS AI
+AI App
+AI Agent
+總結
+第二類： AI App 的管理方式 
+ 
+讓員工有可用的 AI App，同時限制未知 App 與高風險資料流動
+App 可不可信 > 
+提供核准 App、限制未知 App
+裝置可不可信 >
+確認裝置合規狀態
+資料邊界還在不在 >
+控制資料流動
+
+===== PAGE 21 =====
+AI 管理的起點
+三種 AI 分類
+Web/ SaaS AI
+AI App
+AI Agent
+總結
+第三類： AI Agent 的管理方式 
+ 
+agent 代表誰？
+它能存取哪些
+資源？
+權限能否限縮、
+追蹤與撤銷？
+
+===== PAGE 22 =====
+AI 管理的起點
+三種 AI 分類
+Web/ SaaS AI
+AI App
+AI Agent
+總結
+第三類： AI Agent 的管理方式 
+ 
+Scope
+Agent 只拿到完成這次任務需要的權限，
+而不是拿到整個系統的通行證。
+Time
+權限不會永久有效，時間到了就會失效。
+
+===== PAGE 23 =====
+使用者授權
+給 Agent
+Agent 向API  
+request 
+Access
+Policy Check
+●
+user context
+●
+agent identity
+●
+requested resource
+●
+scope / risk
+Access with 
+Time limit 
+issued
+Agent 
+Actions
+Token expires 
+→ Agent must request access again
+AI 管理的起點
+三種 AI 分類
+Web/ SaaS AI
+AI App
+AI Agent
+總結
+第三類： AI Agent 的管理方式
+
+===== PAGE 24 =====
+AI 管理的起點
+三種 AI 分類
+Web/ SaaS AI
+AI App
+AI Agent
+總結
+第三類： AI Agent 的管理方式
+
+===== PAGE 25 =====
+AI 管理的起點
+三種 AI 分類
+Web/ SaaS AI
+AI App
+AI Agent
+總結
+Key Takeaways 三步驟開始 AI 管理
+建立並提供官方 AI 主路徑：讓員工有可用、可授權、可稽核的 AI 資源
+1
+盤點潛在 AI 使用：確認 AI 實際出現在哪裡：Web / SaaS、App，還是 Agent
+2
+依使用型態佈局管理：Web / SaaS 看資料動作與身分條件；App 看受控執行環境；Agent 看
+授權邊界。
+3
+先看見，才能開始管理
+
+===== PAGE 26 =====
+AI 類型
+管理重點
+主要控制層
+Web / SaaS AI
+身分條件與資料動作
+身份層、瀏覽器層
+AI App
+受控執行環境
+裝置層
+AI Agent
+授權邊界與執行紀錄
+（算是）身份層
+AI 管理的起點
+三種 AI 分類
+Web/ SaaS AI
+AI App
+AI Agent
+總結
+Key Takeaways 三步驟開始 AI 管理
+先看見，才能開始管理
+
+===== PAGE 27 =====
+想了解更多？
+歡迎報名
+具體 Demo、原廠技術諮詢
+7/24 AI Governance 實體活動
+Lacey 個人 LinkedIn
+歡迎會後交流！

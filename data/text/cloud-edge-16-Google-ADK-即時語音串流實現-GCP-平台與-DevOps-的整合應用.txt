@@ -1,0 +1,314 @@
+
+===== PAGE 1 =====
+
+
+===== PAGE 2 =====
+今天會拆解的 6 個工程層次
+Agenda — 從使⽤者情境到雲端部署
+01
+專案定位與使⽤者情境
+保險推薦 Agent 的業務場景與⼯程定位
+02
+系統全景與核⼼元件
+分層架構：前端、後端、Agent Runtime、資料
+層、雲端
+03
+Agent 決策、⼯具使⽤與狀態記憶
+AgentFactory + MCP Toolbox + Session State
+04
+串流互動與多模態 Live Agent
+SSE 事件流 + WebSocket 雙向多模態通道
+05
+安全、稽核、可觀測性與評測
+JWT + PII + Audit Hash Chain + ADK Evalsets
+06
+從本機到雲端部署的落地路徑
+Docker Compose → Cloud Run → Terraform CI/
+CD
+
+===== PAGE 3 =====
+專案定位
+從「問答」走向「推薦決策流程」
+User Need
+年齡/預算/⽬標
+▶
+Profile State
+結構化資訊補全
+▶
+Tool Selection
+判斷需求類型
+▶
+Product Search
+商品查詢 + 規則
+▶
+Recommendation
+結構化輸出
+▶
+Audit / Eval
+稽核 + 品質評測
+!   開發者 Takeaway：Agent 的核⼼不是 prompt，⽽是「Prompt + Tools + State + Policy」的執⾏閉環
+主動追問
+Agent 判斷資訊是否⾜夠，不⾜時⾃動補
+問
+結構化推薦
+根據需求類型選⼯具查詢商品與規則，輸
+出可解釋結構
+Session 保存
+對話狀態持久化，⽀援後續追問與推薦回
+溯
+
+===== PAGE 4 =====
+功能地圖︓開發者能從這個專案學到什麼
+六大工程模組︐涵蓋 Agent 落地所需的完整骨架
+保險商品查詢
+medical · accident · life · critical illness 四類
+商品精確搜尋
+FAQ 語意搜尋
+pgvector + embedding 向量相似度檢索，
+Top-3 答案召回
+會話記憶管理
+user profile · last recommendation · feature 
+flags 結構化狀態
+即時多模態互動
+語⾳、影像、螢幕畫⾯，WebSocket 全雙
+⼯多模態事件
+安全合規設計
+JWT · PII redaction · audit hash chain 三道
+防線
+⼯程治理與評測
+pytest · ADK eval · Locust load test · 
+Terraform IaC
+
+===== PAGE 5 =====
+
+
+===== PAGE 6 =====
+系統全景︓一個完整 Agent App 的分層架構
+每層各司其職︐共同構成 production-ready Agent Application Stack
+Frontend
+Next.js 15 · React 19 · NextAuth · 對話 UI · StateTree · Timeline · Live Mode
+Backend API
+FastAPI · REST · SSE · WebSocket · JWT Auth · PII Redaction
+Agent Runtime
+Google ADK Runner · AgentFactory · Session Tools · MCP Toolbox · BigQuery Plugin
+Data Layer
+PostgreSQL · pgvector · insurance_products · recommendation_rules · faq_knowledge · audit_events
+Cloud / Infra
+Cloud Run · Cloud SQL · Artifact Registry · Secret Manager · BigQuery · Terraform
+
+===== PAGE 7 =====
+
+
+===== PAGE 8 =====
+
+
+===== PAGE 9 =====
+Agent 核心︓Google ADK + Toolset + Prompt
+AgentFactory 如何組裝可執行的 Agent
+app/agent.py
+agent = Agent( 
+    model="gemini-2.0-flash" 
+    name="insurance_agent" 
+    instruction=system_prompt 
+    tools=[ 
+        get_user_profile, 
+        save_user_profile, 
+        save_last_recommendation, 
+        *toolbox_tools, 
+    ], 
+    plugins=[analytics], 
+)
+System Prompt
+insurance_agent_prompt.txt — 定義⾓⾊、推薦流程與拒絕策略
+Session Tools (本地)
+get/save user profile · save/clear last recommendation
+MCP Toolbox
+外部⼯具接入點：商品搜尋、推薦規則、FAQ 語意檢索
+Analytics Plugin
+BigQuery 事件追蹤：LLM request、tool completed、state delta
+
+===== PAGE 10 =====
+
+
+===== PAGE 11 =====
+
+
+===== PAGE 12 =====
+
+
+===== PAGE 13 =====
+
+
+===== PAGE 14 =====
+
+
+===== PAGE 15 =====
+Live Agent︓多模態、雙向、低延遲互動
+從文字推薦到即時語音 / 影像 Agent
+Frontend Hooks (Next.js)
+useAudioCapture
+PCM 音訊擷取︐實時傳送
+useAudioPlayback
+Agent 語音回覆播放
+useCameraCapture
+影像幀擷取與 JPEG 壓縮
+useScreenCapture
+螢幕截圖︐輔助 Agent 理解
+useLiveAgent
+統一 WebSocket 連線管理
+WebSocket 
+/api/agent/live/ws/
+{id}
+⬆ upstream 
+Client → Agent
+⬇ downstream 
+Agent → Client
+LiveAgentService (FastAPI)
+▸  Upstream Task：Client → Agent
+▸  Downstream Task：Agent → Client
+▸  並⾏雙⼯，⽀援取消與錯誤恢復
+▸  PCM ⾳訊 · ⽂字 · 圖片 · 影格
+▸  圖片縮放⾄合適尺⼨，轉 JPEG
+
+===== PAGE 16 =====
+
+
+===== PAGE 17 =====
+
+
+===== PAGE 18 =====
+Evaluation-Driven Agent Development
+Prompt 改動必須被評測︐而不是靠感覺
+Eval-Fix Loop
+1
+Define metrics
+2
+Create evalsets
+3
+Run eval (ADK)
+4
+Inspect failures
+5
+Update prompt / tools
+Eval 分類覆蓋率
+基本推薦流程、資訊補全行為、工具選擇正確性
+Core
+複雜家庭情境、多重保障需求、邊界條件處理
+Extended
+PII 不洩漏、能力邊界宣告、拒絕不當請求
+Safety
+重用既有 profile、追蹤 last recommendation、連貫追問
+Session-Aware
+同理心回應、主動建議、即時多模態互動品質
+Live
+
+===== PAGE 19 =====
+
+
+===== PAGE 20 =====
+
+
+===== PAGE 21 =====
+
+
+===== PAGE 22 =====
+
+
+===== PAGE 23 =====
+專案連結∼請掃我!!!!
+
+===== PAGE 24 =====
+技術棧總表
+完整元件一覽
+Agent
+Google ADK, Gemini 2.0 / Vertex AI
+API
+FastAPI, SSE (Server-Sent Events), WebSocket, Pydantic
+Frontend
+Next.js 15, React 19, NextAuth.js, Tailwind CSS
+Tools
+MCP Toolbox for Databases (YAML 定義⼯具邊界)
+Data
+PostgreSQL 16, pgvector (vector(768)), text-embedding-004
+Security
+JWT Bearer Token, PII Redaction, Audit Hash Chain
+Evaluation
+ADK Evalsets, LLM-as-a-Judge, pytest, Locust Load Test
+Deployment
+Docker Compose, Cloud Run, Cloud SQL, Terraform (dev/staging/
+prod)
+
+===== PAGE 25 =====
+API Surface︓完整端點一覽
+REST、Session、WebSocket 端點
+GET
+/healthz
+健康檢查，回傳服務存活狀態
+GET
+/readyz
+就緒檢查，包含資料庫連線確認
+POST
+/auth/token
+取得 JWT Bearer Token（使⽤者登入）
+POST
+/api/agent/run
+SSE 串流 Agent 對話執⾏（主要 API）
+GET
+/apps/{app}/users/{uid}/sessions
+取得使⽤者 Session 列表
+POST
+/apps/{app}/users/{uid}/sessions
+建立新 Session
+DELETE
+/apps/{app}/users/{uid}/sessions/{sid}
+刪除指定 Session
+WS
+/api/agent/live/ws/{session_id}
+Live Agent WebSocket 全雙⼯連線
+
+===== PAGE 26 =====
+開發者 Demo 流程
+一次完整 Agent 對話的執行軌跡
+User
+1
+「我 35 歲，年預算 2 萬，想要醫療保障。」
+Agent
+2
+呼叫 save_user_profile，儲存年齡、預算、⽬標⾄ session state
+Agent
+3
+呼叫 search_medical_products(age=35, budget=20000)，取得候選商品
+Agent
+4
+呼叫 get_recommendation_rules(type='medical')，取得推薦邏輯
+UI
+5
+顯⽰ Tool Timeline + State Patch + 結構化推薦卡片
+User
+6
+「剛剛那個商品等待期多久？」（後續追問）
+Agent
+7
+讀取 last_recommended_product_id，查詢商品細節，回答等待期
+
+===== PAGE 27 =====
+FAQ︓常見問題解答
+Q&A — 六個開發者最常問的問題
+Q1  這個專案最適合學什麼？
+production-oriented Agent 架構：⼯具治理、狀態管理、串流 UI、安全稽核、
+評測與部署的完整骨架。
+Q2  為什麼不讓模型直接查資料庫？
+MCP Toolbox 讓查詢被⼯程定義與約束，避免模型⾃由產⽣ SQL，並把業務邏
+輯（budget_fit）前置到⼯具層。
+Q3  Session memory 和聊天歷史有什麼不同？
+聊天歷史是非結構化上下⽂；session memory 是可檢查、可更新、可測試的結
+構化狀態，例如年齡、預算與上次推薦商品。
+Q4  SSE 和 WebSocket 各⾃負責什麼？
+SSE ⽤於⼀般⽂字 Agent run 的單向串流；WebSocket ⽤於 Live mode 的全雙
+⼯⾳訊、影像與⽂字互動。
+Q5  如何避免 Agent 洩漏敏感資料？
+JWT 驗證、PII redaction、public state filtering、audit log payload 
+redaction，以及 safety evalsets 驗證。
+Q6  這個架構可以換成其他業務領域嗎？
+可以。保留 ADK + toolset + state + eval + observability 骨架，替換 schema、
+⼯具、prompt 與 evalsets 即可移植。

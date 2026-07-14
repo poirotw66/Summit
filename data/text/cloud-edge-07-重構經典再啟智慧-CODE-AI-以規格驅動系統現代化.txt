@@ -1,0 +1,313 @@
+
+===== PAGE 1 =====
+SYSTEX CODEXAI
+重構經典再啟智慧
+科技創新服務事業部
+
+===== PAGE 2 =====
+© 2026 SYSTEX CORPORATION. All rights reserved.
+洪欽文 協理 
+專案-
+國內證券期貨交易中台開發專案
+國內證券期貨帳務中台開發專案
+洗錢防制與打擊資恐專案
+銀行分行票據系統升級專案
+銀行代繳帳單平台系統開發專案
+證照-
+Microsoft Certified Azure Fundamentals
+Perobot Certificate of Pepper Partner:Developer
+PMI Project Management Professional
+ISO/IEC 27001:2022 
+(Information Security Management Systems)
+精誠資訊  產業應用技術部
+
+===== PAGE 3 =====
+© 2026 SYSTEX CORPORATION. All rights reserved.
+
+===== PAGE 4 =====
+© 2026 SYSTEX CORPORATION. All rights reserved.
+痛點一：缺乏透明度的高耦合架構
+資深人才斷層
+熟悉早期 COBOL 語法與
+核心邏輯的前輩將退休，
+技術面臨嚴重斷層。
+文件龐大複雜
+既有系統文件，新人難以
+理解錯綜複雜的糾結與累
+積數十年的舊語法。
+牽一髮  動全身
+團隊不敢輕易修改程式碼，深
+怕一改就引發不可預期的系統
+全面崩潰。
+
+===== PAGE 5 =====
+© 2026 SYSTEX CORPORATION. All rights reserved.
+痛點二：高度仰賴人工盤點 開發時間冗長
+人工盤點的無底洞
+面對龐大且縱橫交織的排程與資料表關聯，
+傳統高度仰賴人工的作業流程極易產生疏漏。
+一旦前置盤點有所遺漏，將引發連鎖反應，
+嚴重衝擊後續系統移轉品質與上線安全。
+
+===== PAGE 6 =====
+© 2026 SYSTEX CORPORATION. All rights reserved.
+痛點三：永遠在救火的IT團隊
+舊框架
+難以突破
+舊語言框架維運歷史悠久，架構
+僵化，完全無法利用現代化的新
+硬體架構，阻斷了流程優化與效
+能提升的效益。
+微服務
+串接困難
+業務單位急需推出新數位服務，
+但底層老舊系統根本無法與現代
+雲端或微服務架構有效串接，形
+成嚴重的技術孤島。
+創新
+被迫停滯
+IT 團隊每天光忙著修補舊系統漏
+洞就已焦頭爛額，擠不出時間投
+入新開發，讓公司的數位轉型進
+度一拖再拖。
+
+===== PAGE 7 =====
+© 2026 SYSTEX CORPORATION. All rights reserved.
+從 純手工業 到 AI半自動化 的軟體開發/維運
+LEGACY SYSTEM 
+AI 規格生成 
+AI 程式生成 
+REFACTORED 
+CODE 
+智能維運
+•
+AS400 RPG
+•
+Stored Procedure
+•
+Legacy Java
+•
+Legacy .NET
+•
+COBOL
+•
+PL/I
+Spec/Pseudocode
+•
+Java
+•
+.NET
+•
+etc.
+UI 
+DB/LOGIC
+PSEUDOCODE
+Development
+Testing
+• Clean Architecture
+• Hexagonal Architecture
+• OPERATION
+• MAINTENANCE
+• AI 適用規格書（SRS／SDD）產生多種語言程式
+• 虛擬碼取代改程式，降低多版本衝突
+• Coding Agent
+• 生成規格書/程式碼
+1
+2
+3
+5
+6
+測試與回饋
+•        Unit Testing
+•        Integration Testing
+•        End-to-End Testing
+4
+• 資料護地端 AI 佈雲端
+• 實現資料不留雲的最高安全標準
+雲地整合架構
+
+===== PAGE 8 =====
+© 2026 SYSTEX CORPORATION. All rights reserved.
+
+===== PAGE 9 =====
+© 2026 SYSTEX CORPORATION. All rights reserved.
+
+===== PAGE 10 =====
+© 2026 SYSTEX CORPORATION. All rights reserved.
+
+===== PAGE 11 =====
+© 2026 SYSTEX CORPORATION. All rights reserved.
+
+===== PAGE 12 =====
+© 2026 SYSTEX CORPORATION. All rights reserved.
+
+===== PAGE 13 =====
+© 2026 SYSTEX CORPORATION. All rights reserved.
+
+===== PAGE 14 =====
+© 2026 SYSTEX CORPORATION. All rights reserved.
+CODEXAI
+重構經典·   再啟智慧
+14
+
+===== PAGE 15 =====
+案例分享
+
+===== PAGE 16 =====
+工時縮減
+83%
+人工作業減少超過八成
+效率提升
+6.1x
+相同任務產出倍增
+COBOL 程式 / 11 張資料表
+12
+涵蓋 2 支排程完整範圍
+情境與範圍
+●標的：2 支排程 / 12 支 COBOL / 11 張月報表
+●目標：規格文件 + 產出可運行新程式
+▸程式轉換時程大幅縮短，舊系統獲得重生機會
+▸Spec 內容完整，維運與開發人員更易上手
+AI 產出之 Spec 內容
+▸前後端 Spec
+／
+API 設計
+▸程式流程圖
+／
+輸入 / 輸出說明
+▸業務邏輯與驗證檢核
+／
+資料表清單
+▸副程式清單
+／
+錯誤代碼對照表
+商業價值
+老系統升級不再依賴少數資深人力，規格與程式同步產出、降低知識斷層風險
+※ 以上數據為本 POC 實測結果，實際效益將依原始程式結構、文件完整度、環境條件等因素有所差異。
+銀行業案例Code to Spec + Spec to Code
+老系統文件散失、資深人力不易複製
+
+===== PAGE 17 =====
+工時縮減
+90%
+人工僅能部分盤點
+效率提升
+10x
+相同工作量十倍產出
+執行 COBOL 程式碼
+20K+
+含相關副程式完整梳理
+情境與範圍
+●標的：1 支 2 萬行 COBOL + 相關副程式
+●目標：還原規格文件、建立系統知識基礎
+▸AI 讓大型程式盤點從「不可行」變「可行」
+AI 產出之 Spec 內容
+▸前後端 Spec
+／
+API 設計
+▸程式流程圖
+／
+輸入 / 輸出說明
+▸業務邏輯與驗證檢核
+／
+資料表清單
+▸副程式清單
+／
+錯誤代碼對照表
+商業價值
+大型老舊系統盤點從不可行變可行，省時、降錯、加速現代化進程
+※ 以上數據為本 POC 實測結果，實際效益將依原始程式結構、文件完整度、環境條件等因素有所差異。
+銀行業案例2 萬行 COBOL 規格還原
+程式架構複雜，人工盤點時間呈指數上升、易出錯
+
+===== PAGE 18 =====
+雲的探索與救贖
+
+===== PAGE 19 =====
+© 2026 SYSTEX CORPORATION. All rights reserved.
+© 2026 SYSTEX CORPORATION. All rights reserved.
+
+===== PAGE 20 =====
+© 2026 SYSTEX CORPORATION. All rights reserved.
+© 2026 SYSTEX CORPORATION. All rights reserved.
+
+===== PAGE 21 =====
+© 2026 SYSTEX CORPORATION. All rights reserved.
+© 2026 SYSTEX CORPORATION. All rights reserved.
+
+===== PAGE 22 =====
+© 2026 SYSTEX CORPORATION. All rights reserved.
+© 2026 SYSTEX CORPORATION. All rights reserved.
+
+===== PAGE 23 =====
+© 2026 SYSTEX CORPORATION. All rights reserved.
+© 2026 SYSTEX CORPORATION. All rights reserved.
+
+===== PAGE 24 =====
+團隊運用CODEXAI 輔助
+
+===== PAGE 25 =====
+© 2026 SYSTEX CORPORATION. All rights reserved.
+© 2026 SYSTEX CORPORATION. All rights reserved.
+
+===== PAGE 26 =====
+© 2026 SYSTEX CORPORATION. All rights reserved.
+
+===== PAGE 27 =====
+© 2026 SYSTEX CORPORATION. All rights reserved.
+Spec-Driven Development(SDD)模板
+SDD Template 
+SDD 模版
+企業目標
+Standardized 
+Output 標準化輸出
+定義
+依據客戶最具代表性的程式碼
+打造的標準化執行模版。
+功能 
+作為人類意圖與 AI 執行之間的橋
+樑，強制 AI 遵循特定的邏輯結構
+與輸出格式。
+價值 
+確保所有開發人員，無論資歷深
+淺，都能產出一致的高品質規格
+文件。
+
+===== PAGE 28 =====
+© 2026 SYSTEX CORPORATION. All rights reserved.
+
+===== PAGE 29 =====
+© 2026 SYSTEX CORPORATION. All rights reserved.
+
+===== PAGE 30 =====
+© 2026 SYSTEX CORPORATION. All rights reserved.
+
+===== PAGE 31 =====
+© 2026 SYSTEX CORPORATION. All rights reserved.
+
+===== PAGE 32 =====
+一起開始這場轉型
+
+===== PAGE 33 =====
+© 2026 SYSTEX CORPORATION. All rights reserved.
+顧問服務價值：從「會用」到「會改」
+透過多天的深度協作，我們不僅協助
+解決當前問題，更教導您的團隊如何
+調整模版。
+賦能目標
+Empowerment Goal
+自行客製化
+Self-Customization
+當未來遇到不同業務需求時，您的團隊
+將具備自行修改模板的能力，真正實現
+技術內化。
+
+===== PAGE 34 =====
+© 2026 SYSTEX CORPORATION. All rights reserved.
+賦能三大加值方案
+
+===== PAGE 35 =====
+© 2026 SYSTEX CORPORATION. All rights reserved.
+© 2026 SYSTEX CORPORATION. All rights reserved.
+資料護地端AI佈雲端核心轉型最心安
+AI僅是工具，標準化流程才是品質保證

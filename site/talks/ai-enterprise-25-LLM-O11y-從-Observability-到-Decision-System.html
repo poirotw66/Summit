@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LLM O11y：從 Observability 到 Decision System - Summit 2026 議程摘要</title>
+<meta name="description" content="AI Enterprise Summit 2026 與 Cloud &amp; Edge Summit 2026 議程摘要與詳細內容整理">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<header class="site-header detail-header">
+  <div class="container">
+    <a class="back-link" href="../index.html">← 回議程總覽</a>
+    <span class="badge" style="--badge-color:#6d5bd0">AI Enterprise Summit 2026 · #25</span>
+    <h1>LLM O11y：從 Observability 到 Decision System</h1>
+    <p class="detail-speaker">🎤 Che-Chia Chang　·　SRE @ Maicoin / Microsoft MVP</p>
+    <div class="tags"><span class="tag">LLM Observability</span><span class="tag">成本優化</span><span class="tag">LLM as a Judge</span><span class="tag">資料驅動決策</span><span class="tag">Agent 評估</span></div>
+  </div>
+</header>
+<main class="container detail-main">
+  <section class="detail-section summary-box">
+    <h2>摘要</h2>
+    <p>講者分享如何在企業導入 LLM／Coding Agent 時，用可觀測性（Observability）取代「聽說」式決策，透過建立 baseline、LLM-as-a-Judge、Dataset &amp; Experiment 三個步驟，逐步把工具選型、Prompt 調整、模型升級等決策數據化。核心主張是「新工具冒出速度大於人力研究速度」，唯有先看到量化數據，才能讓團隊信任現有技術堆疊並驗證每次改動的實際影響。</p>
+  </section>
+  <section class="detail-section">
+    <h2>重點整理</h2>
+    <ul class="highlights"><li>第一次優化：關閉無用工具、控制 System Instruction，可將 Token Overhead 從 20000+ 降到 1000+，成本降至約 5%</li><li>使用 LLM-as-a-Judge，以單一 Observation／步驟為單位評估品質，取代難以覆蓋多變場景的傳統測試</li><li>從 Daily Work Tracing 建立 Dataset，搭配 Experiment 重跑同一批考古題以比較模型、工具、Prompt 版本</li><li>提出效率公式：整體效率 = (產出數量 × 產出品質) / (Token Cost × 花費時間)</li><li>主張「先有監測，再做決策」，避免團隊因 FOMO 盲目升級模型或更換工具</li></ul>
+  </section>
+  
+  <section class="detail-section"><h2>缺乏數據化決策的痛點</h2><p>講者指出技術負責人常被問到是否要換用 Spec-kit、rtk、新模型或新供應商，但市面上新工具冒出速度已超過團隊研究速度。常見的回應方式（自己試用、看網路文章、聽供應商推薦）都不夠系統化，真正缺乏的是能量化評估 LLM 解決方案的機制，讓團隊在面對變動時能維持信任並驗證影響。</p></section>
+<section class="detail-section"><h2>Step 1：建立 Baseline 與第一次優化</h2><p>建立 Observability Stack 後，團隊能看到 Token Usage、Latency、Error Rate 等量化數據，並依此做 Cost Chargeback 與預算控管。第一步優化聚焦在理解不同 CLI（VSCode Copilot、Codex、OpenCode）的行為差異、停用用不到的 Tools、透過 AI Gateway 與調整 System Instruction，實務上可將 Token Overhead 從 20000 多降到 1000 多、成本降到原本的 5% 左右，同時降低觸發 Long Context 高價門檻的機率。</p></section>
+<section class="detail-section"><h2>Step 2：LLM as a Judge</h2><p>在成本優化之後，第二步改用 LLM-as-a-Judge 依 Tracing 的 Input/Output 評估「品質」，以單一 Observation（API Call）為評估單位，用小範圍量化反映局部表現，藉此分析錯誤類型並找出改進方向。針對 Multi-turn Agent，講者建議不要只看最終答案，而要針對單一步驟（如 Plan 或 apply_patch 呼叫）分別評估。</p></section>
+<section class="detail-section"><h2>Step 3：Dataset &amp; Experiment</h2><p>第三步從每日工作的 Tracing 紀錄中挖出「考古題」建立 Dataset（真實輸入、過去模型輸出、Judge 分數），再用 Experiment 機制在同一份考古題上更換模型版本、工具或 Instruction 重新測試，依任務類型分類評估重點（例如 Plan 看 Context Precision、Coding 看 Answer Correctness），最終依情境挑選最適合的模型與工具組合，做品質與成本的平衡。</p></section>
+<section class="detail-section"><h2>Step 0：先釐清需求，再談 Decision System</h2><p>講者強調最容易被忽略的其實是最前面的步驟——先把需求定義清楚。許多團隊在還沒釐清需求、對 LLM 能力認知有落差時就急著討論換不換工具，建議先建立監測機制，讓數據去校準團隊認知，並確保開發團隊與利害關係人在正確率、Error Rate、Latency、Cost 等指標上取得共識，而非誤以為「有 AI 就能十倍產出」。</p></section>
+  <nav class="talk-nav">
+    <a class="nav-link" href="ai-enterprise-24-金融級-Enterprise-Agentic-AI-架構設計-從-PoC-到-Agentic-Operating-System.html">← 金融級 Enterprise Agentic AI 架構設計：從 PoC 到 Agentic Operating System</a>
+    <a class="nav-link nav-next" href="ai-enterprise-26-撕開轉型華麗的包裝-一場從-煉獄-爬回-現實-的中小型企業AI落地化的生存指南.html">撕開轉型華麗的包裝：一場從「煉獄」爬回「現實」的中小型企業AI落地化的生存指南 →</a>
+  </nav>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <p>本頁內容為 AI 輔助整理之摘要，原始檔案：25-LLM O11y：從 Observability 到 Decision System.md。正確內容請以原始投影片為準。</p>
+  </div>
+</footer>
+</body>
+</html>

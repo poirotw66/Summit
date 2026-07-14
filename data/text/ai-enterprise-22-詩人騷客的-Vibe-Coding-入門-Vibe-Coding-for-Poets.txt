@@ -1,0 +1,437 @@
+
+===== PAGE 1 =====
+非理工人的Vibe Coding
+演講者：張俊盛
+教授
+國立清華大學資工系
+2026-0702 星期四南港二館7 樓- 701 E 教室
+
+===== PAGE 2 =====
+Table of 
+Content
+網路語料庫、搭配詞研究簡介
+ Unix for Poets (搭配詞抽取的實例)
+ Vibe Coding for Poet
+ English Collocation Profile 展示
+ 結論
+
+===== PAGE 3 =====
+網路語料庫、搭配詞研究簡介
+1
+
+===== PAGE 4 =====
+網路語料庫、搭配詞研究的歷史
+• 1989 WWW (Tim Berners-Lee, CERN) 
+ 
+ 
+  
+全球互聯網誕生
+• 2006 Web1T5 (Brants, Thorsten, and Alex Franz) 
+Google 送給大家的研究大禮
+• 2010 Web1T5+Greenstone (Wu, Witten & Franken 
+澳洲學者用W1T5研發搭配詞工具
+• 2010 NetSpeak (Potthast, Trenkmann & Stein )
+德國跟進
+• 2013 Linggle (Boisson, et al., NTHU)                                                                    台灣也不缺席
+
+===== PAGE 5 =====
+Gen AI 歸功於一大堆人的善意、公益情懷
+• 1989 WWW (Tim Berners-Lee, CERN) 
+ 
+ 
+大語言言模型訓練資料的載體
+• 2001 Wikipedia (Jimmy Wales and Larry Sanger)  
+大語言言模型訓練資料的主體
+• 2007 Common Crawl (Gil Elbaz) 
+ 
+ 
+ 
+ 
+從網路下載訓練資料
+• 2013 Word2vev (Mikolov, Chen, Corrado, Dean, Google)
+文字向量化類神經網路
+• 2017 Transformer (Vaswani et al., Google Brain/Research)
+最好的類神經網路架構
+• 2018 BERT (Devlin, Chang, Lee, and Toutanova, Google AI)
+遮罩語言模型無用之用
+• 2019 T5 (Colin Raffel et al., Google Brain)
+大語言模型+提示解決百百題
+cola: Sentence acceptability judgment 
+stsb S
+ti T
+t
+l Si il
+it
+
+===== PAGE 6 =====
+用Web1T開發英文搭配
+詞總覽ECP
+Web1T5 20週年
+
+===== PAGE 7 =====
+劍橋大學有「英文詞彙/文法總覽」（全面詞彙文法分級）
+We can wash cars to earn some money for the necessary materials
+As a teacher you have to earn the respect of your students.
+You can't expect to earn a living from your painting.
+
+===== PAGE 8 =====
+但劍橋有「英文搭配總覽」嗎？（全面搭配詞分級）
+earn       name, nickname, title          NAME
+earn       money, wage, income          MONEY
+earn       respect, reputation             RESPECT
+verb + noun
+verb + noun
+verb + noun
+English Collocation Profile Online
+
+===== PAGE 9 =====
+earn       name, nickname, title          NAME
+earn       money, wage, income          MONEY
+earn       respect, reputation             RESPECT
+verb + noun
+verb + noun
+verb + noun
+English Collocation Profile Online
+劍橋沒有！
+
+===== PAGE 10 =====
+我們利用EVG 建等級訓練資料集
+T5 Training Dataset 
+(Text-To-Text Transfer Tra
+nsformer)
+1. earn living → B2
+2. earn money → A2
+3. earn respect → C2
+
+===== PAGE 11 =====
+用MCD 生T5 語意分析資料集
+earn v     • V + n
+ praise, respect, etc acclaim, accolade, admiration, 
+applause, gratitude, plaudits, praise, recognition, 
+reputation, respect, trust
+She has earned an international reputation for her 
+achievements in opera. She has a lot of authority and 
+has earned much respect from her employees.
+• earn    V+n    acclaim 
+RESPECT
+• earn    V+n    admiration RESPECT 
+• earn    V+n    applause 
+RESPECT 
+• earn    V+n    respect 
+RESPECT 
+• earn    V+n    reputation RESPECT
+
+===== PAGE 12 =====
+Gen AI 歸功於一大堆人的善意、公益情懷
+• 1989 WWW (Tim Berners-Lee, CERN) 
+ 
+ 
+大語言言模型訓練資料的載體
+• 2001 Wikipedia (Jimmy Wales and Larry Sanger)  
+大語言言模型訓練資料的主體
+• 2007 Common Crawl (Gil Elbaz) 
+ 
+ 
+ 
+ 
+從網路下載訓練資料
+• 2013 Word2vev (Mikolov, Chen, Corrado, Dean, Google)  
+文字向量化類神經網路
+• 2017 Transformer (Vaswani et al., Google Brain/Research) 
+最好的類神經網路架構
+• 2018 BERT (Devlin, Chang, Lee, and Toutanova, Google AI) 
+遮罩語言模型無用之用
+• 2019 T5 (Colin Raffel et al., Google Brain)  
+ 
+大語言模型+提示解決百百題
+cola: Sentence acceptability judgment 
+stsb S
+ti T
+t
+l Si il
+it
+
+===== PAGE 13 =====
+Gen AI 歸功於一大堆人的善意、公益情懷
+• 1989 WWW (Tim Berners-Lee, CERN) 
+ 
+ 
+大語言言模型訓練資料的載體
+• 2001 Wikipedia (Jimmy Wales and Larry Sanger)  
+大語言言模型訓練資料的主體
+• 2007 Common Crawl (Gil Elbaz) 
+ 
+ 
+ 
+ 
+從網路下載訓練資料
+• 2013 Word2vev (Mikolov, Chen, Corrado, Dean, Google)  
+文字向量化類神經網路
+• 2017 Transformer (Vaswani et al., Google Brain/Research) 
+最好的類神經網路架構
+• 2018 BERT (Devlin, Chang, Lee, and Toutanova, Google AI) 
+遮罩語言模型無用之用
+• 2019 T5 (Colin Raffel et al., Google Brain) 
+ 
+ 
+大語言模型+提示解決百百題
+cola: Sentence acceptability judgment 
+stsb: Semantic Textual Similarity
+Parts of GLUE and SUPERGLUE
+
+===== PAGE 14 =====
+微調T5 預訓練模型就可以建立ECP
+• 1989 WWW (Tim Berners-Lee, CERN) 
+ 
+ 
+大語言言模型訓練資料的載體
+• 2001 Wikipedia (Jimmy Wales and Larry Sanger)  
+大語言言模型訓練資料的主體
+• 2007 Common Crawl (Gil Elbaz) 
+ 
+ 
+ 
+ 
+從網路下載訓練資料
+• 2013 Word2vev (Mikolov, Chen, Corrado, Dean, Google)  
+文字向量化類神經網路
+• 2017 Transformer (Vaswani et al., Google Brain/Research) 
+最好的類神經網路架構
+• 2018 BERT (Devlin, Chang, Lee, and Toutanova, Google AI) 
+遮罩語言模型無用之用
+• 2019 T5 (Colin Raffel et al., Google Brain) 
+ 
+ 
+大語言模型+提示解決百百題
+ECP: English Collocation Profile 
+cola: Sentence acceptability judgment 
+stsb: Semantic Textual Similarity
+Parts of GLUE and SUPERGLUE
+earn    income
+earn    nickname
+earn    applause
+earn    respect
+earn    doctorate
+earn    income 
+A2 MONEY
+earn    admiration C2 NAME 
+earn    applause      C2 RESPECT
+earn    respect 
+C2 EESPECT 
+earn    reputation C2 DEGREE
+
+===== PAGE 15 =====
+Unix for Poets 
+人文者的文字操弄工具
+2
+
+===== PAGE 16 =====
+Ken Church and Unix for Poets
+https://web.stanford.edu/class/cs124/kwc-unix-for-poets.pdf
+
+===== PAGE 17 =====
+Ken Church and Unix for Poets
+https://web.stanford.edu/class/cs124/kwc-unix-for-poets.pdf
+
+===== PAGE 18 =====
+#1 文件變一字一行，計算單字次數unigram
+https://web.stanford.edu/class/cs124/kwc-unix-for-poets.pdf
+
+===== PAGE 19 =====
+#2 到Gemini/canvas 開發應用軟體來分析詞頻
+Exercise 1: Count words
+1. We are given a text or URL (defaulted to 
+https://www.vatican.va/archive/bible/genesis/documents/bible_genesis_en.html)
+2. Our goal is to a list of words in the file with frequency counts
+3. For this we execute Unix command in a pipe (line): tr (for tokenizing texts), sort (for sort 
+token), and uniq –c (counting duplicates and removing empty lines)
+
+===== PAGE 20 =====
+Gemini/canvas 分析詞頻應用軟體截圖
+
+===== PAGE 21 =====
+#3 計算相鄰兩字次數Bigram
+
+===== PAGE 22 =====
+#4 全部使用Unix 指令可以復刻一篇博士論文的程式
+
+===== PAGE 23 =====
+#4 全部使用Unix 指令可以復刻一篇博士論文的程式
+
+===== PAGE 24 =====
+3
+Vibe Coding for Poets
+文科人也可以開發應用軟體
+
+===== PAGE 25 =====
+3.1
+ECP 英文搭配總覽展示介面
+
+===== PAGE 26 =====
+26
+新增目錄 ECP_demo 
+新增檔案 ECP_data.csv
+下載安裝Python, Streamlit 
+pip install streamlit 
+pandas
+python -m pip install 
+streamlit pandas
+python3 -m pip install 
+streamlit pandas
+3.1.1 準備：新增目錄、安裝套件
+collocation,level,semantic_label
+==============================
+earn approval,B2,earn respect
+earn bonus,B2,earn money
+earn cash,B1,earn money
+earn fame,C2,earn respect
+earn fee,B1,earn money
+earn fortune,B2,earn money
+earn income,B2,earn money
+earn interest,C1,earn money
+earn living,B2,earn money
+earn mention,B2,earn respect
+earn money,A2,earn money
+earn name,B2,earn name
+earn nickname,B1,earn name
+
+===== PAGE 27 =====
+27
+Sample Prompt
+I want to build a simple Streamlit demo for an English 
+Collocation Profile.=
+I have a local CSV file named 
+streamlit_demo_data.csv with these columns: 
+collocation, level, semantic_label
+Please write a Python Streamlit app.
+Requirements:
+1.
+Show the title: English Collocation Profile Demo.
+2.
+Add a search box so users can search 
+collocations. 
+3.
+Add a CEFR level filter and a semantic label filter 
+. 
+4.
+Show the matching result table AFTER the user 
+search a baseword. 
+5.
+5. The app should run locally with: streamlit run 
+app.py. 
+https://chatgpt.com/share/6a2d9a4f-0d8c-83ee-99de-7882474eb79c
+3.1.2A 用ChatGPT 產生應用軟體
+
+===== PAGE 28 =====
+28
+Trouble Shooting Prompt
+I am trying to run a Streamlit app with:
+streamlit run app.py
+Here is the error message:
+[paste error message here]
+Please explain the problem in simple terms and tell me ex
+actly how to fix it.
+• Create file: Create an app.py file in the 
+ECP_Streamlit_Demo folder and paste the Python 
+code generated by AI
+•
+Go to the Folder : Enter cd 
+~/Desktop/ECP_Streamlit_Demo in your 
+Terminal
+•
+Run Streamlit : Enter one of these commands in 
+your Terminal
+•
+streamlit run app.py
+•
+python -m streamlit run app.py
+•
+python3 -m streamlit run app.py
+•
+Open the app in the browser: 
+http://localhost:8501
+執行Streamlit 應用軟體
+
+===== PAGE 29 =====
+29
+Sample Prompt
+Write a simple HTML app for an English Collocation Pr
+ofile demo. The app should:
+1. Load a CSV (collocation, level, semantic_label).
+2. Provide a search box.
+3. Show matches in a table.
+4. Filter by CEFR level/semantic_label.
+5. Keep code simple for beginners.
+If Python/Streamlit feels too technical, you can g
+enerate a HTML demo via Gemini & Canvas.
+3.1.2B 用Gemini/canvas 產生應用軟體
+
+===== PAGE 30 =====
+3.2
+詞彙索引典（AI 生成）
+
+===== PAGE 31 =====
+案例#2 詞彙索引典（例句寶典concordancer ）
+Create a concordance app entitled "My 
+Concordance" that accepts and manages a Gemini 
+API key and presents 7 concordance lines 
+generated by Gemini AI, each of which is an 
+example sentence of a given word or phrase 
+(defaulted to ”defy"), representing typical use of 
+the given word or phrase in terms of collocations, 
+grammar patterns.
+
+===== PAGE 32 =====
+案例#2 詞彙索引典（例句寶典concordancer ）
+
+===== PAGE 33 =====
+4
+用Vibe Coding 做ECP Demo
+
+===== PAGE 34 =====
+earn       name, nickname, title          NAME
+earn       money, wage, income          MONEY
+earn       respect, reputation             RESPECT
+verb + noun
+verb + noun
+verb + noun
+English Collocation Profile Online
+English Collocation Profile
+• We present a method f
+or creating English Col
+location Profile(ECP) :
+-
+Proficiency Levels
+-
+Guidewords or
+-
+Sense Tags
+9
+1 · Introduction
+
+===== PAGE 35 =====
+Our Solution: English Collocation Profile
+1 · Introduction
+10
+
+===== PAGE 36 =====
+English Collocation Profile (All Levels A1 – C2)
+11
+1 · Introduction
+
+===== PAGE 37 =====
+English Collocation Profile (C2 Only)
+12
+1 · Introduction
+
+===== PAGE 38 =====
+Our Solution: English Collocation Profile
+13
+1 · Introduction
+
+===== PAGE 39 =====
+5
+結論
+
+===== PAGE 40 =====
+感謝

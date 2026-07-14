@@ -1,0 +1,435 @@
+
+===== PAGE 1 =====
+AI原生企業正在誕生
+重構企業運作與競爭優勢
+
+===== PAGE 2 =====
+中華電信資訊技術分公司 雲端系統處
+雲端服務與 AI 策略推動
+• 專注 AI × Cloud × Security × Resilience 
+技術領域
+• 致力於將 AI 轉化為企業可治理、可規模化
+的核心能力
+• 協助企業邁向AI-Native 營運轉型
+鄭廉勲科長
+講師簡介｜
+
+===== PAGE 3 =====
+2023 年
+「驚艷期」
+ChatGPT 橫空出世席捲全
+球，全世界第一次深刻感
+受到生成式AI 帶來的巨大
+震撼與變革潛力
+起點：全面探索新技術
+2024 年
+「實驗期」
+•
+企業界大量啟動PoC
+專案
+•
+多點開花、積極探索各
+種落地場景與工具價值
+探索：尋求應用可行性
+2025 年
+「幻滅篩選期」
+•
+高達八成PoC 專案未
+能通過生產環境與商業
+效益考驗
+•
+企業開始冷靜認清AI 
+落地面臨的真實瓶頸
+篩選：沉澱出實質剛需
+2026 年
+「規模化期」
+•
+技術、工具與系統方法
+論全面成熟，足以支持
+企業級規模化部署
+•
+競爭優勢勝負，取決於
+組織的執行決心
+決勝點：規模部署與治理
+發展軌跡：生成式AI 的大浪淘沙
+回顧過去三年的淘金與幻滅，正式迎來 2026 年「企業規模化部署」新紀元
+
+===== PAGE 4 =====
+資料來源： Gartner Hype Cycle for Artificial Intelligence, 2025
+AI 已從「技術競賽」進入「交付與治理競賽」
+誰能在可控風險、可預期成本、可稽核治理下，穩定且規模化交付AI價值，誰就是贏家
+
+===== PAGE 5 =====
+AI 在台灣已進入「規模化」導入期
+「規模化」關鍵在「治理 × 人才 × 落地能力」
+超過半數企業已開始應用或規劃將 AI 導入營運流程
+寄望 AI 
+降低人力成本
+已計畫
+提高資源投入
+最大瓶頸 
+AI人才不足
+50%
+43%
+45%
+30%
+資料來源：KPMG 2025 台灣產業 AI 應用趨勢與展望報告
+
+===== PAGE 6 =====
+AI 落地演進路線圖
+「被動輔助」➔「自主運作」➔「物理落地」
+階段一
+Chat Copilot
+用於回答問題、
+查資料、執行簡單任務
+被動輔助
+01
+階段二
+AI Agent
+具備感知、推理、
+自動執行任務、
+不需每步都靠人指示
+效率提升
+02
+階段三
+Agentic AI
+具備「自主決策＋自動行動＋
+工具操作」能力的完整組織
+自主運作
+03
+階段四
+Physical AI
+AI 走出數位空間，
+與硬體和感測器深度結合，
+在真實物理環境中運作
+物理落地
+04
+
+===== PAGE 7 =====
+Level 5
+轉型期
+Transforming
+以AI 為核心的商業模式創新；開發平台化、產品化
+Level 4
+整合期Integrated KPI 連動營收與客戶體驗；AI SDLC 全面標準化
+Level 1
+觀望Ad-hoc
+分散試用、無共同指標、缺乏政策
+Level 3
+規模化Scaling
+全員授權、效能提升評估指標顯著改善、治理制度完備
+Level 2
+試點Piloting
+✓2-3 個 pilot 先鋒團隊、建立效能提升評估基準、首波ROI 報告
+成熟度模型與量測特徵：評估當下定位，明確階段躍升目標
+台灣多數企業狀態
+Level 2 ➔Level 3
+• 正從「試點」跨入「規模化」
+• 正在建立AI治理制度
+• 正在將 AI Agent 生命週期管理納入規範
+自我診斷：您的企業目前處於哪個階段？
+
+===== PAGE 8 =====
+導入AI工具
+優化工作流程並提升效率
+領域
+114年工具
+115年升級
+目標
+開發協作
+GitHub 
+Copilot
+GitHub 
+Enterprise
+從個人輔助走向團隊開
+發平台
+生態整合
+M365 Copilot
+Copilot Studio
+從個人事務走向打造客
+製化AI代理程式
+知識管理
+NotebookLM
+(個人)
+NotebookLM
+(團隊)
+從個人知識庫走向組織
+共享知識庫
+合規升級
+ChatGPT 
+(個人)
+Gemini 
+Enterprise
+汰除不合規工具，導入
+企業級AI
+數據分析
+NA
+Amazon Suite
+補足GenBI缺口，導入
+數據視覺化AI工具
+中華
+電信
+
+===== PAGE 9 =====
+建立AI治理制度
+中華電信亦依國際標準(ISO 42001)與政府法規《人工智慧基本法》
+建立完整 AI 管理制度，遵循治理、降低 AI 應用風險
+01
+永續發展與福祉
+兼顧社會公平及環境永續，
+降低數位落差
+02
+人類自主
+以人為本，尊重基本權利與
+民主價值
+05
+透明與可解釋
+適當揭露資訊，增進國民對
+人工智慧之信任
+06
+公平與不歧視
+防範演算法產生偏見或不合
+理之差別待遇
+07
+問責
+確保內部治理與外部社會責
+任之落實
+03
+隱私保護與資料治理
+妥善保護個資，並採取最小
+化及必要性原則
+04
+資安與安全
+建立資安防護措施，確保系
+統穩健安全
+中華
+電信
+
+===== PAGE 10 =====
+依標準、從法遵、建制度、循治理、降風險
+建立AI治理制度
+中華電信亦依國際標準(ISO 42001)與政府法規《人工智慧基本法》
+建立完整 AI 管理制度，遵循治理、降低 AI 應用風險
+中華
+電信
+
+===== PAGE 11 =====
+以 AI-Driven DLC 開發ITSM治理平台為例
+ORK ➔SDD ➔MVP
+Task
+AI Coding Agent 依規格自動產生 Task、程
+式碼與單元測試
+Acceptance
+建立 Acceptance Criteria、Test Case，驗證
+交付成果
+FR / NFR
+撰寫功能需求(FR)與非功能需求(NFR)對齊
+User Story 業務價值(Value)
+User Story
+撰寫 User Story 對齊 KR 關鍵成果、量化指標
+Key Result
+定義 KR 關鍵成果達成 ITSM治理平台目標
+Objectives
+定義ITSM治理平台目標
+由
+上
+而
+下
+逐
+步
+拆
+解
+階段
+AI 負責
+人類職責
+Why
+-
+定義目標（OKR）
+What
+協助整理
+需求分析（User Story、功
+能需求(FR)、非功能需求
+(NFR)）
+How
+協助設計
+架構設計（Architecture、
+API、Data Model）
+Build
+AI Coding Agent 
+自動產生程式
+技術決策、Code Review
+Verify
+自動測試、Unit Test
+驗證是否符合業務需求
+（Acceptance）
+Operate
+AI Agent 自主維運
+治理、風險控管、持續改善
+OKR: Objectives and Key Results
+SDD: Specification-Driven Development 
+MVP: Minimum Viable Product
+中華
+電信
+人類的價值正在從寫程式（Coding）轉向定義問題（Spec）與驗證成果（ Acceptance ）
+
+===== PAGE 12 =====
+Story
+需求轉換為 User Story，描
+述使用者需求、商業價值與
+使用情境
+Requirement
+定義功能性需求（FR）與 非功
+能性（NFR），建立可驗證需求
+規格
+SDD Design
+設計 System Architecture、
+Database、API、UI 與資料
+流程
+Task
+AI Coding Agent 依規格自
+動產生 Task、程式碼與單元
+測試
+Acceptance
+建立 Acceptance Criteria、
+Test Case，驗證需求符合規
+格
+docs/
+├── README.md                        # 團隊協作規範與AI 使用準則
+├── domain_glossary.md               # 領域詞彙表(Ubiquitous Language)
+├── sd-docs-maintainer-guide.md      # sd-docs-maintainer 開發者快速指南
+├── architecture/                    # 架構文件（改動需PR review）
+│   ├── functional_architecture.md   # 功能模組與權限設計
+│   ├── tech_stack.md                # 技術堆疊與版本
+│   ├── cloud_infrastructure.md      # 雲環境與CI/CD pipeline設定
+│   ├── data_architecture.md         # ER Model 與資料儲存策略
+│   ├── security_guidelines.md       # 資安原則與稽核日誌
+│   ├── api_and_integrations.md      # API 策略與外部系統串接
+│   └── project_structure.md         # 專案目錄結構說明
+├── specs/                           # 需求管理，一需求一資料夾
+│   └── YYYYMMDD_feature_name/
+│       ├── requirements.md          # 需求定義
+│       ├── design.md                # 設計規格
+│       └── tasks.md                 # 開發任務拆解
+└── _templates/                      # 規格模板（複製使用，勿直接修改）
+
+===== PAGE 13 =====
+提供高效能NVIDIA GPU 運算資源，
+滿足AI 模型訓練與推論需求
+具備高可靠性與高安全標準的資料中心
+，保障關鍵任務運行
+結合IOWN 技術與邊緣運算，打造低
+延遲、高頻寬的AI 傳輸骨幹
+hicloud AI 算力雲
+GPUaaS
+Multi-Instance GPU (MIG) 切片技術：支援
+1/4、1/2 及整卡彈性組合，資源配置最佳化
+彈性計費：以時計費、最低1 小時起租，大
+幅降低導入門檻
+PaaS 平台：預載AI 開發環境，即開即用，無
+需繁瑣設定
+高效能儲存：搭配高速平行檔案系統，加速資
+料讀取
+國際級智慧IDC
+Smart Data Center
+高可用架構：雙迴路供電與精密空調，N+1 
+或2N 備援機制
+冷通道設計：最佳化氣流管理，提升散熱效率
+與能源使用效率(PUE)
+多層資安防護：整合DDoS 防護、防火牆與
+SOC 監控，確保資料安全
+專業維運：7x24 小時NOC 監控與ISO 認證
+標準作業流程
+全光網路& 分散式AIDC
+Connectivity & Edge
+IOWN 全光網路：以全光技術實現大頻寬、
+低延遲、低耗能傳輸
+分散式AIDC：佈建邊緣運算節點，讓算力更
+貼近應用場景
+多雲直連(CMCX)：提供專屬線路直連國際公
+有雲，確保傳輸品質
+多雲管理(CBOSS)：單一平台納管多雲資源，
+簡化維運複雜度
+算力隨需．彈性靈活
+國際領先．綠色節能
+多座AIDC無縫銜接
+技術優勢
+AI 算力雲× 智慧IDC × 全光網路
+中華
+電信
+
+===== PAGE 14 =====
+多端邊緣應用場域
+雙機房邊緣核心架構
+機房A ── 智慧治理中心平台
+核心雲端決策與資料交換樞紐
+整合影像資料庫與AI 模型庫，以標準API 與城市既有系統安
+全介接，實現全域資訊整合
+機房B ── Vision AI VLM 平台
+AI 智能推理與視覺語言引擎
+部署最新Vision AI 大模型，負責跨場域影像的特徵提取、語
+義理解、事件推論，並向機房A 輸出即時決策支援
+IOWN 全光網路
+     (低延遲、高頻寬)
+AI 應用案例：智慧城市治理
+基於「IOWN 全光網路+ 混合雲+ Vision AI」：跨場域即時多端智能推理與決策
+場域1
+場域5
+場域2
+場域3
+場域6 (偏鄉)
+場域4
+體育場館
+工業園區
+危險場域
+港務貨櫃
+IOWN: Innovative Optical and Wireless Network)
+中華
+電信
+
+===== PAGE 15 =====
+以「優質網路服務」為核心，邁向「ESG永續發展」、「AI賦能」企業
+中華電信已轉型為
+兼具科技與人文的ICT服務公司
+以客戶為中心
+營運系統轉型
+企業活動
+數位化
+數據驅動
+資料治理
+系統雲化
+韌性轉型
+ESG
+永續發展
+AI新創
+賦能
+15
+
+===== PAGE 16 =====
+©  2024, Amazon Web Services, Inc. or its affiliates. All rights reserved.
+網路轉型
+4G、行網、固網、雲網
+雲化轉型、數據驅動
+4G/5G、數據治理、系統雲化
+淨零永續
+企業ESG永續 綠智機房
+組織型轉
+客戶導向 
+韌性轉型
+網路星空地海一體化
+境內境外多中心、資安
+中華電信「躍升2021三年轉型計畫」
+(2019~2021)
+中華電信「淨零永續」「韌性轉型」「AI賦能」
+(2021~)
+中華電信轉型  為客戶創造價值、利己利他、共創共榮
+AI 賦能
+AI 無處不在、AI 工廠、AI DC、+AI ➔ AI+
+中華電信運用雲端科技(Cloud) 與人工智慧
+(AI) 加速轉骨，提升韌性、永續轉型，
+實證經驗賦能客戶，利己利他共創共榮
+價值創造導向、企業轉型實證
+(AI AGENT、AI NATIVE)
+16
+
+===== PAGE 17 =====
+

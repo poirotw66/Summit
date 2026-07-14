@@ -1,0 +1,228 @@
+
+===== PAGE 1 =====
+雲端安全新思維
+重塑AI 驅動的防禦韌性
+王仁德(James Wang)
+Fortinet 雲端資安技術顧問
+
+===== PAGE 2 =====
+2
+©  Fortinet Inc. All Rights Reserved.
+全球的威脅趨勢
+Fortinet《全球威脅情勢報告》
+•
+AI 縮短攻擊開發週期，數分鐘生成攻擊腳本。
+•
+AI 降低攻擊技術門檻，量產各種掃描、入侵與完美的多國語言釣魚郵件。
+•
+AI 偽裝攻擊繞過偵測，直接利用內建的合法工具（如 PowerShell、WMI、遠端桌面等）進行攻擊。
+
+===== PAGE 3 =====
+3
+©  Fortinet Inc. All Rights Reserved.
+如何強化雲端安全韌性
+打造雲端多層次防護，層層鎖定，全面防堵
+第一層：Cloud 攻擊預警- 洞燭機先
+策略：掌握攻擊視角，全面盤點雲端資產。
+第二層：Cloud 清洗誘捕- 禦敵於外
+策略：導引雲外清洗，主動境外誘捕。
+第三層：Cloud 深度安全- 堅實防線
+策略：監控雲端服務，嚴防應用漏洞。
+第四層：Cloud 作業管控- 永不信任
+策略：鎖定端點防禦，落實身分零信任。
+第五層：Cloud 監控回應– 運籌帷幄
+策略：智能行為分析，自動聯防新型攻擊。
+
+===== PAGE 4 =====
+4
+©  Fortinet Inc. All Rights Reserved.
+第一層，Cloud 攻擊預警– 洞燭機先
+策略：掌握攻擊視角，全面盤點雲端資產。
+持
+續
+攻
+擊
+面
+管
+理
+資產
+分析與分類
+根據風險優先
+處理整治
+依據優先序
+解決問題
+FortiRecon
+Internal
+External
+資產掃描
+核心方案：FortiRecon SaaS
+持續威脅曝險監控
+外部攻擊面管理(EASM)
+由外到內盤點資產，持續發掘未知曝險或錯誤設
+定。
+品牌保護(Brand Protection)
+監控釣魚網站、偽冒APP、網域與社群。
+對手情報(ACI)
+監控暗網與論壇，提早發現外洩憑證、帳密、勒
+索軟體情報、漏洞及供應商風險。
+
+===== PAGE 5 =====
+5
+©  Fortinet Inc. All Rights Reserved.
+第二層，Cloud 清洗誘捕- 禦敵於外
+策略：導引雲外清洗，主動境外誘捕。
+核心方案：FortiAppSec 應用與API 保護
+FortiDeceptor 誘捕式入侵保護
+雲端全面應用安全防護
+WAAP
+Bot
+Threat Analytics
+GSLB
+CSP
+DDoS
+CDN
+FortiDeceptor Decoys
+Traffic Tunnel 
+Unit (TTU)
+攻擊誘捕服務
+Decoy Reverse
+Connection
+AI 驅動應用防護
+阻擋HTTP 流量和API 呼叫中的異常行為
+ML 偵測和緩解零時差攻擊，誤報降至最低。
+偵測、欺敵與誘捕(Deception)
+早預警：橫向移動與二層偵查反制。
+零誤報：自動誘捕、隔離與聯防。
+高效益：113種IT/OT 仿真陷阱及無限制誘餌
+強化可用性和效能
+GSLB : 負載平衡提高服務可用性與效能
+CDN : 全域分散式網路快取智慧分流
+DDoS: 阻擋緩解網路和應用攻擊
+
+===== PAGE 6 =====
+6
+©  Fortinet Inc. All Rights Reserved.
+第三層，Cloud 深度安全- 堅實防線
+策略：監控雲端服務，嚴防應用漏洞。
+核心方案：FortiGate 網路層防火牆
+FortiWeb 應用層防火牆
+AI 應用偵測防護
+JPMC 量子示範
+深度檢測
+即時攔截和分析未知威脅的即時防護。
+利用防毒、進階威脅、AI / ML 和威脅情報來識別。
+應用安全
+偵測阻擋人工智慧生成零時差攻擊，有效防禦用。
+識別惡意模式、降低誤報率，有效降低管理負擔。
+量子安全
+符合國際規範FIPS 203,204,205。
+同時支援QKD與PQC、混合模式與堆疊模式。
+2025 Cyber Rating 雲端防火牆測試
+
+===== PAGE 7 =====
+7
+©  Fortinet Inc. All Rights Reserved.
+第四層，Cloud 作業管控- 永不信任
+策略：鎖定端點防禦，落實身分零信任。
+核心方案：FortiClient ZTNA 零信任防護
+軟體資產清單
+CVE 漏洞清單
+合規管控
+多維度檢查：作業系統、軟體、機碼、憑證等。
+動態安全標籤：端點隨時同步檢查狀態回EMS
+即時存取控制：防火牆政策增加ZTNA 標籤檢查
+弱點修補
+作業系統及第三方軟體CVE 資訊檢查。
+手動修補與自動更新管理。
+身分綁定
+設備與使用者身分綁定，結合多因子認證
+開機自動登入體驗與斷線自動重連。
+Token / FIDO
+
+===== PAGE 8 =====
+8
+©  Fortinet Inc. All Rights Reserved.
+第五層：Cloud 監控回應– 運籌帷幄
+策略：智能行為分析，自動聯防新型攻擊。
+核心方案：FortiSIEM 資訊與事件管理平台
+FortiSOAR 協調、自動化和回應
+流程自動化
+漫長的潛伏期與低偵測率：
+•
+攻擊者普遍利用AI 和自動化技術，平均偵測時間過長使得防禦陷入被動。
+Reference : TechTarget ESG
+精準洞察
+UEBA 異常行為分析
+2800+ 機器學習IT/OT 威脅偵測
+MITRE ATT&CK 攻擊識別可視化儀表
+AI 自動協作聯防
+避免示警疲勞，事件調查自動化
+大量重覆作業，標準作業自動化
+縮短應變時間，事件回應自動化
+情資整合
+多源情資介接，支援STIX/TAXII。
+動態匯入或自動定期更新情資。。
+MITRE ATT&CK 識別
+事件可視化調查
+
+===== PAGE 9 =====
+9
+©  Fortinet Inc. All Rights Reserved.
+AI 驅動雲端安全韌性效益
+主動防禦、深度安全與持續監控
+第一層：洞燭機先
+FortiRecon SaaS 持續威脅曝險管
+主動預警
+第二層：禦敵於外
+FortiAppSec SaaS 應用安全防護
+FortiDeceptor DaaS 欺敵誘捕服務
+第三層：堅實防線
+FortiGate 深層檢測 / 量子安全
+FortiWeb 應用安全
+第四層：永不信任
+FortiClient 零信任存取
+第五層：運籌帷幄
+FortiSIEM 安全事件資訊管理
+FortiSOAR 安全流程自動化回應
+欺敵阻絕
+深度防禦
+端點鎖定
+智慧反制
+
+===== PAGE 10 =====
+10
+©  Fortinet Inc. All Rights Reserved.
+AI 驅動雲端安全完整覆蓋
+主動防禦、深度安全與持續維運
+
+===== PAGE 11 =====
+11
+©  Fortinet Inc. All Rights Reserved.
+Fortinet 是最值得信賴安全公司
+10/10
+Business Services
+TOP
+10/10
+Financial Services
+TOP
+10/10
+Telcos & Carriers
+TOP
+10/10
+Technology
+TOP
+10/10
+Retail & Wholesale
+TOP
+10/10
+Manufacturing
+TOP
+15+ 年 AI 發展
+500+ 項 AI 專利
+全球唯一自建 GPU 資料中心的資安公司
+與NVIDIA 合作FGT 在BlueField-3 DPU 上
+全球唯一同時支援QKD 與PQC
+支援量子敏捷加密，包含堆疊及混合
+
+===== PAGE 12 =====
+

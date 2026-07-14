@@ -1,0 +1,413 @@
+
+===== PAGE 1 =====
+以極致彈性
+化解地端與雲端的現實拉扯
+©  2026 NetApp, Inc. All rights reserved.  
+Will Huang
+資深技術顧問
+
+===== PAGE 2 =====
+©  2026 NetApp, Inc. All rights reserved.
+
+===== PAGE 3 =====
+隨時代變化彈性擴展同時維持簡單管理的資料平台
+AFF (TLC)
+FAS
+AFF (QLC)
+©  2026 NetApp, Inc. All rights reserved.  
+data platform
+The unified, enterprise
+-grade foundation for intelligent data infrastructure
+CYBER
+RESILIENCE
+CLOUD 
+TRANSFORMATION
+DATA 
+INFRASTRUCTURE 
+MODERNIZATION
+ARTIFICIAL
+INTELLIGENCE
+
+===== PAGE 4 =====
+隨時代變化彈性擴展同時維持簡單管理的資料平台
+AFF (TLC)
+FAS
+AFF (QLC)
+©  2026 NetApp, Inc. All rights reserved.  
+data platform
+The unified, enterprise
+-grade foundation for intelligent data infrastructure
+CYBER
+RESILIENCE
+CLOUD 
+TRANSFORMATION
+DATA 
+INFRASTRUCTURE 
+MODERNIZATION
+ARTIFICIAL
+INTELLIGENCE
+
+===== PAGE 5 =====
+透過新增控制器實現橫向擴展
+AFF (TLC)
+FAS
+Next -generation
+ 
+SSD
+ONTAP Select
+ONTAP ® Cloud
+MULTI- CLOUD
+SAN
+NAS
+S3
+AFF (QLC)
+單一控制器可
+進行垂直擴充
+NetApp FAS
+NFS
+CIFS
+iSCSI
+FC
+NVMe
+S3
+©  2026 NetApp, Inc. All rights reserved.  
+隨時代變化彈性擴展同時維持簡單管理的資料平台
+1
+
+===== PAGE 6 =====
+©  2026 NetApp, Inc. All rights reserved.  
+6
+按使用量付費的營運支出
+ON -PREM SERVICES
+Mandatory commitment to one or 
+more NetApp
+® Keystone
+® STaaS 
+on -premises services
+CLOUD SERVICES
+▪
+500GiB free CVO capacity pre
+-
+commitment
+▪
+CVO Add-on: 1TiB Increments, 
+4TiB Min (Co -termed with 
+Keystone STaaS)
+Flexible 20%, 40% or 60% burst capacity
+ for on -prem and cloud at 
+same rate
+ as that of committed capacity
+1-to -5 year * term commitments
+Cloud capacity reallocation 
+– shift up to 25%  of on -prem spend to 
+cloud per quarter
+Capacity
+ reduction** 
+of up to 25% annually
+Billing Frequency
+: monthly, quarterly, semi
+-annual, annual 
+upfront ***
+* 4th  and 5 th  year not applicable if cloud services is included
+** Minimum subscription term should be 24 months
+*** Not available if cloud services is included in the subscription
+2
+
+===== PAGE 7 =====
+©  2026 NetApp, Inc. All rights reserved.  
+7
+支援多樣化的虛擬平台
+3
+
+===== PAGE 8 =====
+©  2026 NetApp, Inc. All rights reserved.  
+8
+
+===== PAGE 9 =====
+©  2026 NetApp, Inc. All rights reserved.  
+9
+
+===== PAGE 10 =====
+©  2026 NetApp, Inc. All rights reserved.  
+10
+
+===== PAGE 11 =====
+© 2026 NetApp, Inc. All rights reserved.
+ 
+11
+簡化遷移NetApp Shift Toolkit
+Convert and migrate 
+in minutes
+Reduced downtime 
+and disruption
+Reduce migration & 
+licensing costs
+Separate dev/test & 
+production
+Shift Toolkit
+
+===== PAGE 12 =====
+©  2026 NetApp, Inc. All rights reserved.  
+12
+簡化遷移NetApp Shift Toolkit
+
+===== PAGE 13 =====
+©  2026 NetApp, Inc. All rights reserved.  
+13
+2.  Create Resource Group
+4.  Migration
+1. Add Source/Destination site
+3.  Define Blueprint
+簡化遷移NetApp Shift Toolkit
+
+===== PAGE 14 =====
+©  2026 NetApp, Inc. All rights reserved.  
+14
+簡化遷移NetApp Shift Toolkit
+
+===== PAGE 15 =====
+隨時代變化彈性擴展同時維持簡單管理的資料平台
+AFF (TLC)
+FAS
+AFF (QLC)
+©  2026 NetApp, Inc. All rights reserved.  
+data platform
+The unified, enterprise
+-grade foundation for intelligent data infrastructure
+CYBER
+RESILIENCE
+CLOUD 
+TRANSFORMATION
+DATA 
+INFRASTRUCTURE 
+MODERNIZATION
+ARTIFICIAL
+INTELLIGENCE
+
+===== PAGE 16 =====
+地表上 
+©  2026 NetApp, Inc. All rights reserved.  
+最安全的儲存設備
+
+===== PAGE 17 =====
+© 2026 NetApp, Inc. All rights reserved.
+ 
+FIPS 140 -3
+Commercial Solutions 
+for Classified (CSfC) 
+Component List 
+Department of Defense 
+Approved Product List 
+(DoDIN APL)
+Common Criteria
+美國國家安全局
+美國國家標準與技術研究院
+產品所使用的加密模組符合
+美國政府的安全標準，可用
+於政府、金融與高安全環境
+已通過安全與互通性驗證，被核
+准可實際部署於美國國防部
+（DoD ）網路環境
+安全架構與設計經過獨立第三方
+評估並符合政府採購的安全要求
+美國國防部
+國際標準化組織
+解決方案在多層加密與安
+全架構下，可合法用於處
+理與儲存Classified / 
+Top Secret 資料
+唯一經過驗證、可用於儲存「最高機密」資料的企業級
+儲存廠商
+
+===== PAGE 18 =====
+©  2026 NetApp, Inc. All rights reserved.
+
+===== PAGE 19 =====
+©  2026 NetApp, Inc. All rights reserved.  
+19
+CYBER 
+RESILIENCY
+hosted 
+anywhere
+for any 
+workload
+SECURE BY DESIGN
+AI-powered 
+autonomous 
+ransomware 
+protection 
+針對檔案(File) 、區塊
+(Block) 、原生雲端及使用
+者行為，提供即時的偵測與
+應變
+End -to -end 
+encryption
+確保數據在「靜態儲
+存」、「傳輸過程」及
+「使用中」均安全無虞
+自動封鎖已知的惡意檔案
+類型
+Policy 
+engine
+WORM primary 
+data and tamper
+-
+proof snapshots
+透過「不可變
+(Immutable)
+」與「不
+可刪除(Indelible) 」的
+快照技術
+Multi -admin / 
+multi -factor 
+verification
+阻斷惡意管理員與非法
+使用者的破壞行為
+唯一獲得美國國家安全
+局(NSA) CSfC 驗證，
+可用於儲存「極機密
+(Top -Secret) 」數據的
+企業級儲存設備
+
+===== PAGE 20 =====
+隨時代變化彈性擴展同時維持簡單管理的資料平台
+AFF (TLC)
+FAS
+AFF (QLC)
+©  2026 NetApp, Inc. All rights reserved.  
+data platform
+The unified, enterprise
+-grade foundation for intelligent data infrastructure
+CYBER
+RESILIENCE
+CLOUD 
+TRANSFORMATION
+DATA 
+INFRASTRUCTURE 
+MODERNIZATION
+ARTIFICIAL
+INTELLIGENCE
+
+===== PAGE 21 =====
+以需要的方式 在需要的地方交付
+Azure NetApp Files
+Google Cloud
+ NetApp Volumes
+Amazon FSx  
+for NetApp ONTAP
+唯一一套通用儲存軟體,同時以地端儲存系統交付,也由三大雲端服務商以原生雲端代管服務直接提供。
+On -Premises/
+Hybrid Cloud
+NetApp Cloud 
+Volumes ONTAP
+Comprehensive data management software delivering automation, efficiency, 
+data protection, and security capabilities for file, block, and object
+ONTAP
+data platform
+
+===== PAGE 22 =====
+©  2026 NetApp, Inc. All rights reserved.  NETAPP CONFIDENTIAL
+22
+數十年儲存技術創新的積累, 透過主流的公有雲直接提供
+雲端儲存 並非生而平等
+Cloud Storage Maturity 
+Model
+唯有NetApp  能提供:
+•
+130+ 區域覆蓋
+•
+與雲端服務商管理介面、網路深
+度整合
+•
+FedRAMP 、GDPR、HIPAA 等合
+規認證計畫
+•
+整合式資料保護・災難復原・跨
+區高可用性
+Leve
+l 1
+Marketplace offering
+Leve
+l 2
+Integrated experience
+Leve
+l 3
+Integrated business processes
+Leve
+l 4
+Native service
+Leve
+l 5
+First -party n ative  service embedded in 
+multiple offerings
+CUSTOMER VALUE
+唯一一套通用儲存軟體,同時以地端儲存系統交付,也由三大雲端服務商以原生雲端代管服務直接提供。
+
+===== PAGE 23 =====
+隨時代變化彈性擴展同時維持簡單管理的資料平台
+AFF (QLC)
+©  2026 NetApp, Inc. All rights reserved.  
+data platform
+The unified, enterprise
+-grade foundation for intelligent data infrastructure
+CYBER
+RESILIENCE
+CLOUD 
+TRANSFORMATION
+DATA 
+INFRASTRUCTURE 
+MODERNIZATION
+ARTIFICIAL
+INTELLIGENCE
+
+===== PAGE 24 =====
+現有的儲存解決方案已難以支撐企業級AI 的需求
+Legacy Storage
+性能表現不足
+架構缺乏彈性
+擴充能力受限
+AI “Start Ups”
+採用非標準協定
+缺少資安功能
+多租戶架構不完善
+面對AI 工作負載的嚴苛需求，這兩類解決方案均存在顯著的關鍵缺口
+
+===== PAGE 25 =====
+NetApp AFX
+Purpose
+-built for AI
+Legacy Storage
+性能表現不足
+架構缺乏彈性
+擴充能力受限
+AI “Start Ups”
+採用非標準協定
+缺少資安功能
+多租戶架構不完善
+堅實可靠的企業級架構
+內建AI 智慧防勒索機制
+無縫接軌的原生雲端整合
+解耦式架構
+整合式AI 數據管線
+智慧化數據服務
+
+===== PAGE 26 =====
+26
+空間
+推論
+Inference
+訓練, 優化
+Training & tuning
+數據清洗, 標準化
+Data prep
+收集整合數據
+Data aggregation
+效能
+全生命週期資料管理：以最優成本實現最高AI 效益
+SnapMirror
+SnapMirror
+NetApp AI Data Engine
+PQC
+
+===== PAGE 27 =====
+THANK YOU

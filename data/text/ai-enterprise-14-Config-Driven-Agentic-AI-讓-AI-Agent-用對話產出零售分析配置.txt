@@ -1,0 +1,519 @@
+
+===== PAGE 1 =====
+Config-Driven Agentic AI：讓 AI 
+Agent 用對話產出零售分析配置
+零售分析系統的開發經驗分享
+簡報連結
+追客 Fredrick, Tagtoo
+AI Enterprise Summit 2026
+
+===== PAGE 2 =====
+簡報連結
+
+===== PAGE 3 =====
+關於我
+Fredrick｜Data / AI Engineer, Tagtoo
+職責
+零售分析流程自動化 tagtoo-
+retail-reporter
+電商分析報告（半自動化）
+使用者貼標
+背景
+Data Engineering
+Data Analysis
+Machine Learing
+近期關注
+設計穩定運行，並且能夠自我進化
+的 Agentic workflow
+建立個人知識系統，讓工作、研
+究、跟 Agent 的對話能累積成可
+查詢的知識
+
+===== PAGE 4 =====
+關於塔圖
+Tagtoo 長期透過數據為客戶創造價值。廣告部門為客戶制定行銷計劃與優化廣告成效，而數據部
+門將各種資料來源 電商、媒體、零售 創造出價值，並加以變現。
+累積 15 年廣告技術，坐擁亞洲最大電商資料庫
+東南亞地區領導品牌，在馬來西亞、印尼均設有辦公
+室
+專注於精準廣告投放技術，以巨量資料分析消費行為
+全方位導向跨螢幕、跨平台、客製化網路廣告
+持續引進新技術帶領客戶走在趨勢前端
+領先業界 OMO 技術，整合線下業績，精準計算廣告效
+益
+
+===== PAGE 5 =====
+Agenda
+從 Workflow Agent 到 Config Compiler
+1
+零售分析的挑戰
+天秤的兩端：客製化 vs 規模化
+2
+AI Agent 初探與困境
+我們曾嘗試讓 Agent 驅動完整流程，但很快遇到
+慢、貴、不穩的問題
+3
+轉向 Config-Driven 架構
+Agent 不再直接執行一切，而是產生分析合約
+4
+Enterprise Agentic AI
+透過三道防線讓 AI workflow 更穩定
+
+===== PAGE 6 =====
+我們的目標
+業務需求
++
+Agents
+
+===== PAGE 7 =====
+零售分析報告
+
+===== PAGE 8 =====
+零售分析的挑戰
+天秤的兩端：客製化 vs 規模化
+
+===== PAGE 9 =====
+零售分析需求長什麼樣子？
+以銷售分析為例
+鮮乳坊想要知道自己 整體品牌、鮮乳、優格、保久乳 三個 產品線 在四五月份的銷售狀況，並跟各自市場、競品比較。
+鮮乳要根據 容量 拆分成小中大來跟競品比較。
+保久乳要拆分成 原味 和 調味 跟競品比較。
+
+===== PAGE 10 =====
+分析單位 & 邊界
+分析需求是一個比較問題：你想分析什麼樣的單位？跟誰比？
+自家產品：品牌 / 產品線 / 細項規格
+鮮乳坊
+鮮乳
+家庭號鮮乳 
+比較對象：市場 / 競品
+乳製品市場 / 萬丹
+小農鮮乳市場 / 初鹿鮮乳
+家庭號鮮乳市場 / 林鳳營家庭號鮮乳
+業務邏輯 = 分析單位 + 邊界
+定義清楚這兩者，報告才能回答對的問題，所以需要 客製化
+
+===== PAGE 11 =====
+分析結果長什麼樣子？
+period_
+start
+period_
+end
+entity
+revenu
+e
+user_co
+unt
+transac
+tion_co
+unt
+aov
+purcha
+se_freq
+uency
+promoti
+on_pct
+2026-
+04-01
+2026-
+04-30
+鮮乳 中
+容量
+388771
+54
+197734
+367124
+88.62
+1.545
+0.1525
+2026-
+04-01
+2026-
+04-30
+鮮乳 大
+容量
+829409
+39
+212429
+338850
+220.13
+1.74
+0.0933
+2026-
+04-01
+2026-
+04-30
+鮮乳 小
+容量
+119496
+8
+20273
+29218
+35.87
+1.545
+0.1086
+2026-
+05-01
+2026-
+05-31
+鮮乳 中
+容量
+325444
+40
+226656
+461346
+107.0
+1.622
+0.1615
+2026-
+05-01
+2026-
+05-31
+鮮乳 大
+容量
+701807
+38
+210020
+336324
+187.12
+1.976
+0.1029
+2026-
+05-01
+2026-
+05-31
+鮮乳 小
+容量
+125684
+4
+26739
+34513
+43.87
+1.351
+0.1145
+
+===== PAGE 12 =====
+過去怎麼做？為何需要 Agent？
+每個客戶的業務邏輯不同，但程式碼無法接受自然語言作為輸入，因此需要一個 轉換步驟
+業務邏輯（自然語言）
+模糊、主觀的分析需求，例如「比較我們跟主要競
+品的銷售狀況」
+人工轉換
+將業務邏輯解析為 分析單位 與 邊界，生成結構化的
+設定檔
+可被腳本執行的設定檔
+程式碼可直接讀取 YAML / JSON 並執行分析
+前提是業務想分析的單位和邊界，需要能夠透過 資料庫欄位 篩選出來。
+
+===== PAGE 13 =====
+AI Agent 初探與困境
+Agent 作為調度者
+
+===== PAGE 14 =====
+Agent 作為調度者
+我們把分析流程中會需要使用到的腳本先建好，讓 Agent 來銜接每個步驟
+01
+使用者需求
+定義目標與範圍
+02
+工作流程與計畫
+根據 template 產出規劃檔
+workflow.yaml
+03
+執行計劃
+探索、實際查詢、資料轉換、產出交付物
+（包含洞察）
+早期的設計裡，workflow.yaml 像一份給 Agent 看的流程說明書 ← SKILL.md。
+它可以寫步驟、依賴、工具、輸入輸出，也可以包含自然語言。
+Agent 本身就是調度者，負責理解現在做到哪一步、下一步要跑什麼、要怎麼填參數。
+Reference: https://github.com/shopify/roast
+
+===== PAGE 15 =====
+V1: workflow.yaml 架構
+2025-12 以前
+V2: Config-Driven 架構圖
+
+===== PAGE 16 =====
+workflow.yaml 的優點與代價
+✅ 優點
+調整流程容易
+快速修改 YAML 即改變行為
+適合探索新流程
+適合測試新分析項目與實驗性工作
+可讀性高
+像 pseudo-code
+⚠️ 代價
+執行速度慢
+每次執行皆須重新解析與推理流程步驟
+token 成本高
+工具的 input & output 全部計為 token 用量
+上下文腐敗
+穩定性差（信任問題）
+
+===== PAGE 17 =====
+轉折點：固定流程不需要 Agent 反覆協調
+deterministic vs non-deterministic
+當每種分析項目都出現固定模式
+SQL 生成 & BigQuery
+從資料庫生成並查詢所需數
+據。
+預處理
+清理和準備數據以進行分析。
+指標計算
+根據業務需求計算指標。
+視覺化 & 交付
+將結果並交付給業務。
+當流程固定時，就是轉向 script 的時機
+
+===== PAGE 18 =====
+轉向 Config-Driven 架構
+Agent 不再直接執行一切，而是產生 分析合約。
+
+===== PAGE 19 =====
+V2: Config-Driven 架構圖
+2026 以後
+V1: workflow.yaml 架構
+
+===== PAGE 20 =====
+減少不確定性
+
+===== PAGE 21 =====
+分析合約 = 可被程式碼讀取的業務邏輯
+業務邏輯 = 分析單位 Entity + 邊界 Filter
+project.yaml
+├── 客戶與專案
+├── 時間範圍
+├── analysis_type：P0 / P1 / P3
+├── Entities：品牌 / 商品線 / 競品 / 市
+場基準
+├── Filters：item_id prefix、商品名
+稱 pattern、排除條件
+├── Market baseline：市佔率分母
+└── visualization /output settings
+分析單位 Entities 範例
+鮮乳坊鮮乳
+- entity_id: bettermilk_fresh_milk
+  name: 鮮乳坊鮮乳
+  display_name: "鮮乳坊"
+  filter_patterns:
+    carrefour_filter: |
+      item.item_name LIKE '%鮮乳坊%'
+      AND item.item_id LIKE '15010%'
+鮮乳市場 - 小容量（<900ml）
+  - entity_id: "fresh_milk_small_vol"
+    name: "鮮乳 小容量 (<900ml)"
+    name_en: "Fresh Milk - Small Volume (<900ml)"
+    display_name: "鮮乳 小容量"
+    status: "active"
+    description: "鮮乳市場 200ml、228ml、229ml、
+290ml、440ml 等小包裝品項"
+    skip_market_share: true
+    filter_patterns:
+      carrefour_filter: |
+        item.item_id LIKE '15010%'
+        AND (
+          item.item_name LIKE '%200ml%'
+          OR item.item_name LIKE '%200ML%'
+          OR item.item_name LIKE '%228ml%'
+          OR item.item_name LIKE '%229ml%'
+          OR item.item_name LIKE '%230ml%'
+          OR item.item_name LIKE '%290ml%'
+          OR item.item_name LIKE '%440ml%'
+        )
+
+===== PAGE 22 =====
+分析合約怎麼產出來的？
+1
+基本資訊
+客戶名稱、專案名稱
+2
+時間範圍
+分析時間範圍、時間顆粒度
+3
+探索資料庫
+到資料庫探索分析單位和邊界是否
+能夠被篩選出來
+4
+設計分析單位
+引導使用者設定好分析單位、確認
+市場邊界
+5
+視覺化分組
+決定哪些分析單位要呈現在同一張
+圖表中
+6
+其他配置
+程式碼運行的參數配置
+storage.googleapis.com
+Project YAML Workflow Explorer
+
+===== PAGE 23 =====
+Demo
+分析合約 → pipeline 腳本→ 分析結果
+DEMO
+
+===== PAGE 24 =====
+V1 & V2 的比較
+V1
+workflow.yaml
+成本
+高
+速度
+慢
+穩定性
+高
+調整流程難易度
+容易 ✅
+V2
+分析合約 + pipeline 腳本
+成本
+低 ✅
+速度
+快 ✅
+穩定性
+低 ✅
+調整流程難易度
+難
+
+===== PAGE 25 =====
+現行能力：三種分析執行路徑
+不是所有需求都一次產品化：用三種路徑處理不同成熟度
+穩定性高
+L1: 高頻、穩定、可模板化
+Pipeline Script
+腳本執行分析
+穩定性中
+L2: 中頻、半結構化
+Analysis Skills
+Agent 看使用說明書執行分析
+穩定性低
+L3: 低頻、高客製
+Custom SQL
+Agent 根據需求自由發揮
+從左到右的需求頻率和穩定性：高 → 低
+
+===== PAGE 26 =====
+Enterprise Agentic AI
+透過三道防線讓 AI workflow 更穩定
+
+===== PAGE 27 =====
+三道防線
+
+===== PAGE 28 =====
+第一道防線：分類業務需求
+requirements-classifier skill
+回顧業務需求
+鮮乳坊想要知道自己 品牌、
+鮮乳、優格、保久乳 三個 
+產品線 在四五月份的銷售狀
+況，並跟鮮乳市場、競品比
+較。
+鮮乳要根據 容量 拆分成小
+中大來跟競品比較。
+保久乳拆分成 原味 和 調味 
+跟競品比較。
+需求分類報告
+完整報告
+品類
+需求摘
+要
+分類
+執行路
+徑
+前置步
+驟
+複雜度
+鮮乳
+品類容
+量比較
+（小
+<900 
+中900-
+1000 大
+≥1800）
+：銷售
+量
+L1:P0
+p0_sale
+s_analy
+sis
+確認本
+期 
+fresh_
+milk_s
+mall/m
+edium/l
+arge_vo
+l entity 
+filter
+Low
+三道防線
+
+===== PAGE 29 =====
+第二道防線：驗證分析合約
+合法性
+透過驗證腳本驗證分析合約的合法
+性，是否和 pipeline 腳本相容
+完整性
+透過 checklist.md 檢查 generate-
+project-yaml skill 是否每個步驟都
+有產出交付物
+pipeline dry-run
+檢查分析合約中的分析日期範圍，
+資料庫中是否有完全覆蓋
+預覽查詢資料庫的成本
+三道防線
+
+===== PAGE 30 =====
+第三道防線：驗證分析結果
+requirements-verification skill
+業務需求
+鮮乳坊想要知道自己 品
+牌、鮮乳、優格、保久乳 
+三個 產品線 在四五月份的
+銷售狀況，並跟鮮乳市
+場、競品比較。
+鮮乳要根據 容量 拆分成小
+中大來跟競品比較。
+保久乳拆分成 原味 和 調味 
+跟競品比較。
+需求覆蓋驗證報告
+完整報告
+#3 鮮乳 品類總體容量比較（小<900 中900-1000 大≥1800）
+驗證面向
+覆蓋狀態
+對應資料
+指標覆蓋
+✅
+P0 sales_monthly: 
+revenue + upt 可推
+算銷量
+時間粒度
+✅
+分月檔案
+維度覆蓋
+✅
+分析單位: 鮮乳 小容
+量 / 中容量 / 大容量
+三道防線
+
+===== PAGE 31 =====
+Takeaways
+透過 AI 把業務邏輯設定化，讓 AI 和自動化流程真正穩定地銜接起來。
+
+===== PAGE 32 =====
+Tagtoo Agency Harness
+reurl.cc
+GitHub - Tagtoo/tagtoo-agency-harness: The o…
+The open-source data-standardization &amp; context
+layer for digital advertising agencies adopting AI —…
+reurl.cc
+Tagtoo Agency Harness｜數位廣告代理商的 AI 工…
+Tagtoo 開源的「資料標準化與情境層」：統一資料收集、清
+洗成 AI 可用格式、標準化產出，讓行銷團隊與 AI 代理人…
+
+===== PAGE 33 =====
+THANK YOU
+Threads: @vibecodingfred • Threads, Say more
+Linkedin: https://www.linkedin.com/in/fredrick-hong-0712951b0
+Website: https://fredrickslab.com/

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>When Not to Vibe 從 Vibe Coding 到 Spec-driven AI Engineering - Summit 2026 議程摘要</title>
+<meta name="description" content="AI Enterprise Summit 2026 與 Cloud &amp; Edge Summit 2026 議程摘要與詳細內容整理">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<header class="site-header detail-header">
+  <div class="container">
+    <a class="back-link" href="../index.html">← 回議程總覽</a>
+    <span class="badge" style="--badge-color:#0f9d8e">Cloud &amp; Edge Summit 2026 · #13</span>
+    <h1>When Not to Vibe 從 Vibe Coding 到 Spec-driven AI Engineering</h1>
+    <p class="detail-speaker">🎤 Che-Chia Chang　·　SRE @ Maicoin / Microsoft MVP</p>
+    <div class="tags"><span class="tag">Spec-driven Development</span><span class="tag">Spec-kit</span><span class="tag">Chat-driven Coding</span><span class="tag">Context Drift</span><span class="tag">AI 工程化</span></div>
+  </div>
+</header>
+<main class="container detail-main">
+  <section class="detail-section summary-box">
+    <h2>摘要</h2>
+    <p>這場演講探討 Chat-driven coding（俗稱 Vibe Coding）的適用邊界，說明多輪對話容易造成 context drift 與長 context 效能下降等問題，進而引出 Spec-driven Development（SDD）的核心概念。講者以 GitHub 的 Spec-kit 工具為例，說明如何將模糊需求轉化為可執行、可驗收的規格，並分享實際導入跨平台帳號與權限稽核情境的落地流程與遇到的痛點。</p>
+  </section>
+  <section class="detail-section">
+    <h2>重點整理</h2>
+    <ul class="highlights"><li>長 context 對話容易造成模型效能下降與 context drift，模型較容易記得最前面與最後面的訊息（Lost in the Middle）</li><li>SDD 核心主張：Spec 是 source of truth，且優先於 Implementation，回饋（Feedback）又優先於 Spec</li><li>SDD 導入第一步應挑選高人工成本、流程固定、低風險、被依賴性低的題目，例如跨平台帳號與權限稽核</li><li>Spec-kit 提供 /speckit.specify、/speckit.plan、/speckit.tasks、/speckit.analyze、/speckit.implement 完整流程指令</li><li>Spec-kit 也有代價：產生規格需消耗額外 token（Spec-kit tax），且不適合舊專案逆向產生規格或需求變動頻繁的任務</li></ul>
+  </section>
+  
+  <section class="detail-section"><h2>Chat-driven coding 的價值與挑戰</h2><p>講者肯定 Chat-driven coding 在快速探索、驗證想法與 PoC 等短週期任務中的價值，但也指出其挑戰：輸出不穩定、團隊協作難以追蹤，且面對複雜需求與多輪對話容易產生 long context，導致模型偏移與 context drift。演講引用研究說明模型的理論 context window 與實際可用的 effective context 存在落差，最前面與最後面的輸入模型較容易記得（Lost in the Middle / Positional Biases）。</p></section>
+<section class="detail-section"><h2>什麼是 Spec-driven Development</h2><p>SDD 的核心主張是 Spec 優先於 Implementation、且 Feedback 優先於 Spec，目標是把模糊需求轉化為可執行規格。講者強調 Spec 需要具備明確的驗收標準，例如 SOP/Runbook 步驟完成率、CI/CD Pipeline 成功率、Lead Time、雲端成本或 SLO 達成率，才能讓 AI Agent 穩定交付成果，而不是流於憑感覺判斷。</p></section>
+<section class="detail-section"><h2>SDD 導入第一步與情境分享</h2><p>演講建議挑選高人工成本、流程固定（SOP/Runbook）、低風險、被依賴性低的題目作為第一個切換對象，並以跨平台（AWS、Azure、GCP、GitHub、Jenkins 等）帳號與權限稽核為例：需求清楚、重複性高、容易遺漏，適合規格化。實際導入流程分為挑題目、規格化、拆任務、實作四步驟，讓每個平台可拆成獨立子任務並平行實作，由 subagent 分工、主流程整合。</p></section>
+<section class="detail-section"><h2>Spec-kit 工具與核心流程</h2><p>Spec-kit 是 GitHub 推出的 SDD toolkit，講者強調它不是 prompt 技巧，而是可重複的工程流程，將需求、驗收與交付串成同一條線。核心流程包含 /speckit.specify（列出需求與檢查條件）、/speckit.plan（修改先後順序）、/speckit.tasks（拆成可分配給 subagent 的獨立子任務）、/speckit.analyze（檢查任務依賴性）與 /speckit.implement（實際執行）。</p></section>
+<section class="detail-section"><h2>Spec-kit 的痛點與適用邊界</h2><p>導入 Spec-kit 會讓寫程式的痛苦提前到寫需求階段（工作習慣改變），且產生規格會消耗額外 token（Spec-kit tax），可透過用較貴的模型寫 Spec、較便宜的模型做實作來平衡成本。此外 Spec-kit 不適合舊專案（無法從舊程式碼逆向產生規格）與需求變動頻繁的任務，因為改需求會牽動 Spec、Plan、Task 與 agent 全部重跑。講者總結：Chat-driven 適合探索但不適合所有正式交付，高風險、可驗收、多人協作場景應改用 SDD，並搭配 Eval 與 Loop 才能穩定落地。</p></section>
+  <nav class="talk-nav">
+    <a class="nav-link" href="cloud-edge-12-當-AI-遇見數據-構建面向智能體的現代數據底座.html">← 當 AI 遇見數據：構建面向智能體的現代數據底座</a>
+    <a class="nav-link nav-next" href="cloud-edge-14-金融業透過-AI-打造新顧客服務體驗-AI-房貸顧問.html">金融業透過 AI 打造新顧客服務體驗-AI 房貸顧問 →</a>
+  </nav>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <p>本頁內容為 AI 輔助整理之摘要，原始檔案：13-When Not to Vibe 從 Vibe Coding 到 Spec-driven AI Engineering.md。正確內容請以原始投影片為準。</p>
+  </div>
+</footer>
+</body>
+</html>

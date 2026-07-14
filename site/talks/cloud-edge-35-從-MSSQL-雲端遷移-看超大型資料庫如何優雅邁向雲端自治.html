@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>從 MSSQL 雲端遷移，看超大型資料庫如何優雅邁向雲端自治 - Summit 2026 議程摘要</title>
+<meta name="description" content="AI Enterprise Summit 2026 與 Cloud &amp; Edge Summit 2026 議程摘要與詳細內容整理">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<header class="site-header detail-header">
+  <div class="container">
+    <a class="back-link" href="../index.html">← 回議程總覽</a>
+    <span class="badge" style="--badge-color:#0f9d8e">Cloud &amp; Edge Summit 2026 · #35</span>
+    <h1>從 MSSQL 雲端遷移，看超大型資料庫如何優雅邁向雲端自治</h1>
+    <p class="detail-speaker">🎤 Jerry HSU　·　1630 TrackD，華碩電腦資深基礎架構主管</p>
+    <div class="tags"><span class="tag">MSSQL</span><span class="tag">雲端遷移</span><span class="tag">FinOps</span><span class="tag">Azure SQL</span><span class="tag">資料庫調校</span></div>
+  </div>
+</header>
+<main class="container detail-main">
+  <section class="detail-section summary-box">
+    <h2>摘要</h2>
+    <p>講者以華碩電腦大型基礎架構經驗，說明超大型資料庫（VLDB）從地端邁向雲端自治的架構決策，比較 Rehost、Replatform、Refactor 三種遷移策略，並深入介紹 Distributed AG、Managed Instance Link、Azure DMS 等近乎零停機的遷移方案。演講核心主張效能調校（Tuning）才是雲端資料庫 FinOps 最重要的底層邏輯，唯有先調校降低資源用量，再簽署 Reserved Instance，才能真正避免浪費而非「便宜地浪費」。</p>
+  </section>
+  <section class="detail-section">
+    <h2>重點整理</h2>
+    <ul class="highlights"><li>三種主流雲遷移策略：Rehost（原封不動搬遷）、Replatform（部分重構）、Refactor（雲原生重新設計），主流做法是 Replatform first, Refactor later</li><li>地端常見架構（Always On AG、Failover Cluster、Log Shipping）對應雲端 SQL VM、Azure SQL MI、Azure SQL Database、Hyperscale 等選項</li><li>Managed Instance Link 透過底層 Distributed Availability Groups 持續同步交易記錄，可達近乎零停機的線上遷移，並於同步期間提供唯讀資料庫供驗證</li><li>案例顯示：先調校將 CPU 使用率從 48% 降到 15%，SQL MI 規格從 32 vCore 降為 16 vCore，再簽 3 年 RI，總成本較「直接對原規格簽約」再省約每月 1,970 美元</li><li>關鍵結論：RI 只能讓你「便宜地浪費」，唯有效能調校（Tuning）才能讓你「不再浪費」，這是 FinOps 最容易被低估的成本槓桿</li></ul>
+  </section>
+  <section class="detail-section">
+  <h2>重點圖片／架構圖</h2>
+  <div class="diagram-grid">
+    <figure class="diagram">
+  <img src="../assets/images/cloud-edge-35-從-MSSQL-雲端遷移-看超大型資料庫如何優雅邁向雲端自治/p2.jpg" loading="lazy" alt="講者 Jerry HSU 的背景與專長介紹，涵蓋 SQL Server 效能調校、混合雲方案與設計思考教練經驗">
+  <figcaption>講者 Jerry HSU 的背景與專長介紹，涵蓋 SQL Server 效能調校、混合雲方案與設計思考教練經驗</figcaption>
+</figure><figure class="diagram">
+  <img src="../assets/images/cloud-edge-35-從-MSSQL-雲端遷移-看超大型資料庫如何優雅邁向雲端自治/p6.jpg" loading="lazy" alt="三種主流雲遷移策略示意：Rehost、Replatform、Refactor">
+  <figcaption>三種主流雲遷移策略示意：Rehost、Replatform、Refactor</figcaption>
+</figure><figure class="diagram">
+  <img src="../assets/images/cloud-edge-35-從-MSSQL-雲端遷移-看超大型資料庫如何優雅邁向雲端自治/p9.jpg" loading="lazy" alt="地端常見的 SQL Server Always On Availability Groups 架構圖">
+  <figcaption>地端常見的 SQL Server Always On Availability Groups 架構圖</figcaption>
+</figure><figure class="diagram">
+  <img src="../assets/images/cloud-edge-35-從-MSSQL-雲端遷移-看超大型資料庫如何優雅邁向雲端自治/p12.jpg" loading="lazy" alt="雲端 SQL 架構選項對照：SQL VM、Azure SQL MI、Azure SQL Database、Hyperscale 的適用情境">
+  <figcaption>雲端 SQL 架構選項對照：SQL VM、Azure SQL MI、Azure SQL Database、Hyperscale 的適用情境</figcaption>
+</figure>
+  </div>
+</section>
+  <section class="detail-section"><h2>大型資料庫雲遷移的架構決策</h2><p>講者引用 Gartner 預測「90% 組織將在 2027 年前採用混合雲」為背景，說明企業遷移雲端主要有三種策略：Rehost（Lift-and-Shift，應用程式環境原封不動移至 IaaS VM）、Replatform（Lift, Tinker, Shift，核心架構不變但部分重構為 PaaS 服務）、Refactor（以雲原生觀點重新設計架構），業界主流做法是先 Replatform 再視需求 Refactor。關聯式資料庫通常是雲端支出大宗，涉及授權費用、vCore/vRAM、Premium SSD IOPS 與 HADR/多副本成本，因此資料庫遷移策略的選擇格外重要。</p></section>
+<section class="detail-section"><h2>從地端到雲端的 SQL 架構對應</h2><p>地端常見的 SQL Server 架構包括 Always On Availability Groups、Failover Cluster 與 Log Shipping，對應到雲端則有四種選項：SQL VM（完整控制權、第三方相容、適合直接搬移）、Azure SQL MI（SQL Server 最大相容，支援跨庫與 SQL Agent）、Azure SQL Database（全自動維護、彈性擴展、單一資料庫）、以及 Azure SQL Hyperscale（適合超大資料量、秒級備份與極速擴展）。講者強調「遷移的重點不在遷去哪裡，而在如何遷移」——需要完整、快速、無縫且具備回滾能力。</p></section>
+<section class="detail-section"><h2>近乎零停機的遷移方案：Managed Instance Link</h2><p>演講詳細介紹多種遷移路徑，包括即時或短停機的 Distributed AG、Managed Instance Link、Azure DMS Online 模式與 Transactional Replication，以及離線批次的 Native Backup to URL、Azure DMS Offline、Log Replay Service 與 BACPAC。其中 Managed Instance Link 底層採用 SQL Server Always On 分散式可用性群組，持續將交易記錄同步到 SQL Managed Instance，同步期間 MI 資料庫維持唯讀狀態可供驗證測試，切換僅需透過 Failover 完成，是停機時間最短的線上遷移路徑。此方案支援 SQL Server 2016 至 2025，其中 2022/2025 版本支援雙向遷移（可來回切換），但需注意一個 Link 僅同步單一資料庫，且不會搬移 instance 層級物件（如登入、SQL Agent Job）。</p></section>
+<section class="detail-section"><h2>雲端資料庫的過度配置與 FinOps 挑戰</h2><p>報告指出近 32% 雲端預算因過度配置（Overprovisioning）而浪費，根源在於 DBA 的 KPI 是「不能慢、不能掛」而非成本責任，導致地端規格思維被直接 1:1 搬上雲、以尖峰用量做冗餘規劃、資源耦合與缺乏彈性等問題。講者提出兩種成本槓桿：財務槓桿（RI／Reserved Capacity／Hybrid Benefit，在既有規格上打折但用量不變）與效能槓桿（透過索引、查詢優化、減少 I/O 直接降低 CPU/記憶體需求，從底層降低 SKU 成本），並強調效能調校是容易被低估、卻最根本的成本槓桿。</p></section>
+<section class="detail-section"><h2>案例實證：先調校再簽約的成本效益</h2><p>講者分享實際案例：資料庫平均 CPU 使用率從 48% 調校降至 15% 後，SQL MI 規格得以從 32 vCore 降為 16 vCore（每月成本從約 5,900 美元降至約 2,950 美元，降幅 50%），再對 16 vCore 簽署 3 年 RI（每月約 1,970 美元，再降 33%）。相較之下，若跳過調校直接對原本 32 vCore 簽 3 年 RI，每月仍需約 3,940 美元，顯示「先調校」這一步就能再省約每月 1,970 美元，且這是 RI 折扣永遠省不到的部分。演講也介紹 Automatic Tuning 功能（FORCE_LAST_GOOD_PLAN、CREATE INDEX、DROP INDEX）及其限制與風險，指出核心調校仍需仰賴 DBA 判斷。最終結論是 Tune → Right-size → Reserve 的順序策略：先優化效能降低資源基線，再合理評估規格，最後才鎖定長期折扣，讓每一分雲端支出發揮最大價值。</p></section>
+  <nav class="talk-nav">
+    <a class="nav-link" href="cloud-edge-34-從應用實例看-AI-如何賦能台灣旅宿業.html">← 從應用實例看 AI 如何賦能台灣旅宿業</a>
+    <a class="nav-link nav-next" href="cloud-edge-36-金融業生成式-AI-平台工程-以雲端原生架構打造可擴展的-Agentic-AI-中樞.html">金融業生成式 AI 平台工程：以雲端原生架構打造可擴展的 Agentic AI 中樞 →</a>
+  </nav>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <p>本頁內容為 AI 輔助整理之摘要，原始檔案：35-從 MSSQL 雲端遷移，看超大型資料庫如何優雅邁向雲端自治.pdf。正確內容請以原始投影片為準。</p>
+  </div>
+</footer>
+</body>
+</html>

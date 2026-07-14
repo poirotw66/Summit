@@ -1,0 +1,245 @@
+
+===== PAGE 1 =====
+[LAB] FDA 文件提取智能體：從正則到自癒AI 的
+演進
+
+===== PAGE 2 =====
+從一個資料工程的踩坑經驗開始
+個人與背景資訊
+●
+林志忠Data Service Manager & GenAI Strategist
+●
+世博科技顧問
+●
+智慧財產× 法規情報
+●
+政府公開資料→ 可訂閱的商業情報
+●
+今天：一個系統失效→ 一套方法論
+你的公司，現在是否也面臨這三個問題？
+PDF 格式一改
+提取程式就壞掉
+三層式抽取+ 幾何
+座標定位，格式不再是痛點
+需要抽取新欄位
+要從頭重寫一套規則
+自癒Agent 代理
+生成並驗證提取程式
+AI 直接給答案
+不知道答案能不能信
+讓AI 寫出可跑、可測
+可版控、自行驗証的程式
+
+===== PAGE 3 =====
+我們為什麼要處理17 萬份
+FDA 文件？
+一個Alert，我們重新審視整個架構
+• FDA 510(k)：美國醫材進市場的許可證
+• 30 年× 17 萬份公開，全是PDF
+• 提取失效= 情報失真= 訂閱服務信譽歸零
+• 工程師的挑戰：格式一改，程式要怎麼不崩？
+• 實際產出：https://iximedtech.com/
+從原始PDF 到訂閱營收的價值鏈
+
+===== PAGE 4 =====
+某一天：一次系統失效的經驗
+一個空格，三天工程工時
+• 提取率：95% → 23%
+• 原因：K-number 前面多了一個空格
+• 代價：三天工程工時
+• 反思：規則永遠補不完
+
+===== PAGE 5 =====
+增加外掛：三層架構+ 自癒Agent
+IFU 走管線，K-number 走自癒Agent，兩條路
+• IFU 適應症：Tier 1 → Tier 2 → Tier 3 Fallback
+• K-number：自癒Agent →AI 自動產出程式碼
+• 兩條路完全獨立，服務不同目的
+• 換文件類型× 換目標欄位，骨架不動
+兩條提取路徑，服務不同目的
+
+===== PAGE 6 =====
+轉捩點：「人寫規則」到「AI 寫規則」
+從「補了三十條規則」到「讓AI 自己寫程式」
+• 第一階段：IFU 適應症→ run_rule_processor_xx.py
+• 遭遇：數十條定錨規則，每條都是一步一腳印踩出來
+• 新需求：K-number → 另一套完全不同的邏輯
+• 第二階段：auto_healing_extractor.py →AI 自己寫程式
+從原始PDF 到訂閱營收的價值鏈
+
+===== PAGE 7 =====
+讓AI 寫程式來提取資料
+一個觀念的轉換，解鎖了4 萬份文件的處理能力
+• 4萬+ 份FDA 文件，已完成結構化提取
+• 舊思維：AI 直接回答→ 幻覺、不可驗證
+• 新思維：AI 寫程式→ 可跑、可測試、可重用
+• 腳本是持久的工程資產，不是一次性的AI 回答
+
+===== PAGE 8 =====
+LAB 實作前環境準備
+所需時間: 10 mins
+
+===== PAGE 9 =====
+環境準備
+• GitHub ⇒https://github.com/kahnlin/iTHome_Lab
+• VS Code or Antigravity IDE
+• LM Studio (Model:qwen2.5-coder-14b-instruct-mlx)
+• Python 3.10+（建議3.14）— 核心執行環境
+
+===== PAGE 10 =====
+Step 1：pip install 安裝所需套件
+LAB 需要5 個套件，一行指令全裝好
+• pdfplumber：讀取PDF 文字、表格、座標（Lab 
+1+2 核心）
+• pandas：將提取結果輸出為CSV
+• langchain-openai：連接LM Studio 或GPT-4o 的
+LLM 介面（自癒Agent）
+• langgraph：建構Coder / Executor / Critic 三節點
+Agent 圖（自癒Agent）
+
+===== PAGE 11 =====
+Step 2：確認工作目錄結構
+三支腳本+ input_pdfs 資料夾= 今天LAB 的全部材料
+• input_pdfs/ 資料夾：放入3-5 份FDA 510(k) PDF 樣本
+（已放上github）
+• lab_01_regex.py：任務一的腳本
+• lab_02_geometric.py：任務二的腳本
+• auto_healing_extractor.py：LangGraph Agent
+
+===== PAGE 12 =====
+Phase 1 實作
+所需時間: 20 mins (2個任務）
+
+===== PAGE 13 =====
+Phase 1 實作目的：感受Regex 的極限
+先讓傳統工具告訴你問題邊界在哪
+• 任務一：執行lab_01_regex.py → 看初期能抓到什麼、漏掉什麼（輸出lab_01_regex.csv）
+• 任務二：執行lab_02_geometric.py → 看進化幾何空間能補回多少（輸出lab_02_geometric.csv）
+• 對比兩份CSV：N/A 的消失率
+• 完成Phase 1，你會真正理解：為什麼我們之後需要讓AI 寫PDF 提取程式碼
+
+===== PAGE 14 =====
+代碼解說：lab_01_regex.py（精準Regex）
+Stage 1 的四個Pattern 假設PDF 文字結構永遠規則
+• K_NUMBER_PATTERN 用[Kk]\d{6} 防止誤匹配，但K 和數字之間不能有空格
+• precise_patterns 對應4 種FDA 標準格式（Predicate K number、510(k)...）
+• 任何一個Pattern 都假設PDF 裡有明確的關鍵字且位置固定——格式一亂就全部失效
+• 失敗時：靜默回傳([], [])，CSV 顯示N/A
+
+===== PAGE 15 =====
+實作任務(一)：體驗lab_01_regex.py（精準Regex）
+執行傳統Regex，觀察目標格式多樣性的執行結果
+• 目標：從PDF 中準確抓取K-Number (例：K123456)
+• 步驟1：開啟終端機
+• 步驟2：執行python lab_01_regex.py（輸出：lab_01_regex.csv）
+• 步驟3：觀察結果— 正常PDF 抓到K-Number；變種/複雜PDF 回傳N/A
+
+===== PAGE 16 =====
+預期結果：lab_01_regex.csv 長什麼樣？
+記下哪幾份PDF 顯示N/A 
+• 成功案例：文字結構標準的PDF → Predicate Devices 顯示K-Number（例：K254283）
+• 失敗案例：表格跑版/ 多欄/ OCR 錯誤的PDF → 顯示N/A
+• 關鍵觀察：同一份PDF，Predicate 抓到但Reference 是N/A？或兩個都N/A？
+→
+
+===== PAGE 17 =====
+實作任務(二)：lab_02_geometric.py
+不找文字，找空間座標——讓K-Number 無處可躲
+• 以Predicate 標題詞的Box 為錨點，向下150px、
+左右各80px 框出搜尋區域
+• extract_words() 把每個詞當作獨立Box 物件，
+不受文字提取順序影響
+• 搜尋框內符合K\d{6} 的詞就是K-Number——空
+間位置比文字結構穩定得多
+
+===== PAGE 18 =====
+對比兩份CSV，看多了什麼
+N/A 消失的數量= 幾何定位的貢獻，也是AI 需要自動生成這段代碼的理由
+• 對比欄位：lab_01_regex.csv vs lab_02_geometric.csv 的Predicate Devices
+• 如果lab_02_geometric.py 也找不到：可能是PDF 格式超出Box 150px 範圍，這就是LangGraph 
+Agent 的任務
+
+===== PAGE 19 =====
+Phase 2 實作
+所需時間: 50 mins (自癒Agent）
+
+===== PAGE 20 =====
+LangGraph Agent 是整個FDA 
+提取系統的核心大腦
+為什麼while loop 不夠，State 物件才是關鍵
+• while loop：每次重試，上次報錯消失
+• LangGraph State：error_trace 共享
+• 條件路由：Critic 通過→ END / 失敗
+→ 攜帶報錯回Coder
+• 自癒迴圈（方法論）× LangGraph（技術手段）
+迭代進化：每次失敗，系統變得更聰明一點
+
+===== PAGE 21 =====
+代碼解說：Coder Node 長什麼樣？
+error_message x Prompt →自癒出發點
+• 前4 次Local LM Studio → 連線失敗自動切GPT-4o
+• Fallback → 第5 次起GPT-4o Expert Mode
+•  Prompt 設計, instruction 把error_message + feedback 塞入（
+error_context 變數），讓AI 讀到診斷報告
+•  理解這個Prompt 是AI 的診療單——它讀了什麼錯誤，才能改什麼策略
+
+===== PAGE 22 =====
+代碼解說：Critic Node：誰說提取成功了？
+Critic 是確定性規則引擎，不是AI，這是整個架構最重要的設計決策
+• 核心原則：驗證絕對不能交給AI——AI 可能說「成功了」但結果是空的
+或格式錯誤
+• 三層驗證：①非空檢查→ ②K-Number 格式正則→ ③可選白名單比對
+• Critic 是系統的「誠實錨點」：不花任何Token，卻是整個迴圈能停下來
+的原因
+• Critic 回傳失敗時，error_message 被填入State，下一輪Coder 繼續改
+寫
+
+===== PAGE 23 =====
+實作任務：執行auto_healing_extractor.py
+AI 如何從錯誤中學習，自動演化提取策略
+• 執行指令：python auto_healing_extractor.py（在工作目錄的
+Terminal 執行）
+• 熱啟動機制：Agent 先試INITIAL_GOLDEN_CODE (v11)，成功
+就不用LLM 訓練
+• 需要訓練時：Coder→Executor→Critic 迴圈最多5 次，前4 次用
+LM Studio，第5 次GPT-4o
+• 訓練完成後：final_universal_extractor.py 自動更新（這就是AI 生
+成的提取代碼）
+
+===== PAGE 24 =====
+驗收：final_universal_extractor.py 
+AI 自癒的成果——它應該比你手寫的更全面
+• 確認final_universal_extractor.py 已更新
+• 差距就是AI 自動加上的新策略: 檢查全文中可能的K Number
+• 執行python final_universal_extractor.py → 輸出final_results.csv
+
+===== PAGE 25 =====
+對比最後二份CSV，看多了什麼
+N/A 消失的數量=  AI 自癒生成的貢獻
+• 對比欄位：lab_02_geometric.csv vs final_results.csv 的Predicate Devices
+
+===== PAGE 26 =====
+我們誠實面對的限制
+自癒不是萬能，設定停損點交還給人類
+• 5 次上限機制：如果AI 在兩個錯誤之間反覆橫跳，
+必須強制中斷
+• 人工審核：承認AI 有搞不定的極端案例，誠實交還
+給工程師
+• 不要讓系統假裝成功：這比拋出Exception 更加危險
+
+===== PAGE 27 =====
+把今天的架構帶進你的場景
+Agent 框架是通用型，只有業務知識需遷移
+• 不需要改動：整個LangGraph 三節點架構+ State 設計+ Conditional 
+Edge 邏輯
+• 需要改動（只有兩個地方）：coder 的任務說明+ critic 的驗證規則
+• 遷移步驟：換任務描述→ 換驗證規則→ 準備5-10 份新文件樣本→ 執
+行
+
+===== PAGE 28 =====
+謝謝您的聆聽! 
+請掃描下方連結
+• 核心：讓AI 寫程式，不是讓AI 給答案
+• AI 自癒生成程式
+medium.com/@kahnlin
+www.linkedin.com/in/kahnlin

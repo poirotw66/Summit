@@ -1,0 +1,67 @@
+
+===== PAGE 1 =====
+iThome 臺灣雲端大會
+
+===== PAGE 2 =====
+
+
+===== PAGE 3 =====
+
+
+===== PAGE 4 =====
+AI INFRA OPS
+從AI聊天室到AI Agent 的過程
+理想很夢幻但是現實卻很骨感原來AI也會搞破壞
+
+===== PAGE 5 =====
+AI INFRA OPS
+其實AI Agent 跟人一樣也需要被管理
+Model Context Protocol
+
+===== PAGE 6 =====
+AI INFRA OPS
+09
+有了AI Agent+MCP
+只是來了一個新同事
+想讓它發揮戰力還需要幾個過程
+
+===== PAGE 7 =====
+AI INFRA OPS
+第一步：知識盤點
+整理過去長期積累的維運經驗
+
+===== PAGE 8 =====
+AI INFRA OPS
+第二步：知識經驗轉成AI 看得懂的語言Skill 化
+把文件變成可執行邏輯，再把專家經驗變成可重複使用的能力。
+
+===== PAGE 9 =====
+AI INFRA OPS
+第三步：建立制度policy
+讓AI Agent不只是會做事還要知道邊界在哪裡
+
+===== PAGE 10 =====
+AI INFRA OPS
+實際場景：從告警到RCA
+監控告警分析、事件調查、證據蒐集與RCA 報告產出。
+
+===== PAGE 11 =====
+WHY AI INFRA OPS
+追AI，不是為了取代工程師
+-而是把經驗變成可複製、可重複使用、可被AI 執行的能力。
+
+===== PAGE 12 =====
+AI INFRA OPS
+從工具驅動轉變為知識驅動的維運模式
+AI Agent即將改變傳統IT Infra傳統維運模式
+
+===== PAGE 13 =====
+AI INFRA OPS
+對於未來維運工作的想像
+讓infra system自己學會怎麼呼吸
+
+===== PAGE 14 =====
+TAKEAWAYS
+把經驗轉換成組織能力。
+把工程師變成寫文章的作家
+Q&A

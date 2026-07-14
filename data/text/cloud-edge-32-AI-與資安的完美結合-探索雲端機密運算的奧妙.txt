@@ -1,0 +1,382 @@
+
+===== PAGE 1 =====
+AI與資安的完美結合-探索雲端機密運算的奧妙
+林家瑋(Ray Lin), CISO / CAIO, AWS Security Hero
+
+===== PAGE 2 =====
+林家瑋(Ray Lin), ray.lin@ifus.tw
+
+===== PAGE 3 =====
+資料加密做得很全面，百毒不侵？
+Copyright 林家瑋(Ray Lin) / iFUS System Consultants Ltd.
+3
+
+===== PAGE 4 =====
+資料狀態(Data State)
+• 資料三態
+• 靜態(Data at Rest)：資料躺在載體 > 也會被偷
+• 傳輸(Data in Transit)：資料移動路上 > 還被攔截
+• 使用(Data in Use)：資料載入使用 > 最常忽略
+Copyright 林家瑋(Ray Lin) / iFUS System Consultants Ltd.
+4
+靜態
+(Data at Rest)
+傳輸
+(Data in Transit)
+使用
+(Data in Use)
+
+===== PAGE 5 =====
+使用(Data in Use) - 安全風險
+• 載入使用 最常忽略
+• 資料一進記憶體就明文
+• OS管理者、雲端管理者「理論上看得到」
+• Debug / Crash Log洩漏
+• 安全風險
+• Memory Dump：Key、Token、PII、模型權重都在裡面，通常沒加密、權限控管鬆散
+• Rowhammer：一種對DRAM的攻擊方法
+• Side-channel(Cache Timing)：用「時間、耗電、快取行為」推測機密
+• 惡意Library / Injection
+Copyright 林家瑋(Ray Lin) / iFUS System Consultants Ltd.
+靜態
+(Data at Rest)
+傳輸
+(Data in Transit)
+使用
+(Data in Use)
+5
+
+===== PAGE 6 =====
+Rowhammer
+• Rowhammer：利用DRAM運行過程中產生的意外電荷洩漏效應，在極短時
+間內反覆存取同一記憶體列，就能讓它的隔壁造成位元翻轉(bit flip)，最快
+109秒取得系統控制權
+一張含有 文字
+,螢幕擷取畫面
+,黑與白
+,黑色 的圖片
+AI
+產生的內容可能不正確。
+Copyright 林家瑋(Ray Lin) / iFUS System Consultants Ltd.
+6
+
+===== PAGE 7 =====
+•
+機密運算(Confidential Computing)
+•
+保護「使用中資料」，補上傳統「靜態資料」與「傳輸資料」
+的缺口
+•
+資料一旦進入CPU/Memory進行處理，通常會變成明文
+•
+在硬體式、可證明的TEE(Trusted Execution Environment)
+內執行運算
+•
+處理高度敏感的資料類型，如PII、PHI、PFI及IP
+•
+適用於金融、醫療、AI模型訓練與區塊鏈錢包等領域
+7
+Copyright 林家瑋(Ray Lin) / iFUS System Consultants Ltd.
+什麼是機密運算
+
+===== PAGE 8 =====
+Copyright 林家瑋(Ray Lin) / iFUS System Consultants Ltd.
+8
+ 要防的對象
+Cloud Operator / 
+Host Admin
+雲端或主機層高權限
+操作人員
+Hypervisor /
+Host OS
+虛擬化層或主機層
+存取風險
+惡意管理流程
+Debug、Dump、
+Snapshot、維運工具
+濫用
+多方資料合作
+多方共同運算但不想
+互相揭露原始資料
+ 不保證防的對象
+應用程式本身的漏洞
+SQL Injection、RCE、
+邏輯錯誤等
+資料離開TEE後的濫用
+輸出結果若洩漏太多
+資訊，仍要做資料最
+小化與隱私設計
+Side-Channel攻擊
+可降低風險，但非完全消除
+
+===== PAGE 9 =====
+•
+AWS Nitro系統重新定義虛擬化架構，把管理與I/O處理功能從主機移到
+專用硬體設備，帶來更高效能、更安全的隔離環境，其核心如下：
+•
+Nitro Cards：包括一系列專用硬體卡片，像是VPC、EBS、Instance store、加密、
+安全監控等I/O功能，減輕主機負擔並提升效能
+•
+Nitro Security Chip：負責硬體層級包括安全啟動、Instance隔離，確保沒有人(包含
+AWS員工)能存取實體伺服器資料
+•
+NitroTPM：符合TPM 2.0規格，可在EC2 Instance提供硬體級別的TPM功能，用於
+金鑰處理(建立、儲存與使用)與完整性驗證等
+•
+Nitro Hypervisor：輕量級Hypervisor，只處理CPU和記憶體(效能近似裸機)
+9
+AWS Nitro System
+Copyright 林家瑋(Ray Lin) / iFUS System Consultants Ltd.
+AWS機密運算是從EC2底層架構開始設計的信任鏈
+AWS Nitro System
+
+===== PAGE 10 =====
+10
+AWS Nitro System
+Copyright 林家瑋(Ray Lin) / iFUS System Consultants Ltd.
+Before Nitro
+Source: STH
+
+===== PAGE 11 =====
+11
+AWS Nitro System
+Source: STH
+Copyright 林家瑋(Ray Lin) / iFUS System Consultants Ltd.
+AWS Nitro System
+
+===== PAGE 12 =====
+•
+AWS Nitro Enclaves是在EC2 Instance切出更小的信任邊界(隔離執行環境)
+•
+Enclaves是獨立的、強化的和高度受限的虛擬機器
+•
+Parent Instance僅能以Secure Local Socket連接Enclaves，其Process、
+Apps、Kernel或Users均無法存取Enclave內容
+•
+可整合
+•
+AWS KMS：加解密與金鑰生命週期管理
+•
+ACM(AWS Certificate Manager)：SSL/TLS憑證
+•
+CloudTrail：追蹤所有使用者活動和API行為
+12
+Copyright 林家瑋(Ray Lin) / iFUS System Consultants Ltd.
+AWS Nitro Enclaves
+
+===== PAGE 13 =====
+•
+沒有持久性儲存、互動式存取或外部網路連接、無法SSH進入Enclave
+•
+Enclave內的資料和應用程式無法被Parent Instance的處理程序或使用者
+(root或管理員)存取，只有授權的程式碼能在Enclaves執行
+•
+所以
+•
+秘密只在Enclave內短暫存在
+•
+就算Parent instance被拿到root，也讀不到Enclave記憶體
+•
+可以把“最敏感的那一段”抽出來放Enclave處理(金鑰/PII解密/簽章/推論）
+13
+AWS Nitro Enclaves
+Copyright 林家瑋(Ray Lin) / iFUS System Consultants Ltd.
+AWS Nitro Enclaves
+
+===== PAGE 14 =====
+AWS機密運算的四個基礎元件
+Copyright 林家瑋(Ray Lin) / iFUS System Consultants Ltd.
+14
+TEE(Trusted Execution Environment)
+把敏感運算關進硬體保護的隔離房間
+Measurement
+確認房間裡跑的是哪一份程式碼的指紋(衡量值)
+Attestation
+讓外部服務相信這個環境是真實且可信的
+Key Release
+只有通過證明的程式碼才能取得解密能力
+
+===== PAGE 15 =====
+流程：Attestation + KMS Key Release
+Copyright 林家瑋(Ray Lin) / iFUS System Consultants Ltd.
+15
+以公鑰回應
+KMS驗證
+產生
+attestation
+Enclave啟動
+傳統KMS：IAM principal可解密
+機密運算：通過證明的程式碼與執行環境才可解密
+
+===== PAGE 16 =====
+•
+Parent Instance需求：
+•
+基於Nitro的Instance
+•
+具有至少4個vCPUs的Intel或AMD型Instance
+•
+具有至少2個vCPUs的AWS Graviton型Instance
+•
+但並非支援所有Instance，支援清單請參閱
+•
+Linux或Windows (2016或更新版本)作業系統
+•
+Enclave需求：Linux作業系統
+•
+安裝、設定與執行的具體步驟GitHub(包括今日簡報下載)
+https://github.com/cheng-ruru/AWS_NitroEnclaves 
+16
+Copyright 林家瑋(Ray Lin) / iFUS System Consultants Ltd.
+AWS Nitro Enclaves需求
+
+===== PAGE 17 =====
+利用Nitro Enclaves來保護LLM推論
+17
+Copyright 林家瑋(Ray Lin) / iFUS System Consultants Ltd.
+
+===== PAGE 18 =====
+• PCR代表什麼
+•
+PCR0：EIF(Enclave Image File)的量測值
+•
+PCR1：Linux Kernel與啟動程式(Bootstrap)的量測值
+•
+PCR2：應用程式的量測值
+•
+PCR3：指派給Parent Instance的IAM Role的量測值
+•
+PCR4：Parent Instance ID的量測值
+•
+PCR8：Enclave映像檔簽署憑證的量測值
+PCR(Platform Configuration Register)
+18
+Copyright 林家瑋(Ray Lin) / iFUS System Consultants Ltd.
+
+===== PAGE 19 =====
+AWS的機密運算觀點
+Copyright 林家瑋(Ray Lin) / iFUS System Consultants Ltd.
+19
+Azure / GCP
+通常從「啟用Confidential VM」開始
+強調負載平移(Lift and Shift)的便利性
+AWS
+從Nitro System底層隔離設計出發
+再依需求選擇Enclave(應用層隔離)或SEV-SNP(VM記憶體加密)
+Always-On基礎保護
+Nitro-based EC2提供「always-on」基礎保護
+且沒有AWS operator能存取客戶EC2內容的機制
+
+===== PAGE 20 =====
+20
+Copyright 林家瑋(Ray Lin) / iFUS System Consultants Ltd.
+
+===== PAGE 21 =====
+Azure機密運算
+Copyright 林家瑋(Ray Lin) / iFUS System Consultants Ltd.
+21
+Confidential VM
+AMD SEV-SNP或Intel TDX，偏向負載平移
+(Lift and Shift)，通常不需改程式
+Intel SGX
+Application Enclave，信任邊界更小，通常
+需要應用調整
+Azure Attestation
+Microsoft提供的遠端證明服務
+Confidential Containers / AKS
+容器層級完整性與Attestation Policy
+Confidential GPU VM
+適合AI/ML加速與敏感資料處理
+AMD SEV-SNP與Intel TDX可讓hypervisor、host management code與管理
+員無法直接檢視或修改confidential VM的memory或CPU state
+
+===== PAGE 22 =====
+Azure Confidential VM
+Copyright 林家瑋(Ray Lin) / iFUS System Consultants Ltd.
+22
+
+===== PAGE 23 =====
+Copyright 林家瑋(Ray Lin) / iFUS System Consultants Ltd.
+23
+
+===== PAGE 24 =====
+NVIDIA Confidential Computing
+on H100 GPU
+For AI/ML workloads
+Confidential Space
+For multi-party collaboration
+Confidential GKE Nodes
+Built on top
+Confidential VM
+GCP機密運算
+Copyright 林家瑋(Ray Lin) / iFUS System Consultants Ltd.
+24
+Confidential VM
+支援AMD SEV、AMD SEV-SNP、Intel TDX
+Confidential GKE Nodes
+強制GKE node使用Confidential VM
+Confidential Space
+多方資料合作，保留資料機密性與所有權
+NVIDIA Confidential Computing on H100 GPU
+將TEE延伸到GPU，適合AI/ML加速工作負載
+
+===== PAGE 25 =====
+Copyright 林家瑋(Ray Lin) / iFUS System Consultants Ltd.
+25
+
+===== PAGE 26 =====
+三雲機密運算比較
+Copyright 林家瑋(Ray Lin) / iFUS System Consultants Ltd.
+26
+平台
+定位
+代表能力
+是否收費
+主要強項
+適合場景
+AWS
+金鑰與敏感資料保險箱
+Nitro System
+Nitro Enclaves
+NitroTPM
+KMS Cryptographic Attestation
+EC2 AMD SEV-SNP
+無額外費用
+讓通過驗證的工作負
+載，才能使用金鑰
+私鑰保護
+數位簽章
+Tokenization
+敏感資料解密
+Azure
+企業機密運算工具箱
+Confidential VM
+AMD SEV-SNP
+Intel TDX
+Intel SGX
+AKS Confidential Containers
+Confidential GPU
+無額外費用
+VM、容器、GPU等
+企業導入選項完整
+政府
+金融
+醫療
+企業系統
+既有VM搬遷
+GCP
+AI與資料合作安全空間
+Confidential VM
+Confidential Space
+Confidential GKE Nodes
+NVIDIA H100 Confidential GPU
+額外收費
+多方資料合作與
+AI/GPU機密運算
+AI/ML
+資料聯盟
+跨組織分析
+隱私保護資料合作
+
+===== PAGE 27 =====
+

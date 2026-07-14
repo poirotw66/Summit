@@ -1,0 +1,262 @@
+
+===== PAGE 1 =====
+金融業生成式AI平台工程
+以雲端原生架構打造可擴展的Agentic AI 中樞
+從PoC工具到可治理、可觀測、可驗證的金融級AI平台
+2026.07.01 張維峻Justin
+1
+
+===== PAGE 2 =====
+客戶現場。遇到IT作業問題。
+不能打字、不能慢等。
+這不是聊天機器人測試，
+這是AI進入營運現場的考驗。
+聽懂自然語音
+判斷證據充足度
+查證內部知識
+完整留存追蹤紀錄
+具備拒答機制
+我要怎麼申請某個系統權限？
+這個錯誤訊息要找哪個窗口？
+2
+
+===== PAGE 3 =====
+金融AI 落地的三條生死線
+合規性
+資料主權、稽核軌跡、可追溯性
+可營運AI
+整合性
+即時性
+高品質RAG帶來的延遲與成本挑戰
+跨系統、跨部門、跨資料源
+問題不是做不出AI，而是無法通過真實營運條件的檢驗。
+3
+
+===== PAGE 4 =====
+為什麼AI 專案往往卡在PoC階段？
+斷點
+平台級解法
+表面問題
+真正問題
+Agent無法規模化使
+MCP (Model
+系統孤島
+每個API都要客製串接
+Context Protocol)
+用工具
+缺少自我校正與證
+線性RAG
+Agentic RAG 工作流
+回答看似合理但不可驗
+據檢查
+證
+稽核資安法遵
+無法解釋資料與工具來
+Agent Trace 
+黑盒AI
+擋下上線
+源
+突破這三個斷點，需要的是平台工程，而非單一模型
+4
+
+===== PAGE 5 =====
+Cloud Native AI Runtime :
+讓Agentic AI可以被部署擴展、監控與治理
+以雲端原生架構打造可擴展、可觀測、可治理的金融級AI服務平台
+5
+
+===== PAGE 6 =====
+讓企業工具變成Agent可治理的能力
+After
+API Spaghetti
+Agent
+Agent
+Agent
+Agent
+Agent
+Agent
+Before
+After
+MCP
+Hub
+Systems
+M365
+Internal Tools
+Databases
+傳統整合：每接一個系統就多一組客製API，成本隨場景線性上升。
+MCP不是炫技，而是讓AI可以安全、標準化地使用企業工具，並保留完整的Tool Trace。
+MCP整合：把内部系統包裝成標準化工具介面，Agent 以一致方式調用
+6
+
+===== PAGE 7 =====
+乾淨且精準的資料決定RAG準確度上限
+Hybrid Search
+PyMuPDF(高文本密度)/
+Embedding
+BM25
+Vision API (掃描與複雜版面)
+Semantic Chunking
+擅長找語意相似、
+擅長找精準關鍵字、
+RRF
+(保留語意)
+系統名稱、流程代碼。
+同義改寫，補足
+自然語言問法。
+結果融合排序，
+提升召回率與穩定性。
+金融級RAG 的第一步不是生成，而是讓Agent拿到可用證據。
+7
+
+===== PAGE 8 =====
+傳統RAG: 單向流程
+從單向檢索走向
+可自我校正的工作流
+Agentic RAG：動態狀態機
+(Retrieve → Generate)
+rewrite_query
+（證據不足時換個問法再查）
+Generate
+QueryRouter
+RetrievalAgent
+validate_context
+(判斷去哪找資料)
+(混合檢索)
+(檢查證據是否足夠)
+模型找到資料，不代表資料足以回答。
+8
+
+===== PAGE 9 =====
+金融級準確度建立在安全的信任邊界上
+Question
+Yes
+No
+Evidence
+enough?
+Rewrite Query
+Answer
+High Risk Task?
+Yes
+Still
+insufficient?
+明確拒答
+Human-in-the-loop
+Refusal
+Agentic AI的價值不是完全自主，而是在可控邊界內自主。
+每一個判斷皆有Agent Trace稽核軌跡。
+9
+
+===== PAGE 10 =====
+Accuracy is not a model feature.
+It is a workflow property.
+Route：降低找錯資料源風險
+Hybrid Search: 降低漏找證據風險
+Validate:降低幻覺風險
+Rewrite: 降低首次檢索失敗風險
+Trace: 降低不可稽核風險
+準確度不是靠更大模型，而是靠可驗證流程。
+10
+
+===== PAGE 11 =====
+準確率要可信，必須先定義嚴格的評分標準
+基準：RAG_Benchmark_100題.xlsx
+正確
+錯誤/不安全
+拒答正確
+部分正確
+部分正確：方向正確，
+錯誤/不安全：與正解
+拒答正確：題目不應回
+正確：完整命中標準
+但缺少部分條件限制。
+答案，無錯誤資訊。
+不符，或不應回答卻
+答，系統明確拒絕。
+回答。
+(計入加權準確率)
+(計為正確安全行為）
+(零容忍/高風險失敗)
+對金融業來說，準確率不是只有答對率，還要看它能不能避免不安全回答。
+11
+
+===== PAGE 12 =====
+真實環境下的金融級RAG評測數據
+Benchmark說明
+98.0%
+本次100 題涵蓋
+平均延遲：3.56秒
+[加權準確率]
+高頻FAQ、同義改寫、
+應拒答題、陷阱題、邊界題
+96.0%
+評分不只看答對，
+[嚴格正確率]
+P50:3.59秒
+也看是否避免錯誤與
+100.0%
+不安全回答
+[寬鬆命中率]
+錯誤／不安全回答
+邊界題86.7%為下一階段
+P95:6.19秒
+(96題正確，4題部分正確)
+優化重點，代表需要更多
+上下文或人工判斷
+高頻FAQ
+邊界題
+應拒答題
+陷阱題
+同義改寫
+100%
+100%
+100%
+86.7%
+100%
+！
+(43/43)
+(10/10)
+(20/20)
+(11正確4部分正確/15)
+(20/20)
+評分標準(四級制)
+延遲表現(整體)
+正確
+錯誤
+部分正確
+不安全
+平均延遲
+P50延
+P95延
+內容錯誤或誤導
+內容正確且完整
+基本正確但有遺漏
+有風險或違反規範
+6.19秒
+3.56秒
+3.59秒
+的回答
+或不夠完整
+Ｎaive RAG，Accuracy = 87% ｜Hybrid Search only，Accuracy = 83.5% ｜Agentic RAG ，Accuracy = 98.0%。
+12
+
+===== PAGE 13 =====
+實戰驗證：從文字問答走向即時語音支援
+13
+
+===== PAGE 14 =====
+From AI Demo to Operational AI Capability
+[After] Agentic 平台
+[Before] 傳統流程
+人找資料、外勤無法查知
+資料主動服務人行動語音
+識庫無回饋。
+指引、紀錄自動反饋優化。
+“
+「快，是體驗問題。準，是信任問題。
+可拒答、可追蹤、可稽核，才是金融業AI上線問題。
+下一階段的競爭，是營運系統的競爭。」
+Accuracy
+Governance
+Integration
+Observability
+14
