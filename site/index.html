@@ -5,11 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Summit 2026 議程摘要總覽</title>
 <meta name="description" content="AI Enterprise Summit 2026 與 2026 iThome 臺灣雲端大會（Cloud Summit 2026）議程摘要與詳細內容整理">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+<div class="bg-glow" aria-hidden="true"></div>
 <header class="site-header">
   <div class="container">
+    <p class="eyebrow">2026 台灣科技雙峰會 · 議程精讀</p>
     <h1>Summit 2026 議程摘要</h1>
     <p class="subtitle">AI Enterprise Summit 2026（31 場）＋ 2026 iThome 臺灣雲端大會（37 場）議程重點整理，含架構圖與關鍵投影片</p>
   </div>
@@ -26,10 +31,15 @@
   <p id="result-count" class="result-count"></p>
 
   <section class="featured-section" id="featured-section">
-    <h2 class="featured-heading">✨ 精選議程</h2>
-    <p class="featured-sub">從兩場大會中挑選出視角新穎、架構完整或具代表性的議程</p>
-    <div class="grid featured-grid" id="featured-grid">
-      <a class="card card-featured" href="talks/ai-enterprise-24-金融級-Enterprise-Agentic-AI-架構設計-從-PoC-到-Agentic-Operating-System.html" data-summit="ai-enterprise" data-category="agentic-arch" data-tags="Agentic AI架構 金融業AI治理 Agentic RAG LLM評測 可觀測性" data-title="金融級 Enterprise Agentic AI 架構設計：從 PoC 到 Agentic Operating System" data-speaker="張維峻 Justin">
+    <div class="section-heading-block">
+      <p class="eyebrow eyebrow-gold">✨ Editor's Pick</p>
+      <h2 class="featured-heading">精選議程</h2>
+      <p class="featured-sub">分別從兩場大會中，挑選出視角新穎、架構完整或具代表性的議程</p>
+    </div>
+    <div class="featured-group" data-summit="ai-enterprise">
+  <h3 class="featured-group-heading"><span class="dot" style="--dot:#6d5bd0"></span>AI Enterprise Summit 2026</h3>
+  <div class="grid featured-grid">
+    <a class="card card-featured" href="talks/ai-enterprise-24-金融級-Enterprise-Agentic-AI-架構設計-從-PoC-到-Agentic-Operating-System.html" data-summit="ai-enterprise" data-category="agentic-arch" data-tags="Agentic AI架構 金融業AI治理 Agentic RAG LLM評測 可觀測性" data-title="金融級 Enterprise Agentic AI 架構設計：從 PoC 到 Agentic Operating System" data-speaker="張維峻 Justin">
   <div class="card-cover"><img src="assets/images/ai-enterprise-24-金融級-Enterprise-Agentic-AI-架構設計-從-PoC-到-Agentic-Operating-System/cover.jpg" loading="lazy" alt=""></div>
   <div class="card-body">
     <span class="badge" style="--badge-color:#6d5bd0">AI Enterprise · #24</span>
@@ -38,17 +48,6 @@
     <p class="card-featured-reason">✨ 提出『Agentic Operating System』完整治理框架，回應金融級場景對可稽核、可信任 AI 的嚴苛要求。</p>
     <p class="card-summary">講者以金融業視角提出Enterprise Agentic AI架構設計，強調金融場景要求AI具備查得到證據、能判斷證據是否足夠、不確定時拒答或追問、高風險任務升級給人、每次回答都留下Trace等硬性條件。演講說明企業AI專案常卡在PoC的三個關鍵斷點，並介紹以Agent Registry、Policy Engine、Tool Registry、Knowledge層與Evaluation/Trace構成的可治理AI Control Plane，最終目標是打造可觀測、可驗證、可稽核的Agentic Operating System。</p>
     <div class="tags"><span class="tag">Agentic AI架構</span><span class="tag">金融業AI治理</span><span class="tag">Agentic RAG</span><span class="tag">LLM評測</span></div>
-  </div>
-</a>
-<a class="card card-featured" href="talks/cloud-edge-36-金融業生成式-AI-平台工程-以雲端原生架構打造可擴展的-Agentic-AI-中樞.html" data-summit="cloud-edge" data-category="agentic-arch" data-tags="Agentic AI 金融科技 RAG MCP AI 治理" data-title="金融業生成式 AI 平台工程：以雲端原生架構打造可擴展的 Agentic AI 中樞" data-speaker="張維峻 (Justin)">
-  <div class="card-cover"><img src="assets/images/cloud-edge-36-金融業生成式-AI-平台工程-以雲端原生架構打造可擴展的-Agentic-AI-中樞/cover.jpg" loading="lazy" alt=""></div>
-  <div class="card-body">
-    <span class="badge" style="--badge-color:#0f9d8e">臺灣雲端大會 · #36</span>
-    <h3>金融業生成式 AI 平台工程：以雲端原生架構打造可擴展的 Agentic AI 中樞</h3>
-    <div class="card-speaker">🎤 張維峻 (Justin)</div>
-    <p class="card-featured-reason">✨ 以 MCP、Agentic RAG 動態狀態機與 Agent Trace 打通金融業 AI 落地三條生死線，並用真實 Benchmark 數據驗證成效。</p>
-    <p class="card-summary">演講從金融業第一線 IT 客服場景出發，說明合規性、整合性、即時性是金融 AI 落地的三條生死線，並剖析為何 AI 專案常卡在 PoC 階段。講者提出以雲端原生架構打造的 Cloud Native AI Runtime，結合 MCP（Model Context Protocol）解決系統孤島問題、Agentic RAG 動態狀態機解決線性 RAG 的幻覺與驗證問題，並以 Agent Trace 稽核軌跡解決黑盒 AI 的稽核資安法遵挑戰，最終以真實 Benchmark 數據與語音客服案例驗證平台成效。</p>
-    <div class="tags"><span class="tag">Agentic AI</span><span class="tag">金融科技</span><span class="tag">RAG</span><span class="tag">MCP</span></div>
   </div>
 </a>
 <a class="card card-featured" href="talks/ai-enterprise-03-企業-AI-的-CoWoS-時刻-探討-多模型路由-Router-的-Interposer-戰略.html" data-summit="ai-enterprise" data-category="agentic-arch" data-tags="多模型路由 AI Gateway 企業AI架構 AI治理" data-title="企業 AI 的 CoWoS 時刻：探討「多模型路由（Router）」的 Interposer 戰略" data-speaker="Len">
@@ -95,6 +94,22 @@
     <div class="tags"><span class="tag">零資料接觸架構</span><span class="tag">LLM資安</span><span class="tag">Schema-Only</span><span class="tag">Query Proxy</span></div>
   </div>
 </a>
+  </div>
+</div>
+<div class="featured-group" data-summit="cloud-edge">
+  <h3 class="featured-group-heading"><span class="dot" style="--dot:#0f9d8e"></span>2026 iThome 臺灣雲端大會（Cloud Summit 2026）</h3>
+  <div class="grid featured-grid">
+    <a class="card card-featured" href="talks/cloud-edge-36-金融業生成式-AI-平台工程-以雲端原生架構打造可擴展的-Agentic-AI-中樞.html" data-summit="cloud-edge" data-category="agentic-arch" data-tags="Agentic AI 金融科技 RAG MCP AI 治理" data-title="金融業生成式 AI 平台工程：以雲端原生架構打造可擴展的 Agentic AI 中樞" data-speaker="張維峻 (Justin)">
+  <div class="card-cover"><img src="assets/images/cloud-edge-36-金融業生成式-AI-平台工程-以雲端原生架構打造可擴展的-Agentic-AI-中樞/cover.jpg" loading="lazy" alt=""></div>
+  <div class="card-body">
+    <span class="badge" style="--badge-color:#0f9d8e">臺灣雲端大會 · #36</span>
+    <h3>金融業生成式 AI 平台工程：以雲端原生架構打造可擴展的 Agentic AI 中樞</h3>
+    <div class="card-speaker">🎤 張維峻 (Justin)</div>
+    <p class="card-featured-reason">✨ 以 MCP、Agentic RAG 動態狀態機與 Agent Trace 打通金融業 AI 落地三條生死線，並用真實 Benchmark 數據驗證成效。</p>
+    <p class="card-summary">演講從金融業第一線 IT 客服場景出發，說明合規性、整合性、即時性是金融 AI 落地的三條生死線，並剖析為何 AI 專案常卡在 PoC 階段。講者提出以雲端原生架構打造的 Cloud Native AI Runtime，結合 MCP（Model Context Protocol）解決系統孤島問題、Agentic RAG 動態狀態機解決線性 RAG 的幻覺與驗證問題，並以 Agent Trace 稽核軌跡解決黑盒 AI 的稽核資安法遵挑戰，最終以真實 Benchmark 數據與語音客服案例驗證平台成效。</p>
+    <div class="tags"><span class="tag">Agentic AI</span><span class="tag">金融科技</span><span class="tag">RAG</span><span class="tag">MCP</span></div>
+  </div>
+</a>
 <a class="card card-featured" href="talks/cloud-edge-10-共智時代-The-Next-Step.html" data-summit="cloud-edge" data-category="transformation" data-tags="共智 Co-Intelligence 共同知識 Human in the Loop 理解債 AI 時代工程師" data-title="共智時代：The Next Step" data-speaker="李智樺">
   <div class="card-cover"><img src="assets/images/cloud-edge-10-共智時代-The-Next-Step/cover.jpg" loading="lazy" alt=""></div>
   <div class="card-body">
@@ -139,7 +154,8 @@
     <div class="tags"><span class="tag">智慧城市</span><span class="tag">主權 AI</span><span class="tag">VLM</span><span class="tag">數位孿生</span></div>
   </div>
 </a>
-    </div>
+  </div>
+</div>
   </section>
 
   <nav class="cat-nav">

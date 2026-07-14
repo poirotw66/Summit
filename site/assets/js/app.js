@@ -4,6 +4,7 @@
   const resultCount = document.getElementById("result-count");
   const emptyState = document.getElementById("empty-state");
   const featuredSection = document.getElementById("featured-section");
+  const featuredGroups = Array.from(document.querySelectorAll(".featured-group"));
   const categorySections = Array.from(document.querySelectorAll(".category-section"));
 
   let activeFilter = "all";
@@ -24,14 +25,20 @@
   function applyFilters() {
     const q = (search && search.value ? search.value : "").trim().toLowerCase();
 
-    // Featured section: filter its own cards, hide whole section if nothing matches.
+    // Featured section: filter cards per summit group, hide a group (or the
+    // whole section) when nothing in it matches.
     let featuredVisible = 0;
-    if (featuredSection) {
-      featuredSection.querySelectorAll(".card").forEach((card) => {
+    featuredGroups.forEach((group) => {
+      let groupVisible = 0;
+      group.querySelectorAll(".card").forEach((card) => {
         const show = cardMatches(card, q);
         card.style.display = show ? "" : "none";
-        if (show) featuredVisible++;
+        if (show) groupVisible++;
       });
+      group.hidden = groupVisible === 0;
+      featuredVisible += groupVisible;
+    });
+    if (featuredSection) {
       featuredSection.hidden = featuredVisible === 0;
     }
 

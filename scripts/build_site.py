@@ -180,6 +180,9 @@ def render_head(title: str, depth: int = 0) -> str:
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{esc(title)}</title>
 <meta name="description" content="AI Enterprise Summit 2026 與 2026 iThome 臺灣雲端大會（Cloud Summit 2026）議程摘要與詳細內容整理">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{prefix}assets/css/style.css">
 </head>
 """
@@ -222,7 +225,21 @@ def render_index(talks: list) -> str:
 
     featured_by_key = {(c["summit"], c["order"]): c for c in talks}
     featured_talks = [featured_by_key[key] for key in FEATURED_ORDER if key in featured_by_key]
-    featured_cards = "\n".join(render_card(c, featured=True) for c in featured_talks)
+
+    featured_groups_html = []
+    for summit in ("ai-enterprise", "cloud-edge"):
+        group = [c for c in featured_talks if c["summit"] == summit]
+        if not group:
+            continue
+        meta = SUMMIT_META[summit]
+        cards = "\n".join(render_card(c, featured=True) for c in group)
+        featured_groups_html.append(f"""<div class="featured-group" data-summit="{summit}">
+  <h3 class="featured-group-heading"><span class="dot" style="--dot:{meta['color']}"></span>{esc(meta['name'])}</h3>
+  <div class="grid featured-grid">
+    {cards}
+  </div>
+</div>""")
+    featured_groups = "\n".join(featured_groups_html)
 
     by_category = {cid: [] for cid, _, _ in CATEGORIES}
     for c in talks:
@@ -246,8 +263,10 @@ def render_index(talks: list) -> str:
     categories_html = "\n".join(sections_html)
 
     return render_head("Summit 2026 議程摘要總覽") + f"""<body>
+<div class="bg-glow" aria-hidden="true"></div>
 <header class="site-header">
   <div class="container">
+    <p class="eyebrow">2026 台灣科技雙峰會 · 議程精讀</p>
     <h1>Summit 2026 議程摘要</h1>
     <p class="subtitle">AI Enterprise Summit 2026（{n_ai} 場）＋ 2026 iThome 臺灣雲端大會（{n_ce} 場）議程重點整理，含架構圖與關鍵投影片</p>
   </div>
@@ -264,11 +283,12 @@ def render_index(talks: list) -> str:
   <p id="result-count" class="result-count"></p>
 
   <section class="featured-section" id="featured-section">
-    <h2 class="featured-heading">✨ 精選議程</h2>
-    <p class="featured-sub">從兩場大會中挑選出視角新穎、架構完整或具代表性的議程</p>
-    <div class="grid featured-grid" id="featured-grid">
-      {featured_cards}
+    <div class="section-heading-block">
+      <p class="eyebrow eyebrow-gold">✨ Editor's Pick</p>
+      <h2 class="featured-heading">精選議程</h2>
+      <p class="featured-sub">分別從兩場大會中，挑選出視角新穎、架構完整或具代表性的議程</p>
     </div>
+    {featured_groups}
   </section>
 
   <nav class="cat-nav">
@@ -340,11 +360,14 @@ def render_talk(c: dict, prev_c: dict | None, next_c: dict | None) -> str:
         nav_links.append('<span></span>')
 
     return render_head(f"{c['title']} - Summit 2026 議程摘要", depth=1) + f"""<body>
+<div class="bg-glow" aria-hidden="true"></div>
 <header class="site-header detail-header">
   <div class="container">
     <a class="back-link" href="../index.html">← 回議程總覽</a>
-    <span class="badge" style="--badge-color:{meta['color']}">{esc(meta['name'])} · #{c['order']:02d}</span>
-    <span class="badge category-badge">{emoji} {esc(label)}</span>
+    <div class="badge-row">
+      <span class="badge" style="--badge-color:{meta['color']}">{esc(meta['name'])} · #{c['order']:02d}</span>
+      <span class="badge category-badge">{emoji} {esc(label)}</span>
+    </div>
     <h1>{esc(c['title'])}</h1>
     {speaker_block}
     {featured_block}
