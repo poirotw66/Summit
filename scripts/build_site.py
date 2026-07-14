@@ -118,17 +118,22 @@ ORDER_CATEGORY = {
 
 # (summit, order) -> one-sentence "why this is featured" blurb (zh-TW).
 FEATURED = {
+    ("ai-enterprise", 24): "提出『Agentic Operating System』完整治理框架，回應金融級場景對可稽核、可信任 AI 的嚴苛要求。",
+    ("cloud-edge", 36): "以 MCP、Agentic RAG 動態狀態機與 Agent Trace 打通金融業 AI 落地三條生死線，並用真實 Benchmark 數據驗證成效。",
     ("ai-enterprise", 3): "以半導體 CoWoS／Interposer 封裝技術類比企業多模型 AI 整合，視角新穎少見。",
     ("ai-enterprise", 8): "把 OWASP Top 10 for Agentic AI、OpenTelemetry／OpenInference 系統化整理成企業可落地的可觀測性架構。",
     ("ai-enterprise", 14): "從『Workflow Agent』的失敗經驗，提煉出『Config-Driven』新架構模式，實戰教訓具體可借鏡。",
-    ("ai-enterprise", 24): "提出『Agentic Operating System』完整治理框架，回應金融級場景對可稽核、可信任 AI 的嚴苛要求。",
     ("ai-enterprise", 30): "『零資料接觸架構（ZDTA）』以 Schema-Only 查詢代理解決 LLM 資料外洩兩難，設計巧妙。",
     ("cloud-edge", 10): "跳脫工具面，從『共智』與『理解債』重新定義 AI 時代工程師的角色，觀點少見。",
     ("cloud-edge", 19): "揭露前沿模型自主發現零日漏洞的實例，點出漏洞管理典範轉移的緊迫性。",
     ("cloud-edge", 20): "以開源 kagent 與 A2A 協議打造 Kubernetes 自主協作生態系，技術含金量高且可實作。",
     ("cloud-edge", 27): "高雄以主權 AI VLM 與數位孿生打造國家級智慧城市旗艦案例，規模與縱深少見。",
-    ("cloud-edge", 33): "用『風險指數』公式把 FinOps 從看後照鏡的報表，變成可量化決策的駕駛座視角。",
 }
+
+# Explicit display order for the featured section (dict insertion order above is
+# authoritative — Python dicts preserve insertion order). Kept as a separate name
+# for clarity at call sites.
+FEATURED_ORDER = list(FEATURED.keys())
 
 CATEGORY_LABEL = {cid: (emoji, label) for cid, emoji, label in CATEGORIES}
 
@@ -215,7 +220,8 @@ def render_index(talks: list) -> str:
     n_ai = sum(1 for c in talks if c["summit"] == "ai-enterprise")
     n_ce = sum(1 for c in talks if c["summit"] == "cloud-edge")
 
-    featured_talks = [c for c in talks if get_featured_reason(c)]
+    featured_by_key = {(c["summit"], c["order"]): c for c in talks}
+    featured_talks = [featured_by_key[key] for key in FEATURED_ORDER if key in featured_by_key]
     featured_cards = "\n".join(render_card(c, featured=True) for c in featured_talks)
 
     by_category = {cid: [] for cid, _, _ in CATEGORIES}
