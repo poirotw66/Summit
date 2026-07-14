@@ -83,6 +83,25 @@
     }
 
     applyFilters();
+
+    // ScrollSpy for TOC links
+    const tocLinks = document.querySelectorAll(".toc-link");
+    const sections = Array.from(document.querySelectorAll("section[id]"));
+
+    if (tocLinks.length > 0 && sections.length > 0) {
+      function activeTOC() {
+        let index = sections.length;
+        while (--index && window.scrollY + 100 < sections[index].offsetTop) {}
+        tocLinks.forEach((link) => link.classList.remove("active"));
+        if (sections[index]) {
+          const activeId = sections[index].getAttribute("id");
+          const activeLink = document.querySelector(`.toc-link[href="#${activeId}"]`);
+          if (activeLink) activeLink.classList.add("active");
+        }
+      }
+      window.addEventListener("scroll", activeTOC);
+      activeTOC();
+    }
   }
 
   if (document.readyState === "loading") {

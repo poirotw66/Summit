@@ -183,7 +183,7 @@ def render_head(title: str, depth: int = 0) -> str:
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="{prefix}assets/css/style.css?v=1.0.5">
+<link rel="stylesheet" href="{prefix}assets/css/style.css?v=1.0.6">
 </head>
 """
 
@@ -306,7 +306,7 @@ def render_index(talks: list) -> str:
     <p>資料來源：AI Enterprise Summit 2026 / 2026 iThome 臺灣雲端大會（Cloud Summit 2026）官方議程投影片（PDF／Markdown）。本站內容為 AI 輔助整理之摘要，僅供參考，正確內容請以原始投影片為準。</p>
   </div>
 </footer>
-<script src="assets/js/app.js?v=1.0.2"></script>
+<script src="assets/js/app.js?v=1.0.3"></script>
 </body>
 </html>
 """
@@ -314,9 +314,9 @@ def render_index(talks: list) -> str:
 
 def render_sections(sections: list) -> str:
     out = []
-    for s in sections:
+    for idx, s in enumerate(sections):
         body = esc(s.get("body", "")).replace("\n\n", "</p><p>").replace("\n", "<br>")
-        out.append(f'<section class="detail-section"><h2>{esc(s.get("heading",""))}</h2><p>{body}</p></section>')
+        out.append(f'<section class="detail-section" id="section-{idx}"><h2>{esc(s.get("heading",""))}</h2><p>{body}</p></section>')
     return "\n".join(out)
 
 
@@ -329,7 +329,7 @@ def render_images(images: list) -> str:
   <img src="../{esc(img['file'])}" loading="lazy" alt="{esc(img.get('caption',''))}">
   <figcaption>{esc(img.get('caption',''))}</figcaption>
 </figure>""")
-    return f"""<section class="detail-section plain-section">
+    return f"""<section class="detail-section plain-section" id="section-images">
   <h2>重點圖片／架構圖</h2>
   <div class="diagram-grid">
     {''.join(figs)}
@@ -359,6 +359,17 @@ def render_talk(c: dict, prev_c: dict | None, next_c: dict | None) -> str:
     else:
         nav_links.append('<div class="nav-placeholder"></div>')
 
+    # Generate Table of Contents (TOC)
+    toc_links = []
+    toc_links.append(f'<a href="#section-summary" class="toc-link">議程摘要</a>')
+    toc_links.append(f'<a href="#section-highlights" class="toc-link">重點整理</a>')
+    if c.get("key_images"):
+        toc_links.append(f'<a href="#section-images" class="toc-link">重點圖片</a>')
+    for idx, s in enumerate(c.get("sections", [])):
+        toc_links.append(f'<a href="#section-{idx}" class="toc-link">{esc(s.get("heading", ""))}</a>')
+    
+    toc_html = "\n".join(toc_links)
+
     return render_head(f"{c['title']} - Summit 2026 議程摘要", depth=1) + f"""<body>
 <div class="bg-glow" aria-hidden="true"></div>
 <header class="site-header detail-header">
@@ -377,18 +388,24 @@ def render_talk(c: dict, prev_c: dict | None, next_c: dict | None) -> str:
 <main class="container detail-main">
   <div class="detail-grid">
     <div class="detail-content">
-      <section class="detail-section summary-box">
+      <section class="detail-section summary-box" id="section-summary">
         <h2>摘要</h2>
         <p>{esc(c['summary'])}</p>
+      </section>
+      <section class="detail-section highlights-card" id="section-highlights">
+        <h2>重點整理</h2>
+        <ul class="highlights">{highlights}</ul>
       </section>
       {render_images(c.get('key_images', []))}
       {render_sections(c.get('sections', []))}
     </div>
     <aside class="detail-sidebar">
-      <section class="detail-section highlights-card">
-        <h2>重點整理</h2>
-        <ul class="highlights">{highlights}</ul>
-      </section>
+      <div class="toc-card">
+        <h3>📍 本頁導覽</h3>
+        <nav class="toc-nav-list">
+          {toc_html}
+        </nav>
+      </div>
     </aside>
   </div>
   <nav class="talk-nav">
@@ -401,6 +418,7 @@ def render_talk(c: dict, prev_c: dict | None, next_c: dict | None) -> str:
     <p>本頁內容為 AI 輔助整理之摘要，原始檔案：{esc(c.get('source_file',''))}。正確內容請以原始投影片為準。</p>
   </div>
 </footer>
+<script src="../assets/js/app.js?v=1.0.3"></script>
 </body>
 </html>
 """

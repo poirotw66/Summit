@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/style.css?v=1.0.5">
+<link rel="stylesheet" href="../assets/css/style.css?v=1.0.6">
 </head>
 <body>
 <div class="bg-glow" aria-hidden="true"></div>
@@ -28,22 +28,34 @@
 <main class="container detail-main">
   <div class="detail-grid">
     <div class="detail-content">
-      <section class="detail-section summary-box">
+      <section class="detail-section summary-box" id="section-summary">
         <h2>摘要</h2>
         <p>這場演講記錄了公司內部兩年來推動 AI Agentic Coding（以 Claude Code 為主）從少數人試用到全公司日常使用的真實歷程。講者分享了心態如何從「AI 幫我們」轉變為「我們幫 AI」，並用實際數據呈現 AI 產出佔比從 66% 成長到 97% 的過程。更重要的是，演講深入說明在專案數量爆炸成長後，如何透過統一認證閘道、Token 治理與 MCP Gateway 等機制解決資安治理難題，讓規模化導入建立在安全可控的基礎上。</p>
       </section>
-      
-      <section class="detail-section"><h2>心態轉變：從「AI 幫我們」到「我們幫 AI」</h2><p>講者指出，2025 年公司思考的是「AI 怎麼協助我們改善效率」，AI 是工具、人是主角；到了 2026 年，思維反轉為「我們該怎麼協助 AI 加速工作」，也就是幫 AI 鋪好基礎設施，包括認證閘道、Token 治理與 Marketplace 審查，而不是單純教 AI 寫程式。這個心態上的對調，決定了後續所有導入決策的方向。</p></section>
-<section class="detail-section"><h2>導入時間軸與 GAISF Gateway</h2><p>從 2025 年 2 月 Claude Code 問世，到 3 月整合內部 AI Gateway、5 月串接 Observability，再到 9 月導入軟體研發部門、2026 年 4 月擴展到硬體研發部門，整個過程分為外部生態起點、內部整合、規模落地三個階段。其中 GAISF Gateway 作為所有 AI 呼叫的單一進出口，一次解決使用量分析、內部稽核、流量花費控管與權限控管四件事，且只保留稽核所需資訊，過濾 Request/Response Body 內容，在可見度與隱私之間取得平衡。</p></section>
-<section class="detail-section"><h2>從觀望到全員：用成果說話</h2><p>工程師不願意用 AI 的原因主要有三種心態：不信任品質、怕被取代、資安疑慮，其中資安疑慮才是真正卡住規模化的關鍵。有效的推廣路徑不是靠命令，而是三步走：先找 2-3 位有影響力的人做出令人羨慕的成果，再將個人技巧封裝成 Anthropic Agent Skill 標準供團隊複用，最後透過 AI Skill Marketplace 平台全公司統一分發。開發流程也拆分為人主導的規劃與最終合併，中間開發、品質檢查、審查迴圈則由 AI 自動迭代完成。</p></section>
-<section class="detail-section"><h2>專案爆炸與資安風險</h2><p>隨著各團隊快速產出服務，專案數量從 5x、2xx 爆炸成長到 1xxx 個，大量 CLI、MCP、Agent 要串接內部系統，認證與授權管理成為無法回避的問題。演講點出被 AI 放大的三大資安風險：各服務認證各自造輪子、金鑰寫死流入 Git（最致命）、以及 Token 發出後完全失控，無法追蹤持有者、到期時間或撤銷。</p></section>
-<section class="detail-section"><h2>四道解法：認證閘道、Token 治理、MCP Gateway 與 Marketplace</h2><p>公司透過統一認證閘道，讓 CLI、MCP Server、AI Agent 與內部服務都走 OAuth 2.0/OIDC，並依場景對應不同流程（Web 用 Auth Code + PKCE，CLI/Agent 用 Device Flow，服務對服務用 Client Credentials）；同時導入 RFC 8707 Resource Indicators 讓每個 MCP 視為獨立 OAuth Resource，做到最小權限與可查詢、可撤銷；再透過 MCP Gateway 以 `mcp-oauth2` plugin 驗證 JWT 並轉發身分標頭；最後在 AI Marketplace 上架前執行 Coverity（SAST）、Trivy（SCA）與 AI Code Review 三道並行掃描，全綠才放行。</p></section>
-    </div>
-    <aside class="detail-sidebar">
-      <section class="detail-section highlights-card">
+      <section class="detail-section highlights-card" id="section-highlights">
         <h2>重點整理</h2>
         <ul class="highlights"><li>AI 產出佔比十個月內從 66% 成長到 97%，月產出量同時成長近 10 倍</li><li>推廣路徑分三步：個人試用 → 團隊標準化（Agent Skill）→ 全公司落地（Marketplace 分發）</li><li>以 GAISF Gateway 作為所有 AI 呼叫的單一進出口，統一使用量分析、稽核、流量控管與權限管理</li><li>專案數量從 5x、2xx 爆炸成長到 1xxx 個後，帶出認證與授權治理的迫切需求</li><li>以統一認證閘道（OAuth 2.0/OIDC）、RFC 8707 Token 治理與 MCP Gateway 三道機制解決金鑰外洩、Token 失控等資安風險</li></ul>
       </section>
+      
+      <section class="detail-section" id="section-0"><h2>心態轉變：從「AI 幫我們」到「我們幫 AI」</h2><p>講者指出，2025 年公司思考的是「AI 怎麼協助我們改善效率」，AI 是工具、人是主角；到了 2026 年，思維反轉為「我們該怎麼協助 AI 加速工作」，也就是幫 AI 鋪好基礎設施，包括認證閘道、Token 治理與 Marketplace 審查，而不是單純教 AI 寫程式。這個心態上的對調，決定了後續所有導入決策的方向。</p></section>
+<section class="detail-section" id="section-1"><h2>導入時間軸與 GAISF Gateway</h2><p>從 2025 年 2 月 Claude Code 問世，到 3 月整合內部 AI Gateway、5 月串接 Observability，再到 9 月導入軟體研發部門、2026 年 4 月擴展到硬體研發部門，整個過程分為外部生態起點、內部整合、規模落地三個階段。其中 GAISF Gateway 作為所有 AI 呼叫的單一進出口，一次解決使用量分析、內部稽核、流量花費控管與權限控管四件事，且只保留稽核所需資訊，過濾 Request/Response Body 內容，在可見度與隱私之間取得平衡。</p></section>
+<section class="detail-section" id="section-2"><h2>從觀望到全員：用成果說話</h2><p>工程師不願意用 AI 的原因主要有三種心態：不信任品質、怕被取代、資安疑慮，其中資安疑慮才是真正卡住規模化的關鍵。有效的推廣路徑不是靠命令，而是三步走：先找 2-3 位有影響力的人做出令人羨慕的成果，再將個人技巧封裝成 Anthropic Agent Skill 標準供團隊複用，最後透過 AI Skill Marketplace 平台全公司統一分發。開發流程也拆分為人主導的規劃與最終合併，中間開發、品質檢查、審查迴圈則由 AI 自動迭代完成。</p></section>
+<section class="detail-section" id="section-3"><h2>專案爆炸與資安風險</h2><p>隨著各團隊快速產出服務，專案數量從 5x、2xx 爆炸成長到 1xxx 個，大量 CLI、MCP、Agent 要串接內部系統，認證與授權管理成為無法回避的問題。演講點出被 AI 放大的三大資安風險：各服務認證各自造輪子、金鑰寫死流入 Git（最致命）、以及 Token 發出後完全失控，無法追蹤持有者、到期時間或撤銷。</p></section>
+<section class="detail-section" id="section-4"><h2>四道解法：認證閘道、Token 治理、MCP Gateway 與 Marketplace</h2><p>公司透過統一認證閘道，讓 CLI、MCP Server、AI Agent 與內部服務都走 OAuth 2.0/OIDC，並依場景對應不同流程（Web 用 Auth Code + PKCE，CLI/Agent 用 Device Flow，服務對服務用 Client Credentials）；同時導入 RFC 8707 Resource Indicators 讓每個 MCP 視為獨立 OAuth Resource，做到最小權限與可查詢、可撤銷；再透過 MCP Gateway 以 `mcp-oauth2` plugin 驗證 JWT 並轉發身分標頭；最後在 AI Marketplace 上架前執行 Coverity（SAST）、Trivy（SCA）與 AI Code Review 三道並行掃描，全綠才放行。</p></section>
+    </div>
+    <aside class="detail-sidebar">
+      <div class="toc-card">
+        <h3>📍 本頁導覽</h3>
+        <nav class="toc-nav-list">
+          <a href="#section-summary" class="toc-link">議程摘要</a>
+<a href="#section-highlights" class="toc-link">重點整理</a>
+<a href="#section-0" class="toc-link">心態轉變：從「AI 幫我們」到「我們幫 AI」</a>
+<a href="#section-1" class="toc-link">導入時間軸與 GAISF Gateway</a>
+<a href="#section-2" class="toc-link">從觀望到全員：用成果說話</a>
+<a href="#section-3" class="toc-link">專案爆炸與資安風險</a>
+<a href="#section-4" class="toc-link">四道解法：認證閘道、Token 治理、MCP Gateway 與 Marketplace</a>
+        </nav>
+      </div>
     </aside>
   </div>
   <nav class="talk-nav">
@@ -56,5 +68,6 @@
     <p>本頁內容為 AI 輔助整理之摘要，原始檔案：09-從觀望到全公司落地：AI Agentic Coding 導入實戰.md。正確內容請以原始投影片為準。</p>
   </div>
 </footer>
+<script src="../assets/js/app.js?v=1.0.3"></script>
 </body>
 </html>

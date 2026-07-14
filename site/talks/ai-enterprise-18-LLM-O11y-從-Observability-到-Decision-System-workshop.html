@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/style.css?v=1.0.5">
+<link rel="stylesheet" href="../assets/css/style.css?v=1.0.6">
 </head>
 <body>
 <div class="bg-glow" aria-hidden="true"></div>
@@ -28,22 +28,34 @@
 <main class="container detail-main">
   <div class="detail-grid">
     <div class="detail-content">
-      <section class="detail-section summary-box">
+      <section class="detail-section summary-box" id="section-summary">
         <h2>摘要</h2>
         <p>本工作坊針對企業導入開發型 Coding Agent 時面臨的「預算花式燃燒」與「Agent 效能調整缺乏數據依據」等痛點，介紹如何以 Bifrost AI Gateway 與 Langfuse 搭建開源可觀測性與決策系統。技術架構上，Bifrost 作為企業 LLM 代理，負責模型路由、預算管理與 OTel 軌跡輸出；Langfuse 則承擔 Tracing 收集、LLM-as-a-Judge 評測與 Dataset 管理。實務上，講者帶領學員透過精簡指令檔案（如 `AGENTS.md`）與關閉非核心工具以減少基礎 Token 開銷；並指導如何設計針對特定工具呼叫（如 `apply_patch`）的客製化 Evaluator。最終，學員學會從日常軌跡萃取資料集，並透過 Experiment 實驗平台，以量化效率公式將「聽說某模型或框架比較省錢」的直覺，轉化為具備數據支撐的理性架構決策。</p>
       </section>
-      
-      <section class="detail-section"><h2>工作坊環境與工具準備</h2><p>工作坊要求學員攜帶可上網筆電並安裝 VS Code，透過 git clone 範例 repo（llm-o11y）並以 docker compose 啟動服務，講師現場提供 Azure OpenAI API Key。啟動後的服務入口包含 Bifrost AI Gateway（http://localhost:8080/）、Langfuse UI（http://localhost:3000/）與 MinIO UI（http://localhost:9001/），並於 VS Code Chat 中把模型指向 Bifrost Gateway 的 `/v1/responses` 端點。</p></section>
-<section class="detail-section"><h2>Bifrost 與 Langfuse 的角色分工</h2><p>Bifrost 是團隊/公司層級的 LLM Proxy，支援多模型、路由、預算與虛擬 API Key，並可透過 OTel tracing 串接 Langfuse 等觀測工具；Langfuse 則負責 tracing 收集分析、LLM-as-a-Judge、Dataset 與 Evaluation，且核心功能為開源（MIT）授權。講者將兩者關係總結為「Gateway 管模型與進出；Observability 管 tracing／分析」，最方便的做法是 CLI → AI Gateway → Observability 的串接方式。</p></section>
-<section class="detail-section"><h2>理解 Token 花費：從基礎觀測到工具與指令調整</h2><p>工作坊安排四個任務循序漸進：Task 1 觀察一次對話花費多少 Token 及花在哪裡；Task 2 比較同一 session 內多輪對話與使用 /compact、/clear 後的 Token 差異，理解 Cached Token 的效果；Task 3 檢視 `gen_ai.request.tools` 欄位，嘗試停用非必要工具（如 Browser、部分 extension、Notebooks）並比較新 session 的 Token 花費，但不建議關閉 Agent、search、Read File 等核心工具；Task 4 則檢查 AGENTS.md、copilot-instructions.md 等 instructions 來源，說明即使關閉所有工具，仍可能有 2000+ Token 的基礎花費。</p></section>
-<section class="detail-section"><h2>案例：評估是否導入 rtk 框架</h2><p>針對「同事說 rtk 好像會省 Token，要不要導入」的情境，講者提出六步驟評估框架：理解團隊需求與學習成本、了解 rtk 支援哪些指令（Know Your Stuff）、從 Langfuse 分析目前 Token 實際花在哪（Know Your Case）、透過 `rtk init --copilot` 實驗觀察變化並用 `rtk unpatch` 復原、評估是否真的省下 Token，最後與團隊對齊「為何覺得省 Token」的結論。並提出效率公式，強調工作坊前半段主要聚焦在 Token Cost 的觀察。</p></section>
-<section class="detail-section"><h2>LLM-as-a-Judge 與 Dataset/Experiment</h2><p>學員在 Langfuse 中建立 LLM connection 與 Evaluator（如 Helpfulness），並練習觀察評分與理由是否合理，特別留意 multi-step agent 因中間 Observation 缺乏 output 而導致評分失真的狀況。進一步練習使用 filter 針對特定 tool（如 apply_patch、run_in_terminal）建立客製 Evaluator。最後，講者示範如何從日常 tracing 建立 Dataset，並透過 Experiment 在同一份「考古題」上比較更換 model、tools 或 instruction 後的效果，將「觀測」轉化為「數據化決策」，並可延伸至 Spec-kit 流程或真實功能需求的長流程觀測。</p></section>
-    </div>
-    <aside class="detail-sidebar">
-      <section class="detail-section highlights-card">
+      <section class="detail-section highlights-card" id="section-highlights">
         <h2>重點整理</h2>
         <ul class="highlights"><li>以 Bifrost AI Gateway（模型代理/路由）搭配 Langfuse（tracing、LLM-as-a-Judge、Dataset）建立完整的 Coding Agent 觀測堆疊</li><li>透過 Task 1～4 依序觀察總 Token 花費、Cached Token 效果、工具數量與 Instructions（如 AGENTS.md）對基礎 Token 成本的影響</li><li>提出效率公式：效率 = (產出數量 × 產出品質) / (Token Cost × 花費時間)，作為評估「導入 rtk 是否省 Token」等問題的判斷依據</li><li>LLM-as-a-Judge 需注意 multi-step agent 部分 Observation 缺少 output 導致評分失真的問題，建議以單一步驟或 tool call 為單位評分</li><li>從日常 tracing 建立 Dataset 並執行 Experiment，比較不同 model／tools／instruction 組合的表現，把觀測結果轉化為決策系統</li></ul>
       </section>
+      
+      <section class="detail-section" id="section-0"><h2>工作坊環境與工具準備</h2><p>工作坊要求學員攜帶可上網筆電並安裝 VS Code，透過 git clone 範例 repo（llm-o11y）並以 docker compose 啟動服務，講師現場提供 Azure OpenAI API Key。啟動後的服務入口包含 Bifrost AI Gateway（http://localhost:8080/）、Langfuse UI（http://localhost:3000/）與 MinIO UI（http://localhost:9001/），並於 VS Code Chat 中把模型指向 Bifrost Gateway 的 `/v1/responses` 端點。</p></section>
+<section class="detail-section" id="section-1"><h2>Bifrost 與 Langfuse 的角色分工</h2><p>Bifrost 是團隊/公司層級的 LLM Proxy，支援多模型、路由、預算與虛擬 API Key，並可透過 OTel tracing 串接 Langfuse 等觀測工具；Langfuse 則負責 tracing 收集分析、LLM-as-a-Judge、Dataset 與 Evaluation，且核心功能為開源（MIT）授權。講者將兩者關係總結為「Gateway 管模型與進出；Observability 管 tracing／分析」，最方便的做法是 CLI → AI Gateway → Observability 的串接方式。</p></section>
+<section class="detail-section" id="section-2"><h2>理解 Token 花費：從基礎觀測到工具與指令調整</h2><p>工作坊安排四個任務循序漸進：Task 1 觀察一次對話花費多少 Token 及花在哪裡；Task 2 比較同一 session 內多輪對話與使用 /compact、/clear 後的 Token 差異，理解 Cached Token 的效果；Task 3 檢視 `gen_ai.request.tools` 欄位，嘗試停用非必要工具（如 Browser、部分 extension、Notebooks）並比較新 session 的 Token 花費，但不建議關閉 Agent、search、Read File 等核心工具；Task 4 則檢查 AGENTS.md、copilot-instructions.md 等 instructions 來源，說明即使關閉所有工具，仍可能有 2000+ Token 的基礎花費。</p></section>
+<section class="detail-section" id="section-3"><h2>案例：評估是否導入 rtk 框架</h2><p>針對「同事說 rtk 好像會省 Token，要不要導入」的情境，講者提出六步驟評估框架：理解團隊需求與學習成本、了解 rtk 支援哪些指令（Know Your Stuff）、從 Langfuse 分析目前 Token 實際花在哪（Know Your Case）、透過 `rtk init --copilot` 實驗觀察變化並用 `rtk unpatch` 復原、評估是否真的省下 Token，最後與團隊對齊「為何覺得省 Token」的結論。並提出效率公式，強調工作坊前半段主要聚焦在 Token Cost 的觀察。</p></section>
+<section class="detail-section" id="section-4"><h2>LLM-as-a-Judge 與 Dataset/Experiment</h2><p>學員在 Langfuse 中建立 LLM connection 與 Evaluator（如 Helpfulness），並練習觀察評分與理由是否合理，特別留意 multi-step agent 因中間 Observation 缺乏 output 而導致評分失真的狀況。進一步練習使用 filter 針對特定 tool（如 apply_patch、run_in_terminal）建立客製 Evaluator。最後，講者示範如何從日常 tracing 建立 Dataset，並透過 Experiment 在同一份「考古題」上比較更換 model、tools 或 instruction 後的效果，將「觀測」轉化為「數據化決策」，並可延伸至 Spec-kit 流程或真實功能需求的長流程觀測。</p></section>
+    </div>
+    <aside class="detail-sidebar">
+      <div class="toc-card">
+        <h3>📍 本頁導覽</h3>
+        <nav class="toc-nav-list">
+          <a href="#section-summary" class="toc-link">議程摘要</a>
+<a href="#section-highlights" class="toc-link">重點整理</a>
+<a href="#section-0" class="toc-link">工作坊環境與工具準備</a>
+<a href="#section-1" class="toc-link">Bifrost 與 Langfuse 的角色分工</a>
+<a href="#section-2" class="toc-link">理解 Token 花費：從基礎觀測到工具與指令調整</a>
+<a href="#section-3" class="toc-link">案例：評估是否導入 rtk 框架</a>
+<a href="#section-4" class="toc-link">LLM-as-a-Judge 與 Dataset/Experiment</a>
+        </nav>
+      </div>
     </aside>
   </div>
   <nav class="talk-nav">
@@ -56,5 +68,6 @@
     <p>本頁內容為 AI 輔助整理之摘要，原始檔案：18-LLM O11y：從 Observability 到 Decision System (workshop).md。正確內容請以原始投影片為準。</p>
   </div>
 </footer>
+<script src="../assets/js/app.js?v=1.0.3"></script>
 </body>
 </html>

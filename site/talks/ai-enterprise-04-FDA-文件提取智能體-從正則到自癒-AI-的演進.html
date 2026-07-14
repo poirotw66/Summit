@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/style.css?v=1.0.5">
+<link rel="stylesheet" href="../assets/css/style.css?v=1.0.6">
 </head>
 <body>
 <div class="bg-glow" aria-hidden="true"></div>
@@ -28,11 +28,15 @@
 <main class="container detail-main">
   <div class="detail-grid">
     <div class="detail-content">
-      <section class="detail-section summary-box">
+      <section class="detail-section summary-box" id="section-summary">
         <h2>摘要</h2>
         <p>本講題針對處理 17 萬份 FDA 510(k) 醫材許可 PDF 文件時，因格式微調（如多一個空格）導致傳統正則與幾何定位程式失效、維運成本劇增的痛點，提出以 LangGraph 打造「自癒 Agent」的資料提取架構。該架構包含 Coder、Executor 與 Critic 三節點迴圈，透過 State 物件共享錯誤軌跡（error_trace）進行迭代修正。技術亮點在於「讓 AI 寫程式，而非直接給答案」，且驗證節點（Critic）刻意採用確定性的代碼規則引擎（非空檢查、格式正則、白名單）作為誠實錨點，以防 AI 誤判成功。實務上，此模式已成功結構化提取逾 4 萬份文件，並設有 5 次重試上限與人工審核分流，為企業提供高準確度、可測試且具備容錯自癒能力的次世代文件智能提取方案。</p>
       </section>
-      <section class="detail-section plain-section">
+      <section class="detail-section highlights-card" id="section-highlights">
+        <h2>重點整理</h2>
+        <ul class="highlights"><li>一次系統失效經驗：K-number 前多了一個空格，提取率從 95% 驟降至 23%，耗費三天工程工時修復</li><li>架構採兩條獨立路徑：IFU 適應症走 Tier 1→2→3 Fallback 管線，K-number 走自癒 Agent 自動產生程式碼</li><li>自癒 Agent 以 LangGraph 建構 Coder／Executor／Critic 三節點迴圈，並用 State 物件在重試間共享 error_trace</li><li>Critic 節點刻意採用確定性規則引擎而非 AI 判斷，避免 AI 誤判「成功」但結果為空或格式錯誤</li><li>已完成超過 4 萬份 FDA 文件的結構化提取，設有 5 次重試上限並在極端案例交還工程師人工審核</li></ul>
+      </section>
+      <section class="detail-section plain-section" id="section-images">
   <h2>重點圖片／架構圖</h2>
   <div class="diagram-grid">
     <figure class="diagram">
@@ -50,17 +54,26 @@
 </figure>
   </div>
 </section>
-      <section class="detail-section"><h2>背景與挑戰</h2><p>講者說明世博科技顧問長期處理美國 FDA 510(k) 醫材上市許可文件，累積 30 年、17 萬份公開 PDF 資料，作為「政府公開資料→可訂閱商業情報」服務的核心。一次因 K-number 前多出一個空格，導致提取率從 95% 驟降至 23%，耗費三天工程工時排查，讓團隊反思傳統規則式提取「規則永遠補不完」的根本限制。</p></section>
-<section class="detail-section"><h2>解法與架構</h2><p>團隊設計兩條獨立提取路徑：IFU 適應症資訊採用 Tier 1 → Tier 2 → Tier 3 Fallback 的三層管線加幾何座標定位；K-number 等需要應對格式劇烈變化的欄位則交給「自癒 Agent」，由 AI 自動產生、執行並驗證提取程式碼，兩條路徑服務不同目的、互不影響。</p></section>
-<section class="detail-section"><h2>技術重點</h2><p>自癒 Agent 以 LangGraph 打造 Coder、Executor、Critic 三節點迴圈：Coder 依據錯誤訊息重寫程式碼，前 4 次呼叫本地 LM Studio 模型，第 5 次起切換至 GPT-4o 作為 Fallback；Critic 節點刻意採用確定性規則引擎而非 AI 判斷，透過非空檢查、K-Number 格式正則與可選白名單三層驗證，確保「成功」的判定不會被 AI 誤導；State 物件則讓每次重試都能攜帶上一輪的 error_trace，形成越修越聰明的迭代迴圈。</p></section>
-<section class="detail-section"><h2>案例與成果</h2><p>透過 lab_01_regex.py（精準 Regex）、lab_02_geometric.py（幾何座標定位）與 auto_healing_extractor.py（自癒 Agent）三支腳本的逐步比較，展示 N/A 消失率如何隨架構演進而降低，最終累積完成超過 4 萬份 FDA 文件的結構化提取，並產出 final_universal_extractor.py 作為持久的工程資產。</p></section>
-<section class="detail-section"><h2>結論與啟示</h2><p>講者強調核心理念是「讓 AI 寫程式，而不是讓 AI 直接給答案」，因為程式碼可跑、可測試、可版控、可重用，而非一次性且難以驗證的 AI 回答。同時誠實面對自癒機制的限制，設有 5 次重試上限，遇到反覆失敗的極端案例會強制中斷並交還工程師人工審核，避免系統假裝成功。</p></section>
+      <section class="detail-section" id="section-0"><h2>背景與挑戰</h2><p>講者說明世博科技顧問長期處理美國 FDA 510(k) 醫材上市許可文件，累積 30 年、17 萬份公開 PDF 資料，作為「政府公開資料→可訂閱商業情報」服務的核心。一次因 K-number 前多出一個空格，導致提取率從 95% 驟降至 23%，耗費三天工程工時排查，讓團隊反思傳統規則式提取「規則永遠補不完」的根本限制。</p></section>
+<section class="detail-section" id="section-1"><h2>解法與架構</h2><p>團隊設計兩條獨立提取路徑：IFU 適應症資訊採用 Tier 1 → Tier 2 → Tier 3 Fallback 的三層管線加幾何座標定位；K-number 等需要應對格式劇烈變化的欄位則交給「自癒 Agent」，由 AI 自動產生、執行並驗證提取程式碼，兩條路徑服務不同目的、互不影響。</p></section>
+<section class="detail-section" id="section-2"><h2>技術重點</h2><p>自癒 Agent 以 LangGraph 打造 Coder、Executor、Critic 三節點迴圈：Coder 依據錯誤訊息重寫程式碼，前 4 次呼叫本地 LM Studio 模型，第 5 次起切換至 GPT-4o 作為 Fallback；Critic 節點刻意採用確定性規則引擎而非 AI 判斷，透過非空檢查、K-Number 格式正則與可選白名單三層驗證，確保「成功」的判定不會被 AI 誤導；State 物件則讓每次重試都能攜帶上一輪的 error_trace，形成越修越聰明的迭代迴圈。</p></section>
+<section class="detail-section" id="section-3"><h2>案例與成果</h2><p>透過 lab_01_regex.py（精準 Regex）、lab_02_geometric.py（幾何座標定位）與 auto_healing_extractor.py（自癒 Agent）三支腳本的逐步比較，展示 N/A 消失率如何隨架構演進而降低，最終累積完成超過 4 萬份 FDA 文件的結構化提取，並產出 final_universal_extractor.py 作為持久的工程資產。</p></section>
+<section class="detail-section" id="section-4"><h2>結論與啟示</h2><p>講者強調核心理念是「讓 AI 寫程式，而不是讓 AI 直接給答案」，因為程式碼可跑、可測試、可版控、可重用，而非一次性且難以驗證的 AI 回答。同時誠實面對自癒機制的限制，設有 5 次重試上限，遇到反覆失敗的極端案例會強制中斷並交還工程師人工審核，避免系統假裝成功。</p></section>
     </div>
     <aside class="detail-sidebar">
-      <section class="detail-section highlights-card">
-        <h2>重點整理</h2>
-        <ul class="highlights"><li>一次系統失效經驗：K-number 前多了一個空格，提取率從 95% 驟降至 23%，耗費三天工程工時修復</li><li>架構採兩條獨立路徑：IFU 適應症走 Tier 1→2→3 Fallback 管線，K-number 走自癒 Agent 自動產生程式碼</li><li>自癒 Agent 以 LangGraph 建構 Coder／Executor／Critic 三節點迴圈，並用 State 物件在重試間共享 error_trace</li><li>Critic 節點刻意採用確定性規則引擎而非 AI 判斷，避免 AI 誤判「成功」但結果為空或格式錯誤</li><li>已完成超過 4 萬份 FDA 文件的結構化提取，設有 5 次重試上限並在極端案例交還工程師人工審核</li></ul>
-      </section>
+      <div class="toc-card">
+        <h3>📍 本頁導覽</h3>
+        <nav class="toc-nav-list">
+          <a href="#section-summary" class="toc-link">議程摘要</a>
+<a href="#section-highlights" class="toc-link">重點整理</a>
+<a href="#section-images" class="toc-link">重點圖片</a>
+<a href="#section-0" class="toc-link">背景與挑戰</a>
+<a href="#section-1" class="toc-link">解法與架構</a>
+<a href="#section-2" class="toc-link">技術重點</a>
+<a href="#section-3" class="toc-link">案例與成果</a>
+<a href="#section-4" class="toc-link">結論與啟示</a>
+        </nav>
+      </div>
     </aside>
   </div>
   <nav class="talk-nav">
@@ -73,5 +86,6 @@
     <p>本頁內容為 AI 輔助整理之摘要，原始檔案：04-FDA 文件提取智能體：從正則到自癒 AI 的演進.pdf。正確內容請以原始投影片為準。</p>
   </div>
 </footer>
+<script src="../assets/js/app.js?v=1.0.3"></script>
 </body>
 </html>

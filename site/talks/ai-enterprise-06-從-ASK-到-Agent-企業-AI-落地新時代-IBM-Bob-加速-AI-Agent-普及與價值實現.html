@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/style.css?v=1.0.5">
+<link rel="stylesheet" href="../assets/css/style.css?v=1.0.6">
 </head>
 <body>
 <div class="bg-glow" aria-hidden="true"></div>
@@ -28,11 +28,15 @@
 <main class="container detail-main">
   <div class="detail-grid">
     <div class="detail-content">
-      <section class="detail-section summary-box">
+      <section class="detail-section summary-box" id="section-summary">
         <h2>摘要</h2>
         <p>本講題探討企業 AI 應用從傳統問答式（ASK）模式，邁向具備自主規劃、決策與執行能力的代理式 AI（Agentic AI）所面臨的落地與規模化挑戰。為加速 AI Agent 的普及與價值實現，講者介紹了 IBM 提出的「IBM Bob」——一套定位為「AI-Native SDLC Orchestrator」的架構。該架構的核心設計在於將多個 AI Agent 進行系統性協調與編排，使其協同運作於軟體開發生命週期（SDLC）的各個階段（如需求分析、程式碼撰寫、測試驗證與部署）。實務上的關鍵啟示是，企業不能僅依賴單一離散的 AI 工具，而必須建立統一的協調管理平台，透過 Agent 間的無縫協作，有效縮短開發週期、降低溝通摩擦，並大幅提升軟體交付的品質與整體工程效率。</p>
       </section>
-      <section class="detail-section plain-section">
+      <section class="detail-section highlights-card" id="section-highlights">
+        <h2>重點整理</h2>
+        <ul class="highlights"><li>講題核心命題是企業 AI 互動模式從「ASK」（單純問答）演進為具行動能力的「Agent」</li><li>IBM Bob 定位為「AI-Native SDLC Orchestrator」，協調軟體開發生命週期各階段的 AI Agent</li><li>目標是加速企業 AI Agent 的普及與價值實現</li></ul>
+      </section>
+      <section class="detail-section plain-section" id="section-images">
   <h2>重點圖片／架構圖</h2>
   <div class="diagram-grid">
     <figure class="diagram">
@@ -41,16 +45,24 @@
 </figure>
   </div>
 </section>
-      <section class="detail-section"><h2>背景與挑戰</h2><p>由於原始投影片文字層難以擷取，內容主要依據議程簡介與講者背景整理。講題背景設定在企業 AI 應用逐漸從單純的問答式「ASK」互動，轉向具備自主規劃與行動能力的 Agentic AI，企業需要新的方法加速這類 Agent 的落地與價值兌現。</p></section>
-<section class="detail-section"><h2>解法與架構</h2><p>IBM 提出「IBM Bob」，定位為「AI-Native SDLC Orchestrator」，用以協調軟體開發生命週期（SDLC）中各階段的 AI Agent 協作，藉此加速企業導入與擴展 AI Agent 應用。</p></section>
-<section class="detail-section"><h2>技術重點</h2><p>受限於投影片文字擷取不完整，技術細節無法從原始文字內容進一步還原，僅能確認其架構圖聚焦於 SDLC 各階段 Agent 的協調與整合。</p></section>
-<section class="detail-section"><h2>結論與啟示</h2><p>講者以「從 ASK 到 Agent」總結企業 AI 應用的典範轉移，強調唯有透過像 IBM Bob 這樣的協調層，才能讓企業更快速、更大規模地實現 AI Agent 的普及與價值。</p></section>
+      <section class="detail-section" id="section-0"><h2>背景與挑戰</h2><p>由於原始投影片文字層難以擷取，內容主要依據議程簡介與講者背景整理。講題背景設定在企業 AI 應用逐漸從單純的問答式「ASK」互動，轉向具備自主規劃與行動能力的 Agentic AI，企業需要新的方法加速這類 Agent 的落地與價值兌現。</p></section>
+<section class="detail-section" id="section-1"><h2>解法與架構</h2><p>IBM 提出「IBM Bob」，定位為「AI-Native SDLC Orchestrator」，用以協調軟體開發生命週期（SDLC）中各階段的 AI Agent 協作，藉此加速企業導入與擴展 AI Agent 應用。</p></section>
+<section class="detail-section" id="section-2"><h2>技術重點</h2><p>受限於投影片文字擷取不完整，技術細節無法從原始文字內容進一步還原，僅能確認其架構圖聚焦於 SDLC 各階段 Agent 的協調與整合。</p></section>
+<section class="detail-section" id="section-3"><h2>結論與啟示</h2><p>講者以「從 ASK 到 Agent」總結企業 AI 應用的典範轉移，強調唯有透過像 IBM Bob 這樣的協調層，才能讓企業更快速、更大規模地實現 AI Agent 的普及與價值。</p></section>
     </div>
     <aside class="detail-sidebar">
-      <section class="detail-section highlights-card">
-        <h2>重點整理</h2>
-        <ul class="highlights"><li>講題核心命題是企業 AI 互動模式從「ASK」（單純問答）演進為具行動能力的「Agent」</li><li>IBM Bob 定位為「AI-Native SDLC Orchestrator」，協調軟體開發生命週期各階段的 AI Agent</li><li>目標是加速企業 AI Agent 的普及與價值實現</li></ul>
-      </section>
+      <div class="toc-card">
+        <h3>📍 本頁導覽</h3>
+        <nav class="toc-nav-list">
+          <a href="#section-summary" class="toc-link">議程摘要</a>
+<a href="#section-highlights" class="toc-link">重點整理</a>
+<a href="#section-images" class="toc-link">重點圖片</a>
+<a href="#section-0" class="toc-link">背景與挑戰</a>
+<a href="#section-1" class="toc-link">解法與架構</a>
+<a href="#section-2" class="toc-link">技術重點</a>
+<a href="#section-3" class="toc-link">結論與啟示</a>
+        </nav>
+      </div>
     </aside>
   </div>
   <nav class="talk-nav">
@@ -63,5 +75,6 @@
     <p>本頁內容為 AI 輔助整理之摘要，原始檔案：06-從 ASK 到 Agent：企業 AI 落地新時代，IBM Bob 加速 AI Agent 普及與價值實現.pdf。正確內容請以原始投影片為準。</p>
   </div>
 </footer>
+<script src="../assets/js/app.js?v=1.0.3"></script>
 </body>
 </html>

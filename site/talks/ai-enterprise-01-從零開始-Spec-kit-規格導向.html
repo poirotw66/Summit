@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/style.css?v=1.0.5">
+<link rel="stylesheet" href="../assets/css/style.css?v=1.0.6">
 </head>
 <body>
 <div class="bg-glow" aria-hidden="true"></div>
@@ -28,22 +28,34 @@
 <main class="container detail-main">
   <div class="detail-grid">
     <div class="detail-content">
-      <section class="detail-section summary-box">
+      <section class="detail-section summary-box" id="section-summary">
         <h2>摘要</h2>
         <p>本工作坊針對企業導入 AI 輔助開發時，因需求、規格與程式碼不同步而產生的「規格偏離（Spec drift）」與頻繁返工之痛點，提出以 Spec-kit 實踐規格導向開發（Spec-driven Development, SDD）的解決方案。核心技術設計包含定義 Agent 行為準則的「憲法（Constitution）」機制，並透過 /specify、/plan、/tasks 到 /implement 的結構化工作流，在每一步驟設置 checkpoint 以確保開發進度的一致性。實務上，講者建議採用「強模型撰寫規格、弱模型（如 mini/nano）執行實作」的策略，以在降低 80-90% 運算成本的同時維持高品質產出。此外，將測試覆蓋率、代碼風格等驗收指標寫入規格，可使 Agent 自動完成驗收，為開發團隊建立起可重複、高預測性且防範 Spec drift 的軟體交付閉環。</p>
       </section>
-      
-      <section class="detail-section"><h2>背景與挑戰</h2><p>多數團隊在導入 AI 協助寫程式後，容易發生需求、規格、實作與測試互相不同步的「Spec drift」現象，導致返工與品質不穩定。本工作坊聚焦如何用 Spec-kit 與 Spec-driven Development（SDD）建立「規格先行、可執行驗證、持續對齊」的開發流程，讓 AI 與工程團隊使用同一份契約協作。</p></section>
-<section class="detail-section"><h2>實作演練</h2><p>講者以 YouBike 2.0 即時站點查詢器為 LAB 範例，示範透過 specify init 初始化專案、撰寫 Constitution 定義 agent 行為準則，再依序執行 /speckit.specify、/speckit.clarify、/speckit.plan、/speckit.tasks、/speckit.analyze 與 /speckit.implement，完整走過從規格到程式碼的流程。</p></section>
-<section class="detail-section"><h2>技術重點</h2><p>Spec-kit 是把 Spec-driven Development 落地成可重複 workflow 的工具，透過 script、template、checklist 讓 agent 可預測地產生規格，並在每一步設置 checkpoint 才能進入下一步。相較於 Vibe Coding，Spec 作為中間產物可作為 source of truth，有利於 review、拆分任務與多人協作。</p></section>
-<section class="detail-section"><h2>案例與心得</h2><p>講者分享 Spec-kit 核心流程對模型能力要求不高，用較便宜的 mini/nano 模型即可達到約九成效果，建議以強模型撰寫 Spec、以 mini 模型執行 implement 來控制成本。同時列舉常見失敗模式，例如尚未寫 Spec 就直接進入實作、規格修改後未同步更新 tasks，以及規格過於模糊導致 agent 自由發揮。</p></section>
-<section class="detail-section"><h2>結論與啟示</h2><p>講者總結三個可帶走的重點：spec → plan → tasks → implement 是可落地的流程；規格優先能降低返工成本；AI agent 要穩定運作，必須搭配 Spec 與驗收標準形成的迴圈。</p></section>
-    </div>
-    <aside class="detail-sidebar">
-      <section class="detail-section highlights-card">
+      <section class="detail-section highlights-card" id="section-highlights">
         <h2>重點整理</h2>
         <ul class="highlights"><li>Spec drift 是多數團隊導入 AI 開發後常見痛點：需求、規格、實作與測試不同步</li><li>核心流程為 /specify → /plan → /tasks → /implement，並以 Constitution 定義 agent 行為準則</li><li>Spec-kit 對模型能力要求不高，用 mini/nano 模型常可達約 90% 效果且成本僅 10–20%</li><li>常見失敗模式包括：未寫 Spec 就實作、規格改了但 tasks 未同步更新、規格太模糊</li><li>建議把測試覆蓋率、lint、style 等驗收標準直接寫入 Spec，讓 agent 自動驗收</li></ul>
       </section>
+      
+      <section class="detail-section" id="section-0"><h2>背景與挑戰</h2><p>多數團隊在導入 AI 協助寫程式後，容易發生需求、規格、實作與測試互相不同步的「Spec drift」現象，導致返工與品質不穩定。本工作坊聚焦如何用 Spec-kit 與 Spec-driven Development（SDD）建立「規格先行、可執行驗證、持續對齊」的開發流程，讓 AI 與工程團隊使用同一份契約協作。</p></section>
+<section class="detail-section" id="section-1"><h2>實作演練</h2><p>講者以 YouBike 2.0 即時站點查詢器為 LAB 範例，示範透過 specify init 初始化專案、撰寫 Constitution 定義 agent 行為準則，再依序執行 /speckit.specify、/speckit.clarify、/speckit.plan、/speckit.tasks、/speckit.analyze 與 /speckit.implement，完整走過從規格到程式碼的流程。</p></section>
+<section class="detail-section" id="section-2"><h2>技術重點</h2><p>Spec-kit 是把 Spec-driven Development 落地成可重複 workflow 的工具，透過 script、template、checklist 讓 agent 可預測地產生規格，並在每一步設置 checkpoint 才能進入下一步。相較於 Vibe Coding，Spec 作為中間產物可作為 source of truth，有利於 review、拆分任務與多人協作。</p></section>
+<section class="detail-section" id="section-3"><h2>案例與心得</h2><p>講者分享 Spec-kit 核心流程對模型能力要求不高，用較便宜的 mini/nano 模型即可達到約九成效果，建議以強模型撰寫 Spec、以 mini 模型執行 implement 來控制成本。同時列舉常見失敗模式，例如尚未寫 Spec 就直接進入實作、規格修改後未同步更新 tasks，以及規格過於模糊導致 agent 自由發揮。</p></section>
+<section class="detail-section" id="section-4"><h2>結論與啟示</h2><p>講者總結三個可帶走的重點：spec → plan → tasks → implement 是可落地的流程；規格優先能降低返工成本；AI agent 要穩定運作，必須搭配 Spec 與驗收標準形成的迴圈。</p></section>
+    </div>
+    <aside class="detail-sidebar">
+      <div class="toc-card">
+        <h3>📍 本頁導覽</h3>
+        <nav class="toc-nav-list">
+          <a href="#section-summary" class="toc-link">議程摘要</a>
+<a href="#section-highlights" class="toc-link">重點整理</a>
+<a href="#section-0" class="toc-link">背景與挑戰</a>
+<a href="#section-1" class="toc-link">實作演練</a>
+<a href="#section-2" class="toc-link">技術重點</a>
+<a href="#section-3" class="toc-link">案例與心得</a>
+<a href="#section-4" class="toc-link">結論與啟示</a>
+        </nav>
+      </div>
     </aside>
   </div>
   <nav class="talk-nav">
@@ -56,5 +68,6 @@
     <p>本頁內容為 AI 輔助整理之摘要，原始檔案：01-從零開始 Spec-kit 規格導向.md。正確內容請以原始投影片為準。</p>
   </div>
 </footer>
+<script src="../assets/js/app.js?v=1.0.3"></script>
 </body>
 </html>

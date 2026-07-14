@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/style.css?v=1.0.5">
+<link rel="stylesheet" href="../assets/css/style.css?v=1.0.6">
 </head>
 <body>
 <div class="bg-glow" aria-hidden="true"></div>
@@ -28,11 +28,15 @@
 <main class="container detail-main">
   <div class="detail-grid">
     <div class="detail-content">
-      <section class="detail-section summary-box">
+      <section class="detail-section summary-box" id="section-summary">
         <h2>摘要</h2>
         <p>本講題針對近三分之二企業 AI 專案難以從 PoC 試點走向正式上線的瓶頸，深入探討法規、成本與資安（如 Prompt 注入與資料外洩）三大核心挑戰。講者指出，Agentic AI 的風險觸發點已從「未授權邊界存取」轉變為「單步合法但整條行動鏈結果不合規」的執行期動態決策。為此，議程引用 Gartner AI TRiSM 治理框架，並提出 HPE Private Cloud AI 整合 NVIDIA AI Enterprise 與 DAXA.AI 治理安全平台的解決方案。其技術亮點在於採用「左移（Shift-Left）」架構，捨棄傳統機率式 AI 防火牆，改在資料進入 LLM 前透過安全代理（Safe Agent/Safe RAG）與政策引擎進行輸入語境的感知與過濾。實務上，此架構能有效防範 MCP 工具呼叫時的越權存取與隱私洩漏，協助企業打造安全、合規且可衡量 ROI 的 AI 智能工作流。</p>
       </section>
-      <section class="detail-section plain-section">
+      <section class="detail-section highlights-card" id="section-highlights">
+        <h2>重點整理</h2>
+        <ul class="highlights"><li>引用多份調查：66% 企業 AI 專案未能從試點走向正式上線；50% 政府將於 2026 年強制 AI 法規；99% 企業曾在 2025 年遭受 AI 服務攻擊；69% 企業缺乏追蹤 AI 使用與合規的系統</li><li>傳統 IT 資安的風險觸發點是「未授權存取」，但 Agentic AI 系統的風險觸發點變成「單步合法、但整條行動鏈結果不合規」</li><li>採用 Gartner AI TRiSM（AI Trust, Risk and Security Management）框架的四大治理支柱：可解釋性與監控、ModelOps、AI 應用安全、隱私與資料保護</li><li>HPE Private Cloud AI 整合 NVIDIA AI Enterprise 與 DAXA 治理安全平台，提供 Policy Engine、MCP Catalog、Guardian Agents 與 Safe Agent／Safe RAG 等防護機制</li><li>強調傳統機率式（Probabilistic）AI 防火牆無法有效防護 Agent 存取真實資料，須採取「Shift-Left」方式，從控制 LLM 輸出轉為控制 LLM 輸入的上下文</li></ul>
+      </section>
+      <section class="detail-section plain-section" id="section-images">
   <h2>重點圖片／架構圖</h2>
   <div class="diagram-grid">
     <figure class="diagram">
@@ -50,17 +54,26 @@
 </figure>
   </div>
 </section>
-      <section class="detail-section"><h2>背景與挑戰</h2><p>講者指出企業投入 AI 的成本持續增加，卻遲遲看不到明顯的正式上線成果，背後有三大壓力：法規方面，2026 年將有半數政府強制執行 AI 相關法規；成本方面，CIO/CFO 因缺乏 ROI 追蹤機制而不願擴大預算；資安方面，99% 企業在 2025 年曾遭受針對 AI 服務的攻擊，Prompt injection、jailbreak 與資料外洩已成主流威脅。</p></section>
-<section class="detail-section"><h2>風險模型的轉變</h2><p>講者比較傳統企業 IT、RAG AI 與 Agentic AI 系統的風險觸發點差異：傳統 IT 系統邏輯固定、風險觸發於未授權存取；RAG AI 的風險在於非預期的語境組裝；而 Agentic AI 系統由模型自行選擇工具、觸發工作流程並將輸出轉化為實際行動，風險觸發點變成「單一步驟合法，但整條行動鏈的結果不合規」，這使得傳統邊界防護（IAM／DLP／SIEM）不再足夠。</p></section>
-<section class="detail-section"><h2>治理框架與技術架構</h2><p>講者引用 Gartner AI TRiSM 框架，說明企業應建立可解釋性與監控、ModelOps、AI 應用安全、隱私與資料保護四大治理支柱，並依風險層級對 AI 資產進行分級治理。技術面則以 HPE Private Cloud AI 整合 NVIDIA AI Enterprise 軟體堆疊（如 NeMo Guardrails、Curator 等）與 DAXA 治理安全平台，提供 Policy Engine、MCP Catalog、Guardian Agents 及 Safe Inference／Safe Agent／Safe RAG 等機制，強調傳統機率式 AI 防火牆在 Agent 直接存取真實資料時容易失效，必須採取「Shift-Left」策略，從控制 LLM 輸出轉為在資料進入 LLM 前就進行資料感知與政策把關。</p></section>
-<section class="detail-section"><h2>案例與成果</h2><p>講者以工單系統情境示範：使用者於前端輸入技術支援資訊後，AI 系統透過受管的 MCP 工具存取後端工單資料並回傳工程師處理，展示資料感知治理如何嵌入實際企業工作流程。該架構已應用於政府電信、金融醫療、企業資料與科技研發等多個產業場景。</p></section>
-<section class="detail-section"><h2>結論與啟示</h2><p>講者總結，缺乏資料治理的 AI 不能稱作 AI，而是一種責任負債（liability）；企業唯有建立涵蓋資料、模型、程式碼、生態系、存取控制與稽核合規的完整安全架構，才能讓 AI 專案真正從試點走向正式上線並規模化採用。</p></section>
+      <section class="detail-section" id="section-0"><h2>背景與挑戰</h2><p>講者指出企業投入 AI 的成本持續增加，卻遲遲看不到明顯的正式上線成果，背後有三大壓力：法規方面，2026 年將有半數政府強制執行 AI 相關法規；成本方面，CIO/CFO 因缺乏 ROI 追蹤機制而不願擴大預算；資安方面，99% 企業在 2025 年曾遭受針對 AI 服務的攻擊，Prompt injection、jailbreak 與資料外洩已成主流威脅。</p></section>
+<section class="detail-section" id="section-1"><h2>風險模型的轉變</h2><p>講者比較傳統企業 IT、RAG AI 與 Agentic AI 系統的風險觸發點差異：傳統 IT 系統邏輯固定、風險觸發於未授權存取；RAG AI 的風險在於非預期的語境組裝；而 Agentic AI 系統由模型自行選擇工具、觸發工作流程並將輸出轉化為實際行動，風險觸發點變成「單一步驟合法，但整條行動鏈的結果不合規」，這使得傳統邊界防護（IAM／DLP／SIEM）不再足夠。</p></section>
+<section class="detail-section" id="section-2"><h2>治理框架與技術架構</h2><p>講者引用 Gartner AI TRiSM 框架，說明企業應建立可解釋性與監控、ModelOps、AI 應用安全、隱私與資料保護四大治理支柱，並依風險層級對 AI 資產進行分級治理。技術面則以 HPE Private Cloud AI 整合 NVIDIA AI Enterprise 軟體堆疊（如 NeMo Guardrails、Curator 等）與 DAXA 治理安全平台，提供 Policy Engine、MCP Catalog、Guardian Agents 及 Safe Inference／Safe Agent／Safe RAG 等機制，強調傳統機率式 AI 防火牆在 Agent 直接存取真實資料時容易失效，必須採取「Shift-Left」策略，從控制 LLM 輸出轉為在資料進入 LLM 前就進行資料感知與政策把關。</p></section>
+<section class="detail-section" id="section-3"><h2>案例與成果</h2><p>講者以工單系統情境示範：使用者於前端輸入技術支援資訊後，AI 系統透過受管的 MCP 工具存取後端工單資料並回傳工程師處理，展示資料感知治理如何嵌入實際企業工作流程。該架構已應用於政府電信、金融醫療、企業資料與科技研發等多個產業場景。</p></section>
+<section class="detail-section" id="section-4"><h2>結論與啟示</h2><p>講者總結，缺乏資料治理的 AI 不能稱作 AI，而是一種責任負債（liability）；企業唯有建立涵蓋資料、模型、程式碼、生態系、存取控制與稽核合規的完整安全架構，才能讓 AI 專案真正從試點走向正式上線並規模化採用。</p></section>
     </div>
     <aside class="detail-sidebar">
-      <section class="detail-section highlights-card">
-        <h2>重點整理</h2>
-        <ul class="highlights"><li>引用多份調查：66% 企業 AI 專案未能從試點走向正式上線；50% 政府將於 2026 年強制 AI 法規；99% 企業曾在 2025 年遭受 AI 服務攻擊；69% 企業缺乏追蹤 AI 使用與合規的系統</li><li>傳統 IT 資安的風險觸發點是「未授權存取」，但 Agentic AI 系統的風險觸發點變成「單步合法、但整條行動鏈結果不合規」</li><li>採用 Gartner AI TRiSM（AI Trust, Risk and Security Management）框架的四大治理支柱：可解釋性與監控、ModelOps、AI 應用安全、隱私與資料保護</li><li>HPE Private Cloud AI 整合 NVIDIA AI Enterprise 與 DAXA 治理安全平台，提供 Policy Engine、MCP Catalog、Guardian Agents 與 Safe Agent／Safe RAG 等防護機制</li><li>強調傳統機率式（Probabilistic）AI 防火牆無法有效防護 Agent 存取真實資料，須採取「Shift-Left」方式，從控制 LLM 輸出轉為控制 LLM 輸入的上下文</li></ul>
-      </section>
+      <div class="toc-card">
+        <h3>📍 本頁導覽</h3>
+        <nav class="toc-nav-list">
+          <a href="#section-summary" class="toc-link">議程摘要</a>
+<a href="#section-highlights" class="toc-link">重點整理</a>
+<a href="#section-images" class="toc-link">重點圖片</a>
+<a href="#section-0" class="toc-link">背景與挑戰</a>
+<a href="#section-1" class="toc-link">風險模型的轉變</a>
+<a href="#section-2" class="toc-link">治理框架與技術架構</a>
+<a href="#section-3" class="toc-link">案例與成果</a>
+<a href="#section-4" class="toc-link">結論與啟示</a>
+        </nav>
+      </div>
     </aside>
   </div>
   <nav class="talk-nav">
@@ -73,5 +86,6 @@
     <p>本頁內容為 AI 輔助整理之摘要，原始檔案：07-數據感知與安全治理：打造企業級 AI 智能工作流.pdf。正確內容請以原始投影片為準。</p>
   </div>
 </footer>
+<script src="../assets/js/app.js?v=1.0.3"></script>
 </body>
 </html>
