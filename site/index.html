@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=1.0.7">
+<link rel="stylesheet" href="assets/css/style.css?v=1.0.8">
 </head>
 <body>
 <div class="bg-glow" aria-hidden="true"></div>
@@ -17,6 +17,14 @@
     <p class="eyebrow">2026 台灣科技雙峰會 · 議程精讀</p>
     <h1>Summit 2026 議程摘要</h1>
     <p class="subtitle">AI Enterprise Summit 2026（31 場）＋ 2026 iThome 臺灣雲端大會（37 場）議程重點整理，含架構圖與關鍵投影片</p>
+    <div class="header-links">
+      <a href="https://aienterprise.ithome.com.tw/2026/agenda" class="header-link-btn" target="_blank">
+        🔗 AI Enterprise Summit 官方議程
+      </a>
+      <a href="https://cloudsummit.ithome.com.tw/2026/agenda" class="header-link-btn" target="_blank">
+        🔗 臺灣雲端大會 官方議程
+      </a>
+    </div>
   </div>
 </header>
 <main class="container">
@@ -38,6 +46,19 @@
     </div>
     <div class="featured-group" data-summit="ai-enterprise">
   <h3 class="featured-group-heading"><span class="dot" style="--dot:#6d5bd0"></span>AI Enterprise Summit 2026</h3>
+  <div class="section-guide-card">
+  <div class="section-guide-title">📖 AI Enterprise 精選導讀</div>
+  <div class="section-guide-content">
+    <div class="section-guide-block">
+      <h4>🔍 閱讀與觀看重點</h4>
+      <p>主要涵蓋金融級 AI 治理（Agentic OS）、多模型整合（MixRoute 路由）、生產環境可觀測性（OpenTelemetry 監控）、架構演進（Config-Driven 模式）與極致隱私保護（零資料接觸 ZDTA）五大議題。</p>
+    </div>
+    <div class="section-guide-block">
+      <h4>💡 專區總結 / Takeaway</h4>
+      <p>企業在導入 AI 時已不再滿足於簡單的問答，而是朝向「可稽核、低耦合、可控且安全」的自主代理（Agentic）系統演進。</p>
+    </div>
+  </div>
+</div>
   <div class="grid featured-grid">
     <a class="card card-featured" href="talks/ai-enterprise-24-金融級-Enterprise-Agentic-AI-架構設計-從-PoC-到-Agentic-Operating-System.html" data-summit="ai-enterprise" data-category="agentic-arch" data-tags="Agentic AI架構 金融業AI治理 Agentic RAG LLM評測 可觀測性" data-title="金融級 Enterprise Agentic AI 架構設計：從 PoC 到 Agentic Operating System" data-speaker="張維峻 Justin">
   <div class="card-cover"><img src="assets/images/ai-enterprise-24-金融級-Enterprise-Agentic-AI-架構設計-從-PoC-到-Agentic-Operating-System/cover.jpg" loading="lazy" alt=""></div>
@@ -98,6 +119,19 @@
 </div>
 <div class="featured-group" data-summit="cloud-edge">
   <h3 class="featured-group-heading"><span class="dot" style="--dot:#0f9d8e"></span>2026 iThome 臺灣雲端大會（Cloud Summit 2026）</h3>
+  <div class="section-guide-card">
+  <div class="section-guide-title">📖 臺灣雲端大會精選導讀</div>
+  <div class="section-guide-content">
+    <div class="section-guide-block">
+      <h4>🔍 閱讀與觀看重點</h4>
+      <p>主要涵蓋金融平台工程（MCP 與狀態機實踐）、共智時代的人機協作哲學（李智樺）、漏洞管理移轉（自主發現零日漏洞）、Kubernetes 自主運作（kagent A2A 協議）與國家級智慧城市（高雄主權 AI 案例）。</p>
+    </div>
+    <div class="section-guide-block">
+      <h4>💡 專區總結 / Takeaway</h4>
+      <p>本組精選著重於 AI 如何深入企業底層基礎設施（K8s 與雲端平台）與開發實務，推動系統架構與人機協同的雙重典範轉移。</p>
+    </div>
+  </div>
+</div>
   <div class="grid featured-grid">
     <a class="card card-featured" href="talks/cloud-edge-36-金融業生成式-AI-平台工程-以雲端原生架構打造可擴展的-Agentic-AI-中樞.html" data-summit="cloud-edge" data-category="agentic-arch" data-tags="Agentic AI 金融科技 RAG MCP AI 治理" data-title="金融業生成式 AI 平台工程：以雲端原生架構打造可擴展的 Agentic AI 中樞" data-speaker="張維峻 (Justin)">
   <div class="card-cover"><img src="assets/images/cloud-edge-36-金融業生成式-AI-平台工程-以雲端原生架構打造可擴展的-Agentic-AI-中樞/cover.jpg" loading="lazy" alt=""></div>
@@ -171,6 +205,19 @@
   <div id="categories">
     <section class="category-section" id="cat-agentic-arch" data-category="agentic-arch">
   <h2 class="category-heading">🤖 Agentic AI 架構與導入 <span class="category-heading-count">15 場</span></h2>
+  <div class="section-guide-card">
+  <div class="section-guide-title">📖 Agentic AI 架構專區導讀</div>
+  <div class="section-guide-content">
+    <div class="section-guide-block">
+      <h4>🔍 閱讀與觀看重點</h4>
+      <p>精選 12 場議程，涵蓋 IBM Bob、Orleans virtual actors 虛擬角色、kagent 協作、自癒（Self-healing）機制，以及透過 MCP (Model Context Protocol) 進行低摩擦 API 整合等前沿實務。</p>
+    </div>
+    <div class="section-guide-block">
+      <h4>💡 專區總結 / Takeaway</h4>
+      <p>本專區的核心在於「如何建構能獨立思考、自主修正並與外部系統對話的 Agent 網路」，開發焦點正式從 Prompt 轉向狀態機、事件驅動與人機協作協議。</p>
+    </div>
+  </div>
+</div>
   <div class="grid">
     <a class="card" href="talks/ai-enterprise-02-從導入-AI-到治理-Agent-企業負責任-AI-實務的新課題.html" data-summit="ai-enterprise" data-category="agentic-arch" data-tags="AI治理 Agentic AI 負責任AI 資安合規 OWASP" data-title="從導入 AI 到治理 Agent：企業負責任 AI 實務的新課題" data-speaker="林育宏 Frank">
   <div class="card-cover"><img src="assets/images/ai-enterprise-02-從導入-AI-到治理-Agent-企業負責任-AI-實務的新課題/cover.jpg" loading="lazy" alt=""></div>
@@ -341,6 +388,7 @@
 </section>
 <section class="category-section" id="cat-observability-data" data-category="observability-data">
   <h2 class="category-heading">📊 可觀測性、評測與資料治理 <span class="category-heading-count">7 場</span></h2>
+  
   <div class="grid">
     <a class="card" href="talks/ai-enterprise-07-數據感知與安全治理-打造企業級-AI-智能工作流.html" data-summit="ai-enterprise" data-category="observability-data" data-tags="AI TRiSM AI資安治理 Agentic AI風險 HPE" data-title="數據感知與安全治理：打造企業級 AI 智能工作流" data-speaker="張耀文 (Joy)">
   <div class="card-cover"><img src="assets/images/ai-enterprise-07-數據感知與安全治理-打造企業級-AI-智能工作流/cover.jpg" loading="lazy" alt=""></div>
@@ -423,6 +471,7 @@
 </section>
 <section class="category-section" id="cat-spec-driven" data-category="spec-driven">
   <h2 class="category-heading">🛠️ 規格驅動開發與 AI 協作 <span class="category-heading-count">10 場</span></h2>
+  
   <div class="grid">
     <a class="card" href="talks/ai-enterprise-01-從零開始-Spec-kit-規格導向.html" data-summit="ai-enterprise" data-category="spec-driven" data-tags="Spec-driven Development Spec-kit AI Agent 開發流程 Workshop" data-title="從零開始 Spec-kit 規格導向 (Workshop)" data-speaker="Che-Chia Chang">
   
@@ -538,6 +587,7 @@
 </section>
 <section class="category-section" id="cat-security" data-category="security">
   <h2 class="category-heading">🛡️ 企業資安與威脅防禦 <span class="category-heading-count">10 場</span></h2>
+  
   <div class="grid">
     <a class="card" href="talks/ai-enterprise-12-Cloudflare-AI-全戰略-從防禦爬蟲-Agent-實戰到-SASE-安全轉型.html" data-summit="ai-enterprise" data-category="security" data-tags="Cloudflare AI資安 Bot防禦 SASE AI Gateway" data-title="Cloudflare AI 全戰略 從防禦爬蟲, Agent 實戰到 SASE 安全轉型" data-speaker="Neo Kung">
   <div class="card-cover"><img src="assets/images/ai-enterprise-12-Cloudflare-AI-全戰略-從防禦爬蟲-Agent-實戰到-SASE-安全轉型/cover.jpg" loading="lazy" alt=""></div>
@@ -653,6 +703,7 @@
 </section>
 <section class="category-section" id="cat-cloud-infra" data-category="cloud-infra">
   <h2 class="category-heading">☁️ 雲端基礎設施與維運 <span class="category-heading-count">10 場</span></h2>
+  
   <div class="grid">
     <a class="card" href="talks/ai-enterprise-10-將算力化為行動力-企業級-AI-全棧整合與落地實踐.html" data-summit="ai-enterprise" data-category="cloud-infra" data-tags="AI全棧整合 Agentic AI GPU算力 AI落地實踐 PoC" data-title="將算力化為行動力：企業級 AI 全棧整合與落地實踐" data-speaker="Jason Kao">
   <div class="card-cover"><img src="assets/images/ai-enterprise-10-將算力化為行動力-企業級-AI-全棧整合與落地實踐/cover.jpg" loading="lazy" alt=""></div>
@@ -768,6 +819,7 @@
 </section>
 <section class="category-section" id="cat-industry" data-category="industry">
   <h2 class="category-heading">🏭 產業應用案例 <span class="category-heading-count">10 場</span></h2>
+  
   <div class="grid">
     <a class="card" href="talks/ai-enterprise-04-FDA-文件提取智能體-從正則到自癒-AI-的演進.html" data-summit="ai-enterprise" data-category="industry" data-tags="自癒Agent LangGraph 文件提取 GenAI 法規情報" data-title="FDA 文件提取智能體：從正則到自癒 AI 的演進" data-speaker="林志忠">
   <div class="card-cover"><img src="assets/images/ai-enterprise-04-FDA-文件提取智能體-從正則到自癒-AI-的演進/cover.jpg" loading="lazy" alt=""></div>
@@ -883,6 +935,19 @@
 </section>
 <section class="category-section" id="cat-transformation" data-category="transformation">
   <h2 class="category-heading">🚀 企業 AI 轉型策略與領導 <span class="category-heading-count">6 場</span></h2>
+  <div class="section-guide-card">
+  <div class="section-guide-title">📖 組織轉型與產業應用導讀</div>
+  <div class="section-guide-content">
+    <div class="section-guide-block">
+      <h4>🔍 閱讀與觀看重點</h4>
+      <p>精選 21 場議程，包含跨國 IT 大廠轉型組織 POD 藍圖、中小型企業導入 AI 的落地生存指南、安東尼（陳泳睿）的管理者決策現場的智能轉型實戰、Hahow for Business 逐字稿能力數據化，以及旅遊與醫療（SMART on FHIR）的 AI 落地案例。</p>
+    </div>
+    <div class="section-guide-block">
+      <h4>💡 專區總結 / Takeaway</h4>
+      <p>AI 的最終價值在於解決真實商業問題，本專區從組織變革、流程重塑和多個垂直產業實例，指明了從個人工具點狀應用到面狀企業進化的智慧轉型路線。</p>
+    </div>
+  </div>
+</div>
   <div class="grid">
     <a class="card" href="talks/ai-enterprise-17-從-CIO-大調查看企業-AI-轉型新方向-AI-原生的崛起.html" data-summit="ai-enterprise" data-category="transformation" data-tags="CIO大調查 企業AI轉型 AI原生 代理式AI IT預算" data-title="從 CIO 大調查看企業 AI 轉型新方向：AI 原生的崛起" data-speaker="王宏仁">
   <div class="card-cover"><img src="assets/images/ai-enterprise-17-從-CIO-大調查看企業-AI-轉型新方向-AI-原生的崛起/cover.jpg" loading="lazy" alt=""></div>

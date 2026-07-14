@@ -138,6 +138,64 @@ FEATURED_ORDER = list(FEATURED.keys())
 CATEGORY_LABEL = {cid: (emoji, label) for cid, emoji, label in CATEGORIES}
 
 
+GUIDE_CARDS = {
+    "featured-ai-enterprise": {
+        "title": "AI Enterprise 精選導讀",
+        "highlights": "主要涵蓋金融級 AI 治理（Agentic OS）、多模型整合（MixRoute 路由）、生產環境可觀測性（OpenTelemetry 監控）、架構演進（Config-Driven 模式）與極致隱私保護（零資料接觸 ZDTA）五大議題。",
+        "summary": "企業在導入 AI 時已不再滿足於簡單的問答，而是朝向「可稽核、低耦合、可控且安全」的自主代理（Agentic）系統演進。"
+    },
+    "featured-cloud-edge": {
+        "title": "臺灣雲端大會精選導讀",
+        "highlights": "主要涵蓋金融平台工程（MCP 與狀態機實踐）、共智時代的人機協作哲學（李智樺）、漏洞管理移轉（自主發現零日漏洞）、Kubernetes 自主運作（kagent A2A 協議）與國家級智慧城市（高雄主權 AI 案例）。",
+        "summary": "本組精選著重於 AI 如何深入企業底層基礎設施（K8s 與雲端平台）與開發實務，推動系統架構與人機協同的雙重典範轉移。"
+    },
+    "agentic-arch": {
+        "title": "Agentic AI 架構專區導讀",
+        "highlights": "精選 12 場議程，涵蓋 IBM Bob、Orleans virtual actors 虛擬角色、kagent 協作、自癒（Self-healing）機制，以及透過 MCP (Model Context Protocol) 進行低摩擦 API 整合等前沿實務。",
+        "summary": "本專區的核心在於「如何建構能獨立思考、自主修正並與外部系統對話的 Agent 網路」，開發焦點正式從 Prompt 轉向狀態機、事件驅動與人機協作協議。"
+    },
+    "dev-engineering": {
+        "title": "AI 輔助軟體工程導讀",
+        "highlights": "精選 10 場議程，深度拆解 SDD (Spec-Driven Development) 規格導向開發實戰、Vibe Coding 的利弊反思（何時該 Vibe，何時該寫 Spec）、工程師角色從寫代碼轉為設計驗證的改變，以及即時語音串流在 DevOps 中的應用。",
+        "summary": "AI 正在重構軟體交付的生命週期，促使開發團隊從無規格的「盲寫」走向以規格驅動（Spec-Driven）與自動驗收的現代化軟體交付閉環。"
+    },
+    "data-infra": {
+        "title": "現代數據底座與算力導讀",
+        "highlights": "精選 8 場議程，包括金融業 AI 數據底座構建、hicloud AI 算力雲與 GPU 調度、MS SQL 超大型資料庫的雲地自治遷移、以及為 AI 智能體設計的向量檢索（pgvector）與 RAG 檢索增強實務。",
+        "summary": "高階 AI 的表現高度依賴數據品質與算力彈性，本專區展示了如何將傳統數據資產與資料庫升級，為 Agent 打造高效、安全且低延遲的智能數據中樞。"
+    },
+    "sec-compliance": {
+        "title": "資安、合規與 AI 治理導讀",
+        "highlights": "精選 17 場議程，全面探討 AI 安全防禦，包括 Web/MDM 三層治理框架、Black Duck 生成代碼信任工程（5層安全檢驗）、防禦爬蟲 Agent 的 SASE 安全轉型、ISO 42001 與 TIPS 敏感資料治理、以及 Fortinet 的 AISOC 威脅防禦。",
+        "summary": "AI 在釋放生產力的同時也擴大了企業攻擊面，本專區為企業提供了從代碼產出、員工日常使用到雲端邊緣安全防禦的全方位合規治理與信任架構藍圖。"
+    },
+    "transformation": {
+        "title": "組織轉型與產業應用導讀",
+        "highlights": "精選 21 場議程，包含跨國 IT 大廠轉型組織 POD 藍圖、中小型企業導入 AI 的落地生存指南、安東尼（陳泳睿）的管理者決策現場的智能轉型實戰、Hahow for Business 逐字稿能力數據化，以及旅遊與醫療（SMART on FHIR）的 AI 落地案例。",
+        "summary": "AI 的最終價值在於解決真實商業問題，本專區從組織變革、流程重塑和多個垂直產業實例，指明了從個人工具點狀應用到面狀企業進化的智慧轉型路線。"
+    }
+}
+
+
+def render_guide_card(key: str) -> str:
+    g = GUIDE_CARDS.get(key)
+    if not g:
+        return ""
+    return f"""<div class="section-guide-card">
+  <div class="section-guide-title">📖 {esc(g['title'])}</div>
+  <div class="section-guide-content">
+    <div class="section-guide-block">
+      <h4>🔍 閱讀與觀看重點</h4>
+      <p>{esc(g['highlights'])}</p>
+    </div>
+    <div class="section-guide-block">
+      <h4>💡 專區總結 / Takeaway</h4>
+      <p>{esc(g['summary'])}</p>
+    </div>
+  </div>
+</div>"""
+
+
 def esc(s: str) -> str:
     return html.escape(s or "", quote=True)
 
@@ -183,7 +241,7 @@ def render_head(title: str, depth: int = 0) -> str:
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="{prefix}assets/css/style.css?v=1.0.7">
+<link rel="stylesheet" href="{prefix}assets/css/style.css?v=1.0.8">
 </head>
 """
 
@@ -235,6 +293,7 @@ def render_index(talks: list) -> str:
         cards = "\n".join(render_card(c, featured=True) for c in group)
         featured_groups_html.append(f"""<div class="featured-group" data-summit="{summit}">
   <h3 class="featured-group-heading"><span class="dot" style="--dot:{meta['color']}"></span>{esc(meta['name'])}</h3>
+  {render_guide_card("featured-" + summit)}
   <div class="grid featured-grid">
     {cards}
   </div>
@@ -256,6 +315,7 @@ def render_index(talks: list) -> str:
         cards = "\n".join(render_card(c) for c in items)
         sections_html.append(f"""<section class="category-section" id="cat-{cid}" data-category="{cid}">
   <h2 class="category-heading">{emoji} {esc(label)} <span class="category-heading-count">{len(items)} 場</span></h2>
+  {render_guide_card(cid)}
   <div class="grid">
     {cards}
   </div>
@@ -269,6 +329,14 @@ def render_index(talks: list) -> str:
     <p class="eyebrow">2026 台灣科技雙峰會 · 議程精讀</p>
     <h1>Summit 2026 議程摘要</h1>
     <p class="subtitle">AI Enterprise Summit 2026（{n_ai} 場）＋ 2026 iThome 臺灣雲端大會（{n_ce} 場）議程重點整理，含架構圖與關鍵投影片</p>
+    <div class="header-links">
+      <a href="https://aienterprise.ithome.com.tw/2026/agenda" class="header-link-btn" target="_blank">
+        🔗 AI Enterprise Summit 官方議程
+      </a>
+      <a href="https://cloudsummit.ithome.com.tw/2026/agenda" class="header-link-btn" target="_blank">
+        🔗 臺灣雲端大會 官方議程
+      </a>
+    </div>
   </div>
 </header>
 <main class="container">
