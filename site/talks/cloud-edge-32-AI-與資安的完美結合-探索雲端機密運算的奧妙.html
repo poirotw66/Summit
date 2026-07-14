@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/style.css?v=1.0.2">
+<link rel="stylesheet" href="../assets/css/style.css?v=1.0.3">
 </head>
 <body>
 <div class="bg-glow" aria-hidden="true"></div>
@@ -34,7 +34,7 @@
     <h2>重點整理</h2>
     <ul class="highlights"><li>資料有三態：靜態、傳輸、使用中，其中「使用中」資料最常被忽略，一旦載入記憶體即為明文</li><li>Rowhammer 攻擊最快可在極短時間內透過位元翻轉取得系統控制權</li><li>AWS Nitro System 將虛擬化管理與 I/O 移至專用硬體，Nitro Enclaves 提供獨立、高度受限的隔離執行環境</li><li>機密運算的四個基礎元件為 TEE、Measurement、Attestation、Key Release，須通過證明的程式碼才能取得解密金鑰</li><li>AWS、Azure、GCP 三雲機密運算各有定位：AWS 強調金鑰與敏感資料保護、Azure 提供完整企業工具箱、GCP 專攻多方資料合作與 AI/GPU 機密運算</li></ul>
   </section>
-  <section class="detail-section">
+  <section class="detail-section plain-section">
   <h2>重點圖片／架構圖</h2>
   <div class="diagram-grid">
     <figure class="diagram">
@@ -58,8 +58,8 @@
 <section class="detail-section"><h2>三大雲端平台的機密運算比較</h2><p>AWS 從 Nitro System 底層隔離設計出發，依需求選擇 Enclave（應用層隔離）或 SEV-SNP（VM 記憶體加密），提供 always-on 的基礎保護且無額外費用，強項在私鑰保護、數位簽章與敏感資料解密。Azure 則從啟用 Confidential VM 開始，強調負載平移的便利性，涵蓋 AMD SEV-SNP、Intel TDX、Intel SGX、AKS Confidential Containers 與 Confidential GPU，適合政府、金融、醫療等既有 VM 搬遷情境。GCP 則主打多方資料合作與 AI/GPU 機密運算，透過 Confidential Space 與 NVIDIA H100 Confidential GPU 支援跨組織分析與隱私保護資料合作，但採額外收費模式。</p></section>
 <section class="detail-section"><h2>機密運算的防護邊界</h2><p>講者也提醒機密運算並非萬能：它能防禦雲端或主機層高權限操作人員、Hypervisor/Host OS 層的存取風險、惡意管理流程與多方資料合作的揭露風險，但無法保證防止應用程式本身的漏洞（如 SQL Injection、RCE）、資料離開 TEE 後的濫用，以及可降低但無法完全消除的 Side-channel 攻擊，因此企業仍需搭配應用安全與資料最小化設計。</p></section>
   <nav class="talk-nav">
-    <a class="nav-link" href="cloud-edge-31-從數位轉型到-AI-創新-旅遊業的智慧轉型之路.html">← 從數位轉型到 AI 創新：旅遊業的智慧轉型之路</a>
-    <a class="nav-link nav-next" href="cloud-edge-33-FinOps-不只是看後照鏡開車.html">FinOps 不只是看後照鏡開車 →</a>
+    <a class="nav-link" href="cloud-edge-31-從數位轉型到-AI-創新-旅遊業的智慧轉型之路.html"><span class="nav-dir">← 上一場議程</span><span class="nav-title">從數位轉型到 AI 創新：旅遊業的智慧轉型之路</span></a>
+    <a class="nav-link nav-next" href="cloud-edge-33-FinOps-不只是看後照鏡開車.html"><span class="nav-dir">下一場議程 →</span><span class="nav-title">FinOps 不只是看後照鏡開車</span></a>
   </nav>
 </main>
 <footer class="site-footer">

@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/style.css?v=1.0.2">
+<link rel="stylesheet" href="../assets/css/style.css?v=1.0.3">
 </head>
 <body>
 <div class="bg-glow" aria-hidden="true"></div>
@@ -34,7 +34,7 @@
     <h2>重點整理</h2>
     <ul class="highlights"><li>公司擁有35年以上產品演進、500+微服務、2000+ repositories、100+整合合作團隊，規模龐大導致AI落地最大瓶頸在於「餵知識」而非工具本身（Context Engineering）。</li><li>自建 Code Search MCP：以 Tree-sitter AST 解析程式碼、寫入 OpenSearch，結合 embedding 與 keyword 搜尋並加上權限控管，供 IDE、Claude Code、Claude Desktop 等工具查詢，日活躍使用者250+，每月索引成本僅約200美元。</li><li>打造基於 Claude Code Skills 的 AI SDLC Orchestrator，涵蓋需求釐清、設計、實作、驗證、部署五階段；但曾因名稱對應不全、缺乏設計指引、系統關聯複雜而讓AI產生幻覺。</li><li>建立 Service Map，結合靜態分析（gRPC、Kafka、Protobuf、API）與動態分析（Runtime Log、OpenTelemetry、Agent Gateway Log）雙軌並進，還原跨服務的真實拓樸全貌。</li><li>推出企業版助理「Shrimp」進駐 Teams，協助開 Sprint、Review PR；漏洞修補交給AI後每月產生4,000+件自動漏洞修補PR；並以 Triage/Investigation 雙 Agent 處理 Support Case，準確度隨知識層數（Log→Team Knowledge→歷史Case比對）逐層提升。</li></ul>
   </section>
-  <section class="detail-section">
+  <section class="detail-section plain-section">
   <h2>重點圖片／架構圖</h2>
   <div class="diagram-grid">
     <figure class="diagram">
@@ -58,8 +58,8 @@
 <section class="detail-section"><h2>Service Map：重建跨服務的知識全貌</h2><p>為了解決系統關聯複雜的問題，團隊打造 Service Map，透過靜態分析（gRPC、Kafka、Protobuf、API）與動態分析（Runtime Log、Service traffic、OpenTelemetry log、Agent gateway log）雙軌並進，反推出真實流量下的完整拓樸，讓AI可以從任一節點理解上下游關係。團隊也將過去人類仰賴 Wiki、會議傳承的知識，重建成AI看得懂的形式，把導航方式從「Wiki + Meetings」轉換為「Code Search + Service Map + Team/Service Skills」。</p></section>
 <section class="detail-section"><h2>從團隊協作邁向 Agentic AI Platform</h2><p>團隊進一步打造可擴展、可控、安全並貼合內部系統的 Agent 平台「Shrimp」，具備長期記憶、網頁搜尋、多人協作、任務排程與隔離環境等功能，並串接 Microsoft 365、GitHub、Code Search/KB、Grafana、Jira/Confluence、Microsoft Teams 等既有系統。Shrimp 進駐 Teams 成為團隊助理，協助開 Sprint、Review PR，並強調 Token 不落地、每輪注入資安意識的憑證治理原則。實戰案例包括 Blackduck/Trivy 掃到漏洞後自動發 PR，每月產生4,000+件自動漏洞修補PR，開發團隊只需審查變更；以及以 Triage Agent 與 Investigation Agent 兩個 Agent 處理難以自動化的 Support Case，透過比對歷史案件的症狀與根因，讓AI從「只有log只能瞎猜」逐步進化到「懂產品」再到「能與歷史案件比對推理」，準確度隨知識層數提升。</p></section>
   <nav class="talk-nav">
-    <a class="nav-link" href="ai-enterprise-08-Observability-Architecture-for-Enterprise-Agentic-AI-Agents.html">← Observability Architecture for Enterprise Agentic AI Agents</a>
-    <a class="nav-link nav-next" href="ai-enterprise-10-將算力化為行動力-企業級-AI-全棧整合與落地實踐.html">將算力化為行動力：企業級 AI 全棧整合與落地實踐 →</a>
+    <a class="nav-link" href="ai-enterprise-08-Observability-Architecture-for-Enterprise-Agentic-AI-Agents.html"><span class="nav-dir">← 上一場議程</span><span class="nav-title">Observability Architecture for Enterprise Agentic AI Agents</span></a>
+    <a class="nav-link nav-next" href="ai-enterprise-10-將算力化為行動力-企業級-AI-全棧整合與落地實踐.html"><span class="nav-dir">下一場議程 →</span><span class="nav-title">將算力化為行動力：企業級 AI 全棧整合與落地實踐</span></a>
   </nav>
 </main>
 <footer class="site-footer">

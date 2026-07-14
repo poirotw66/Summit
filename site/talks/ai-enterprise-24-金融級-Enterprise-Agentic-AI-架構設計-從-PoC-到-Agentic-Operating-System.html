@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/style.css?v=1.0.2">
+<link rel="stylesheet" href="../assets/css/style.css?v=1.0.3">
 </head>
 <body>
 <div class="bg-glow" aria-hidden="true"></div>
@@ -34,7 +34,7 @@
     <h2>重點整理</h2>
     <ul class="highlights"><li>金融場景的AI核心問題不是「能不能回答」，而是「能不能被信任」，需具備查證、評估證據充分性、不確定時拒答、高風險升級、留下Agent Trace五項能力</li><li>PoC常卡關的三個突破點：系統孤島改採MCP/Tool Registry、線性RAG改為具自我校正能力的Agentic RAG、黑盒AI改為具備Agent Trace/Policy/Judge的可治理架構</li><li>架構核心是Enterprise Agentic AI Control Plane，由Agent Registry、Policy Engine、Tools/Tool Registry、Knowledge Layer與Evaluation/Trace五大模組組成，並以15+個Agent依責任分組而非堆疊微服務</li><li>推理流程設有Evidence Boundary、Policy Boundary、Human Boundary三道防線，任一防線失敗即觸發Rewrite Query、Refuse或Human-in-the-loop升級</li><li>以100題低風險IT/流程任務進行LLM-as-a-Judge內部評測，加權準確率達98%、0題不安全回答，並在第一個落地場景（內外勤IT資訊服務入口）驗證後，規劃延伸至衍生性商品條款查詢、KYC規範等金融場景</li></ul>
   </section>
-  <section class="detail-section">
+  <section class="detail-section plain-section">
   <h2>重點圖片／架構圖</h2>
   <div class="diagram-grid">
     <figure class="diagram">
@@ -58,8 +58,8 @@
 <section class="detail-section"><h2>Agentic RAG與三道推理防線</h2><p>相較於傳統RAG僅是「檢索→生成」的單向流程，Agentic RAG是具自我校正能力的工作流，包含Query Router判斷來源以避免找錯資料、Evidence Validator檢查證據是否足夠以防止幻覺、Rewrite_query在證據不足時自動重寫查詢，以及Refusal Agent在不該回答時明確拒答。推理過程設有三道防線：Gate 1 Evidence Boundary檢查證據充分性與來源一致性，失敗則重寫查詢或拒答；Gate 2 Policy Boundary檢查RBAC、PII過濾與拒答政策，失敗則拒答並記錄違規；Gate 3 Human Boundary判斷是否涉及高風險決策需人類介入，失敗則觸發Human-in-the-loop。講者強調Agentic AI的核心價值不是完全自主，而是在可控邊界內自主。</p></section>
 <section class="detail-section"><h2>評測成效與落地場景</h2><p>團隊以100題低風險IT/流程任務（涵蓋高頻FAQ、同義改寫、應拒答題、陷阱題與邊界題）進行LLM-as-a-Judge評測並輔以人工抽查20題，結果顯示完整Agentic RAG流程的加權準確率達98%、嚴格正確率96%、0題不安全回答，優於單純Hybrid Search（87.0%）與Naive RAG（83.5%）的Ablation比較結果，延遲表現為平均3.56秒、P50 3.59秒、P95 6.19秒。第一個落地場景選定內外勤IT資訊服務入口，作為驗證Agentic Runtime生產能力的低風險、高頻、流程明確的場景，並規劃將Evidence、Policy、Judge、Trace四項金融級能力延伸至衍生性商品條款查詢、KYC規範確認、防止不當銷售(Mis-selling)等金融場景。演講總結，金融業AI競爭的下一階段不在於模型大小，而在於能否把AI工程化為可營運、可治理、可複用的Agentic Operating System。</p></section>
   <nav class="talk-nav">
-    <a class="nav-link" href="ai-enterprise-23-自研-On-prem-AI-Agent-搭配企業知識庫與建築營造產業應用可能性.html">← 自研 On-prem AI Agent 搭配企業知識庫與建築營造產業應用可能性</a>
-    <a class="nav-link nav-next" href="ai-enterprise-25-LLM-O11y-從-Observability-到-Decision-System.html">LLM O11y：從 Observability 到 Decision System →</a>
+    <a class="nav-link" href="ai-enterprise-23-自研-On-prem-AI-Agent-搭配企業知識庫與建築營造產業應用可能性.html"><span class="nav-dir">← 上一場議程</span><span class="nav-title">自研 On-prem AI Agent 搭配企業知識庫與建築營造產業應用可能性</span></a>
+    <a class="nav-link nav-next" href="ai-enterprise-25-LLM-O11y-從-Observability-到-Decision-System.html"><span class="nav-dir">下一場議程 →</span><span class="nav-title">LLM O11y：從 Observability 到 Decision System</span></a>
   </nav>
 </main>
 <footer class="site-footer">

@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/style.css?v=1.0.2">
+<link rel="stylesheet" href="../assets/css/style.css?v=1.0.3">
 </head>
 <body>
 <div class="bg-glow" aria-hidden="true"></div>
@@ -41,8 +41,8 @@
 <section class="detail-section"><h2>專案爆炸與資安風險</h2><p>隨著各團隊快速產出服務，專案數量從 5x、2xx 爆炸成長到 1xxx 個，大量 CLI、MCP、Agent 要串接內部系統，認證與授權管理成為無法回避的問題。演講點出被 AI 放大的三大資安風險：各服務認證各自造輪子、金鑰寫死流入 Git（最致命）、以及 Token 發出後完全失控，無法追蹤持有者、到期時間或撤銷。</p></section>
 <section class="detail-section"><h2>四道解法：認證閘道、Token 治理、MCP Gateway 與 Marketplace</h2><p>公司透過統一認證閘道，讓 CLI、MCP Server、AI Agent 與內部服務都走 OAuth 2.0/OIDC，並依場景對應不同流程（Web 用 Auth Code + PKCE，CLI/Agent 用 Device Flow，服務對服務用 Client Credentials）；同時導入 RFC 8707 Resource Indicators 讓每個 MCP 視為獨立 OAuth Resource，做到最小權限與可查詢、可撤銷；再透過 MCP Gateway 以 `mcp-oauth2` plugin 驗證 JWT 並轉發身分標頭；最後在 AI Marketplace 上架前執行 Coverity（SAST）、Trivy（SCA）與 AI Code Review 三道並行掃描，全綠才放行。</p></section>
   <nav class="talk-nav">
-    <a class="nav-link" href="cloud-edge-08-雲端資安化繁為簡-無代理架構與-AI-驅動的次世代防禦雙引擎.html">← 雲端資安化繁為簡：無代理架構與 AI 驅動的次世代防禦雙引擎</a>
-    <a class="nav-link nav-next" href="cloud-edge-10-共智時代-The-Next-Step.html">共智時代：The Next Step →</a>
+    <a class="nav-link" href="cloud-edge-08-雲端資安化繁為簡-無代理架構與-AI-驅動的次世代防禦雙引擎.html"><span class="nav-dir">← 上一場議程</span><span class="nav-title">雲端資安化繁為簡：無代理架構與 AI 驅動的次世代防禦雙引擎</span></a>
+    <a class="nav-link nav-next" href="cloud-edge-10-共智時代-The-Next-Step.html"><span class="nav-dir">下一場議程 →</span><span class="nav-title">共智時代：The Next Step</span></a>
   </nav>
 </main>
 <footer class="site-footer">

@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/style.css?v=1.0.2">
+<link rel="stylesheet" href="../assets/css/style.css?v=1.0.3">
 </head>
 <body>
 <div class="bg-glow" aria-hidden="true"></div>
@@ -34,7 +34,7 @@
     <h2>重點整理</h2>
     <ul class="highlights"><li>傳統視覺 AI（VM）僅能做物件辨識、需事先設定規則，只能辨識簡易事件；VLM 結合生成式語言模型後可判斷交通事故、人員受傷、車道影響等複雜情境</li><li>高雄主權 AI VLM 平台整合超過 400 支攝影機、60+ 影像來源、130+ 事件類型與 2 萬多筆資料，跨局處共享打破過去各局處 Silo AI 的困境</li><li>高雄主權 AI 2.0 導入 Cosmos Reason 2，具備多張照片推理能力，能分析交通壅塞的可能成因（施工、事故、淹水、坑洞等）</li><li>以「Real to Sim」三階段打造數位孿生：3D Gaussian Splatting + LiDAR 建立 2cm 級路口模型、Omniverse + Cosmos Transfer 生成模擬情境資料、訓練 Cosmos Reason 2 進行 Chain of Thought 推理</li><li>透過 MCP（Model Context Protocol）與 API 整合外部服務（如 CMS 推播改道通知、Google Maps 尋找替代道路），實現 Sim to Real 的 Agentic AI 應用</li></ul>
   </section>
-  <section class="detail-section">
+  <section class="detail-section plain-section">
   <h2>重點圖片／架構圖</h2>
   <div class="diagram-grid">
     <figure class="diagram">
@@ -58,8 +58,8 @@
 <section class="detail-section"><h2>Real to Sim：建立城市數位孿生</h2><p>燈塔計畫透過三個階段將真實的高雄「搬進」數位世界：第一階段以 3D Gaussian Splatting 結合 LiDAR 掃描與既有 CCTV、街景、車載影像，重建 2 公分等級的路口 3D 數位孿生，包含號誌、車道與建物；第二階段運用 Omniverse、Cosmos Transfer 與專家模擬系統（VISSIM/SUMO）人工製造下雨、淹水、車禍等真實世界罕見的情境資料；第三階段訓練 Cosmos Reason 2 進行 Chain of Thought 推理，讓 AI 學會判斷城市物理原則、推導事件成因並提出建議，如同自駕車與機器人先在數位孿生中反覆演練再服務真實世界。</p></section>
 <section class="detail-section"><h2>Sim to Real：Agentic AI 與生態系整合</h2><p>訓練完成的 Cosmos Reason 2 產生建議後，可透過 MCP（Model Context Protocol）與 API 整合外部服務落地執行，例如以 CMS 自動推播訊息至各路口通知提早改道，或調用 Google Maps 服務尋找最佳替代道路。講者也提到未來可望與高雄科學園區周邊企業的供應鏈與物料調度系統協同，引導車輛分流或錯峰出行。最後指出高雄具備從能源（電力充裕、南電北送）、晶片（台積電及半導體S廊帶生態系）、基礎設施（NVIDIA Taipei-1、鴻海算力中心）、AI 模型層到應用層的完整生態系，是全球少有能支撐此類主權 AI 建設的場域。</p></section>
   <nav class="talk-nav">
-    <a class="nav-link" href="cloud-edge-26-國泰雲端碳管理平台-金融科技賦能金融業實現碳管理.html">← 國泰雲端碳管理平台—金融科技賦能金融業實現碳管理</a>
-    <a class="nav-link nav-next" href="cloud-edge-28-從-Cloud-First-到-Agent-First-企業-IT-為何要提前為-AI-Agent-打底.html">從 Cloud First 到 Agent First：企業 IT 為何要提前為 AI Agent 打底 →</a>
+    <a class="nav-link" href="cloud-edge-26-國泰雲端碳管理平台-金融科技賦能金融業實現碳管理.html"><span class="nav-dir">← 上一場議程</span><span class="nav-title">國泰雲端碳管理平台—金融科技賦能金融業實現碳管理</span></a>
+    <a class="nav-link nav-next" href="cloud-edge-28-從-Cloud-First-到-Agent-First-企業-IT-為何要提前為-AI-Agent-打底.html"><span class="nav-dir">下一場議程 →</span><span class="nav-title">從 Cloud First 到 Agent First：企業 IT 為何要提前為 AI Agent 打底</span></a>
   </nav>
 </main>
 <footer class="site-footer">

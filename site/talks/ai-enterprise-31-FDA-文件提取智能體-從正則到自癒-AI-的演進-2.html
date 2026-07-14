@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/style.css?v=1.0.2">
+<link rel="stylesheet" href="../assets/css/style.css?v=1.0.3">
 </head>
 <body>
 <div class="bg-glow" aria-hidden="true"></div>
@@ -34,7 +34,7 @@
     <h2>重點整理</h2>
     <ul class="highlights"><li>處理對象是 30 年來累積、公開的 17 萬份 FDA 510(k) 醫材許可文件，人工審閱一份要 120 分鐘，AI 提取僅需 5 秒，效率差距達 1,440 倍</li><li>一次真實事故：K-number 前多了一個空格，導致提取率從 95% 驟降至 23%，耗費三天工程工時修復，促成架構反思</li><li>提出雙路架構：IFU 適應症走 Tier 1 → Tier 2 → Tier 3 三層 Fallback 管線，K-number 則交給「自癒 Agent」讓 AI 自動產出程式碼</li><li>自癒架構由 Coder（重新生成程式碼）、Executor（exec() 執行並捕捉 traceback）、Critic（驗證輸出格式決定重試或結束）三節點組成，並用 LangGraph 的 State 物件在重試間共享 error_trace，最多重試 5 次未收斂則轉人工審核</li><li>核心觀念轉換：讓 AI「寫程式」而非「直接給答案」，程式碼作為可跑、可測、可版控的持久工程資產，已完成 4 萬多份文件的結構化提取</li></ul>
   </section>
-  <section class="detail-section">
+  <section class="detail-section plain-section">
   <h2>重點圖片／架構圖</h2>
   <div class="diagram-grid">
     <figure class="diagram">
@@ -58,8 +58,8 @@
 <section class="detail-section"><h2>自癒工作流與 LangGraph 的角色</h2><p>自癒架構由 Coder、Executor、Critic 三個角色組成一個不斷迭代的迴圈：Coder 讀取 error_trace 後重新生成程式碼，Executor 用 exec() 執行並捕捉 traceback，Critic 驗證輸出格式決定結束或重試，最多重試 5 次仍未收斂就轉入人工審核。講者特別說明為何選用 LangGraph 而非單純的 while loop——因為 while loop 每次重試都會遺失上次的報錯內容，而 LangGraph 的 State 物件能讓 error_trace 在重試間共享，並透過條件路由決定 Critic 通過後結束或攜帶報錯訊息退回 Coder，讓系統在每次失敗後變得更聰明。有趣的是，最終自癒迴圈自己選擇了「幾何座標定位」而非單純正則表達式作為 K-number 的提取方式，這並非工程師預先設計的邏輯。</p></section>
 <section class="detail-section"><h2>適用場景、風險與下一步</h2><p>講者總結這套架構的核心觀念轉換是「讓 AI 寫程式，而不是讓 AI 直接給答案」，因為程式碼可跑、可測試、可重用，是持久的工程資產而非一次性回答，目前已完成 4 萬多份 FDA 文件的結構化處理。他也坦言目前的限制：AI 生成的程式透過 exec() 執行，僅開放 pdfplumber、re、pd、os 四個模組（os 仍在白名單中，需要後續加入靜態掃描），且修好 A 壞 B、Critic 誤判通過等風險仍待解決；只有在資料量大、格式混亂、且抽錯代價高的情境下，才值得投入自建這樣的自癒系統。</p></section>
   <nav class="talk-nav">
-    <a class="nav-link" href="ai-enterprise-30-零資料接觸架構-讓-LLM-讀懂企業資料但永遠摸不到它.html">← 零資料接觸架構：讓 LLM 讀懂企業資料但永遠摸不到它</a>
-    <span></span>
+    <a class="nav-link" href="ai-enterprise-30-零資料接觸架構-讓-LLM-讀懂企業資料但永遠摸不到它.html"><span class="nav-dir">← 上一場議程</span><span class="nav-title">零資料接觸架構：讓 LLM 讀懂企業資料但永遠摸不到它</span></a>
+    <div class="nav-placeholder"></div>
   </nav>
 </main>
 <footer class="site-footer">

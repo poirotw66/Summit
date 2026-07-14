@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/style.css?v=1.0.2">
+<link rel="stylesheet" href="../assets/css/style.css?v=1.0.3">
 </head>
 <body>
 <div class="bg-glow" aria-hidden="true"></div>
@@ -34,7 +34,7 @@
     <h2>重點整理</h2>
     <ul class="highlights"><li>核心矛盾：企業想要 LLM 理解資料、自然語言查詢報表，卻害怕資料外流、Prompt injection 洩密與合規風險</li><li>ZDTA 三層架構：Schema-Only Context（只給表結構不給資料）、Query Proxy（LLM 產生查詢由中間層代為安全執行）、Result Sanitizer（結果脫敏聚合後才回傳）</li><li>Query Proxy 以 AST 解析（而非字串比對）做 SQL 白名單驗證、欄位級權限與查詢複雜度限制，防止 Injection</li><li>準確度實測：RAG（含資料）92 分、ZDTA（Schema Only）78 分、ZDTA + Few-shot 88 分，顯示搭配 Few-shot 範例可大幅補回準確度</li><li>延遲原本因 Schema 注入增加約 800ms，透過 Schema cache 與 Query plan cache 降至約 200ms 額外延遲</li></ul>
   </section>
-  <section class="detail-section">
+  <section class="detail-section plain-section">
   <h2>重點圖片／架構圖</h2>
   <div class="diagram-grid">
     <figure class="diagram">
@@ -58,8 +58,8 @@
 <section class="detail-section"><h2>技術實作與 Demo</h2><p>團隊的技術堆疊包含 Schema Extractor（pg_dump --schema-only 搭配自訂 annotation parser）、LLM Layer（Claude API 搭配 Function Calling 與 System Prompt 注入 Schema）、Query Proxy（Bun、TypeScript、node-sql-parser 做 AST 驗證）、Sanitizer（Presidio 做 PII 偵測搭配自訂 K-Anonymity 模組），並將結構化 log 送至 Loki／Grafana。金融場景 Demo 展示使用者詢問「上季前十大客戶的交易總額趨勢」後，LLM 產生 SQL、Proxy 驗證、資料庫執行、Sanitizer 脫敏聚合，最終前端呈現代碼化客戶名稱與區間化金額的圖表。</p></section>
 <section class="detail-section"><h2>取捨、踩坑與適用場景</h2><p>講者坦承實作過程中踩過幾個坑：Schema 太大導致 Context 爆掉，靠動態 Schema 選取解決；LLM 幻覺出不存在的欄位，靠 Proxy 的 AST 驗證攔截；過度聚合導致結果失去意義，靠分層脫敏規則處理；延遲原本增加約 800ms，靠快取機制降到約 200ms。他建議 ZDTA 適合結構化資料、高度監管產業（金融、醫療）、以查詢為主的需求與已有完善 Schema 文件的場景，但不適合非結構化資料、需要深度推理或即時對話式分析的情境。</p></section>
   <nav class="talk-nav">
-    <a class="nav-link" href="ai-enterprise-29-Foundry-Local-實戰-AI-驅動-Windows-Server-2025-維運.html">← Foundry Local 實戰：AI 驅動 Windows Server 2025 維運</a>
-    <a class="nav-link nav-next" href="ai-enterprise-31-FDA-文件提取智能體-從正則到自癒-AI-的演進-2.html">FDA 文件提取智能體：從正則到自癒 AI 的演進 (第二場/不同講者版本) →</a>
+    <a class="nav-link" href="ai-enterprise-29-Foundry-Local-實戰-AI-驅動-Windows-Server-2025-維運.html"><span class="nav-dir">← 上一場議程</span><span class="nav-title">Foundry Local 實戰：AI 驅動 Windows Server 2025 維運</span></a>
+    <a class="nav-link nav-next" href="ai-enterprise-31-FDA-文件提取智能體-從正則到自癒-AI-的演進-2.html"><span class="nav-dir">下一場議程 →</span><span class="nav-title">FDA 文件提取智能體：從正則到自癒 AI 的演進 (第二場/不同講者版本)</span></a>
   </nav>
 </main>
 <footer class="site-footer">

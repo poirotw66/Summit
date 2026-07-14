@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/style.css?v=1.0.2">
+<link rel="stylesheet" href="../assets/css/style.css?v=1.0.3">
 </head>
 <body>
 <div class="bg-glow" aria-hidden="true"></div>
@@ -34,7 +34,7 @@
     <h2>重點整理</h2>
     <ul class="highlights"><li>一次系統失效經驗：K-number 前多了一個空格，提取率從 95% 驟降至 23%，耗費三天工程工時修復</li><li>架構採兩條獨立路徑：IFU 適應症走 Tier 1→2→3 Fallback 管線，K-number 走自癒 Agent 自動產生程式碼</li><li>自癒 Agent 以 LangGraph 建構 Coder／Executor／Critic 三節點迴圈，並用 State 物件在重試間共享 error_trace</li><li>Critic 節點刻意採用確定性規則引擎而非 AI 判斷，避免 AI 誤判「成功」但結果為空或格式錯誤</li><li>已完成超過 4 萬份 FDA 文件的結構化提取，設有 5 次重試上限並在極端案例交還工程師人工審核</li></ul>
   </section>
-  <section class="detail-section">
+  <section class="detail-section plain-section">
   <h2>重點圖片／架構圖</h2>
   <div class="diagram-grid">
     <figure class="diagram">
@@ -58,8 +58,8 @@
 <section class="detail-section"><h2>案例與成果</h2><p>透過 lab_01_regex.py（精準 Regex）、lab_02_geometric.py（幾何座標定位）與 auto_healing_extractor.py（自癒 Agent）三支腳本的逐步比較，展示 N/A 消失率如何隨架構演進而降低，最終累積完成超過 4 萬份 FDA 文件的結構化提取，並產出 final_universal_extractor.py 作為持久的工程資產。</p></section>
 <section class="detail-section"><h2>結論與啟示</h2><p>講者強調核心理念是「讓 AI 寫程式，而不是讓 AI 直接給答案」，因為程式碼可跑、可測試、可版控、可重用，而非一次性且難以驗證的 AI 回答。同時誠實面對自癒機制的限制，設有 5 次重試上限，遇到反覆失敗的極端案例會強制中斷並交還工程師人工審核，避免系統假裝成功。</p></section>
   <nav class="talk-nav">
-    <a class="nav-link" href="ai-enterprise-03-企業-AI-的-CoWoS-時刻-探討-多模型路由-Router-的-Interposer-戰略.html">← 企業 AI 的 CoWoS 時刻：探討「多模型路由（Router）」的 Interposer 戰略</a>
-    <a class="nav-link nav-next" href="ai-enterprise-05-SMART-on-FHIR-遇上-LINE-Bot-打造隱私優先的醫療-AI-架構.html">SMART on FHIR 遇上 LINE Bot：打造隱私優先的醫療 AI 架構 →</a>
+    <a class="nav-link" href="ai-enterprise-03-企業-AI-的-CoWoS-時刻-探討-多模型路由-Router-的-Interposer-戰略.html"><span class="nav-dir">← 上一場議程</span><span class="nav-title">企業 AI 的 CoWoS 時刻：探討「多模型路由（Router）」的 Interposer 戰略</span></a>
+    <a class="nav-link nav-next" href="ai-enterprise-05-SMART-on-FHIR-遇上-LINE-Bot-打造隱私優先的醫療-AI-架構.html"><span class="nav-dir">下一場議程 →</span><span class="nav-title">SMART on FHIR 遇上 LINE Bot：打造隱私優先的醫療 AI 架構</span></a>
   </nav>
 </main>
 <footer class="site-footer">

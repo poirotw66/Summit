@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/style.css?v=1.0.2">
+<link rel="stylesheet" href="../assets/css/style.css?v=1.0.3">
 </head>
 <body>
 <div class="bg-glow" aria-hidden="true"></div>
@@ -34,7 +34,7 @@
     <h2>重點整理</h2>
     <ul class="highlights"><li>來自 Anthropic 的前沿模型 Mythos 發現的漏洞中，超過 99% 尚未修復，且成功找出困擾 27 年的 FFmpeg 整數溢位漏洞</li><li>2022 至 2025 年間僅不到 1% 的 CVE 被武裝化（2025 年為 0.74%），但「漏洞利用」已成為排名第一的攻擊向量，占比 31%</li><li>中位數利用時間已縮短至 18 天，而中位數 MTTR 為 67 天，AI 輔助漏洞開發進一步壓縮利用窗口</li><li>Qualys 已加入 Anthropic 的 Project Glasswing 與 OpenAI 的 Trusted Access for Cyber 計畫，用於原始碼強化與威脅研究</li><li>Qualys 對關鍵/零日漏洞的中位數回應時間為 12 小時，目標將偵測時間壓縮至 30 分鐘以內，TruConfirm 過去 12 個月已完成超過 800 萬次驗證</li></ul>
   </section>
-  <section class="detail-section">
+  <section class="detail-section plain-section">
   <h2>重點圖片／架構圖</h2>
   <div class="diagram-grid">
     <figure class="diagram">
@@ -58,8 +58,8 @@
 <section class="detail-section"><h2>超優先級處理：從資產盤點到證據驗證</h2><p>此步驟強調先了解所有資產與攻擊面（涵蓋雲端資產、第三方資產、身分、容器、OT/IoT 等），再從資產分類進一步理解商業背景（如業務關鍵性、技術債、緩解控制措施），並運用 QVSS 分數即時優先處理數百萬項曝險。演講也提出 CISO 至今無法回答的「確定性差距」問題：掃描器說有漏洞、CVSS 表示關鍵、補丁團隊問能否打通、審計師問證據在哪。Qualys 的 TruConfirm 以證據為基礎驗證漏洞是否真的可用於生產環境，過去 12 個月已完成超過 800 萬次驗證，且採用零中斷、非阻塞非同步、隱私設計的安全優先架構。</p></section>
 <section class="detail-section"><h2>零日修復與 AI 速度偵測</h2><p>TruRisk Eliminate 提供 Patch（含 AI based 補丁可靠度評分）、Uninstall、Mitigate、Isolate、Custom 等多種修復方式，並透過補丁可靠度評分、無補丁修復方案、分階段部署（deployment waves）與回滾能力建立自主修復的信任，其成效包括平均整治 MTTR 時間縮短 80%，自主修補回滾速率低於 0.1%，平均零日漏洞補救時間低於一天。在 AI 速度偵測方面，Qualys 對關鍵/零日漏洞的中位數回應時間為 12 小時，高優先度供應商為 6 小時，CISA KEV 覆蓋率達 99%，並透過基於版本的快速路徑、每 QID 持續交付、事件驅動代理評估等方式，將目標偵測時間從 12–16 小時壓縮至 30 分鐘以內。</p></section>
   <nav class="talk-nav">
-    <a class="nav-link" href="cloud-edge-18-透過統一-IT-平台推動數位韌性.html">← 透過統一 IT 平台推動數位韌性</a>
-    <a class="nav-link nav-next" href="cloud-edge-20-打造-Agentic-Kubernetes-以-kagent-A2A-構築自主協作生態系.html">打造 Agentic Kubernetes：以 kagent × A2A 構築自主協作生態系 →</a>
+    <a class="nav-link" href="cloud-edge-18-透過統一-IT-平台推動數位韌性.html"><span class="nav-dir">← 上一場議程</span><span class="nav-title">透過統一 IT 平台推動數位韌性</span></a>
+    <a class="nav-link nav-next" href="cloud-edge-20-打造-Agentic-Kubernetes-以-kagent-A2A-構築自主協作生態系.html"><span class="nav-dir">下一場議程 →</span><span class="nav-title">打造 Agentic Kubernetes：以 kagent × A2A 構築自主協作生態系</span></a>
   </nav>
 </main>
 <footer class="site-footer">

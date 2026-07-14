@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/style.css?v=1.0.2">
+<link rel="stylesheet" href="../assets/css/style.css?v=1.0.3">
 </head>
 <body>
 <div class="bg-glow" aria-hidden="true"></div>
@@ -34,7 +34,7 @@
     <h2>重點整理</h2>
     <ul class="highlights"><li>全自建 AI Server 面臨 GPU 供給吃緊、僅約 7% 工作負載能讓 GPU 利用率達 85% 以上等高成本低效問題；全雲端則有長期 OPEX 累積與資料外流疑慮</li><li>混合式 AI 架構五大優勢：敏捷彈性、加速創新、成本最佳化、效能與邊緣低延遲、合規與資安</li><li>核心理念是雲端負責訓練與高負載（大規模訓練、突發流量、快速試錯），地端負責敏感與即時（本地推論、毫秒級回應、法規邊界）</li><li>Agent 是「記憶體殺手」，多輪推理與工具呼叫使 Token 成本成為企業導入 AI 的最大挑戰，Gartner 預測 2028 年 AI 程式碼開發成本恐超過開發者平均年薪</li><li>以 Microsoft Foundry（雲端控制平面）與 Foundry Local（地端/邊緣執行平面）打造同一套控制平面跨雲到邊緣統一治理，敏感資料僅透過 AI-tunnel/MCP 回傳結構化摘要</li></ul>
   </section>
-  <section class="detail-section">
+  <section class="detail-section plain-section">
   <h2>重點圖片／架構圖</h2>
   <div class="diagram-grid">
     <figure class="diagram">
@@ -58,8 +58,8 @@
 <section class="detail-section"><h2>Token 經濟學與治理之道</h2><p>講者特別點出 Agent 是「記憶體殺手」：LLM 本質無狀態，每次推論都需重新組裝歷史對話與任務狀態，多輪推理與工具呼叫、多 Agent 與檢索注入都使 Token 消耗快速膨脹，成為企業導入 AI 最大挑戰。引用 Gartner 預測，2028 年 AI 程式碼開發成本恐超過開發者平均年薪，成因是 Token 消耗激增與計價模式轉向用量計價。治理之道包含建立用量可觀測儀表板、依任務分級授權（Developer-led/With-agent/Agent-led）、智慧模型路由（簡單任務交小模型）、情境工程降耗，以及制度化的 Token 門檻與定期檢視機制。</p></section>
 <section class="detail-section"><h2>Microsoft Foundry 混合式架構藍圖與 Responsible AI</h2><p>講者介紹以 Microsoft Foundry（雲端控制平面，含 Models、Agent Service、Foundry Tools、Workflows、Observability）與 Foundry Local（地端/邊緣執行平面，涵蓋 Windows PC、Linux、邊緣裝置等）組成的統一治理架構，透過 AI-tunnel/MCP 僅回傳結構化摘要、敏感資料不外送，實現同一套控制平面跨雲端到邊緣的離線可用、低延遲與零 Token 費用。並以醫療情境為例，展示 Phi-4-mini（地端）與 GPT-4o/GPT-4.1（雲端）協同運作的應用架構。最後強調 Responsible AI 六大原則（公平性、可靠性與安全、隱私與保密、包容性、透明、問責）需搭配 Content Safety、Evaluation、Tracing、Audit Logs 等平台落地能力，指出調查顯示 64% 企業使用或計劃使用雲端部署、35% 探索混合模式、僅 1% 堅持純本地端，混合式已是回應真實需求的務實解方。</p></section>
   <nav class="talk-nav">
-    <a class="nav-link" href="cloud-edge-28-從-Cloud-First-到-Agent-First-企業-IT-為何要提前為-AI-Agent-打底.html">← 從 Cloud First 到 Agent First：企業 IT 為何要提前為 AI Agent 打底</a>
-    <a class="nav-link nav-next" href="cloud-edge-30-當-AI-成為維運工程師的同事-企業-IT-infra-維運-AI-導入實戰分享.html">當 AI 成為維運工程師的同事— 企業 IT infra 維運 AI 導入實戰分享 →</a>
+    <a class="nav-link" href="cloud-edge-28-從-Cloud-First-到-Agent-First-企業-IT-為何要提前為-AI-Agent-打底.html"><span class="nav-dir">← 上一場議程</span><span class="nav-title">從 Cloud First 到 Agent First：企業 IT 為何要提前為 AI Agent 打底</span></a>
+    <a class="nav-link nav-next" href="cloud-edge-30-當-AI-成為維運工程師的同事-企業-IT-infra-維運-AI-導入實戰分享.html"><span class="nav-dir">下一場議程 →</span><span class="nav-title">當 AI 成為維運工程師的同事— 企業 IT infra 維運 AI 導入實戰分享</span></a>
   </nav>
 </main>
 <footer class="site-footer">

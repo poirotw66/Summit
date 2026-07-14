@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/style.css?v=1.0.2">
+<link rel="stylesheet" href="../assets/css/style.css?v=1.0.3">
 </head>
 <body>
 <div class="bg-glow" aria-hidden="true"></div>
@@ -34,7 +34,7 @@
     <h2>重點整理</h2>
     <ul class="highlights"><li>AEC產業因業務產出資料樣態雜亂、缺乏系統性內化，形成「人留不住、經驗留不住、缺乏內化」的惡性循環</li><li>產業調查顯示51.3%企業仍以數位資料（模型或圖檔）人工傳遞知識與經驗，僅9.1%使用知識庫或PMIS專管系統，1.1%已使用AI代理人</li><li>自研Agent的能力演進路徑：2024年Chat+RAG、2025.07 MCP、2025.12 Agent、2026.03 Skill、2026.04 WASM沙盒、2026.05雲地混合(Hybrid)與多端隨行(Web)、2026.06 Subagent、2026.07 A2A（尚未完成）</li><li>地端部署經驗顯示：雲端代表「能力」（租借最強大運算資源與模型），地端代表「自主」（資料所有權、系統控制權與執行私密性），但地端模型（如GLM 5.2）在推論效能上仍與雲端旗艦模型有落差</li><li>建議依任務類型選擇開發方向：需要可控可檢核走RPA、可接受變化性走MCP、想兼顧兩者則把RPA包裝成工具讓Agent呼叫；並採地端模型處理80%日常/低延遲/敏感任務、雲端大模型處理高複雜度推論的混用策略</li></ul>
   </section>
-  <section class="detail-section">
+  <section class="detail-section plain-section">
   <h2>重點圖片／架構圖</h2>
   <div class="diagram-grid">
     <figure class="diagram">
@@ -58,8 +58,8 @@
 <section class="detail-section"><h2>Key Takeaway：知識庫設計與任務類型判斷</h2><p>講者建議RAG可搭配混合檢索（例如RAPTOR），將知識輸出為具階層關係的JSON結構，每個節點記錄主題摘要、子節點與內容，以利於後續檢索與推理。針對任務類型的選擇，講者提出三種取向：若需要產出可控、可檢核，應採用規則式的RPA；若產出不需固定、可接受推論帶來的變化，則可採用MCP；若同時想要可控又想要省力，可將RPA包裝成一堆工具，交由Agent自行按鈕呼叫。核心精神是把計算交給程式、把推論交給LLM。</p></section>
 <section class="detail-section"><h2>混用策略：地端處理日常任務、雲端處理高複雜度推論</h2><p>講者最終建議不需堅持純地端部署，而是採取混用策略：地端模型可處理約80%的日常、敏感性與低延遲任務，例如個資去識別化與初步摘要；當遇到需要極高推理複雜度或跨領域知識的任務時，再將「脫敏後」的內容上傳雲端大模型處理。這樣的混合部署方式，讓建築營造產業既能保有資料自主性，也能在複雜任務上借助雲端模型的能力。</p></section>
   <nav class="talk-nav">
-    <a class="nav-link" href="ai-enterprise-22-詩人騷客的-Vibe-Coding-入門-Vibe-Coding-for-Poets.html">← 詩人騷客的 Vibe Coding 入門 (Vibe Coding for Poets)</a>
-    <a class="nav-link nav-next" href="ai-enterprise-24-金融級-Enterprise-Agentic-AI-架構設計-從-PoC-到-Agentic-Operating-System.html">金融級 Enterprise Agentic AI 架構設計：從 PoC 到 Agentic Operating System →</a>
+    <a class="nav-link" href="ai-enterprise-22-詩人騷客的-Vibe-Coding-入門-Vibe-Coding-for-Poets.html"><span class="nav-dir">← 上一場議程</span><span class="nav-title">詩人騷客的 Vibe Coding 入門 (Vibe Coding for Poets)</span></a>
+    <a class="nav-link nav-next" href="ai-enterprise-24-金融級-Enterprise-Agentic-AI-架構設計-從-PoC-到-Agentic-Operating-System.html"><span class="nav-dir">下一場議程 →</span><span class="nav-title">金融級 Enterprise Agentic AI 架構設計：從 PoC 到 Agentic Operating System</span></a>
   </nav>
 </main>
 <footer class="site-footer">

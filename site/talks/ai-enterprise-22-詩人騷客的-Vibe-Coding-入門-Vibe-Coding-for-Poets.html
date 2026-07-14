@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/style.css?v=1.0.2">
+<link rel="stylesheet" href="../assets/css/style.css?v=1.0.3">
 </head>
 <body>
 <div class="bg-glow" aria-hidden="true"></div>
@@ -34,7 +34,7 @@
     <h2>重點整理</h2>
     <ul class="highlights"><li>回顧網路語料庫與搭配詞研究的發展脈絡：1989年WWW誕生、2006年Google釋出Web1T5、2010年NetSpeak、2013年清大團隊開發的Linggle</li><li>說明生成式AI背後的技術基石：Wikipedia、Common Crawl、Word2Vec、Transformer、BERT、T5等，皆源自眾多研究者與機構的公益貢獻</li><li>示範以Ken Church的Unix for Poets教材，透過tr、sort、uniq等Unix指令pipe計算文件的unigram與bigram詞頻</li><li>透過對ChatGPT或Gemini/Canvas下達結構化Prompt，非資工背景者也能產出一個可查詢English Collocation Profile（依CEFR等級與語意標籤搜尋搭配詞）的Streamlit或HTML應用程式</li><li>另以Gemini API示範打造詞彙索引典（concordancer）demo，可針對指定單字產生7則例句，呈現典型的搭配詞與文法用法</li></ul>
   </section>
-  <section class="detail-section">
+  <section class="detail-section plain-section">
   <h2>重點圖片／架構圖</h2>
   <div class="diagram-grid">
     <figure class="diagram">
@@ -58,8 +58,8 @@
 <section class="detail-section"><h2>Vibe Coding實作案例：ECP展示介面與詞彙索引典</h2><p>第一個案例是「Exercise 1: Count words」的延伸，講者示範以Gemini/Canvas開發詞頻分析應用程式；接著展示如何準備ECP_demo目錄與ECP_data.csv資料，安裝Python與Streamlit套件後，透過結構化Sample Prompt要求ChatGPT撰寫一個Streamlit App，功能包含標題顯示、搭配詞搜尋框、CEFR等級與語意標籤篩選，並在使用者搜尋詞根後顯示比對結果表格；若覺得Python/Streamlit門檻較高，也可改用Gemini/Canvas產生純HTML版本的Demo。第二個案例則是詞彙索引典（concordancer）：透過Prompt要求打造一個名為「My Concordance」的App，接入Gemini API並針對指定單字（預設為defy）產生7則具代表性的例句，呈現該詞的典型搭配詞與文法模式。</p></section>
 <section class="detail-section"><h2>結論</h2><p>演講以English Collocation Profile的完整展示（涵蓋A1至C2全等級與C2專屬等級的搭配詞介面）收尾，總結透過Vibe Coding方式，即使是不具備程式設計背景的人文學者（詩人騷客），也能運用ChatGPT或Gemini等生成式AI工具，將長年累積的語言學研究方法（如Web1T5搭配詞分級）轉化為可實際使用的應用軟體。</p></section>
   <nav class="talk-nav">
-    <a class="nav-link" href="ai-enterprise-21-Building-a-Production-LLM-Pipeline-for-Ad-Content-Review-at-Scale_-Lessons-from-Argus.html">← Building a Production LLM Pipeline for Ad Content Review at Scale: Lessons from Argus</a>
-    <a class="nav-link nav-next" href="ai-enterprise-23-自研-On-prem-AI-Agent-搭配企業知識庫與建築營造產業應用可能性.html">自研 On-prem AI Agent 搭配企業知識庫與建築營造產業應用可能性 →</a>
+    <a class="nav-link" href="ai-enterprise-21-Building-a-Production-LLM-Pipeline-for-Ad-Content-Review-at-Scale_-Lessons-from-Argus.html"><span class="nav-dir">← 上一場議程</span><span class="nav-title">Building a Production LLM Pipeline for Ad Content Review at Scale: Lessons from Argus</span></a>
+    <a class="nav-link nav-next" href="ai-enterprise-23-自研-On-prem-AI-Agent-搭配企業知識庫與建築營造產業應用可能性.html"><span class="nav-dir">下一場議程 →</span><span class="nav-title">自研 On-prem AI Agent 搭配企業知識庫與建築營造產業應用可能性</span></a>
   </nav>
 </main>
 <footer class="site-footer">

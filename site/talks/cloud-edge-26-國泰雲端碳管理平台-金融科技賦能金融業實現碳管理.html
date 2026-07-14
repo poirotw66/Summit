@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/style.css?v=1.0.2">
+<link rel="stylesheet" href="../assets/css/style.css?v=1.0.3">
 </head>
 <body>
 <div class="bg-glow" aria-hidden="true"></div>
@@ -34,7 +34,7 @@
     <h2>重點整理</h2>
     <ul class="highlights"><li>GaaS 平台三大功能：環境管理/監測、國際合規性支援（ISO 14064-1、ISO 14067、SBTi、RE100）、以及溫室氣體盤查（組織型碳盤查、產品型碳足跡計算）</li><li>平台可支援 ESG 報告揭露（IFRS/GRI），自動彙整輸出格式並提供第三方查核依據，強化 ESG 評等可信度</li><li>架構建構於 Google Cloud Platform，採用 GKE Private Cluster、Cloud Armor、Cloud SQL、Cloud Storage 等原生服務，並串接台電網站與 Azure AI Document Intelligence</li><li>六項技術亮點：Redis 快取降低 DB 負載、GKE 自動擴展、JWT + HS256 無狀態驗證、微服務與無狀態架構、Secret Manager 集中管理機敏資訊、全面建構於 GCP</li><li>實踐 DevSecOps 全流程（Plan、Code、Build、Test、Release、Deploy、Operate、Monitor），並取得 ISO 27001 與 Stevie Awards 等肯定</li></ul>
   </section>
-  <section class="detail-section">
+  <section class="detail-section plain-section">
   <h2>重點圖片／架構圖</h2>
   <div class="diagram-grid">
     <figure class="diagram">
@@ -58,8 +58,8 @@
 <section class="detail-section"><h2>六項技術亮點</h2><p>講者說明六項關鍵技術設計：使用 Redis 快取權限、Menu、Building 等常查詢但不常變更的資料以降低資料庫負載；服務全面託管於 GKE，依 CPU/記憶體使用率自動擴增 Pod 數量因應高流量；採用 JWT + HS256 進行無狀態身份驗證，較傳統 Session 更契合微服務架構；系統從設計之初即拆分為微服務並採無狀態設計，搭配 Redis 可支援多實例彈性擴展；透過 Secret Manager 與 Google IAM 集中管理 JWT 密鑰、資料庫資訊等機敏資料；整體建構於 GCP 之上，享有企業級雲端基礎設施的穩定與安全性。</p></section>
 <section class="detail-section"><h2>DevSecOps 與永續成果</h2><p>平台導入完整的 DevSecOps 流程，涵蓋 Plan、版本控管、程式碼審查、基礎設施即代碼、自動化測試與安全性測試、Docker 映像發佈、應用程式防火牆，以及連續日誌記錄與異常監控警示，實踐持續交付與安全開發並重的維運模式。國泰人壽在此基礎上累積多項里程碑，包含平台上線據點數與盤查案件數的成長，並取得 ISO 27001 資訊安全管理認證與 Stevie Awards 等國際肯定，展現金融科技賦能綠色永續轉型的具體成果。</p></section>
   <nav class="talk-nav">
-    <a class="nav-link" href="cloud-edge-25-當-AI-開始呼叫-API-企業正面臨的新攻擊面.html">← 當 AI 開始呼叫 API：企業正面臨的新攻擊面</a>
-    <a class="nav-link nav-next" href="cloud-edge-27-高雄-AI-燈塔計畫-以高雄主權-AI-出發-打造國家級-AI-旗艦城市.html">高雄 AI 燈塔計畫 - 以高雄主權 AI 出發，打造國家級 AI 旗艦城市 →</a>
+    <a class="nav-link" href="cloud-edge-25-當-AI-開始呼叫-API-企業正面臨的新攻擊面.html"><span class="nav-dir">← 上一場議程</span><span class="nav-title">當 AI 開始呼叫 API：企業正面臨的新攻擊面</span></a>
+    <a class="nav-link nav-next" href="cloud-edge-27-高雄-AI-燈塔計畫-以高雄主權-AI-出發-打造國家級-AI-旗艦城市.html"><span class="nav-dir">下一場議程 →</span><span class="nav-title">高雄 AI 燈塔計畫 - 以高雄主權 AI 出發，打造國家級 AI 旗艦城市</span></a>
   </nav>
 </main>
 <footer class="site-footer">

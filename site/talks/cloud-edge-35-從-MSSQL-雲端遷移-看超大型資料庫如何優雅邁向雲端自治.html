@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/style.css?v=1.0.2">
+<link rel="stylesheet" href="../assets/css/style.css?v=1.0.3">
 </head>
 <body>
 <div class="bg-glow" aria-hidden="true"></div>
@@ -34,7 +34,7 @@
     <h2>重點整理</h2>
     <ul class="highlights"><li>三種主流雲遷移策略：Rehost（原封不動搬遷）、Replatform（部分重構）、Refactor（雲原生重新設計），主流做法是 Replatform first, Refactor later</li><li>地端常見架構（Always On AG、Failover Cluster、Log Shipping）對應雲端 SQL VM、Azure SQL MI、Azure SQL Database、Hyperscale 等選項</li><li>Managed Instance Link 透過底層 Distributed Availability Groups 持續同步交易記錄，可達近乎零停機的線上遷移，並於同步期間提供唯讀資料庫供驗證</li><li>案例顯示：先調校將 CPU 使用率從 48% 降到 15%，SQL MI 規格從 32 vCore 降為 16 vCore，再簽 3 年 RI，總成本較「直接對原規格簽約」再省約每月 1,970 美元</li><li>關鍵結論：RI 只能讓你「便宜地浪費」，唯有效能調校（Tuning）才能讓你「不再浪費」，這是 FinOps 最容易被低估的成本槓桿</li></ul>
   </section>
-  <section class="detail-section">
+  <section class="detail-section plain-section">
   <h2>重點圖片／架構圖</h2>
   <div class="diagram-grid">
     <figure class="diagram">
@@ -58,8 +58,8 @@
 <section class="detail-section"><h2>雲端資料庫的過度配置與 FinOps 挑戰</h2><p>報告指出近 32% 雲端預算因過度配置（Overprovisioning）而浪費，根源在於 DBA 的 KPI 是「不能慢、不能掛」而非成本責任，導致地端規格思維被直接 1:1 搬上雲、以尖峰用量做冗餘規劃、資源耦合與缺乏彈性等問題。講者提出兩種成本槓桿：財務槓桿（RI／Reserved Capacity／Hybrid Benefit，在既有規格上打折但用量不變）與效能槓桿（透過索引、查詢優化、減少 I/O 直接降低 CPU/記憶體需求，從底層降低 SKU 成本），並強調效能調校是容易被低估、卻最根本的成本槓桿。</p></section>
 <section class="detail-section"><h2>案例實證：先調校再簽約的成本效益</h2><p>講者分享實際案例：資料庫平均 CPU 使用率從 48% 調校降至 15% 後，SQL MI 規格得以從 32 vCore 降為 16 vCore（每月成本從約 5,900 美元降至約 2,950 美元，降幅 50%），再對 16 vCore 簽署 3 年 RI（每月約 1,970 美元，再降 33%）。相較之下，若跳過調校直接對原本 32 vCore 簽 3 年 RI，每月仍需約 3,940 美元，顯示「先調校」這一步就能再省約每月 1,970 美元，且這是 RI 折扣永遠省不到的部分。演講也介紹 Automatic Tuning 功能（FORCE_LAST_GOOD_PLAN、CREATE INDEX、DROP INDEX）及其限制與風險，指出核心調校仍需仰賴 DBA 判斷。最終結論是 Tune → Right-size → Reserve 的順序策略：先優化效能降低資源基線，再合理評估規格，最後才鎖定長期折扣，讓每一分雲端支出發揮最大價值。</p></section>
   <nav class="talk-nav">
-    <a class="nav-link" href="cloud-edge-34-從應用實例看-AI-如何賦能台灣旅宿業.html">← 從應用實例看 AI 如何賦能台灣旅宿業</a>
-    <a class="nav-link nav-next" href="cloud-edge-36-金融業生成式-AI-平台工程-以雲端原生架構打造可擴展的-Agentic-AI-中樞.html">金融業生成式 AI 平台工程：以雲端原生架構打造可擴展的 Agentic AI 中樞 →</a>
+    <a class="nav-link" href="cloud-edge-34-從應用實例看-AI-如何賦能台灣旅宿業.html"><span class="nav-dir">← 上一場議程</span><span class="nav-title">從應用實例看 AI 如何賦能台灣旅宿業</span></a>
+    <a class="nav-link nav-next" href="cloud-edge-36-金融業生成式-AI-平台工程-以雲端原生架構打造可擴展的-Agentic-AI-中樞.html"><span class="nav-dir">下一場議程 →</span><span class="nav-title">金融業生成式 AI 平台工程：以雲端原生架構打造可擴展的 Agentic AI 中樞</span></a>
   </nav>
 </main>
 <footer class="site-footer">

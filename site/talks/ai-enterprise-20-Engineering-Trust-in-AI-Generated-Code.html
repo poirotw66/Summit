@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/style.css?v=1.0.2">
+<link rel="stylesheet" href="../assets/css/style.css?v=1.0.3">
 </head>
 <body>
 <div class="bg-glow" aria-hidden="true"></div>
@@ -34,7 +34,7 @@
     <h2>重點整理</h2>
     <ul class="highlights"><li>Attention機制透過Query-Key相似度計算注意力權重，模型是根據機率而非常識判斷「it」等代名詞所指涉的對象</li><li>複雜或衝突的Prompt會產生競爭性限制、長距依賴、歧義與隱藏假設，導致機率估計漂移並產生安全漏洞——模型的問題是「做出了最佳猜測，但猜錯了」</li><li>建議的AI輔助開發工作流：以聚焦步驟生成程式碼，再透過AI輔助審查與確定性掃描驗證，而非仰賴一次性的一鍵式Prompt</li><li>Black Duck方案涵蓋Prompt防護、IDE層快速確定性掃描（可於2分鐘內完成單檔分析）、PR/Repo/Staging層的資料流感知靜態分析與Agentic AI程式碼審查、以及Governance層的合規報告</li><li>Governance層可產出SBOM、VEX、SARIF等機器可讀成果，並整合Bug Tracking與PR留言、Break-Build機制，以持續累積資料集並強化安全態勢</li></ul>
   </section>
-  <section class="detail-section">
+  <section class="detail-section plain-section">
   <h2>重點圖片／架構圖</h2>
   <div class="diagram-grid">
     <figure class="diagram">
@@ -58,8 +58,8 @@
 <section class="detail-section"><h2>Black Duck的治理解方：從Prompt到Governance五層防護</h2><p>講者提出的解決方案涵蓋地端或SaaS部署、Agentic AI工作流與確定性規則引擎、機密偵測、靜態原始碼分析、依賴分析、第三方授權義務偵測、軟體供應鏈風險緩解與動態測試等能力。具體而言，Prompt階段防止IP與機密洩漏；Generate階段阻止不安全或違反授權的程式碼進入IDE；IDE驗證階段以規則式靜態分析與AI程式碼授權分析，能在多數情境下於2分鐘內完成單檔分析，且不需編譯或建置環境；PR/Repo/Staging分析階段則採用資料流感知的靜態分析、軟體組成分析(SCA)、動態測試，並以Agentic AI Code Review進行語意層級的安全審查，偵測商業邏輯層面的缺陷。</p></section>
 <section class="detail-section"><h2>Governance：讓AI輔助開發可被信任</h2><p>在治理層，Black Duck方案可依CERT、AUTOSAR、OWASP、PCI-DSS等產業標準產出稽核就緒的合規報告，支援AI驅動的威脅建模，並產出SBOM（軟體物料清單）、VEX（漏洞溝通）、SARIF（工具無關的發現整合格式）等機器可讀成果。這些結果可整合進Bug Tracking系統，建立持續改善安全態勢的資料集，並透過PR留言與Break-Build機制將安全把關左移，在不安全程式碼上線前加以攔截。</p></section>
   <nav class="talk-nav">
-    <a class="nav-link" href="ai-enterprise-19-當-AI-成為企業工作日常-員工-AI-使用管理問題與實務情境解析.html">← 當 AI 成為企業工作日常：員工 AI 使用管理問題與實務情境解析</a>
-    <a class="nav-link nav-next" href="ai-enterprise-21-Building-a-Production-LLM-Pipeline-for-Ad-Content-Review-at-Scale_-Lessons-from-Argus.html">Building a Production LLM Pipeline for Ad Content Review at Scale: Lessons from Argus →</a>
+    <a class="nav-link" href="ai-enterprise-19-當-AI-成為企業工作日常-員工-AI-使用管理問題與實務情境解析.html"><span class="nav-dir">← 上一場議程</span><span class="nav-title">當 AI 成為企業工作日常：員工 AI 使用管理問題與實務情境解析</span></a>
+    <a class="nav-link nav-next" href="ai-enterprise-21-Building-a-Production-LLM-Pipeline-for-Ad-Content-Review-at-Scale_-Lessons-from-Argus.html"><span class="nav-dir">下一場議程 →</span><span class="nav-title">Building a Production LLM Pipeline for Ad Content Review at Scale: Lessons from Argus</span></a>
   </nav>
 </main>
 <footer class="site-footer">

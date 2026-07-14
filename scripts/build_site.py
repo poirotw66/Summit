@@ -183,7 +183,7 @@ def render_head(title: str, depth: int = 0) -> str:
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="{prefix}assets/css/style.css?v=1.0.2">
+<link rel="stylesheet" href="{prefix}assets/css/style.css?v=1.0.3">
 </head>
 """
 
@@ -329,7 +329,7 @@ def render_images(images: list) -> str:
   <img src="../{esc(img['file'])}" loading="lazy" alt="{esc(img.get('caption',''))}">
   <figcaption>{esc(img.get('caption',''))}</figcaption>
 </figure>""")
-    return f"""<section class="detail-section">
+    return f"""<section class="detail-section plain-section">
   <h2>重點圖片／架構圖</h2>
   <div class="diagram-grid">
     {''.join(figs)}
@@ -351,13 +351,13 @@ def render_talk(c: dict, prev_c: dict | None, next_c: dict | None) -> str:
 
     nav_links = []
     if prev_c:
-        nav_links.append(f'<a class="nav-link" href="{esc(prev_c["slug"])}.html">← {esc(prev_c["title"])}</a>')
+        nav_links.append(f'<a class="nav-link" href="{esc(prev_c["slug"])}.html"><span class="nav-dir">← 上一場議程</span><span class="nav-title">{esc(prev_c["title"])}</span></a>')
     else:
-        nav_links.append('<span></span>')
+        nav_links.append('<div class="nav-placeholder"></div>')
     if next_c:
-        nav_links.append(f'<a class="nav-link nav-next" href="{esc(next_c["slug"])}.html">{esc(next_c["title"])} →</a>')
+        nav_links.append(f'<a class="nav-link nav-next" href="{esc(next_c["slug"])}.html"><span class="nav-dir">下一場議程 →</span><span class="nav-title">{esc(next_c["title"])}</span></a>')
     else:
-        nav_links.append('<span></span>')
+        nav_links.append('<div class="nav-placeholder"></div>')
 
     return render_head(f"{c['title']} - Summit 2026 議程摘要", depth=1) + f"""<body>
 <div class="bg-glow" aria-hidden="true"></div>

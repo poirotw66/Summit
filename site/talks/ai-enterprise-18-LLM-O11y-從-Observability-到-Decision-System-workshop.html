@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/style.css?v=1.0.2">
+<link rel="stylesheet" href="../assets/css/style.css?v=1.0.3">
 </head>
 <body>
 <div class="bg-glow" aria-hidden="true"></div>
@@ -41,8 +41,8 @@
 <section class="detail-section"><h2>案例：評估是否導入 rtk 框架</h2><p>針對「同事說 rtk 好像會省 Token，要不要導入」的情境，講者提出六步驟評估框架：理解團隊需求與學習成本、了解 rtk 支援哪些指令（Know Your Stuff）、從 Langfuse 分析目前 Token 實際花在哪（Know Your Case）、透過 `rtk init --copilot` 實驗觀察變化並用 `rtk unpatch` 復原、評估是否真的省下 Token，最後與團隊對齊「為何覺得省 Token」的結論。並提出效率公式，強調工作坊前半段主要聚焦在 Token Cost 的觀察。</p></section>
 <section class="detail-section"><h2>LLM-as-a-Judge 與 Dataset/Experiment</h2><p>學員在 Langfuse 中建立 LLM connection 與 Evaluator（如 Helpfulness），並練習觀察評分與理由是否合理，特別留意 multi-step agent 因中間 Observation 缺乏 output 而導致評分失真的狀況。進一步練習使用 filter 針對特定 tool（如 apply_patch、run_in_terminal）建立客製 Evaluator。最後，講者示範如何從日常 tracing 建立 Dataset，並透過 Experiment 在同一份「考古題」上比較更換 model、tools 或 instruction 後的效果，將「觀測」轉化為「數據化決策」，並可延伸至 Spec-kit 流程或真實功能需求的長流程觀測。</p></section>
   <nav class="talk-nav">
-    <a class="nav-link" href="ai-enterprise-17-從-CIO-大調查看企業-AI-轉型新方向-AI-原生的崛起.html">← 從 CIO 大調查看企業 AI 轉型新方向：AI 原生的崛起</a>
-    <a class="nav-link nav-next" href="ai-enterprise-19-當-AI-成為企業工作日常-員工-AI-使用管理問題與實務情境解析.html">當 AI 成為企業工作日常：員工 AI 使用管理問題與實務情境解析 →</a>
+    <a class="nav-link" href="ai-enterprise-17-從-CIO-大調查看企業-AI-轉型新方向-AI-原生的崛起.html"><span class="nav-dir">← 上一場議程</span><span class="nav-title">從 CIO 大調查看企業 AI 轉型新方向：AI 原生的崛起</span></a>
+    <a class="nav-link nav-next" href="ai-enterprise-19-當-AI-成為企業工作日常-員工-AI-使用管理問題與實務情境解析.html"><span class="nav-dir">下一場議程 →</span><span class="nav-title">當 AI 成為企業工作日常：員工 AI 使用管理問題與實務情境解析</span></a>
   </nav>
 </main>
 <footer class="site-footer">

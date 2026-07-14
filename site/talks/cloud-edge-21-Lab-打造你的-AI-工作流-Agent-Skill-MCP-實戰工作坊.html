@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/style.css?v=1.0.2">
+<link rel="stylesheet" href="../assets/css/style.css?v=1.0.3">
 </head>
 <body>
 <div class="bg-glow" aria-hidden="true"></div>
@@ -41,8 +41,8 @@
 <section class="detail-section"><h2>品質 Skill 與 Commit/PR 自動化</h2><p>工作坊介紹了三個品質 Skill：`/simplify` 用於收掉過度設計、`/security-review` 進行自動安全審查、`/code-review max -fix` 提供最高強度審查並自動修復。在 Commit 與 PR 部分，`/commit-message` 會讀取已 staged 的 diff 產出符合 Conventional Commit 格式的訊息，`/pr-prepare` 則自動產出標題、摘要、變更重點與測試方式，但講者提醒下指令之前務必自己先看過代碼確認沒問題再執行。</p></section>
 <section class="detail-section"><h2>PR 後的自動 Review 迴圈</h2><p>PR 提交後可選擇 GitHub Action 的 Claude Code Review、原生整合的 GitHub Copilot Review，或 OpenAI Codex Review 三種 AI Review 方式。工作坊也介紹了自動迴圈 `/loop 3m /copilot-review`，每 3 分鐘一輪執行查留言、逐條修改、push、resolve、再審的循環，上限約 10 輪，若超過通常代表出現架構分歧，需要人工介入。總結來說，AI 並非取代 CI/CD，而是把它補完——自動化測試、Code Review、CI 修復、文件與 PR 撰寫、看板狀態更新等過去常被犧牲或省略的環節，都能由 AI 補齊，建議實務上可從 `/plan-feature` 或 `/loop 3m /copilot-review` 開始應用。</p></section>
   <nav class="talk-nav">
-    <a class="nav-link" href="cloud-edge-20-打造-Agentic-Kubernetes-以-kagent-A2A-構築自主協作生態系.html">← 打造 Agentic Kubernetes：以 kagent × A2A 構築自主協作生態系</a>
-    <a class="nav-link nav-next" href="cloud-edge-22-舊玩意-新創意-用-AI-打破資安消耗戰-經驗實務分享.html">舊玩意，新創意：用 AI 打破資安消耗戰，經驗實務分享 →</a>
+    <a class="nav-link" href="cloud-edge-20-打造-Agentic-Kubernetes-以-kagent-A2A-構築自主協作生態系.html"><span class="nav-dir">← 上一場議程</span><span class="nav-title">打造 Agentic Kubernetes：以 kagent × A2A 構築自主協作生態系</span></a>
+    <a class="nav-link nav-next" href="cloud-edge-22-舊玩意-新創意-用-AI-打破資安消耗戰-經驗實務分享.html"><span class="nav-dir">下一場議程 →</span><span class="nav-title">舊玩意，新創意：用 AI 打破資安消耗戰，經驗實務分享</span></a>
   </nav>
 </main>
 <footer class="site-footer">

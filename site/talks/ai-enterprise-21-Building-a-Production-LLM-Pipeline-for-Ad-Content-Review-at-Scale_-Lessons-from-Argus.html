@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/style.css?v=1.0.2">
+<link rel="stylesheet" href="../assets/css/style.css?v=1.0.3">
 </head>
 <body>
 <div class="bg-glow" aria-hidden="true"></div>
@@ -34,7 +34,7 @@
     <h2>重點整理</h2>
     <ul class="highlights"><li>人工審查廣告面臨一致性(審核標準不一)、時效性(廣告主需等待1天以上)、規模化(各市場/語言知識需持續重訓)三大痛點</li><li>核心洞見是將「政策」轉化為「Prompt」：領域專家可直接更新規則Prompt，不需要R&amp;D重新訓練模型</li><li>Argus採用Harness架構，將控制流拆成9個對應人工審查步驟的階段，每個階段皆可獨立稽核、測試與替換模型</li><li>透過CI/CD層以golden dataset做regression testing，並以品質、成本、延遲作為Release Gate，2026年2月成功將模型從GPT-4o換成Gemini 3 Flash，成本降低30%</li><li>上線後審查時間從12小時縮短到分鐘級，人力工作量減少75%，審查一致性較人工審查提升13個百分點</li></ul>
   </section>
-  <section class="detail-section">
+  <section class="detail-section plain-section">
   <h2>重點圖片／架構圖</h2>
   <div class="diagram-grid">
     <figure class="diagram">
@@ -58,8 +58,8 @@
 <section class="detail-section"><h2>Argus的Harness架構</h2><p>講者以「模型是引擎，Harness是車身」比喻Argus的設計理念，整體架構由五層構成：控制流層將9個階段對應到人工審查的工作流程（Master、Pre-Policy、Fact-Checking、Policy、LP Policy、Combine、Rejection Explanation、Approve、Final），每個階段皆可獨立稽核、測試與替換模型；上下文層透過Prompt Assembler，依照內容類型、內容領域、政策領域與活動地區等標籤動態組裝政策Prompt，並將規則存於版本化資料庫中，以減少Token用量並提高準確度；工具層則是Agentic設計，讓LLM在遇到需要證據佐證的宣稱（如「FDA核准」）時主動呼叫search_web、search_image等自研工具，確保Argus可自由更換底層模型而不受特定廠商工具綁定；記憶層以In-Context Learning方式，在推論時注入近似案例的過往審查決定（近似「Class-RAG」的做法），以Few-shot方式提升準確度與一致性；CI/CD層則將Prompt視為程式碼，任何Prompt或模型的變更都需經過以golden dataset執行的評估流程，並以品質、成本、延遲作為Release Gate通過與否的依據。</p></section>
 <section class="detail-section"><h2>換模型實戰與成效</h2><p>2026年2月，團隊在Argus生產環境中完成一次「行進中換引擎」的實戰：先用所有候選模型跑一輪評估，接著將線上模型從GPT-4o換成Gemini 3 Flash，換模後整體成本降低30%，過程中監控發現有兩個IAB分類出現過度拒絕的情況，團隊透過zero-code設定進行單一分類的回滾，再重新調校並重新上線，全程如同F1賽車進站換胎。整體成效顯示，審查時間從12小時縮短到分鐘級，所有英文廣告均可交由Argus審查，人工審查工作量減少75%，審查一致性較人工提升13個百分點；此外，可解釋的拒絕理由也帶動廣告主重新提交比人工審查多出約2倍、最終再獲核准的比例則多出1.5倍。講者總結三個建議：複製人工工作流程以獲得可靠性與可稽核性、讓領域專家主導Harness的迭代、並以CI/CD層作為R&amp;D與領域專家順暢協作的關鍵。</p></section>
   <nav class="talk-nav">
-    <a class="nav-link" href="ai-enterprise-20-Engineering-Trust-in-AI-Generated-Code.html">← Engineering Trust in AI-Generated Code</a>
-    <a class="nav-link nav-next" href="ai-enterprise-22-詩人騷客的-Vibe-Coding-入門-Vibe-Coding-for-Poets.html">詩人騷客的 Vibe Coding 入門 (Vibe Coding for Poets) →</a>
+    <a class="nav-link" href="ai-enterprise-20-Engineering-Trust-in-AI-Generated-Code.html"><span class="nav-dir">← 上一場議程</span><span class="nav-title">Engineering Trust in AI-Generated Code</span></a>
+    <a class="nav-link nav-next" href="ai-enterprise-22-詩人騷客的-Vibe-Coding-入門-Vibe-Coding-for-Poets.html"><span class="nav-dir">下一場議程 →</span><span class="nav-title">詩人騷客的 Vibe Coding 入門 (Vibe Coding for Poets)</span></a>
   </nav>
 </main>
 <footer class="site-footer">
