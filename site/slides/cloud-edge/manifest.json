@@ -1,0 +1,156 @@
+{
+  "source": "https://cloudsummit.ithome.com.tw/2026/slides",
+  "downloaded": [
+    {
+      "file": "01-馴服 Mythos 的烈馬，奔向 Cloud Fable：把 AI 攻擊力轉譯為雲端韌性與正向賦能.pdf",
+      "bytes": 5803018
+    },
+    {
+      "file": "02-對抗 Agentic AI 浪潮：Fortinet 雲端安全新思維，重塑 AI 驅動的防禦韌性.pdf",
+      "bytes": 2979169
+    },
+    {
+      "file": "03-打造 IT 大廠轉型組織的跨國實踐藍圖.pdf",
+      "bytes": 906087
+    },
+    {
+      "file": "04-(Lab) Google ADK 即時語音串流實現 GCP 平台與 DevOps 的整合應用.pdf",
+      "bytes": 10240608
+    },
+    {
+      "file": "05-AI 驅動 Kubernetes Runtime Security：超越傳統威脅偵測.pdf",
+      "bytes": 10702409
+    },
+    {
+      "file": "06-AI 原生企業正在誕生 - 重構企業運作與競爭優勢.pdf",
+      "bytes": 2880434
+    },
+    {
+      "file": "07-重構經典再啟智慧，CODE×AI 以規格驅動系統現代化.pdf",
+      "bytes": 10456136
+    },
+    {
+      "file": "08-雲端資安化繁為簡：無代理架構與 AI 驅動的次世代防禦雙引擎.pdf",
+      "bytes": 7546557
+    },
+    {
+      "file": "10-共智時代：The Next Step.pdf",
+      "bytes": 8372414
+    },
+    {
+      "file": "11-混合雲時代的保命符.pdf",
+      "bytes": 2911619
+    },
+    {
+      "file": "12-當 AI 遇見數據：構建面向智能體的現代數據底座.pdf",
+      "bytes": 2681342
+    },
+    {
+      "file": "14-金融業透過 AI 打造新顧客服務體驗-AI 房貸顧問.pdf",
+      "bytes": 2282690
+    },
+    {
+      "file": "15-Secure GenAI on Cloud：結合 ISO 27001 × TIPS × 法遵的企業級 AI × IP × 敏感資料治理架構.pdf",
+      "bytes": 2278208
+    },
+    {
+      "file": "16-Google ADK 即時語音串流實現 GCP 平台與 DevOps 的整合應用.pdf",
+      "bytes": 9417383
+    },
+    {
+      "file": "17-新世代防禦：Agentic AI 賦能 Cloud SOC 維運.pdf",
+      "bytes": 2301746
+    },
+    {
+      "file": "18-透過統一 IT 平台推動數位韌性.pdf",
+      "bytes": 26635183
+    },
+    {
+      "file": "19-後 Mythos 時代，應如何應對漏洞激增？.pdf",
+      "bytes": 4799633
+    },
+    {
+      "file": "20-打造 Agentic Kubernetes：以 kagent × A2A 構築自主協作生態系.pdf",
+      "bytes": 4510264
+    },
+    {
+      "file": "22-舊玩意，新創意：用 AI 打破資安消耗戰，經驗實務分享.pdf",
+      "bytes": 6693494
+    },
+    {
+      "file": "23-以極致彈性，化解地端與雲端的現實拉扯.pdf",
+      "bytes": 8060832
+    },
+    {
+      "file": "24-AI 驅動企業進化：管理者決策現場的智能轉型實戰.pdf",
+      "bytes": 6930295
+    },
+    {
+      "file": "25-當 AI 開始呼叫 API：企業正面臨的新攻擊面.pdf",
+      "bytes": 2619071
+    },
+    {
+      "file": "26-國泰雲端碳管理平台—金融科技賦能金融業實現碳管理.pdf",
+      "bytes": 7455977
+    },
+    {
+      "file": "27-高雄 AI 燈塔計畫 - 以高雄主權 AI 出發，打造國家級 AI 旗艦城市.pdf",
+      "bytes": 6764321
+    },
+    {
+      "file": "28-從 Cloud First 到 Agent First：企業 IT 為何要提前為 AI Agent 打底.pdf",
+      "bytes": 2309550
+    },
+    {
+      "file": "29-混合式 AI 架構，驅動企業敏捷與創新.pdf",
+      "bytes": 2065505
+    },
+    {
+      "file": "30-當 AI 成為維運工程師的同事— 企業 IT infra 維運 AI 導入實戰分享.pdf",
+      "bytes": 2798163
+    },
+    {
+      "file": "31-從數位轉型到 AI 創新：旅遊業的智慧轉型之路.pdf",
+      "bytes": 2812631
+    },
+    {
+      "file": "32-AI 與資安的完美結合-探索雲端機密運算的奧妙.pdf",
+      "bytes": 3748287
+    },
+    {
+      "file": "33-FinOps 不只是看後照鏡開車.pdf",
+      "bytes": 1583115
+    },
+    {
+      "file": "34-從應用實例看 AI 如何賦能台灣旅宿業.pdf",
+      "bytes": 22244765
+    },
+    {
+      "file": "35-從 MSSQL 雲端遷移，看超大型資料庫如何優雅邁向雲端自治.pdf",
+      "bytes": 3337263
+    },
+    {
+      "file": "36-金融業生成式 AI 平台工程：以雲端原生架構打造可擴展的 Agentic AI 中樞.pdf",
+      "bytes": 2106860
+    }
+  ],
+  "web_links": [
+    {
+      "title": "從觀望到全公司落地：AI Agentic Coding 導入實戰 — 流程整合與安全治理",
+      "url": "https://blog.wu-boy.com/2026/07/ai-agentic-coding-adoption-zh-tw/"
+    },
+    {
+      "title": "When Not to Vibe 從 Vibe Coding 到 Spec-driven AI Engineering",
+      "url": "https://chechia.net/slides/2026-07-01-speckit-cloud-summit/#/"
+    },
+    {
+      "title": "(Lab) 打造你的 AI 工作流：Agent Skill + MCP 實戰工作坊",
+      "url": "https://blog.wu-boy.com/2026/07/ai-workflow-agent-skill-mcp-workshop-zh-tw/"
+    },
+    {
+      "title": "Microsoft Agent Framework + Orleans 打造雲地協同 AI 工作流",
+      "url": "https://windperson.github.io/CloudSummit_2026-slide/#/title-slide"
+    }
+  ],
+  "errors": []
+}

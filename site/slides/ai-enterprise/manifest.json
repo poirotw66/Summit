@@ -1,0 +1,132 @@
+{
+  "source": "https://aienterprise.ithome.com.tw/2026/slides",
+  "downloaded": [
+    {
+      "file": "02-從導入 AI 到治理 Agent：企業負責任 AI 實務的新課題.pdf",
+      "bytes": 2651602
+    },
+    {
+      "file": "03-企業 AI 的 CoWoS 時刻：探討「多模型路由（Router）」的 Interposer 戰略.pdf",
+      "bytes": 24479306
+    },
+    {
+      "file": "04-FDA 文件提取智能體：從正則到自癒 AI 的演進.pdf",
+      "bytes": 2418426
+    },
+    {
+      "file": "05-SMART on FHIR 遇上 LINE Bot：打造隱私優先的醫療 AI 架構.pdf",
+      "bytes": 5689142
+    },
+    {
+      "file": "06-從 ASK 到 Agent：企業 AI 落地新時代，IBM Bob 加速 AI Agent 普及與價值實現.pdf",
+      "bytes": 3215777
+    },
+    {
+      "file": "07-數據感知與安全治理：打造企業級 AI 智能工作流.pdf",
+      "bytes": 2713278
+    },
+    {
+      "file": "08-Observability Architecture for Enterprise Agentic AI Agents.pdf",
+      "bytes": 2348618
+    },
+    {
+      "file": "09-打造企業級 AI 基礎設施：從程式碼理解到 Agentic Workflow 的實戰藍圖與避坑指南.pdf",
+      "bytes": 3747027
+    },
+    {
+      "file": "10-將算力化為行動力：企業級 AI 全棧整合與落地實踐.pdf",
+      "bytes": 11855731
+    },
+    {
+      "file": "11-企業級代理式 AI (Agentic AI for The Enterprise).pdf",
+      "bytes": 1684406
+    },
+    {
+      "file": "12-Cloudflare AI 全戰略 從防禦爬蟲, Agent 實戰到 SASE 安全轉型.pdf",
+      "bytes": 5266236
+    },
+    {
+      "file": "13-企業 AI Orchestration 低摩擦整合路線：以 MCP Server 工具化既有 API與 OAuth 授權治理.pdf",
+      "bytes": 6469616
+    },
+    {
+      "file": "14-Config-Driven Agentic AI：讓 AI Agent 用對話產出零售分析配置.pdf",
+      "bytes": 7556722
+    },
+    {
+      "file": "15-當 AI 成為你的第一個工程師：重新定義軟體交付的速度與規模.pdf",
+      "bytes": 668617
+    },
+    {
+      "file": "16-當 AI 成為你的第一個工程師：重新定義軟體交付的速度與規模 (2).pdf",
+      "bytes": 6578950
+    },
+    {
+      "file": "17-從 CIO 大調查看企業 AI 轉型新方向：AI 原生的崛起.pdf",
+      "bytes": 36634248
+    },
+    {
+      "file": "20-Engineering Trust in AI-Generated Code.pdf",
+      "bytes": 1523137
+    },
+    {
+      "file": "21-Building a Production LLM Pipeline for Ad Content Review at Scale_ Lessons from Argus.pdf",
+      "bytes": 2516213
+    },
+    {
+      "file": "22-詩人騷客的 Vibe Coding 入門 (Vibe Coding for Poets).pdf",
+      "bytes": 4690379
+    },
+    {
+      "file": "23-自研 On-prem AI Agent 搭配企業知識庫與建築營造產業應用可能性.pdf",
+      "bytes": 3267920
+    },
+    {
+      "file": "24-金融級 Enterprise Agentic AI 架構設計：從 PoC 到 Agentic Operating System.pdf",
+      "bytes": 2278312
+    },
+    {
+      "file": "26-撕開轉型華麗的包裝：一場從「煉獄」爬回「現實」的中小型企業AI落地化的生存指南.pdf",
+      "bytes": 2412243
+    },
+    {
+      "file": "27-當 AI 成為開發夥伴：電商平台的 SDD 開發經驗.pdf",
+      "bytes": 15654324
+    },
+    {
+      "file": "28-當會議逐字稿變成能力數據：Hahow for Business 用 AI 重建培訓驗證的實戰紀錄.pdf",
+      "bytes": 15056815
+    },
+    {
+      "file": "29-Foundry Local 實戰：AI 驅動 Windows Server 2025 維運.pdf",
+      "bytes": 2861566
+    },
+    {
+      "file": "30-零資料接觸架構：讓 LLM 讀懂企業資料但永遠摸不到它.pdf",
+      "bytes": 617424
+    },
+    {
+      "file": "31-FDA 文件提取智能體：從正則到自癒 AI 的演進 (2).pdf",
+      "bytes": 2786520
+    },
+    {
+      "file": "19-當 AI 成為企業工作日常：員工 AI 使用管理問題與實務情境解析.pdf",
+      "bytes": 4576196
+    }
+  ],
+  "web_links": [
+    {
+      "title": "從零開始 Spec-kit 規格導向",
+      "url": "https://chechia.net/posts/2026-07-01-ws-speckit-ai-ent/"
+    },
+    {
+      "title": "LLM O11y：從 Observability 到 Decision System (workshop)",
+      "url": "https://chechia.net/slides/2026-07-01-ws-langfuse-ai-ent/#/"
+    },
+    {
+      "title": "LLM O11y：從 Observability 到 Decision System",
+      "url": "https://chechia.net/slides/2026-07-01-langfuse-ai-ent/#/"
+    }
+  ],
+  "errors": []
+}
